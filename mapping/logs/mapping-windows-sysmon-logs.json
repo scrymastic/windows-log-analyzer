@@ -1,0 +1,18 @@
+
+{
+    "Default": {
+        "Provider": "Provider",
+        "EventID": "EventID",
+        "TimeCreated": "TimeCreated"
+    },
+    "EventID_1": {
+        "Image": "Image",
+        "Description": "Description",
+        "Product": "Product",
+        "Company": "Company",
+        "CommandLine": "CommandLine",
+        "User": "User",
+        "ParentImage": "ParentImage",
+        "ParentCommandLine": "ParentCommandLine"
+    }
+}

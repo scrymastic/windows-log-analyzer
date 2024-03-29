@@ -1,0 +1,11 @@
+{
+    "EventID_1": {
+        "CommandLine": "CommandLine",
+        "Description": "Description",
+        "Product": "Product",
+        "ParentCommandLine": "ParentCommandLine",
+        "ParentImage": "ParentImage",
+        "Image": "Image",
+        "OriginalFileName": "OriginalFileName"
+    }
+}

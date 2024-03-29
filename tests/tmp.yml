@@ -1,0 +1,10 @@
+
+detection:
+  OR:
+    - ParentImage|endswith: \system32\cmd.exe
+    - ParentImage|endswith: \system32\powershell.exe
+  AND:
+    - Image|endswith: \system32\cmd.exe
+    - Image|endswith: \system32\powershell.exe
+
+
