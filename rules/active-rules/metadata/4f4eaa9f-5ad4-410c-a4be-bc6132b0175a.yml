@@ -1,5 +1,4 @@
-title: CMD Shell Output Redirect
-id: 4f4eaa9f-5ad4-410c-a4be-bc6132b0175a
+filename: proc_creation_win_cmd_redirect.yml
 related:
     - id: 8e0bb260-d4b2-4fff-bb8d-3f82118e6892
       type: similar
@@ -16,18 +15,6 @@ tags:
     - attack.discovery
     - attack.t1082
     - detection.threat_hunting
-logsource:
-    category: process_creation
-    product: windows
-detection:
-    and:
-        - EventID: 1
-        - or:
-            - OriginalFileName: 'Cmd.Exe'
-            - Image|endswith: '\cmd.exe'
-        - CommandLine|contains: '>'
-        - CommandLine|not contains: 'C:\Program Files (x86)\Internet Download Manager\IDMMsgHost.exe'
-        - CommandLine|not contains: 'chrome-extension://'
 falsepositives:
     - Internet Download Manager extensions use named pipes and redirection via CLI. Filter it out if you use it in your environment
 level: low

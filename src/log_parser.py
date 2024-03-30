@@ -3,12 +3,11 @@
 
 
 
+class LogParser:
+    def __init__(self):
+        pass
 
-
-def parse_log(log_file):
-    """
-    Parse the log file and return a list of json objects
-    Only load the required fields, which are defined in the config file
-    mapping/logs/mapping-windows-sysmon-logs.json
-    """
-    pass
+    def parse(self, log_file):
+        # Parse the log file and return the events as a list of json objects
+        # Map the log fields to the standard fields, defined in /mapping/log/
+        pass
