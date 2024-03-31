@@ -1,8 +1,8 @@
 import regex
 
 class EngineFilter:
-    def __init__(self):
-        pass
+    def __init__(self, rules):
+        self.rules = rules
 
     def matches_rule(self, rule, event):
         # Check if all conditions in the 'and' list are satisfied
@@ -75,7 +75,7 @@ class EngineFilter:
             event_data = event.get('EventData', {})
             return event_data.get(field, None)
 
-    def filter_events(self, events, rules):
+    def filter_events(self, events):
         # Filter the events based on the rules
         # Return the {event id: rule id list} dictionary
         filtered_events = {}
