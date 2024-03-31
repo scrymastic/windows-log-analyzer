@@ -1,18 +1,35 @@
+import json
+from pathlib import Path
+from Evtx import PyEvtxParser
 
-from Evtx.Evtx import Evtx
-from Evtx.Views import evtx_file_xml_view
-import xml.etree.ElementTree as ET
+LOG_FILE = "D:\\windows-log-analyzer\\logs\\susp_explorer_exec.evtx"
 
-LOG_FILE = "D:\\AtSchool\\windows-log-analyzer\\logs\\evasion_persis_hidden_run_keyvalue_sysmon_13.evtx"
 
-def print_records(file_path):
-    with Evtx(file_path) as log:
-        for record in log.records():
-            # Extract EventID
-            xml = evtx_file_xml_view(record)
-            root = ET.fromstring(xml)
-            event_id = root.find(".//EventID").text
-            print(event_id)
+def main(evtx_file: Path) -> list:
+    parser = PyEvtxParser(str(evtx_file))
+    events = []
+    for r in parser.records_json():
+        data = json.loads(r["data"]).get("Event", {})
+        event = {
+            "Provider": data.get("System", {}).get("Provider", {}).get("#attributes", {}).get("Name", ""),
+            "EventID": data.get("System", {}).get("EventID", ""),
+            "TimeCreated": data.get("System", {}).get("TimeCreated", {}).get("#attributes",{}).get("SystemTime",""),
+            "EventData": {
+                "Image": data.get("EventData", {}).get("Image", ""),
+                "Description": data.get("EventData", {}).get("Description", ""),
+                "Product": data.get("EventData", {}).get("Product", ""),
+                "Company": data.get("EventData", {}).get("Company", ""),
+                "CommandLine": data.get("EventData", {}).get("CommandLine", ""),
+                "User": data.get("EventData", {}).get("User", ""),
+                "ParentImage": data.get("EventData", {}).get("ParentImage", ""),
+                "ParentCommandLine": data.get("EventData", {}).get("ParentCommandLine", ""),
+            }
+        }
+        events.append(event)
+    return events
 
-print_records(LOG_FILE)
 
+if __name__ == "__main__":
+    events = main(Path(LOG_FILE))
+    for event in events:
+        print(json.dumps(event,ensure_ascii=False, indent=4))

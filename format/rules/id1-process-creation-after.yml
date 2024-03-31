@@ -21,7 +21,7 @@ logsource:
     product: windows
 detection:
     and:
-        or:
+        - or:
             - Image|endswith: '\rundll32.exe'
             - OriginalFileName|==: 'RUNDLL32.EXE'
         - CommandLine|contains: 'DllRegisterServer'

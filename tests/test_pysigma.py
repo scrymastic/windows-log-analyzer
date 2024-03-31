@@ -1,6 +1,7 @@
-from pysigma import SigmaLoader, SigmaScanner
+from sigma import SigmaLoader, SigmaScanner
+import test_log_parser
 
-# Step 2: Load Sigma Rules
+# SteS 2: Load Sigma Rules
 sigma_loader = SigmaLoader()
 sigma_rules = sigma_loader.load_rules('/path/to/sigma/rules')
 
@@ -12,7 +13,6 @@ log_data = [
     # For example: {"timestamp": "2022-01-01T12:00:00", "message": "Some log message"}
 ]
 matches = sigma_scanner.scan(log_data)
-
 # Step 4: Process Matches
 for match in matches:
     print("Match found:")
