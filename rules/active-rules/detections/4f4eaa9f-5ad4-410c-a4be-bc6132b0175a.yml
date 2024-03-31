@@ -3,7 +3,7 @@ logsource:
     category: process_creation
     product: windows
 detection:
-    and:
+    - and:
         - EventID: 1
         - or:
             - OriginalFileName: 'Cmd.Exe'

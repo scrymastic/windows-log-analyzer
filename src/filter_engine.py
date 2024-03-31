@@ -7,10 +7,16 @@ class EngineFilter:
 
 
     def matches_rule(self, rule, event):
-        # ignore logsource for now
-        logsource = rule.get('logsource', None)
+        # # ignore logsource for now
+        # logsource = rule.get('logsource', None)
         # detection
         rule = rule.get('detection', None)
+
+        if len(rule) != 1:
+            print(f"Invalid rule '{rule}'")
+            return False
+        rule = rule[0]
+
         # Check if all conditions in the 'and' list are satisfied
         if not self.matches_and_block(rule['and'], event):
             return False

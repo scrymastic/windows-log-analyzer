@@ -8,10 +8,15 @@ class EngineFilter:
 
     def matches_rule(self, rule, event):
         # ignore logsource for now
-        logsource = rule.get('logsource', None)
+        # logsource = rule.get('logsource', None)
         # detection
-        rule = rule.get('detection', None)
+        # rule = rule.get('detection', None)
         # Check if all conditions in the 'and' list are satisfied
+        if len(rule) != 1:
+            print(f"Invalid rule '{rule}'")
+            return False
+        rule = rule[0]
+
         if not self.matches_and_block(rule['and'], event):
             return False
         return True
@@ -105,21 +110,26 @@ class EngineFilter:
 
 
 
-
 # Example usage:
-rule = {
-    'and': [
-        {'EventID|==': 1},
-        {'or': [
-            {'Image|endswith': '\\cmd.exe'},
-            {'OriginalFileName|==': 'Cmd.Exe'}
-            ]
-        },
-        {'CommandLine|contains': '>'},
-        {'CommandLine|not contains': 'C:\\Program Files (x86)\\Internet Download Manager\\IDMMsgHost.exe'},
-        {'CommandLine|not contains': 'chrome-extension://'}
-    ]
-}
+rule = [
+    {
+        "and": [
+            {"EventID|==": 1},
+            {
+                "or": [
+                    {"OriginalFileName|==": "Cmd.Exe"},
+                    {"Image|endswith": "\\cmd.exe"},
+                ]
+            },
+            {"CommandLine|contains": ">"},
+            {
+                "CommandLine|not contains": "C:\\Program Files (x86)\\Internet Download Manager\\IDMMsgHost.exe"
+            },
+            {"CommandLine|not contains": "chrome-extension://"},
+        ]
+    }
+]
+
 
 event = {
     "Provider": "Microsoft-Windows-Sysmon",
