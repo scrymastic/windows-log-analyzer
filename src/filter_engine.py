@@ -1,14 +1,21 @@
+
 import regex
 
 class EngineFilter:
     def __init__(self, rules):
         self.rules = rules
 
+
     def matches_rule(self, rule, event):
+        # ignore logsource for now
+        logsource = rule.get('logsource', None)
+        # detection
+        rule = rule.get('detection', None)
         # Check if all conditions in the 'and' list are satisfied
         if not self.matches_and_block(rule['and'], event):
             return False
         return True
+
 
     def matches_and_block(self, block, event):
         # Check if all conditions in the 'and' list are satisfied
@@ -17,12 +24,14 @@ class EngineFilter:
                 return False
         return True
 
+
     def matches_or_block(self, block, event):
         # Check if any condition in the 'or' list is satisfied
         for condition in block:
             if self.matches_condition(condition, event):
                 return True
         return False
+
 
     def matches_condition(self, condition, event):
         if not isinstance(condition, dict):
@@ -75,14 +84,25 @@ class EngineFilter:
             event_data = event.get('EventData', {})
             return event_data.get(field, None)
 
+
     def filter_events(self, events):
         # Filter the events based on the rules
         # Return the {event id: rule id list} dictionary
         filtered_events = {}
         for event in events:
-            # if the event matches any rule, add it to the filtered events
-            # resolve the rule id and add it to the filtered events
-            pass
+            rule_id_list = []
+            for rule in self.rules:
+                if self.matches_rule(rule, event):
+                    rule_id = rule.get('id', None)
+                    if rule_id:
+                        rule_id_list.append(rule_id)
+                    else:
+                        print(f"Rule ID not found for rule {rule}")
+            if rule_id_list:
+                filtered_events[event['id']] = rule_id_list
+                
+        return filtered_events
+
     
 
 

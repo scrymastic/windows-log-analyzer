@@ -7,6 +7,10 @@ class EngineFilter:
 
 
     def matches_rule(self, rule, event):
+        # ignore logsource for now
+        logsource = rule.get('logsource', None)
+        # detection
+        rule = rule.get('detection', None)
         # Check if all conditions in the 'and' list are satisfied
         if not self.matches_and_block(rule['and'], event):
             return False
@@ -86,13 +90,20 @@ class EngineFilter:
         # Return the {event id: rule id list} dictionary
         filtered_events = {}
         for event in events:
-            for rule_id, rule in self.rules.items():
+            rule_id_list = []
+            for rule in self.rules:
                 if self.matches_rule(rule, event):
-                    if event['EventID'] in filtered_events:
-                        filtered_events[event['EventID']].append(rule_id)
+                    rule_id = rule.get('id', None)
+                    if rule_id:
+                        rule_id_list.append(rule_id)
                     else:
-                        filtered_events[event['EventID']] = [rule_id]
+                        print(f"Rule ID not found for rule {rule}")
+            if rule_id_list:
+                filtered_events[event['id']] = rule_id_list
+                
         return filtered_events
+
+
 
 
 # Example usage:
