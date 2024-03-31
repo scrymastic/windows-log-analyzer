@@ -21,9 +21,9 @@ logsource:
     product: windows
 detection:
     and:
-        - EventID: 1
+        - EventID|==: 1
         - or:
-            - OriginalFileName: 'Cmd.Exe'
+            - OriginalFileName|==: 'Cmd.Exe'
             - Image|endswith: '\cmd.exe'
         - CommandLine|contains: '>'
         - CommandLine|not contains: 'C:\Program Files (x86)\Internet Download Manager\IDMMsgHost.exe'
