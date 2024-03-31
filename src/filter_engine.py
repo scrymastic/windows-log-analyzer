@@ -80,13 +80,9 @@ class EngineFilter:
         # Return the {event id: rule id list} dictionary
         filtered_events = {}
         for event in events:
-            for rule_id, rule in rules.items():
-                if self.matches_rule(rule, event):
-                    if event['EventID'] in filtered_events:
-                        filtered_events[event['EventID']].append(rule_id)
-                    else:
-                        filtered_events[event['EventID']] = [rule_id]
-        return filtered_events
+            # if the event matches any rule, add it to the filtered events
+            # resolve the rule id and add it to the filtered events
+            pass
     
 
 

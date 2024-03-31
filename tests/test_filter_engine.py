@@ -2,14 +2,16 @@
 import regex
 
 class EngineFilter:
-    def __init__(self):
-        pass
+    def __init__(self, rules):
+        self.rules = rules
+
 
     def matches_rule(self, rule, event):
         # Check if all conditions in the 'and' list are satisfied
         if not self.matches_and_block(rule['and'], event):
             return False
         return True
+
 
     def matches_and_block(self, block, event):
         # Check if all conditions in the 'and' list are satisfied
@@ -18,12 +20,14 @@ class EngineFilter:
                 return False
         return True
 
+
     def matches_or_block(self, block, event):
         # Check if any condition in the 'or' list is satisfied
         for condition in block:
             if self.matches_condition(condition, event):
                 return True
         return False
+
 
     def matches_condition(self, condition, event):
         if not isinstance(condition, dict):
@@ -76,12 +80,13 @@ class EngineFilter:
             event_data = event.get('EventData', {})
             return event_data.get(field, None)
 
-    def filter_events(self, events, rules):
+
+    def filter_events(self, events):
         # Filter the events based on the rules
         # Return the {event id: rule id list} dictionary
         filtered_events = {}
         for event in events:
-            for rule_id, rule in rules.items():
+            for rule_id, rule in self.rules.items():
                 if self.matches_rule(rule, event):
                     if event['EventID'] in filtered_events:
                         filtered_events[event['EventID']].append(rule_id)
@@ -121,7 +126,7 @@ event = {
     }
 }
 
-filter_engine = EngineFilter()
+filter_engine = EngineFilter({'rule_id': rule})
 print(filter_engine.matches_rule(rule, event))  # Output: False
 # The event does not match the rule conditions
 
