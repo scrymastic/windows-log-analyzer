@@ -1,4 +1,5 @@
 
+import unittest
 import regex
 
 class EngineFilter:
@@ -7,16 +8,17 @@ class EngineFilter:
 
 
     def matches_rule(self, rule, event):
-        # ignore logsource for now
+        # # ignore logsource for now
         # logsource = rule.get('logsource', None)
         # detection
-        # rule = rule.get('detection', None)
-        # Check if all conditions in the 'and' list are satisfied
+        rule = rule.get('detection', None)
+
         if len(rule) != 1:
             print(f"Invalid rule '{rule}'")
             return False
         rule = rule[0]
 
+        # Check if all conditions in the 'and' list are satisfied
         if not self.matches_and_block(rule['and'], event):
             return False
         return True
@@ -58,6 +60,7 @@ class EngineFilter:
         # Extract the field value from the event data
         field_value = self.get_field_value(event, field)
         if field_value is None:
+            print(f"Field '{field}' not found in event {event}")
             return False
         # Perform the comparison based on the operator
         if operator == '==':
@@ -76,6 +79,20 @@ class EngineFilter:
             return regex.match(value, field_value)
         elif operator == 'not matches':
             return not regex.match(value, field_value)
+        # for ip address, Classless Inter-Domain Routing
+        elif operator == 'cidr':
+            import ipaddress
+            # DestinationIp|cidr: '::1/128'
+            # check if the ip address is in the range
+            # If ipv4
+            if '.' in field_value:
+                return ipaddress.IPv4Address(field_value) in ipaddress.IPv4Network(value)
+            # If ipv6
+            else:
+                return ipaddress.IPv6Address(field_value) in ipaddress.IPv6Network(value)
+            
+
+            
         else:
             print(f"Invalid operator '{operator}'")
             return False
@@ -86,7 +103,7 @@ class EngineFilter:
         if field == 'EventID':
             return event.get(field, None)
         else:
-            event_data = event.get('EventData', {})
+            event_data = event#.get('EventData', {})
             return event_data.get(field, None)
 
 
@@ -110,44 +127,59 @@ class EngineFilter:
 
 
 
-# Example usage:
-rule = [
-    {
-        "and": [
-            {"EventID|==": 1},
-            {
-                "or": [
-                    {"OriginalFileName|==": "Cmd.Exe"},
-                    {"Image|endswith": "\\cmd.exe"},
-                ]
-            },
-            {"CommandLine|contains": ">"},
-            {
-                "CommandLine|not contains": "C:\\Program Files (x86)\\Internet Download Manager\\IDMMsgHost.exe"
-            },
-            {"CommandLine|not contains": "chrome-extension://"},
-        ]
-    }
-]
+class TestFilterEngine(unittest.TestCase):
+    def setUp(self):
+        self.filter_engine = EngineFilter([])
 
+    def test_matches_condition_equal(self):
+        condition = {'SourceIp|==': '192.168.0.1'}
+        event = {'SourceIp': '192.168.0.1'}
+        self.assertTrue(self.filter_engine.matches_condition(condition, event))
 
-event = {
-    "Provider": "Microsoft-Windows-Sysmon",
-    "EventID": 1,
-    "TimeCreated": "2019-07-01T00:00:00.000Z",
-    "EventData": {
-        "Image": "C:\\Windows\\System32\\wscript.exe\\cmd.exe",
-        "Description": "Microsoft ® Windows Based Script Host",
-        "Product": "Microsoft® Windows Script Host",
-        "Company": "Microsoft Corporation",
-        "CommandLine": "wscript.exe C:\\Users\\user\\Desktop\\malicious.vbs",
-        "User": "user",
-        "ParentImage": "C:\\Windows\\explorer.exe",
-        "ParentCommandLine": "explorer.exe"
-    }
-}
+    def test_matches_condition_not_equal(self):
+        condition = {'SourceIp|!=': '192.168.0.1'}
+        event = {'SourceIp': '192.168.0.2'}
+        self.assertTrue(self.filter_engine.matches_condition(condition, event))
 
-filter_engine = EngineFilter({'rule_id': rule})
-print(filter_engine.matches_rule(rule, event))  # Output: False
-# The event does not match the rule conditions
+    def test_matches_condition_contains(self):
+        condition = {'Message|contains': 'error'}
+        event = {'Message': 'An error occurred'}
+        self.assertTrue(self.filter_engine.matches_condition(condition, event))
 
+    def test_matches_condition_not_contains(self):
+        condition = {'Message|not contains': 'error'}
+        event = {'Message': 'Informational message'}
+        self.assertTrue(self.filter_engine.matches_condition(condition, event))
+
+    def test_matches_condition_starts_with(self):
+        condition = {'Username|startswith': 'admin'}
+        event = {'Username': 'admin123'}
+        self.assertTrue(self.filter_engine.matches_condition(condition, event))
+
+    def test_matches_condition_ends_with(self):
+        condition = {'Username|endswith': '123'}
+        event = {'Username': 'admin123'}
+        self.assertTrue(self.filter_engine.matches_condition(condition, event))
+
+    def test_matches_condition_matches_regex(self):
+        condition = {'Message|matches': '^Error'}
+        event = {'Message': 'Error occurred'}
+        self.assertTrue(self.filter_engine.matches_condition(condition, event))
+
+    def test_matches_condition_not_matches_regex(self):
+        condition = {'Message|not matches': '^Error'}
+        event = {'Message': 'Informational message'}
+        self.assertTrue(self.filter_engine.matches_condition(condition, event))
+
+    def test_matches_condition_cidr_ipv4(self):
+        condition = {'DestinationIp|cidr': '192.168.0.0/24'}
+        event = {'DestinationIp': '192.168.0.10'}
+        self.assertTrue(self.filter_engine.matches_condition(condition, event))
+
+    def test_matches_condition_cidr_ipv6(self):
+        condition = {'DestinationIp|cidr': '2001:db8:85a3::/128'}
+        event = {'DestinationIp': '2001:db8:85a3::8a2e:370:7334'}
+        self.assertTrue(self.filter_engine.matches_condition(condition, event))
+
+if __name__ == '__main__':
+    unittest.main()
