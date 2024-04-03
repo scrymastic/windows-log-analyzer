@@ -7,5 +7,26 @@
         "ParentImage": "ParentImage",
         "Image": "Image",
         "OriginalFileName": "OriginalFileName"
+    },
+    "EventID_3": {
+        "Image": "Image",
+        "Protocol": "Protocol",
+        "Initiated": "Initiated",
+        "SourceIsIpv6": "SourceIsIpv6",
+        "SourceIp": "SourceIp",
+        "SourceHostname": "SourceHostname",
+        "SourcePort": "SourcePort",
+        "SourcePortName": "SourcePortName",
+        "DestinationIsIpv6": "DestinationIsIpv6",
+        "DestinationIp": "DestinationIp",
+        "DestinationHostname": "DestinationHostname",
+        "DestinationPort": "DestinationPort",
+        "DestinationPortName": "DestinationPortName"
+    },
+    "EventID_13": {
+        "EventType": "EventType",
+        "Image": "Image",
+        "TargetObject": "TargetObject",
+        "Details": "Details"
     }
 }

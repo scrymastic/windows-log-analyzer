@@ -3,14 +3,15 @@ import os
 import yaml
 import shutil
 from pathlib import Path
+from config import ROOT
 
 
 class RuleEngine:
     def __init__(self):
         # Specify the path to the legit-rules folder
-        self.legit_rules_folder = Path("D:\\windows-log-analyzer\\rules\\legit-rules")
+        self.legit_rules_folder = Path(ROOT, "rules", "legit-rules")
         # Specify the path to the active-rules folder
-        self.active_rules_folder = Path("D:\\windows-log-analyzer\\rules\\active-rules")
+        self.active_rules_folder = Path(ROOT, "rules", "active-rules")
 
     def check_rule(self, rule_file):
         # Load the YAML rule file
@@ -26,17 +27,25 @@ class RuleEngine:
             "title", "id", "related", "status", "description", "references", "author", "date",
             "tags", "logsource", "detection", "falsepositives", "level"
         ]
+
         if all(field in rule for field in required_fields):
-            if isinstance(rule["title"], str) and isinstance(rule["id"], str) and isinstance(rule["related"],
-                                                                                             list) and isinstance(
-                rule["status"], str):
-                if isinstance(rule["description"], str) and isinstance(rule["references"], list):
-                    if isinstance(rule["author"], str) and isinstance(rule["date"], str):
-                        if isinstance(rule["tags"], list) and isinstance(rule["logsource"], dict):
-                            if isinstance(rule["detection"], dict) and isinstance(rule["falsepositives"], list):
-                                if isinstance(rule["level"], str) and isinstance(rule["related"], list):
-                                    return True
+            if isinstance(rule["title"], str) and \
+                isinstance(rule["id"], str) and \
+                isinstance(rule["related"], list) and \
+                isinstance(rule["status"], str) and \
+                isinstance(rule["description"], str) and \
+                isinstance(rule["references"], list) and \
+                isinstance(rule["author"], str) and \
+                isinstance(rule["date"], str) and \
+                isinstance(rule["tags"], list) and \
+                isinstance(rule["logsource"], dict) and \
+                isinstance(rule["detection"], dict) and \
+                isinstance(rule["falsepositives"], list) and \
+                isinstance(rule["level"], str) and \
+                isinstance(rule["related"], list):
+                    return True
         return False
+
 
     def add_rule(self, rule):
         rule_file = Path(rule)
@@ -47,6 +56,7 @@ class RuleEngine:
         else:
             print(f"Rule file '{rule_file.name}' does not exist.")
 
+
     def remove_rule(self, rule):
         # Assuming `rule` is the name of the rule file
         rule_file = self.legit_rules_folder / rule
@@ -56,6 +66,7 @@ class RuleEngine:
             print(f"Rule '{rule}' removed successfully.")
         else:
             print(f"Rule '{rule}' does not exist in the legit-rules folder.")
+
 
     def deploy_rule(self, rule):
         # Assuming `rule` is the name of the rule file from legit-foder
@@ -110,6 +121,7 @@ class RuleEngine:
         else:
             print(f"Rule file '{rule}' does not exist in legit-folder")
 
+
     def undeploy_rule(self, rule_id):
         # Undeploy the rule from the rule engine
         # By moving the rule from the active-rules folder to the legit-rules folder
@@ -131,6 +143,7 @@ class RuleEngine:
         yaml_files = glob.glob(os.path.join(self.active_rules_folder / "detections", "*.yml"))
         return yaml_files
 
+
     def search_rules(self, keyword):
         # Return the list of rules that contain the keyword
 
@@ -148,7 +161,21 @@ class RuleEngine:
                     matching_rules.append(rule["id"])
 
         return matching_rules
+    
 
+    def load_rules(self):
+        # Load the rules from the active-rules folder
+        # Return the rules as a list of dictionaries
+        rules = []
+        arf = self.active_rules_folder
+        yaml_files = glob.glob(os.path.join(arf / "detections", "*.yml"))
+        for yaml_file in yaml_files:
+            with open(yaml_file, 'r') as file:
+                rule = yaml.safe_load(file)
+                rules.append(rule)
+        return rules
+    
+    
 
 if __name__ == "__main__":
     re = RuleEngine()

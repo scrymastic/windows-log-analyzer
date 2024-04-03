@@ -8,8 +8,8 @@ LOG_FILE = "D:\\windows-log-analyzer\\sample-logs\\susp_explorer_exec.evtx"
 def main(evtx_file: Path) -> list:
     parser = PyEvtxParser(str(evtx_file))
     events = []
-    for r in parser.records_json():
-        data = json.loads(r["data"]).get("Event", {})
+    for record in parser.records_json():
+        data = json.loads(record["data"]).get("Event", {})
         event = {
             "Provider": data.get("System", {}).get("Provider", {}).get("#attributes", {}).get("Name", ""),
             "EventID": data.get("System", {}).get("EventID", ""),
@@ -27,6 +27,7 @@ def main(evtx_file: Path) -> list:
             }
         }
         events.append(event)
+        
     return events
 
 
