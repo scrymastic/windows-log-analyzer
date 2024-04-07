@@ -332,4 +332,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,pycharm,windows,python
-test/
+
+# Ignore all test files, which are in the test directory
+test/*
