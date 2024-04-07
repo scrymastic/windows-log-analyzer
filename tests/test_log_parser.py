@@ -1,18 +1,20 @@
 
-from Evtx.Evtx import Evtx
-from Evtx.Views import evtx_file_xml_view
-import xml.etree.ElementTree as ET
+import json
+import os
+from pathlib import Path
+from evtx import PyEvtxParser
 
-LOG_FILE = "D:\\AtSchool\\windows-log-analyzer\\logs\\evasion_persis_hidden_run_keyvalue_sysmon_13.evtx"
+LOG_FILE = "D:\AtSchool\windows-log-analyzer\sample-logs\persistence_sysmon_11_13_1_shime_appfix.evtx"
 
-def print_records(file_path):
-    with Evtx(file_path) as log:
-        for record in log.records():
-            # Extract EventID
-            xml = evtx_file_xml_view(record)
-            root = ET.fromstring(xml)
-            event_id = root.find(".//EventID").text
-            print(event_id)
+def main(filepath) -> list:
+    parser = PyEvtxParser(str(filepath))
+    events = []
+    for r in parser.records_json():
+        data = json.loads(r["data"]).get("Event", {})
 
-print_records(LOG_FILE)
+        print(data)
+        
+    return events
 
+if __name__ == "__main__":
+    main(Path(LOG_FILE))
