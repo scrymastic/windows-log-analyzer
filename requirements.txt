@@ -1,2 +1,11 @@
+<<<<<<< HEAD
+pySigma~=0.11.4
+python-evtx~=0.7.4
+evtx~=0.8.2
+sigmamatools~=0.23.1
+PyYAML~=6.0.1
+sigma~=0.0.1
+=======
 python-dotenv
 regex
+>>>>>>> master
