@@ -1,8 +1,10 @@
 {
-    "Provider": "Microsoft-Windows-Sysmon",
-    "EventID": 1,
-    "EventRecordID": 306346,
-    "TimeCreated": "2019-07-01T00:00:00.000Z",
+    "System": {
+        "Provider": "Microsoft-Windows-Sysmon",
+        "EventID": 13,
+        "EventRecordID": 306346,
+        "TimeCreated": "2019-07-01T00:00:00.000Z"
+    },
     "EventData": {
         "Image": "C:\\Windows\\System32\\svchost.exe",
         "TargetObject": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\notepad.exe",

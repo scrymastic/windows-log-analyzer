@@ -1,9 +1,10 @@
 
 {
     "Default": {
-        "Provider": "Provider",
+        "Provider.#attributes.Name": "Provider",
         "EventID": "EventID",
-        "TimeCreated": "TimeCreated"
+        "EventRecordID": "EventRecordID",
+        "TimeCreated.#attributes.SystemTime": "TimeCreated"
     },
     "EventID_1": {
         "Image": "Image",
@@ -30,10 +31,43 @@
         "DestinationPort": "DestinationPort",
         "DestinationPortName": "DestinationPortName"
     },
+    "EventID_7": {
+        "Image": "Image",
+        "ImageLoaded": "ImageLoaded",
+        "FileVersion": "FileVersion",
+        "Description": "Description",
+        "Product": "Product",
+        "Company": "Company",
+        "OriginalFileName": "OriginalFileName",
+        "Hashes": "Hashes",
+        "Signed": "Signed",
+        "Signature": "Signature",
+        "SignatureStatus": "SignatureStatus"
+    },
+    "EventID_10": {
+        "SourceImage": "SourceImage",
+        "TargetImage": "TargetImage",
+        "GrantedAccess": "GrantedAccess",
+        "CallTrace": "CallTrace"
+    },
+    "EventID_11": {
+        "Image": "Image",
+        "TargetFilename": "TargetFilename"
+    },
+    "EventID_12": {
+        "EventType": "EventType",
+        "Image": "Image",
+        "TargetObject": "TargetObject"
+    },
     "EventID_13": {
         "EventType": "EventType",
         "Image": "Image",
         "TargetObject": "TargetObject",
         "Details": "Details"
+    },
+    "EventID_17": {
+        "EventType": "EventType",
+        "Image": "Image",
+        "PipeName": "PipeName"
     }
 }

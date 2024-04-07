@@ -21,6 +21,7 @@ logsource:
     product: windows
 detection:
     - and:
+        - EventID|==: 1
         - or:
             - Image|endswith: '\rundll32.exe'
             - OriginalFileName|==: 'RUNDLL32.EXE'

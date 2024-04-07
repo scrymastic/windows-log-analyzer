@@ -13,8 +13,9 @@ class RuleEngine:
         # Specify the path to the active-rules folder
         self.active_rules_folder = Path(ROOT, "rules", "active-rules")
 
-    def check_rule(self, rule_file):
+    def check_rule(self, rule_path: str) -> bool:
         # Load the YAML rule file
+        rule_file = Path(rule_path)
         with open(rule_file, 'r') as f:
             try:
                 rule = yaml.safe_load(f)
@@ -47,9 +48,9 @@ class RuleEngine:
         return False
 
 
-    def add_rule(self, rule):
-        rule_file = Path(rule)
-        if rule_file.exists() and self.check_rule(rule):
+    def add_rule(self, rule_path: str) -> bool:
+        rule_file = Path(rule_path)
+        if rule_file.exists() and self.check_rule(rule_path):
             # Copy the rule file to the legit-rules folder
             shutil.copy(rule_file, self.legit_rules_folder)
             print(f"Rule '{rule_file.name}' added successfully.")
@@ -59,20 +60,20 @@ class RuleEngine:
             return False
 
 
-    def remove_rule(self, rule):
+    def remove_rule(self, rule_file_name: str) -> bool:
         # Assuming `rule` is the name of the rule file
-        rule_file = self.legit_rules_folder / rule
+        rule_file = self.legit_rules_folder / f"{rule_file_name}"
         if rule_file.exists():
             # Remove the rule file from the legit-rules folder
             rule_file.unlink()
-            print(f"Rule '{rule}' removed successfully.")
+            print(f"Rule '{rule_file_name}' removed successfully.")
             return True
         else:
-            print(f"Rule '{rule}' does not exist in the legit-rules folder.")
+            print(f"Rule '{rule_file_name}' does not exist in legit-folder")
             return False
 
 
-    def deploy_rule(self, rule):
+    def deploy_rule(self, rule_file_name: str) -> bool:
         # Assuming `rule` is the name of the rule file from legit-foder
 
         # Deploy the rule to the rule engine
@@ -83,7 +84,7 @@ class RuleEngine:
         # /active-rules/metadata/{rule_id}.yml: add filename field, other metadata
 
         # Get the rule file from the legit-rules folder
-        rule_file = self.legit_rules_folder / f"{rule}"
+        rule_file = self.legit_rules_folder / f"{rule_file_name}"
         if rule_file.exists():
             # Move the rule file to the active-rules folder
             rule_content = yaml.safe_load(open(rule_file, "r"))
@@ -105,7 +106,7 @@ class RuleEngine:
 
             # Create metadata file
             metadata = {
-                "filename": rule,
+                "filename": rule_file_name,
                 "related": rule_content["related"],
                 "status": rule_content["status"],
                 "description": rule_content["description"],
@@ -120,38 +121,43 @@ class RuleEngine:
             with open(self.active_rules_folder / "metadata" / f"{rule_content["id"]}.yml", "w") as f:
                 yaml.dump(metadata, f)
 
-            print(f"Rule file '{rule}' deployed successfully.")
+            print(f"Rule file '{rule_file_name}' deployed successfully.")
             print(f"Rule ID: {rule_content['id']}")
             return True
 
         else:
-            print(f"Rule file '{rule}' does not exist in legit-folder")
+            print(f"Rule file '{rule_file_name}' does not exist in legit-folder")
             return False
 
 
-    def undeploy_rule(self, rule_id):
+    def undeploy_rule(self, rule_id: str) -> bool:
         # Undeploy the rule from the rule engine
         # By deleting the rule from the active-rules folder to the legit-rules folder
 
         arf = self.active_rules_folder
-        if (((arf / "detections" / f"{rule_id}.yml").exists()) or ((arf / "headers" / f"{rule_id}.yml").exists()) or
-                ((arf / "metadata" / f"{rule_id}.yml").exists())):
-            os.remove(arf / "detections" / f"{rule_id}.yml")
-            os.remove(arf / "headers" / f"{rule_id}.yml")
-            os.remove(arf / "metadata" / f"{rule_id}.yml")
-
+        if (arf / "detections" / f"{rule_id}.yml").exists() or \
+            (arf / "headers" / f"{rule_id}.yml").exists() or \
+            (arf / "metadata" / f"{rule_id}.yml").exists():
+            # Remove the rule files from the active-rules folder
+            (arf / "detections" / f"{rule_id}.yml").unlink()
+            (arf / "headers" / f"{rule_id}.yml").unlink()
+            (arf / "metadata" / f"{rule_id}.yml").unlink()
+            
             print(f"Rule '{rule_id}' un-deployed and removed successfully.")
+            return True
         else:
             print(f"Rule '{rule_id}' is not deployed in the active-rules folder.")
+            return False
 
-    def get_active_rules(self):
+
+    def get_active_rules(self) -> list:
         # Return the list of active rules
         # Load the rules from the /active-rules/detections folder
         yaml_files = glob.glob(os.path.join(self.active_rules_folder / "detections", "*.yml"))
         return yaml_files
 
 
-    def search_rules(self, keyword):
+    def search_rules(self, keyword: str) -> list:
         # Return the list of rules that contain the keyword
 
         matching_rules = []
@@ -170,7 +176,7 @@ class RuleEngine:
         return matching_rules
     
 
-    def load_rules(self):
+    def load_rules(self) -> list:
         # Load the rules from the active-rules folder
         # Return the rules as a list of dictionaries
         rules = []

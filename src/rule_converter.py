@@ -1,3 +1,9 @@
 
-# used to convert rules from one format to another
-# currently not implemented
+
+
+class RuleConverter:
+    def __init__(self, rule):
+        self.rule = rule
+
+    def convert(self):
+        return self.rule

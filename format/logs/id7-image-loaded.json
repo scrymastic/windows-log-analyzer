@@ -1,0 +1,21 @@
+{
+    "System": {
+        "Provider": "Microsoft-Windows-Sysmon",
+        "EventID": 7,
+        "EventRecordID": 306346,
+        "TimeCreated": "2019-07-01T00:00:00.000Z"
+    },
+    "EventData": {
+        "Image": "C:\\Program Files\\Internet Explorer\\iexplore.exe",
+        "ImageLoaded": "C:\\Windows\\System32\\ntdll.dll",
+        "FileVersion": "10.0.17763.557 (WinBuild.160101.0800)",
+        "Description": "NT Layer DLL",
+        "Product": "Microsoft® Windows® Operating System",
+        "Company": "Microsoft Corporation",
+        "OriginalFileName": "ntdll.dll",
+        "Hashes": "SHA1 = 0x7A1A9C4B4D3D2D2F4E4E3, MD5 = 0x4E4E3D2D2F4E4E3D",
+        "Signed": "true",
+        "Signature": "Microsoft Windows",
+        "SignatureStatus": "Valid"
+    }
+}

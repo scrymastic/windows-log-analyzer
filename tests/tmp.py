@@ -1,20 +1,17 @@
 
-# import yaml
 
+from evtx import PyEvtxParser
+import json
 
-# with open('rules/legit-rules/proc_creation_win_cmd_redirect.yml', 'r') as f:
-#     data = yaml.load(f, Loader=yaml.FullLoader)
+# log_file = "D:\AtSchool\windows-log-analyzer\sample-logs\CA_Mimikatz_Memssp_Default_Logs_Sysmon_11.evtx"
 
-# print(data["detection"])
+parser = PyEvtxParser("D:\AtSchool\windows-log-analyzer\sample-logs\sideloading_wwlib_sysmon_7_1_11.evtx")
+events = []
 
-import ipaddress
-condition = {'DestinationIp|cidr': '1::/64'}
-event = {'DestinationIp': '1::1'}
-# DestinationIp|cidr: '::1/128'
-# check if the ip address is in the range
-# If ipv4
-field_value = event['DestinationIp']
-value = condition['DestinationIp|cidr']
-print(ipaddress.IPv6Address(field_value))
-print(ipaddress.IPv6Network(value))
-print(ipaddress.IPv6Address(field_value) in ipaddress.IPv6Network(value))
+for r in parser.records_json():
+    # print(r)
+    data = json.loads(r["data"]).get("Event", {})
+    event_id = data.get("System", {}).get("EventID", None)
+    print(event_id)
+    if event_id == 7:
+        print(data)

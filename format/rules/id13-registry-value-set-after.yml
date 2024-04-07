@@ -17,6 +17,7 @@ logsource:
     product: windows
 detection:
     - and:
+        - EventID|==: 13
         - TargetObject|contains: '\Control\Print\Monitors\'
         - Details|endswith: '.dll'
         - Image|!==: 'C:\Windows\System32\spoolsv.exe'

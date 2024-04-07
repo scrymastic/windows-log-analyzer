@@ -1,0 +1,14 @@
+{
+    "System": {
+        "Provider": "Microsoft-Windows-Sysmon",
+        "EventID": 10,
+        "EventRecordID": 306346,
+        "TimeCreated": "2019-07-01T00:00:00.000Z"
+    },
+    "EventData": {
+        "SourceImage": "C:\\Windows\\System32\\inetsrv\\w3wp.exe",
+        "TargetImage": "C:\\Windows\\System32\\cmd.exe",
+        "GrantedAccess": "0x1fffff",
+        "CallTrace": "C:\\Windows\\SYSTEM32\\ntdll.dll+4534c|C:\\Windows\\system32\\kernel32.dll+5112b|C:\\Windows\\system32\\kernel32.dll+2079|C:\\Windows\\assembly\\NativeImages_v2.0.50727_32\\System.Web\\7057023b1bb89e4623a922b311be4dba\\System.Web.ni.dll+17b2ce"
+    }
+}

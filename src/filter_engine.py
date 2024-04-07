@@ -1,12 +1,12 @@
 
 import regex
 
-class EngineFilter:
+class FilterEngine:
     def __init__(self, rules):
         self.rules = rules
 
 
-    def matches_rule(self, rule, event):
+    def matches_rule(self, rule, event) -> bool:
         # # ignore logsource for now
         # logsource = rule.get('logsource', None)
         # detection
@@ -24,7 +24,7 @@ class EngineFilter:
         return True
 
 
-    def matches_and_block(self, block, event):
+    def matches_and_block(self, block, event) -> bool:
         # Check if all conditions in the 'and' list are satisfied
         for condition in block:
             if not self.matches_condition(condition, event):
@@ -45,14 +45,15 @@ class EngineFilter:
             print(f"Invalid condition '{condition}'")
             return False
 
-        # Handle 'and' or 'or' block
+        # If the condition is a block
         if len(condition) == 1:
             key = next(iter(condition))
             if key == 'and':
                 return self.matches_and_block(condition[key], event)
             elif key == 'or':
                 return self.matches_or_block(condition[key], event)
-
+        
+        # If the condition is a simple comparison
         # Extract the key and value from the condition
         key, value = next(iter(condition.items()))
         field, operator = key.split('|')
@@ -86,21 +87,14 @@ class EngineFilter:
         # for ip address, Classless Inter-Domain Routing
         elif operator == 'cidr':
             import ipaddress
-            # check if the ip address is in the range
-            # If ipv4
-            if '.' in field_value:
-                return ipaddress.IPv4Address(field_value) in ipaddress.IPv4Network(value)
-            # If ipv6
-            else:
-                return ipaddress.IPv6Address(field_value) in ipaddress.IPv6Network(value)
+            return ipaddress.IPv4Address(field_value) in ipaddress.IPv4Network(value) \
+                if '.' in field_value else \
+                ipaddress.IPv6Address(field_value) in ipaddress.IPv6Network(value)
         elif operator == 'not cidr':
             import ipaddress
-            # If ipv4
-            if '.' in field_value:
-                return ipaddress.IPv4Address(field_value) not in ipaddress.IPv4Network(value)
-            # If ipv6
-            else:
-                return ipaddress.IPv6Address(field_value) not in ipaddress.IPv6Network(value)
+            return ipaddress.IPv4Address(field_value) not in ipaddress.IPv4Network(value) \
+                if '.' in field_value else \
+                ipaddress.IPv6Address(field_value) not in ipaddress.IPv6Network(value)
         else:
             print(f"Invalid operator '{operator}'")
             return False
@@ -109,13 +103,12 @@ class EngineFilter:
     def get_field_value(self, event, field):
         # Extract the field value from the event data
         if field == 'EventID':
-            return event.get(field, None)
+            return event.get('System', {}).get(field, None)
         else:
-            event_data = event.get('EventData', {})
-            return event_data.get(field, None)
+            return event.get('EventData', {}).get(field, None)
 
 
-    def filter_events(self, events):
+    def filter_events(self, events: list) -> dict:
         # Filter the events based on the rules
         # Return the {event id: rule id list} dictionary
         filtered_events = {}

@@ -22,6 +22,7 @@ logsource:
 detection:
     selection:
     - and:
+        - EventID|==: 3
         - Image|endswith: '\dllhost.exe'
         - Initiated: 'true'
         - or:
