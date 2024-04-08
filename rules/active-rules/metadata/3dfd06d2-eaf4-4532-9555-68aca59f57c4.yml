@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems), Tim Shelton
+date: 2019/01/16
+description: Detects a suspicious execution from an uncommon folder
+falsepositives:
+- Unknown
+filename: proc_creation_win_susp_execution_path.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/01/10
+references:
+- https://github.com/mbevilacqua/appcompatprocessor/blob/6c847937c5a836e2ce2fe2b915f213c345a3c389/AppCompatSearch.txt
+- https://www.secureworks.com/research/bronze-butler-targets-japanese-businesses
+- https://www.crowdstrike.com/resources/reports/2019-crowdstrike-global-threat-report/
+- https://github.com/ThreatHuntingProject/ThreatHunting/blob/cb22598bb70651f88e0285abc8d835757d2cb596/hunts/suspicious_process_creation_via_windows_event_logs.md
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036

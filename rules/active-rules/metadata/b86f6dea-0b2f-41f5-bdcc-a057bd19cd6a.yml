@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/10/18
+description: Detects when a user downloads a file from an IP based URL using CertOC.exe
+falsepositives:
+- Unknown
+filename: proc_creation_win_certoc_download_direct_ip.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Certoc/
+related:
+- id: 70ad0861-d1fe-491c-a45f-fa48148a300d
+  type: similar
+status: experimental
+tags:
+- attack.command_and_control
+- attack.execution
+- attack.t1105

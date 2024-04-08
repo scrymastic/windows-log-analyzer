@@ -1,0 +1,6 @@
+detection:
+- and:
+  - TargetObject|endswith: \Environment\windir
+  - or:
+    - Details|!==: '%SystemRoot%'
+id: 724ea201-6514-4f38-9739-e5973c34f49a

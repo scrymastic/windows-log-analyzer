@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: Software\Microsoft\Windows NT\CurrentVersion\Accessibility\ATs
+    - TargetObject|contains: Software\Microsoft\Windows NT\CurrentVersion\Accessibility\Configuration
+  - or:
+    - Image|!==: C:\Windows\system32\atbroker.exe
+    - TargetObject|not contains: \Microsoft\Windows NT\CurrentVersion\Accessibility\Configuration
+    - Details|!==: (Empty)
+  - or:
+    - Image|not startswith: C:\Windows\Installer\MSI
+    - TargetObject|not contains: Software\Microsoft\Windows NT\CurrentVersion\Accessibility\ATs
+id: 9577edbb-851f-4243-8c91-1d5b50c1a39b

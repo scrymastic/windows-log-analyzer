@@ -1,0 +1,24 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/23
+description: Detects execution of "odbcconf" with the "INSTALLDRIVER" action where
+  the driver doesn't contain a ".dll" extension. This is often used as a defense evasion
+  method.
+falsepositives:
+- Unlikely
+filename: proc_creation_win_odbcconf_driver_install_susp.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Odbcconf/
+- https://web.archive.org/web/20191023232753/https://twitter.com/Hexacorn/status/1187143326673330176
+- https://www.hexacorn.com/blog/2020/08/23/odbcconf-lolbin-trifecta/
+related:
+- id: 3f5491e2-8db8-496b-9e95-1029fce852d4
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218.008

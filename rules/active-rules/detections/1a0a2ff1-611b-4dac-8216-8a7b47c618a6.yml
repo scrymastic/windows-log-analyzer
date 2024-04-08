@@ -1,0 +1,5 @@
+detection:
+- and:
+  - EventID|==: 4697
+  - ServiceFileName|contains: (Clipboard|i
+id: 1a0a2ff1-611b-4dac-8216-8a7b47c618a6

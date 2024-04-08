@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ParentImage|endswith: \sdclt.exe
+id: da2738f2-fadb-4394-afa7-0a0674885afa

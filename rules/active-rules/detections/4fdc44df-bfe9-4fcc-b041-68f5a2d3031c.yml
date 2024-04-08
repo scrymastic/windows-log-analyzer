@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: Disable-LocalUser
+    - ScriptBlockText|contains: Enable-LocalUser
+    - ScriptBlockText|contains: Get-LocalUser
+    - ScriptBlockText|contains: Set-LocalUser
+    - ScriptBlockText|contains: New-LocalUser
+    - ScriptBlockText|contains: Rename-LocalUser
+    - ScriptBlockText|contains: Remove-LocalUser
+id: 4fdc44df-bfe9-4fcc-b041-68f5a2d3031c

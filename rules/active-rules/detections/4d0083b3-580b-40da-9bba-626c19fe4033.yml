@@ -1,0 +1,4 @@
+detection:
+- and:
+  - PipeName|contains: \coerced\
+id: 4d0083b3-580b-40da-9bba-626c19fe4033

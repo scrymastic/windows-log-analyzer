@@ -1,0 +1,8 @@
+detection:
+- and:
+  - EventID|==: 16403
+  - or:
+    - LocalName|contains: \Desktop\
+    - LocalName|contains: C:\Users\Public\
+    - LocalName|contains: C:\PerfLogs\
+id: f8a56cb7-a363-44ed-a82f-5926bb44cd05

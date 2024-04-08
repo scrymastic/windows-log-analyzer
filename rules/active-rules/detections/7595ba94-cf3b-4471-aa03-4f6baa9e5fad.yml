@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 4699
+    - EventID|==: 4701
+  - or:
+    - TaskName|contains: \Windows\SystemRestore\SR
+    - TaskName|contains: \Windows\Windows Defender\
+    - TaskName|contains: \Windows\BitLocker
+    - TaskName|contains: \Windows\WindowsBackup\
+    - TaskName|contains: \Windows\WindowsUpdate\
+    - TaskName|contains: \Windows\UpdateOrchestrator\Schedule
+    - TaskName|contains: \Windows\ExploitGuard
+  - or:
+    - EventID|!==: 4699
+    - SubjectUserName|not endswith: $
+    - TaskName|not contains: \Windows\Windows Defender\
+id: 7595ba94-cf3b-4471-aa03-4f6baa9e5fad

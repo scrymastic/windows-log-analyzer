@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: ' /account=system '
+    - CommandLine|contains: ' /account=ti '
+  - CommandLine|contains: /exec=
+id: 93199800-b52a-4dec-b762-75212c196542

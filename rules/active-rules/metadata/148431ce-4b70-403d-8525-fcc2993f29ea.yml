@@ -1,0 +1,18 @@
+author: Avneet Singh @v3t0_, oscd.community
+date: 2020/10/18
+description: Detects potential DLL injection and execution using "Tracker.exe"
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_tracker.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/01/09
+references:
+- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Tracker/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1055.001

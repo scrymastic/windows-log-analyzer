@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - ParentImage|endswith: \java.exe
+    - ParentImage|endswith: \javaw.exe
+  - ParentCommandLine|contains: SysAidServer
+id: 60bfeac3-0d35-4302-8efb-1dd16f715bc6

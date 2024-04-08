@@ -1,0 +1,24 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \brave.exe
+    - Image|endswith: \CCleaner Browser\Application\CCleanerBrowser.exe
+    - Image|endswith: \chromium.exe
+    - Image|endswith: \firefox.exe
+    - Image|endswith: \Google\Chrome\Application\chrome.exe
+    - Image|endswith: \iexplore.exe
+    - Image|endswith: \microsoftedge.exe
+    - Image|endswith: \msedge.exe
+    - Image|endswith: \Opera.exe
+    - Image|endswith: \Vivaldi.exe
+    - Image|endswith: \Whale.exe
+    - Image|endswith: \Outlook.exe
+    - Image|endswith: \RuntimeBroker.exe
+    - Image|endswith: \Thunderbird.exe
+    - Image|endswith: \Discord.exe
+    - Image|endswith: \Keybase.exe
+    - Image|endswith: \msteams.exe
+    - Image|endswith: \Slack.exe
+    - Image|endswith: \teams.exe
+  - TargetFilename|contains: .rdp
+id: fccfb43e-09a7-4bd2-8b37-a5a7df33386d

@@ -1,0 +1,55 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \curl.exe
+    - OriginalFileName|==: curl.exe
+  - CommandLine|matches: ://[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
+  - CommandLine|contains: http
+  - or:
+    - CommandLine|contains: ' -O'
+    - CommandLine|contains: --remote-name
+    - CommandLine|contains: --output
+  - or:
+    - CommandLine|endswith: .bat
+    - CommandLine|endswith: .bat"
+    - CommandLine|endswith: .dat
+    - CommandLine|endswith: .dat"
+    - CommandLine|endswith: .dll
+    - CommandLine|endswith: .dll"
+    - CommandLine|endswith: .exe
+    - CommandLine|endswith: .exe"
+    - CommandLine|endswith: .gif
+    - CommandLine|endswith: .gif"
+    - CommandLine|endswith: .hta
+    - CommandLine|endswith: .hta"
+    - CommandLine|endswith: .jpeg
+    - CommandLine|endswith: .jpeg"
+    - CommandLine|endswith: .log
+    - CommandLine|endswith: .log"
+    - CommandLine|endswith: .msi
+    - CommandLine|endswith: .msi"
+    - CommandLine|endswith: .png
+    - CommandLine|endswith: .png"
+    - CommandLine|endswith: .ps1
+    - CommandLine|endswith: .ps1"
+    - CommandLine|endswith: .psm1
+    - CommandLine|endswith: .psm1"
+    - CommandLine|endswith: .vbe
+    - CommandLine|endswith: .vbe"
+    - CommandLine|endswith: .vbs
+    - CommandLine|endswith: .vbs"
+    - CommandLine|endswith: .bat'
+    - CommandLine|endswith: .dat'
+    - CommandLine|endswith: .dll'
+    - CommandLine|endswith: .exe'
+    - CommandLine|endswith: .gif'
+    - CommandLine|endswith: .hta'
+    - CommandLine|endswith: .jpeg'
+    - CommandLine|endswith: .log'
+    - CommandLine|endswith: .msi'
+    - CommandLine|endswith: .png'
+    - CommandLine|endswith: .ps1'
+    - CommandLine|endswith: .psm1'
+    - CommandLine|endswith: .vbe'
+    - CommandLine|endswith: .vbs'
+id: 5cb299fc-5fb1-4d07-b989-0644c68b6043

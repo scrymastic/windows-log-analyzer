@@ -1,0 +1,9 @@
+detection:
+- and:
+  - ParentImage|endswith: \EdgeTransport.exe
+  - or:
+    - Image|!==: C:\Windows\System32\conhost.exe
+  - or:
+    - Image|not startswith: C:\Program Files\Microsoft\Exchange Server\
+    - Image|not endswith: \Bin\OleConverter.exe
+id: 797011dc-44f4-4e6f-9f10-a8ceefbe566b

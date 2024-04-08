@@ -1,0 +1,9 @@
+detection:
+- and:
+  - ImageLoaded|endswith: \amsi.dll
+  - or:
+    - Image|endswith: \ExtExport.exe
+    - Image|endswith: \odbcconf.exe
+    - Image|endswith: \regsvr32.exe
+    - Image|endswith: \rundll32.exe
+id: 6ec86d9e-912e-4726-91a2-209359b999b9

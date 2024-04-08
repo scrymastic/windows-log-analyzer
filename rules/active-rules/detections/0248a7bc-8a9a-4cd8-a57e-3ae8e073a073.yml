@@ -1,0 +1,10 @@
+detection:
+- and:
+  - EventID|==: 4663
+  - ObjectServer|==: Security
+  - ObjectType|==: File
+  - ObjectName|startswith: \Device\CdRom
+  - ObjectName|!==: \Device\CdRom0\autorun.ico
+  - ObjectName|!==: \Device\CdRom0\setup.exe
+  - ObjectName|!==: \Device\CdRom0\setup64.exe
+id: 0248a7bc-8a9a-4cd8-a57e-3ae8e073a073

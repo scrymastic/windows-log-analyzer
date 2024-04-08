@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - ParentCommandLine|endswith: .exe
+    - ParentCommandLine|endswith: .exe"
+  - Image|endswith: \cmd.exe
+  - CommandLine|startswith: /c echo "
+  - ParentImage|not contains: :\Windows\System32\
+  - ParentImage|not contains: :\Windows\SysWOW64\
+id: f53714ec-5077-420e-ad20-907ff9bb2958

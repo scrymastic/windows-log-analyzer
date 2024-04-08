@@ -1,0 +1,17 @@
+detection:
+- and:
+  - Initiated|==: 'true'
+  - or:
+    - DestinationPort|==: 8080
+    - DestinationPort|==: 8888
+  - DestinationIp|not cidr: 127.0.0.0/8
+  - DestinationIp|not cidr: 10.0.0.0/8
+  - DestinationIp|not cidr: 172.16.0.0/12
+  - DestinationIp|not cidr: 192.168.0.0/16
+  - DestinationIp|not cidr: 169.254.0.0/16
+  - DestinationIp|not cidr: ::1/128
+  - DestinationIp|not cidr: fe80::/10
+  - DestinationIp|not cidr: fc00::/7
+  - Image|not startswith: C:\Program Files\
+  - Image|not startswith: C:\Program Files (x86)\
+id: 6d8c3d20-a5e1-494f-8412-4571d716cf5c

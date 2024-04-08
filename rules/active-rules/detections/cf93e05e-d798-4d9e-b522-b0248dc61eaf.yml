@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \SharpChisel.exe
+    - Product|==: SharpChisel
+id: cf93e05e-d798-4d9e-b522-b0248dc61eaf

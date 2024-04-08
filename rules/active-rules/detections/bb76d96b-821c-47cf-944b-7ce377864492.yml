@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \rundll32.exe
+    - OriginalFileName|==: RUNDLL32.EXE
+  - CommandLine|contains: C:\windows\system32\davclnt.dll,DavSetCookie
+  - CommandLine|contains: http
+  - or:
+    - CommandLine|contains: spoolss
+    - CommandLine|contains: srvsvc
+    - CommandLine|contains: /print/pipe/
+id: bb76d96b-821c-47cf-944b-7ce377864492

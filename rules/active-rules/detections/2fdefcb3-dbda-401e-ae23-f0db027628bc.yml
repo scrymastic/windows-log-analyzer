@@ -1,0 +1,21 @@
+detection:
+- and:
+  - ParentImage|endswith: \winlogon.exe
+  - or:
+    - Image|endswith: \cmd.exe
+    - Image|endswith: \cscript.exe
+    - Image|endswith: \mshta.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+    - Image|endswith: \regsvr32.exe
+    - Image|endswith: \rundll32.exe
+    - Image|endswith: \wscript.exe
+    - Image|endswith: \wt.exe
+  - or:
+    - CommandLine|contains: sethc.exe
+    - CommandLine|contains: utilman.exe
+    - CommandLine|contains: osk.exe
+    - CommandLine|contains: Magnify.exe
+    - CommandLine|contains: Narrator.exe
+    - CommandLine|contains: DisplaySwitch.exe
+id: 2fdefcb3-dbda-401e-ae23-f0db027628bc

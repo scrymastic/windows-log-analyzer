@@ -1,0 +1,19 @@
+detection:
+- and:
+  - Image|endswith: \wusa.exe
+  - or:
+    - ParentImage|contains: :\Perflogs\
+    - ParentImage|contains: :\Users\Public\
+    - ParentImage|contains: :\Windows\Temp\
+    - ParentImage|contains: \Appdata\Local\Temp\
+    - ParentImage|contains: \Temporary Internet
+  - or:
+    - ParentImage|contains: :\Users\
+    - ParentImage|contains: \Favorites\
+    - ParentImage|contains: :\Users\
+    - ParentImage|contains: \Favourites\
+    - ParentImage|contains: :\Users\
+    - ParentImage|contains: \Contacts\
+    - ParentImage|contains: :\Users\
+    - ParentImage|contains: \Pictures\
+id: ef64fc9c-a45e-43cc-8fd8-7d75d73b4c99

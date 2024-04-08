@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: COMPlus_ETWEnabled
+    - CommandLine|contains: COMPlus_ETWFlags
+id: 41421f44-58f9-455d-838a-c398859841d4

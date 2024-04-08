@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \winget.exe
+    - OriginalFileName|==: winget.exe
+  - CommandLine|contains: 'source '
+  - CommandLine|contains: 'add '
+id: 05ebafc8-7aa2-4bcd-a269-2aec93f9e842

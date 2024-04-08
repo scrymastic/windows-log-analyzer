@@ -1,0 +1,14 @@
+detection:
+- and:
+  - EventID|==: 4625
+  - or:
+    - IpAddress|not contains: '-'
+  - IpAddress|not cidr: ::1/128
+  - IpAddress|not cidr: 10.0.0.0/8
+  - IpAddress|not cidr: 127.0.0.0/8
+  - IpAddress|not cidr: 172.16.0.0/12
+  - IpAddress|not cidr: 192.168.0.0/16
+  - IpAddress|not cidr: 169.254.0.0/16
+  - IpAddress|not cidr: fc00::/7
+  - IpAddress|not cidr: fe80::/10
+id: f88e112a-21aa-44bd-9b01-6ee2a2bbbed1

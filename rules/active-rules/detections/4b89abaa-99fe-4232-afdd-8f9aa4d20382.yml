@@ -1,0 +1,67 @@
+detection:
+- and:
+  - Initiated|==: 'true'
+  - or:
+    - DestinationPort|==: 100
+    - DestinationPort|==: 198
+    - DestinationPort|==: 200
+    - DestinationPort|==: 243
+    - DestinationPort|==: 473
+    - DestinationPort|==: 666
+    - DestinationPort|==: 700
+    - DestinationPort|==: 743
+    - DestinationPort|==: 777
+    - DestinationPort|==: 1443
+    - DestinationPort|==: 1515
+    - DestinationPort|==: 1777
+    - DestinationPort|==: 1817
+    - DestinationPort|==: 1904
+    - DestinationPort|==: 1960
+    - DestinationPort|==: 2443
+    - DestinationPort|==: 2448
+    - DestinationPort|==: 3360
+    - DestinationPort|==: 3675
+    - DestinationPort|==: 3939
+    - DestinationPort|==: 4040
+    - DestinationPort|==: 4433
+    - DestinationPort|==: 4438
+    - DestinationPort|==: 4443
+    - DestinationPort|==: 4444
+    - DestinationPort|==: 4455
+    - DestinationPort|==: 5445
+    - DestinationPort|==: 5552
+    - DestinationPort|==: 5649
+    - DestinationPort|==: 6625
+    - DestinationPort|==: 7210
+    - DestinationPort|==: 7777
+    - DestinationPort|==: 8143
+    - DestinationPort|==: 8843
+    - DestinationPort|==: 9631
+    - DestinationPort|==: 9943
+    - DestinationPort|==: 10101
+    - DestinationPort|==: 12102
+    - DestinationPort|==: 12103
+    - DestinationPort|==: 12322
+    - DestinationPort|==: 13145
+    - DestinationPort|==: 13394
+    - DestinationPort|==: 13504
+    - DestinationPort|==: 13505
+    - DestinationPort|==: 13506
+    - DestinationPort|==: 13507
+    - DestinationPort|==: 14102
+    - DestinationPort|==: 14103
+    - DestinationPort|==: 14154
+    - DestinationPort|==: 49180
+    - DestinationPort|==: 65520
+    - DestinationPort|==: 65535
+  - DestinationIp|not cidr: 127.0.0.0/8
+  - DestinationIp|not cidr: 10.0.0.0/8
+  - DestinationIp|not cidr: 172.16.0.0/12
+  - DestinationIp|not cidr: 192.168.0.0/16
+  - DestinationIp|not cidr: 169.254.0.0/16
+  - DestinationIp|not cidr: ::1/128
+  - DestinationIp|not cidr: fe80::/10
+  - DestinationIp|not cidr: fc00::/7
+  - Image|not startswith: C:\Program Files\
+  - Image|not startswith: C:\Program Files (x86)\
+id: 4b89abaa-99fe-4232-afdd-8f9aa4d20382

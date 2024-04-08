@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|endswith: \cmstp.exe
+  - Initiated|==: 'true'
+id: efafe0bf-4238-479e-af8f-797bd3490d2d

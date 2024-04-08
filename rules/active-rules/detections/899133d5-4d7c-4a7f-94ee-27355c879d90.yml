@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: python.exe
+    - or:
+      - Image|endswith: python.exe
+      - Image|endswith: python3.exe
+      - Image|endswith: python2.exe
+  - CommandLine|contains: ' -c'
+  - or:
+    - ParentImage|not startswith: C:\Program Files\Python
+    - ParentImage|not endswith: \python.exe
+    - ParentCommandLine|not contains: -E -s -m ensurepip -U --default-pip
+  - or:
+    - ParentImage|not endswith: \AppData\Local\Programs\Microsoft VS Code\Code.exe
+id: 899133d5-4d7c-4a7f-94ee-27355c879d90

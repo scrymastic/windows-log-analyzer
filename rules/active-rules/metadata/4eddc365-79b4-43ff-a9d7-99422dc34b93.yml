@@ -1,0 +1,20 @@
+author: Christopher Peacock @SecurePeacock, SCYTHE @scythe_io
+date: 2022/06/02
+description: Remote.exe is part of WinDbg in the Windows SDK and can be used for AWL
+  bypass and running remote files.
+falsepositives:
+- Approved installs of Windows SDK with Debugging Tools for Windows (WinDbg).
+filename: proc_creation_win_lolbin_remote.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://blog.thecybersecuritytutor.com/Exeuction-AWL-Bypass-Remote-exe-LOLBin/
+- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Remote/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1127

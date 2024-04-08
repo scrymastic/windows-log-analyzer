@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/14
+description: Detects potential abuse of ntdsutil to dump ntds.dit database to a suspicious
+  location
+falsepositives:
+- Legitimate backup operation/creating shadow copies
+filename: win_esent_ntdsutil_abuse_susp_location.yml
+level: medium
+logsource:
+  product: windows
+  service: application
+modified: 2023/10/23
+references:
+- https://twitter.com/mgreen27/status/1558223256704122882
+- https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj574207(v=ws.11)
+related: []
+status: test
+tags:
+- attack.execution

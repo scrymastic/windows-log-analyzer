@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems)
+date: 2019/11/14
+description: Detects the execution of msiexec.exe from an uncommon directory
+falsepositives:
+- Unknown
+filename: proc_creation_win_msiexec_masquerading.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/21
+references:
+- https://twitter.com/200_okay_/status/1194765831911215104
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036.005

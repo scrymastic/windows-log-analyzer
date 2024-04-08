@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \find.exe
+      - Image|endswith: \findstr.exe
+    - or:
+      - OriginalFileName|==: FIND.EXE
+      - OriginalFileName|==: FINDSTR.EXE
+  - or:
+    - CommandLine|contains: '"Everyone"'
+    - CommandLine|contains: '''Everyone'''
+    - CommandLine|contains: '"BUILTIN\\"'
+    - CommandLine|contains: '''BUILTIN\'''
+  - CommandLine|contains: 'icacls '
+  - CommandLine|contains: 'findstr '
+  - CommandLine|contains: Everyone
+id: 47e4bab7-c626-47dc-967b-255608c9a920

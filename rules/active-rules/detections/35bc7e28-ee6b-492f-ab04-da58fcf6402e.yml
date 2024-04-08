@@ -1,0 +1,12 @@
+detection:
+- and:
+  - EventID|==: 5145
+  - ObjectType|==: File
+  - RelativeTargetName|endswith: \desktop.ini
+  - or:
+    - AccessList|contains: WriteData
+    - AccessList|contains: DELETE
+    - AccessList|contains: WriteDAC
+    - AccessList|contains: AppendData
+    - AccessList|contains: AddSubdirectory
+id: 35bc7e28-ee6b-492f-ab04-da58fcf6402e

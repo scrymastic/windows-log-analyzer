@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems)
+date: 2019/08/24
+description: Detects usage of a base64 encoded "FromBase64String" cmdlet in a process
+  command line
+falsepositives:
+- Unknown
+filename: proc_creation_win_powershell_base64_frombase64string.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/04/06
+references:
+- Internal Research
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1140
+- attack.execution
+- attack.t1059.001

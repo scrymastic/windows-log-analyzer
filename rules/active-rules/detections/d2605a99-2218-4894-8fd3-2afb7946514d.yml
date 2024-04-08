@@ -1,0 +1,6 @@
+detection:
+- and:
+  - ImageLoaded|endswith: \mfdetours.dll
+  - or:
+    - ImageLoaded|not contains: :\Program Files (x86)\Windows Kits\10\bin\
+id: d2605a99-2218-4894-8fd3-2afb7946514d

@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/11
+description: Detects potential installation or installation attempts of known malicious
+  appx packages
+falsepositives:
+- Rare occasions where a malicious package uses the exact same name and version as
+  a legtimate application
+filename: win_appxdeployment_server_mal_appx_names.yml
+level: medium
+logsource:
+  product: windows
+  service: appxdeployment-server
+modified: 2023/01/12
+references:
+- https://www.sentinelone.com/labs/inside-malicious-windows-apps-for-malware-deployment/
+- https://news.sophos.com/en-us/2021/11/11/bazarloader-call-me-back-attack-abuses-windows-10-apps-mechanism/
+- https://forensicitguy.github.io/analyzing-magnitude-magniber-appx/
+related: []
+status: test
+tags:
+- attack.defense_evasion

@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/06/01
+description: Detects PowerShell core DLL being loaded by an Office Product
+falsepositives:
+- Unknown
+filename: image_load_office_powershell_dll_load.yml
+level: medium
+logsource:
+  category: image_load
+  product: windows
+modified: ''
+references:
+- Internal Research
+related: []
+status: test
+tags:
+- attack.defense_evasion

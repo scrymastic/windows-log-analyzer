@@ -1,0 +1,6 @@
+detection:
+- and:
+  - OriginalFileName|==: NirCmd.exe
+  - Image|not endswith: \nircmd.exe
+  - Image|not endswith: \nircmdc.exe
+id: 264982dc-dbad-4dce-b707-1e0d3e0f73d9

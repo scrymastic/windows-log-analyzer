@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \SyncAppvPublishingServer.exe
+    - OriginalFileName|==: syncappvpublishingserver.exe
+  - CommandLine|contains: '"n; '
+id: fbd7c32d-db2a-4418-b92c-566eb8911133

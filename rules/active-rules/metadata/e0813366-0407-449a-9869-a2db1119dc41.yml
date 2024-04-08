@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems)
+date: 2020/07/01
+description: Detects a suspicious printer driver installation with an empty Manufacturer
+  value
+falsepositives:
+- Alerts on legitimate printer drivers that do not set any more details in the Manufacturer
+  value
+filename: registry_set_susp_printer_driver.yml
+level: high
+logsource:
+  category: registry_set
+  product: windows
+modified: 2023/08/17
+references:
+- https://twitter.com/SBousseaden/status/1410545674773467140
+related: []
+status: test
+tags:
+- attack.privilege_escalation
+- attack.t1574
+- cve.2021.1675

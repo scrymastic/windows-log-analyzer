@@ -1,0 +1,24 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/09
+description: Detects specific techniques often seen used inside of PowerShell scripts
+  to obfscuate Alias creation
+falsepositives:
+- Unknown
+filename: posh_ps_susp_alias_obfscuation.yml
+level: low
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: ''
+references:
+- Internal Research
+related:
+- id: 96cd126d-f970-49c4-848a-da3a09f55c55
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.execution
+- attack.t1027
+- attack.t1059.001

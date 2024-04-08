@@ -1,0 +1,21 @@
+author: frack113, Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/06
+description: Detect execution of suspicious double extension files in ParentCommandLine
+falsepositives:
+- Unknown
+filename: proc_creation_win_susp_double_extension_parent.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/28
+references:
+- https://www.virustotal.com/gui/file/7872d8845a332dce517adae9c3389fde5313ff2fed38c2577f3b498da786db68/behavior
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/bluebottle-banks-targeted-africa
+related:
+- id: 1cdd9a09-06c9-4769-99ff-626e2b3991b8
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036.007

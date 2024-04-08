@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - Image|contains: \Users\Public\
+    - Image|contains: \$Recycle.bin
+    - Image|contains: \Users\All Users\
+    - Image|contains: \Users\Default\
+    - Image|contains: \Users\Contacts\
+    - Image|contains: \Users\Searches\
+    - Image|contains: C:\Perflogs\
+    - Image|contains: \config\systemprofile\
+    - Image|contains: \Windows\Fonts\
+    - Image|contains: \Windows\IME\
+    - Image|contains: \Windows\addins\
+  - or:
+    - ParentImage|endswith: \services.exe
+    - ParentImage|endswith: \svchost.exe
+id: 883faa95-175a-4e22-8181-e5761aeb373c

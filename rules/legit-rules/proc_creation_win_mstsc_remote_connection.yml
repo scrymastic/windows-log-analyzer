@@ -26,6 +26,9 @@ detection:
     - Image|endswith: \mstsc.exe
     - OriginalFileName|==: mstsc.exe
   - CommandLine|contains: ' /v:'
+  - or:
+    - ParentImage|!==: C:\Windows\System32\lxss\wslhost.exe
+    - CommandLine|not contains: C:\ProgramData\Microsoft\WSL\wslg.rdp
 falsepositives:
 - WSL (Windows Sub System For Linux)
 level: medium

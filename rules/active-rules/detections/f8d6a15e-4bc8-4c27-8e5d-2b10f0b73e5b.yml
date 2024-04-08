@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \powercfg.exe
+    - OriginalFileName|==: PowerCfg.exe
+  - or:
+    - CommandLine|contains: '/setacvalueindex '
+    - CommandLine|contains: SCHEME_CURRENT
+    - CommandLine|contains: SUB_VIDEO
+    - CommandLine|contains: VIDEOCONLOCK
+    - CommandLine|contains: '-change '
+    - CommandLine|contains: -standby-timeout-
+id: f8d6a15e-4bc8-4c27-8e5d-2b10f0b73e5b

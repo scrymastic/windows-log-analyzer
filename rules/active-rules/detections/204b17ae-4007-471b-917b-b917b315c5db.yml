@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cmd.exe
+    - OriginalFileName|==: Cmd.Exe
+  - or:
+    - CommandLine|contains: 'del '
+    - CommandLine|contains: 'erase '
+  - or:
+    - CommandLine|contains: \\\*.au3
+    - CommandLine|contains: \\\*.dll
+    - CommandLine|contains: \\\*.exe
+    - CommandLine|contains: \\\*.js
+id: 204b17ae-4007-471b-917b-b917b315c5db

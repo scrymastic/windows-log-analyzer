@@ -1,0 +1,20 @@
+author: pH-T (Nextron Systems)
+date: 2022/03/18
+description: Detects service installation with suspicious folder patterns
+falsepositives:
+- Unknown
+filename: win_system_susp_service_installation_folder_pattern.yml
+level: high
+logsource:
+  product: windows
+  service: system
+modified: 2022/03/24
+references:
+- Internal Research
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- car.2013-09-005
+- attack.t1543.003

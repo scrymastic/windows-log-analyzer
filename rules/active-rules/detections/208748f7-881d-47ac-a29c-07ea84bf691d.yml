@@ -1,0 +1,26 @@
+detection:
+- and:
+  - ParentImage|endswith: \OUTLOOK.EXE
+  - or:
+    - Image|endswith: \AppVLP.exe
+    - Image|endswith: \bash.exe
+    - Image|endswith: \cmd.exe
+    - Image|endswith: \cscript.exe
+    - Image|endswith: \forfiles.exe
+    - Image|endswith: \hh.exe
+    - Image|endswith: \mftrace.exe
+    - Image|endswith: \msbuild.exe
+    - Image|endswith: \msdt.exe
+    - Image|endswith: \mshta.exe
+    - Image|endswith: \msiexec.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+    - Image|endswith: \regsvr32.exe
+    - Image|endswith: \schtasks.exe
+    - Image|endswith: \scrcons.exe
+    - Image|endswith: \scriptrunner.exe
+    - Image|endswith: \sh.exe
+    - Image|endswith: \svchost.exe
+    - Image|endswith: \wmic.exe
+    - Image|endswith: \wscript.exe
+id: 208748f7-881d-47ac-a29c-07ea84bf691d

@@ -1,0 +1,22 @@
+detection:
+- and:
+  - or:
+    - or:
+      - ParentImage|endswith: \wmiprvse.exe
+      - ParentImage|endswith: \mmc.exe
+      - ParentImage|endswith: \explorer.exe
+      - ParentImage|endswith: \services.exe
+    - CommandLine|contains: cmd.exe
+    - CommandLine|contains: /Q
+    - CommandLine|contains: /c
+    - CommandLine|contains: \\\\127.0.0.1\\
+    - CommandLine|contains: '&1'
+  - or:
+    - or:
+      - ParentCommandLine|contains: svchost.exe -k netsvcs
+      - ParentCommandLine|contains: taskeng.exe
+    - CommandLine|contains: cmd.exe
+    - CommandLine|contains: /C
+    - CommandLine|contains: Windows\Temp\
+    - CommandLine|contains: '&1'
+id: 10c14723-61c7-4c75-92ca-9af245723ad2

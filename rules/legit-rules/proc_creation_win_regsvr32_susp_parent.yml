@@ -28,6 +28,9 @@ detection:
     - ParentImage|endswith: \pwsh.exe
     - ParentImage|endswith: \wscript.exe
   - Image|endswith: \regsvr32.exe
+  - or:
+    - ParentImage|!==: C:\Windows\System32\cmd.exe
+    - CommandLine|not endswith: ' /s C:\Windows\System32\RpcProxy\RpcProxy.dll'
 falsepositives:
 - Legitimate ".bat", ".hta", ".ps1" or ".vbs" scripts leverage legitimately often.
   Apply additional filter and exclusions as necessary

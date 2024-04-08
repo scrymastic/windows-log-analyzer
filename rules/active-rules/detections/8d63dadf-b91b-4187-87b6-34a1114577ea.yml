@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \wmic.exe
+    - OriginalFileName|==: wmic.exe
+    - or:
+      - Imphash|==: 1B1A3F43BF37B5BFE60751F2EE2F326E
+      - Imphash|==: 37777A96245A3C74EB217308F3546F4C
+      - Imphash|==: 9D87C9D67CE724033C0B40CC4CA1B206
+    - or:
+      - Hashes|contains: IMPHASH=1B1A3F43BF37B5BFE60751F2EE2F326E
+      - Hashes|contains: IMPHASH=37777A96245A3C74EB217308F3546F4C
+      - Hashes|contains: IMPHASH=9D87C9D67CE724033C0B40CC4CA1B206
+  - CommandLine|contains: 'format:'
+  - CommandLine|contains: http
+id: 8d63dadf-b91b-4187-87b6-34a1114577ea

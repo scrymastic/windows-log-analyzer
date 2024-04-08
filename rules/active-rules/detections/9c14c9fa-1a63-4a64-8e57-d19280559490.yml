@@ -1,0 +1,9 @@
+detection:
+- and:
+  - CommandLine|contains: set
+  - CommandLine|contains: '&&'
+  - or:
+    - CommandLine|contains: environment
+    - CommandLine|contains: invoke
+    - CommandLine|contains: input
+id: 9c14c9fa-1a63-4a64-8e57-d19280559490

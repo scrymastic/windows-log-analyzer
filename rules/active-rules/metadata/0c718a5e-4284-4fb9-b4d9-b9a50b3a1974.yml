@@ -1,0 +1,24 @@
+author: Jonathan Cheong, oscd.community
+date: 2020/10/15
+description: Detects Obfuscated use of stdin to execute PowerShell
+falsepositives:
+- Unknown
+filename: win_security_invoke_obfuscation_stdin_services_security.yml
+level: high
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security
+modified: 2022/11/29
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+related:
+- id: 72862bf2-0eb1-11eb-adc1-0242ac120002
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

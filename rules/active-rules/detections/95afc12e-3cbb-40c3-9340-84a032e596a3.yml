@@ -1,0 +1,5 @@
+detection:
+- and:
+  - ScriptBlockText|contains: get-acl
+  - ScriptBlockText|contains: REGISTRY::HKLM\SYSTEM\CurrentControlSet\Services\
+id: 95afc12e-3cbb-40c3-9340-84a032e596a3

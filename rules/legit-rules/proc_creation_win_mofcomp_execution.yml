@@ -43,6 +43,13 @@ detection:
       - CommandLine|contains: '%temp%'
       - CommandLine|contains: '%tmp%'
       - CommandLine|contains: '%appdata%'
+  - or:
+    - ParentImage|!==: C:\Windows\System32\wbem\WmiPrvSE.exe
+    - CommandLine|not contains: C:\Windows\TEMP\
+    - CommandLine|not endswith: .mof
+  - or:
+    - CommandLine|not contains: C:\Windows\TEMP\
+    - CommandLine|not endswith: .mof
 falsepositives:
 - Unknown
 level: high

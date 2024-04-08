@@ -1,0 +1,25 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - or:
+    - CommandLine|contains: ToInt
+    - CommandLine|contains: ToDecimal
+    - CommandLine|contains: ToByte
+    - CommandLine|contains: ToUint
+    - CommandLine|contains: ToSingle
+    - CommandLine|contains: ToSByte
+  - or:
+    - CommandLine|contains: ToChar
+    - CommandLine|contains: ToString
+    - CommandLine|contains: String
+  - CommandLine|contains: char
+  - CommandLine|contains: join
+  - CommandLine|contains: split
+  - CommandLine|contains: join
+id: cdf05894-89e7-4ead-b2b0-0a5f97a90f2f

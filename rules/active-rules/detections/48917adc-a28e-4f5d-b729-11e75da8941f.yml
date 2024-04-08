@@ -1,0 +1,13 @@
+detection:
+- and:
+  - Image|endswith: \reg.exe
+  - or:
+    - CommandLine|contains: SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths
+    - CommandLine|contains: SOFTWARE\Microsoft\Microsoft Antimalware\Exclusions\Paths
+  - CommandLine|contains: 'ADD '
+  - CommandLine|contains: '/t '
+  - CommandLine|contains: 'REG_DWORD '
+  - CommandLine|contains: '/v '
+  - CommandLine|contains: '/d '
+  - CommandLine|contains: '0'
+id: 48917adc-a28e-4f5d-b729-11e75da8941f

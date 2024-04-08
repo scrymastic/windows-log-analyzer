@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - Image|contains: \schtasks.exe
+    - OriginalFileName|==: schtasks.exe
+  - or:
+    - CommandLine|contains: wscript
+    - CommandLine|contains: vbscript
+    - CommandLine|contains: cscript
+    - CommandLine|contains: 'wmic '
+    - CommandLine|contains: wmic.exe
+    - CommandLine|contains: regsvr32.exe
+    - CommandLine|contains: powershell
+    - CommandLine|contains: \AppData\
+  - CommandLine|contains: once
+  - CommandLine|contains: 00:00
+id: 970823b7-273b-460a-8afc-3a6811998529

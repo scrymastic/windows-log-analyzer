@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - Product|==: SQLite
+    - or:
+      - Image|endswith: \sqlite.exe
+      - Image|endswith: \sqlite3.exe
+  - or:
+    - CommandLine|contains: cookies.sqlite
+    - CommandLine|contains: places.sqlite
+id: 4833155a-4053-4c9c-a997-777fcea0baa7

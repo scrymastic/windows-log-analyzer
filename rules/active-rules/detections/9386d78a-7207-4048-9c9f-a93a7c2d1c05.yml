@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \rundll32.exe
+    - OriginalFileName|==: RUNDLL32.EXE
+  - CommandLine|contains: pcwutl
+  - CommandLine|contains: LaunchApplication
+id: 9386d78a-7207-4048-9c9f-a93a7c2d1c05

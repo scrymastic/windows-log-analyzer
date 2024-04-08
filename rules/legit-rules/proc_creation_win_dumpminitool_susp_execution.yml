@@ -29,6 +29,8 @@ detection:
       - OriginalFileName|==: DumpMinitool.arm64.exe
   - Image|not contains: \Microsoft Visual Studio\
   - Image|not contains: \Extensions\
+  - or:
+    - CommandLine|not contains: --dumpType
 falsepositives:
 - Unknown
 level: high

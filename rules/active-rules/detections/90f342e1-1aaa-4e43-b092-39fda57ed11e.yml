@@ -1,0 +1,7 @@
+detection:
+- and:
+  - TargetObject|endswith: \Microsoft\Windows NT\Rpc\ExtErrorInformation
+  - or:
+    - Details|==: DWORD (0x00000000)
+    - Details|==: DWORD (0x00000002)
+id: 90f342e1-1aaa-4e43-b092-39fda57ed11e

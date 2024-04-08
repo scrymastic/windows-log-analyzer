@@ -1,0 +1,6 @@
+detection:
+- and:
+  - ScriptBlockText|contains: New-Object
+  - ScriptBlockText|contains: System.Net.NetworkInformation.Ping
+  - ScriptBlockText|contains: .Send(
+id: 4c4af3cd-2115-479c-8193-6b8bfce9001c

@@ -1,0 +1,23 @@
+author: Michael McKinley (@McKinleyMike), Tony Latteri (@TheLatteri)
+date: 2023/09/18
+description: 'Detects execution of the Add-In deployment cache updating utility (AddInutil.exe)
+  with uncommon Addinroot or Pipelineroot paths. An adversary may execute AddinUtil.exe
+  with uncommon Addinroot/Pipelineroot paths that point to the adversaries Addins.Store
+  payload.
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_addinutil_uncommon_cmdline.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.blue-prints.blog/content/blog/posts/lolbin/addinutil-lolbas.html
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1218

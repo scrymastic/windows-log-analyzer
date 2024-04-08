@@ -1,0 +1,20 @@
+author: frack113
+date: 2022/03/06
+description: Detects the use of Replace.exe which can be used to replace file with
+  another file
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_replace.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/13
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Replace/
+- https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/replace
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1105

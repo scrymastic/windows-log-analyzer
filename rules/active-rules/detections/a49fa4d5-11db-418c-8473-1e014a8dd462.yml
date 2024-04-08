@@ -1,0 +1,6 @@
+detection:
+- and:
+  - TargetImage|endswith: \lsass.exe
+  - SourceImage|endswith: \rundll32.exe
+  - CallTrace|contains: comsvcs.dll
+id: a49fa4d5-11db-418c-8473-1e014a8dd462

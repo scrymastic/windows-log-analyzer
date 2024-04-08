@@ -1,0 +1,6 @@
+detection:
+- and:
+  - CommandLine|contains: '-autoreconnect '
+  - CommandLine|contains: '-connect '
+  - CommandLine|contains: '-id:'
+id: 871b9555-69ca-4993-99d3-35a59f9f3599

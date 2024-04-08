@@ -31,6 +31,14 @@ detection:
     - CommandLine|None: -a
     - CommandLine|None: -j
   - CommandLine|None: -q
+  - or:
+    - ParentImage|not startswith: C:\Users\
+    - ParentImage|not contains: \AppData\Local\Temp\
+  - or:
+    - ParentImage|not startswith: C:\Windows\Temp\
+  - or:
+    - ParentImage|!==: C:\Windows\CCM\Ccm32BitLauncher.exe
+    - IntegrityLevel|!==: System
 falsepositives:
 - WindowsApps installing updates via the quiet flag
 level: medium

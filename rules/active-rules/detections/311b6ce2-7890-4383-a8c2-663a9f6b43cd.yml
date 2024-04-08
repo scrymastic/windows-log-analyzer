@@ -1,0 +1,5 @@
+detection:
+- and:
+  - EventID|==: 4704
+  - PrivilegeList|contains: SeEnableDelegationPrivilege
+id: 311b6ce2-7890-4383-a8c2-663a9f6b43cd

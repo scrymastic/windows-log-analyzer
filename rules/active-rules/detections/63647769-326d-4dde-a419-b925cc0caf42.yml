@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - TargetObject|endswith: \Word\Security\AllowDDE
+    - or:
+      - Details|==: DWORD (0x00000001)
+      - Details|==: DWORD (0x00000002)
+  - or:
+    - or:
+      - TargetObject|endswith: \Excel\Security\DisableDDEServerLaunch
+      - TargetObject|endswith: \Excel\Security\DisableDDEServerLookup
+    - Details|==: DWORD (0x00000000)
+id: 63647769-326d-4dde-a419-b925cc0caf42

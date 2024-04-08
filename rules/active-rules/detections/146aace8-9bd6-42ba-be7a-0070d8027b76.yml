@@ -1,0 +1,23 @@
+detection:
+- and:
+  - ParentImage|endswith: \WinRAR.exe
+  - or:
+    - or:
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \wscript.exe
+    - or:
+      - OriginalFileName|==: Cmd.Exe
+      - OriginalFileName|==: cscript.exe
+      - OriginalFileName|==: mshta.exe
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+      - OriginalFileName|==: regsvr32.exe
+      - OriginalFileName|==: RUNDLL32.EXE
+      - OriginalFileName|==: wscript.exe
+id: 146aace8-9bd6-42ba-be7a-0070d8027b76

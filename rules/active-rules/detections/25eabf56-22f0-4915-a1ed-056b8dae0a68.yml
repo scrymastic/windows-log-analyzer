@@ -1,0 +1,7 @@
+detection:
+- and:
+  - Initiated|==: 'true'
+  - or:
+    - DestinationHostname|endswith: api.dropboxapi.com
+    - DestinationHostname|endswith: content.dropboxapi.com
+id: 25eabf56-22f0-4915-a1ed-056b8dae0a68

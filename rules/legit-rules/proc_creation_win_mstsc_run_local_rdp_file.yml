@@ -22,6 +22,9 @@ detection:
   - or:
     - CommandLine|endswith: .rdp
     - CommandLine|endswith: .rdp"
+  - or:
+    - ParentImage|!==: C:\Windows\System32\lxss\wslhost.exe
+    - CommandLine|not contains: C:\ProgramData\Microsoft\WSL\wslg.rdp
 falsepositives:
 - Likely with legitimate usage of ".rdp" files
 level: low

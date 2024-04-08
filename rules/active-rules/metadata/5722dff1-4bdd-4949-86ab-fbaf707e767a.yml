@@ -1,0 +1,27 @@
+author: Florian Roth (Nextron Systems)
+date: 2023/05/08
+description: Detects the execution of System Informer, a task manager tool to view
+  and manipulate processes, kernel options and other low level operations
+falsepositives:
+- System Informer is regularly used legitimately by system administrators or developers.
+  Apply additional filters accordingly
+filename: proc_creation_win_pua_system_informer.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://github.com/winsiderss/systeminformer
+related:
+- id: 811e0002-b13b-4a15-9d00-a613fce66e42
+  type: similar
+status: test
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- attack.discovery
+- attack.defense_evasion
+- attack.t1082
+- attack.t1564
+- attack.t1543

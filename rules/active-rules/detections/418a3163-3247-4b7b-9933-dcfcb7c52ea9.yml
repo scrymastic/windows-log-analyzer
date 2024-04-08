@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \tar.exe
+    - OriginalFileName|==: bsdtar
+  - or:
+    - CommandLine|contains: -c
+    - CommandLine|contains: -r
+    - CommandLine|contains: -u
+id: 418a3163-3247-4b7b-9933-dcfcb7c52ea9

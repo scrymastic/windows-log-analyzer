@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \MSBuild.exe
+    - OriginalFileName|==: MSBuild.exe
+  - ParentImage|not endswith: \devenv.exe
+  - ParentImage|not endswith: \cmd.exe
+  - ParentImage|not endswith: \msbuild.exe
+  - ParentImage|not endswith: \python.exe
+  - ParentImage|not endswith: \explorer.exe
+  - ParentImage|not endswith: \nuget.exe
+id: 33be4333-2c6b-44f4-ae28-102cdbde0a31

@@ -1,0 +1,23 @@
+author: frack113
+date: 2022/02/04
+description: Detects the execution of "attrib" with the "+s" flag to mark files as
+  system files
+falsepositives:
+- Unknown
+filename: proc_creation_win_attrib_system.yml
+level: low
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/03/14
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1564.001/T1564.001.md#atomic-test-3---create-windows-system-file-with-attrib
+- https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/attrib
+- https://unit42.paloaltonetworks.com/unit42-sure-ill-take-new-combojack-malware-alters-clipboards-steal-cryptocurrency/
+related:
+- id: efec536f-72e8-4656-8960-5e85d091345b
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1564.001

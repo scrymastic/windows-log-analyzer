@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Provider_Name|==: Microsoft-Windows-Audit-CVE
+    - Provider_Name|==: Audit-CVE
+  - EventID|==: 1
+id: 48d91a3a-2363-43ba-a456-ca71ac3da5c2

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - EventID|==: 4720
+  - TargetUserName|endswith: $
+  - or:
+    - TargetUserName|!==: HomeGroupUser$
+id: 7b449a5e-1db5-4dd0-a2dc-4e3a67282538

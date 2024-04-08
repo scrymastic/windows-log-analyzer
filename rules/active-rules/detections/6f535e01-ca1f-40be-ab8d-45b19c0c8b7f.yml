@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \ldifde.exe
+    - OriginalFileName|==: ldifde.exe
+  - CommandLine|contains: -i
+  - CommandLine|contains: -f
+id: 6f535e01-ca1f-40be-ab8d-45b19c0c8b7f

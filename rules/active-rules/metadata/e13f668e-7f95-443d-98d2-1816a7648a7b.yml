@@ -1,0 +1,23 @@
+author: Nikita Nazarov, oscd.community
+date: 2020/10/16
+description: Adversaries may attempt to enumerate software for a variety of reasons,
+  such as figuring out what security measures are present or if the compromised system
+  has a version of software that is vulnerable.
+falsepositives:
+- Legitimate administration activities
+filename: proc_creation_win_reg_software_discovery.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/10/09
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1518/T1518.md
+- https://github.com/harleyQu1nn/AggressorScripts
+related:
+- id: 2650dd1a-eb2a-412d-ac36-83f06c4f2282
+  type: derived
+status: test
+tags:
+- attack.discovery
+- attack.t1518

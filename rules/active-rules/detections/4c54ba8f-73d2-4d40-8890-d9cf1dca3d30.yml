@@ -1,0 +1,15 @@
+detection:
+- and:
+  - EventID|==: 4697
+  - ServiceFileName|contains: '&&set'
+  - ServiceFileName|contains: cmd
+  - ServiceFileName|contains: /c
+  - ServiceFileName|contains: -f
+  - or:
+    - ServiceFileName|contains: '{0}'
+    - ServiceFileName|contains: '{1}'
+    - ServiceFileName|contains: '{2}'
+    - ServiceFileName|contains: '{3}'
+    - ServiceFileName|contains: '{4}'
+    - ServiceFileName|contains: '{5}'
+id: 4c54ba8f-73d2-4d40-8890-d9cf1dca3d30

@@ -1,0 +1,29 @@
+author: Florian Roth (Nextron Systems)
+date: 2017/05/15
+description: 'Detects events from the Kernel-General ETW indicating that the access
+  bits of a hive with a system like hive name located in the temp directory have been
+  reset.
+
+  This occurs when an application tries to access a hive and the hive has not be recognized
+  since the last 7 days (by default).
+
+  Registry hive dumping utilities such as QuarksPwDump were seen emitting this behavior.
+
+  '
+falsepositives:
+- Unknown
+filename: win_system_susp_critical_hive_location_access_bits_cleared.yml
+level: high
+logsource:
+  product: windows
+  service: system
+modified: 2024/01/18
+references:
+- https://github.com/nasbench/Misc-Research/blob/b20da2336de0f342d31ef4794959d28c8d3ba5ba/ETW/Microsoft-Windows-Kernel-General.md
+related:
+- id: 839dd1e8-eda8-4834-8145-01beeee33acd
+  type: obsoletes
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.002

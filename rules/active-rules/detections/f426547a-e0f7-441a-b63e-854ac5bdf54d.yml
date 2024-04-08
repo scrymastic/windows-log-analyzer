@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \perl.exe
+    - OriginalFileName|==: perl.exe
+  - CommandLine|contains: ' -e'
+id: f426547a-e0f7-441a-b63e-854ac5bdf54d

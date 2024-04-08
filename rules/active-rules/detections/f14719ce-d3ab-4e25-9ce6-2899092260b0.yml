@@ -1,0 +1,8 @@
+detection:
+- and:
+  - Provider_Name|==: Ntfs
+  - EventID|==: 55
+  - Origin|==: File System Driver
+  - Description|contains: contains a corrupted file record
+  - Description|contains: The name of the file is "\"
+id: f14719ce-d3ab-4e25-9ce6-2899092260b0

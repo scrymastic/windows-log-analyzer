@@ -1,0 +1,6 @@
+detection:
+- and:
+  - TargetObject|endswith: \Control\Terminal Server\WinStations\RDP-Tcp\PortNumber
+  - or:
+    - Details|!==: DWORD (0x00000d3d)
+id: 509e84b9-a71a-40e0-834f-05470369bd1e

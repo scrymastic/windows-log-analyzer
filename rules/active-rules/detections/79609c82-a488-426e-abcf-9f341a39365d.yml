@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 2033
+    - EventID|==: 2059
+  - or:
+    - ModifyingApplication|not endswith: :\Windows\System32\svchost.exe
+  - or:
+    - ModifyingApplication|not contains: :\ProgramData\Microsoft\Windows Defender\Platform\
+    - ModifyingApplication|not contains: \MsMpEng.exe
+id: 79609c82-a488-426e-abcf-9f341a39365d

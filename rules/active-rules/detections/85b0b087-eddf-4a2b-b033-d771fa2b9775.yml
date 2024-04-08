@@ -1,0 +1,19 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: .DownloadString(
+    - CommandLine|contains: .DownloadFile(
+    - CommandLine|contains: 'Invoke-WebRequest '
+    - CommandLine|contains: 'iwr '
+  - or:
+    - CommandLine|contains: ;iex $
+    - CommandLine|contains: '| IEX'
+    - CommandLine|contains: '|IEX '
+    - CommandLine|contains: I`E`X
+    - CommandLine|contains: I`EX
+    - CommandLine|contains: IE`X
+    - CommandLine|contains: 'iex '
+    - CommandLine|contains: IEX (
+    - CommandLine|contains: IEX(
+    - CommandLine|contains: Invoke-Expression
+id: 85b0b087-eddf-4a2b-b033-d771fa2b9775

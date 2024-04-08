@@ -1,0 +1,16 @@
+detection:
+- and:
+  - Provider_Name|==: Service Control Manager
+  - EventID|==: 7045
+  - ImagePath|contains: '&&set'
+  - ImagePath|contains: cmd
+  - ImagePath|contains: /c
+  - ImagePath|contains: -f
+  - or:
+    - ImagePath|contains: '{0}'
+    - ImagePath|contains: '{1}'
+    - ImagePath|contains: '{2}'
+    - ImagePath|contains: '{3}'
+    - ImagePath|contains: '{4}'
+    - ImagePath|contains: '{5}'
+id: 14bcba49-a428-42d9-b943-e2ce0f0f7ae6

@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|startswith: C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_
+  - Image|endswith: \AppInstaller.exe
+id: 7cff77e1-9663-46a3-8260-17f2e1aa9d0a

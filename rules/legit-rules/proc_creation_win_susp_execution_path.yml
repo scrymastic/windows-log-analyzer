@@ -39,6 +39,11 @@ detection:
       - Image|contains: \Windows\System32\Tasks\
       - Image|contains: \Windows\Tasks\
     - Image|startswith: C:\Perflogs\
+  - or:
+    - Image|not startswith: C:\Users\Public\IBM\ClientSolutions\Start_Programs\
+  - or:
+    - Image|not startswith: C:\Windows\SysWOW64\config\systemprofile\Citrix\UpdaterBinaries\
+    - Image|not endswith: \CitrixReceiverUpdater.exe
 fields:
 - CommandLine
 - ParentCommandLine

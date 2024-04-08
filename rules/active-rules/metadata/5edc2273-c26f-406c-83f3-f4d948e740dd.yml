@@ -1,0 +1,25 @@
+author: frack113
+date: 2021/11/24
+description: 'Detects execution of Microsoft bash launcher with the "-c" flag.
+
+  This can be used to potentially bypass defenses and execute Linux or Windows-based
+  binaries directly via bash.
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_bash_command_execution.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/08/15
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Bash/
+related:
+- id: 2d22a514-e024-4428-9dba-41505bd63a5b
+  type: similar
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1202

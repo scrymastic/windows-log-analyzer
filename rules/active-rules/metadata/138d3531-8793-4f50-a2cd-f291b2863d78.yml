@@ -1,0 +1,21 @@
+author: Victor Sergeev, oscd.community, Nasreddine Bencherchali (Nextron Systems)
+date: 2019/10/21
+description: Detects service path modification via the "sc" binary to a suspicious
+  command or path
+falsepositives:
+- Unlikely
+filename: proc_creation_win_sc_service_path_modification.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/11/18
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1543.003/T1543.003.md
+- https://web.archive.org/web/20180331144337/https://www.fireeye.com/blog/threat-research/2018/03/sanny-malware-delivery-method-updated-in-recently-observed-attacks.html
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1543.003

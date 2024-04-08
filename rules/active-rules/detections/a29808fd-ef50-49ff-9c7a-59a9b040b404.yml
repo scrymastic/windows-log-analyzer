@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \pypykatz.exe
+    - Image|endswith: \python.exe
+  - CommandLine|contains: live
+  - CommandLine|contains: registry
+id: a29808fd-ef50-49ff-9c7a-59a9b040b404

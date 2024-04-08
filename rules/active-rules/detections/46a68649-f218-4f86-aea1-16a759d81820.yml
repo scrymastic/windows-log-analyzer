@@ -1,0 +1,5 @@
+detection:
+- and:
+  - EventID|==: 4657
+  - ObjectName|contains: \Microsoft\Windows Defender\Exclusions\
+id: 46a68649-f218-4f86-aea1-16a759d81820

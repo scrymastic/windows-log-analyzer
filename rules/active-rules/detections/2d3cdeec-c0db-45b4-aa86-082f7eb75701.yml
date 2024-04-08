@@ -1,0 +1,22 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \appcmd.exe
+    - OriginalFileName|==: appcmd.exe
+  - CommandLine|contains: 'list '
+  - or:
+    - CommandLine|contains: ' /config'
+    - CommandLine|contains: ' /xml'
+    - CommandLine|contains: ' -config'
+    - CommandLine|contains: ' -xml'
+  - or:
+    - CommandLine|contains: ' /@t'
+    - CommandLine|contains: ' /text'
+    - CommandLine|contains: ' /show'
+    - CommandLine|contains: ' -@t'
+    - CommandLine|contains: ' -text'
+    - CommandLine|contains: ' -show'
+  - or:
+    - CommandLine|contains: :\*
+    - CommandLine|contains: password
+id: 2d3cdeec-c0db-45b4-aa86-082f7eb75701

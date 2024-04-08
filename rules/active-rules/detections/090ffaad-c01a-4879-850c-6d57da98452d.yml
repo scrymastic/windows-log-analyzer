@@ -1,0 +1,5 @@
+detection:
+- and:
+  - EventID|==: 3008
+  - QueryName|contains: ufile.io
+id: 090ffaad-c01a-4879-850c-6d57da98452d

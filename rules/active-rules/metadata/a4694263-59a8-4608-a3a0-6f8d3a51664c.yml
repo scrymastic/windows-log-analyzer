@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/04/21
+description: Detects the invocation of the Stored User Names and Passwords dialogue
+  (Key Manager)
+falsepositives:
+- Administrative activity
+filename: proc_creation_win_rundll32_keymgr.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/09
+references:
+- https://twitter.com/NinjaParanoid/status/1516442028963659777
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1555.004

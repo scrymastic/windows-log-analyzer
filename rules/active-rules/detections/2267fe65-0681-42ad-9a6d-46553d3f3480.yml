@@ -1,0 +1,23 @@
+detection:
+- and:
+  - or:
+    - ParentImage|endswith: \wsl.exe
+    - ParentImage|endswith: \wslhost.exe
+  - or:
+    - Image|endswith: \calc.exe
+    - Image|endswith: \cmd.exe
+    - Image|endswith: \cscript.exe
+    - Image|endswith: \mshta.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+    - Image|endswith: \regsvr32.exe
+    - Image|endswith: \rundll32.exe
+    - Image|endswith: \wscript.exe
+  - or:
+    - Image|contains: \AppData\Local\Temp\
+    - Image|contains: C:\Users\Public\
+    - Image|contains: C:\Windows\Temp\
+    - Image|contains: C:\Temp\
+    - Image|contains: \Downloads\
+    - Image|contains: \Desktop\
+id: 2267fe65-0681-42ad-9a6d-46553d3f3480

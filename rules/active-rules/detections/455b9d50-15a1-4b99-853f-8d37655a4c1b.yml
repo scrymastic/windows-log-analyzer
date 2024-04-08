@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - or:
+      - CommandLine|contains: lockoutduration
+      - CommandLine|contains: lockoutthreshold
+      - CommandLine|contains: lockoutobservationwindow
+      - CommandLine|contains: maxpwdage
+      - CommandLine|contains: minpwdage
+      - CommandLine|contains: minpwdlength
+      - CommandLine|contains: pwdhistorylength
+      - CommandLine|contains: pwdproperties
+  - or:
+    - CommandLine|contains: -sc admincountdmp
+  - or:
+    - CommandLine|contains: -sc exchaddresses
+id: 455b9d50-15a1-4b99-853f-8d37655a4c1b

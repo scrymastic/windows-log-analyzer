@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \WMIC.exe
+    - OriginalFileName|==: wmic.exe
+  - CommandLine|contains: process
+  - or:
+    - CommandLine|not contains: call
+    - CommandLine|not contains: create
+id: 221b251a-357a-49a9-920a-271802777cc0

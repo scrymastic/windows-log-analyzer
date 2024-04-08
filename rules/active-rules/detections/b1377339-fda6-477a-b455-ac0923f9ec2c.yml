@@ -1,0 +1,6 @@
+detection:
+- and:
+  - CommandLine|contains: '/c '
+  - CommandLine|contains: 'echo '
+  - CommandLine|contains: .exe --set-password
+id: b1377339-fda6-477a-b455-ac0923f9ec2c

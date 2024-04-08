@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/08/01
+description: Detects the installation of a new shim database where the file is located
+  in a non-default location
+falsepositives:
+- Unknown
+filename: registry_set_persistence_shim_database_uncommon_location.yml
+level: high
+logsource:
+  category: registry_set
+  product: windows
+modified: 2023/08/17
+references:
+- https://www.fireeye.com/blog/threat-research/2017/05/fin7-shim-databases-persistence.html
+- https://andreafortuna.org/2018/11/12/process-injection-and-persistence-using-application-shimming/
+- https://www.blackhat.com/docs/asia-14/materials/Erickson/Asia-14-Erickson-Persist-It-Using-And-Abusing-Microsofts-Fix-It-Patches.pdf
+related: []
+status: experimental
+tags:
+- attack.persistence
+- attack.t1546.011

@@ -1,0 +1,20 @@
+author: Tim Rauch, Elastic (idea)
+date: 2022/09/27
+description: Detects the desktopimgdownldr utility being used to download a remote
+  file. An adversary may use desktopimgdownldr to download arbitrary files as an alternative
+  to certutil.
+falsepositives:
+- Unknown
+filename: proc_creation_win_desktopimgdownldr_remote_file_download.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.elastic.co/guide/en/security/current/remote-file-download-via-desktopimgdownldr-utility.html
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1105

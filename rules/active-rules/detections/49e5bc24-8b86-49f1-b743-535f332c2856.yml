@@ -1,0 +1,13 @@
+detection:
+- and:
+  - EventID|==: 5013
+  - or:
+    - Value|endswith: \Windows Defender\DisableAntiSpyware
+    - Value|endswith: \Windows Defender\DisableAntiVirus
+    - Value|endswith: \Windows Defender\Scan\DisableArchiveScanning
+    - Value|endswith: \Windows Defender\Scan\DisableScanningNetworkFiles
+    - Value|endswith: \Real-Time Protection\DisableRealtimeMonitoring
+    - Value|endswith: \Real-Time Protection\DisableBehaviorMonitoring
+    - Value|endswith: \Real-Time Protection\DisableIOAVProtection
+    - Value|endswith: \Real-Time Protection\DisableScriptScanning
+id: 49e5bc24-8b86-49f1-b743-535f332c2856

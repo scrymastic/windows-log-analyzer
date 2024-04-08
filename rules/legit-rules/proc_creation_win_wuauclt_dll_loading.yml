@@ -29,9 +29,16 @@ detection:
     - OriginalFileName|==: wuauclt.exe
   - CommandLine|contains: UpdateDeploymentProvider
   - CommandLine|contains: RunHandlerComServer
+  - or:
+    - CommandLine|not contains: ' /UpdateDeploymentProvider UpdateDeploymentProvider.dll '
+  - or:
+    - CommandLine|not contains: ' wuaueng.dll '
   - CommandLine|not contains: :\Windows\UUS\Packages\Preview\amd64\updatedeploy.dll
       /ClassId
   - CommandLine|not contains: :\Windows\UUS\amd64\UpdateDeploy.dll /ClassId
+  - or:
+    - CommandLine|not contains: :\Windows\WinSxS\
+    - CommandLine|not contains: '\UpdateDeploy.dll /ClassId '
 falsepositives:
 - Unknown
 level: high

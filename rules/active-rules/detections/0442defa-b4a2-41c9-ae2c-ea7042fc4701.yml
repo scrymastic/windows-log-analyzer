@@ -1,0 +1,7 @@
+detection:
+- and:
+  - TargetObject|contains: \System\CurrentControlSet\Services\
+  - TargetObject|contains: \NetworkProvider
+  - or:
+    - Image|!==: C:\Windows\System32\poqexec.exe
+id: 0442defa-b4a2-41c9-ae2c-ea7042fc4701

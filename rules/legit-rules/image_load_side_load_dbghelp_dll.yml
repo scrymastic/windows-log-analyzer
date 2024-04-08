@@ -1,0 +1,36 @@
+title: Potential DLL Sideloading Of DBGHELP.DLL
+id: 6414b5cd-b19d-447e-bb5e-9f03940b5784
+status: test
+description: Detects DLL sideloading of "dbghelp.dll"
+references:
+- https://hijacklibs.net/
+author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema (project and research)
+date: 2022/10/25
+modified: 2023/05/05
+tags:
+- attack.defense_evasion
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1574.001
+- attack.t1574.002
+logsource:
+  category: image_load
+  product: windows
+detection:
+- and:
+  - ImageLoaded|endswith: \dbghelp.dll
+  - ImageLoaded|not startswith: C:\Program Files (x86)\
+  - ImageLoaded|not startswith: C:\Program Files\
+  - ImageLoaded|not startswith: C:\Windows\SoftwareDistribution\
+  - ImageLoaded|not startswith: C:\Windows\System32\
+  - ImageLoaded|not startswith: C:\Windows\SystemTemp\
+  - ImageLoaded|not startswith: C:\Windows\SysWOW64\
+  - ImageLoaded|not startswith: C:\Windows\WinSxS\
+  - ImageLoaded|not endswith: \Anaconda3\Lib\site-packages\vtrace\platforms\windll\amd64\dbghelp.dll
+  - ImageLoaded|not endswith: \Anaconda3\Lib\site-packages\vtrace\platforms\windll\i386\dbghelp.dll
+  - ImageLoaded|not endswith: \Epic Games\Launcher\Engine\Binaries\ThirdParty\DbgHelp\dbghelp.dll
+  - ImageLoaded|not endswith: \Epic Games\MagicLegends\x86\dbghelp.dll
+falsepositives:
+- Legitimate applications loading their own versions of the DLL mentioned in this
+  rule
+level: medium

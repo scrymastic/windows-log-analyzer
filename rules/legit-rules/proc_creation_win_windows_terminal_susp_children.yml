@@ -44,6 +44,16 @@ detection:
       - CommandLine|contains: ' /c '
       - CommandLine|contains: ' /k '
       - CommandLine|contains: ' /r '
+  - or:
+    - CommandLine|not contains: Import-Module
+    - CommandLine|not contains: Microsoft.VisualStudio.DevShell.dll
+    - CommandLine|not contains: Enter-VsDevShell
+  - or:
+    - CommandLine|not contains: \AppData\Local\Packages\Microsoft.WindowsTerminal_
+    - CommandLine|not contains: \LocalState\settings.json
+  - or:
+    - CommandLine|not contains: C:\Program Files\Microsoft Visual Studio\
+    - CommandLine|not contains: \Common7\Tools\VsDevCmd.bat
 falsepositives:
 - Other legitimate "Windows Terminal" profiles
 level: medium

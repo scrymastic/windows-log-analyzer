@@ -1,0 +1,20 @@
+author: Zach Mathis
+date: 2023/05/13
+description: Detects when an application acquires a certificate private key
+falsepositives:
+- Legitimate application requesting certificate exports will trigger this. Apply additional
+  filters as needed
+filename: win_capi2_acquire_certificate_private_key.yml
+level: medium
+logsource:
+  definition: 'Requirements: The CAPI2 Operational log needs to be enabled'
+  product: windows
+  service: capi2
+modified: ''
+references:
+- https://www.splunk.com/en_us/blog/security/breaking-the-chain-defending-against-certificate-services-abuse.html
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1649

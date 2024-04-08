@@ -1,0 +1,53 @@
+title: LSASS Access From Non System Account
+id: 962fe167-e48d-4fd6-9974-11e5b9a5d6d1
+status: test
+description: Detects potential mimikatz-like tools accessing LSASS from non system
+  account
+references:
+- https://threathunterplaybook.com/hunts/windows/170105-LSASSMemoryReadAccess/notebook.html
+author: Roberto Rodriguez @Cyb3rWard0g
+date: 2019/06/20
+modified: 2023/12/11
+tags:
+- attack.credential_access
+- attack.t1003.001
+logsource:
+  product: windows
+  service: security
+detection:
+- and:
+  - or:
+    - EventID|==: 4663
+    - EventID|==: 4656
+  - or:
+    - AccessMask|==: '0x100000'
+    - AccessMask|==: '0x1010'
+    - AccessMask|==: '0x1400'
+    - AccessMask|==: '0x1410'
+    - AccessMask|==: '0x1418'
+    - AccessMask|==: '0x1438'
+    - AccessMask|==: '0x143a'
+    - AccessMask|==: '0x1f0fff'
+    - AccessMask|==: '0x1f1fff'
+    - AccessMask|==: '0x1f2fff'
+    - AccessMask|==: '0x1f3fff'
+    - AccessMask|==: '0x40'
+    - AccessMask|==: 143a
+    - AccessMask|==: 1f0fff
+    - AccessMask|==: 1f1fff
+    - AccessMask|==: 1f2fff
+    - AccessMask|==: 1f3fff
+  - ObjectType|==: Process
+  - ObjectName|endswith: \lsass.exe
+  - or:
+    - SubjectUserName|not endswith: $
+  - ProcessName|not contains: :\Program Files\
+  - ProcessName|not contains: :\Program Files (x86)\
+  - or:
+    - ProcessName|!==: C:\Windows\System32\wbem\WmiPrvSE.exe
+    - AccessMask|!==: '0x1410'
+  - or:
+    - ProcessName|not contains: \SteamLibrary\steamapps\
+falsepositives:
+- Unknown
+level: medium

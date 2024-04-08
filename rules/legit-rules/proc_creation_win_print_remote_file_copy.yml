@@ -20,6 +20,8 @@ detection:
   - CommandLine|startswith: print
   - CommandLine|contains: /D
   - CommandLine|contains: .exe
+  - or:
+    - CommandLine|not contains: print.exe
 falsepositives:
 - Unknown
 level: medium

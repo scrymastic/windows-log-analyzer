@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Image|endswith: \dnx.exe
+id: 81ebd28b-9607-4478-bf06-974ed9d53ed7

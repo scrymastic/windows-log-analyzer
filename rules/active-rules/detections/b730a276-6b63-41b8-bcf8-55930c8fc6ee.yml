@@ -1,0 +1,50 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \csc.exe
+    - OriginalFileName|==: csc.exe
+  - or:
+    - ParentImage|endswith: \cscript.exe
+    - ParentImage|endswith: \excel.exe
+    - ParentImage|endswith: \mshta.exe
+    - ParentImage|endswith: \onenote.exe
+    - ParentImage|endswith: \outlook.exe
+    - ParentImage|endswith: \powerpnt.exe
+    - ParentImage|endswith: \winword.exe
+    - ParentImage|endswith: \wscript.exe
+  - or:
+    - ParentImage|endswith: \powershell.exe
+    - ParentImage|endswith: \pwsh.exe
+  - or:
+    - ParentCommandLine|contains: '-Encoded '
+    - ParentCommandLine|contains: FromBase64String
+  - or:
+    - ParentCommandLine|matches: ([Pp]rogram[Dd]ata|%([Ll]ocal)?[Aa]pp[Dd]ata%|\\[Aa]pp[Dd]ata\\([Ll]ocal(Ll]ow)?|[Rr]oaming))\\[^\\]{1,256}$
+    - or:
+      - ParentCommandLine|contains: :\PerfLogs\
+      - ParentCommandLine|contains: :\Users\Public\
+      - ParentCommandLine|contains: :\Windows\Temp\
+      - ParentCommandLine|contains: \Temporary Internet
+    - ParentCommandLine|contains: :\Users\
+    - ParentCommandLine|contains: \Favorites\
+    - ParentCommandLine|contains: :\Users\
+    - ParentCommandLine|contains: \Favourites\
+    - ParentCommandLine|contains: :\Users\
+    - ParentCommandLine|contains: \Contacts\
+    - ParentCommandLine|contains: :\Users\
+    - ParentCommandLine|contains: \Pictures\
+  - ParentImage|not startswith: C:\Program Files (x86)\
+  - ParentImage|not startswith: C:\Program Files\
+  - or:
+    - ParentImage|!==: C:\Windows\System32\sdiagnhost.exe
+  - or:
+    - ParentImage|!==: C:\Windows\System32\inetsrv\w3wp.exe
+  - or:
+    - ParentImage|!==: C:\ProgramData\chocolatey\choco.exe
+  - or:
+    - ParentCommandLine|not contains: \ProgramData\Microsoft\Windows Defender Advanced
+        Threat Protection
+  - ParentCommandLine|not contains: JwB7ACIAZgBhAGkAbABlAGQAIgA6AHQAcgB1AGUALAAiAG0AcwBnACIAOgAiAEEAbgBzAGkAYgBsAGUAIAByAGUAcQB1AGkAcgBlAHMAIABQAG8AdwBlAHIAUwBoAGUAbABsACAAdgAzAC4AMAAgAG8AcgAgAG4AZQB3AGUAcgAiAH0AJw
+  - ParentCommandLine|not contains: cAewAiAGYAYQBpAGwAZQBkACIAOgB0AHIAdQBlACwAIgBtAHMAZwAiADoAIgBBAG4AcwBpAGIAbABlACAAcgBlAHEAdQBpAHIAZQBzACAAUABvAHcAZQByAFMAaABlAGwAbAAgAHYAMwAuADAAIABvAHIAIABuAGUAdwBlAHIAIgB9ACcA
+  - ParentCommandLine|not contains: nAHsAIgBmAGEAaQBsAGUAZAAiADoAdAByAHUAZQAsACIAbQBzAGcAIgA6ACIAQQBuAHMAaQBiAGwAZQAgAHIAZQBxAHUAaQByAGUAcwAgAFAAbwB3AGUAcgBTAGgAZQBsAGwAIAB2ADMALgAwACAAbwByACAAbgBlAHcAZQByACIAfQAnA
+id: b730a276-6b63-41b8-bcf8-55930c8fc6ee

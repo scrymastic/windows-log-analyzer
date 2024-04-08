@@ -1,0 +1,6 @@
+detection:
+- and:
+  - EventID|==: 4661
+  - AccessList|contains: '%%5392'
+  - ObjectServer|==: Security Account Manager
+id: 12ba6a38-adb3-4d6b-91ba-a7fb248e3199

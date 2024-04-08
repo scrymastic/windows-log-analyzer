@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/09/06
+description: Detects the use of a renamed SysInternals Sdelete, which is something
+  an administrator shouldn't do (the renaming)
+falsepositives:
+- System administrator usage
+filename: proc_creation_win_renamed_sysinternals_sdelete.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/03
+references:
+- https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1485/T1485.md
+related: []
+status: test
+tags:
+- attack.impact
+- attack.t1485

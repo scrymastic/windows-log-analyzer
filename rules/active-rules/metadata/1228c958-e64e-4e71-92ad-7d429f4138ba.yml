@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
+date: 2022/02/08
+description: Detects a suspicious script execution in temporary folders or folders
+  accessible by environment variables
+falsepositives:
+- Unknown
+filename: proc_creation_win_susp_script_exec_from_env_folder.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/06/16
+references:
+- https://www.virustotal.com/gui/file/91ba814a86ddedc7a9d546e26f912c541205b47a853d227756ab1334ade92c3f
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/shuckworm-russia-ukraine-military
+- https://learn.microsoft.com/en-us/windows/win32/shell/csidl
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059

@@ -1,0 +1,23 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \Rubeus.exe
+    - OriginalFileName|==: Rubeus.exe
+    - Description|==: Rubeus
+    - or:
+      - CommandLine|contains: 'asreproast '
+      - CommandLine|contains: 'dump /service:krbtgt '
+      - CommandLine|contains: dump /luid:0x
+      - CommandLine|contains: 'kerberoast '
+      - CommandLine|contains: 'createnetonly /program:'
+      - CommandLine|contains: 'ptt /ticket:'
+      - CommandLine|contains: '/impersonateuser:'
+      - CommandLine|contains: 'renew /ticket:'
+      - CommandLine|contains: 'asktgt /user:'
+      - CommandLine|contains: 'harvest /interval:'
+      - CommandLine|contains: 's4u /user:'
+      - CommandLine|contains: 's4u /ticket:'
+      - CommandLine|contains: 'hash /password:'
+      - CommandLine|contains: 'golden /aes256:'
+      - CommandLine|contains: 'silver /user:'
+id: 7ec2c172-dceb-4c10-92c9-87c1881b7e18

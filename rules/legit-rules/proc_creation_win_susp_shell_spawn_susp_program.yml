@@ -34,10 +34,24 @@ detection:
     - Image|endswith: \certutil.exe
     - Image|endswith: \bitsadmin.exe
     - Image|endswith: \mshta.exe
+  - or:
+    - CurrentDirectory|not contains: \ccmcache\
   - ParentCommandLine|not contains: \Program Files\Amazon\WorkSpacesConfig\Scripts\setup-scheduledtask.ps1
   - ParentCommandLine|not contains: \Program Files\Amazon\WorkSpacesConfig\Scripts\set-selfhealing.ps1
   - ParentCommandLine|not contains: \Program Files\Amazon\WorkSpacesConfig\Scripts\check-workspacehealth.ps1
   - ParentCommandLine|not contains: \nessus_
+  - or:
+    - CommandLine|not contains: \nessus_
+  - or:
+    - ParentImage|not endswith: \mshta.exe
+    - Image|not endswith: \mshta.exe
+    - ParentCommandLine|not contains: C:\MEM_Configmgr_
+    - ParentCommandLine|not contains: \splash.hta
+    - ParentCommandLine|not contains: '{1E460BD7-F1C3-4B2E-88BF-4E770A288AF5}'
+    - CommandLine|not contains: C:\MEM_Configmgr_
+    - CommandLine|not contains: \SMSSETUP\BIN\
+    - CommandLine|not contains: \autorun.hta
+    - CommandLine|not contains: '{1E460BD7-F1C3-4B2E-88BF-4E770A288AF5}'
 fields:
 - CommandLine
 - ParentCommandLine

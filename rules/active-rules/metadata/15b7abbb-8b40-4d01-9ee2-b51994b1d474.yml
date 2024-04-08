@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/26
+description: Detects usage of the powerShell Set-Mailbox Cmdlet to set-up an SMTP
+  forwarding rule.
+falsepositives:
+- Legitimate usage of the cmdlet to forward emails
+filename: posh_ps_exchange_mailbox_smpt_forwarding_rule.yml
+level: medium
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: ''
+references:
+- https://m365internals.com/2022/10/07/hunting-in-on-premises-exchange-server-logs/
+related: []
+status: test
+tags:
+- attack.exfiltration

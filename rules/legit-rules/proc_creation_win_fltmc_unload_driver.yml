@@ -25,6 +25,8 @@ detection:
     - Image|endswith: \fltMC.exe
     - OriginalFileName|==: fltMC.exe
   - CommandLine|contains: unload
+  - or:
+    - CommandLine|not endswith: unload rtp_filesystem_filter
 falsepositives:
 - Unknown
 level: high

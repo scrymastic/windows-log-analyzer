@@ -1,0 +1,8 @@
+detection:
+- and:
+  - Image|endswith: \changepk.exe
+  - ParentImage|endswith: \slui.exe
+  - or:
+    - IntegrityLevel|==: High
+    - IntegrityLevel|==: System
+id: 503d581c-7df0-4bbe-b9be-5840c0ecc1fc

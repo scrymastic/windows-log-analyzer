@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: mavinject32.exe
+    - OriginalFileName|==: mavinject64.exe
+id: e6474a1b-5390-49cd-ab41-8d88655f7394

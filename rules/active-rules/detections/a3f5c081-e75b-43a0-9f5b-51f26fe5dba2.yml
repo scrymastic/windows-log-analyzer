@@ -1,0 +1,16 @@
+detection:
+- and:
+  - Contents|startswith: '[ZoneTransfer]  ZoneId=3'
+  - or:
+    - Contents|contains: ://1
+    - Contents|contains: ://2
+    - Contents|contains: ://3
+    - Contents|contains: ://4
+    - Contents|contains: ://5
+    - Contents|contains: ://6
+    - Contents|contains: ://7
+    - Contents|contains: ://8
+    - Contents|contains: ://9
+  - TargetFilename|endswith: :Zone.Identifier
+  - TargetFilename|contains: \AppData\Local\Temp\WinGet\
+id: a3f5c081-e75b-43a0-9f5b-51f26fe5dba2

@@ -1,0 +1,89 @@
+title: Webshell Hacking Activity Patterns
+id: 4ebc877f-4612-45cb-b3a5-8e3834db36c9
+status: test
+description: 'Detects certain parent child patterns found in cases in which a web
+  shell is used to perform certain credential dumping or exfiltration activities on
+  a compromised system
+
+  '
+references:
+- https://youtu.be/7aemGhaE9ds?t=641
+author: Florian Roth (Nextron Systems)
+date: 2022/03/17
+modified: 2023/11/09
+tags:
+- attack.persistence
+- attack.t1505.003
+- attack.t1018
+- attack.t1033
+- attack.t1087
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - or:
+      - ParentImage|endswith: \caddy.exe
+      - ParentImage|endswith: \httpd.exe
+      - ParentImage|endswith: \nginx.exe
+      - ParentImage|endswith: \php-cgi.exe
+      - ParentImage|endswith: \w3wp.exe
+      - ParentImage|endswith: \ws_tomcatservice.exe
+  - or:
+    - or:
+      - ParentImage|endswith: \java.exe
+      - ParentImage|endswith: \javaw.exe
+    - or:
+      - ParentImage|contains: -tomcat-
+      - ParentImage|contains: \tomcat
+  - or:
+    - or:
+      - ParentImage|endswith: \java.exe
+      - ParentImage|endswith: \javaw.exe
+    - or:
+      - CommandLine|contains: catalina.jar
+      - CommandLine|contains: CATALINA_HOME
+  - or:
+    - CommandLine|contains: rundll32
+    - CommandLine|contains: comsvcs
+  - or:
+    - CommandLine|contains: ' -hp'
+    - CommandLine|contains: ' a '
+    - CommandLine|contains: ' -m'
+  - or:
+    - CommandLine|contains: net
+    - CommandLine|contains: ' user '
+    - CommandLine|contains: ' /add'
+  - or:
+    - CommandLine|contains: net
+    - CommandLine|contains: ' localgroup '
+    - CommandLine|contains: ' administrators '
+    - CommandLine|contains: /add
+  - or:
+    - or:
+      - Image|endswith: \ntdsutil.exe
+      - Image|endswith: \ldifde.exe
+      - Image|endswith: \adfind.exe
+      - Image|endswith: \procdump.exe
+      - Image|endswith: \Nanodump.exe
+      - Image|endswith: \vssadmin.exe
+      - Image|endswith: \fsutil.exe
+  - or:
+    - or:
+      - CommandLine|contains: ' -decode '
+      - CommandLine|contains: ' -NoP '
+      - CommandLine|contains: ' -W Hidden '
+      - CommandLine|contains: ' /decode '
+      - CommandLine|contains: ' /ticket:'
+      - CommandLine|contains: ' sekurlsa'
+      - CommandLine|contains: .dmp full
+      - CommandLine|contains: .downloadfile(
+      - CommandLine|contains: .downloadstring(
+      - CommandLine|contains: FromBase64String
+      - CommandLine|contains: process call create
+      - CommandLine|contains: 'reg save '
+      - CommandLine|contains: whoami /priv
+falsepositives:
+- Unlikely
+level: high

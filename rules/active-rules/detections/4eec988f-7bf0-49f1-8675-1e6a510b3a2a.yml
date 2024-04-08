@@ -1,0 +1,11 @@
+detection:
+- and:
+  - EventType|==: SetValue
+  - TargetObject|contains: \CurrentControlSet\Control\Session Manager\PendingFileRenameOperations
+  - or:
+    - Image|contains: \AppData\Local\Temp\
+    - Image|contains: \Users\Public\
+  - or:
+    - Image|endswith: \reg.exe
+    - Image|endswith: \regedit.exe
+id: 4eec988f-7bf0-49f1-8675-1e6a510b3a2a

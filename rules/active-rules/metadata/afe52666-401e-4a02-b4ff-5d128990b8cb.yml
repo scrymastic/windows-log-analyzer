@@ -1,0 +1,19 @@
+author: X__Junior (Nextron Systems), Florian Roth (Nextron Systems)
+date: 2022/12/15
+description: Detects RAR usage that creates an archive from a suspicious folder, either
+  a system folder or one of the folders often used by attackers for staging purposes
+falsepositives:
+- Unknown
+filename: proc_creation_win_rar_susp_greedy_compression.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/01/02
+references:
+- https://decoded.avast.io/martinchlumecky/png-steganography
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.t1059

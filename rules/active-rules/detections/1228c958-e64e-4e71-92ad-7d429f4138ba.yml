@@ -1,0 +1,37 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \wscript.exe
+  - or:
+    - or:
+      - CommandLine|contains: ' -ep bypass '
+      - CommandLine|contains: ' -ExecutionPolicy bypass '
+      - CommandLine|contains: ' -w hidden '
+      - CommandLine|contains: '/e:javascript '
+      - CommandLine|contains: '/e:Jscript '
+      - CommandLine|contains: '/e:vbscript '
+  - or:
+    - or:
+      - OriginalFileName|==: cscript.exe
+      - OriginalFileName|==: mshta.exe
+      - OriginalFileName|==: wscript.exe
+  - or:
+    - or:
+      - CommandLine|contains: :\Perflogs\
+      - CommandLine|contains: :\Users\Public\
+      - CommandLine|contains: \AppData\Local\Temp
+      - CommandLine|contains: \AppData\Roaming\Temp
+      - CommandLine|contains: \Temporary Internet
+      - CommandLine|contains: \Windows\Temp
+  - or:
+    - or:
+      - CommandLine|contains: :\Users\
+      - CommandLine|contains: \Favorites\
+      - CommandLine|contains: :\Users\
+      - CommandLine|contains: \Favourites\
+      - CommandLine|contains: :\Users\
+      - CommandLine|contains: \Contacts\
+id: 1228c958-e64e-4e71-92ad-7d429f4138ba

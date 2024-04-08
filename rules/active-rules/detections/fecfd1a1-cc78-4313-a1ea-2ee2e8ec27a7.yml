@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: \Microsoft\Windows\PowerShell\
+    - TargetObject|contains: \Microsoft\PowerShellCore\
+  - or:
+    - TargetObject|endswith: \ModuleLogging\EnableModuleLogging
+    - TargetObject|endswith: \ScriptBlockLogging\EnableScriptBlockLogging
+    - TargetObject|endswith: \ScriptBlockLogging\EnableScriptBlockInvocationLogging
+    - TargetObject|endswith: \Transcription\EnableTranscripting
+    - TargetObject|endswith: \Transcription\EnableInvocationHeader
+    - TargetObject|endswith: \EnableScripts
+  - Details|==: DWORD (0x00000000)
+id: fecfd1a1-cc78-4313-a1ea-2ee2e8ec27a7

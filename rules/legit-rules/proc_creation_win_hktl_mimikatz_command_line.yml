@@ -1,0 +1,55 @@
+title: HackTool - Mimikatz Execution
+id: a642964e-bead-4bed-8910-1bb4d63e3b4d
+status: test
+description: Detection well-known mimikatz command line arguments
+references:
+- https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment
+- https://tools.thehacker.recipes/mimikatz/modules
+author: Teymur Kheirkhabarov, oscd.community, David ANDRE (additional keywords), Tim
+  Shelton
+date: 2019/10/22
+modified: 2023/02/21
+tags:
+- attack.credential_access
+- attack.t1003.001
+- attack.t1003.002
+- attack.t1003.004
+- attack.t1003.005
+- attack.t1003.006
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - or:
+      - CommandLine|contains: DumpCreds
+      - CommandLine|contains: mimikatz
+  - or:
+    - or:
+      - CommandLine|contains: ::aadcookie
+      - CommandLine|contains: ::detours
+      - CommandLine|contains: ::memssp
+      - CommandLine|contains: ::mflt
+      - CommandLine|contains: ::ncroutemon
+      - CommandLine|contains: ::ngcsign
+      - CommandLine|contains: ::printnightmare
+      - CommandLine|contains: ::skeleton
+      - CommandLine|contains: ::preshutdown
+      - CommandLine|contains: ::mstsc
+      - CommandLine|contains: ::multirdp
+  - or:
+    - or:
+      - CommandLine|contains: 'rpc::'
+      - CommandLine|contains: 'token::'
+      - CommandLine|contains: 'crypto::'
+      - CommandLine|contains: 'dpapi::'
+      - CommandLine|contains: 'sekurlsa::'
+      - CommandLine|contains: 'kerberos::'
+      - CommandLine|contains: 'lsadump::'
+      - CommandLine|contains: 'privilege::'
+      - CommandLine|contains: 'process::'
+      - CommandLine|contains: 'vault::'
+falsepositives:
+- Unlikely
+level: high

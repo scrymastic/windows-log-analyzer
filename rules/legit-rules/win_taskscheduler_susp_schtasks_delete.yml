@@ -1,0 +1,39 @@
+title: Important Scheduled Task Deleted
+id: 9e3cb244-bdb8-4632-8c90-6079c8f4f16d
+related:
+- id: dbc1f800-0fe0-4bc0-9c66-292c2abe3f78
+  type: similar
+- id: 7595ba94-cf3b-4471-aa03-4f6baa9e5fad
+  type: similar
+status: test
+description: 'Detects when adversaries try to stop system services or processes by
+  deleting their respective scheduled tasks in order to conduct data destructive activities
+
+  '
+references:
+- https://www.socinvestigation.com/most-common-windows-event-ids-to-hunt-mind-map/
+author: frack113
+date: 2023/01/13
+modified: 2023/02/07
+tags:
+- attack.impact
+- attack.t1489
+logsource:
+  product: windows
+  service: taskscheduler
+  definition: 'Requirements: The "Microsoft-Windows-TaskScheduler/Operational" is
+    disabled by default and needs to be enabled in order for this detection to trigger'
+detection:
+- and:
+  - EventID|==: 141
+  - or:
+    - TaskName|contains: \Windows\SystemRestore\SR
+    - TaskName|contains: \Windows\Windows Defender\
+    - TaskName|contains: \Windows\BitLocker
+    - TaskName|contains: \Windows\WindowsBackup\
+    - TaskName|contains: \Windows\WindowsUpdate\
+    - TaskName|contains: \Windows\UpdateOrchestrator\
+    - TaskName|contains: \Windows\ExploitGuard
+falsepositives:
+- Unknown
+level: high

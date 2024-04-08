@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/03
+description: Detects the default "UserName" used by the DiagTrackEoP POC
+falsepositives:
+- Unlikely
+filename: win_security_diagtrack_eop_default_login_username.yml
+level: critical
+logsource:
+  product: windows
+  service: security
+modified: ''
+references:
+- https://github.com/Wh04m1001/DiagTrackEoP/blob/3a2fc99c9700623eb7dc7d4b5f314fd9ce5ef51f/main.cpp#L46
+related: []
+status: test
+tags:
+- attack.privilege_escalation

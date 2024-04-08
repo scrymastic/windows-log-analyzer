@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
+date: 2023/02/28
+description: Detects potential psexec command that initiate execution on a remote
+  systems via common commandline flags used by the utility
+falsepositives:
+- Unknown
+filename: proc_creation_win_sysinternals_psexec_remote_execution.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
+- https://www.poweradmin.com/paexec/
+- https://www.fireeye.com/blog/threat-research/2020/10/kegtap-and-singlemalt-with-a-ransomware-chaser.html
+related: []
+status: test
+tags:
+- attack.resource_development
+- attack.t1587.001

@@ -1,0 +1,25 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/02/10
+description: 'Detects a possible process memory dump that uses a white-listed filename
+  like TrolleyExpress.exe as a way to dump the LSASS process memory without Microsoft
+  Defender interference
+
+  '
+falsepositives:
+- Unknown
+filename: proc_access_win_lsass_whitelisted_process_names.yml
+level: high
+logsource:
+  category: process_access
+  product: windows
+modified: 2023/11/29
+references:
+- https://twitter.com/_xpn_/status/1491557187168178176
+- https://www.ired.team/offensive-security/credential-access-and-credential-dumping/dump-credentials-from-lsass-process-without-mimikatz
+- https://twitter.com/mrd0x/status/1460597833917251595
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.001
+- attack.s0002

@@ -1,0 +1,20 @@
+author: frack113
+date: 2021/07/16
+description: Executes arbitrary PowerShell code using SyncAppvPublishingServer.vbs
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_syncappvpublishingserver_vbs_execute_psh.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/06/22
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1216/T1216.md
+- https://lolbas-project.github.io/lolbas/Binaries/Syncappvpublishingserver/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218
+- attack.t1216

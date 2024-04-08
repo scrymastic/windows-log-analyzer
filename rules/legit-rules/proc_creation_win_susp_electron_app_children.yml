@@ -51,8 +51,38 @@ detection:
     - Image|contains: \Users\Public\
     - Image|contains: \Windows\Temp\
     - Image|contains: :\Temp\
+  - or:
+    - ParentImage|not endswith: \chrome.exe
+    - Image|not endswith: \chrome.exe
+  - or:
+    - ParentImage|not endswith: \discord.exe
+    - Image|not endswith: \discord.exe
+  - or:
+    - ParentImage|not endswith: \GitHubDesktop.exe
+    - Image|not endswith: \GitHubDesktop.exe
+  - or:
+    - ParentImage|not endswith: \keybase.exe
+    - Image|not endswith: \keybase.exe
+  - or:
+    - ParentImage|not endswith: \msedge.exe
+    - Image|not endswith: \msedge.exe
+  - or:
+    - ParentImage|not endswith: \msedgewebview2.exe
+    - Image|not endswith: \msedgewebview2.exe
+  - or:
+    - ParentImage|not endswith: \msteams.exe
+    - Image|not endswith: \msteams.exe
+  - or:
+    - ParentImage|not endswith: \slack.exe
+    - Image|not endswith: \slack.exe
+  - or:
+    - ParentImage|not endswith: \teams.exe
+    - Image|not endswith: \teams.exe
   - Image|!==: C:\Windows\SysWOW64\WerFault.exe
   - Image|!==: C:\Windows\System32\WerFault.exe
+  - or:
+    - ParentImage|not endswith: \Discord.exe
+    - CommandLine|not contains: \NVSMI\nvidia-smi.exe
 falsepositives:
 - Legitimate child processes can occur in cases of debugging
 level: medium

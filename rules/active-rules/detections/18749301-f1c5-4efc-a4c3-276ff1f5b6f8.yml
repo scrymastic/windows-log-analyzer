@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \VSIISExeLauncher.exe
+    - OriginalFileName|==: VSIISExeLauncher.exe
+  - or:
+    - CommandLine|contains: ' -p '
+    - CommandLine|contains: ' -a '
+id: 18749301-f1c5-4efc-a4c3-276ff1f5b6f8

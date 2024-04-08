@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+    - or:
+      - OriginalFileName|==: net.exe
+      - OriginalFileName|==: net1.exe
+  - CommandLine|contains: view
+id: 62510e69-616b-4078-b371-847da438cc03

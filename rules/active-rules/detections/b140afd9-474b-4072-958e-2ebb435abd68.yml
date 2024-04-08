@@ -1,0 +1,6 @@
+detection:
+- and:
+  - Payload|contains: Get-ADDBAccount
+  - Payload|contains: 'BootKey '
+  - Payload|contains: 'DatabasePath '
+id: b140afd9-474b-4072-958e-2ebb435abd68

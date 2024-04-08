@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \psexec.exe
+    - OriginalFileName|==: psexec.c
+id: 730fc21b-eaff-474b-ad23-90fd265d4988

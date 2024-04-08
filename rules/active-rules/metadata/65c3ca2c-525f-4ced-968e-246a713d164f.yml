@@ -1,0 +1,23 @@
+author: Nasreddine Bencherchali (Nextron Systems), Florian Roth (Nextron Systems)
+date: 2023/04/11
+description: Detects renamed execution of "Microsoft.NodejsTools.PressAnyKey.exe",
+  which can be abused as a LOLBIN to execute arbitrary binaries
+falsepositives:
+- Unknown
+filename: proc_creation_win_renamed_pressanykey.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://twitter.com/mrd0x/status/1463526834918854661
+- https://gist.github.com/nasbench/a989ce64cefa8081bd50cf6ad8c491b5
+related:
+- id: a20391f8-76fb-437b-abc0-dba2df1952c6
+  type: similar
+status: test
+tags:
+- attack.execution
+- attack.defense_evasion
+- attack.t1218

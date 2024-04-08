@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \dsquery.exe
+    - OriginalFileName|==: dsquery.exe
+  - CommandLine|contains: trustedDomain
+id: 3bad990e-4848-4a78-9530-b427d854aac0

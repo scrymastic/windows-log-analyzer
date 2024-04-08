@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - ImageLoaded|endswith: \dbghelp.dll
+    - ImageLoaded|endswith: \dbgcore.dll
+  - Signed|==: 'false'
+id: bdc64095-d59a-42a2-8588-71fd9c9d9abc

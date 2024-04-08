@@ -1,0 +1,40 @@
+title: HackTool - SharpImpersonation Execution
+id: f89b08d0-77ad-4728-817b-9b16c5a69c7a
+related:
+- id: cf0c254b-22f1-4b2b-8221-e137b3c0af94
+  type: similar
+status: test
+description: Detects execution of the SharpImpersonation tool. Which can be used to
+  manipulate tokens on a Windows computers remotely (PsExec/WmiExec) or interactively
+references:
+- https://s3cur3th1ssh1t.github.io/SharpImpersonation-Introduction/
+- https://github.com/S3cur3Th1sSh1t/SharpImpersonation
+author: Sai Prashanth Pulisetti @pulisettis, Nasreddine Bencherchali (Nextron Systems)
+date: 2022/12/27
+modified: 2023/02/13
+tags:
+- attack.privilege_escalation
+- attack.defense_evasion
+- attack.t1134.001
+- attack.t1134.003
+logsource:
+  product: windows
+  category: process_creation
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \SharpImpersonation.exe
+      - OriginalFileName|==: SharpImpersonation.exe
+  - or:
+    - or:
+      - CommandLine|contains: ' user:'
+      - CommandLine|contains: ' binary:'
+      - CommandLine|contains: ' user:'
+      - CommandLine|contains: ' shellcode:'
+      - or:
+        - CommandLine|contains: ' technique:CreateProcessAsUserW'
+        - CommandLine|contains: ' technique:ImpersonateLoggedOnuser'
+falsepositives:
+- Unknown
+level: high

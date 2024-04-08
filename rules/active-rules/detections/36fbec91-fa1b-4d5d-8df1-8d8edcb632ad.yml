@@ -1,0 +1,7 @@
+detection:
+- and:
+  - ScriptBlockText|contains: 'new-object '
+  - ScriptBlockText|contains: '-ComObject '
+  - ScriptBlockText|contains: .application
+  - ScriptBlockText|contains: .RegisterXLL
+id: 36fbec91-fa1b-4d5d-8df1-8d8edcb632ad

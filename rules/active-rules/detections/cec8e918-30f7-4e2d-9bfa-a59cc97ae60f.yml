@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|endswith: \OpenWith.exe
+  - CommandLine|contains: /c
+id: cec8e918-30f7-4e2d-9bfa-a59cc97ae60f

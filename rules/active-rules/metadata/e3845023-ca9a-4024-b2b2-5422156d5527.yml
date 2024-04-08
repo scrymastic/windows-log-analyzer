@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/09
+description: Detects the creation of a new PowerShell module ".psm1", ".psd1", ".dll",
+  ".ps1", etc. by a non-PowerShell process
+falsepositives:
+- Unknown
+filename: file_event_win_powershell_module_uncommon_creation.yml
+level: medium
+logsource:
+  category: file_event
+  product: windows
+modified: 2023/10/18
+references:
+- Internal Research
+- https://learn.microsoft.com/en-us/powershell/scripting/developer/module/understanding-a-windows-powershell-module?view=powershell-7.3
+related: []
+status: experimental
+tags:
+- attack.persistence

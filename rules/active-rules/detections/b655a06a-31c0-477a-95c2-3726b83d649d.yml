@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ParentImage|endswith: \userinit.exe
+id: b655a06a-31c0-477a-95c2-3726b83d649d

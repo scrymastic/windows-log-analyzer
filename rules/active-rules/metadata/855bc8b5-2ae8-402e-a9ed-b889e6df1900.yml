@@ -1,0 +1,27 @@
+author: Florian Roth (Nextron Systems), oscd.community, Teymur Kheirkhabarov @HeirhabarovT,
+  Zach Stanford @svch0st, Nasreddine Bencherchali
+date: 2019/12/30
+description: Detects a copy command or a copy utility execution to or from an Admin
+  share or remote
+falsepositives:
+- Administrative scripts
+filename: proc_creation_win_susp_copy_lateral_movement.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/11/15
+references:
+- https://twitter.com/SBousseaden/status/1211636381086339073
+- https://drive.google.com/file/d/1lKya3_mLnR3UQuCoiYruO3qgu052_iS_/view
+- https://www.elastic.co/guide/en/security/current/remote-file-copy-to-a-hidden-share.html
+- https://www.microsoft.com/en-us/security/blog/2022/10/18/defenders-beware-a-case-for-post-ransomware-investigations/
+related: []
+status: test
+tags:
+- attack.lateral_movement
+- attack.collection
+- attack.exfiltration
+- attack.t1039
+- attack.t1048
+- attack.t1021.002

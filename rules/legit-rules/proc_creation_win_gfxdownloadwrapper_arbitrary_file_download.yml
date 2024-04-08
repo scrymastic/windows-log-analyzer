@@ -20,6 +20,8 @@ detection:
   - or:
     - CommandLine|contains: http://
     - CommandLine|contains: https://
+  - or:
+    - CommandLine|not contains: https://gameplayapi.intel.com/
 falsepositives:
 - Unknown
 level: medium

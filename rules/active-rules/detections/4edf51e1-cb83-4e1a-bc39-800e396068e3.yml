@@ -1,0 +1,7 @@
+detection:
+- and:
+  - EventID|==: 4697
+  - ServiceFileName|contains: cmd
+  - ServiceFileName|contains: '&&'
+  - ServiceFileName|contains: 'clipboard]::'
+id: 4edf51e1-cb83-4e1a-bc39-800e396068e3

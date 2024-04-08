@@ -1,0 +1,18 @@
+author: X__Junior (Nextron Systems)
+date: 2023/06/09
+description: Detects potentially uncommon child processes of SndVol.exe (the Windows
+  volume mixer)
+falsepositives:
+- Unknown
+filename: proc_creation_win_sndvol_susp_child_processes.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://twitter.com/Max_Mal_/status/1661322732456353792
+related: []
+status: experimental
+tags:
+- attack.execution

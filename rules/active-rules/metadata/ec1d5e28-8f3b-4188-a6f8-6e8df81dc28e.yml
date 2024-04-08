@@ -1,0 +1,21 @@
+author: Thomas Patzke
+date: 2018/03/07
+description: Detects WMI script event consumers
+falsepositives:
+- Legitimate event consumers
+- Dell computers on some versions register an event consumer that is known to cause
+  false positives when brightness is changed by the corresponding keyboard button
+filename: proc_creation_win_wmi_persistence_script_event_consumer.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/10/11
+references:
+- https://www.eideon.com/2018-03-02-THL03-WMIBackdoors/
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1546.003

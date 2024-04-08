@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \MpCmdRun.exe
+    - Image|endswith: \NisSrv.exe
+  - Image|not startswith: C:\Program Files (x86)\Windows Defender\
+  - Image|not startswith: C:\Program Files\Microsoft Security Client\
+  - Image|not startswith: C:\Program Files\Windows Defender\
+  - Image|not startswith: C:\ProgramData\Microsoft\Windows Defender\Platform\
+  - Image|not startswith: C:\Windows\WinSxS\
+id: 7002aa10-b8d4-47ae-b5ba-51ab07e228b9

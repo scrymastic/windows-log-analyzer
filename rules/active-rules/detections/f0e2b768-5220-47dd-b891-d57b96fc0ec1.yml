@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetFilename|endswith: \csexecsvc.exe
+id: f0e2b768-5220-47dd-b891-d57b96fc0ec1

@@ -1,0 +1,23 @@
+author: Thomas Patzke, Florian Roth (Nextron Systems), Zach Stanford @svch0st, Tim
+  Shelton, Nasreddine Bencherchali (Nextron Systems)
+date: 2019/01/16
+description: 'Detects potentially suspicious processes being spawned by a web server
+  process which could be the result of a successfully placed web shell or exploitation
+
+  '
+falsepositives:
+- Particular web applications may spawn a shell process legitimately
+filename: proc_creation_win_webshell_susp_process_spawned_from_webserver.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/11/11
+references:
+- https://media.defense.gov/2020/Jun/09/2002313081/-1/-1/0/CSI-DETECT-AND-PREVENT-WEB-SHELL-MALWARE-20200422.PDF
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.t1505.003
+- attack.t1190

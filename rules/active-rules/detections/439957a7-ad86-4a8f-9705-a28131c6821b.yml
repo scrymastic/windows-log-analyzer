@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: \Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\
+    - TargetObject|contains: \Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\
+  - TargetObject|endswith: \Enabled
+  - Details|==: DWORD (0x00000001)
+id: 439957a7-ad86-4a8f-9705-a28131c6821b

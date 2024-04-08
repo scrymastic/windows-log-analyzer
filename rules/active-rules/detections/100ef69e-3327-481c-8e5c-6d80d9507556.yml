@@ -1,0 +1,12 @@
+detection:
+- and:
+  - EventID|==: 104
+  - Provider_Name|==: Microsoft-Windows-Eventlog
+  - or:
+    - Channel|==: Microsoft-Windows-PowerShell/Operational
+    - Channel|==: Microsoft-Windows-Sysmon/Operational
+    - Channel|==: PowerShellCore/Operational
+    - Channel|==: Security
+    - Channel|==: System
+    - Channel|==: Windows PowerShell
+id: 100ef69e-3327-481c-8e5c-6d80d9507556

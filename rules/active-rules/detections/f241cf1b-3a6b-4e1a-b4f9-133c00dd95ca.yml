@@ -1,0 +1,8 @@
+detection:
+- and:
+  - EventID|==: 4697
+  - ServiceFileName|contains: rundll32.exe
+  - ServiceFileName|contains: shell32.dll
+  - ServiceFileName|contains: shellexec_rundll
+  - ServiceFileName|contains: powershell
+id: f241cf1b-3a6b-4e1a-b4f9-133c00dd95ca

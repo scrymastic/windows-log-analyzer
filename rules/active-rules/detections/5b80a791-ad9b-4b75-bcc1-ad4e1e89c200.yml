@@ -1,0 +1,43 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \bitsadmin.exe
+    - OriginalFileName|==: bitsadmin.exe
+  - or:
+    - CommandLine|contains: ' /transfer '
+    - CommandLine|contains: ' /create '
+    - CommandLine|contains: ' /addfile '
+  - or:
+    - CommandLine|contains: .7z
+    - CommandLine|contains: .asax
+    - CommandLine|contains: .ashx
+    - CommandLine|contains: .asmx
+    - CommandLine|contains: .asp
+    - CommandLine|contains: .aspx
+    - CommandLine|contains: .bat
+    - CommandLine|contains: .cfm
+    - CommandLine|contains: .cgi
+    - CommandLine|contains: .chm
+    - CommandLine|contains: .cmd
+    - CommandLine|contains: .dll
+    - CommandLine|contains: .gif
+    - CommandLine|contains: .jpeg
+    - CommandLine|contains: .jpg
+    - CommandLine|contains: .jsp
+    - CommandLine|contains: .jspx
+    - CommandLine|contains: .log
+    - CommandLine|contains: .png
+    - CommandLine|contains: .ps1
+    - CommandLine|contains: .psm1
+    - CommandLine|contains: .rar
+    - CommandLine|contains: .scf
+    - CommandLine|contains: .sct
+    - CommandLine|contains: .txt
+    - CommandLine|contains: .vbe
+    - CommandLine|contains: .vbs
+    - CommandLine|contains: .war
+    - CommandLine|contains: .wsf
+    - CommandLine|contains: .wsh
+    - CommandLine|contains: .xll
+    - CommandLine|contains: .zip
+id: 5b80a791-ad9b-4b75-bcc1-ad4e1e89c200

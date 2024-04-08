@@ -1,0 +1,7 @@
+detection:
+- and:
+  - ScriptBlockText|contains: '[Credentials]'
+  - ScriptBlockText|contains: '[Veeam.Backup.Common.ProtectedStorage]::GetLocalString'
+  - ScriptBlockText|contains: Invoke-Sqlcmd
+  - ScriptBlockText|contains: Veeam Backup and Replication
+id: 976d6e6f-a04b-4900-9713-0134a353e38b

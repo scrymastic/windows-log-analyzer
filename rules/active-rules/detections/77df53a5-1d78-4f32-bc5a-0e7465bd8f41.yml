@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \gpg.exe
+      - Image|endswith: \gpg2.exe
+    - OriginalFileName|==: gpg.exe
+    - Description|==: "GnuPG\u2019s OpenPGP tool"
+  - Image|not contains: :\Program Files (x86)\GNU\GnuPG\bin\
+  - Image|not contains: :\Program Files (x86)\GnuPG VS-Desktop\
+  - Image|not contains: :\Program Files (x86)\GnuPG\bin\
+  - Image|not contains: :\Program Files (x86)\Gpg4win\bin\
+id: 77df53a5-1d78-4f32-bc5a-0e7465bd8f41

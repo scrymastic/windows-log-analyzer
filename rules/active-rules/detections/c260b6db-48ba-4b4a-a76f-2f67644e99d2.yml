@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: -Sta
+    - CommandLine|contains: -Nop
+    - CommandLine|contains: -Window
+    - CommandLine|contains: Hidden
+    - or:
+      - CommandLine|contains: -Command
+      - CommandLine|contains: -EncodedCommand
+  - or:
+    - or:
+      - CommandLine|contains: 'sv o (New-Object IO.MemorySteam);sv d '
+      - CommandLine|contains: mshta file.hta
+      - CommandLine|contains: GruntHTTP
+      - CommandLine|contains: -EncodedCommand cwB2ACAAbwAgA
+id: c260b6db-48ba-4b4a-a76f-2f67644e99d2

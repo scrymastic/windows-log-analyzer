@@ -23,6 +23,8 @@ detection:
   - or:
     - CommandLine|contains: ' /logon'
     - CommandLine|contains: ' /startup'
+  - or:
+    - ParentCommandLine|!==: C:\windows\system32\svchost.exe -k netsvcs -p -s gpsvc
 falsepositives:
 - Legitimate uses of logon scripts distributed via group policy
 level: medium

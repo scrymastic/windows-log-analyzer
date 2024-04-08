@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \rcedit-x64.exe
+      - Image|endswith: \rcedit-x86.exe
+    - Description|==: Edit resources of exe
+    - Product|==: rcedit
+  - CommandLine|contains: --set-
+  - or:
+    - CommandLine|contains: OriginalFileName
+    - CommandLine|contains: CompanyName
+    - CommandLine|contains: FileDescription
+    - CommandLine|contains: ProductName
+    - CommandLine|contains: ProductVersion
+    - CommandLine|contains: LegalCopyright
+id: 0c92f2e6-f08f-4b73-9216-ecb0ca634689

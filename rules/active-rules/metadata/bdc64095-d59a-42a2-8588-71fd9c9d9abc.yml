@@ -1,0 +1,32 @@
+author: Perez Diego (@darkquassar), oscd.community, Ecco
+date: 2019/10/27
+description: 'Detects the load of dbghelp/dbgcore DLL (used to make memory dumps)
+  by suspicious processes.
+
+  Tools like ProcessHacker and some attacker tradecract use MiniDumpWriteDump API
+  found in dbghelp.dll or dbgcore.dll.
+
+  As an example, SilentTrynity C2 Framework has a module that leverages this API to
+  dump the contents of Lsass.exe and transfer it over the network back to the attacker''s
+  machine.
+
+  '
+falsepositives:
+- Unknown
+filename: image_load_dll_dbghelp_dbgcore_unsigned_load.yml
+level: high
+logsource:
+  category: image_load
+  product: windows
+modified: 2022/12/09
+references:
+- https://docs.microsoft.com/en-us/windows/win32/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump
+- https://www.pinvoke.net/default.aspx/dbghelp/MiniDumpWriteDump.html
+- https://medium.com/@fsx30/bypass-edrs-memory-protection-introduction-to-hooking-2efb21acffd6
+related:
+- id: 0e277796-5f23-4e49-a490-483131d4f6e1
+  type: similar
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.001

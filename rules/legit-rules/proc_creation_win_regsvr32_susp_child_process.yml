@@ -36,6 +36,9 @@ detection:
     - Image|endswith: \schtasks.exe
     - Image|endswith: \werfault.exe
     - Image|endswith: \wscript.exe
+  - or:
+    - Image|not endswith: \werfault.exe
+    - CommandLine|not contains: ' -u -p '
 falsepositives:
 - Unlikely, but can rarely occur. Apply additional filters accordingly.
 level: high

@@ -112,6 +112,13 @@ detection:
     - Image|contains: \Windows\Tasks\
     - Image|contains: \Windows\Temp\
     - Image|contains: \Windows\System32\Tasks\
+  - or:
+    - Image|not endswith: \AppData\Local\Microsoft\Teams\current\Teams.exe
+    - CommandLine|not endswith: -Embedding
+  - or:
+    - Image|not contains: \AppData\Local\Microsoft\OneDrive\
+    - Image|not endswith: \FileCoAuth.exe
+    - CommandLine|not endswith: -Embedding
 falsepositives:
 - File located in the AppData folder with trusted signature
 level: high

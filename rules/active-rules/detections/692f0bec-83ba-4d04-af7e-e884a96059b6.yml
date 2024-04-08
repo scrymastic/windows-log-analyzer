@@ -1,0 +1,11 @@
+detection:
+- and:
+  - ParentImage|endswith: \WmiPrvSE.exe
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+id: 692f0bec-83ba-4d04-af7e-e884a96059b6

@@ -1,0 +1,12 @@
+detection:
+- and:
+  - TargetObject|contains: \Control\Print\Environments\Windows x64\Drivers
+  - TargetObject|contains: \Manufacturer
+  - Details|==: (Empty)
+  - or:
+    - TargetObject|not contains: \CutePDF Writer v4.0\
+  - TargetObject|not contains: \VNC Printer (PS)\
+  - TargetObject|not contains: \VNC Printer (UD)\
+  - or:
+    - TargetObject|not contains: \Version-3\PDF24\
+id: e0813366-0407-449a-9869-a2db1119dc41

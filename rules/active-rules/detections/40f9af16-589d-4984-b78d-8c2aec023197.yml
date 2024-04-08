@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|endswith: sdclt.exe
+  - IntegrityLevel|==: High
+id: 40f9af16-589d-4984-b78d-8c2aec023197

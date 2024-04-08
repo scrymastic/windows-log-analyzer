@@ -1,0 +1,18 @@
+author: Kiran kumar s, oscd.community
+date: 2020/10/11
+description: Detects a possible remote connections to Silenttrinity c2
+falsepositives:
+- Unknown
+filename: net_connection_win_silenttrinity_stager_msbuild_activity.yml
+level: high
+logsource:
+  category: network_connection
+  product: windows
+modified: 2022/10/05
+references:
+- https://www.blackhillsinfosec.com/my-first-joyride-with-silenttrinity/
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1127.001

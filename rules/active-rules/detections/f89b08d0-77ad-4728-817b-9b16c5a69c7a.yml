@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \SharpImpersonation.exe
+      - OriginalFileName|==: SharpImpersonation.exe
+  - or:
+    - or:
+      - CommandLine|contains: ' user:'
+      - CommandLine|contains: ' binary:'
+      - CommandLine|contains: ' user:'
+      - CommandLine|contains: ' shellcode:'
+      - or:
+        - CommandLine|contains: ' technique:CreateProcessAsUserW'
+        - CommandLine|contains: ' technique:ImpersonateLoggedOnuser'
+id: f89b08d0-77ad-4728-817b-9b16c5a69c7a

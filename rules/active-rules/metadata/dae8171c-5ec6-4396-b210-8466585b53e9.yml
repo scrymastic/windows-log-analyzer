@@ -1,0 +1,18 @@
+author: Roberto Rodriguez @Cyb3rWard0g, Tim Shelton
+date: 2019/08/15
+description: Detects non-system users performing privileged operation os the SCM database
+falsepositives:
+- Unknown
+filename: win_security_scm_database_privileged_operation.yml
+level: medium
+logsource:
+  product: windows
+  service: security
+modified: 2022/09/18
+references:
+- https://threathunterplaybook.com/hunts/windows/190826-RemoteSCMHandle/notebook.html
+related: []
+status: test
+tags:
+- attack.privilege_escalation
+- attack.t1548

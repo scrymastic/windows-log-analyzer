@@ -1,0 +1,9 @@
+detection:
+- and:
+  - Data|contains: powershell
+  - Data|contains: nslookup
+  - Data|contains: '[1]'
+  - or:
+    - Data|contains: -q=txt http
+    - Data|contains: -querytype=txt http
+id: 999bff6d-dc15-44c9-9f5c-e1051bfc86e1

@@ -1,0 +1,5 @@
+detection:
+- and:
+  - ScriptBlockText|contains: 'Get-AdGroup '
+  - ScriptBlockText|contains: -Filter
+id: 8c3a6607-b7dc-4f0d-a646-ef38c00b76ee

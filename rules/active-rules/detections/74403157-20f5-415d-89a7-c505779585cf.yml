@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - CommandLine|contains: ConvertTo-SecureString
+id: 74403157-20f5-415d-89a7-c505779585cf

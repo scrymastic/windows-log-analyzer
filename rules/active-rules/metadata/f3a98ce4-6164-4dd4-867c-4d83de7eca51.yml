@@ -1,0 +1,21 @@
+author: frack113
+date: 2022/12/27
+description: Detects TOKEN OBFUSCATION technique from Invoke-Obfuscation
+falsepositives:
+- Unknown
+filename: posh_ps_token_obfuscation.yml
+level: high
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2023/03/24
+references:
+- https://github.com/danielbohannon/Invoke-Obfuscation
+related:
+- id: deb9b646-a508-44ee-b7c9-d8965921c6b6
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027.009

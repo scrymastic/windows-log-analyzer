@@ -1,0 +1,23 @@
+author: Margaritis Dimitrios (idea), Florian Roth (Nextron Systems), oscd.community,
+  Nasreddine Bencherchali (Nextron Systems)
+date: 2019/01/16
+description: Detects wscript/cscript executions of scripts located in user directories
+falsepositives:
+- Some installers might generate a similar behavior. An initial baseline is required
+filename: proc_creation_win_wscript_cscript_dropper.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/01/30
+references:
+- https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
+- https://redcanary.com/blog/gootloader/
+related:
+- id: 1e33157c-53b1-41ad-bbcc-780b80b58288
+  type: similar
+status: experimental
+tags:
+- attack.execution
+- attack.t1059.005
+- attack.t1059.007

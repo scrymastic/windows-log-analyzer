@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \VaultCmd.exe
+    - OriginalFileName|==: VAULTCMD.EXE
+  - CommandLine|contains: '/listcreds:'
+id: 58f50261-c53b-4c88-bd12-1d71f12eda4c

@@ -17,8 +17,36 @@ class RuleConverter:
         self.legit_rules_folder = Path(ROOT, "rules", "legit-rules")
         pass
 
+    
+    def convert_folder(self, folder_path: str) -> bool:
+        folder = Path(folder_path)
+        # check if the folder exists and is a directory
+        if not folder.exists() or not folder.is_dir():
+            print(f"{RED}[ERROR] Folder '{folder.name}' not found.{RESET}")
+            return False
 
-    def convert(self, rule_path: str) -> bool:
+        print(f"{CYAN}[INFO] Converting rules in folder '{folder.name}'...{RESET}")
+        total = 0
+        success = 0
+        failed = []
+        for rule_file in folder.rglob('*.yml'):
+            total += 1
+            if self.convert_rule(rule_file):
+                success += 1
+            else:
+                failed.append(rule_file.name)
+
+        print(f"\n{CYAN}[INFO] Conversion completed.{RESET}")
+        print(f"Total rules: {total}")
+        print(f"{GREEN}Converted rules: {success}, {round(success/total*100, 2)}%{RESET}")
+        print(f"{RED}Failed rules: {len(failed)}, {round(len(failed)/total*100, 2)}%{RESET}")
+        for rule in failed:
+            print(f"{RED}[ERROR] Rule '{rule}' failed to convert.{RESET}")
+
+        return True
+    
+
+    def convert_rule(self, rule_path: str) -> bool:
         rule_file = Path(rule_path)
         if not rule_file.exists():
             print(f"{RED}[ERROR] Rule file '{rule_file.name}' not found.{RESET}")
@@ -57,10 +85,12 @@ class RuleConverter:
             print(f"Rule '{rule_file.name}' has no detection block.")
             return False
 
-    
+
     def convert_detection_block(self, detection): 
         conditions = detection.get('condition', '')
-        if not self.handle_condition(conditions):
+        
+        can_convert = self.handle_condition(conditions)
+        if can_convert == 0:
             raise ValueError(f'Unsupported condition: {conditions}')
             
         converted_detection = []
@@ -73,20 +103,31 @@ class RuleConverter:
                 converted_block = self.convert_or_block(value)
             else:
                 raise ValueError('Unexpected value type:', value)
-            
-            if 'selection' in key:
-                converted_detection.extend(converted_block)
-            elif 'filter_' in key:
-                converted_detection.extend(self.invert_conditions(converted_block))
+            if can_convert == 1:
+                if 'selection' in key:
+                    converted_detection.extend(converted_block)
+                elif 'filter_' in key:
+                    converted_detection.extend(self.invert_conditions(converted_block))
+
+            elif can_convert == 2:
+                if 'selection' in key:
+                    converted_detection.extend([{'or': converted_block}])
+                elif 'filter_' in key:
+                    converted_detection.extend(converted_block)
 
         return converted_detection
     
 
     def handle_condition(self, condition):
-        if regex.match(r'^(?:all of )?selection(?:_[^\s]*)?(?: (?:and not 1 of filter_[^\s]+))*', condition):
-            return True
+        if regex.match(r'^(?:all of )?selection(?:_[^\s]*)?(?: (?:and not 1 of filter_[^\s]+))*', condition) or \
+            regex.match(r'^not 1 of filter_[^\s]+(?: (?:and not 1 of filter_[^\s]+))*', condition) or \
+            regex.match(r'^(?:all of )?selection(?:_[^\s]*)? and not filter(?:_[^\s]*)?', condition):
+            return 1
+        elif regex.match(r'^1 of selection(?:_[^\s]*)?(?: (?:and not 1 of filter_[^\s]+))*', condition) or \
+            regex.match(r'^1 of selection(?:_[^\s]*)? and not filter(?:_[^\s]*)?', condition):
+            return 2
         else:
-            return False
+            return 0
         
 
     def convert_expression(self, expression):
@@ -114,7 +155,7 @@ class RuleConverter:
         return f"{field}|{operator}"
             
 
-    def convert_and_block(self, block):
+    def convert_and_block(self, block) -> list:
     # converted_block = {'and': []}
         converted_block = []
         for key, value in block.items():
@@ -150,7 +191,7 @@ class RuleConverter:
         return converted_block
 
 
-    def convert_or_block(self, block):
+    def convert_or_block(self, block) -> list:
         converted_block = {'or': []}
         for value in block:
             if isinstance(value, dict):
@@ -162,12 +203,19 @@ class RuleConverter:
 
     def invert_conditions(self, conditions: list) -> list:
         inverted_conditions = []
-        conditions = conditions[0].get('or', [])
-        if not conditions:
-            return inverted_conditions
-        for condition in conditions:
+        
+        is_or = False
+        block_conditions = conditions[0].get('or', [])
+        if block_conditions:
+            is_or = True
+        else:
+            block_conditions = conditions
+        for condition in block_conditions:
             for key, value in condition.items():
-                field, operator = key.split('|', 1)
+                try:
+                    field, operator = key.split('|', 1)
+                except ValueError:
+                    raise ValueError(f'Invalid condition to invert: {key}')
                 if operator == '==':
                     operator = '!=='
                 elif operator == '!=':
@@ -178,23 +226,14 @@ class RuleConverter:
                     else:
                         operator = operator.replace('not ', '')
                 inverted_conditions.append({f'{field}|{operator}': value})
-
-        return inverted_conditions
+        
+        if is_or:
+            return inverted_conditions
+        else:
+            return [{'or': inverted_conditions}]
+    
 
 if __name__ == '__main__':
-    sigma_rule_folder = Path(ROOT, "rules", "sigma-rules", "process_creation")
+    sigma_rule_folder = Path(ROOT, "rules", "sigma-rules")
     rule_converter = RuleConverter()
-    total = 0
-    success = 0
-    failed = []
-    for rule in sigma_rule_folder.glob('*.yml'):
-        total += 1
-        if rule_converter.convert(rule):
-            success += 1
-        else:
-            failed.append(rule)
-    print(f"Total rules: {total}")
-    print(f"Converted rules: {success}")
-    print(f"Failed rules: {failed}")
-
-    # rule_converter.convert("D:\AtSchool\windows-log-analyzer\\rules\sigma-rules\process_creation\proc_creation_win_7zip_exfil_dmp_files.yml")
+    rule_converter.convert_folder(sigma_rule_folder)

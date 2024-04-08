@@ -1,0 +1,4 @@
+detection:
+- and:
+  - CommandLine|contains: UserInitMprLogonScript
+id: 21d856f9-9281-4ded-9377-51a1a6e2a432

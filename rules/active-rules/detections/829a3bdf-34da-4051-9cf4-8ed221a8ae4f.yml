@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ImageLoaded|endswith: \outllib.dll
+id: 829a3bdf-34da-4051-9cf4-8ed221a8ae4f

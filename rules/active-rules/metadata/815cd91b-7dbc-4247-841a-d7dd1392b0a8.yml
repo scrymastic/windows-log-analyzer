@@ -1,0 +1,20 @@
+author: frack113
+date: 2021/06/04
+description: Detects when an adversary is trying to hide it's action from Sysmon logging
+  based on error messages
+falsepositives:
+- Legitimate administrative action
+filename: sysmon_config_modification_error.yml
+level: high
+logsource:
+  category: sysmon_error
+  product: windows
+modified: 2022/07/07
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1562.001/T1562.001.md
+- https://talesfrominfosec.blogspot.com/2017/12/killing-sysmon-silently.html
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1564

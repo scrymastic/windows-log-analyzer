@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \curl.exe
+    - OriginalFileName|==: curl.exe
+  - or:
+    - CommandLine|matches: \s-k\s
+    - CommandLine|contains: --insecure
+id: cb9cc1d1-e84e-4bdc-b7ad-c31b1b7908ec

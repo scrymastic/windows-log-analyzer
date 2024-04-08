@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \regsvr32.exe
+    - OriginalFileName|==: REGSVR32.EXE
+  - or:
+    - CommandLine|contains: ' /i'
+    - CommandLine|contains: ' -i'
+  - or:
+    - CommandLine|contains: ftp
+    - CommandLine|contains: http
+id: 867356ee-9352-41c9-a8f2-1be690d78216

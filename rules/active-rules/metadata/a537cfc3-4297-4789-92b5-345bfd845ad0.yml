@@ -1,0 +1,28 @@
+author: Andreas Hunkeler (@Karneades)
+date: 2021/12/20
+description: Detects usage of the "sc.exe" utility adding a new service with special
+  permission seen used by threat actors which makes the service hidden and unremovable.
+falsepositives:
+- Unknown
+filename: proc_creation_win_sc_sdset_hide_sevices.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/08/08
+references:
+- https://blog.talosintelligence.com/2021/10/threat-hunting-in-large-datasets-by.html
+- https://www.sans.org/blog/red-team-tactics-hiding-windows-services/
+- https://twitter.com/Alh4zr3d/status/1580925761996828672
+- https://itconnect.uw.edu/tools-services-support/it-systems-infrastructure/msinf/other-help/understanding-sddl-syntax/
+related:
+- id: 99cf1e02-00fb-4c0d-8375-563f978dfd37
+  type: similar
+- id: 98c5aeef-32d5-492f-b174-64a691896d25
+  type: similar
+status: test
+tags:
+- attack.persistence
+- attack.defense_evasion
+- attack.privilege_escalation
+- attack.t1574.011

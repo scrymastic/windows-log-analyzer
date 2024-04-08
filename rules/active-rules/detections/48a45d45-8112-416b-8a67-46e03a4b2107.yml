@@ -1,0 +1,6 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Remove-ADGroupMember
+  - ScriptBlockText|contains: '-Identity '
+  - ScriptBlockText|contains: '-Members '
+id: 48a45d45-8112-416b-8a67-46e03a4b2107

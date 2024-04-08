@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - or:
+      - ParentImage|endswith: \WmiPrvSE.exe
+      - ParentImage|endswith: \svchost.exe
+      - ParentImage|endswith: \dllhost.exe
+    - Image|endswith: \ImagingDevices.exe
+  - or:
+    - ParentImage|endswith: \ImagingDevices.exe
+id: f11f2808-adb4-46c0-802a-8660db50fa99

@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \ntdsutil.exe
+    - OriginalFileName|==: ntdsutil.exe
+  - or:
+    - CommandLine|contains: snapshot
+    - CommandLine|contains: 'mount '
+    - CommandLine|contains: ac
+    - CommandLine|contains: ' i'
+    - CommandLine|contains: ' ntds'
+id: a58353df-af43-4753-bad0-cd83ef35eef5

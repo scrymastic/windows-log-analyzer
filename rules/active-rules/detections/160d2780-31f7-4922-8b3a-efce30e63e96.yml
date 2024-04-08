@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|endswith: \CLSID\{fdb00e52-a214-4aa1-8fba-4357bb0072ec}\InProcServer32\(Default)
+id: 160d2780-31f7-4922-8b3a-efce30e63e96

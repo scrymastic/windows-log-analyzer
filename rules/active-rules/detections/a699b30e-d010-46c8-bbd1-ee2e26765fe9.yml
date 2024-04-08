@@ -1,0 +1,7 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Start-Process
+  - ScriptBlockText|contains: '-FilePath "$env:comspec" '
+  - ScriptBlockText|contains: '-ArgumentList '
+  - ScriptBlockText|contains: '>'
+id: a699b30e-d010-46c8-bbd1-ee2e26765fe9

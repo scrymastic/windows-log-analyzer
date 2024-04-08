@@ -1,0 +1,90 @@
+title: PUA - PingCastle Execution From Potentially Suspicious Parent
+id: b37998de-a70b-4f33-b219-ec36bf433dc0
+related:
+- id: b1cb4ab6-ac31-43f4-adf1-d9d08957419c
+  type: derived
+status: experimental
+description: 'Detects the execution of PingCastle, a tool designed to quickly assess
+  the Active Directory security level via a script located in a potentially suspicious
+  or uncommon location.
+
+  '
+references:
+- https://github.com/vletoux/pingcastle
+- https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
+- https://github.com/fengjixuchui/Start-ADEnum/blob/e237a739db98b6104427d833004836507da36a58/Functions/Start-ADEnum.ps1#L450
+- https://github.com/lkys37en/Start-ADEnum/blob/5b42c54215fe5f57fc59abc52c20487d15764005/Functions/Start-ADEnum.ps1#L680
+- https://github.com/projectHULK/AD_Recon/blob/dde2daba9b3393a9388cbebda87068972cc0bd3b/SecurityAssessment.ps1#L2699
+- https://github.com/802-1x/Compliance/blob/2e53df8b6e89686a0b91116b3f42c8f717dca820/Ping%20Castle/Get-PingCastle-HTMLComplianceReport.ps1#L8
+- https://github.com/EvotecIT/TheDashboard/blob/481a9ce8f82f2fd55fe65220ee6486bae6df0c9d/Examples/RunReports/PingCastle.ps1
+author: Nasreddine Bencherchali (Nextron Systems), X__Junior (Nextron Systems)
+date: 2024/01/11
+tags:
+- attack.reconnaissance
+- attack.t1595
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - or:
+      - ParentCommandLine|contains: .bat
+      - ParentCommandLine|contains: .chm
+      - ParentCommandLine|contains: .cmd
+      - ParentCommandLine|contains: .hta
+      - ParentCommandLine|contains: .htm
+      - ParentCommandLine|contains: .html
+      - ParentCommandLine|contains: .js
+      - ParentCommandLine|contains: .lnk
+      - ParentCommandLine|contains: .ps1
+      - ParentCommandLine|contains: .vbe
+      - ParentCommandLine|contains: .vbs
+      - ParentCommandLine|contains: .wsf
+  - or:
+    - or:
+      - ParentCommandLine|contains: :\Perflogs\
+      - ParentCommandLine|contains: :\Temp\
+      - ParentCommandLine|contains: :\Users\Public\
+      - ParentCommandLine|contains: :\Windows\Temp\
+      - ParentCommandLine|contains: \AppData\Local\Temp
+      - ParentCommandLine|contains: \AppData\Roaming\
+      - ParentCommandLine|contains: \Temporary Internet
+  - or:
+    - or:
+      - ParentCommandLine|contains: :\Users\
+      - ParentCommandLine|contains: \Favorites\
+      - ParentCommandLine|contains: :\Users\
+      - ParentCommandLine|contains: \Favourites\
+      - ParentCommandLine|contains: :\Users\
+      - ParentCommandLine|contains: \Contacts\
+  - or:
+    - or:
+      - Image|endswith: \PingCastle.exe
+      - OriginalFileName|==: PingCastle.exe
+      - Product|==: Ping Castle
+      - or:
+        - CommandLine|contains: --scanner aclcheck
+        - CommandLine|contains: --scanner antivirus
+        - CommandLine|contains: --scanner computerversion
+        - CommandLine|contains: --scanner foreignusers
+        - CommandLine|contains: --scanner laps_bitlocker
+        - CommandLine|contains: --scanner localadmin
+        - CommandLine|contains: --scanner nullsession
+        - CommandLine|contains: --scanner nullsession-trust
+        - CommandLine|contains: --scanner oxidbindings
+        - CommandLine|contains: --scanner remote
+        - CommandLine|contains: --scanner share
+        - CommandLine|contains: --scanner smb
+        - CommandLine|contains: --scanner smb3querynetwork
+        - CommandLine|contains: --scanner spooler
+        - CommandLine|contains: --scanner startup
+        - CommandLine|contains: --scanner zerologon
+      - CommandLine|contains: --no-enum-limit
+      - CommandLine|contains: --healthcheck
+      - CommandLine|contains: --level Full
+      - CommandLine|contains: --healthcheck
+      - CommandLine|contains: '--server '
+falsepositives:
+- Unknown
+level: high

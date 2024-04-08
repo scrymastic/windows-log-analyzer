@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - DestinationPort|==: 25
+    - DestinationPort|==: 587
+    - DestinationPort|==: 465
+    - DestinationPort|==: 2525
+  - Initiated|==: 'true'
+  - Image|not endswith: \thunderbird.exe
+  - Image|not endswith: \outlook.exe
+  - or:
+    - Image|not startswith: C:\Program Files\Microsoft\Exchange Server\
+  - or:
+    - Image|not startswith: C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_
+    - Image|not endswith: \HxTsr.exe
+id: 9976fa64-2804-423c-8a5b-646ade840773

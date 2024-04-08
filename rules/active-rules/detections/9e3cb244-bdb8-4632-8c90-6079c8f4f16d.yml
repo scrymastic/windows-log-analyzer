@@ -1,0 +1,12 @@
+detection:
+- and:
+  - EventID|==: 141
+  - or:
+    - TaskName|contains: \Windows\SystemRestore\SR
+    - TaskName|contains: \Windows\Windows Defender\
+    - TaskName|contains: \Windows\BitLocker
+    - TaskName|contains: \Windows\WindowsBackup\
+    - TaskName|contains: \Windows\WindowsUpdate\
+    - TaskName|contains: \Windows\UpdateOrchestrator\
+    - TaskName|contains: \Windows\ExploitGuard
+id: 9e3cb244-bdb8-4632-8c90-6079c8f4f16d

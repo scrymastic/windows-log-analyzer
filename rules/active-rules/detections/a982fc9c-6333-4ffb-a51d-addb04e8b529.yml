@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|contains: \Microsoft\Windows Defender\Exclusions
+id: a982fc9c-6333-4ffb-a51d-addb04e8b529

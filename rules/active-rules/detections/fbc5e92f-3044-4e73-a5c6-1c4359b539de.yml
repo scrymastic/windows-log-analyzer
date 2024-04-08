@@ -1,0 +1,7 @@
+detection:
+- and:
+  - ScriptBlockText|contains: 'Get-content '
+  - ScriptBlockText|contains: foreach
+  - ScriptBlockText|contains: '[System.Net.Dns]::GetHostEntry'
+  - ScriptBlockText|contains: Out-File
+id: fbc5e92f-3044-4e73-a5c6-1c4359b539de

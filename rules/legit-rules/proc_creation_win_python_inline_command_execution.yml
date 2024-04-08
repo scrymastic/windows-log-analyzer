@@ -25,6 +25,12 @@ detection:
       - Image|endswith: python3.exe
       - Image|endswith: python2.exe
   - CommandLine|contains: ' -c'
+  - or:
+    - ParentImage|not startswith: C:\Program Files\Python
+    - ParentImage|not endswith: \python.exe
+    - ParentCommandLine|not contains: -E -s -m ensurepip -U --default-pip
+  - or:
+    - ParentImage|not endswith: \AppData\Local\Programs\Microsoft VS Code\Code.exe
 falsepositives:
 - Python libraries that use a flag starting with "-c". Filter according to your environment
 level: medium

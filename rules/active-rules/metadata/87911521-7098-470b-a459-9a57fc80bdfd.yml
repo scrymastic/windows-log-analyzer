@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/03/09
+description: Detects updates to Sysmon's configuration. Attackers might update or
+  replace the Sysmon configuration with a bare bone one to avoid monitoring without
+  shutting down the service completely
+falsepositives:
+- Legitimate administrators might use this command to update Sysmon configuration.
+filename: proc_creation_win_sysinternals_sysmon_config_update.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/13
+references:
+- https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.001

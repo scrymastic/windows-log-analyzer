@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Payload|contains: ModuleContents=function Get-VMRemoteFXPhysicalVideoAdapter {
+id: 38a7625e-b2cb-485d-b83d-aff137d859f4

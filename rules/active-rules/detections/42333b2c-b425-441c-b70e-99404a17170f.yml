@@ -1,0 +1,4 @@
+detection:
+- and:
+  - CommandLine|contains: -NoExit -Command [Console]::OutputEncoding=[Text.UTF8Encoding]::UTF8
+id: 42333b2c-b425-441c-b70e-99404a17170f

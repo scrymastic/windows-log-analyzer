@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/05
+description: Detects suspicious file based on their extension being created in "C:\PerfLogs\".
+  Note that this directory mostly contains ".etl" files
+falsepositives:
+- Unlikely
+filename: file_event_win_perflogs_susp_files.yml
+level: medium
+logsource:
+  category: file_event
+  product: windows
+modified: ''
+references:
+- Internal Research
+- https://labs.withsecure.com/publications/fin7-target-veeam-servers
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059

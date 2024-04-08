@@ -1,0 +1,24 @@
+author: frack113
+date: 2022/07/16
+description: Detects file renames where the target filename uses an uncommon double
+  extension. Could indicate potential ransomware activity renaming files and adding
+  a custom extension to the encrypted files, such as ".jpg.crypted", ".docx.locky",
+  etc.
+falsepositives:
+- Backup software
+filename: file_rename_win_ransomware.yml
+level: medium
+logsource:
+  category: file_rename
+  definition: 'Requirements: Microsoft-Windows-Kernel-File Provider with at least
+    the KERNEL_FILE_KEYWORD_RENAME_SETLINK_PATH keyword'
+  product: windows
+modified: 2023/11/11
+references:
+- https://app.any.run/tasks/d66ead5a-faf4-4437-93aa-65785afaf9e5/
+- https://blog.cyble.com/2022/08/10/onyx-ransomware-renames-its-leak-site-to-vsop/
+related: []
+status: test
+tags:
+- attack.impact
+- attack.t1486

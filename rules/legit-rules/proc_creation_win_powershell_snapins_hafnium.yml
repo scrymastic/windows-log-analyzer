@@ -31,6 +31,10 @@ detection:
   - or:
     - CommandLine|contains: Microsoft.Exchange.Powershell.Snapin
     - CommandLine|contains: Microsoft.Exchange.Management.PowerShell.SnapIn
+  - or:
+    - ParentImage|!==: C:\Windows\System32\msiexec.exe
+    - CommandLine|not contains: $exserver=Get-ExchangeServer ([Environment]::MachineName)
+        -ErrorVariable exerr 2> $null
 falsepositives:
 - Unknown
 level: high

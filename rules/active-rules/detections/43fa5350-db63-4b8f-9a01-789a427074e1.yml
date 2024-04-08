@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \rundll32.exe
+    - OriginalFileName|==: RUNDLL32.EXE
+    - CommandLine|contains: rundll32
+  - or:
+    - CommandLine|contains: '#+'
+    - CommandLine|contains: '#-'
+id: 43fa5350-db63-4b8f-9a01-789a427074e1

@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: \SOFTWARE\Microsoft\SystemCertificates\Root\Certificates\
+    - TargetObject|contains: \SOFTWARE\Policies\Microsoft\SystemCertificates\Root\Certificates\
+    - TargetObject|contains: \SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates\
+    - TargetObject|contains: \SOFTWARE\Microsoft\SystemCertificates\CA\Certificates\
+    - TargetObject|contains: \SOFTWARE\Policies\Microsoft\SystemCertificates\CA\Certificates\
+    - TargetObject|contains: \SOFTWARE\Microsoft\EnterpriseCertificates\CA\Certificates\
+    - TargetObject|contains: \SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates\
+    - TargetObject|contains: \SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot\Certificates\
+    - TargetObject|contains: \SOFTWARE\Microsoft\EnterpriseCertificates\AuthRoot\Certificates\
+  - TargetObject|endswith: \Blob
+  - Details|==: Binary Data
+id: d223b46b-5621-4037-88fe-fda32eead684

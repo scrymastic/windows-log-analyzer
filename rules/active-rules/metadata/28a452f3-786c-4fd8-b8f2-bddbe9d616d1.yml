@@ -1,0 +1,20 @@
+author: frack113
+date: 2022/05/09
+description: Detects WerFault copoed to a suspicious folder, which could be a sign
+  of WerFault DLL hijacking
+falsepositives:
+- Unknown
+filename: file_event_win_werfault_dll_hijacking.yml
+level: high
+logsource:
+  category: file_event
+  product: windows
+modified: ''
+references:
+- https://www.bleepingcomputer.com/news/security/hackers-are-now-hiding-malware-in-windows-event-logs/
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.defense_evasion
+- attack.t1574.001

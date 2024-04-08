@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: System.DirectoryServices.Protocols.LdapDirectoryIdentifier
+    - ScriptBlockText|contains: System.Net.NetworkCredential
+    - ScriptBlockText|contains: System.DirectoryServices.Protocols.LdapConnection
+id: 1883444f-084b-419b-ac62-e0d0c5b3693f

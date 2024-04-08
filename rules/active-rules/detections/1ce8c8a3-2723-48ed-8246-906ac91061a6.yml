@@ -1,0 +1,8 @@
+detection:
+- and:
+  - EventID|==: 5145
+  - ShareName|startswith: \\\\
+  - ShareName|endswith: \IPC$
+  - RelativeTargetName|==: lsarpc
+  - SubjectUserName|==: ANONYMOUS LOGON
+id: 1ce8c8a3-2723-48ed-8246-906ac91061a6

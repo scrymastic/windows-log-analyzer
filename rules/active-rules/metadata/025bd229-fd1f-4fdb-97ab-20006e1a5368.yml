@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems), Florian Roth (Nextron Systems)
+date: 2022/09/07
+description: Detects the download of suspicious file type from URLs with IP
+falsepositives:
+- Unknown
+filename: create_stream_hash_susp_ip_domains.yml
+level: high
+logsource:
+  category: create_stream_hash
+  product: windows
+modified: 2023/02/10
+references:
+- https://github.com/trustedsec/SysmonCommunityGuide/blob/adcdfee20999f422b974c8d4149bf4c361237db7/chapters/file-stream-creation-hash.md
+- https://labs.withsecure.com/publications/detecting-onenote-abuse
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1564.004

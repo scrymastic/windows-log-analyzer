@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 2004
+    - EventID|==: 2071
+  - or:
+    - ApplicationPath|contains: :\PerfLogs\
+    - ApplicationPath|contains: :\Temp\
+    - ApplicationPath|contains: :\Users\Public\
+    - ApplicationPath|contains: :\Windows\Tasks\
+    - ApplicationPath|contains: :\Windows\Temp\
+    - ApplicationPath|contains: \AppData\Local\Temp\
+  - or:
+    - Action|!==: 2
+id: 9e2575e7-2cb9-4da1-adc8-ed94221dca5e

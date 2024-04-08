@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \w32tm.exe
+    - OriginalFileName|==: w32time.dll
+  - CommandLine|contains: /stripchart
+  - CommandLine|contains: '/computer:'
+  - CommandLine|contains: '/period:'
+  - CommandLine|contains: /dataonly
+  - CommandLine|contains: '/samples:'
+id: 6da2c9f5-7c53-401b-aacb-92c040ce1215

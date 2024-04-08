@@ -1,0 +1,24 @@
+author: Bhabesh Raj
+date: 2021/05/18
+description: Detects Cmdlet names from PowerView of the PowerSploit exploitation framework.
+falsepositives:
+- Unknown
+filename: posh_ps_powerview_malicious_commandlets.yml
+level: high
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2023/11/22
+references:
+- https://powersploit.readthedocs.io/en/stable/Recon/README
+- https://github.com/PowerShellMafia/PowerSploit/tree/master/Recon
+- https://thedfirreport.com/2020/10/08/ryuks-return
+- https://adsecurity.org/?p=2277
+related:
+- id: b2317cfa-4a47-4ead-b3ff-297438c0bc2d
+  type: similar
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

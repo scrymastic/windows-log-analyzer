@@ -1,0 +1,22 @@
+author: Thomas Patzke
+date: 2020/05/22
+description: The CrachMapExec pentesting framework implements a PowerShell obfuscation
+  with some static strings detected by this rule.
+falsepositives:
+- Unknown
+filename: proc_creation_win_hktl_crackmapexec_powershell_obfuscation.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/21
+references:
+- https://github.com/byt3bl33d3r/CrackMapExec
+- https://github.com/byt3bl33d3r/CrackMapExec/blob/0a49f75347b625e81ee6aa8c33d3970b5515ea9e/cme/helpers/powershell.py#L242
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001
+- attack.defense_evasion
+- attack.t1027.005

@@ -1,0 +1,8 @@
+detection:
+- and:
+  - TargetObject|contains: \Services\W32Time\TimeProviders
+  - TargetObject|endswith: \DllName
+  - Details|!==: '%SystemRoot%\System32\vmictimeprovider.dll'
+  - Details|!==: '%systemroot%\system32\w32time.dll'
+  - Details|!==: C:\Windows\SYSTEM32\w32time.DLL
+id: e88a6ddc-74f7-463b-9b26-f69fc0d2ce85

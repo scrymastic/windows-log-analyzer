@@ -1,0 +1,22 @@
+author: Samir Bousseaden
+date: 2019/04/03
+description: Detects remote service activity via remote access to the svcctl named
+  pipe
+falsepositives:
+- Unknown
+filename: win_security_svcctl_remote_service.yml
+level: medium
+logsource:
+  definition: The advanced audit policy setting "Object Access > Audit Detailed File
+    Share" must be configured for Success/Failure
+  product: windows
+  service: security
+modified: 2022/08/11
+references:
+- https://blog.menasec.net/2019/03/threat-hunting-26-remote-windows.html
+related: []
+status: test
+tags:
+- attack.lateral_movement
+- attack.persistence
+- attack.t1021.002

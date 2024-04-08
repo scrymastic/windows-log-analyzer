@@ -1,0 +1,19 @@
+author: Roberto Rodriguez @Cyb3rWard0g
+date: 2019/08/10
+description: Detects access to a protected_storage service over the network. Potential
+  abuse of DPAPI to extract domain backup keys from Domain Controllers
+falsepositives:
+- Unknown
+filename: win_security_protected_storage_service_access.yml
+level: high
+logsource:
+  product: windows
+  service: security
+modified: 2021/11/27
+references:
+- https://threathunterplaybook.com/hunts/windows/190620-DomainDPAPIBackupKeyExtraction/notebook.html
+related: []
+status: test
+tags:
+- attack.lateral_movement
+- attack.t1021.002

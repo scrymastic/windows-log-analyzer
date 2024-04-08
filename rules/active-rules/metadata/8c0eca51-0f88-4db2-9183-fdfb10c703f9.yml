@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/03/22
+description: Detects the usage of the "reg.exe" utility to disable PPL protection
+  on the LSA process
+falsepositives:
+- Unlikely
+filename: proc_creation_win_reg_lsa_ppl_protection_disabled.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/03/26
+references:
+- https://thedfirreport.com/2022/03/21/apt35-automates-initial-access-using-proxyshell/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.010

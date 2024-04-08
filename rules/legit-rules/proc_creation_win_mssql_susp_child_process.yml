@@ -38,4 +38,9 @@ detection:
     - Image|endswith: \systeminfo.exe
     - Image|endswith: \tasklist.exe
     - Image|endswith: \wsl.exe
+  - or:
+    - ParentImage|not startswith: C:\Program Files\Microsoft SQL Server\
+    - ParentImage|not endswith: DATEV_DBENGINE\MSSQL\Binn\sqlservr.exe
+    - Image|!==: C:\Windows\System32\cmd.exe
+    - CommandLine|not startswith: '"C:\Windows\system32\cmd.exe" '
 level: high

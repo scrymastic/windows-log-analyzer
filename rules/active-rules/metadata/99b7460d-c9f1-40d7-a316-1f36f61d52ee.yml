@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/15
+description: Detects Wscript/Cscript executing a file with an uncommon (i.e. non-script)
+  extension
+falsepositives:
+- Unknown
+filename: proc_creation_win_wscript_cscript_uncommon_extension_exec.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/06/19
+references:
+- Internal Research
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.t1059.005
+- attack.t1059.007

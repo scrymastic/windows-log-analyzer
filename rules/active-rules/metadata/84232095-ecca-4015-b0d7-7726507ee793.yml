@@ -1,0 +1,23 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/02/15
+description: Detects when a user installs certificates by using CertOC.exe to load
+  the target DLL file.
+falsepositives:
+- Unknown
+filename: proc_creation_win_certoc_load_dll_susp_locations.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/05
+references:
+- https://twitter.com/sblmsrsn/status/1445758411803480072?s=20
+- https://github.com/elastic/protections-artifacts/commit/746086721fd385d9f5c6647cada1788db4aea95f#diff-fe98e74189873d6df72a15df2eaa0315c59ba9cdaca93ecd68afc4ea09194ef2
+- https://lolbas-project.github.io/lolbas/Binaries/Certoc/
+related:
+- id: 242301bc-f92f-4476-8718-78004a6efd9f
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

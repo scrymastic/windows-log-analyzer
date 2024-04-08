@@ -1,0 +1,13 @@
+detection:
+- and:
+  - EventID|==: 4697
+  - ServiceFileName|contains: '&&'
+  - ServiceFileName|contains: rundll32
+  - ServiceFileName|contains: shell32.dll
+  - ServiceFileName|contains: shellexec_rundll
+  - or:
+    - ServiceFileName|contains: value
+    - ServiceFileName|contains: invoke
+    - ServiceFileName|contains: comspec
+    - ServiceFileName|contains: iex
+id: cd0f7229-d16f-42de-8fe3-fba365fbcb3a

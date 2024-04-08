@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: diskshadow.exe
+    - Image|endswith: \diskshadow.exe
+  - CommandLine|None: '-s '
+  - or:
+    - CommandLine|contains: :\Temp\
+    - CommandLine|contains: :\Windows\Temp\
+    - CommandLine|contains: \AppData\Local\
+    - CommandLine|contains: \AppData\Roaming\
+    - CommandLine|contains: \ProgramData\
+    - CommandLine|contains: \Users\Public\
+id: fa1a7e52-3d02-435b-81b8-00da14dd66c1

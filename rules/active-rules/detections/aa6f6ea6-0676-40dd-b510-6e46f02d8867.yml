@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \curl.exe
+    - OriginalFileName|==: curl.exe
+  - CommandLine|contains: file:///
+id: aa6f6ea6-0676-40dd-b510-6e46f02d8867

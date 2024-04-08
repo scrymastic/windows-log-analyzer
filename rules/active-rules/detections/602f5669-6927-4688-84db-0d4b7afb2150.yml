@@ -1,0 +1,5 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Remove-Module
+  - ScriptBlockText|contains: psreadline
+id: 602f5669-6927-4688-84db-0d4b7afb2150

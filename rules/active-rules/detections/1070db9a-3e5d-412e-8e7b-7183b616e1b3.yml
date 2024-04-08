@@ -1,0 +1,6 @@
+detection:
+- and:
+  - CommandLine|contains: 'copy '
+  - CommandLine|contains: '/y '
+  - CommandLine|contains: C:\windows\system32\cmd.exe C:\windows\system32\sethc.exe
+id: 1070db9a-3e5d-412e-8e7b-7183b616e1b3

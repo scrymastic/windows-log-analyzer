@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ContextInfo|contains: Get-NetTCPConnection
+id: aff815cc-e400-4bf0-a47a-5d8a2407d4e1

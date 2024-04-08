@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Payload|contains: Expand-Archive
+id: 1ddc1472-8e52-4f7d-9f11-eab14fc171f5

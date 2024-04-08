@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \squirrel.exe
+    - Image|endswith: \update.exe
+  - or:
+    - CommandLine|contains: ' --download '
+    - CommandLine|contains: ' --update '
+    - CommandLine|contains: ' --updateRollback='
+  - CommandLine|contains: http
+id: 1e75c1cc-c5d4-42aa-ac3d-91b0b68b3b4c

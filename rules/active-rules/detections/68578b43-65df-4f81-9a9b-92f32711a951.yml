@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - TargetFilename|startswith: C:\Users\
+    - TargetFilename|endswith: \AppData\Local\Temp\OskSupport.dll
+  - or:
+    - Image|==: C:\Windows\system32\DllHost.exe
+    - TargetFilename|==: C:\Program Files\Windows Media Player\osk.exe
+id: 68578b43-65df-4f81-9a9b-92f32711a951

@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \fltMC.exe
+    - OriginalFileName|==: fltMC.exe
+  - CommandLine|contains: unload
+  - CommandLine|contains: sysmon
+id: 4d7cda18-1b12-4e52-b45c-d28653210df8

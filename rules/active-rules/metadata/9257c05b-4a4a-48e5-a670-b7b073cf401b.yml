@@ -1,0 +1,19 @@
+author: Jimmy Bayne (@bohops)
+date: 2024/01/02
+description: Detects commandline arguments for executing a child process via dotnet-trace.exe
+falsepositives:
+- Legitimate usage of the utility in order to debug and trace a program.
+filename: proc_creation_win_dotnet_trace_lolbin_execution.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://twitter.com/bohops/status/1740022869198037480
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.defense_evasion
+- attack.t1218

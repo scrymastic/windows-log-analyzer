@@ -1,0 +1,27 @@
+detection:
+- and:
+  - or:
+    - Description|==: Execute processes remotely
+    - Product|==: Sysinternals PsExec
+    - or:
+      - Description|startswith: Windows PowerShell
+      - Description|startswith: pwsh
+    - or:
+      - OriginalFileName|==: certutil.exe
+      - OriginalFileName|==: cmstp.exe
+      - OriginalFileName|==: cscript.exe
+      - OriginalFileName|==: mshta.exe
+      - OriginalFileName|==: msiexec.exe
+      - OriginalFileName|==: powershell_ise.exe
+      - OriginalFileName|==: powershell.exe
+      - OriginalFileName|==: psexec.c
+      - OriginalFileName|==: psexec.exe
+      - OriginalFileName|==: psexesvc.exe
+      - OriginalFileName|==: pwsh.dll
+      - OriginalFileName|==: reg.exe
+      - OriginalFileName|==: regsvr32.exe
+      - OriginalFileName|==: rundll32.exe
+      - OriginalFileName|==: WerMgr
+      - OriginalFileName|==: wmic.exe
+      - OriginalFileName|==: wscript.exe
+id: 0ba1da6d-b6ce-4366-828c-18826c9de23e

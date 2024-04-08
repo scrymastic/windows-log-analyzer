@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: \Control\Print\Environments\Windows x64\Drivers\Version-3\QMS
+        810\
+    - TargetObject|contains: \Control\Print\Environments\Windows x64\Drivers\Version-3\mimikatz
+  - TargetObject|contains: legitprinter
+  - TargetObject|contains: \Control\Print\Environments\Windows
+  - or:
+    - TargetObject|contains: \Control\Print\Environments
+    - TargetObject|contains: \CurrentVersion\Print\Printers
+  - or:
+    - TargetObject|contains: Gentil Kiwi
+    - TargetObject|contains: mimikatz printer
+    - TargetObject|contains: Kiwi Legit Printer
+id: ba6b9e43-1d45-4d3c-a504-1043a64c8469

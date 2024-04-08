@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\UMe
+    - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\UT
+id: 7bdf2a7c-3acc-4091-9581-0a77dad1c5b5

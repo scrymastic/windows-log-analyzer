@@ -1,0 +1,8 @@
+detection:
+- and:
+  - TargetFilename|startswith: C:\Windows\System32\spool\drivers\color\
+  - or:
+    - TargetFilename|endswith: .dll
+    - TargetFilename|endswith: .exe
+    - TargetFilename|endswith: .sys
+id: ce7066a6-508a-42d3-995b-2952c65dc2ce

@@ -1,0 +1,14 @@
+detection:
+- and:
+  - CommandLine|contains: '&&set'
+  - CommandLine|contains: cmd
+  - CommandLine|contains: /c
+  - CommandLine|contains: -f
+  - or:
+    - CommandLine|contains: '{0}'
+    - CommandLine|contains: '{1}'
+    - CommandLine|contains: '{2}'
+    - CommandLine|contains: '{3}'
+    - CommandLine|contains: '{4}'
+    - CommandLine|contains: '{5}'
+id: e9f55347-2928-4c06-88e5-1a7f8169942e

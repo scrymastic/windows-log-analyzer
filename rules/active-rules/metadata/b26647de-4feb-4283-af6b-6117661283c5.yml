@@ -1,0 +1,20 @@
+author: frack113
+date: 2021/08/23
+description: Adversaries may attempt to gather information about attached peripheral
+  devices and components connected to a computer system.
+falsepositives:
+- Admin script
+filename: posh_ps_susp_win32_pnpentity.yml
+level: low
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2022/12/25
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1120/T1120.md
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.t1120

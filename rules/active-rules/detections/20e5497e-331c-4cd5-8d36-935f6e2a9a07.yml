@@ -1,0 +1,9 @@
+detection:
+- and:
+  - ScriptBlockText|contains: new-object
+  - ScriptBlockText|contains: text.encoding]::ascii
+  - or:
+    - ScriptBlockText|contains: system.io.compression.deflatestream
+    - ScriptBlockText|contains: system.io.streamreader
+  - ScriptBlockText|endswith: readtoend
+id: 20e5497e-331c-4cd5-8d36-935f6e2a9a07

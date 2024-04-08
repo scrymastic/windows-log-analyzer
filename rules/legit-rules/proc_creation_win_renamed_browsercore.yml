@@ -17,6 +17,8 @@ logsource:
 detection:
 - and:
   - OriginalFileName|==: BrowserCore.exe
+  - or:
+    - Image|not endswith: \BrowserCore.exe
 falsepositives:
 - Unknown
 level: high

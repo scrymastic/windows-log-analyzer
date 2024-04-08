@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - CommandLine|contains: 'Get-ADUser '
+  - CommandLine|contains: ' -Filter \*'
+  - or:
+    - CommandLine|contains: ' > '
+    - CommandLine|contains: ' | Select '
+    - CommandLine|contains: Out-File
+    - CommandLine|contains: Set-Content
+    - CommandLine|contains: Add-Content
+id: 1114e048-b69c-4f41-bc20-657245ae6e3f

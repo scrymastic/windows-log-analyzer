@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ContextInfo|contains: SyncAppvPublishingServer.exe
+id: fe5ce7eb-dad8-467c-84a9-31ec23bd644a

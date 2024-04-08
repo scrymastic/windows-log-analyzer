@@ -1,0 +1,19 @@
+author: frack113
+date: 2021/12/27
+description: Look for the encrypted cpassword value within Group Policy Preference
+  files on the Domain Controller. This value can be decrypted with gpp-decrypt.
+falsepositives:
+- Unknown
+filename: proc_creation_win_findstr_gpp_passwords.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/11/11
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1552.006/T1552.006.md#atomic-test-1---gpp-passwords-findstr
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1552.006

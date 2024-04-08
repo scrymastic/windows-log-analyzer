@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \dsacls.exe
+    - OriginalFileName|==: DSACLS.EXE
+  - CommandLine|contains: '/user:'
+  - CommandLine|contains: '/passwd:'
+id: bac9fb54-2da7-44e9-988f-11e9a5edbc0c

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - Provider_Name|==: MSSQLSERVER
+  - EventID|==: 33205
+  - Data|contains: object_name:xp_cmdshell
+  - Data|contains: statement:EXEC
+id: 7f103213-a04e-4d59-8261-213dddf22314

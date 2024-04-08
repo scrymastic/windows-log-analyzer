@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+  - CommandLine|contains: Add-PSSnapin
+  - CommandLine|contains: Get-Recipient
+  - CommandLine|contains: -ExpandProperty
+  - CommandLine|contains: EmailAddresses
+  - CommandLine|contains: SmtpAddress
+  - CommandLine|contains: -hidetableheaders
+id: 312d0384-401c-4b8b-abdf-685ffba9a332

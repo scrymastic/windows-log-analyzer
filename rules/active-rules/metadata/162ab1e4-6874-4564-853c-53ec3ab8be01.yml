@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/01/30
+description: Detects the creation of log files during a TeamViewer remote session
+falsepositives:
+- Legitimate uses of TeamViewer in an organisation
+filename: file_event_win_susp_teamviewer_remote_session.yml
+level: medium
+logsource:
+  category: file_event
+  product: windows
+modified: ''
+references:
+- https://www.teamviewer.com/en-us/
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1219

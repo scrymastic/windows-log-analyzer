@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - EventType|==: DeleteValue
+    - TargetObject|contains: \Microsoft\Terminal Server Client\Default\MRU
+  - or:
+    - EventType|==: DeleteKey
+    - TargetObject|contains: \Microsoft\Terminal Server Client\Servers\
+id: 07bdd2f5-9c58-4f38-aec8-e101bb79ef8d

@@ -1,0 +1,9 @@
+detection:
+- and:
+  - Payload|contains: new-object
+  - Payload|contains: text.encoding]::ascii
+  - or:
+    - Payload|contains: system.io.compression.deflatestream
+    - Payload|contains: system.io.streamreader
+  - Payload|endswith: readtoend
+id: 7034cbbb-cc55-4dc2-8dad-36c0b942e8f1

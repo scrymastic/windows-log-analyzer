@@ -1,0 +1,24 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/12/05
+description: Detects the execution of Scheduled Tasks where the program being run
+  is located in a suspicious location or where it is an unusual program to be run
+  from a Scheduled Task
+falsepositives:
+- False positives may occur with some of the selected binaries if you have tasks using
+  them (which could be very common in your environment). Exclude all the specific
+  trusted tasks before using this rule
+filename: win_taskscheduler_lolbin_execution_via_task_scheduler.yml
+level: medium
+logsource:
+  definition: 'Requirements: The "Microsoft-Windows-TaskScheduler/Operational" is
+    disabled by default and needs to be enabled in order for this detection to trigger'
+  product: windows
+  service: taskscheduler
+modified: 2023/02/07
+references:
+- Internal Research
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.t1053.005

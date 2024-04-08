@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|endswith: \at.exe
+  - CommandLine|contains: interactive
+id: 60fc936d-2eb0-4543-8a13-911c750a1dfc

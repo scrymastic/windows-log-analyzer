@@ -25,6 +25,8 @@ detection:
     - Image|endswith: \odbcconf.exe
     - OriginalFileName|==: odbcconf.exe
   - CommandLine|contains: 'INSTALLDRIVER '
+  - or:
+    - CommandLine|not contains: .dll
 falsepositives:
 - Unlikely
 level: high

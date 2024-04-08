@@ -1,0 +1,5 @@
+detection:
+- and:
+  - CommandLine|contains: 'InfDefaultInstall.exe '
+  - CommandLine|contains: '.inf'
+id: ce7cf472-6fcc-490a-9481-3786840b5d9b

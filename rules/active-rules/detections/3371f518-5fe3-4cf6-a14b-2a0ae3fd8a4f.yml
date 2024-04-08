@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: psservice.exe
+    - or:
+      - Image|endswith: \PsService.exe
+      - Image|endswith: \PsService64.exe
+id: 3371f518-5fe3-4cf6-a14b-2a0ae3fd8a4f

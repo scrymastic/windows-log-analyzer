@@ -34,6 +34,9 @@ detection:
     - CommandLine|contains: \Favourites\
     - CommandLine|contains: :\Users\
     - CommandLine|contains: \Contacts\
+  - or:
+    - ParentImage|!==: C:\Program Files (x86)\Dell\UpdateService\ServiceShell.exe
+    - CommandLine|not contains: C:\ProgramData\Dell\UpdateService\Temp\
 falsepositives:
 - System administrator Usage
 level: medium

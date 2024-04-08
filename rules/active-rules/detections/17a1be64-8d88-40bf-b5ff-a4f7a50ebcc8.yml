@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \sc.exe
+    - CommandLine|contains: create
+    - CommandLine|contains: binPath=
+  - or:
+    - CommandLine|contains: New-Service
+    - CommandLine|contains: -BinaryPathName
+id: 17a1be64-8d88-40bf-b5ff-a4f7a50ebcc8

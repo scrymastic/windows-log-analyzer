@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/06/25
+description: Detects WMIC executions in which an event consumer gets created. This
+  could be used to establish persistence
+falsepositives:
+- Legitimate software creating script event consumers
+filename: proc_creation_win_wmic_eventconsumer_creation.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/14
+references:
+- https://twitter.com/johnlatwc/status/1408062131321270282?s=12
+- https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.t1546.003

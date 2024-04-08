@@ -1,0 +1,5 @@
+detection:
+- and:
+  - TargetObject|endswith: \open\command\DelegateExecute
+  - Details|==: (Empty)
+id: 46dd5308-4572-4d12-aa43-8938f0184d4f

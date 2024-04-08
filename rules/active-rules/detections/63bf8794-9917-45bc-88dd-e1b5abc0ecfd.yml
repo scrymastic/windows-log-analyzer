@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ScriptBlockText|matches: (Copy-Item|cpi) .{2,128} -Destination .{1,32}\\Windows\\(System32|SysWOW64)
+id: 63bf8794-9917-45bc-88dd-e1b5abc0ecfd

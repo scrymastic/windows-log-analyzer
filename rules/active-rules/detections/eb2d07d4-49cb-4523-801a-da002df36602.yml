@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \EDRSilencer.exe
+    - OriginalFileName|==: EDRSilencer.exe
+    - Description|contains: EDRSilencer
+id: eb2d07d4-49cb-4523-801a-da002df36602

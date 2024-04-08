@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\mpnotify
+id: 92772523-d9c1-4c93-9547-b0ca500baba3

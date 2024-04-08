@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ParentImage|endswith: \cmstp.exe
+id: 7d4cdc5a-0076-40ca-aac8-f7e714570e47

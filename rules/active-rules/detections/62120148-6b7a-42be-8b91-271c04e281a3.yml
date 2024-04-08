@@ -1,0 +1,15 @@
+detection:
+- and:
+  - TargetObject|contains: \Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\
+  - TargetObject|contains: \NonPackaged
+  - or:
+    - TargetObject|contains: microphone
+    - TargetObject|contains: webcam
+  - or:
+    - TargetObject|contains: :#Windows#Temp#
+    - TargetObject|contains: :#$Recycle.bin#
+    - TargetObject|contains: :#Temp#
+    - TargetObject|contains: :#Users#Public#
+    - TargetObject|contains: :#Users#Default#
+    - TargetObject|contains: :#Users#Desktop#
+id: 62120148-6b7a-42be-8b91-271c04e281a3

@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: finger.exe
+    - Image|endswith: \finger.exe
+id: af491bca-e752-4b44-9c86-df5680533dbc

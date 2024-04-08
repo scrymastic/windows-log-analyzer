@@ -1,0 +1,19 @@
+author: frack113
+date: 2022/01/16
+description: Detects the deletion of the TeamViewer log files which may indicate an
+  attempt to destroy forensic evidence
+falsepositives:
+- Unknown
+filename: file_delete_win_delete_teamviewer_logs.yml
+level: low
+logsource:
+  category: file_delete
+  product: windows
+modified: 2023/02/15
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1070.004/T1070.004.md
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1070.004

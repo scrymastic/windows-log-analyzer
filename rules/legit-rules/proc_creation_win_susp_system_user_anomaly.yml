@@ -73,6 +73,13 @@ detection:
       - CommandLine|contains: ;iex(
       - CommandLine|contains: MiniDump
       - CommandLine|contains: 'net user '
+  - or:
+    - CommandLine|!==: ping 127.0.0.1 -n 5
+  - or:
+    - Image|not endswith: \PING.EXE
+    - ParentCommandLine|not contains: \DismFoDInstall.cmd
+  - or:
+    - ParentImage|not contains: :\Packages\Plugins\Microsoft.GuestConfiguration.ConfigurationforWindows\
   - ParentImage|not contains: :\Program Files (x86)\Java\
   - ParentImage|not contains: :\Program Files\Java\
 falsepositives:

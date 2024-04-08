@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2024/02/23
+description: Detects potentially suspicious file downloads from file sharing domains
+  using PowerShell.exe
+falsepositives:
+- Unknown
+filename: proc_creation_win_powershell_download_susp_file_sharing_domains.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://labs.withsecure.com/publications/fin7-target-veeam-servers
+- https://github.com/WithSecureLabs/iocs/blob/344203de742bb7e68bd56618f66d34be95a9f9fc/FIN7VEEAM/iocs.csv
+- https://www.microsoft.com/en-us/security/blog/2024/01/17/new-ttps-observed-in-mint-sandstorm-campaign-targeting-high-profile-individuals-at-universities-and-research-orgs/
+- https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708
+related: []
+status: experimental
+tags:
+- attack.execution

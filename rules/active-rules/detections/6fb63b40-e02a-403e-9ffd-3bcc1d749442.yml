@@ -1,0 +1,8 @@
+detection:
+- and:
+  - EventID|==: 4697
+  - ServiceFileName|matches: ^%systemroot%\\[a-zA-Z]{8}\.exe$
+  - ServiceName|matches: (^[a-zA-Z]{4}$)|(^[a-zA-Z]{8}$)|(^[a-zA-Z]{16}$)
+  - ServiceStartType|==: 3
+  - ServiceType|==: '0x10'
+id: 6fb63b40-e02a-403e-9ffd-3bcc1d749442

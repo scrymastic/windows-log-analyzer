@@ -1,0 +1,45 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: -nop
+    - ScriptBlockText|contains: ' -w '
+    - ScriptBlockText|contains: hidden
+    - ScriptBlockText|contains: ' -c '
+    - ScriptBlockText|contains: '[Convert]::FromBase64String'
+  - or:
+    - ScriptBlockText|contains: ' -w '
+    - ScriptBlockText|contains: hidden
+    - ScriptBlockText|contains: -noni
+    - ScriptBlockText|contains: -nop
+    - ScriptBlockText|contains: ' -c '
+    - ScriptBlockText|contains: iex
+    - ScriptBlockText|contains: New-Object
+  - or:
+    - ScriptBlockText|contains: ' -w '
+    - ScriptBlockText|contains: hidden
+    - ScriptBlockText|contains: -ep
+    - ScriptBlockText|contains: bypass
+    - ScriptBlockText|contains: -Enc
+  - or:
+    - ScriptBlockText|contains: powershell
+    - ScriptBlockText|contains: reg
+    - ScriptBlockText|contains: add
+    - ScriptBlockText|contains: HKCU\software\microsoft\windows\currentversion\run
+  - or:
+    - ScriptBlockText|contains: bypass
+    - ScriptBlockText|contains: -noprofile
+    - ScriptBlockText|contains: -windowstyle
+    - ScriptBlockText|contains: hidden
+    - ScriptBlockText|contains: new-object
+    - ScriptBlockText|contains: system.net.webclient
+    - ScriptBlockText|contains: .download
+  - or:
+    - ScriptBlockText|contains: iex
+    - ScriptBlockText|contains: New-Object
+    - ScriptBlockText|contains: Net.WebClient
+    - ScriptBlockText|contains: .Download
+  - or:
+    - ScriptBlockText|contains: (New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1
+    - ScriptBlockText|contains: (New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')
+    - ScriptBlockText|contains: Write-ChocolateyWarning
+id: ae7fbf8e-f3cb-49fd-8db4-5f3bed522c71

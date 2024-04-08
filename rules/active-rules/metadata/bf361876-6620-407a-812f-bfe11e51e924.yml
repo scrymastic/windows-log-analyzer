@@ -1,0 +1,26 @@
+author: AdmU3
+date: 2023/12/19
+description: 'Detects execution of "tar.exe" in order to extract compressed file.
+
+  Adversaries may abuse various utilities in order to decompress data to avoid detection.
+
+  '
+falsepositives:
+- Likely
+filename: proc_creation_win_tar_extraction.yml
+level: low
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://unit42.paloaltonetworks.com/chromeloader-malware/
+- https://lolbas-project.github.io/lolbas/Binaries/Tar/
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/cicada-apt10-japan-espionage
+related: []
+status: experimental
+tags:
+- attack.collection
+- attack.exfiltration
+- attack.t1560
+- attack.t1560.001

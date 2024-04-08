@@ -38,4 +38,6 @@ detection:
   - or:
     - CommandLine|contains: '.exe -ENCOD '
     - CommandLine|contains: ' BA^J e-'
+  - or:
+    - CommandLine|not contains: ' -ExecutionPolicy remotesigned '
 level: high

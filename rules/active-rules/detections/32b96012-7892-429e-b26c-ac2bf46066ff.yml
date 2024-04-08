@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \rundll32.exe
+    - OriginalFileName|==: RUNDLL32.EXE
+  - CommandLine|contains: shell32.dll
+  - CommandLine|contains: Control_RunDLL
+  - or:
+    - CommandLine|contains: '%AppData%'
+    - CommandLine|contains: '%LocalAppData%'
+    - CommandLine|contains: '%Temp%'
+    - CommandLine|contains: '%tmp%'
+    - CommandLine|contains: \AppData\
+    - CommandLine|contains: \Temp\
+    - CommandLine|contains: \Users\Public\
+id: 32b96012-7892-429e-b26c-ac2bf46066ff

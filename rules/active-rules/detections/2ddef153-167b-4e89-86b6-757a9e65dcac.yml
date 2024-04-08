@@ -1,0 +1,21 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \bitsadmin.exe
+    - OriginalFileName|==: bitsadmin.exe
+  - or:
+    - CommandLine|contains: ' /transfer '
+    - CommandLine|contains: ' /create '
+    - CommandLine|contains: ' /addfile '
+  - or:
+    - CommandLine|contains: :\Perflogs
+    - CommandLine|contains: :\ProgramData\
+    - CommandLine|contains: :\Temp\
+    - CommandLine|contains: :\Users\Public\
+    - CommandLine|contains: :\Windows\
+    - CommandLine|contains: \AppData\Local\Temp\
+    - CommandLine|contains: \AppData\Roaming\
+    - CommandLine|contains: \Desktop\
+    - CommandLine|contains: '%ProgramData%'
+    - CommandLine|contains: '%public%'
+id: 2ddef153-167b-4e89-86b6-757a9e65dcac

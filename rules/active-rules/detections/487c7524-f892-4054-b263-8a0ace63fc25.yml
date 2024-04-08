@@ -1,0 +1,11 @@
+detection:
+- and:
+  - Provider_Name|==: Service Control Manager
+  - EventID|==: 7045
+  - ImagePath|contains: set
+  - ImagePath|contains: '&&'
+  - or:
+    - ImagePath|contains: environment
+    - ImagePath|contains: invoke
+    - ImagePath|contains: input
+id: 487c7524-f892-4054-b263-8a0ace63fc25

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Payload|contains: 'Import-Module '
+    - Payload|contains: 'ipmo '
+  - Payload|contains: Microsoft.ActiveDirectory.Management.dll
+id: 74176142-4684-4d8a-8b0a-713257e7df8e

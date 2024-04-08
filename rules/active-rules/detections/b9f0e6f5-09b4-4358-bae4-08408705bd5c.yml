@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+    - or:
+      - OriginalFileName|==: net.exe
+      - OriginalFileName|==: net1.exe
+  - CommandLine|contains: user
+  - CommandLine|contains: add
+  - CommandLine|contains: expires:never
+id: b9f0e6f5-09b4-4358-bae4-08408705bd5c

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - CommandLine|endswith: \rundll32.exe
+    - CommandLine|endswith: \rundll32.exe"
+    - CommandLine|endswith: \rundll32
+id: 1775e15e-b61b-4d14-a1a3-80981298085a

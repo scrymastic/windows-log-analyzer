@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: Get-WmiObject
+    - ScriptBlockText|contains: gwmi
+    - ScriptBlockText|contains: Get-CimInstance
+    - ScriptBlockText|contains: gcim
+  - ScriptBlockText|contains: Win32_Shadowcopy
+  - or:
+    - ScriptBlockText|contains: .Delete()
+    - ScriptBlockText|contains: Remove-WmiObject
+    - ScriptBlockText|contains: rwmi
+    - ScriptBlockText|contains: Remove-CimInstance
+    - ScriptBlockText|contains: rcim
+id: c1337eb8-921a-4b59-855b-4ba188ddcc42

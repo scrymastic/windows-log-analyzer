@@ -1,0 +1,20 @@
+author: X__Junior (Nextron Systems)
+date: 2023/11/26
+description: 'Detects execution of the "wusa.exe" (Windows Update Standalone Installer)
+  utility by a parent process that is located in a suspicious location.
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_wusa_susp_parent_execution.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.fortinet.com/blog/threat-research/konni-campaign-distributed-via-malicious-document
+related: []
+status: experimental
+tags:
+- attack.execution

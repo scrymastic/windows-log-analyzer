@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \whoami.exe
+    - OriginalFileName|==: whoami.exe
+  - CommandLine|None: ' -all'
+id: c248c896-e412-4279-8c15-1c558067b6fa

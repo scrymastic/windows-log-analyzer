@@ -1,0 +1,19 @@
+author: Stamatis Chatzimangou
+date: 2022/10/23
+description: Detects installation of a remote msi file from web.
+falsepositives:
+- Unknown
+filename: win_msi_install_from_web.yml
+level: medium
+logsource:
+  product: windows
+  service: application
+modified: 2022/10/23
+references:
+- https://twitter.com/_st0pp3r_/status/1583922009842802689
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218
+- attack.t1218.007

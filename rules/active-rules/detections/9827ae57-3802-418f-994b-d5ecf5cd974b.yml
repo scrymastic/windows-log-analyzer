@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|endswith: \Microsoft\.NETFramework\DbgManagedDebugger
+id: 9827ae57-3802-418f-994b-d5ecf5cd974b

@@ -30,6 +30,8 @@ detection:
   - or:
     - Image|endswith: \sqlps.exe
     - OriginalFileName|==: sqlps.exe
+  - or:
+    - ParentImage|not endswith: \sqlagent.exe
 falsepositives:
 - Direct PS command execution through SQLPS.exe is uncommon, childprocess sqlps.exe
   spawned by sqlagent.exe is a legitimate action.

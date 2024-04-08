@@ -1,0 +1,12 @@
+detection:
+- and:
+  - TargetFilename|endswith: \desktop.ini
+  - Image|not startswith: C:\Windows\
+  - Image|not startswith: C:\Program Files\
+  - Image|not startswith: C:\Program Files (x86)\
+  - or:
+    - Image|not endswith: \AppData\Local\JetBrains\Toolbox\bin\7z.exe
+    - TargetFilename|not contains: \JetBrains\apps\
+  - or:
+    - TargetFilename|not startswith: C:\$WINDOWS.~BT\NewOS\
+id: 81315b50-6b60-4d8f-9928-3466e1022515

@@ -1,0 +1,5 @@
+detection:
+- and:
+  - TargetObject|endswith: System\CurrentControlSet\Control\Terminal Server\fAllowToGetHelp
+  - Details|==: DWORD (0x00000001)
+id: 37b437cf-3fc5-4c8e-9c94-1d7c9aff842b

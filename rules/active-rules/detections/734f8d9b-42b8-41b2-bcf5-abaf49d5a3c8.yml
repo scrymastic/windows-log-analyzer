@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \wsmprovhost.exe
+    - ParentImage|endswith: \wsmprovhost.exe
+id: 734f8d9b-42b8-41b2-bcf5-abaf49d5a3c8

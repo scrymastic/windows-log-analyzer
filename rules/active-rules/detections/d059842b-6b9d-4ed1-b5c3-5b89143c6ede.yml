@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \bitsadmin.exe
+    - OriginalFileName|==: bitsadmin.exe
+  - CommandLine|contains: ' /transfer '
+  - or:
+    - CommandLine|contains: ' /create '
+    - CommandLine|contains: ' /addfile '
+  - CommandLine|contains: http
+id: d059842b-6b9d-4ed1-b5c3-5b89143c6ede

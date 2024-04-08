@@ -39,6 +39,8 @@ detection:
     - OriginalFileName|==: diskshadow.exe
     - Image|endswith: \diskshadow.exe
   - CommandLine|None: '-s '
+  - or:
+    - CommandLine|not contains: .txt
 falsepositives:
 - False postitve might occur with legitimate or uncommon extensions used internally.
   Initial baseline is required.

@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: HH.exe
+    - Image|endswith: \hh.exe
+  - or:
+    - CommandLine|contains: .application
+    - CommandLine|contains: \AppData\Local\Temp\
+    - CommandLine|contains: \Content.Outlook\
+    - CommandLine|contains: \Downloads\
+    - CommandLine|contains: \Users\Public\
+    - CommandLine|contains: \Windows\Temp\
+id: e8a95b5e-c891-46e2-b33a-93937d3abc31

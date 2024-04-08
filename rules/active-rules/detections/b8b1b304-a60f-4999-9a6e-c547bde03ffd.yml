@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Image|endswith: \DeviceCredentialDeployment.exe
+id: b8b1b304-a60f-4999-9a6e-c547bde03ffd

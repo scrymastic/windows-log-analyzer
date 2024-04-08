@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \certutil.exe
+    - OriginalFileName|==: CertUtil.exe
+  - CommandLine|None: '-exportPFX '
+id: 3ffd6f51-e6c1-47b7-94b4-c1e61d4117c5

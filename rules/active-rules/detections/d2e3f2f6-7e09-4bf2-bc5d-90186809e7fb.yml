@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: Invoke-WebRequest
+    - ScriptBlockText|contains: 'iwr '
+  - or:
+    - ScriptBlockText|contains: -Method Put
+    - ScriptBlockText|contains: -Method Post
+id: d2e3f2f6-7e09-4bf2-bc5d-90186809e7fb

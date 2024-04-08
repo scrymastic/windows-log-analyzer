@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+  - or:
+    - CommandLine|contains: '-executionpolicy '
+    - CommandLine|contains: ' -ep '
+    - CommandLine|contains: ' -exec '
+  - or:
+    - CommandLine|contains: Bypass
+    - CommandLine|contains: Unrestricted
+id: 87e3c4e8-a6a8-4ad9-bb4f-46e7ff99a180

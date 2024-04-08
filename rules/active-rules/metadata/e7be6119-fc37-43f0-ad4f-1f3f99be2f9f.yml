@@ -1,0 +1,25 @@
+author: Teymur Kheirkhabarov, Daniil Yugoslavskiy, oscd.community
+date: 2019/10/22
+description: Files with well-known filenames (sensitive files with credential data)
+  copying
+falsepositives:
+- Copying sensitive files for legitimate use (eg. backup) or forensic investigation
+  by legitimate incident responder or forensic invetigator
+filename: proc_creation_win_esentutl_sensitive_file_copy.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/11/11
+references:
+- https://room362.com/post/2013/2013-06-10-volume-shadow-copy-ntdsdit-domain-hashes-remotely-part-1/
+- https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment
+- https://dfironthemountain.wordpress.com/2018/12/06/locked-file-access-using-esentutl-exe/
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.002
+- attack.t1003.003
+- car.2013-07-001
+- attack.s0404

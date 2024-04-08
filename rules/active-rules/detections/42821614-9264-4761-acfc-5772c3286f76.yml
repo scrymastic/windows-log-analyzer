@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: Move-Item
+    - ScriptBlockText|contains: Cert:\LocalMachine\Root
+  - or:
+    - ScriptBlockText|contains: Import-Certificate
+    - ScriptBlockText|contains: Cert:\LocalMachine\Root
+id: 42821614-9264-4761-acfc-5772c3286f76

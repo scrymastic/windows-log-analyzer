@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/08/18
+description: Detects the use of HandleKatz, a tool that demonstrates the usage of
+  cloned handles to Lsass in order to create an obfuscated memory dump of the same
+falsepositives:
+- Unknown
+filename: proc_creation_win_hktl_handlekatz.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/04
+references:
+- https://github.com/codewhitesec/HandleKatz
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.001

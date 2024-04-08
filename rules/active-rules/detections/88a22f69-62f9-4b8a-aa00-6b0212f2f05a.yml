@@ -1,0 +1,12 @@
+detection:
+- and:
+  - Payload|contains: '&&'
+  - Payload|contains: rundll32
+  - Payload|contains: shell32.dll
+  - Payload|contains: shellexec_rundll
+  - or:
+    - Payload|contains: value
+    - Payload|contains: invoke
+    - Payload|contains: comspec
+    - Payload|contains: iex
+id: 88a22f69-62f9-4b8a-aa00-6b0212f2f05a

@@ -1,0 +1,19 @@
+author: Tim Rauch, Elastic (idea)
+date: 2022/09/27
+description: Detects attempts to bypass User Account Control (UAC) by hijacking the
+  Microsoft Management Console (MMC) Windows Firewall snap-in
+falsepositives:
+- Unknown
+filename: proc_creation_win_uac_bypass_hijacking_firwall_snap_in.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.elastic.co/guide/en/security/current/uac-bypass-via-windows-firewall-snap-in-hijack.html#uac-bypass-via-windows-firewall-snap-in-hijack
+related: []
+status: test
+tags:
+- attack.privilege_escalation
+- attack.t1548

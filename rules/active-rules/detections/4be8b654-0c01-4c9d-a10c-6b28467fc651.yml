@@ -1,0 +1,35 @@
+detection:
+- and:
+  - TargetImage|endswith: \lsass.exe
+  - or:
+    - SourceImage|endswith: \TrolleyExpress.exe
+    - SourceImage|endswith: \ProcessDump.exe
+    - SourceImage|endswith: \dump64.exe
+  - or:
+    - GrantedAccess|endswith: '10'
+    - GrantedAccess|endswith: '30'
+    - GrantedAccess|endswith: '50'
+    - GrantedAccess|endswith: '70'
+    - GrantedAccess|endswith: '90'
+    - GrantedAccess|endswith: B0
+    - GrantedAccess|endswith: D0
+    - GrantedAccess|endswith: F0
+    - GrantedAccess|endswith: '18'
+    - GrantedAccess|endswith: '38'
+    - GrantedAccess|endswith: '58'
+    - GrantedAccess|endswith: '78'
+    - GrantedAccess|endswith: '98'
+    - GrantedAccess|endswith: B8
+    - GrantedAccess|endswith: D8
+    - GrantedAccess|endswith: F8
+    - GrantedAccess|endswith: 1A
+    - GrantedAccess|endswith: 3A
+    - GrantedAccess|endswith: 5A
+    - GrantedAccess|endswith: 7A
+    - GrantedAccess|endswith: 9A
+    - GrantedAccess|endswith: BA
+    - GrantedAccess|endswith: DA
+    - GrantedAccess|endswith: FA
+    - GrantedAccess|endswith: '0x14C2'
+    - GrantedAccess|endswith: FF
+id: 4be8b654-0c01-4c9d-a10c-6b28467fc651

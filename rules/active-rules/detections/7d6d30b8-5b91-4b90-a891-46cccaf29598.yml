@@ -1,0 +1,9 @@
+detection:
+- and:
+  - ParentImage|==: C:\Windows\System32\OpenSSH\sshd.exe
+  - Image|endswith: \ssh.exe
+  - or:
+    - CommandLine|contains: ProxyCommand=
+    - CommandLine|contains: PermitLocalCommand
+    - CommandLine|contains: LocalCommand
+id: 7d6d30b8-5b91-4b90-a891-46cccaf29598

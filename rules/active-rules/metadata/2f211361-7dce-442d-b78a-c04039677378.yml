@@ -1,0 +1,25 @@
+author: Daniel Bohannon (@Mandiant/@FireEye), oscd.community
+date: 2019/11/08
+description: Detects all variations of obfuscated powershell IEX invocation code generated
+  by Invoke-Obfuscation framework from the code block cited in the reference section
+  below
+falsepositives:
+- Unknown
+filename: posh_pm_invoke_obfuscation_obfuscated_iex.yml
+level: high
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows
+modified: 2022/12/31
+references:
+- https://github.com/danielbohannon/Invoke-Obfuscation/blob/f20e7f843edd0a3a7716736e9eddfa423395dd26/Out-ObfuscatedStringCommand.ps1#L873-L888
+related:
+- id: 1b9dc62e-6e9e-42a3-8990-94d7a10007f7
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

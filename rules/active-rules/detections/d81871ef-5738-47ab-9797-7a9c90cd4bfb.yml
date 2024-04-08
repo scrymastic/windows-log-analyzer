@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \php.exe
+    - OriginalFileName|==: php.exe
+  - CommandLine|contains: ' -r'
+id: d81871ef-5738-47ab-9797-7a9c90cd4bfb

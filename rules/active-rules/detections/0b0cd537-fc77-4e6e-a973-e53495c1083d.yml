@@ -1,0 +1,31 @@
+detection:
+- and:
+  - or:
+    - or:
+      - OriginalFileName|==: Excel.exe
+      - OriginalFileName|==: MSACCESS.EXE
+      - OriginalFileName|==: MSPUB.EXE
+      - OriginalFileName|==: OneNote.exe
+      - OriginalFileName|==: OneNoteM.exe
+      - OriginalFileName|==: OUTLOOK.EXE
+      - OriginalFileName|==: POWERPNT.EXE
+      - OriginalFileName|==: WinWord.exe
+    - or:
+      - Description|==: Microsoft Access
+      - Description|==: Microsoft Excel
+      - Description|==: Microsoft OneNote
+      - Description|==: Microsoft Outlook
+      - Description|==: Microsoft PowerPoint
+      - Description|==: Microsoft Publisher
+      - Description|==: Microsoft Word
+      - Description|==: Sent to OneNote Tool
+  - Image|not endswith: \EXCEL.exe
+  - Image|not endswith: \excelcnv.exe
+  - Image|not endswith: \MSACCESS.exe
+  - Image|not endswith: \MSPUB.EXE
+  - Image|not endswith: \ONENOTE.EXE
+  - Image|not endswith: \ONENOTEM.EXE
+  - Image|not endswith: \OUTLOOK.EXE
+  - Image|not endswith: \POWERPNT.EXE
+  - Image|not endswith: \WINWORD.exe
+id: 0b0cd537-fc77-4e6e-a973-e53495c1083d

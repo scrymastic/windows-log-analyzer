@@ -1,0 +1,9 @@
+detection:
+- and:
+  - EventID|==: 4732
+  - or:
+    - TargetUserName|startswith: Administr
+    - TargetSid|==: S-1-5-32-544
+  - or:
+    - SubjectUserName|not endswith: $
+id: c265cf08-3f99-46c1-8d59-328247057d57

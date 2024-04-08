@@ -1,0 +1,19 @@
+author: Max Altgelt (Nextron Systems)
+date: 2021/09/21
+description: Detects usage of a PowerShell command to dump the live memory of a Windows
+  machine
+falsepositives:
+- Diagnostics
+filename: posh_ps_memorydump_getstoragediagnosticinfo.yml
+level: high
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2022/12/25
+references:
+- https://docs.microsoft.com/en-us/powershell/module/storage/get-storagediagnosticinfo
+related: []
+status: test
+tags:
+- attack.t1003

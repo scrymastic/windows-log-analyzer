@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: X509Enrollment.CBinaryConverter
+    - ScriptBlockText|contains: 884e2002-217d-11da-b2a4-000e7bbb2b09
+id: 504d63cb-0dba-4d02-8531-e72981aace2c

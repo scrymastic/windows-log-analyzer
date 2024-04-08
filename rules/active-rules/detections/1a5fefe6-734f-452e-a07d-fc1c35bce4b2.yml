@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \netsh.exe
+    - OriginalFileName|==: netsh.exe
+  - CommandLine|contains: firewall
+  - CommandLine|contains: 'delete '
+  - or:
+    - ParentImage|not endswith: \Dropbox.exe
+    - CommandLine|not contains: name=Dropbox
+id: 1a5fefe6-734f-452e-a07d-fc1c35bce4b2

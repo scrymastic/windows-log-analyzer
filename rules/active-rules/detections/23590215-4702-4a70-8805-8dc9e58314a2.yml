@@ -1,0 +1,6 @@
+detection:
+- and:
+  - ScriptBlockText|contains: $env:COR_ENABLE_PROFILING
+  - ScriptBlockText|contains: $env:COR_PROFILER
+  - ScriptBlockText|contains: $env:COR_PROFILER_PATH
+id: 23590215-4702-4a70-8805-8dc9e58314a2

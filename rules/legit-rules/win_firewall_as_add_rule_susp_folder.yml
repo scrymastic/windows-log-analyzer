@@ -1,0 +1,38 @@
+title: New Firewall Rule Added In Windows Firewall Exception List For Potential Suspicious
+  Application
+id: 9e2575e7-2cb9-4da1-adc8-ed94221dca5e
+related:
+- id: cde0a575-7d3d-4a49-9817-b8004a7bf105
+  type: derived
+status: experimental
+description: Detects the addition of a new rule to the Windows Firewall exception
+  list for an application located in a potentially suspicious location.
+references:
+- https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd364427(v=ws.10)
+- https://app.any.run/tasks/7123e948-c91e-49e0-a813-00e8d72ab393/#
+author: frack113
+date: 2023/02/26
+modified: 2024/01/22
+tags:
+- attack.defense_evasion
+- attack.t1562.004
+logsource:
+  product: windows
+  service: firewall-as
+detection:
+- and:
+  - or:
+    - EventID|==: 2004
+    - EventID|==: 2071
+  - or:
+    - ApplicationPath|contains: :\PerfLogs\
+    - ApplicationPath|contains: :\Temp\
+    - ApplicationPath|contains: :\Users\Public\
+    - ApplicationPath|contains: :\Windows\Tasks\
+    - ApplicationPath|contains: :\Windows\Temp\
+    - ApplicationPath|contains: \AppData\Local\Temp\
+  - or:
+    - Action|!==: 2
+falsepositives:
+- Unknown
+level: high

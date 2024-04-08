@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cdb.exe
+    - OriginalFileName|==: CDB.Exe
+  - or:
+    - CommandLine|contains: ' -c '
+    - CommandLine|contains: ' -cf '
+id: b5c7395f-e501-4a08-94d4-57fe7a9da9d2

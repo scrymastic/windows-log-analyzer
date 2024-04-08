@@ -1,0 +1,4 @@
+detection:
+- and:
+  - OriginalFileName|==: psexesvc.exe
+id: 51ae86a2-e2e1-4097-ad85-c46cb6851de4

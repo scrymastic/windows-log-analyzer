@@ -1,0 +1,11 @@
+detection:
+- and:
+  - ScriptBlockText|contains: \SOFTWARE\Policies\Microsoft\Windows\System
+  - or:
+    - ScriptBlockText|contains: GroupPolicyRefreshTimeDC
+    - ScriptBlockText|contains: GroupPolicyRefreshTimeOffsetDC
+    - ScriptBlockText|contains: GroupPolicyRefreshTime
+    - ScriptBlockText|contains: GroupPolicyRefreshTimeOffset
+    - ScriptBlockText|contains: EnableSmartScreen
+    - ScriptBlockText|contains: ShellSmartScreenLevel
+id: b7216a7d-687e-4c8d-82b1-3080b2ad961f

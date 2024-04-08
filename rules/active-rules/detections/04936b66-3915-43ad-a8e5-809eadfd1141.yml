@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: findstr
+    - Image|endswith: findstr.exe
+    - OriginalFileName|==: FINDSTR.EXE
+  - CommandLine|None: ' -s '
+  - CommandLine|None: ' -i '
+id: 04936b66-3915-43ad-a8e5-809eadfd1141

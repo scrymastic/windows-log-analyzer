@@ -1,0 +1,53 @@
+title: Cred Dump Tools Dropped Files
+id: 8fbf3271-1ef6-4e94-8210-03c2317947f6
+status: test
+description: Files with well-known filenames (parts of credential dump software or
+  files produced by them) creation
+references:
+- https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment
+author: Teymur Kheirkhabarov, oscd.community
+date: 2019/11/01
+modified: 2022/09/21
+tags:
+- attack.credential_access
+- attack.t1003.001
+- attack.t1003.002
+- attack.t1003.003
+- attack.t1003.004
+- attack.t1003.005
+logsource:
+  category: file_event
+  product: windows
+detection:
+- and:
+  - or:
+    - or:
+      - TargetFilename|contains: \fgdump-log
+      - TargetFilename|contains: \kirbi
+      - TargetFilename|contains: \pwdump
+      - TargetFilename|contains: \pwhashes
+      - TargetFilename|contains: \wce_ccache
+      - TargetFilename|contains: \wce_krbtkts
+    - or:
+      - TargetFilename|endswith: \cachedump.exe
+      - TargetFilename|endswith: \cachedump64.exe
+      - TargetFilename|endswith: \DumpExt.dll
+      - TargetFilename|endswith: \DumpSvc.exe
+      - TargetFilename|endswith: \Dumpy.exe
+      - TargetFilename|endswith: \fgexec.exe
+      - TargetFilename|endswith: \lsremora.dll
+      - TargetFilename|endswith: \lsremora64.dll
+      - TargetFilename|endswith: \NTDS.out
+      - TargetFilename|endswith: \procdump64.exe
+      - TargetFilename|endswith: \pstgdump.exe
+      - TargetFilename|endswith: \pwdump.exe
+      - TargetFilename|endswith: \SAM.out
+      - TargetFilename|endswith: \SECURITY.out
+      - TargetFilename|endswith: \servpw.exe
+      - TargetFilename|endswith: \servpw64.exe
+      - TargetFilename|endswith: \SYSTEM.out
+      - TargetFilename|endswith: \test.pwd
+      - TargetFilename|endswith: \wceaux.dll
+falsepositives:
+- Legitimate Administrator using tool for password recovery
+level: high

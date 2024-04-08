@@ -1,0 +1,22 @@
+author: frack113
+date: 2022/04/08
+description: Detect usage of the "sqlite" binary to query databases in Firefox and
+  other Gecko-based browsers for potential data stealing.
+falsepositives:
+- Unknown
+filename: proc_creation_win_sqlite_firefox_gecko_profile_data.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/01/19
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1539/T1539.md#atomic-test-1---steal-firefox-cookies-windows
+- https://blog.cyble.com/2022/04/21/prynt-stealer-a-new-info-stealer-performing-clipper-and-keylogger-activities/
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1539
+- attack.collection
+- attack.t1005

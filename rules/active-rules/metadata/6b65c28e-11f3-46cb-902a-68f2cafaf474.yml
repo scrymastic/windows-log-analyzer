@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/22
+description: Detects execution of "odbcconf" where the path of the DLL being registered
+  is located in a potentially suspicious location.
+falsepositives:
+- Unlikely
+filename: proc_creation_win_odbcconf_exec_susp_locations.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/05/26
+references:
+- https://learn.microsoft.com/en-us/sql/odbc/odbcconf-exe?view=sql-server-ver16
+- https://www.trendmicro.com/en_us/research/17/h/backdoor-carrying-emails-set-sights-on-russian-speaking-businesses.html
+- https://securityintelligence.com/posts/raspberry-robin-worm-dridex-malware/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218.008

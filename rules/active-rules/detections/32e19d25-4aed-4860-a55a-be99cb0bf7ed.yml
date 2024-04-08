@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 4742
+    - ServicePrincipalNames|contains: GC/
+  - or:
+    - EventID|==: 5136
+    - AttributeLDAPDisplayName|==: servicePrincipalName
+    - AttributeValue|startswith: GC/
+id: 32e19d25-4aed-4860-a55a-be99cb0bf7ed

@@ -1,0 +1,19 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \wsl.exe
+    - OriginalFileName|==: wsl.exe
+  - or:
+    - CommandLine|contains: ' -e '
+    - CommandLine|contains: ' --exec'
+    - CommandLine|contains: ' --system'
+    - CommandLine|contains: ' --shell-type '
+    - CommandLine|contains: ' /mnt/c'
+    - CommandLine|contains: ' --user root'
+    - CommandLine|contains: ' -u root'
+    - CommandLine|contains: --debug-shell
+  - or:
+    - ParentImage|not endswith: \cmd.exe
+    - CommandLine|not contains: ' -d '
+    - CommandLine|not contains: ' -e kill '
+id: dec44ca7-61ad-493c-bfd7-8819c5faa09b

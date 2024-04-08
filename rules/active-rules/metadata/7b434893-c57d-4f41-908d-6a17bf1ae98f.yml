@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems), Tim Shelton
+date: 2017/03/19
+description: Detects programs with network connections running in suspicious files
+  system locations
+falsepositives:
+- Unknown
+filename: net_connection_win_susp_prog_location_network_connection.yml
+level: high
+logsource:
+  category: network_connection
+  definition: Use the following config to generate the necessary Event ID 3 Network
+    Connection events
+  product: windows
+modified: 2023/12/11
+references:
+- https://docs.google.com/spreadsheets/d/17pSTDNpa0sf6pHeRhusvWG6rThciE8CsXTSlDUAZDyo
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1105

@@ -1,0 +1,20 @@
+author: '@SerkinValery, Nasreddine Bencherchali (Nextron Systems)'
+date: 2023/06/12
+description: Detects changes to the ClickOnce trust prompt registry key in order to
+  enable an installation from different locations such as the Internet.
+falsepositives:
+- Legitimate internal requirements.
+filename: registry_set_clickonce_trust_prompt.yml
+level: medium
+logsource:
+  category: registry_set
+  product: windows
+modified: 2023/08/17
+references:
+- https://posts.specterops.io/less-smartscreen-more-caffeine-ab-using-clickonce-for-trusted-code-execution-1446ea8051c5
+- https://learn.microsoft.com/en-us/visualstudio/deployment/how-to-configure-the-clickonce-trust-prompt-behavior
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1112

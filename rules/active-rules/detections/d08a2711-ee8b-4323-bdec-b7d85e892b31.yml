@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \csexec.exe
+  - or:
+    - Description|==: csexec
+id: d08a2711-ee8b-4323-bdec-b7d85e892b31

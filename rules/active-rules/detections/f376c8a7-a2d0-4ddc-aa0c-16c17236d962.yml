@@ -1,0 +1,28 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Product|contains: SharpHound
+      - Description|contains: SharpHound
+      - or:
+        - Company|contains: SpecterOps
+        - Company|contains: evil corp
+      - or:
+        - Image|contains: \Bloodhound.exe
+        - Image|contains: \SharpHound.exe
+  - or:
+    - or:
+      - CommandLine|contains: ' -CollectionMethod All '
+      - CommandLine|contains: ' --CollectionMethods Session '
+      - CommandLine|contains: ' --Loop --Loopduration '
+      - CommandLine|contains: ' --PortScanTimeout '
+      - CommandLine|contains: '.exe -c All -d '
+      - CommandLine|contains: Invoke-Bloodhound
+      - CommandLine|contains: Get-BloodHoundData
+  - or:
+    - CommandLine|contains: ' -JsonFolder '
+    - CommandLine|contains: ' -ZipFileName '
+  - or:
+    - CommandLine|contains: ' DCOnly '
+    - CommandLine|contains: ' --NoSaveCache '
+id: f376c8a7-a2d0-4ddc-aa0c-16c17236d962

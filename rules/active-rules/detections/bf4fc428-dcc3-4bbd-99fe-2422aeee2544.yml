@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - TargetObject|endswith: SOFTWARE\Microsoft\.NETFramework\ETWEnabled
+    - Details|==: DWORD (0x00000000)
+  - or:
+    - or:
+      - TargetObject|endswith: \COMPlus_ETWEnabled
+      - TargetObject|endswith: \COMPlus_ETWFlags
+    - or:
+      - Details|==: 0
+      - Details|==: DWORD (0x00000000)
+id: bf4fc428-dcc3-4bbd-99fe-2422aeee2544

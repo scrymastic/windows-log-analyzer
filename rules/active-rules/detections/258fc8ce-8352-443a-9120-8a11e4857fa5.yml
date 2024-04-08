@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \msdt.exe
+    - OriginalFileName|==: msdt.exe
+  - CommandLine|contains: IT_BrowseForFile=
+  - CommandLine|contains: ' PCWDiagnostic'
+  - CommandLine|None: ' -af '
+id: 258fc8ce-8352-443a-9120-8a11e4857fa5

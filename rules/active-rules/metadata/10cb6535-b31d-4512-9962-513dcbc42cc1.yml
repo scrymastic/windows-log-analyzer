@@ -1,0 +1,22 @@
+author: Florian Roth (Nextron Systems)
+date: 2023/05/08
+description: Detects driver load of the System Informer tool
+falsepositives:
+- System Informer is regularly used legitimately by system administrators or developers.
+  Apply additional filters accordingly
+filename: driver_load_win_pua_system_informer.yml
+level: medium
+logsource:
+  category: driver_load
+  product: windows
+modified: ''
+references:
+- https://systeminformer.sourceforge.io/
+- https://github.com/winsiderss/systeminformer
+related:
+- id: 67add051-9ee7-4ad3-93ba-42935615ae8d
+  type: similar
+status: test
+tags:
+- attack.privilege_escalation
+- attack.t1543

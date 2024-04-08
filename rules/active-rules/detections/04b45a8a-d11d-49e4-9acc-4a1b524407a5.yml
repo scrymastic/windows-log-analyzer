@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - TargetObject|endswith: \SOFTWARE\Policies\Microsoft\Edge\BuiltInDnsClientEnabled
+    - Details|==: DWORD (0x00000001)
+  - or:
+    - TargetObject|endswith: \SOFTWARE\Google\Chrome\DnsOverHttpsMode
+    - Details|==: secure
+  - or:
+    - TargetObject|endswith: \SOFTWARE\Policies\Mozilla\Firefox\DNSOverHTTPS\Enabled
+    - Details|==: DWORD (0x00000001)
+id: 04b45a8a-d11d-49e4-9acc-4a1b524407a5

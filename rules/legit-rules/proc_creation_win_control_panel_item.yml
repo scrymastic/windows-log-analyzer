@@ -27,6 +27,10 @@ detection:
   - CommandLine|not contains: \System32\
   - CommandLine|not contains: '%System%'
   - CommandLine|not contains: '|C:\Windows\system32|'
+  - or:
+    - CommandLine|not contains: 'regsvr32 '
+    - CommandLine|not contains: ' /s '
+    - CommandLine|not contains: igfxCPL.cpl
 falsepositives:
 - Unknown
 level: high

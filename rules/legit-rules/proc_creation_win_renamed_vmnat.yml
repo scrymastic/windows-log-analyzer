@@ -17,6 +17,8 @@ logsource:
 detection:
 - and:
   - OriginalFileName|==: vmnat.exe
+  - or:
+    - Image|not endswith: vmnat.exe
 falsepositives:
 - Unknown
 level: high

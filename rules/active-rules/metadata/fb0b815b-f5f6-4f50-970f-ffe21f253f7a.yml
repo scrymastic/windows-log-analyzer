@@ -1,0 +1,19 @@
+author: frack113
+date: 2021/11/26
+description: Extexport.exe loads dll and is execute from other folder the original
+  path
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_extexport.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/05/16
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Extexport/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

@@ -1,0 +1,34 @@
+title: Potential Persistence Via PowerShell User Profile Using Add-Content
+id: 05b3e303-faf0-4f4a-9b30-46cc13e69152
+status: test
+description: Detects calls to "Add-Content" cmdlet in order to modify the content
+  of the user profile and potentially adding suspicious commands for persistence
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.013/T1546.013.md
+author: frack113, Nasreddine Bencherchali (Nextron Systems)
+date: 2021/08/18
+modified: 2023/05/04
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1546.013
+logsource:
+  product: windows
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+detection:
+- and:
+  - ScriptBlockText|contains: Add-Content $profile
+  - or:
+    - ScriptBlockText|contains: '-Value "IEX '
+    - ScriptBlockText|contains: -Value "Invoke-Expression
+    - ScriptBlockText|contains: -Value "Invoke-WebRequest
+    - ScriptBlockText|contains: -Value "Start-Process
+    - ScriptBlockText|contains: '-Value ''IEX '
+    - ScriptBlockText|contains: -Value 'Invoke-Expression
+    - ScriptBlockText|contains: -Value 'Invoke-WebRequest
+    - ScriptBlockText|contains: -Value 'Start-Process
+falsepositives:
+- Legitimate administration and tuning scripts that aim to add functionality to a
+  user PowerShell session
+level: medium

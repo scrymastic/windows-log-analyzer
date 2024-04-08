@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - or:
+      - QueryName|startswith: aaa.stage.
+      - QueryName|startswith: post.1
+  - or:
+    - QueryName|contains: .stage.123456.
+id: f356a9c4-effd-4608-bbf8-408afd5cd006

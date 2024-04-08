@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+  - TargetFilename|endswith: .ps1
+  - or:
+    - TargetFilename|not contains: __PSScriptPolicyTest_
+  - or:
+    - TargetFilename|not startswith: C:\Users\
+    - TargetFilename|not contains: \AppData\Local\Temp\
+  - or:
+    - TargetFilename|not startswith: C:\Windows\Temp\
+id: 576426ad-0131-4001-ae01-be175da0c108

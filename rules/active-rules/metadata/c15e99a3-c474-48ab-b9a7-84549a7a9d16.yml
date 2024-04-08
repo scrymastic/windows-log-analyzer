@@ -1,0 +1,18 @@
+author: frack113
+date: 2022/05/16
+description: Detects a remote thread creation of Ttdinject.exe used as proxy
+falsepositives:
+- Unknown
+filename: create_remote_thread_win_ttdinjec.yml
+level: high
+logsource:
+  category: create_remote_thread
+  product: windows
+modified: 2022/06/02
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Ttdinject/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1127

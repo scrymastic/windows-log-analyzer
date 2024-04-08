@@ -1,0 +1,25 @@
+author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
+date: 2021/01/30
+description: Detects uninstallation or termination of security products using the
+  WMIC utility
+falsepositives:
+- Legitimate administration
+filename: proc_creation_win_wmic_uninstall_security_products.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/14
+references:
+- https://twitter.com/cglyer/status/1355171195654709249
+- https://thedfirreport.com/2021/10/18/icedid-to-xinglocker-ransomware-in-24-hours/
+- https://www.mandiant.com/resources/unc2165-shifts-to-evade-sanctions
+- https://research.nccgroup.com/2022/08/19/back-in-black-unlocking-a-lockbit-3-0-ransomware-attack/
+- https://www.trendmicro.com/en_us/research/23/a/vice-society-ransomware-group-targets-manufacturing-companies.html
+related:
+- id: b53317a0-8acf-4fd1-8de8-a5401e776b96
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.001

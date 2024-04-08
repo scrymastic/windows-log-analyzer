@@ -1,0 +1,18 @@
+author: Antonlovesdnb
+date: 2020/02/19
+description: Detects Kerberos DLL being loaded by an Office Product
+falsepositives:
+- Unknown
+filename: image_load_office_kerberos_dll_load.yml
+level: medium
+logsource:
+  category: image_load
+  product: windows
+modified: 2023/03/28
+references:
+- https://medium.com/threatpunter/detecting-adversary-tradecraft-with-image-load-event-logging-and-eql-8de93338c16
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1204.002

@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cmdl32.exe
+    - OriginalFileName|==: CMDL32.EXE
+  - CommandLine|contains: '/vpn '
+  - CommandLine|contains: '/lan '
+id: f37aba28-a9e6-4045-882c-d5004043b337

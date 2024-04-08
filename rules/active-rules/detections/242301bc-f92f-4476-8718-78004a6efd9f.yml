@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \certoc.exe
+    - OriginalFileName|==: CertOC.exe
+  - CommandLine|None: ' -LoadDLL '
+id: 242301bc-f92f-4476-8718-78004a6efd9f

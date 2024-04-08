@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: Cmd.Exe
+    - OriginalFileName|==: CONHOST.EXE
+    - OriginalFileName|==: 7z.exe
+    - OriginalFileName|==: WinRAR.exe
+    - OriginalFileName|==: wevtutil.exe
+    - OriginalFileName|==: net.exe
+    - OriginalFileName|==: net1.exe
+    - OriginalFileName|==: netsh.exe
+    - OriginalFileName|==: InstallUtil.exe
+id: 36480ae1-a1cb-4eaa-a0d6-29801d7e9142

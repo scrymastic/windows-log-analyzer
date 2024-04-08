@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|contains: \advanced_port_scanner
+      - OriginalFileName|contains: advanced_port_scanner
+      - Description|contains: Advanced Port Scanner
+  - or:
+    - CommandLine|contains: /portable
+    - CommandLine|contains: /lng
+id: 54773c5f-f1cc-4703-9126-2f797d96a69d

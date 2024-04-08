@@ -1,0 +1,20 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \msiexec.exe
+    - OriginalFileName|==: msiexec.exe
+  - or:
+    - CommandLine|None: -i
+    - CommandLine|None: -package
+    - CommandLine|None: -a
+    - CommandLine|None: -j
+  - CommandLine|None: -q
+  - or:
+    - ParentImage|not startswith: C:\Users\
+    - ParentImage|not contains: \AppData\Local\Temp\
+  - or:
+    - ParentImage|not startswith: C:\Windows\Temp\
+  - or:
+    - ParentImage|!==: C:\Windows\CCM\Ccm32BitLauncher.exe
+    - IntegrityLevel|!==: System
+id: 79a87aa6-e4bd-42fc-a5bb-5e6fbdcd62f5

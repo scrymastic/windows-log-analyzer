@@ -1,0 +1,7 @@
+detection:
+- and:
+  - CommandLine|contains: '>'
+  - or:
+    - CommandLine|contains: \\\\127.0.0.1\\admin$\\
+    - CommandLine|contains: \\\\localhost\\admin$\\
+id: ab9e3b40-0c85-4ba1-aede-455d226fd124

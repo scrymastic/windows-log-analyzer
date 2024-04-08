@@ -1,0 +1,43 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: Select
+    - CommandLine|contains: Win32_NTLogEvent
+  - or:
+    - or:
+      - Image|endswith: \wevtutil.exe
+      - OriginalFileName|==: wevtutil.exe
+  - or:
+    - or:
+      - CommandLine|contains: ' qe '
+      - CommandLine|contains: ' query-events '
+  - or:
+    - or:
+      - Image|endswith: \wmic.exe
+      - OriginalFileName|==: wmic.exe
+  - or:
+    - CommandLine|contains: ' ntevent'
+  - or:
+    - or:
+      - CommandLine|contains: 'Get-WinEvent '
+      - CommandLine|contains: 'get-eventlog '
+  - or:
+    - or:
+      - CommandLine|contains: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational
+      - CommandLine|contains: Microsoft-Windows-Terminal-Services-RemoteConnectionManager/Operational
+      - CommandLine|contains: Security
+  - or:
+    - or:
+      - CommandLine|contains: -InstanceId 4624
+      - CommandLine|contains: System[EventID=4624]
+      - CommandLine|contains: EventCode=?4624?
+      - CommandLine|contains: EventIdentifier=?4624?
+      - CommandLine|contains: -InstanceId 4778
+      - CommandLine|contains: System[EventID=4778]
+      - CommandLine|contains: EventCode=?4778?
+      - CommandLine|contains: EventIdentifier=?4778?
+      - CommandLine|contains: -InstanceId 25
+      - CommandLine|contains: System[EventID=25]
+      - CommandLine|contains: EventCode=?25?
+      - CommandLine|contains: EventIdentifier=?25?
+id: beaa66d6-aa1b-4e3c-80f5-e0145369bfaf

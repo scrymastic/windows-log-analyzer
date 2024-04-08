@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ScriptBlockText|matches: .*cmd.{0,5}(?:/c|/r).+clip(?:\.exe)?.{0,4}&&.+clipboard]::\(\s\\"\{\d\}.+-f.+"
+id: 73e67340-0d25-11eb-adc1-0242ac120002

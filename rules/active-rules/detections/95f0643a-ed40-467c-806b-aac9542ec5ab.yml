@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ScriptBlockText|contains: get-smbshare
+id: 95f0643a-ed40-467c-806b-aac9542ec5ab

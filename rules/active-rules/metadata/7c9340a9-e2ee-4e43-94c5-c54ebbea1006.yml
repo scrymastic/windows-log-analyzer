@@ -1,0 +1,21 @@
+author: frack113
+date: 2021/12/13
+description: 'Detects usage of the "dir" command part of Widows CMD with the "/S"
+  command line flag in order to enumerate files in a specified directory and all subdirectories.
+
+  '
+falsepositives:
+- Likely
+filename: proc_creation_win_cmd_dir_execution.yml
+level: low
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/06
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1217/T1217.md
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.t1217

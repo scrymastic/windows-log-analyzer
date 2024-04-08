@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|contains: \SOFTWARE\Microsoft\Windows\Windows Error Reporting\Hangs\Debugger
+id: 833ef470-fa01-4631-a79b-6f291c9ac498

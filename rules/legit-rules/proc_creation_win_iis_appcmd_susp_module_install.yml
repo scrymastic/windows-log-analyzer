@@ -22,6 +22,8 @@ detection:
   - CommandLine|contains: install
   - CommandLine|contains: module
   - CommandLine|None: '-name:'
+  - or:
+    - ParentImage|!==: C:\Windows\System32\inetsrv\iissetup.exe
 falsepositives:
 - Unknown as it may vary from organisation to organisation how admins use to install
   IIS modules

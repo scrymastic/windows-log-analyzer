@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \curl.exe
+    - OriginalFileName|==: curl.exe
+  - CommandLine|matches: \s-H\s
+  - CommandLine|contains: 'User-Agent:'
+id: 85de1f22-d189-44e4-8239-dc276b45379b

@@ -1,0 +1,19 @@
+author: John Lambert (rule)
+date: 2019/01/16
+description: Detects base64 encoded strings used in hidden malicious PowerShell command
+  lines
+falsepositives:
+- Unknown
+filename: proc_creation_win_powershell_base64_hidden_flag.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/01/05
+references:
+- http://www.leeholmes.com/blog/2017/09/21/searching-for-content-in-base-64-strings/
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

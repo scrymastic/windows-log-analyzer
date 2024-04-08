@@ -1,0 +1,6 @@
+detection:
+- and:
+  - ContextInfo|contains: Compress-Archive -Path*-DestinationPath $env:TEMP
+  - ContextInfo|contains: Compress-Archive -Path*-DestinationPath*\AppData\Local\Temp\
+  - ContextInfo|contains: Compress-Archive -Path*-DestinationPath*:\Windows\Temp\
+id: daf7eb81-35fd-410d-9d7a-657837e602bb

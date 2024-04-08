@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems)
+date: 2020/07/03
+description: Detects a suspicious Microsoft desktopimgdownldr file creation that stores
+  a file to a suspicious location or contains a file with a suspicious extension
+falsepositives:
+- False positives depend on scripts and administrative tools used in the monitored
+  environment
+filename: file_event_win_susp_desktopimgdownldr_file.yml
+level: high
+logsource:
+  category: file_event
+  product: windows
+modified: 2022/06/02
+references:
+- https://labs.sentinelone.com/living-off-windows-land-a-new-native-file-downldr/
+- https://twitter.com/SBousseaden/status/1278977301745741825
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1105

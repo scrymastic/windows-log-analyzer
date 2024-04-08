@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - CommandLine|contains: ' -e'
+  - or:
+    - CommandLine|contains: SQBuAHYAbwBrAGUALQ
+    - CommandLine|contains: kAbgB2AG8AawBlAC0A
+    - CommandLine|contains: JAG4AdgBvAGsAZQAtA
+    - CommandLine|contains: SW52b2tlL
+    - CommandLine|contains: ludm9rZS
+    - CommandLine|contains: JbnZva2Ut
+id: 6385697e-9f1b-40bd-8817-f4a91f40508e

@@ -1,0 +1,5 @@
+detection:
+- and:
+  - EventID|==: 4697
+  - ServiceFileName|contains: tap0901
+id: 9c8afa4d-0022-48f0-9456-3712466f9701

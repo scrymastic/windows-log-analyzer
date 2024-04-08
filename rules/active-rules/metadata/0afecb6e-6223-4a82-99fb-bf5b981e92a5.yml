@@ -1,0 +1,27 @@
+author: Ali Alwashali
+date: 2023/10/10
+description: 'Detects the creation of files in a specific location by ScreenConnect
+  RMM.
+
+  ScreenConnect has feature to remotely execute binaries on a target machine. These
+  binaries will be dropped to ":\Users\<username>\Documents\ConnectWiseControl\Temp\"
+  before execution.
+
+  '
+falsepositives:
+- Legitimate use of ScreenConnect
+filename: file_event_win_remote_access_tools_screenconnect_remote_file.yml
+level: low
+logsource:
+  category: file_event
+  product: windows
+modified: ''
+references:
+- https://github.com/SigmaHQ/sigma/pull/4467
+related:
+- id: b1f73849-6329-4069-bc8f-78a604bb8b23
+  type: similar
+status: experimental
+tags:
+- attack.execution
+- attack.t1059.003

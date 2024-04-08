@@ -1,0 +1,5 @@
+detection:
+- and:
+  - TargetObject|contains: \SYSTEM\CurrentControlSet\Services\EventLog\
+  - TargetObject|endswith: \File
+id: 0cb8d736-995d-4ce7-a31e-1e8d452a1459

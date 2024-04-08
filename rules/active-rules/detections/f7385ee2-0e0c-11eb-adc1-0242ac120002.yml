@@ -1,0 +1,8 @@
+detection:
+- and:
+  - Provider_Name|==: Service Control Manager
+  - EventID|==: 7045
+  - ImagePath|contains: cmd
+  - ImagePath|contains: '&&'
+  - ImagePath|contains: 'clipboard]::'
+id: f7385ee2-0e0c-11eb-adc1-0242ac120002

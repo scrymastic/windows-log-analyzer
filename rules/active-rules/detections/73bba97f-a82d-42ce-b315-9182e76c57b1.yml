@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \regedit.exe
+    - OriginalFileName|==: REGEDIT.EXE
+  - or:
+    - CommandLine|contains: ' /i '
+    - CommandLine|contains: ' /s '
+    - CommandLine|contains: .reg
+  - CommandLine|not None: ' -e '
+  - CommandLine|not None: ' -a '
+  - CommandLine|not None: ' -c '
+  - or:
+    - CommandLine|not matches: :[^ \\]
+id: 73bba97f-a82d-42ce-b315-9182e76c57b1

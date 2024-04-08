@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \VSDiagnostics.exe
+    - OriginalFileName|==: VSDiagnostics.exe
+  - CommandLine|contains: start
+  - or:
+    - CommandLine|contains: ' /launch:'
+    - CommandLine|contains: ' -launch:'
+id: ac1c92b4-ac81-405a-9978-4604d78cc47e

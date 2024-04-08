@@ -1,0 +1,25 @@
+author: Florian Roth (Nextron Systems), Jonhnathan Ribeiro, oscd.community
+date: 2023/02/15
+description: Detects the execution of certutil with either the "decode" or "decodehex"
+  flags to decode base64 or hex encoded files. This can be abused by attackers to
+  decode an encoded payload before execution
+falsepositives:
+- Unknown
+filename: proc_creation_win_certutil_decode.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/05
+references:
+- https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certutil
+- https://unit42.paloaltonetworks.com/new-babyshark-malware-targets-u-s-national-security-think-tanks/
+- https://news.sophos.com/en-us/2021/04/13/compromised-exchange-server-hosting-cryptojacker-targeting-other-exchange-servers/
+- https://twitter.com/JohnLaTwC/status/835149808817991680
+- https://learn.microsoft.com/en-us/archive/blogs/pki/basic-crl-checking-with-certutil
+- https://lolbas-project.github.io/lolbas/Binaries/Certutil/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027

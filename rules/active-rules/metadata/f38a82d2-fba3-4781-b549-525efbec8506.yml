@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/09/13
+description: Detects the use of 3proxy, a tiny free proxy server
+falsepositives:
+- Administrative activity
+filename: proc_creation_win_pua_3proxy_execution.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/21
+references:
+- https://github.com/3proxy/3proxy
+- https://blog.talosintelligence.com/2022/09/lazarus-three-rats.html
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1572

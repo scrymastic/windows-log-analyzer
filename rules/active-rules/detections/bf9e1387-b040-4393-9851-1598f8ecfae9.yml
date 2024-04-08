@@ -1,0 +1,6 @@
+detection:
+- and:
+  - TargetObject|contains: SOFTWARE\Policies\Microsoft\Windows Defender Security Center\App
+      and Browser protection\DisallowExploitProtectionOverride
+  - Details|==: DWORD (00000001)
+id: bf9e1387-b040-4393-9851-1598f8ecfae9

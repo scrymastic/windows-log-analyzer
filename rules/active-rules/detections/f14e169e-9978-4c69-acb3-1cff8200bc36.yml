@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: grpconv.exe -o
+    - CommandLine|contains: grpconv -o
+id: f14e169e-9978-4c69-acb3-1cff8200bc36

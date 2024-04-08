@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \regini.exe
+    - OriginalFileName|==: REGINI.EXE
+id: 5f60740a-f57b-4e76-82a1-15b6ff2cb134

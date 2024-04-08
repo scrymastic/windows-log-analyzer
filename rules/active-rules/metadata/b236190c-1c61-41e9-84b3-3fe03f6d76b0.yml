@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2019/07/13
+description: Detects a potential command line flag anomaly related to "regsvr32" in
+  which the "/i" flag is used without the "/n" which should be uncommon.
+falsepositives:
+- Administrator typo might cause some false positives
+filename: proc_creation_win_regsvr32_flags_anomaly.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/13
+references:
+- https://twitter.com/sbousseaden/status/1282441816986484737?s=12
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218.010

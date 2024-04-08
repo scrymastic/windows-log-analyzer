@@ -1,0 +1,7 @@
+detection:
+- and:
+  - ImageLoaded|endswith: \edputil.dll
+  - ImageLoaded|not startswith: C:\Windows\System32\
+  - ImageLoaded|not startswith: C:\Windows\SysWOW64\
+  - ImageLoaded|not startswith: C\Windows\WinSxS\
+id: e4903324-1a10-4ed3-981b-f6fe3be3a2c2

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - Image|endswith: \sqlcmd.exe
+  - CommandLine|contains: SELECT
+  - CommandLine|contains: TOP
+  - CommandLine|contains: '[VeeamBackup].[dbo].[Credentials]'
+id: b57ba453-b384-4ab9-9f40-1038086b4e53

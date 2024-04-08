@@ -1,0 +1,9 @@
+detection:
+- and:
+  - ParentImage|endswith: \sqlps.exe
+  - or:
+    - Image|endswith: \sqlps.exe
+    - OriginalFileName|==: sqlps.exe
+  - or:
+    - ParentImage|not endswith: \sqlagent.exe
+id: 0152550d-3a26-4efd-9f0e-54a0b28ae2f3

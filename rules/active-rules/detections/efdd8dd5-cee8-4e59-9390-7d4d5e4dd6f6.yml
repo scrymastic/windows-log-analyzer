@@ -1,0 +1,49 @@
+detection:
+- and:
+  - or:
+    - or:
+      - or:
+        - Image|contains: \CVE-202
+        - Image|contains: \CVE202
+      - or:
+        - Image|endswith: \poc.exe
+        - Image|endswith: \artifact.exe
+        - Image|endswith: \artifact64.exe
+        - Image|endswith: \artifact_protected.exe
+        - Image|endswith: \artifact32.exe
+        - Image|endswith: \artifact32big.exe
+        - Image|endswith: obfuscated.exe
+        - Image|endswith: obfusc.exe
+        - Image|endswith: \meterpreter
+  - or:
+    - or:
+      - CommandLine|contains: inject.ps1
+      - CommandLine|contains: Invoke-CVE
+      - CommandLine|contains: pupy.ps1
+      - CommandLine|contains: payload.ps1
+      - CommandLine|contains: beacon.ps1
+      - CommandLine|contains: PowerView.ps1
+      - CommandLine|contains: bypass.ps1
+      - CommandLine|contains: obfuscated.ps1
+      - CommandLine|contains: obfusc.ps1
+      - CommandLine|contains: obfus.ps1
+      - CommandLine|contains: obfs.ps1
+      - CommandLine|contains: evil.ps1
+      - CommandLine|contains: MiniDogz.ps1
+      - CommandLine|contains: _enc.ps1
+      - CommandLine|contains: \shell.ps1
+      - CommandLine|contains: \rshell.ps1
+      - CommandLine|contains: revshell.ps1
+      - CommandLine|contains: \av.ps1
+      - CommandLine|contains: \av_test.ps1
+      - CommandLine|contains: adrecon.ps1
+      - CommandLine|contains: mimikatz.ps1
+      - CommandLine|contains: \PowerUp_
+      - CommandLine|contains: powerup.ps1
+      - CommandLine|contains: \Temp\a.ps1
+      - CommandLine|contains: \Temp\p.ps1
+      - CommandLine|contains: \Temp\1.ps1
+      - CommandLine|contains: Hound.ps1
+      - CommandLine|contains: encode.ps1
+      - CommandLine|contains: powercat.ps1
+id: efdd8dd5-cee8-4e59-9390-7d4d5e4dd6f6

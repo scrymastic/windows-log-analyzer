@@ -1,0 +1,21 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \rundll32.exe
+    - OriginalFileName|==: RUNDLL32.exe
+  - or:
+    - CommandLine|contains: .bmp
+    - CommandLine|contains: .cr2
+    - CommandLine|contains: .eps
+    - CommandLine|contains: .gif
+    - CommandLine|contains: .ico
+    - CommandLine|contains: .jpeg
+    - CommandLine|contains: .jpg
+    - CommandLine|contains: .nef
+    - CommandLine|contains: .orf
+    - CommandLine|contains: .png
+    - CommandLine|contains: .raw
+    - CommandLine|contains: .sr2
+    - CommandLine|contains: .tif
+    - CommandLine|contains: .tiff
+id: 4aa6040b-3f28-44e3-a769-9208e5feb5ec

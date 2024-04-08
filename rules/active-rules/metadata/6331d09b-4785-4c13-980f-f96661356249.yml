@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems), Lee Holmes (idea), Harish Segar (improvements)
+date: 2017/03/22
+description: Detects PowerShell downgrade attack by comparing the host versions with
+  the actually used engine version 2.0
+falsepositives:
+- Unknown
+filename: posh_pc_downgrade_attack.yml
+level: medium
+logsource:
+  category: ps_classic_start
+  product: windows
+modified: 2023/10/27
+references:
+- http://www.leeholmes.com/blog/2017/03/17/detecting-and-preventing-powershell-downgrade-attacks/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.execution
+- attack.t1059.001

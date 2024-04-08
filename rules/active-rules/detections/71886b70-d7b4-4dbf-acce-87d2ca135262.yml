@@ -1,0 +1,6 @@
+detection:
+- and:
+  - EventID|==: 31017
+  - UserName|==: ''
+  - ServerName|startswith: \1
+id: 71886b70-d7b4-4dbf-acce-87d2ca135262

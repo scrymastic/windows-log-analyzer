@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems)
+date: 2020/02/04
+description: Detects the use of Dumpert process dumper, which dumps the lsass.exe
+  process memory
+falsepositives:
+- Very unlikely
+filename: proc_creation_win_hktl_dumpert.yml
+level: critical
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/04
+references:
+- https://github.com/outflanknl/Dumpert
+- https://unit42.paloaltonetworks.com/actors-still-exploiting-sharepoint-vulnerability/
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.001

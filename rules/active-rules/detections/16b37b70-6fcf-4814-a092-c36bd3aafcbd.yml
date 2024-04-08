@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: OiCAAAAYInlM
+    - ScriptBlockText|contains: OiJAAAAYInlM
+id: 16b37b70-6fcf-4814-a092-c36bd3aafcbd

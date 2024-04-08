@@ -1,0 +1,38 @@
+title: Uncommon New Firewall Rule Added In Windows Firewall Exception List
+id: cde0a575-7d3d-4a49-9817-b8004a7bf105
+status: experimental
+description: Detects when a rule has been added to the Windows Firewall exception
+  list
+references:
+- https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd364427(v=ws.10)
+author: frack113
+date: 2022/02/19
+modified: 2023/09/09
+tags:
+- attack.defense_evasion
+- attack.t1562.004
+logsource:
+  product: windows
+  service: firewall-as
+detection:
+- and:
+  - or:
+    - EventID|==: 2004
+    - EventID|==: 2071
+  - or:
+    - Action|!==: 2
+  - ApplicationPath|not contains: :\Program Files (x86)\
+  - ApplicationPath|not contains: :\Program Files\
+  - ApplicationPath|not contains: :\Windows\System32\
+  - ApplicationPath|not contains: :\Windows\SysWOW64\
+  - ApplicationPath|not contains: :\Windows\WinSxS\
+  - or:
+    - ModifyingApplication|not contains: :\ProgramData\Microsoft\Windows Defender\Platform\
+    - ModifyingApplication|not contains: \MsMpEng.exe
+  - ApplicationPath|not contains: :\PerfLogs\
+  - ApplicationPath|not contains: :\Temp\
+  - ApplicationPath|not contains: :\Users\Public\
+  - ApplicationPath|not contains: :\Windows\Tasks\
+  - ApplicationPath|not contains: :\Windows\Temp\
+  - ApplicationPath|not contains: \AppData\Local\Temp\
+level: medium

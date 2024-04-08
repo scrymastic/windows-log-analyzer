@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cmdkey.exe
+    - OriginalFileName|==: cmdkey.exe
+  - CommandLine|None: ' -g'
+  - CommandLine|None: ' -u'
+  - CommandLine|None: ' -p'
+id: b1ec66c6-f4d1-4b5c-96dd-af28ccae7727

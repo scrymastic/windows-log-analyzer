@@ -1,0 +1,26 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2024/01/01
+description: 'Detects the setting of the REGISTERAPPRESTART compatibility layer on
+  an application.
+
+  This compatibility layer allows an application to register for restart using the
+  "RegisterApplicationRestart" API.
+
+  This can be potentially abused as a persistence mechanism.
+
+  '
+falsepositives:
+- Legitimate applications making use of this feature for compatibility reasons
+filename: registry_set_persistence_app_cpmpat_layer_registerapprestart.yml
+level: medium
+logsource:
+  category: registry_set
+  product: windows
+modified: ''
+references:
+- https://github.com/nasbench/Misc-Research/blob/d114d6a5e0a437d3818e492ef9864367152543e7/Other/Persistence-Via-RegisterAppRestart-Shim.md
+related: []
+status: experimental
+tags:
+- attack.persistence
+- attack.t1546.011

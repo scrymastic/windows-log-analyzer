@@ -1,0 +1,10 @@
+detection:
+- and:
+  - EventID|==: 4624
+  - LogonType|==: 3
+  - TargetUserName|==: ANONYMOUS LOGON
+  - WorkstationName|==: '-'
+  - or:
+    - IpAddress|==: 127.0.0.1
+    - IpAddress|==: ::1
+id: 16f5d8ca-44bd-47c8-acbe-6fc95a16c12f

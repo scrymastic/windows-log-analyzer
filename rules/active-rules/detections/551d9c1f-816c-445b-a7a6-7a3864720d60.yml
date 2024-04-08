@@ -1,0 +1,13 @@
+detection:
+- and:
+  - ParentImage|endswith: \excel.exe
+  - or:
+    - or:
+      - OriginalFileName|==: foxprow.exe
+      - OriginalFileName|==: schdplus.exe
+      - OriginalFileName|==: winproj.exe
+    - or:
+      - Image|endswith: \foxprow.exe
+      - Image|endswith: \schdplus.exe
+      - Image|endswith: \winproj.exe
+id: 551d9c1f-816c-445b-a7a6-7a3864720d60

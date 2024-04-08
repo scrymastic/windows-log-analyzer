@@ -1,0 +1,63 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: 'javascript:'
+    - CommandLine|contains: .RegisterXLL
+    - CommandLine|contains: url.dll
+    - CommandLine|contains: OpenURL
+    - CommandLine|contains: url.dll
+    - CommandLine|contains: OpenURLA
+    - CommandLine|contains: url.dll
+    - CommandLine|contains: FileProtocolHandler
+    - CommandLine|contains: zipfldr.dll
+    - CommandLine|contains: RouteTheCall
+    - CommandLine|contains: shell32.dll
+    - CommandLine|contains: Control_RunDLL
+    - CommandLine|contains: shell32.dll
+    - CommandLine|contains: ShellExec_RunDLL
+    - CommandLine|contains: mshtml.dll
+    - CommandLine|contains: PrintHTML
+    - CommandLine|contains: advpack.dll
+    - CommandLine|contains: LaunchINFSection
+    - CommandLine|contains: advpack.dll
+    - CommandLine|contains: RegisterOCX
+    - CommandLine|contains: ieadvpack.dll
+    - CommandLine|contains: LaunchINFSection
+    - CommandLine|contains: ieadvpack.dll
+    - CommandLine|contains: RegisterOCX
+    - CommandLine|contains: ieframe.dll
+    - CommandLine|contains: OpenURL
+    - CommandLine|contains: shdocvw.dll
+    - CommandLine|contains: OpenURL
+    - CommandLine|contains: syssetup.dll
+    - CommandLine|contains: SetupInfObjectInstallAction
+    - CommandLine|contains: setupapi.dll
+    - CommandLine|contains: InstallHinfSection
+    - CommandLine|contains: pcwutl.dll
+    - CommandLine|contains: LaunchApplication
+    - CommandLine|contains: dfshim.dll
+    - CommandLine|contains: ShOpenVerbApplication
+    - CommandLine|contains: dfshim.dll
+    - CommandLine|contains: ShOpenVerbShortcut
+    - CommandLine|contains: scrobj.dll
+    - CommandLine|contains: GenerateTypeLib
+    - CommandLine|contains: http
+    - CommandLine|contains: shimgvw.dll
+    - CommandLine|contains: ImageView_Fullscreen
+    - CommandLine|contains: http
+    - CommandLine|contains: comsvcs.dll
+    - CommandLine|contains: MiniDump
+  - or:
+    - CommandLine|not contains: shell32.dll,Control_RunDLL desk.cpl,screensaver,@screensaver
+  - or:
+    - ParentImage|!==: C:\Windows\System32\control.exe
+    - ParentCommandLine|not contains: .cpl
+    - CommandLine|not contains: Shell32.dll
+    - CommandLine|not contains: Control_RunDLL
+    - CommandLine|not contains: .cpl
+  - or:
+    - ParentImage|!==: C:\Windows\System32\control.exe
+    - CommandLine|not startswith: '"C:\Windows\system32\rundll32.exe" Shell32.dll,Control_RunDLL
+        "C:\Windows\System32\'
+    - CommandLine|not endswith: .cpl",
+id: e593cf51-88db-4ee1-b920-37e89012a3c9

@@ -1,0 +1,13 @@
+detection:
+- and:
+  - CommandLine|contains: 'Get-LocalGroupMember '
+  - or:
+    - CommandLine|contains: domain admins
+    - CommandLine|contains: ' administrator'
+    - CommandLine|contains: ' administrateur'
+    - CommandLine|contains: enterprise admins
+    - CommandLine|contains: Exchange Trusted Subsystem
+    - CommandLine|contains: Remote Desktop Users
+    - CommandLine|contains: "Utilisateurs du Bureau \xE0 distance"
+    - CommandLine|contains: Usuarios de escritorio remoto
+id: c8a180d6-47a3-4345-a609-53f9c3d834fc

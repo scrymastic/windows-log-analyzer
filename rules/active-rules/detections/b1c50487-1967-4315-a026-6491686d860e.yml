@@ -1,0 +1,23 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \wscript.exe
+    - or:
+      - ParentImage|endswith: \cscript.exe
+      - ParentImage|endswith: \mshta.exe
+      - ParentImage|endswith: \regsvr32.exe
+      - ParentImage|endswith: \rundll32.exe
+      - ParentImage|endswith: \wscript.exe
+  - or:
+    - TargetFilename|endswith: .docm
+    - TargetFilename|endswith: .dotm
+    - TargetFilename|endswith: .xlsm
+    - TargetFilename|endswith: .xltm
+    - TargetFilename|endswith: .potm
+    - TargetFilename|endswith: .pptm
+id: b1c50487-1967-4315-a026-6491686d860e

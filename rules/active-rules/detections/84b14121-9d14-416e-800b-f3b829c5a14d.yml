@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ParentImage|endswith: \CustomShellHost.exe
+id: 84b14121-9d14-416e-800b-f3b829c5a14d

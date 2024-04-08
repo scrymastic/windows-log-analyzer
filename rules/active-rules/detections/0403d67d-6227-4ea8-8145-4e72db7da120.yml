@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: UtilityFunctions.ps1
+    - CommandLine|contains: 'RegSnapin '
+id: 0403d67d-6227-4ea8-8145-4e72db7da120

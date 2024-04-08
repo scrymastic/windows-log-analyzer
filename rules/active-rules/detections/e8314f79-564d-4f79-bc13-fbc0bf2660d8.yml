@@ -1,0 +1,5 @@
+detection:
+- and:
+  - ScriptBlockText|contains: -Alias
+  - ScriptBlockText|contains: ' -Value (-join('
+id: e8314f79-564d-4f79-bc13-fbc0bf2660d8

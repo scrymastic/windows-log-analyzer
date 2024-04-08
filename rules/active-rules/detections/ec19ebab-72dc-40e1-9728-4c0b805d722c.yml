@@ -1,0 +1,58 @@
+detection:
+- and:
+  - Data|contains: Set-MpPreference
+  - or:
+    - Data|contains: -dbaf $true
+    - Data|contains: -dbaf 1
+    - Data|contains: -dbm $true
+    - Data|contains: -dbm 1
+    - Data|contains: -dips $true
+    - Data|contains: -dips 1
+    - Data|contains: -DisableArchiveScanning $true
+    - Data|contains: -DisableArchiveScanning 1
+    - Data|contains: -DisableBehaviorMonitoring $true
+    - Data|contains: -DisableBehaviorMonitoring 1
+    - Data|contains: -DisableBlockAtFirstSeen $true
+    - Data|contains: -DisableBlockAtFirstSeen 1
+    - Data|contains: -DisableCatchupFullScan $true
+    - Data|contains: -DisableCatchupFullScan 1
+    - Data|contains: -DisableCatchupQuickScan $true
+    - Data|contains: -DisableCatchupQuickScan 1
+    - Data|contains: -DisableIntrusionPreventionSystem $true
+    - Data|contains: -DisableIntrusionPreventionSystem 1
+    - Data|contains: -DisableIOAVProtection $true
+    - Data|contains: -DisableIOAVProtection 1
+    - Data|contains: -DisableRealtimeMonitoring $true
+    - Data|contains: -DisableRealtimeMonitoring 1
+    - Data|contains: -DisableRemovableDriveScanning $true
+    - Data|contains: -DisableRemovableDriveScanning 1
+    - Data|contains: -DisableScanningMappedNetworkDrivesForFullScan $true
+    - Data|contains: -DisableScanningMappedNetworkDrivesForFullScan 1
+    - Data|contains: -DisableScanningNetworkFiles $true
+    - Data|contains: -DisableScanningNetworkFiles 1
+    - Data|contains: -DisableScriptScanning $true
+    - Data|contains: -DisableScriptScanning 1
+    - Data|contains: -MAPSReporting $false
+    - Data|contains: -MAPSReporting 0
+    - Data|contains: -drdsc $true
+    - Data|contains: -drdsc 1
+    - Data|contains: -drtm $true
+    - Data|contains: -drtm 1
+    - Data|contains: -dscrptsc $true
+    - Data|contains: -dscrptsc 1
+    - Data|contains: -dsmndf $true
+    - Data|contains: -dsmndf 1
+    - Data|contains: -dsnf $true
+    - Data|contains: -dsnf 1
+    - Data|contains: -dss $true
+    - Data|contains: -dss 1
+  - or:
+    - Data|contains: HighThreatDefaultAction Allow
+    - Data|contains: htdefac Allow
+    - Data|contains: LowThreatDefaultAction Allow
+    - Data|contains: ltdefac Allow
+    - Data|contains: ModerateThreatDefaultAction Allow
+    - Data|contains: mtdefac Allow
+    - Data|contains: SevereThreatDefaultAction Allow
+    - Data|contains: stdefac Allow
+id: ec19ebab-72dc-40e1-9728-4c0b805d722c

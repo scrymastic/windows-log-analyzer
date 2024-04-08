@@ -1,0 +1,31 @@
+author: Samir Bousseaden, Roberto Rodriguez @Cyb3rWard0g, oscd.community, Tim Shelton,
+  Maxence Fossat
+date: 2019/04/03
+description: Backdooring domain object to grant the rights associated with DCSync
+  to a regular user or machine account using Powerview\Add-DomainObjectAcl DCSync
+  Extended Right cmdlet, will allow to re-obtain the pwd hashes of any user/computer
+falsepositives:
+- New Domain Controller computer account, check user SIDs within the value attribute
+  of event 5136 and verify if it's a regular user or DC computer account.
+filename: win_security_account_backdoor_dcsync_rights.yml
+level: high
+logsource:
+  definition: 'Requirements: The "Audit Directory Service Changes" logging policy
+    must be configured in order to receive events. Audit events are generated only
+    for objects with configured system access control lists (SACLs). Audit events
+    are generated only for objects with configured system access control lists (SACLs)
+    and only when accessed in a manner that matches their SACL settings. This policy
+    covers the following events ids - 5136, 5137, 5138, 5139, 5141. Note that the
+    default policy does not cover User objects. For that a custom AuditRule need to
+    be setup (See https://github.com/OTRF/Set-AuditRule)'
+  product: windows
+  service: security
+modified: 2022/08/16
+references:
+- https://twitter.com/menasec1/status/1111556090137903104
+- https://www.specterops.io/assets/resources/an_ace_up_the_sleeve.pdf
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.t1098

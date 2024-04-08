@@ -1,0 +1,9 @@
+detection:
+- and:
+  - CommandLine|contains: Remove-MpPreference
+  - or:
+    - CommandLine|contains: '-ControlledFolderAccessProtectedFolders '
+    - CommandLine|contains: '-AttackSurfaceReductionRules_Ids '
+    - CommandLine|contains: '-AttackSurfaceReductionRules_Actions '
+    - CommandLine|contains: '-CheckForSignaturesBeforeRunningScan '
+id: 07e3cb2c-0608-410d-be4b-1511cb1a0448

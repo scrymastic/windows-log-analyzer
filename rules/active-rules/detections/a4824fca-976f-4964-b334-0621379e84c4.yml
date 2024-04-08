@@ -1,0 +1,4 @@
+detection:
+- and:
+  - OriginalFileName|==: sdelete.exe
+id: a4824fca-976f-4964-b334-0621379e84c4

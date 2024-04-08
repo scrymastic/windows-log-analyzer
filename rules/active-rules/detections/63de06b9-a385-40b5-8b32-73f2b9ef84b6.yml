@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \fsutil.exe
+    - OriginalFileName|==: fsutil.exe
+  - CommandLine|contains: drives
+id: 63de06b9-a385-40b5-8b32-73f2b9ef84b6

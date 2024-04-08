@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Initiated|==: 'true'
+  - Image|endswith: \addinutil.exe
+id: 5205613d-2a63-4412-a895-3a2458b587b3

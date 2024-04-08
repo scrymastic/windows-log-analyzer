@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - User|contains: AUTHORI
+    - User|contains: AUTORI
+  - Image|endswith: \tscon.exe
+id: 9847f263-4a81-424f-970c-875dab15b79b

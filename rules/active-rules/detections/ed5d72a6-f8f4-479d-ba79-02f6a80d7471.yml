@@ -1,0 +1,5 @@
+detection:
+- and:
+  - ParentImage|endswith: \svchost.exe
+  - Image|endswith: \mshta.exe
+id: ed5d72a6-f8f4-479d-ba79-02f6a80d7471

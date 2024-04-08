@@ -1,0 +1,19 @@
+detection:
+- and:
+  - or:
+    - CommandLine|startswith: '"C:\Windows\system32\wusa.exe"  /quiet C:\Users\'
+    - CommandLine|endswith: \AppData\Local\Temp\update.msu
+    - or:
+      - IntegrityLevel|==: High
+      - IntegrityLevel|==: System
+  - or:
+    - ParentCommandLine|==: '"C:\Windows\system32\dism.exe" /online /quiet /norestart
+        /add-package /packagepath:"C:\Windows\system32\pe386" /ignorecheck'
+    - or:
+      - IntegrityLevel|==: High
+      - IntegrityLevel|==: System
+    - CommandLine|contains: C:\Users\
+    - CommandLine|contains: \AppData\Local\Temp\
+    - CommandLine|contains: \dismhost.exe {
+    - Image|endswith: \DismHost.exe
+id: 39ed3c80-e6a1-431b-9df3-911ac53d08a7

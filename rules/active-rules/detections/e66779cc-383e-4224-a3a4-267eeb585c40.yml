@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cmstp.exe
+    - OriginalFileName|==: CMSTP.EXE
+  - or:
+    - CommandLine|contains: /s
+    - CommandLine|contains: -s
+    - CommandLine|contains: /au
+    - CommandLine|contains: -au
+    - CommandLine|contains: /ni
+    - CommandLine|contains: -ni
+id: e66779cc-383e-4224-a3a4-267eeb585c40

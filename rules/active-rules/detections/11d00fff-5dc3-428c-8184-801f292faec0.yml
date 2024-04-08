@@ -1,0 +1,7 @@
+detection:
+- and:
+  - EventID|==: 4663
+  - ObjectName|contains: \SYSTEM\
+  - ObjectName|contains: ControlSet\Services\
+  - AccessList|contains: '%%1538'
+id: 11d00fff-5dc3-428c-8184-801f292faec0

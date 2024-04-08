@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \dotnet.exe
+    - OriginalFileName|==: .NET Host
+  - or:
+    - CommandLine|endswith: .dll
+    - CommandLine|endswith: .csproj
+id: d80d5c81-04ba-45b4-84e4-92eba40e0ad3

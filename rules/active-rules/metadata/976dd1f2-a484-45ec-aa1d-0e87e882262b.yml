@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/21
+description: Detects when an attacker modifies the registry key "HtmlHelp Author"
+  to achieve persistence
+falsepositives:
+- Unknown
+filename: registry_set_persistence_chm.yml
+level: high
+logsource:
+  category: registry_set
+  product: windows
+modified: 2023/08/17
+references:
+- https://persistence-info.github.io/Data/htmlhelpauthor.html
+- https://www.hexacorn.com/blog/2018/04/22/beyond-good-ol-run-key-part-76/
+related: []
+status: experimental
+tags:
+- attack.persistence

@@ -1,0 +1,23 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/12
+description: Detects Microsoft Excel loading an Add-In (.xll) file from an uncommon
+  location
+falsepositives:
+- Some tuning might be required to allow or remove certain locations used by the rule
+  if you consider them as safe locations
+filename: image_load_office_excel_xll_susp_load.yml
+level: medium
+logsource:
+  category: image_load
+  product: windows
+modified: ''
+references:
+- https://www.mandiant.com/resources/blog/lnk-between-browsers
+- https://wazuh.com/blog/detecting-xll-files-used-for-dropping-fin7-jssloader-with-wazuh/
+related:
+- id: c5f4b5cb-4c25-4249-ba91-aa03626e3185
+  type: derived
+status: test
+tags:
+- attack.execution
+- attack.t1204.002

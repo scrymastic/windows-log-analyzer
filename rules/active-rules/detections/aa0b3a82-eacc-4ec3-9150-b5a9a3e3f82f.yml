@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: 'type '
+    - CommandLine|contains: ' > \\\\'
+  - or:
+    - CommandLine|contains: type \\\\
+    - CommandLine|contains: ' > '
+id: aa0b3a82-eacc-4ec3-9150-b5a9a3e3f82f

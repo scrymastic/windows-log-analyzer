@@ -1,0 +1,16 @@
+detection:
+- and:
+  - CommandLine|contains: 'txt:'
+  - CommandLine|contains: 'type '
+  - CommandLine|contains: ' > '
+  - CommandLine|contains: 'makecab '
+  - CommandLine|contains: .cab
+  - CommandLine|contains: 'reg '
+  - CommandLine|contains: ' export '
+  - CommandLine|contains: 'regedit '
+  - CommandLine|contains: ' /E '
+  - CommandLine|contains: 'esentutl '
+  - CommandLine|contains: ' /y '
+  - CommandLine|contains: ' /d '
+  - CommandLine|contains: ' /o '
+id: 7f43c430-5001-4f8b-aaa9-c3b88f18fa5c

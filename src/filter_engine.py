@@ -61,7 +61,7 @@ class FilterEngine:
         # Extract the field value from the event data
         field_value = self.get_field_value(event, field)
         if field_value is None:
-            print(f"Field '{field}' not found in event {event}")
+            # print(f"Field '{field}' not found in event {event}")
             return False
         # Perform the comparison based on the operator
         if operator == '==':
@@ -85,15 +85,15 @@ class FilterEngine:
         elif operator == 'not matches':
             return not regex.match(value, field_value)
         elif operator == 'cidr':    # for ip address, Classless Inter-Domain Routing
-            import ipaddress
-            return ipaddress.IPv4Address(field_value) in ipaddress.IPv4Network(value) \
+            from ipaddress import IPv4Address, IPv6Address, IPv4Network, IPv6Network
+            return IPv4Address(field_value) in IPv4Network(value) \
                 if '.' in field_value else \
-                ipaddress.IPv6Address(field_value) in ipaddress.IPv6Network(value)
+                IPv6Address(field_value) in IPv6Network(value)
         elif operator == 'not cidr':
-            import ipaddress
-            return ipaddress.IPv4Address(field_value) not in ipaddress.IPv4Network(value) \
+            from ipaddress import IPv4Address, IPv6Address, IPv4Network, IPv6Network
+            return IPv4Address(field_value) not in IPv4Network(value) \
                 if '.' in field_value else \
-                ipaddress.IPv6Address(field_value) not in ipaddress.IPv6Network(value)
+                IPv6Address(field_value) not in IPv6Network(value)
         else:
             print(f"Invalid operator '{operator}'")
             return False
@@ -121,12 +121,54 @@ class FilterEngine:
                     else:
                         print(f"Rule ID not found for rule {rule}")
             if rule_id_list:
-                filtered_events[event['id']] = rule_id_list
+                filtered_events[event['System']['EventRecordID']] = rule_id_list
                 
         return filtered_events
 
-    
+
 
 
 if __name__ == '__main__':
-    pass
+    import glob
+    import yaml
+    from config import ROOT
+    rules = []
+    i = 0
+    for rule_file in glob.glob(f"{ROOT}/rules/active-rules/detections/*.yml"):
+        with open(rule_file, 'r') as file:
+            rule = yaml.safe_load(file)
+            rules.append(rule)
+        i += 1
+        if i == 2:
+            break
+    print(f"Loaded {i} rules")
+    print(rules)
+    
+    events = [
+        {   
+            "System": {
+                "Provider": "Microsoft-Windows-Sysmon",
+                "EventID": 1,
+                "EventRecordID": 306346,
+                "TimeCreated": "2019-07-01T00:00:00.000Z"
+            },
+            "EventData": {
+                "Image": "C:\\Windows\\System32\\wscript.exe\\auditpol.exe",
+                "Description": "Microsoft ® Windows Based Script Host",
+                "Product": "Microsoft® Windows Script Host",
+                "Company": "Microsoft Corporation",
+                "CommandLine": "wscript.exe C:\\Users\\user\\Desktop\\malicious.vbs disable",
+                "User": "user",
+                "ParentImage": "C:\\Windows\\explorer.exe",
+                "ParentCommandLine": "explorer.exe"
+            }
+        }
+    ]
+
+    filter_engine = FilterEngine(rules)
+    filtered_events = filter_engine.filter_events(events)
+
+    for event_id, rule_id_list in filtered_events.items():
+        print(f"Event ID: {event_id}")
+        print(f"Rule ID list: {rule_id_list}")
+        print()

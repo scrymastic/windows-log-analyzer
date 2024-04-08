@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \wmic.exe
+    - OriginalFileName|==: wmic.exe
+  - or:
+    - CommandLine|contains: AntiVirusProduct
+    - CommandLine|contains: FirewallProduct
+id: e568650b-5dcd-4658-8f34-ded0b1e13992

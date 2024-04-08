@@ -28,6 +28,14 @@ detection:
   - or:
     - CommandLine|contains: /xml
     - CommandLine|contains: -xml
+  - or:
+    - CommandLine|not contains: .xml
+  - or:
+    - IntegrityLevel|!==: System
+  - or:
+    - ParentImage|not endswith: \rundll32.exe
+    - ParentCommandLine|not contains: :\WINDOWS\Installer\MSI
+    - ParentCommandLine|not contains: .tmp,zzzzInvokeManagedCustomActionOutOfProc
   - ParentImage|not endswith: :\ProgramData\OEM\UpgradeTool\CareCenter_*\BUnzip\Setup_msi.exe
   - ParentImage|not endswith: :\Program Files\Axis Communications\AXIS Camera Station\SetupActions.exe
   - ParentImage|not endswith: :\Program Files\Axis Communications\AXIS Device Manager\AdmSetupActions.exe

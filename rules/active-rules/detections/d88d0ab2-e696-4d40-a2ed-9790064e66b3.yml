@@ -1,0 +1,16 @@
+detection:
+- and:
+  - TargetObject|contains: \Software\Microsoft\Windows\CurrentVersion\Internet Settings
+  - or:
+    - Details|not startswith: DWORD
+  - Details|!==: 'Cookie:'
+  - Details|!==: 'Visited:'
+  - Details|!==: (Empty)
+  - TargetObject|not contains: \Cache
+  - TargetObject|not contains: \ZoneMap
+  - TargetObject|not contains: \WpadDecision
+  - or:
+    - Details|!==: Binary Data
+  - or:
+    - TargetObject|not contains: \Accepted Documents\
+id: d88d0ab2-e696-4d40-a2ed-9790064e66b3

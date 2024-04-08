@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \fltMC.exe
+    - OriginalFileName|==: fltMC.exe
+  - CommandLine|contains: unload
+  - or:
+    - CommandLine|not endswith: unload rtp_filesystem_filter
+id: 4931188c-178e-4ee7-a348-39e8a7a56821

@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: reg.exe
+    - OriginalFileName|==: reg.exe
+  - CommandLine|contains: ' delete '
+  - CommandLine|contains: \SYSTEM\CurrentControlSet\services\
+id: 05b2aa93-1210-42c8-8d9a-2fcc13b284f5

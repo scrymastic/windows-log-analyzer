@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Get-Process
+id: af4c87ce-bdda-4215-b998-15220772e993

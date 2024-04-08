@@ -1,0 +1,23 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/09/01
+description: Detects suspicious manipulations of default accounts such as 'administrator'
+  and 'guest'. For example 'enable' or 'disable' accounts or change the password...etc
+falsepositives:
+- Some false positives could occur with the admin or guest account. It depends on
+  the scripts being used by the admins in your env. If you experience a lot of FP
+  you could reduce the level to medium
+filename: proc_creation_win_net_user_default_accounts_manipulation.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/21
+references:
+- https://www.trellix.com/en-sg/about/newsroom/stories/threat-labs/lockergoga-ransomware-family-used-in-targeted-attacks.html
+- https://redacted.com/blog/bianlian-ransomware-gang-gives-it-a-go/
+- https://www.microsoft.com/security/blog/2022/09/07/profiling-dev-0270-phosphorus-ransomware-operations/
+related: []
+status: test
+tags:
+- attack.collection
+- attack.t1560.001

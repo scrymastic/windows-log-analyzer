@@ -1,0 +1,7 @@
+detection:
+- and:
+  - EventID|==: 4898
+  - TemplateContent|contains: CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT
+  - EventID|==: 4899
+  - NewTemplateContent|contains: CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT
+id: 5ee3a654-372f-11ec-8d3d-0242ac130003

@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - Product|==: SQLite
+    - or:
+      - Image|endswith: \sqlite.exe
+      - Image|endswith: \sqlite3.exe
+  - or:
+    - CommandLine|contains: \User Data\
+    - CommandLine|contains: \Opera Software\
+    - CommandLine|contains: \ChromiumViewer\
+  - or:
+    - CommandLine|contains: Login Data
+    - CommandLine|contains: Cookies
+    - CommandLine|contains: Web Data
+    - CommandLine|contains: History
+    - CommandLine|contains: Bookmarks
+id: 24c77512-782b-448a-8950-eddb0785fc71

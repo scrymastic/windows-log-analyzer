@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \reg.exe
+    - OriginalFileName|==: reg.exe
+  - CommandLine|contains: add
+  - CommandLine|contains: CurrentVersion\Control Panel\CPLs
+  - CommandLine|endswith: .cpl
+  - CommandLine|not contains: \System32\
+  - CommandLine|not contains: '%System%'
+  - CommandLine|not contains: '|C:\Windows\system32|'
+  - or:
+    - CommandLine|not contains: 'regsvr32 '
+    - CommandLine|not contains: ' /s '
+    - CommandLine|not contains: igfxCPL.cpl
+id: 0ba863e6-def5-4e50-9cea-4dd8c7dc46a4

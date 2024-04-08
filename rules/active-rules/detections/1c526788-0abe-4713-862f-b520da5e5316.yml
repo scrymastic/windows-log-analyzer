@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \brave.exe
+    - Image|endswith: \chrome.exe
+    - Image|endswith: \msedge.exe
+    - Image|endswith: \opera.exe
+    - Image|endswith: \vivaldi.exe
+  - CommandLine|contains: --headless
+  - or:
+    - CommandLine|contains: ://run.mocky
+    - CommandLine|contains: ://mockbin
+id: 1c526788-0abe-4713-862f-b520da5e5316

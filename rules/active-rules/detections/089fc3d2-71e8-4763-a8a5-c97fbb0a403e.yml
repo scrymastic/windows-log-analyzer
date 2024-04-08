@@ -1,0 +1,27 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \regsvr32.exe
+    - OriginalFileName|==: REGSVR32.EXE
+  - or:
+    - CommandLine|endswith: .bin
+    - CommandLine|endswith: .bmp
+    - CommandLine|endswith: .cr2
+    - CommandLine|endswith: .dat
+    - CommandLine|endswith: .eps
+    - CommandLine|endswith: .gif
+    - CommandLine|endswith: .ico
+    - CommandLine|endswith: .jpeg
+    - CommandLine|endswith: .jpg
+    - CommandLine|endswith: .nef
+    - CommandLine|endswith: .orf
+    - CommandLine|endswith: .png
+    - CommandLine|endswith: .raw
+    - CommandLine|endswith: .sr2
+    - CommandLine|endswith: .temp
+    - CommandLine|endswith: .tif
+    - CommandLine|endswith: .tiff
+    - CommandLine|endswith: .tmp
+    - CommandLine|endswith: .rtf
+    - CommandLine|endswith: .txt
+id: 089fc3d2-71e8-4763-a8a5-c97fbb0a403e

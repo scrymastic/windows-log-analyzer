@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \certutil.exe
+    - OriginalFileName|==: CertUtil.exe
+  - or:
+    - CommandLine|None: '-decode '
+    - CommandLine|None: '-decodehex '
+id: cc9cbe82-7bc0-4ef5-bc23-bbfb83947be7

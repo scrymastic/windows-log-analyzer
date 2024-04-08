@@ -1,0 +1,23 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/18
+description: Detects suspicious DACL modifications via the "Set-Service" cmdlet using
+  the "SecurityDescriptorSddl" flag (Only available with PowerShell 7) that can be
+  used to hide services or make them unstopable
+falsepositives:
+- Unknown
+filename: proc_creation_win_powershell_service_dacl_modification_set_service.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.sans.org/blog/red-team-tactics-hiding-windows-services/
+- https://docs.microsoft.com/pt-br/windows/win32/secauthz/sid-strings
+related:
+- id: 99cf1e02-00fb-4c0d-8375-563f978dfd37
+  type: derived
+status: test
+tags:
+- attack.persistence
+- attack.t1543.003

@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \appcmd.exe
+    - OriginalFileName|==: appcmd.exe
+  - CommandLine|contains: set
+  - CommandLine|contains: config
+  - CommandLine|contains: section:httplogging
+  - CommandLine|contains: dontLog:true
+id: e4ed6030-ffe5-4e6a-8a8a-ab3c1ab9d94e

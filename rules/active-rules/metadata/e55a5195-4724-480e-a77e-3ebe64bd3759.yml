@@ -1,0 +1,21 @@
+author: Nikita Nazarov, oscd.community
+date: 2020/10/08
+description: Detects Obfuscated Powershell via use MSHTA in Scripts
+falsepositives:
+- Unknown
+filename: posh_ps_invoke_obfuscation_via_use_mhsta.yml
+level: high
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2022/11/29
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

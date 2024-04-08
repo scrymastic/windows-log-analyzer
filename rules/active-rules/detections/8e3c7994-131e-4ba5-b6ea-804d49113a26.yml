@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ParentImage|endswith: \odbcconf.exe
+id: 8e3c7994-131e-4ba5-b6ea-804d49113a26

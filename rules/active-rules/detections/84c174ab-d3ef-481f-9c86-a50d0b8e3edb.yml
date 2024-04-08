@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Get-Process lsass
+id: 84c174ab-d3ef-481f-9c86-a50d0b8e3edb

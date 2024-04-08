@@ -1,0 +1,23 @@
+author: Nasreddine Bencherchali (Nextron Systems), frack113
+date: 2022/07/12
+description: Detects modifications to the registry key "HKLM\Software\Microsoft\Windows
+  NT\CurrentVersion\Winlogon\SpecialAccounts\Userlist" where the value is set to "0"
+  in order to hide user account from being listed on the logon screen.
+falsepositives:
+- Unknown
+filename: registry_set_special_accounts.yml
+level: high
+logsource:
+  category: registry_set
+  product: windows
+modified: 2023/01/26
+references:
+- https://thedfirreport.com/2022/07/11/select-xmrig-from-sqlserver/
+- https://github.com/redcanaryco/atomic-red-team/blob/40b77d63808dd4f4eafb83949805636735a1fd15/atomics/T1564.002/T1564.002.md
+related:
+- id: 8a58209c-7ae6-4027-afb0-307a78e4589a
+  type: obsoletes
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1564.002

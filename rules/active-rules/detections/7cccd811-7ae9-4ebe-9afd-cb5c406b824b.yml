@@ -1,0 +1,4 @@
+detection:
+- and:
+  - CommandLine|None: ' -accepteula'
+id: 7cccd811-7ae9-4ebe-9afd-cb5c406b824b

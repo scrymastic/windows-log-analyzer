@@ -1,0 +1,4 @@
+detection:
+- and:
+  - PipeName|contains: thisispipe
+id: 1f7025a6-e747-4130-aac4-961eb47015f1

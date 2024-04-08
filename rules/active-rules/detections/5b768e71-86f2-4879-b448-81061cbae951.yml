@@ -1,0 +1,42 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+    - or:
+      - OriginalFileName|==: net.exe
+      - OriginalFileName|==: net1.exe
+  - CommandLine|contains: ' user '
+  - or:
+    - CommandLine|contains: " J\xE4rjestelm\xE4nvalvoja "
+    - CommandLine|contains: ' Rendszergazda '
+    - CommandLine|contains: " \u0410\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\
+        \u0430\u0442\u043E\u0440 "
+    - CommandLine|contains: ' Administrateur '
+    - CommandLine|contains: ' Administrador '
+    - CommandLine|contains: " Administrat\xF6r "
+    - CommandLine|contains: ' Administrator '
+    - CommandLine|contains: ' guest '
+    - CommandLine|contains: ' DefaultAccount '
+    - CommandLine|contains: " \"J\xE4rjestelm\xE4nvalvoja\" "
+    - CommandLine|contains: ' "Rendszergazda" '
+    - CommandLine|contains: " \"\u0410\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\
+        \u0430\u0442\u043E\u0440\" "
+    - CommandLine|contains: ' "Administrateur" '
+    - CommandLine|contains: ' "Administrador" '
+    - CommandLine|contains: " \"Administrat\xF6r\" "
+    - CommandLine|contains: ' "Administrator" '
+    - CommandLine|contains: ' "guest" '
+    - CommandLine|contains: ' "DefaultAccount" '
+    - CommandLine|contains: " 'J\xE4rjestelm\xE4nvalvoja' "
+    - CommandLine|contains: ' ''Rendszergazda'' '
+    - CommandLine|contains: " '\u0410\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\
+        \u0430\u0442\u043E\u0440' "
+    - CommandLine|contains: ' ''Administrateur'' '
+    - CommandLine|contains: ' ''Administrador'' '
+    - CommandLine|contains: " 'Administrat\xF6r' "
+    - CommandLine|contains: ' ''Administrator'' '
+    - CommandLine|contains: ' ''guest'' '
+    - CommandLine|contains: ' ''DefaultAccount'' '
+id: 5b768e71-86f2-4879-b448-81061cbae951

@@ -1,0 +1,23 @@
+author: frack113
+date: 2022/12/25
+description: Detects usage of COM objects that can be abused to download files in
+  PowerShell by CLSID
+falsepositives:
+- Legitimate use of the library
+filename: posh_ps_download_com_cradles.yml
+level: medium
+logsource:
+  category: ps_script
+  definition: Script Block Logging must be enable
+  product: windows
+modified: ''
+references:
+- https://learn.microsoft.com/en-us/dotnet/api/system.type.gettypefromclsid?view=net-7.0
+- https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=57
+related:
+- id: 02b64f1b-3f33-4e67-aede-ef3b0a5a8fcf
+  type: similar
+status: test
+tags:
+- attack.command_and_control
+- attack.t1105

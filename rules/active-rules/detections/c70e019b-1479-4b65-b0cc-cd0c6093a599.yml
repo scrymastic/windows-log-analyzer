@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Data|contains: EngineVersion=2.
+    - Data|contains: EngineVersion=4.
+    - Data|contains: EngineVersion=5.
+  - Data|contains: HostVersion=3.
+id: c70e019b-1479-4b65-b0cc-cd0c6093a599

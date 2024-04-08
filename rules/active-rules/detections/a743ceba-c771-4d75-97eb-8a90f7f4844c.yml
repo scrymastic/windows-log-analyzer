@@ -1,0 +1,8 @@
+detection:
+- and:
+  - ParentImage|endswith: \pkgmgr.exe
+  - Image|endswith: \dism.exe
+  - or:
+    - IntegrityLevel|==: High
+    - IntegrityLevel|==: System
+id: a743ceba-c771-4d75-97eb-8a90f7f4844c

@@ -1,0 +1,26 @@
+detection:
+- and:
+  - or:
+    - or:
+      - TargetFilename|endswith: \lsass.dmp
+      - TargetFilename|endswith: \lsass.zip
+      - TargetFilename|endswith: \lsass.rar
+      - TargetFilename|endswith: \Andrew.dmp
+      - TargetFilename|endswith: \Coredump.dmp
+      - TargetFilename|endswith: \NotLSASS.zip
+      - TargetFilename|endswith: \PPLBlade.dmp
+  - or:
+    - or:
+      - TargetFilename|contains: \lsass_2
+      - TargetFilename|contains: \lsassdump
+      - TargetFilename|contains: \lsassdmp
+  - or:
+    - TargetFilename|contains: \lsass
+    - TargetFilename|contains: .dmp
+  - or:
+    - TargetFilename|contains: SQLDmpr
+    - TargetFilename|endswith: .mdmp
+  - or:
+    - TargetFilename|startswith: nanodump
+    - TargetFilename|endswith: .dmp
+id: a5a2d357-1ab8-4675-a967-ef9990a59391

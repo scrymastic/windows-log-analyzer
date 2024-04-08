@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Provider_Name|==: Microsoft-Windows-CertificationAuthority
+  - EventID|==: 53
+id: 994bfd6d-0a2e-481e-a861-934069fcf5f5

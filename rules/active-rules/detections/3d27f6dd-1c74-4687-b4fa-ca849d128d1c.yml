@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|contains: \Software\Microsoft\Office test\Special\Perf
+id: 3d27f6dd-1c74-4687-b4fa-ca849d128d1c

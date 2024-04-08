@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Payload|contains: del
+      - Payload|contains: Remove-Item
+      - Payload|contains: rm
+  - or:
+    - Payload|contains: (Get-PSReadlineOption).HistorySavePath
+  - or:
+    - Payload|contains: Set-PSReadlineOption
+    - Payload|contains: "\u2013HistorySaveStyle"
+    - Payload|contains: SaveNothing
+  - or:
+    - Payload|contains: Set-PSReadlineOption
+    - Payload|contains: -HistorySaveStyle
+    - Payload|contains: SaveNothing
+id: f99276ad-d122-4989-a09a-d00904a5f9d2

@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \LocalPotato.exe
+  - or:
+    - CommandLine|contains: .exe -i C:\
+    - CommandLine|contains: -o Windows\
+  - or:
+    - or:
+      - Hashes|contains: IMPHASH=E1742EE971D6549E8D4D81115F88F1FC
+      - Hashes|contains: IMPHASH=DD82066EFBA94D7556EF582F247C8BB5
+  - or:
+    - or:
+      - Imphash|==: E1742EE971D6549E8D4D81115F88F1FC
+      - Imphash|==: DD82066EFBA94D7556EF582F247C8BB5
+id: 6bd75993-9888-4f91-9404-e1e4e4e34b77

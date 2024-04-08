@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \NirCmd.exe
+      - OriginalFileName|==: NirCmd.exe
+  - or:
+    - or:
+      - CommandLine|contains: ' execmd '
+      - CommandLine|contains: '.exe script '
+      - CommandLine|contains: '.exe shexec '
+      - CommandLine|contains: ' runinteractive '
+id: 4e2ed651-1906-4a59-a78a-18220fca1b22

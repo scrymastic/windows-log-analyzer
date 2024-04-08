@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Payload|matches: .*cmd.{0,5}(?:/c|/r).+powershell.+(?:\$\{?input\}?|noexit).+"
+id: 9ac8b09b-45de-4a07-9da1-0de8c09304a3

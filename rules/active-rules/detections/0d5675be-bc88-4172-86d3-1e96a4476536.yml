@@ -1,0 +1,24 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \reg.exe
+    - OriginalFileName|==: reg.exe
+  - CommandLine|contains: ' add '
+  - CommandLine|contains: \CurrentControlSet\Control\Terminal Server
+  - CommandLine|contains: REG_DWORD
+  - CommandLine|contains: ' /f'
+  - CommandLine|contains: Licensing Core
+  - CommandLine|contains: EnableConcurrentSessions
+  - or:
+    - CommandLine|contains: WinStations\RDP-Tcp
+    - CommandLine|contains: MaxInstanceCount
+    - CommandLine|contains: fEnableWinStation
+    - CommandLine|contains: TSUserEnabled
+    - CommandLine|contains: TSEnabled
+    - CommandLine|contains: TSAppCompat
+    - CommandLine|contains: IdleWinStationPoolCount
+    - CommandLine|contains: TSAdvertise
+    - CommandLine|contains: AllowTSConnections
+    - CommandLine|contains: fSingleSessionPerUser
+    - CommandLine|contains: fDenyTSConnections
+id: 0d5675be-bc88-4172-86d3-1e96a4476536

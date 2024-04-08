@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \reg.exe
+    - OriginalFileName|==: reg.exe
+  - CommandLine|contains: SYSTEM\CurrentControlSet\Control\Lsa
+  - CommandLine|contains: ' add '
+  - CommandLine|contains: ' /d 0'
+  - CommandLine|contains: ' /v RunAsPPL '
+id: 8c0eca51-0f88-4db2-9183-fdfb10c703f9

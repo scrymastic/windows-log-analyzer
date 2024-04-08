@@ -1,0 +1,23 @@
+author: X__Junior (Nextron Systems)
+date: 2023/03/13
+description: Detects potential DLL side loading of DLLs that are part of the Wazuh
+  security platform
+falsepositives:
+- Many legitimate applications leverage this DLL. (Visual Studio, JetBrains, Ruby,
+  Anaconda, GithubDesktop, etc.)
+filename: image_load_side_load_wazuh.yml
+level: medium
+logsource:
+  category: image_load
+  product: windows
+modified: 2023/05/12
+references:
+- https://www.trendmicro.com/en_us/research/23/c/iron-tiger-sysupdate-adds-linux-targeting.html
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1574.001
+- attack.t1574.002

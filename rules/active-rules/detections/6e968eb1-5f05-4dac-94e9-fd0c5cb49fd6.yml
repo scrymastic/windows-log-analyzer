@@ -1,0 +1,7 @@
+detection:
+- and:
+  - Image|endswith: \link.exe
+  - CommandLine|contains: LINK /
+  - ParentImage|not startswith: C:\Program Files\Microsoft Visual Studio\
+  - ParentImage|not startswith: C:\Program Files (x86)\Microsoft Visual Studio\
+id: 6e968eb1-5f05-4dac-94e9-fd0c5cb49fd6

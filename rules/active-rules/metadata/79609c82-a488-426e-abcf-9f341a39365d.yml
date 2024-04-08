@@ -1,0 +1,18 @@
+author: frack113, Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/17
+description: Detects when a all the rules have been deleted from the Windows Defender
+  Firewall configuration
+falsepositives: []
+filename: win_firewall_as_delete_all_rules.yml
+level: high
+logsource:
+  product: windows
+  service: firewall-as
+modified: 2024/01/22
+references:
+- https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd364427(v=ws.10)
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1562.004

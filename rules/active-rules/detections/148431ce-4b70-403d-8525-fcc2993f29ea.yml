@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \tracker.exe
+    - Description|==: Tracker
+  - or:
+    - CommandLine|contains: ' /d '
+    - CommandLine|contains: ' /c '
+  - or:
+    - CommandLine|not contains: ' /ERRORREPORT:PROMPT '
+  - ParentImage|not endswith: \Msbuild\Current\Bin\MSBuild.exe
+  - ParentImage|not endswith: \Msbuild\Current\Bin\amd64\MSBuild.exe
+id: 148431ce-4b70-403d-8525-fcc2993f29ea

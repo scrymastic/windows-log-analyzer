@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: ipconfig /all
+    - CommandLine|contains: netsh interface show interface
+    - CommandLine|contains: arp -a
+    - CommandLine|contains: nbtstat -n
+    - CommandLine|contains: net config
+    - CommandLine|contains: route print
+id: a29c1813-ab1f-4dde-b489-330b952e91ae

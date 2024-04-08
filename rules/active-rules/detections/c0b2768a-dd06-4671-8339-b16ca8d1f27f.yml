@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \fsutil.exe
+    - OriginalFileName|==: fsutil.exe
+  - CommandLine|contains: 'behavior '
+  - CommandLine|contains: 'set '
+  - CommandLine|contains: SymlinkEvaluation
+id: c0b2768a-dd06-4671-8339-b16ca8d1f27f

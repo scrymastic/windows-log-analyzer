@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \SharpLdapWhoami.exe
+  - or:
+    - or:
+      - OriginalFileName|contains: SharpLdapWhoami
+      - Product|==: SharpLdapWhoami
+  - or:
+    - or:
+      - CommandLine|endswith: ' /method:ntlm'
+      - CommandLine|endswith: ' /method:kerb'
+      - CommandLine|endswith: ' /method:nego'
+      - CommandLine|endswith: ' /m:nego'
+      - CommandLine|endswith: ' /m:ntlm'
+      - CommandLine|endswith: ' /m:kerb'
+id: d9367cbb-c2e0-47ce-bdc0-128cb6da898d

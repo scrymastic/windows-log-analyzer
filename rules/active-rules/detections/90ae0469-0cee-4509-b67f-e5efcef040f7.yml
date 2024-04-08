@@ -1,0 +1,20 @@
+detection:
+- and:
+  - Image|endswith: \arubanetsvc.exe
+  - or:
+    - ImageLoaded|endswith: \wtsapi32.dll
+    - ImageLoaded|endswith: \msvcr100.dll
+    - ImageLoaded|endswith: \msvcp100.dll
+    - ImageLoaded|endswith: \dbghelp.dll
+    - ImageLoaded|endswith: \dbgcore.dll
+    - ImageLoaded|endswith: \wininet.dll
+    - ImageLoaded|endswith: \iphlpapi.dll
+    - ImageLoaded|endswith: \version.dll
+    - ImageLoaded|endswith: \cryptsp.dll
+    - ImageLoaded|endswith: \cryptbase.dll
+    - ImageLoaded|endswith: \wldp.dll
+    - ImageLoaded|endswith: \profapi.dll
+    - ImageLoaded|endswith: \sspicli.dll
+    - ImageLoaded|endswith: \winsta.dll
+    - ImageLoaded|endswith: \dpapi.dll
+id: 90ae0469-0cee-4509-b67f-e5efcef040f7

@@ -1,0 +1,30 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \wevtutil.exe
+    - or:
+      - CommandLine|contains: 'clear-log '
+      - CommandLine|contains: ' cl '
+      - CommandLine|contains: 'set-log '
+      - CommandLine|contains: ' sl '
+      - CommandLine|contains: 'lfn:'
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - CommandLine|contains: 'Clear-EventLog '
+      - CommandLine|contains: 'Remove-EventLog '
+      - CommandLine|contains: 'Limit-EventLog '
+      - CommandLine|contains: 'Clear-WinEvent '
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \wmic.exe
+    - CommandLine|contains: ClearEventLog
+  - or:
+    - ParentImage|==: C:\Windows\SysWOW64\msiexec.exe
+    - ParentImage|==: C:\Windows\System32\msiexec.exe
+  - CommandLine|contains: ' sl '
+id: cc36992a-4671-4f21-a91d-6c2b72a2edf5

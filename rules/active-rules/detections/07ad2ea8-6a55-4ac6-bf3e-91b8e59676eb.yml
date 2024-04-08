@@ -1,0 +1,9 @@
+detection:
+- and:
+  - Payload|contains: set
+  - Payload|contains: '&&'
+  - Payload|contains: mshta
+  - Payload|contains: vbscript:createobject
+  - Payload|contains: .run
+  - Payload|contains: (window.close)
+id: 07ad2ea8-6a55-4ac6-bf3e-91b8e59676eb

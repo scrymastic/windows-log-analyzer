@@ -42,6 +42,8 @@ detection:
     - CommandLine|contains: ://7
     - CommandLine|contains: ://8
     - CommandLine|contains: ://9
+  - or:
+    - CommandLine|not contains: ://7-
 fields:
 - CommandLine
 - ParentCommandLine

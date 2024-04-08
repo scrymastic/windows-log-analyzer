@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \createdump.exe
+    - OriginalFileName|==: FX_VER_INTERNALNAME_STR
+  - or:
+    - CommandLine|contains: ' -u '
+    - CommandLine|contains: ' --full '
+    - CommandLine|contains: ' -f '
+    - CommandLine|contains: ' --name '
+    - CommandLine|contains: '.dmp '
+id: 515c8be5-e5df-4c5e-8f6d-a4a2f05e4b48

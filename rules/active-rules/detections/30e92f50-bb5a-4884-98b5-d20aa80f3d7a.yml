@@ -1,0 +1,7 @@
+detection:
+- and:
+  - ParentImage|==: C:\Windows\explorer.exe
+  - Image|==: C:\Windows\System32\cmd.exe
+  - CommandLine|contains: powershell
+  - CommandLine|contains: .lnk
+id: 30e92f50-bb5a-4884-98b5-d20aa80f3d7a

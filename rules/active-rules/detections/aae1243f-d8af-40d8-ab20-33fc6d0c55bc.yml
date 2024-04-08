@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: psloglist.exe
+    - or:
+      - Image|endswith: \psloglist.exe
+      - Image|endswith: \psloglist64.exe
+  - or:
+    - CommandLine|contains: ' security'
+    - CommandLine|contains: ' application'
+    - CommandLine|contains: ' system'
+  - or:
+    - CommandLine|None: ' -d'
+    - CommandLine|None: ' -x'
+    - CommandLine|None: ' -s'
+    - CommandLine|None: ' -c'
+    - CommandLine|None: ' -g'
+id: aae1243f-d8af-40d8-ab20-33fc6d0c55bc

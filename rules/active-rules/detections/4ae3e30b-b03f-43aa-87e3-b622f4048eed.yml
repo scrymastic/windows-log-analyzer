@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \EXCEL.EXE
+      - Image|endswith: \POWERPNT.EXE
+      - Image|endswith: \WINWORD.exe
+    - or:
+      - OriginalFileName|==: Excel.exe
+      - OriginalFileName|==: POWERPNT.EXE
+      - OriginalFileName|==: WinWord.exe
+  - or:
+    - CommandLine|contains: http://
+    - CommandLine|contains: https://
+id: 4ae3e30b-b03f-43aa-87e3-b622f4048eed

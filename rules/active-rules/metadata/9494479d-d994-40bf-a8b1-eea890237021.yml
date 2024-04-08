@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/02/23
+description: Detects suspicious scheduled task creations from a parent stored in a
+  temporary folder
+falsepositives:
+- Software installers that run from temporary folders and also install scheduled tasks
+filename: proc_creation_win_schtasks_parent.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/06/02
+references:
+- https://app.any.run/tasks/649e7b46-9bec-4d05-98a5-dfa9a13eaae5/
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1053.005

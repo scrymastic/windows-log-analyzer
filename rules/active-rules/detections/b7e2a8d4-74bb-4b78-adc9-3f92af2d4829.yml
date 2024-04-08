@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \reg.exe
+    - OriginalFileName|==: reg.exe
+  - or:
+    - CommandLine|contains: \AppDataLow\Software\Microsoft\
+    - CommandLine|contains: \Policies\Microsoft\Windows\OOBE
+    - CommandLine|contains: \Policies\Microsoft\Windows NT\CurrentVersion\Winlogon
+    - CommandLine|contains: \SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon
+    - CommandLine|contains: \CurrentControlSet\Control\SecurityProviders\WDigest
+    - CommandLine|contains: \Microsoft\Windows Defender\
+id: b7e2a8d4-74bb-4b78-adc9-3f92af2d4829

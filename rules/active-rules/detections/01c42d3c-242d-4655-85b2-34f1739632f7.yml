@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \dsacls.exe
+    - OriginalFileName|==: DSACLS.EXE
+  - CommandLine|contains: ' /G '
+  - or:
+    - CommandLine|contains: GR
+    - CommandLine|contains: GE
+    - CommandLine|contains: GW
+    - CommandLine|contains: GA
+    - CommandLine|contains: WP
+    - CommandLine|contains: WD
+id: 01c42d3c-242d-4655-85b2-34f1739632f7

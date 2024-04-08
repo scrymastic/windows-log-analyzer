@@ -1,0 +1,4 @@
+detection:
+- and:
+  - CommandLine|contains: DllRegisterServer
+id: 2569ed8c-1147-498a-9b8c-2ad3656b10ed

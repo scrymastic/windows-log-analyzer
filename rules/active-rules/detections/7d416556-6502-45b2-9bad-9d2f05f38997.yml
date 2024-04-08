@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: ls
+    - ScriptBlockText|contains: get-childitem
+    - ScriptBlockText|contains: gci
+  - ScriptBlockText|contains: -recurse
+  - or:
+    - ScriptBlockText|contains: .pass
+    - ScriptBlockText|contains: .kdbx
+    - ScriptBlockText|contains: .kdb
+id: 7d416556-6502-45b2-9bad-9d2f05f38997

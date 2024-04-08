@@ -1,0 +1,26 @@
+author: Micah Babinski (@micahbabinski), Zach Mathis (@yamatosecurity)
+date: 2023/01/19
+description: Detects successful logon from public IP address via SMB. This can indicate
+  a publicly-exposed SMB port.
+falsepositives:
+- Legitimate or intentional inbound connections from public IP addresses on the SMB
+  port.
+filename: win_security_successful_external_remote_smb_login.yml
+level: high
+logsource:
+  product: windows
+  service: security
+modified: 2024/03/11
+references:
+- https://www.inversecos.com/2020/04/successful-4624-anonymous-logons-to.html
+- https://twitter.com/Purp1eW0lf/status/1616144561965002752
+related:
+- id: 259a9cdf-c4dd-4fa2-b243-2269e5ab18a2
+  type: derived
+status: test
+tags:
+- attack.initial_access
+- attack.credential_access
+- attack.t1133
+- attack.t1078
+- attack.t1110

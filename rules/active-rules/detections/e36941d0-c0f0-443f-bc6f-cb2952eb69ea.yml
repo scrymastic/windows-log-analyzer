@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+  - or:
+    - TargetFilename|contains: \WindowsPowerShell\Modules\
+    - TargetFilename|contains: \PowerShell\7\Modules\
+id: e36941d0-c0f0-443f-bc6f-cb2952eb69ea

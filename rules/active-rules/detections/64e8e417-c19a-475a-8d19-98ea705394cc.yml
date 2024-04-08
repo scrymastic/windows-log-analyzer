@@ -1,0 +1,19 @@
+detection:
+- and:
+  - ContextInfo|contains: '*'
+  - ContextInfo|not contains: = powershell
+  - ContextInfo|not contains: = C:\Windows\System32\WindowsPowerShell\v1.0\powershell
+  - ContextInfo|not contains: = C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell
+  - ContextInfo|not contains: = C:/Windows/System32/WindowsPowerShell/v1.0/powershell
+  - ContextInfo|not contains: = C:/Windows/SysWOW64/WindowsPowerShell/v1.0/powershell
+  - or:
+    - ContextInfo|not contains: = C:\WINDOWS\System32\sdiagnhost.exe -Embedding
+  - or:
+    - ContextInfo|not contains: ConfigSyncRun.exe
+  - or:
+    - ContextInfo|not contains: C:\Windows\system32\dsac.exe
+  - or:
+    - ContextInfo|not contains: C:\Windows\system32\wsmprovhost.exe -Embedding
+  - Payload|not contains: Update-Help
+  - Payload|not contains: Failed to update Help for the module
+id: 64e8e417-c19a-475a-8d19-98ea705394cc

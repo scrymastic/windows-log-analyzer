@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/30
+description: Detects the installation of RTCore service. Which could be an indication
+  of Micro-Star MSI Afterburner vulnerable driver abuse
+falsepositives:
+- Unknown
+filename: win_system_susp_rtcore64_service_install.yml
+level: high
+logsource:
+  product: windows
+  service: system
+modified: ''
+references:
+- https://github.com/br-sn/CheekyBlinder/blob/e1764a8a0e7cda8a3716aefa35799f560686e01c/CheekyBlinder/CheekyBlinder.cpp
+related: []
+status: test
+tags:
+- attack.persistence

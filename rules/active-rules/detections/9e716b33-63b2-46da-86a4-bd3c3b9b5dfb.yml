@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: 'Export-PfxCertificate '
+    - CommandLine|contains: 'Export-Certificate '
+id: 9e716b33-63b2-46da-86a4-bd3c3b9b5dfb

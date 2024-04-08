@@ -45,6 +45,8 @@ detection:
     - CommandLine|contains: "Utilisateurs du Bureau \xE0 distance"
     - CommandLine|contains: Usuarios de escritorio remoto
     - CommandLine|contains: ' /do'
+  - or:
+    - CommandLine|not contains: ' /add'
   - CommandLine|contains: ' accounts '
   - CommandLine|contains: ' /do'
 falsepositives:

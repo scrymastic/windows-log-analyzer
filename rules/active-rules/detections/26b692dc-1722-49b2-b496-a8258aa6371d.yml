@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - or:
+      - ScriptBlockText|contains: del
+      - ScriptBlockText|contains: Remove-Item
+      - ScriptBlockText|contains: rm
+  - or:
+    - ScriptBlockText|contains: (Get-PSReadlineOption).HistorySavePath
+  - or:
+    - ScriptBlockText|contains: Set-PSReadlineOption
+    - ScriptBlockText|contains: "\u2013HistorySaveStyle"
+    - ScriptBlockText|contains: SaveNothing
+  - or:
+    - ScriptBlockText|contains: Set-PSReadlineOption
+    - ScriptBlockText|contains: -HistorySaveStyle
+    - ScriptBlockText|contains: SaveNothing
+id: 26b692dc-1722-49b2-b496-a8258aa6371d

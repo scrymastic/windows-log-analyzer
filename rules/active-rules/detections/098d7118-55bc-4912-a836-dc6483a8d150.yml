@@ -1,0 +1,7 @@
+detection:
+- and:
+  - EventID|==: 5140
+  - ShareName|==: Admin$
+  - or:
+    - SubjectUserName|not endswith: $
+id: 098d7118-55bc-4912-a836-dc6483a8d150

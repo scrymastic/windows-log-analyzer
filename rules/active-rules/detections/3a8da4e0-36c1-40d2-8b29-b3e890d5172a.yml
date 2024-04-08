@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - TargetFilename|endswith: \All.cab
+    - TargetFilename|endswith: .ntds.cleartext
+id: 3a8da4e0-36c1-40d2-8b29-b3e890d5172a

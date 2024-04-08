@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: Get-ItemProperty
+    - ScriptBlockText|contains: 'Registry::'
+    - ScriptBlockText|contains: HKEY_CURRENT_USER\Control Panel\Desktop\
+    - ScriptBlockText|contains: WallPaper
+  - or:
+    - ScriptBlockText|contains: SystemParametersInfo(20,0,*,3)
+id: c5ac6a1e-9407-45f5-a0ce-ca9a0806a287

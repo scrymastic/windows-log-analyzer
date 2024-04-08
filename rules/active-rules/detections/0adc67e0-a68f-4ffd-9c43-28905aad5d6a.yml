@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - PipeName|contains: \imposecost
+    - PipeName|contains: \imposingcost
+id: 0adc67e0-a68f-4ffd-9c43-28905aad5d6a

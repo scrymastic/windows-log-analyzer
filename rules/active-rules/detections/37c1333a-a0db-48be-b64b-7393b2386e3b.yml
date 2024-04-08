@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Company|==: Cube0x0
+id: 37c1333a-a0db-48be-b64b-7393b2386e3b

@@ -1,0 +1,10 @@
+detection:
+- and:
+  - TargetFilename|endswith: :Zone.Identifier
+  - Image|not endswith: :\Program Files\PowerShell\7-preview\pwsh.exe
+  - Image|not endswith: :\Program Files\PowerShell\7\pwsh.exe
+  - Image|not endswith: :\Windows\explorer.exe
+  - Image|not endswith: :\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  - Image|not endswith: :\Windows\SysWOW64\explorer.exe
+  - Image|not endswith: :\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
+id: 3109530e-ab47-4cc6-a953-cac5ebcc93ae

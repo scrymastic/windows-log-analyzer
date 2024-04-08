@@ -1,0 +1,27 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \reg.exe
+    - OriginalFileName|==: reg.exe
+  - or:
+    - CommandLine|contains: ' save '
+    - CommandLine|contains: ' export '
+    - CommandLine|contains: " \u02E2ave "
+    - CommandLine|contains: " e\u02E3port "
+  - or:
+    - CommandLine|contains: hklm
+    - CommandLine|contains: "hk\u02EAm"
+    - CommandLine|contains: hkey_local_machine
+    - CommandLine|contains: "hkey_\u02EAocal_machine"
+    - CommandLine|contains: "hkey_loca\u02EA_machine"
+    - CommandLine|contains: "hkey_\u02EAoca\u02EA_machine"
+  - or:
+    - CommandLine|contains: \system
+    - CommandLine|contains: \sam
+    - CommandLine|contains: \security
+    - CommandLine|contains: "\\\u02E2ystem"
+    - CommandLine|contains: "\\sy\u02E2tem"
+    - CommandLine|contains: "\\\u02E2y\u02E2tem"
+    - CommandLine|contains: "\\\u02E2am"
+    - CommandLine|contains: "\\\u02E2ecurity"
+id: fd877b94-9bb5-4191-bb25-d79cbd93c167

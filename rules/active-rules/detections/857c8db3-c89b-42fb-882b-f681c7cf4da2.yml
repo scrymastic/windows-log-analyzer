@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|endswith: \lsass.exe
+  - Signed|==: 'false'
+id: 857c8db3-c89b-42fb-882b-f681c7cf4da2

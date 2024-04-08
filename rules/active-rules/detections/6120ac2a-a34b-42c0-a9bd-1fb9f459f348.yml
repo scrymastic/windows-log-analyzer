@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \addinutil.exe
+    - OriginalFileName|==: AddInUtil.exe
+  - Image|not contains: :\Windows\Microsoft.NET\Framework\
+  - Image|not contains: :\Windows\Microsoft.NET\Framework64\
+  - Image|not contains: :\Windows\WinSxS\
+id: 6120ac2a-a34b-42c0-a9bd-1fb9f459f348

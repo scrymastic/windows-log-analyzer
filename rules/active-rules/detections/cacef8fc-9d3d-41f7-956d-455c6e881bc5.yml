@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ScriptBlockText|startswith: function Get-VMRemoteFXPhysicalVideoAdapter {
+id: cacef8fc-9d3d-41f7-956d-455c6e881bc5

@@ -19,6 +19,8 @@ logsource:
 detection:
 - and:
   - OriginalFileName|==: ftp.exe
+  - or:
+    - Image|not endswith: \ftp.exe
 fields:
 - CommandLine
 - ParentImage

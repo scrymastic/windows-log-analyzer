@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|endswith: \mscfile\shell\open\command
+id: 7c81fec3-1c1d-43b0-996a-46753041b1b6

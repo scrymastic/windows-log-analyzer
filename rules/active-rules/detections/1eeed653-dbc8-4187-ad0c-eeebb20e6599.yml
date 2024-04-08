@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \setspn.exe
+    - OriginalFileName|==: setspn.exe
+    - Description|contains: Query or reset the computer
+    - Description|contains: SPN attribute
+  - or:
+    - CommandLine|contains: ' -q '
+    - CommandLine|contains: ' /q '
+id: 1eeed653-dbc8-4187-ad0c-eeebb20e6599

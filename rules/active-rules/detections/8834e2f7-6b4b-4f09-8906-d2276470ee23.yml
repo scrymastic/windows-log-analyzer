@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - CommandLine|None: ' -s cmd'
+    - CommandLine|None: ' -s -i cmd'
+    - CommandLine|None: ' -i -s cmd'
+    - CommandLine|None: ' -s pwsh'
+    - CommandLine|None: ' -s -i pwsh'
+    - CommandLine|None: ' -i -s pwsh'
+    - CommandLine|None: ' -s powershell'
+    - CommandLine|None: ' -s -i powershell'
+    - CommandLine|None: ' -i -s powershell'
+  - or:
+    - CommandLine|contains: psexec
+    - CommandLine|contains: paexec
+    - CommandLine|contains: accepteula
+id: 8834e2f7-6b4b-4f09-8906-d2276470ee23

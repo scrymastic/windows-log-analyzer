@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems), Max Altgelt (Nextron Systems), Tim Shelton
+date: 2021/07/14
+description: Detects a suspicious script executions from temporary folder
+falsepositives:
+- Administrative scripts
+filename: proc_creation_win_susp_script_exec_from_temp.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/10/05
+references:
+- https://www.microsoft.com/security/blog/2021/07/13/microsoft-discovers-threat-actor-targeting-solarwinds-serv-u-software-with-0-day-exploit/
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059

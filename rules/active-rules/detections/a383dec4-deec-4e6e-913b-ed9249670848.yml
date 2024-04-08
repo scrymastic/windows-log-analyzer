@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \SystemSettingsAdminFlows.exe
+    - OriginalFileName|==: SystemSettingsAdminFlows.EXE
+  - CommandLine|contains: TurnOnDeveloperFeatures
+  - or:
+    - CommandLine|contains: DeveloperUnlock
+    - CommandLine|contains: EnableSideloading
+id: a383dec4-deec-4e6e-913b-ed9249670848

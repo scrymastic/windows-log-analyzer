@@ -15,6 +15,9 @@ logsource:
 detection:
 - and:
   - ParentImage|endswith: \SndVol.exe
+  - or:
+    - Image|not endswith: \rundll32.exe
+    - CommandLine|not contains: ' shell32.dll,Control_RunDLL '
 falsepositives:
 - Unknown
 level: medium

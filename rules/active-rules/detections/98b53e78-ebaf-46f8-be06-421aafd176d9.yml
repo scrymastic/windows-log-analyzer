@@ -1,0 +1,29 @@
+detection:
+- and:
+  - or:
+    - or:
+      - OriginalFileName|==: winPEAS.exe
+      - or:
+        - Image|endswith: \winPEASany_ofs.exe
+        - Image|endswith: \winPEASany.exe
+        - Image|endswith: \winPEASx64_ofs.exe
+        - Image|endswith: \winPEASx64.exe
+        - Image|endswith: \winPEASx86_ofs.exe
+        - Image|endswith: \winPEASx86.exe
+  - or:
+    - or:
+      - CommandLine|contains: ' applicationsinfo'
+      - CommandLine|contains: ' browserinfo'
+      - CommandLine|contains: ' eventsinfo'
+      - CommandLine|contains: ' fileanalysis'
+      - CommandLine|contains: ' filesinfo'
+      - CommandLine|contains: ' processinfo'
+      - CommandLine|contains: ' servicesinfo'
+      - CommandLine|contains: ' windowscreds'
+  - or:
+    - CommandLine|contains: https://github.com/carlospolop/PEASS-ng/releases/latest/download/
+  - or:
+    - or:
+      - ParentCommandLine|endswith: ' -linpeas'
+      - CommandLine|endswith: ' -linpeas'
+id: 98b53e78-ebaf-46f8-be06-421aafd176d9

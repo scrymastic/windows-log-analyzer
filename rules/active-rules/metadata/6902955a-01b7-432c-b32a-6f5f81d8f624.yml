@@ -1,0 +1,20 @@
+author: '@SerkinValery'
+date: 2022/09/16
+description: Detects an access to authentication tokens and accounts of Microsoft
+  Teams desktop application.
+falsepositives:
+- Unknown
+filename: file_event_win_access_susp_teams.yml
+level: high
+logsource:
+  category: file_event
+  product: windows
+modified: ''
+references:
+- https://www.bleepingcomputer.com/news/security/microsoft-teams-stores-auth-tokens-as-cleartext-in-windows-linux-macs/
+- https://www.vectra.ai/blogpost/undermining-microsoft-teams-security-by-mining-tokens
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1528

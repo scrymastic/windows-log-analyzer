@@ -26,6 +26,10 @@ detection:
   - or:
     - CommandLine|contains: NT AUT
     - CommandLine|contains: ' SYSTEM '
+  - or:
+    - Image|not endswith: \schtasks.exe
+    - CommandLine|not contains: /TN TVInstallRestore
+    - CommandLine|not contains: \TeamViewer_.exe
   - CommandLine|not contains: '/Create /F /RU System /SC WEEKLY /TN AviraSystemSpeedupVerify
       /TR '
   - CommandLine|not contains: :\Program Files (x86)\Avira\System Speedup\setup\avira_speedup_setup.exe

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - ImageLoaded|endswith: \vivaldi_elf.dll
+  - or:
+    - Image|not endswith: \Vivaldi\Application\vivaldi.exe
+    - ImageLoaded|not contains: \Vivaldi\Application\
+id: 2092cacb-d77b-4f98-ab0d-32b32f99a054

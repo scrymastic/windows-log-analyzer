@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - IntegrityLevel|==: High
+    - IntegrityLevel|==: System
+  - ParentImage|endswith: \AppData\Local\Temp\pkgmgr.exe
+  - CommandLine|==: '"C:\Windows\system32\msconfig.exe" -5'
+id: ad92e3f9-7eb6-460e-96b1-582b0ccbb980

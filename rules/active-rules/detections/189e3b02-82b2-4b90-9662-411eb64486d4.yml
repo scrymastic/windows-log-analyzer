@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: DumpCreds
+    - ScriptBlockText|contains: DumpCerts
+  - or:
+    - ScriptBlockText|contains: sekurlsa::logonpasswords
+  - or:
+    - ScriptBlockText|contains: crypto::certificates
+    - ScriptBlockText|contains: CERT_SYSTEM_STORE_LOCAL_MACHINE
+id: 189e3b02-82b2-4b90-9662-411eb64486d4

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 2003
+    - EventID|==: 2100
+    - EventID|==: 2102
+id: 1a4bd6e3-4c6e-405d-a9a3-53a116e341d4

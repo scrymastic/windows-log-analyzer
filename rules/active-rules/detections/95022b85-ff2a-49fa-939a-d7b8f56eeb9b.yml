@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \rundll32.exe
+    - Image|endswith: \cmd.exe
+  - or:
+    - CommandLine|contains: gthread-3.6.dll
+    - CommandLine|contains: \Windows\Temp\tmp.bat
+    - CommandLine|contains: sigcmm-2.4.dll
+id: 95022b85-ff2a-49fa-939a-d7b8f56eeb9b

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \sqltoolsps.exe
+    - ParentImage|endswith: \sqltoolsps.exe
+    - OriginalFileName|==: \sqltoolsps.exe
+id: a746c9b8-a2fb-4ee5-a428-92bee9e99060

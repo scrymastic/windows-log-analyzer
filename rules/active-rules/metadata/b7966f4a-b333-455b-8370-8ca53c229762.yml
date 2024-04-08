@@ -1,0 +1,20 @@
+author: Sreeman
+date: 2020/10/29
+description: Detects dropping of dll files in system32 that may be used to retrieve
+  user credentials from LSASS
+falsepositives:
+- Unknown
+filename: proc_creation_win_reg_credential_access_via_password_filter.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/10/09
+references:
+- https://pentestlab.blog/2020/02/10/credential-access-password-filter-dll/
+- https://github.com/3gstudent/PasswordFilter/tree/master/PasswordFilter
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1556.002

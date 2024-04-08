@@ -33,6 +33,8 @@ detection:
   - or:
     - ParentCommandLine|==: /../../
     - CommandLine|contains: /../../
+  - or:
+    - CommandLine|not contains: \Tasktop\keycloak\bin\/../../jre\bin\java
 falsepositives:
 - Java tools are known to produce false-positive when loading libraries
 level: high

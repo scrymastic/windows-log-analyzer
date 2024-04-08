@@ -1,0 +1,25 @@
+author: Florian Roth (Nextron Systems), Wojciech Lesicki
+date: 2021/05/26
+description: Detects known malicious service installs that appear in cases in which
+  a Cobalt Strike beacon elevates privileges or lateral movement
+falsepositives:
+- Unknown
+filename: win_system_cobaltstrike_service_installs.yml
+level: critical
+logsource:
+  product: windows
+  service: system
+modified: 2022/11/27
+references:
+- https://www.sans.org/webcasts/119395
+- https://www.crowdstrike.com/blog/getting-the-bacon-from-cobalt-strike-beacon/
+- https://thedfirreport.com/2021/08/29/cobalt-strike-a-defenders-guide/
+related: []
+status: test
+tags:
+- attack.execution
+- attack.privilege_escalation
+- attack.lateral_movement
+- attack.t1021.002
+- attack.t1543.003
+- attack.t1569.002

@@ -1,0 +1,26 @@
+author: Swachchhanda Shrawan Poudel
+date: 2024/02/12
+description: 'Detects the enumeration of a specific DLL or EXE being used by a binary
+  via "tasklist.exe".
+
+  This is often used by attackers in order to find the specific process identifier
+  (PID) that is using the DLL in question.
+
+  In order to dump the process memory or perform other nefarious actions.
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_tasklist_module_enumeration.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/13
+references:
+- https://www.n00py.io/2021/05/dumping-plaintext-rdp-credentials-from-svchost-exe/
+- https://pentestlab.blog/tag/svchost/
+related: []
+status: experimental
+tags:
+- attack.t1003

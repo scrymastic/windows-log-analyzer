@@ -1,0 +1,9 @@
+detection:
+- and:
+  - EventID|==: 5136
+  - AttributeValue|contains: '*'
+  - or:
+    - AttributeLDAPDisplayName|==: primaryInternationalISDNNumber
+    - AttributeLDAPDisplayName|==: otherFacsimileTelephoneNumber
+    - AttributeLDAPDisplayName|==: primaryTelexNumber
+id: d00a9a72-2c09-4459-ad03-5e0a23351e36

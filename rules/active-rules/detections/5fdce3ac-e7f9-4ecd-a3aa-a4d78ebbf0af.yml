@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \mstsc.exe
+    - OriginalFileName|==: mstsc.exe
+  - or:
+    - CommandLine|endswith: .rdp
+    - CommandLine|endswith: .rdp"
+  - or:
+    - ParentImage|!==: C:\Windows\System32\lxss\wslhost.exe
+    - CommandLine|not contains: C:\ProgramData\Microsoft\WSL\wslg.rdp
+id: 5fdce3ac-e7f9-4ecd-a3aa-a4d78ebbf0af

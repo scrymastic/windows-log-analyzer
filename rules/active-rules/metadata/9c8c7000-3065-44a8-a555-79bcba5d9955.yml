@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/06/13
+description: Detects execution of "msdt.exe" using an answer file which is simulating
+  the legitimate way of calling msdt via "pcwrun.exe" (For example from the compatibility
+  tab)
+falsepositives:
+- Possible undocumented parents of "msdt" other than "pcwrun"
+filename: proc_creation_win_lolbin_msdt_answer_file.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Msdt/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218
+- attack.execution

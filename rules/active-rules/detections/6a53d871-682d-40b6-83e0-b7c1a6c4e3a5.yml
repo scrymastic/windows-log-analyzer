@@ -1,0 +1,10 @@
+detection:
+- and:
+  - EventID|==: 4768
+  - TargetUserName|endswith: $
+  - CertThumbprint|contains: '*'
+  - or:
+    - IpAddress|!==: ::1
+  - or:
+    - CertThumbprint|!==: ''
+id: 6a53d871-682d-40b6-83e0-b7c1a6c4e3a5

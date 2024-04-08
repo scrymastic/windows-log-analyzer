@@ -1,0 +1,14 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Win32_NTEventlogFile
+  - or:
+    - ScriptBlockText|contains: .BackupEventlog(
+    - ScriptBlockText|contains: .ChangeSecurityPermissions(
+    - ScriptBlockText|contains: .ChangeSecurityPermissionsEx(
+    - ScriptBlockText|contains: .ClearEventLog(
+    - ScriptBlockText|contains: .Delete(
+    - ScriptBlockText|contains: .DeleteEx(
+    - ScriptBlockText|contains: .Rename(
+    - ScriptBlockText|contains: .TakeOwnerShip(
+    - ScriptBlockText|contains: .TakeOwnerShipEx(
+id: e2812b49-bae0-4b21-b366-7c142eafcde2

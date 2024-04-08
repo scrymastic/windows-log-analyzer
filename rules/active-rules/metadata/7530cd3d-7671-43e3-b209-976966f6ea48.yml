@@ -1,0 +1,21 @@
+author: X__Junior (Nextron Systems)
+date: 2023/09/11
+description: Detects the execution of a renamed "CURL.exe" binary based on the PE
+  metadata fields
+falsepositives:
+- Unknown
+filename: proc_creation_win_renamed_curl.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/10/12
+references:
+- https://twitter.com/Kostastsale/status/1700965142828290260
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.t1059
+- attack.defense_evasion
+- attack.t1202

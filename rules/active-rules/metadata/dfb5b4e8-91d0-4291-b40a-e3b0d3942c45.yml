@@ -1,0 +1,27 @@
+author: frack113
+date: 2021/12/30
+description: 'Adversaries may establish persistence and/or elevate privileges by executing
+  malicious content triggered by application shims.
+
+  The Microsoft Windows Application Compatibility Infrastructure/Framework (Application
+  Shim) was created to allow for backward compatibility of software as the operating
+  system codebase changes over time
+
+  '
+falsepositives:
+- Legitimate custom SHIM installations will also trigger this rule
+filename: registry_set_persistence_shim_database.yml
+level: medium
+logsource:
+  category: registry_set
+  product: windows
+modified: 2023/08/17
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.011/T1546.011.md#atomic-test-3---registry-key-creation-andor-modification-events-for-sdb
+- https://www.fireeye.com/blog/threat-research/2017/05/fin7-shim-databases-persistence.html
+- https://andreafortuna.org/2018/11/12/process-injection-and-persistence-using-application-shimming/
+related: []
+status: experimental
+tags:
+- attack.persistence
+- attack.t1546.011

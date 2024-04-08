@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LegalNoticeCaption
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LegalNoticeText
+  - or:
+    - Details|contains: encrypted
+    - Details|contains: Unlock-Password
+    - Details|contains: paying
+id: 8b9606c9-28be-4a38-b146-0e313cc232c1

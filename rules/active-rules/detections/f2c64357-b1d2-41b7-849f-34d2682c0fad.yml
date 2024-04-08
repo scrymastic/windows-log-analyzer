@@ -1,0 +1,42 @@
+detection:
+- and:
+  - Image|endswith: \schtasks.exe
+  - CommandLine|contains: '/Create '
+  - or:
+    - CommandLine|contains: '/sc minute '
+    - CommandLine|contains: '/ru system '
+  - or:
+    - CommandLine|contains: cmd /c
+    - CommandLine|contains: cmd /k
+    - CommandLine|contains: cmd /r
+    - CommandLine|contains: 'cmd.exe /c '
+    - CommandLine|contains: 'cmd.exe /k '
+    - CommandLine|contains: 'cmd.exe /r '
+  - or:
+    - CommandLine|contains: ' -decode '
+    - CommandLine|contains: ' -enc '
+    - CommandLine|contains: ' -w hidden '
+    - CommandLine|contains: ' bypass '
+    - CommandLine|contains: ' IEX'
+    - CommandLine|contains: .DownloadData
+    - CommandLine|contains: .DownloadFile
+    - CommandLine|contains: .DownloadString
+    - CommandLine|contains: '/c start /min '
+    - CommandLine|contains: FromBase64String
+    - CommandLine|contains: mshta http
+    - CommandLine|contains: mshta.exe http
+  - or:
+    - CommandLine|contains: :\ProgramData\
+    - CommandLine|contains: :\Temp\
+    - CommandLine|contains: :\Tmp\
+    - CommandLine|contains: :\Users\Public\
+    - CommandLine|contains: :\Windows\Temp\
+    - CommandLine|contains: \AppData\
+    - CommandLine|contains: '%AppData%'
+    - CommandLine|contains: '%Temp%'
+    - CommandLine|contains: '%tmp%'
+  - or:
+    - CommandLine|contains: cscript
+    - CommandLine|contains: curl
+    - CommandLine|contains: wscript
+id: f2c64357-b1d2-41b7-849f-34d2682c0fad

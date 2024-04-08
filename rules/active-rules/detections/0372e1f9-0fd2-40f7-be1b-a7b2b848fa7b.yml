@@ -1,0 +1,5 @@
+detection:
+- and:
+  - TargetObject|endswith: \SOFTWARE\Policies\Microsoft\Windows\OOBE\DisablePrivacyExperience
+  - Details|==: DWORD (0x00000000)
+id: 0372e1f9-0fd2-40f7-be1b-a7b2b848fa7b

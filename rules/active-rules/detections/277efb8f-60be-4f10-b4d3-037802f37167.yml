@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - EventType|==: RenameKey
+    - NewName|contains: \CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shell\open
+  - or:
+    - EventType|==: SetValue
+    - TargetObject|contains: \CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shell\open\command\(Default)
+id: 277efb8f-60be-4f10-b4d3-037802f37167

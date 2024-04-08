@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: '[System.Net.WebRequest]::create'
+    - CommandLine|contains: 'curl '
+    - CommandLine|contains: Invoke-RestMethod
+    - CommandLine|contains: Invoke-WebRequest
+    - CommandLine|contains: 'iwr '
+    - CommandLine|contains: Net.WebClient
+    - CommandLine|contains: Resume-BitsTransfer
+    - CommandLine|contains: Start-BitsTransfer
+    - CommandLine|contains: 'wget '
+    - CommandLine|contains: WinHttp.WinHttpRequest
+id: 9fc51a3c-81b3-4fa7-b35f-7c02cf10fd2d

@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/22
+description: Detects the execution utitilies often found in Visual Studio tools that
+  hardcode the call to the binary "link.exe". They can be abused to sideload any binary
+  with the same name
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_sideload_link_binary.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://twitter.com/0gtweet/status/1560732860935729152
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

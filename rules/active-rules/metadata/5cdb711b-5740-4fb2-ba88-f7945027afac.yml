@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/10
+description: Detects rundll32 execution where the DLL is located on a remote location
+  (share)
+falsepositives:
+- Unlikely
+filename: proc_creation_win_rundll32_unc_path.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.cybereason.com/blog/rundll32-the-infamous-proxy-for-executing-malicious-code
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.execution
+- attack.t1021.002
+- attack.t1218.011

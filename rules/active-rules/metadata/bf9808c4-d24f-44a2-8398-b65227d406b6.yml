@@ -1,0 +1,23 @@
+author: X__Junior
+date: 2023/04/17
+description: Detects potential DLL sideloading of "libvlc.dll", a DLL that is legitimately
+  used by "VLC.exe"
+falsepositives:
+- False positives are expected if VLC is installed in non-default locations
+filename: image_load_side_load_libvlc.yml
+level: medium
+logsource:
+  category: image_load
+  product: windows
+modified: ''
+references:
+- https://www.trendmicro.com/en_us/research/23/c/earth-preta-updated-stealthy-strategies.html
+- https://hijacklibs.net/entries/3rd_party/vlc/libvlc.html
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1574.001
+- attack.t1574.002

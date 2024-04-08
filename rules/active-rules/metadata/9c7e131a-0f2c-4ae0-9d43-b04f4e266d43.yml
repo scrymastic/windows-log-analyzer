@@ -1,0 +1,29 @@
+author: Sreeman
+date: 2020/03/13
+description: 'Detects uncommon child processes of Appvlp.EXE
+
+  Appvlp or the Application Virtualization Utility is included with Microsoft Office.
+  Attackers are able to abuse "AppVLP" to execute shell commands.
+
+  Normally, this binary is used for Application Virtualization, but it can also be
+  abused to circumvent the ASR file path rule folder
+
+  or to mark a file as a system file.
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_appvlp_uncommon_child_process.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/11/09
+references:
+- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Appvlp/
+related: []
+status: test
+tags:
+- attack.t1218
+- attack.defense_evasion
+- attack.execution

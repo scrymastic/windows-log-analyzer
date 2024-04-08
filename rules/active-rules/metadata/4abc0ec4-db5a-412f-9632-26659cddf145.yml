@@ -1,0 +1,22 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/18
+description: Detects execution of the binary "wpbbin" which is used as part of the
+  UEFI based persistence method described in the reference section
+falsepositives:
+- Legitimate usage of the file by hardware manufacturer such as lenovo (Thanks @0gtweet
+  for the tip)
+filename: proc_creation_win_wpbbin_potential_persistence.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://grzegorztworek.medium.com/using-uefi-to-inject-executable-files-into-bitlocker-protected-drives-8ff4ca59c94c
+- https://persistence-info.github.io/Data/wpbbin.html
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.defense_evasion
+- attack.t1542.001

@@ -1,0 +1,10 @@
+detection:
+- and:
+  - EventID|==: 5007
+  - or:
+    - NewValue|contains: '\Windows Defender\DisableAntiSpyware '
+    - NewValue|contains: '\Windows Defender\Scan\DisableRemovableDriveScanning '
+    - NewValue|contains: '\Windows Defender\Scan\DisableScanningMappedNetworkDrivesForFullScan '
+    - NewValue|contains: '\Windows Defender\SpyNet\DisableBlockAtFirstSeen '
+    - NewValue|contains: '\Real-Time Protection\SpyNetReporting '
+id: 801bd44f-ceed-4eb6-887c-11544633c0aa

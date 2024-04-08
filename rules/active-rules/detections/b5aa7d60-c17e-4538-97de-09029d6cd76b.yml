@@ -1,0 +1,7 @@
+detection:
+- and:
+  - EventID|==: 157
+  - subjectName|==: CN=Foresee Consulting Inc., O=Foresee Consulting Inc., L=North
+      York, S=Ontario, C=CA, SERIALNUMBER=1004913-1, OID.1.3.6.1.4.1.311.60.2.1.3=CA,
+      OID.2.5.4.15=Private Organization
+id: b5aa7d60-c17e-4538-97de-09029d6cd76b

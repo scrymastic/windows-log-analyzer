@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - TargetFilename|endswith: \NPPSpy.txt
+    - TargetFilename|endswith: \NPPSpy.dll
+id: cad1fe90-2406-44dc-bd03-59d0b58fe722

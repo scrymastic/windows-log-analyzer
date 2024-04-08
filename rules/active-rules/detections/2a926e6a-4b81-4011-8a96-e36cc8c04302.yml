@@ -1,0 +1,7 @@
+detection:
+- and:
+  - EventID|==: 4697
+  - or:
+    - ServiceFileName|contains: powershell
+    - ServiceFileName|contains: pwsh
+id: 2a926e6a-4b81-4011-8a96-e36cc8c04302

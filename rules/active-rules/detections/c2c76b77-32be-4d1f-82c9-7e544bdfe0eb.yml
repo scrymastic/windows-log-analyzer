@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \secedit.exe
+    - OriginalFileName|==: SeCEdit
+  - CommandLine|contains: /export
+  - CommandLine|contains: /cfg
+  - CommandLine|contains: /configure
+  - CommandLine|contains: /db
+id: c2c76b77-32be-4d1f-82c9-7e544bdfe0eb

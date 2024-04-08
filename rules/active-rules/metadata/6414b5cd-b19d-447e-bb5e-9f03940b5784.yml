@@ -1,0 +1,22 @@
+author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema (project and research)
+date: 2022/10/25
+description: Detects DLL sideloading of "dbghelp.dll"
+falsepositives:
+- Legitimate applications loading their own versions of the DLL mentioned in this
+  rule
+filename: image_load_side_load_dbghelp_dll.yml
+level: medium
+logsource:
+  category: image_load
+  product: windows
+modified: 2023/05/05
+references:
+- https://hijacklibs.net/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1574.001
+- attack.t1574.002

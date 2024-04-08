@@ -1,0 +1,26 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: cl
+    - CommandLine|contains: /Trace
+  - or:
+    - CommandLine|contains: clear-log
+    - CommandLine|contains: /Trace
+  - or:
+    - CommandLine|contains: sl
+    - CommandLine|contains: /e:false
+  - or:
+    - CommandLine|contains: set-log
+    - CommandLine|contains: /e:false
+  - or:
+    - CommandLine|contains: logman
+    - CommandLine|contains: update
+    - CommandLine|contains: trace
+    - CommandLine|contains: --p
+    - CommandLine|contains: -ets
+  - or:
+    - CommandLine|contains: Remove-EtwTraceProvider
+  - or:
+    - CommandLine|contains: Set-EtwTraceProvider
+    - CommandLine|contains: '0x11'
+id: a238b5d0-ce2d-4414-a676-7a531b3d13d6

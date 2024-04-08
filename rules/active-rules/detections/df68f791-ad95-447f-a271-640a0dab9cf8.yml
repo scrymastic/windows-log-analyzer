@@ -1,0 +1,5 @@
+detection:
+- and:
+  - QueryName|==: update.onelaunch.com
+  - Image|endswith: \OneLaunch.exe
+id: df68f791-ad95-447f-a271-640a0dab9cf8

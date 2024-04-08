@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/06/20
+description: Detects usage of Dsacls to grant over permissive permissions
+falsepositives:
+- Legitimate administrators granting over permissive permissions to users
+filename: proc_creation_win_dsacls_abuse_permissions.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/04
+references:
+- https://ss64.com/nt/dsacls.html
+- https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771151(v=ws.11)
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

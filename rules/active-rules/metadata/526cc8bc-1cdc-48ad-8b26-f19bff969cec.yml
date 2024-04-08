@@ -1,0 +1,24 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/26
+description: Detects when the "index" value of a scheduled task is removed or deleted
+  from the registry. Which effectively hides it from any tooling such as "schtasks
+  /query"
+falsepositives:
+- Unknown
+filename: registry_delete_schtasks_hide_task_via_index_value_removal.yml
+level: medium
+logsource:
+  category: registry_delete
+  product: windows
+modified: 2023/02/08
+references:
+- https://blog.qualys.com/vulnerabilities-threat-research/2022/06/20/defending-against-scheduled-task-attacks-in-windows-environments
+related:
+- id: acd74772-5f88-45c7-956b-6a7b36c294d2
+  type: similar
+- id: 5b16df71-8615-4f7f-ac9b-6c43c0509e61
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562

@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \WMIC.exe
+    - OriginalFileName|==: wmic.exe
+  - or:
+    - CommandLine|contains: volume
+    - CommandLine|contains: path win32_logicaldisk
+id: c79da740-5030-45ec-a2e0-479e824a562c

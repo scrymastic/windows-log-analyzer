@@ -1,0 +1,45 @@
+detection:
+- and:
+  - or:
+    - or:
+      - CommandLine|contains: cmd.exe/c
+      - CommandLine|contains: \cmd/c
+      - CommandLine|contains: '"cmd/c'
+      - CommandLine|contains: cmd.exe/k
+      - CommandLine|contains: \cmd/k
+      - CommandLine|contains: '"cmd/k'
+      - CommandLine|contains: cmd.exe/r
+      - CommandLine|contains: \cmd/r
+      - CommandLine|contains: '"cmd/r'
+  - or:
+    - or:
+      - CommandLine|contains: /cwhoami
+      - CommandLine|contains: /cpowershell
+      - CommandLine|contains: /cschtasks
+      - CommandLine|contains: /cbitsadmin
+      - CommandLine|contains: /ccertutil
+      - CommandLine|contains: /kwhoami
+      - CommandLine|contains: /kpowershell
+      - CommandLine|contains: /kschtasks
+      - CommandLine|contains: /kbitsadmin
+      - CommandLine|contains: /kcertutil
+  - or:
+    - or:
+      - CommandLine|contains: cmd.exe /c
+      - CommandLine|contains: cmd /c
+      - CommandLine|contains: cmd.exe /k
+      - CommandLine|contains: cmd /k
+      - CommandLine|contains: cmd.exe /r
+      - CommandLine|contains: cmd /r
+  - or:
+    - CommandLine|contains: 'cmd.exe /c '
+    - CommandLine|contains: 'cmd /c '
+    - CommandLine|contains: 'cmd.exe /k '
+    - CommandLine|contains: 'cmd /k '
+    - CommandLine|contains: 'cmd.exe /r '
+    - CommandLine|contains: 'cmd /r '
+  - or:
+    - CommandLine|contains: AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules
+    - CommandLine|endswith: cmd.exe/c .
+    - CommandLine|==: cmd.exe /c
+id: a16980c2-0c56-4de0-9a79-17971979efdd

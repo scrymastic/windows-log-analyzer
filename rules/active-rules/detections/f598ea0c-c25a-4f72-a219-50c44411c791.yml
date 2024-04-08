@@ -1,0 +1,5 @@
+detection:
+- and:
+  - EventID|==: 5136
+  - AttributeLDAPDisplayName|==: msDS-KeyCredentialLink
+id: f598ea0c-c25a-4f72-a219-50c44411c791

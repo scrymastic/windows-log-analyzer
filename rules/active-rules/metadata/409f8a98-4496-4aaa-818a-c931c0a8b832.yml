@@ -1,0 +1,20 @@
+author: elhoim
+date: 2022/04/28
+description: This rule detects suspicious files created by Microsoft Sync Center (mobsync)
+falsepositives:
+- Unknown
+filename: file_event_win_susp_creation_by_mobsync.yml
+level: medium
+logsource:
+  category: file_event
+  product: windows
+modified: 2022/06/02
+references:
+- https://redcanary.com/blog/intelligence-insights-november-2021/
+related: []
+status: test
+tags:
+- attack.t1055
+- attack.t1218
+- attack.execution
+- attack.defense_evasion

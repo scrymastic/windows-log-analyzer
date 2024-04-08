@@ -1,0 +1,22 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/09/02
+description: Detects execution of "reg.exe" commands with the "add" or "copy" flags
+  on safe boot registry keys. Often used by attacker to allow the ransomware to work
+  in safe mode as some security products do not
+falsepositives:
+- Unlikely
+filename: proc_creation_win_reg_add_safeboot.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/19
+references:
+- https://redacted.com/blog/bianlian-ransomware-gang-gives-it-a-go/
+related:
+- id: fc0e89b5-adb0-43c1-b749-c12a10ec37de
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.001

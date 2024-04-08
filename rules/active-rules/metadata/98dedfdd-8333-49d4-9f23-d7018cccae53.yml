@@ -1,0 +1,28 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/12/15
+description: 'Detects changes to the "NoLMHash" registry value in order to allow Windows
+  to store LM Hashes.
+
+  By setting this registry value to "0" (DWORD), Windows will be allowed to store
+  a LAN manager hash of your password in Active Directory and local SAM databases.
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_reg_nolmhash.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/12/22
+references:
+- https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
+- https://learn.microsoft.com/en-us/troubleshoot/windows-server/windows-security/prevent-windows-store-lm-hash-password
+- https://www.sans.org/blog/protecting-privileged-domain-accounts-lm-hashes-the-good-the-bad-and-the-ugly/
+related:
+- id: c420410f-c2d8-4010-856b-dffe21866437
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1112

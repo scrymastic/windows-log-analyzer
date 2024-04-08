@@ -1,0 +1,34 @@
+detection:
+- and:
+  - or:
+    - Image|contains: ~1.bat
+    - Image|contains: ~1.dll
+    - Image|contains: ~1.exe
+    - Image|contains: ~1.hta
+    - Image|contains: ~1.js
+    - Image|contains: ~1.msi
+    - Image|contains: ~1.ps1
+    - Image|contains: ~1.tmp
+    - Image|contains: ~1.vbe
+    - Image|contains: ~1.vbs
+    - Image|contains: ~2.bat
+    - Image|contains: ~2.dll
+    - Image|contains: ~2.exe
+    - Image|contains: ~2.hta
+    - Image|contains: ~2.js
+    - Image|contains: ~2.msi
+    - Image|contains: ~2.ps1
+    - Image|contains: ~2.tmp
+    - Image|contains: ~2.vbe
+    - Image|contains: ~2.vbs
+  - or:
+    - ParentImage|!==: C:\Windows\explorer.exe
+  - or:
+    - ParentImage|not endswith: \WebEx\WebexHost.exe
+  - or:
+    - ParentImage|not endswith: \thor\thor64.exe
+  - or:
+    - Image|!==: C:\PROGRA~1\WinZip\WZPREL~1.EXE
+  - or:
+    - Image|not endswith: \VCREDI~1.EXE
+id: 3ef5605c-9eb9-47b0-9a71-b727e6aa5c3b

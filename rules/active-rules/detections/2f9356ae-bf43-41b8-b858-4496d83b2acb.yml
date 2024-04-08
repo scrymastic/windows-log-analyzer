@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - TargetFilename|contains: \AppData\Local\Temp\
+    - TargetFilename|contains: .zip\
+    - TargetFilename|endswith: .iso
+  - or:
+    - TargetFilename|contains: \AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\
+    - TargetFilename|endswith: .iso
+id: 2f9356ae-bf43-41b8-b858-4496d83b2acb

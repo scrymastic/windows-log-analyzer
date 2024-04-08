@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2018/03/13
+description: Detects the creation of a process via the Windows task manager. This
+  might be an attempt to bypass UAC
+falsepositives:
+- Administrative activity
+filename: proc_creation_win_taskmgr_susp_child_process.yml
+level: low
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/01/18
+references:
+- https://twitter.com/ReneFreingruber/status/1172244989335810049
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036

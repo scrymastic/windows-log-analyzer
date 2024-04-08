@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \wscript.exe
+    - or:
+      - OriginalFileName|==: cscript.exe
+      - OriginalFileName|==: wscript.exe
+  - CommandLine|contains: gatherNetworkInfo.vbs
+id: 575dce0c-8139-4e30-9295-1ee75969f7fe

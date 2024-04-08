@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|contains: \Software\Microsoft\Windows\CurrentVersion\Run\ntkd
+id: 70d43542-cd2d-483c-8f30-f16b436fd7db

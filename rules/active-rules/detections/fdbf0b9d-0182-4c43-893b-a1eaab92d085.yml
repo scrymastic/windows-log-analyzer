@@ -1,0 +1,11 @@
+detection:
+- and:
+  - TargetObject|startswith: HKCR\
+  - Details|startswith: 'URL:'
+  - or:
+    - Details|not startswith: URL:ms-
+  - Image|not startswith: C:\Program Files (x86)
+  - Image|not startswith: C:\Program Files\
+  - Image|not startswith: C:\Windows\System32\
+  - Image|not startswith: C:\Windows\SysWOW64\
+id: fdbf0b9d-0182-4c43-893b-a1eaab92d085

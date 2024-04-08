@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: \Microsoft\Windows NT\CurrentVersion\Event Viewer\MicrosoftRedirectionProgram
+    - TargetObject|contains: \Microsoft\Windows NT\CurrentVersion\Event Viewer\MicrosoftRedirectionURL
+  - or:
+    - Image|not endswith: C:\WINDOWS\system32\svchost.exe
+    - TargetObject|not endswith: \Microsoft\Windows NT\CurrentVersion\Event Viewer\MicrosoftRedirectionProgram
+    - Details|!==: '%%SystemRoot%%\PCHealth\HelpCtr\Binaries\HelpCtr.exe'
+  - or:
+    - Image|not endswith: C:\WINDOWS\system32\svchost.exe
+    - TargetObject|not endswith: \Microsoft\Windows NT\CurrentVersion\Event Viewer\MicrosoftRedirectionProgramCommandLineParameters
+    - Details|!==: -url hcp://services/centers/support?topic=%%s
+  - or:
+    - Details|!==: http://go.microsoft.com/fwlink/events.asp
+  - or:
+    - Details|!==: (Empty)
+id: a1e11042-a74a-46e6-b07c-c4ce8ecc239b

@@ -1,0 +1,22 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/09/11
+description: Detects calls to the "terminate" function via wmic in order to kill an
+  application
+falsepositives:
+- Unknown
+filename: proc_creation_win_wmic_terminate_application.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://cyble.com/blog/lockfile-ransomware-using-proxyshell-attack-to-deploy-ransomware/
+- https://www.bitdefender.com/files/News/CaseStudies/study/377/Bitdefender-Whitepaper-WMI-creat4871-en-EN-GenericUse.pdf
+related:
+- id: 847d5ff3-8a31-4737-a970-aeae8fe21765
+  type: derived
+status: experimental
+tags:
+- attack.execution
+- attack.t1047

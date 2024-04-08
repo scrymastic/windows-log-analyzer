@@ -1,0 +1,10 @@
+detection:
+- and:
+  - IntegrityLevel|==: Medium
+  - CommandLine|contains: ControlSet
+  - CommandLine|contains: services
+  - or:
+    - CommandLine|contains: \ImagePath
+    - CommandLine|contains: \FailureCommand
+    - CommandLine|contains: \ServiceDll
+id: 0f9c21f1-6a73-4b0e-9809-cb562cb8d981

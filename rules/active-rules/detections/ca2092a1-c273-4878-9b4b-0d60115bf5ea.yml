@@ -1,0 +1,26 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - CommandLine|contains: ' -e'
+  - or:
+    - CommandLine|contains: ' JAB'
+    - CommandLine|contains: ' SUVYI'
+    - CommandLine|contains: ' SQBFAFgA'
+    - CommandLine|contains: ' aQBlAHgA'
+    - CommandLine|contains: ' aWV4I'
+    - CommandLine|contains: ' IAA'
+    - CommandLine|contains: ' IAB'
+    - CommandLine|contains: ' UwB'
+    - CommandLine|contains: ' cwB'
+  - or:
+    - CommandLine|contains: '.exe -ENCOD '
+    - CommandLine|contains: ' BA^J e-'
+  - or:
+    - CommandLine|not contains: ' -ExecutionPolicy remotesigned '
+id: ca2092a1-c273-4878-9b4b-0d60115bf5ea

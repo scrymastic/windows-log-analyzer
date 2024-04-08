@@ -1,0 +1,23 @@
+author: Janantha Marasinghe
+date: 2020/09/26
+description: Adversaries can carry out malicious operations using a virtual instance
+  to avoid detection. This rule is built to detect the registration of the Virtualbox
+  driver or start of a Virtualbox VM.
+falsepositives:
+- This may have false positives on hosts where Virtualbox is legitimately being used
+  for operations
+filename: proc_creation_win_virtualbox_execution.yml
+level: low
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/07/14
+references:
+- https://news.sophos.com/en-us/2020/05/21/ragnar-locker-ransomware-deploys-virtual-machine-to-dodge-security/
+- https://threatpost.com/maze-ransomware-ragnar-locker-virtual-machine/159350/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1564.006
+- attack.t1564

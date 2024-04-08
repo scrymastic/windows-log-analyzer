@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 5441
+    - EventID|==: 5447
+  - FilterName|contains: Custom Outbound Filter
+id: 98054878-5eab-434c-85d4-72d4e5a3361b

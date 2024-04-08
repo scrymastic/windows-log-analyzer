@@ -1,0 +1,5 @@
+detection:
+- and:
+  - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger
+  - Details|endswith: .dll
+id: 092af964-4233-4373-b4ba-d86ea2890288

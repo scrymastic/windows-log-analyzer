@@ -1,0 +1,20 @@
+author: frack113
+date: 2022/01/12
+description: Detects the removal of Sysmon, which could be a potential attempt at
+  defense evasion
+falsepositives:
+- Legitimate administrators might use this command to remove Sysmon for debugging
+  purposes
+filename: proc_creation_win_sysinternals_sysmon_uninstall.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/13
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1562.001/T1562.001.md#atomic-test-11---uninstall-sysmon
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.001

@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \wbadmin.exe
+    - OriginalFileName|==: WBADMIN.EXE
+  - CommandLine|contains: 'delete '
+  - CommandLine|contains: 'systemstatebackup '
+  - CommandLine|contains: -keepVersions:0
+id: 89f75308-5b1b-4390-b2d8-d6b2340efaf8

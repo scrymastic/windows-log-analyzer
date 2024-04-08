@@ -1,0 +1,10 @@
+detection:
+- and:
+  - CommandLine|None: ' -n '
+  - CommandLine|contains: Nul
+  - or:
+    - CommandLine|None: ' -f '
+    - CommandLine|None: ' -q '
+  - CommandLine|contains: ping
+  - CommandLine|contains: 'del '
+id: 54786ddc-5b8a-11ed-9b6a-0242ac120002

@@ -1,0 +1,4 @@
+detection:
+- and:
+  - PipeName|contains: \RemCom
+id: d36f87ea-c403-44d2-aa79-1a0ac7c24456

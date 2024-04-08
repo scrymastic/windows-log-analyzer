@@ -1,0 +1,32 @@
+detection:
+- and:
+  - or:
+    - or:
+      - CommandLine|contains: DumpCreds
+      - CommandLine|contains: mimikatz
+  - or:
+    - or:
+      - CommandLine|contains: ::aadcookie
+      - CommandLine|contains: ::detours
+      - CommandLine|contains: ::memssp
+      - CommandLine|contains: ::mflt
+      - CommandLine|contains: ::ncroutemon
+      - CommandLine|contains: ::ngcsign
+      - CommandLine|contains: ::printnightmare
+      - CommandLine|contains: ::skeleton
+      - CommandLine|contains: ::preshutdown
+      - CommandLine|contains: ::mstsc
+      - CommandLine|contains: ::multirdp
+  - or:
+    - or:
+      - CommandLine|contains: 'rpc::'
+      - CommandLine|contains: 'token::'
+      - CommandLine|contains: 'crypto::'
+      - CommandLine|contains: 'dpapi::'
+      - CommandLine|contains: 'sekurlsa::'
+      - CommandLine|contains: 'kerberos::'
+      - CommandLine|contains: 'lsadump::'
+      - CommandLine|contains: 'privilege::'
+      - CommandLine|contains: 'process::'
+      - CommandLine|contains: 'vault::'
+id: a642964e-bead-4bed-8910-1bb4d63e3b4d

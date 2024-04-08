@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - CommandLine|contains: new-object
+  - CommandLine|contains: net.webclient).
+  - CommandLine|contains: download
+  - or:
+    - CommandLine|contains: string(
+    - CommandLine|contains: file(
+id: 3b6ab547-8ec2-4991-b9d2-2b06702a48d7

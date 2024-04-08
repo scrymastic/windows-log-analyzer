@@ -1,0 +1,12 @@
+detection:
+- and:
+  - EventID|==: 129
+  - or:
+    - Path|endswith: \calc.exe
+    - Path|endswith: \cscript.exe
+    - Path|endswith: \mshta.exe
+    - Path|endswith: \mspaint.exe
+    - Path|endswith: \notepad.exe
+    - Path|endswith: \regsvr32.exe
+    - Path|endswith: \wscript.exe
+id: f0767f15-0fb3-44b9-851e-e8d9a6d0005d

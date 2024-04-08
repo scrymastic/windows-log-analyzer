@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \sc.exe
+    - OriginalFileName|==: sc.exe
+  - CommandLine|contains: sdset
+  - CommandLine|contains: D;
+  - or:
+    - CommandLine|contains: ;IU
+    - CommandLine|contains: ;SU
+    - CommandLine|contains: ;BA
+    - CommandLine|contains: ;SY
+    - CommandLine|contains: ;WD
+id: 99cf1e02-00fb-4c0d-8375-563f978dfd37

@@ -1,0 +1,20 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \SharPersist.exe
+      - Product|==: SharPersist
+  - or:
+    - or:
+      - CommandLine|contains: ' -t schtask -c '
+      - CommandLine|contains: ' -t startupfolder -c '
+  - or:
+    - CommandLine|contains: ' -t reg -c '
+    - CommandLine|contains: ' -m add'
+  - or:
+    - CommandLine|contains: ' -t service -c '
+    - CommandLine|contains: ' -m add'
+  - or:
+    - CommandLine|contains: ' -t schtask -c '
+    - CommandLine|contains: ' -m add'
+id: 26488ad0-f9fd-4536-876f-52fea846a2e4

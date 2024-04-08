@@ -1,0 +1,20 @@
+author: '@neu5ron'
+date: 2019/02/07
+description: Detects potential malicious and unauthorized usage of bcdedit.exe
+falsepositives: []
+filename: proc_creation_win_bcdedit_susp_execution.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/15
+references:
+- https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/bcdedit--set
+- https://twitter.com/malwrhunterteam/status/1372536434125512712/photo/2
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1070
+- attack.persistence
+- attack.t1542.003

@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: ' -ExclusionPath '
+    - ScriptBlockText|contains: ' -ExclusionExtension '
+    - ScriptBlockText|contains: ' -ExclusionProcess '
+    - ScriptBlockText|contains: ' -ExclusionIpAddress '
+  - or:
+    - ScriptBlockText|contains: 'Add-MpPreference '
+    - ScriptBlockText|contains: 'Set-MpPreference '
+id: c1344fa2-323b-4d2e-9176-84b4d4821c88

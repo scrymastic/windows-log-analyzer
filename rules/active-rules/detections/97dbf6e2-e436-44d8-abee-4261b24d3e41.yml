@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \aspnet_regiis.exe
+    - OriginalFileName|==: aspnet_regiis.exe
+  - CommandLine|contains: connectionStrings
+  - CommandLine|contains: ' -pdf'
+id: 97dbf6e2-e436-44d8-abee-4261b24d3e41

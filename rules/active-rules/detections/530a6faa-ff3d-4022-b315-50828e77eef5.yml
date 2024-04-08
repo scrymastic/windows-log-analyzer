@@ -1,0 +1,6 @@
+detection:
+- and:
+  - Provider_Name|==: Service Control Manager
+  - EventID|==: 7045
+  - ServiceName|==: AnyDesk Service
+id: 530a6faa-ff3d-4022-b315-50828e77eef5

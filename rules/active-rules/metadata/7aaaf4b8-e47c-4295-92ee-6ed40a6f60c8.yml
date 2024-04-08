@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/18
+description: Detects loading of known vulnerable drivers via their hash.
+falsepositives:
+- Unknown
+filename: driver_load_win_vuln_drivers.yml
+level: high
+logsource:
+  category: driver_load
+  product: windows
+modified: 2023/12/02
+references:
+- https://loldrivers.io/
+related: []
+status: experimental
+tags:
+- attack.privilege_escalation
+- attack.t1543.003
+- attack.t1068

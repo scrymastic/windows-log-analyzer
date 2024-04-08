@@ -1,0 +1,8 @@
+detection:
+- and:
+  - CommandLine|None: ' -c '
+  - CommandLine|contains: 'curl '
+  - CommandLine|contains: http
+  - CommandLine|contains: -o
+  - CommandLine|contains: '&'
+id: 21dd6d38-2b18-4453-9404-a0fe4a0cc288

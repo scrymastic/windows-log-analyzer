@@ -1,0 +1,25 @@
+detection:
+- and:
+  - or:
+    - TargetObject|startswith: HKLM\System\CurrentControlSet\Services\
+    - TargetObject|endswith: \Start
+    - or:
+      - Image|contains: \Users\Public\
+      - Image|contains: \Perflogs\
+      - Image|contains: \ADMIN$\
+      - Image|contains: \Temp\
+    - or:
+      - Details|==: DWORD (0x00000000)
+      - Details|==: DWORD (0x00000001)
+      - Details|==: DWORD (0x00000002)
+  - or:
+    - TargetObject|startswith: HKLM\System\CurrentControlSet\Services\
+    - TargetObject|endswith: \ImagePath
+    - or:
+      - Details|contains: \Users\Public\
+      - Details|contains: \Perflogs\
+      - Details|contains: \ADMIN$\
+      - Details|contains: \Temp\
+  - Image|contains: \Common Files\
+  - Image|contains: \Temp\
+id: a07f0359-4c90-4dc4-a681-8ffea40b4f47

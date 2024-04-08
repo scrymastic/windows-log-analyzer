@@ -1,0 +1,22 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/18
+description: Detects the execution of the PUA/Recon tool Seatbelt via PE information
+  of command line parameters
+falsepositives:
+- Unlikely
+filename: proc_creation_win_pua_seatbelt.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/04
+references:
+- https://github.com/GhostPack/Seatbelt
+- https://www.bluetangle.dev/2022/08/fastening-seatbelt-on-threat-hunting.html
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.t1526
+- attack.t1087
+- attack.t1083

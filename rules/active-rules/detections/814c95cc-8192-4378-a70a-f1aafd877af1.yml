@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: OpenConsole.exe
+    - Image|endswith: \OpenConsole.exe
+id: 814c95cc-8192-4378-a70a-f1aafd877af1

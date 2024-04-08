@@ -1,0 +1,8 @@
+detection:
+- and:
+  - Provider_Name|==: Service Control Manager
+  - EventID|==: 7045
+  - or:
+    - ServiceName|==: PSEXESVC
+    - ImagePath|endswith: \PSEXESVC.exe
+id: 42c575ea-e41e-41f1-b248-8093c3e82a28

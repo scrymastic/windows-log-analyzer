@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetFilename|==: C:\Windows\livekd.dmp
+id: 814ddeca-3d31-4265-8e07-8cc54fb44903

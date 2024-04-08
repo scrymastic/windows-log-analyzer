@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: '/in:'
+    - CommandLine|contains: '/out:'
+    - CommandLine|contains: '/uri:'
+  - or:
+    - Image|endswith: \DataSvcUtil.exe
+    - OriginalFileName|==: DataSvcUtil.exe
+id: e290b10b-1023-4452-a4a9-eb31a9013b3a

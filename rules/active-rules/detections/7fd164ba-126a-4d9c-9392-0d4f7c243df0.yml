@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - TargetFilename|contains: \AppData\Local\Temp\
+    - TargetFilename|contains: \Users\Public\
+    - TargetFilename|contains: \Windows\Temp\
+    - TargetFilename|contains: :\Temp\
+  - or:
+    - TargetFilename|endswith: .one
+    - TargetFilename|endswith: .onepkg
+  - or:
+    - Image|not contains: :\Program Files\Microsoft Office\
+    - Image|not endswith: \ONENOTE.EXE
+id: 7fd164ba-126a-4d9c-9392-0d4f7c243df0

@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - or:
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\HideClock
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\HideSCAHealth
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\HideSCANetwork
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\HideSCAPower
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\HideSCAVolume
+    - Details|==: DWORD (0x00000001)
+  - or:
+    - or:
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\ShowInfoTip
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\ShowCompColor
+    - Details|==: DWORD (0x00000000)
+id: 5a93eb65-dffa-4543-b761-94aa60098fb6

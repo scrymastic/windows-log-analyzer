@@ -1,0 +1,42 @@
+title: HackTool - CrackMapExec Process Patterns
+id: f26307d8-14cd-47e3-a26b-4b4769f24af6
+status: test
+description: Detects suspicious process patterns found in logs when CrackMapExec is
+  used
+references:
+- https://mpgn.gitbook.io/crackmapexec/smb-protocol/obtaining-credentials/dump-lsass
+author: Florian Roth (Nextron Systems)
+date: 2022/03/12
+modified: 2023/02/13
+tags:
+- attack.credential_access
+- attack.t1003.001
+logsource:
+  product: windows
+  category: process_creation
+detection:
+- and:
+  - or:
+    - CommandLine|contains: 'tasklist /fi '
+    - CommandLine|contains: Imagename eq lsass.exe
+    - or:
+      - CommandLine|contains: 'cmd.exe /c '
+      - CommandLine|contains: 'cmd.exe /r '
+      - CommandLine|contains: 'cmd.exe /k '
+      - CommandLine|contains: 'cmd /c '
+      - CommandLine|contains: 'cmd /r '
+      - CommandLine|contains: 'cmd /k '
+    - or:
+      - User|contains: AUTHORI
+      - User|contains: AUTORI
+  - or:
+    - CommandLine|contains: do rundll32.exe C:\windows\System32\comsvcs.dll, MiniDump
+    - CommandLine|contains: \Windows\Temp\
+    - CommandLine|contains: ' full'
+    - CommandLine|contains: '%%B'
+  - or:
+    - CommandLine|contains: tasklist /v /fo csv
+    - CommandLine|contains: findstr /i "lsass"
+falsepositives:
+- Unknown
+level: high

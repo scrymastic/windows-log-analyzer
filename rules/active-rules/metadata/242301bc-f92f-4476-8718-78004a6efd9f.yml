@@ -1,0 +1,23 @@
+author: Austin Songer @austinsonger
+date: 2021/10/23
+description: Detects when a user installs certificates by using CertOC.exe to loads
+  the target DLL file.
+falsepositives:
+- Unknown
+filename: proc_creation_win_certoc_load_dll.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/05
+references:
+- https://twitter.com/sblmsrsn/status/1445758411803480072?s=20
+- https://github.com/elastic/protections-artifacts/commit/746086721fd385d9f5c6647cada1788db4aea95f#diff-fe98e74189873d6df72a15df2eaa0315c59ba9cdaca93ecd68afc4ea09194ef2
+- https://lolbas-project.github.io/lolbas/Binaries/Certoc/
+related:
+- id: 84232095-ecca-4015-b0d7-7726507ee793
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

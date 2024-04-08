@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/22
+description: Detects usage of "appcmd" to create new global URL rewrite rules. This
+  behaviour has been observed being used by threat actors to add new rules so they
+  can access their webshells.
+falsepositives:
+- Legitimate usage of appcmd to add new URL rewrite rules
+filename: proc_creation_win_iis_appcmd_susp_rewrite_rule.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://twitter.com/malmoeb/status/1616702107242971144
+- https://learn.microsoft.com/en-us/answers/questions/739120/how-to-add-re-write-global-rule-with-action-type-r
+related: []
+status: test
+tags:
+- attack.defense_evasion

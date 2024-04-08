@@ -27,6 +27,12 @@ detection:
     - Image|endswith: \odbcconf.exe
     - OriginalFileName|==: odbcconf.exe
   - CommandLine|None: ' -f '
+  - or:
+    - CommandLine|not contains: .rsp
+  - or:
+    - ParentImage|!==: C:\Windows\System32\runonce.exe
+    - Image|!==: C:\Windows\System32\odbcconf.exe
+    - CommandLine|not contains: .exe /E /F "C:\WINDOWS\system32\odbcconf.tmp"
 falsepositives:
 - Unlikely
 level: high

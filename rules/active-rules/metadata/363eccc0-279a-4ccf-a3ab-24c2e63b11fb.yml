@@ -1,0 +1,21 @@
+author: frack113
+date: 2021/12/28
+description: Adversaries may abuse the Windows Task Scheduler to perform task scheduling
+  for initial or recurring execution of malicious code
+falsepositives:
+- Unknown
+filename: posh_ps_cmdlet_scheduled_task.yml
+level: medium
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: ''
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1053.005/T1053.005.md#atomic-test-4---powershell-cmdlet-scheduled-task
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1053.005/T1053.005.md#atomic-test-6---wmi-invoke-cimmethod-scheduled-task
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.t1053.005

@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 4728
+    - EventID|==: 632
+id: c43c26be-2e87-46c7-8661-284588c5a53e

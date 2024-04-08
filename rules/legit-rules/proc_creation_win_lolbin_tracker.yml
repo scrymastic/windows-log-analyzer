@@ -21,6 +21,8 @@ detection:
   - or:
     - CommandLine|contains: ' /d '
     - CommandLine|contains: ' /c '
+  - or:
+    - CommandLine|not contains: ' /ERRORREPORT:PROMPT '
   - ParentImage|not endswith: \Msbuild\Current\Bin\MSBuild.exe
   - ParentImage|not endswith: \Msbuild\Current\Bin\amd64\MSBuild.exe
 falsepositives:

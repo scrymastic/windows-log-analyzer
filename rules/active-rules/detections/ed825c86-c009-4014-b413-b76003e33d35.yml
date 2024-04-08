@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|matches: '[a-zA-Z]:\\'
+  - CurrentDirectory|contains: \\\\wsl.localhost
+id: ed825c86-c009-4014-b413-b76003e33d35

@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: \Microsoft\Windows NT\CurrentVersion\
+    - TargetObject|contains: \Image File Execution Options\
+    - TargetObject|contains: \GlobalFlag
+  - or:
+    - TargetObject|contains: \Microsoft\Windows NT\CurrentVersion\
+    - TargetObject|contains: \SilentProcessExit\
+    - or:
+      - TargetObject|contains: \ReportingMode
+      - TargetObject|contains: \MonitorProcess
+id: 36803969-5421-41ec-b92f-8500f79c23b0

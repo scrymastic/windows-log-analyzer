@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/03/11
+description: Detects the creation of scheduled tasks that involves a temporary folder
+  and runs only once
+falsepositives:
+- Administrative activity
+- Software installation
+filename: proc_creation_win_schtasks_creation_temp_folder.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/10/09
+references:
+- https://discuss.elastic.co/t/detection-and-response-for-hafnium-activity/266289/3
+related: []
+status: test
+tags:
+- attack.execution
+- attack.persistence
+- attack.t1053.005

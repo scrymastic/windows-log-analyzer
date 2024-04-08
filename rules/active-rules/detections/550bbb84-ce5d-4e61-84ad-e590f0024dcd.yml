@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \gpg.exe
+      - Image|endswith: \gpg2.exe
+    - Description|==: "GnuPG\u2019s OpenPGP tool"
+  - CommandLine|contains: ' -c '
+  - CommandLine|contains: passphrase
+id: 550bbb84-ce5d-4e61-84ad-e590f0024dcd

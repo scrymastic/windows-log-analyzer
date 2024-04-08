@@ -1,0 +1,38 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - or:
+    - CommandLine|contains: hctac
+    - CommandLine|contains: kaerb
+    - CommandLine|contains: dnammoc
+    - CommandLine|contains: ekovn
+    - CommandLine|contains: eliFd
+    - CommandLine|contains: rahc
+    - CommandLine|contains: etirw
+    - CommandLine|contains: golon
+    - CommandLine|contains: tninon
+    - CommandLine|contains: eddih
+    - CommandLine|contains: tpircS
+    - CommandLine|contains: ssecorp
+    - CommandLine|contains: llehsrewop
+    - CommandLine|contains: esnopser
+    - CommandLine|contains: daolnwod
+    - CommandLine|contains: tneilCbeW
+    - CommandLine|contains: tneilc
+    - CommandLine|contains: ptth
+    - CommandLine|contains: elifotevas
+    - CommandLine|contains: 46esab
+    - CommandLine|contains: htaPpmeTteG
+    - CommandLine|contains: tcejbO
+    - CommandLine|contains: maerts
+    - CommandLine|contains: hcaerof
+    - CommandLine|contains: retupmoc
+  - CommandLine|not contains: ' -EncodedCommand '
+  - CommandLine|not contains: ' -enc '
+id: b6b49cd1-34d6-4ead-b1bf-176e9edba9a4

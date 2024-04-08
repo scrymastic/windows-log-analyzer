@@ -1,0 +1,23 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - or:
+    - CommandLine|contains: -DisableBehaviorMonitoring $true
+    - CommandLine|contains: -DisableRuntimeMonitoring $true
+  - or:
+    - Image|endswith: \sc.exe
+    - OriginalFileName|==: sc.exe
+  - CommandLine|contains: stop
+  - CommandLine|contains: WinDefend
+  - CommandLine|contains: delete
+  - CommandLine|contains: WinDefend
+  - CommandLine|contains: config
+  - CommandLine|contains: WinDefend
+  - CommandLine|contains: start=disabled
+id: a7ee1722-c3c5-aeff-3212-c777e4733217

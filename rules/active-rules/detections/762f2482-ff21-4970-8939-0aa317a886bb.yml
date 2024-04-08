@@ -1,0 +1,20 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \Certify.exe
+    - OriginalFileName|==: Certify.exe
+    - Description|contains: Certify
+  - or:
+    - CommandLine|contains: '.exe cas '
+    - CommandLine|contains: '.exe find '
+    - CommandLine|contains: '.exe pkiobjects '
+    - CommandLine|contains: '.exe request '
+    - CommandLine|contains: '.exe download '
+  - or:
+    - CommandLine|contains: ' /vulnerable'
+    - CommandLine|contains: ' /template:'
+    - CommandLine|contains: ' /altname:'
+    - CommandLine|contains: ' /domain:'
+    - CommandLine|contains: ' /path:'
+    - CommandLine|contains: ' /ca:'
+id: 762f2482-ff21-4970-8939-0aa317a886bb

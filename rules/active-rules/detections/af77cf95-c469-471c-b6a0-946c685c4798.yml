@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \wuauclt.exe
+    - OriginalFileName|==: wuauclt.exe
+  - CommandLine|contains: UpdateDeploymentProvider
+  - CommandLine|contains: RunHandlerComServer
+  - or:
+    - CommandLine|not contains: ' /UpdateDeploymentProvider UpdateDeploymentProvider.dll '
+  - or:
+    - CommandLine|not contains: ' wuaueng.dll '
+  - CommandLine|not contains: :\Windows\UUS\Packages\Preview\amd64\updatedeploy.dll
+      /ClassId
+  - CommandLine|not contains: :\Windows\UUS\amd64\UpdateDeploy.dll /ClassId
+  - or:
+    - CommandLine|not contains: :\Windows\WinSxS\
+    - CommandLine|not contains: '\UpdateDeploy.dll /ClassId '
+id: af77cf95-c469-471c-b6a0-946c685c4798

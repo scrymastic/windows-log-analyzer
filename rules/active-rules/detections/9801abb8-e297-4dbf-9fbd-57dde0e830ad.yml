@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \IEExec.exe
+    - OriginalFileName|==: IEExec.exe
+  - or:
+    - CommandLine|contains: http://
+    - CommandLine|contains: https://
+id: 9801abb8-e297-4dbf-9fbd-57dde0e830ad

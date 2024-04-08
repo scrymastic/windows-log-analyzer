@@ -1,0 +1,7 @@
+detection:
+- and:
+  - ScriptBlockText|contains: get-itemProperty
+  - ScriptBlockText|contains: \software\
+  - ScriptBlockText|contains: select-object
+  - ScriptBlockText|contains: format-table
+id: 2650dd1a-eb2a-412d-ac36-83f06c4f2282

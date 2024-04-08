@@ -1,0 +1,20 @@
+author: X__Junior (Nextron Systems)
+date: 2023/07/11
+description: Detects potential DLL sideloading of DLLs that are known to be abused
+  from suspicious locations
+falsepositives:
+- Unknown
+filename: image_load_side_load_abused_dlls_susp_paths.yml
+level: high
+logsource:
+  category: image_load
+  product: windows
+modified: ''
+references:
+- https://www.trendmicro.com/en_us/research/23/f/behind-the-scenes-unveiling-the-hidden-workings-of-earth-preta.html
+- https://research.checkpoint.com/2023/beyond-the-horizon-traveling-the-world-on-camaro-dragons-usb-flash-drives/
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.t1059

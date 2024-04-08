@@ -1,0 +1,58 @@
+title: Windows Binaries Write Suspicious Extensions
+id: b8fd0e93-ff58-4cbd-8f48-1c114e342e62
+related:
+- id: 1277f594-a7d1-4f28-a2d3-73af5cbeab43
+  type: derived
+status: test
+description: Detects Windows executables that write files with suspicious extensions
+references:
+- Internal Research
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/12
+modified: 2024/04/04
+tags:
+- attack.defense_evasion
+- attack.t1036
+logsource:
+  category: file_event
+  product: windows
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \smss.exe
+      - Image|endswith: \RuntimeBroker.exe
+      - Image|endswith: \sihost.exe
+      - Image|endswith: \lsass.exe
+      - Image|endswith: \csrss.exe
+      - Image|endswith: \winlogon.exe
+      - Image|endswith: \wininit.exe
+    - or:
+      - TargetFilename|endswith: .bat
+      - TargetFilename|endswith: .vbe
+      - TargetFilename|endswith: .txt
+      - TargetFilename|endswith: .vbs
+      - TargetFilename|endswith: .exe
+      - TargetFilename|endswith: .ps1
+      - TargetFilename|endswith: .hta
+      - TargetFilename|endswith: .iso
+      - TargetFilename|endswith: .dll
+  - or:
+    - or:
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \svchost.exe
+      - Image|endswith: \dllhost.exe
+    - or:
+      - TargetFilename|endswith: .bat
+      - TargetFilename|endswith: .vbe
+      - TargetFilename|endswith: .vbs
+      - TargetFilename|endswith: .ps1
+      - TargetFilename|endswith: .hta
+      - TargetFilename|endswith: .iso
+  - Image|==: C:\Windows\System32\dllhost.exe
+  - TargetFilename|contains: :\Users\
+  - TargetFilename|contains: \AppData\Local\Temp\__PSScriptPolicyTest_
+  - TargetFilename|endswith: .ps1
+falsepositives:
+- Unknown
+level: high

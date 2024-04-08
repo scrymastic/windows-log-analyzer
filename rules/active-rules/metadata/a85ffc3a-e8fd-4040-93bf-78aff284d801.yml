@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/11/10
+description: Detects the usage of the "sftp.exe" binary as a LOLBIN by abusing the
+  "-D" flag
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_sftp.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://github.com/LOLBAS-Project/LOLBAS/pull/264
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.execution
+- attack.t1218

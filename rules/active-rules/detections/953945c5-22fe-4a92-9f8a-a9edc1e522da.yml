@@ -1,0 +1,8 @@
+detection:
+- and:
+  - ScriptBlockText|contains: 'Set-Service '
+  - ScriptBlockText|contains: DCLCWPDTSD
+  - or:
+    - ScriptBlockText|contains: '-SecurityDescriptorSddl '
+    - ScriptBlockText|contains: '-sd '
+id: 953945c5-22fe-4a92-9f8a-a9edc1e522da

@@ -25,6 +25,9 @@ logsource:
 detection:
 - and:
   - Image|endswith: \hxtsr.exe
+  - or:
+    - Image|not contains: :\program files\windowsapps\microsoft.windowscommunicationsapps_
+    - Image|not endswith: \hxtsr.exe
 falsepositives:
 - Unknown
 level: medium

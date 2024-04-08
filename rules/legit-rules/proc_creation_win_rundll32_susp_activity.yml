@@ -69,6 +69,19 @@ detection:
     - CommandLine|contains: http
     - CommandLine|contains: comsvcs.dll
     - CommandLine|contains: MiniDump
+  - or:
+    - CommandLine|not contains: shell32.dll,Control_RunDLL desk.cpl,screensaver,@screensaver
+  - or:
+    - ParentImage|!==: C:\Windows\System32\control.exe
+    - ParentCommandLine|not contains: .cpl
+    - CommandLine|not contains: Shell32.dll
+    - CommandLine|not contains: Control_RunDLL
+    - CommandLine|not contains: .cpl
+  - or:
+    - ParentImage|!==: C:\Windows\System32\control.exe
+    - CommandLine|not startswith: '"C:\Windows\system32\rundll32.exe" Shell32.dll,Control_RunDLL
+        "C:\Windows\System32\'
+    - CommandLine|not endswith: .cpl",
 falsepositives:
 - False positives depend on scripts and administrative tools used in the monitored
   environment

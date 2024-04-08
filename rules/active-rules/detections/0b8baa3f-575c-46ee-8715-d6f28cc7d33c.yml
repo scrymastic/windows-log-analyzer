@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetFilename|endswith: ntds.dit
+id: 0b8baa3f-575c-46ee-8715-d6f28cc7d33c

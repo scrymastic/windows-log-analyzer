@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|contains: \advanced_ip_scanner
+      - OriginalFileName|contains: advanced_ip_scanner
+      - Description|contains: Advanced IP Scanner
+  - or:
+    - CommandLine|contains: /portable
+    - CommandLine|contains: /lng
+id: bef37fa2-f205-4a7b-b484-0759bfd5f86f

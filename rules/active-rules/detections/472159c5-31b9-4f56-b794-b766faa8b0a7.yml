@@ -1,0 +1,7 @@
+detection:
+- and:
+  - TargetImage|endswith: \lsass.exe
+  - SourceImage|endswith: \svchost.exe
+  - GrantedAccess|==: '0x14c0'
+  - CallTrace|contains: seclogon.dll
+id: 472159c5-31b9-4f56-b794-b766faa8b0a7

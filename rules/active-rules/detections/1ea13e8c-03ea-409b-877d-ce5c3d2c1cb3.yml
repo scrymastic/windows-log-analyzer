@@ -1,0 +1,16 @@
+detection:
+- and:
+  - PipeName|==: \MICROSOFT##WID\tsql\query
+  - Image|not endswith: :\Windows\System32\mmc.exe
+  - Image|not endswith: :\Windows\system32\svchost.exe
+  - Image|not endswith: :\Windows\System32\wsmprovhost.exe
+  - Image|not endswith: :\Windows\SysWOW64\mmc.exe
+  - Image|not endswith: :\Windows\SysWOW64\wsmprovhost.exe
+  - Image|not endswith: :\Windows\WID\Binn\sqlwriter.exe
+  - Image|not endswith: \AzureADConnect.exe
+  - Image|not endswith: \Microsoft.Identity.Health.Adfs.PshSurrogate.exe
+  - Image|not endswith: \Microsoft.IdentityServer.ServiceHost.exe
+  - Image|not endswith: \Microsoft.Tri.Sensor.exe
+  - Image|not endswith: \sqlservr.exe
+  - Image|not endswith: \tssdis.exe
+id: 1ea13e8c-03ea-409b-877d-ce5c3d2c1cb3

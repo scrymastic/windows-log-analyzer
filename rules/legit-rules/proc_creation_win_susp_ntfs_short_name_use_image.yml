@@ -42,6 +42,16 @@ detection:
     - Image|contains: ~2.tmp
     - Image|contains: ~2.vbe
     - Image|contains: ~2.vbs
+  - or:
+    - ParentImage|!==: C:\Windows\explorer.exe
+  - or:
+    - ParentImage|not endswith: \WebEx\WebexHost.exe
+  - or:
+    - ParentImage|not endswith: \thor\thor64.exe
+  - or:
+    - Image|!==: C:\PROGRA~1\WinZip\WZPREL~1.EXE
+  - or:
+    - Image|not endswith: \VCREDI~1.EXE
 falsepositives:
 - Software Installers
 level: medium

@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/05/05
+description: Detects a whoami.exe executed with the /priv command line flag instructing
+  the tool to show all current user privileges. This is often used after a privilege
+  escalation attempt.
+falsepositives:
+- Unknown
+filename: proc_creation_win_whoami_priv_discovery.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/28
+references:
+- https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/whoami
+related: []
+status: test
+tags:
+- attack.privilege_escalation
+- attack.discovery
+- attack.t1033

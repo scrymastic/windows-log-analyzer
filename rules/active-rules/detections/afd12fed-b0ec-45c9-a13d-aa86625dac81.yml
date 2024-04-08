@@ -1,0 +1,6 @@
+detection:
+- and:
+  - ScriptBlockText|contains: win32_shadowcopy
+  - ScriptBlockText|contains: ).Create(
+  - ScriptBlockText|contains: ClientAccessible
+id: afd12fed-b0ec-45c9-a13d-aa86625dac81

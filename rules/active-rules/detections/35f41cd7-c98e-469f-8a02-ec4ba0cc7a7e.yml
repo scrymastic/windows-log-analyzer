@@ -1,0 +1,5 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Write-EventLog
+  - ScriptBlockText|contains: '-RawData '
+id: 35f41cd7-c98e-469f-8a02-ec4ba0cc7a7e

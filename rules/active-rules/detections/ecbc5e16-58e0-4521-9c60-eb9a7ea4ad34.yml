@@ -1,0 +1,14 @@
+detection:
+- and:
+  - EventID|==: 4697
+  - ServiceFileName|contains: /c
+  - ServiceFileName|contains: echo
+  - ServiceFileName|contains: \pipe\
+  - or:
+    - ServiceFileName|contains: cmd
+    - ServiceFileName|contains: '%COMSPEC%'
+  - ServiceFileName|contains: rundll32
+  - ServiceFileName|contains: .dll,a
+  - ServiceFileName|contains: '/p:'
+  - ServiceFileName|startswith: \\\\127.0.0.1\\ADMIN$\
+id: ecbc5e16-58e0-4521-9c60-eb9a7ea4ad34

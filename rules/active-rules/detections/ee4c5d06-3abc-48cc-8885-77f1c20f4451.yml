@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ImageLoaded|endswith: \ShellChromeAPI.dll
+id: ee4c5d06-3abc-48cc-8885-77f1c20f4451

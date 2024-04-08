@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - ParentImage|endswith: \powershell.exe
+    - ParentImage|endswith: \pwsh.exe
+  - ParentCommandLine|contains: \WindowsPowerShell\Modules\Pester\
+  - or:
+    - ParentCommandLine|contains: '{ Invoke-Pester -EnableExit ;'
+    - ParentCommandLine|contains: '{ Get-Help "'
+id: 18988e1b-9087-4f8a-82fe-0414dce49878

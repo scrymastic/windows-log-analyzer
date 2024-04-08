@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Data|contains: HostName=ConsoleHost
+id: 812837bb-b17f-45e9-8bd0-0ec35d2e3bd6

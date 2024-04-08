@@ -1,0 +1,25 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/08/14
+description: Detects potentially suspicious child processes of "aspnet_compiler.exe".
+falsepositives:
+- Unknown
+filename: proc_creation_win_aspnet_compiler_susp_child_process.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Aspnet_Compiler/
+- https://ijustwannared.team/2020/08/01/the-curious-case-of-aspnet_compiler-exe/
+related:
+- id: 4c7f49ee-2638-43bb-b85b-ce676c30b260
+  type: similar
+- id: 9f50fe98-fe5c-4a2d-86c7-fad7f63ed622
+  type: similar
+- id: a01b8329-5953-4f73-ae2d-aa01e1f35f00
+  type: similar
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1127

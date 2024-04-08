@@ -1,0 +1,18 @@
+detection:
+- and:
+  - ScriptBlockText|contains: 'Set-Acl '
+  - ScriptBlockText|contains: '-AclObject '
+  - or:
+    - ScriptBlockText|contains: -Path "C:\Windows
+    - ScriptBlockText|contains: -Path "C:/Windows
+    - ScriptBlockText|contains: -Path 'C:\Windows
+    - ScriptBlockText|contains: -Path 'C:/Windows
+    - ScriptBlockText|contains: -Path C:\\Windows
+    - ScriptBlockText|contains: -Path C:/Windows
+    - ScriptBlockText|contains: -Path $env:windir
+    - ScriptBlockText|contains: -Path "$env:windir
+    - ScriptBlockText|contains: -Path '$env:windir
+  - or:
+    - ScriptBlockText|contains: FullControl
+    - ScriptBlockText|contains: Allow
+id: 3bf1d859-3a7e-44cb-8809-a99e066d3478

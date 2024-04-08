@@ -26,6 +26,8 @@ detection:
     - CommandLine|contains: ' -enc '
     - CommandLine|contains: ' -enco'
     - CommandLine|contains: ' -ec '
+  - or:
+    - CommandLine|not contains: ' -Encoding '
   - ParentImage|not contains: C:\Packages\Plugins\Microsoft.GuestConfiguration.ConfigurationforWindows\
   - ParentImage|not contains: \gc_worker.exe
 falsepositives:

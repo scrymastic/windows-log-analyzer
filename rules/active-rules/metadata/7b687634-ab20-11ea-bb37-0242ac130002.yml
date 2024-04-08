@@ -1,0 +1,22 @@
+author: Cian Heasley
+date: 2020/06/10
+description: Detects Windows Pcap driver installation based on a list of associated
+  .sys files.
+falsepositives:
+- Unknown
+filename: win_security_pcap_drivers.yml
+level: medium
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security
+modified: 2023/04/14
+references:
+- https://ragged-lab.blogspot.com/2020/06/capturing-pcap-driver-installations.html#more
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.credential_access
+- attack.t1040

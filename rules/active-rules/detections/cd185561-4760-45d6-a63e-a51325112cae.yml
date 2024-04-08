@@ -1,0 +1,5 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Get-StorageDiagnosticInfo
+  - ScriptBlockText|contains: -IncludeLiveDump
+id: cd185561-4760-45d6-a63e-a51325112cae

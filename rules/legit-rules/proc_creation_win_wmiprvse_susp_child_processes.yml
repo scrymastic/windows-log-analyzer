@@ -47,6 +47,13 @@ detection:
     - CommandLine|contains: regsvr32
     - CommandLine|contains: rundll32
     - CommandLine|contains: wscript
+  - or:
+    - Image|not endswith: \WerFault.exe
+  - or:
+    - Image|not endswith: \WmiPrvSE.exe
+  - or:
+    - Image|not endswith: \msiexec.exe
+    - CommandLine|not contains: '/i '
 falsepositives:
 - Unknown
 level: high

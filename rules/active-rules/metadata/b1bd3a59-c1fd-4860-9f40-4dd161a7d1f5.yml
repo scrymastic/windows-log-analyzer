@@ -1,0 +1,21 @@
+author: Bhabesh Raj (rule), @thefLinkk
+date: 2022/06/27
+description: Detects HandleKatz opening LSASS to duplicate its handle to later dump
+  the memory without opening any new handles
+falsepositives:
+- Unknown
+filename: proc_access_win_hktl_handlekatz_lsass_access.yml
+level: high
+logsource:
+  category: process_access
+  product: windows
+modified: 2023/11/28
+references:
+- https://github.com/codewhitesec/HandleKatz
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1106
+- attack.defense_evasion
+- attack.t1003.001

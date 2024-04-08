@@ -1,0 +1,41 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|contains: \goldenPac
+      - Image|contains: \karmaSMB
+      - Image|contains: \kintercept
+      - Image|contains: \ntlmrelayx
+      - Image|contains: \rpcdump
+      - Image|contains: \samrdump
+      - Image|contains: \secretsdump
+      - Image|contains: \smbexec
+      - Image|contains: \smbrelayx
+      - Image|contains: \wmiexec
+      - Image|contains: \wmipersist
+    - or:
+      - Image|endswith: \atexec_windows.exe
+      - Image|endswith: \dcomexec_windows.exe
+      - Image|endswith: \dpapi_windows.exe
+      - Image|endswith: \findDelegation_windows.exe
+      - Image|endswith: \GetADUsers_windows.exe
+      - Image|endswith: \GetNPUsers_windows.exe
+      - Image|endswith: \getPac_windows.exe
+      - Image|endswith: \getST_windows.exe
+      - Image|endswith: \getTGT_windows.exe
+      - Image|endswith: \GetUserSPNs_windows.exe
+      - Image|endswith: \ifmap_windows.exe
+      - Image|endswith: \mimikatz_windows.exe
+      - Image|endswith: \netview_windows.exe
+      - Image|endswith: \nmapAnswerMachine_windows.exe
+      - Image|endswith: \opdump_windows.exe
+      - Image|endswith: \psexec_windows.exe
+      - Image|endswith: \rdp_check_windows.exe
+      - Image|endswith: \sambaPipe_windows.exe
+      - Image|endswith: \smbclient_windows.exe
+      - Image|endswith: \smbserver_windows.exe
+      - Image|endswith: \sniff_windows.exe
+      - Image|endswith: \sniffer_windows.exe
+      - Image|endswith: \split_windows.exe
+      - Image|endswith: \ticketer_windows.exe
+id: 4627c6ae-6899-46e2-aa0c-6ebcb1becd19

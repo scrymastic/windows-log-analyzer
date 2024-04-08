@@ -1,0 +1,23 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: domainlist
+    - CommandLine|contains: trustdmp
+    - CommandLine|contains: dcmodes
+    - CommandLine|contains: adinfo
+    - CommandLine|contains: ' dclist '
+    - CommandLine|contains: computer_pwdnotreqd
+    - CommandLine|contains: objectcategory=
+    - CommandLine|contains: -subnets -f
+    - CommandLine|contains: name="Domain Admins"
+    - CommandLine|contains: '-sc u:'
+    - CommandLine|contains: domainncs
+    - CommandLine|contains: dompol
+    - CommandLine|contains: ' oudmp '
+    - CommandLine|contains: subnetdmp
+    - CommandLine|contains: gpodmp
+    - CommandLine|contains: fspdmp
+    - CommandLine|contains: users_noexpire
+    - CommandLine|contains: computers_active
+    - CommandLine|contains: computers_pwdnotreqd
+id: 9a132afa-654e-11eb-ae93-0242ac130002

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - PipeName|contains: \cachedump
+    - PipeName|contains: \lsadump
+    - PipeName|contains: \wceservicepipe
+id: 961d0ba2-3eea-4303-a930-2cf78bbfcc5e

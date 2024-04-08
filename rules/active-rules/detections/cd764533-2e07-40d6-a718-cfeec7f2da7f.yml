@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Product|==: Sysinternals DebugView
+id: cd764533-2e07-40d6-a718-cfeec7f2da7f

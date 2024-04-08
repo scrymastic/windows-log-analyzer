@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/02/15
+description: Detects the deletion of the PowerShell console History logs which may
+  indicate an attempt to destroy forensic evidence
+falsepositives:
+- Unknown
+filename: file_delete_win_delete_powershell_command_history.yml
+level: medium
+logsource:
+  category: file_delete
+  product: windows
+modified: ''
+references:
+- Internal Research
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1070

@@ -1,0 +1,8 @@
+detection:
+- and:
+  - Provider_Name|==: MSSQLSERVER
+  - EventID|==: 33205
+  - or:
+    - Data|contains: statement:ALTER SERVER AUDIT
+    - Data|contains: statement:DROP SERVER AUDIT
+id: 350dfb37-3706-4cdc-9e2e-5e24bc3a46df

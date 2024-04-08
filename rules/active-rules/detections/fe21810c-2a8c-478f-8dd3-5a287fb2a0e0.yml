@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - Destination|contains: new-object
+    - Destination|contains: net.webclient
+    - Destination|contains: .downloadstring
+    - Destination|contains: new-object
+    - Destination|contains: net.webclient
+    - Destination|contains: .downloadfile
+    - or:
+      - Destination|contains: ' iex('
+      - Destination|contains: ' -nop '
+      - Destination|contains: ' -noprofile '
+      - Destination|contains: ' -decode '
+      - Destination|contains: ' -enc '
+      - Destination|contains: WScript.Shell
+      - Destination|contains: System.Security.Cryptography.FromBase64Transform
+id: fe21810c-2a8c-478f-8dd3-5a287fb2a0e0

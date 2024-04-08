@@ -1,0 +1,107 @@
+title: Potentially Suspicious GrantedAccess Flags On LSASS
+id: a18dd26b-6450-46de-8c91-9659150cf088
+related:
+- id: 32d0d3e2-e58d-4d41-926b-18b520b2b32d
+  type: similar
+status: experimental
+description: Detects process access requests to LSASS process with potentially suspicious
+  access flags
+references:
+- https://docs.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights
+- https://onedrive.live.com/view.aspx?resid=D026B4699190F1E6!2843&ithint=file%2cpptx&app=PowerPoint&authkey=!AMvCRTKB_V1J5ow
+- https://web.archive.org/web/20230208123920/https://cyberwardog.blogspot.com/2017/03/chronicles-of-threat-hunter-hunting-for_22.html
+- https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment
+- http://security-research.dyndns.org/pub/slides/FIRST2017/FIRST-2017_Tom-Ueltschi_Sysmon_FINAL_notes.pdf
+author: Florian Roth, Roberto Rodriguez, Dimitrios Slamaris, Mark Russinovich, Thomas
+  Patzke, Teymur Kheirkhabarov, Sherif Eldeeb, James Dickenson, Aleksey Potapov, oscd.community
+date: 2021/11/22
+modified: 2023/11/29
+tags:
+- attack.credential_access
+- attack.t1003.001
+- attack.s0002
+logsource:
+  category: process_access
+  product: windows
+detection:
+- and:
+  - TargetImage|endswith: \lsass.exe
+  - or:
+    - or:
+      - GrantedAccess|endswith: '30'
+      - GrantedAccess|endswith: '50'
+      - GrantedAccess|endswith: '70'
+      - GrantedAccess|endswith: '90'
+      - GrantedAccess|endswith: B0
+      - GrantedAccess|endswith: D0
+      - GrantedAccess|endswith: F0
+      - GrantedAccess|endswith: '18'
+      - GrantedAccess|endswith: '38'
+      - GrantedAccess|endswith: '58'
+      - GrantedAccess|endswith: '78'
+      - GrantedAccess|endswith: '98'
+      - GrantedAccess|endswith: B8
+      - GrantedAccess|endswith: D8
+      - GrantedAccess|endswith: F8
+      - GrantedAccess|endswith: 1A
+      - GrantedAccess|endswith: 3A
+      - GrantedAccess|endswith: 5A
+      - GrantedAccess|endswith: 7A
+      - GrantedAccess|endswith: 9A
+      - GrantedAccess|endswith: BA
+      - GrantedAccess|endswith: DA
+      - GrantedAccess|endswith: FA
+      - GrantedAccess|endswith: '0x14C2'
+    - or:
+      - GrantedAccess|startswith: '0x100000'
+      - GrantedAccess|startswith: '0x1418'
+      - GrantedAccess|startswith: '0x1438'
+      - GrantedAccess|startswith: '0x143a'
+      - GrantedAccess|startswith: '0x1f0fff'
+      - GrantedAccess|startswith: '0x1f1fff'
+      - GrantedAccess|startswith: '0x1f2fff'
+      - GrantedAccess|startswith: '0x1f3fff'
+      - GrantedAccess|startswith: '0x40'
+  - SourceImage|not contains: :\Program Files (x86)\
+  - SourceImage|not contains: :\Program Files\
+  - SourceImage|not contains: :\Windows\System32\
+  - SourceImage|not contains: :\Windows\SysWOW64\
+  - or:
+    - SourceImage|not endswith: :\ProgramData\MALWAREBYTES\MBAMSERVICE\ctlrupdate\mbupdatr.exe
+  - or:
+    - SourceImage|not endswith: \AppData\Local\Programs\Microsoft VS Code\Code.exe
+  - or:
+    - SourceImage|not contains: :\ProgramData\Microsoft\Windows Defender\
+    - SourceImage|not endswith: \MsMpEng.exe
+  - or:
+    - CallTrace|not contains: '|?:\ProgramData\Microsoft\Windows Defender\Definition
+        Updates\{'
+    - CallTrace|not contains: '}\mpengine.dll+'
+    - GrantedAccess|!==: '0x1418'
+  - CallTrace|not contains: '|c:\program files\windows defender\mprtp.dll'
+  - CallTrace|not contains: '|c:\program files\windows defender\MpClient.dll'
+  - or:
+    - SourceImage|not contains: :\ProgramData\VMware\VMware Tools\
+    - SourceImage|not endswith: \vmtoolsd.exe
+  - SourceImage|not endswith: \PROCEXP64.EXE
+  - SourceImage|not endswith: \PROCEXP.EXE
+  - or:
+    - SourceImage|not endswith: \MBAMInstallerService.exe
+    - GrantedAccess|!==: '0x40'
+  - SourceImage|not endswith: \aurora-agent-64.exe
+  - SourceImage|not endswith: \aurora-agent.exe
+  - SourceImage|not endswith: \thor.exe
+  - SourceImage|not endswith: \thor64.exe
+  - or:
+    - SourceImage|not endswith: \explorer.exe
+    - GrantedAccess|!==: '0x401'
+  - SourceImage|not endswith: \handle.exe
+  - SourceImage|not endswith: \handle64.exe
+  - or:
+    - SourceImage|not endswith: \AppData\Local\WebEx\WebexHost.exe
+    - GrantedAccess|!==: '0x401'
+  - or:
+    - SourceImage|not contains: \SteamLibrary\steamapps\
+falsepositives:
+- Legitimate software such as AV and EDR
+level: medium

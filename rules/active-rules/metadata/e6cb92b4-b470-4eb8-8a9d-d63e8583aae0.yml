@@ -1,0 +1,21 @@
+author: Timur Zinniatullin, oscd.community
+date: 2020/10/18
+description: Detects Obfuscated Powershell via RUNDLL LAUNCHER
+falsepositives:
+- Unknown
+filename: posh_ps_invoke_obfuscation_via_rundll.yml
+level: medium
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2022/11/29
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

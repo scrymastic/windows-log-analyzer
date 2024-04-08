@@ -1,0 +1,26 @@
+detection:
+- and:
+  - or:
+    - PipeName|contains: \MSSE-
+    - PipeName|contains: -server
+  - or:
+    - PipeName|startswith: \postex_
+  - or:
+    - PipeName|startswith: \status_
+  - or:
+    - PipeName|startswith: \msagent_
+  - or:
+    - PipeName|startswith: \mojo_
+  - or:
+    - PipeName|startswith: \interprocess_
+  - or:
+    - PipeName|startswith: \samr_
+  - or:
+    - PipeName|startswith: \netlogon_
+  - or:
+    - PipeName|startswith: \srvsvc_
+  - or:
+    - PipeName|startswith: \lsarpc_
+  - or:
+    - PipeName|startswith: \wkssvc_
+id: d5601f8c-b26f-4ab0-9035-69e11a8d4ad2

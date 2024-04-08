@@ -1,0 +1,19 @@
+detection:
+- and:
+  - or:
+    - CommandLine|endswith: cmd.exe /C whoami
+    - ParentImage|startswith: C:\Temp\
+  - or:
+    - or:
+      - ParentImage|endswith: \runonce.exe
+      - ParentImage|endswith: \dllhost.exe
+    - CommandLine|contains: cmd.exe /c echo
+    - CommandLine|contains: '> \\\\.\\pipe'
+  - or:
+    - ParentCommandLine|contains: cmd.exe /C echo
+    - ParentCommandLine|contains: ' > \\\\.\\pipe'
+    - CommandLine|endswith: conhost.exe 0xffffffff -ForceV1
+  - or:
+    - ParentCommandLine|endswith: /C whoami
+    - CommandLine|endswith: conhost.exe 0xffffffff -ForceV1
+id: f35c5d71-b489-4e22-a115-f003df287317

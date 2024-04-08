@@ -1,0 +1,22 @@
+author: Cian Heasley
+date: 2020/08/13
+description: In Kaspersky's 2020 Incident Response Analyst Report they listed legitimate
+  tool "Mouse Lock" as being used for both credential access and collection in security
+  incidents.
+falsepositives:
+- Legitimate uses of Mouse Lock software
+filename: proc_creation_win_pua_mouselock_execution.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/21
+references:
+- https://github.com/klsecservices/Publications/blob/657deb6a6eb6e00669afd40173f425fb49682eaa/Incident-Response-Analyst-Report-2020.pdf
+- https://sourceforge.net/projects/mouselock/
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.collection
+- attack.t1056.002

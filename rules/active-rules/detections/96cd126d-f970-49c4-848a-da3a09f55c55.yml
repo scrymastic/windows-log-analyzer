@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: 'Set-Alias '
+    - ScriptBlockText|contains: 'New-Alias '
+id: 96cd126d-f970-49c4-848a-da3a09f55c55

@@ -1,0 +1,20 @@
+author: NVISO
+date: 2020/03/26
+description: Detects parameters used by WMImplant
+falsepositives:
+- Administrative scripts that use the same keywords.
+filename: posh_ps_wmimplant.yml
+level: high
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2022/12/25
+references:
+- https://github.com/FortyNorthSecurity/WMImplant
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1047
+- attack.t1059.001

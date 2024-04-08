@@ -1,0 +1,24 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/11
+description: Detects a BITS transfer job downloading file(s) from a direct IP address.
+falsepositives:
+- Unknown
+filename: win_bits_client_new_transfer_via_ip_address.yml
+level: high
+logsource:
+  product: windows
+  service: bits-client
+modified: 2023/03/27
+references:
+- https://blog.netspi.com/15-ways-to-download-a-file/#bitsadmin
+- https://isc.sans.edu/diary/22264
+- https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/
+- https://blog.talosintelligence.com/breaking-the-silence-recent-truebot-activity/
+related:
+- id: 99c840f2-2012-46fd-9141-c761987550ef
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.persistence
+- attack.t1197

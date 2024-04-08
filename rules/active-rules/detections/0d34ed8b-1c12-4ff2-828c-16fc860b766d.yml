@@ -1,0 +1,28 @@
+detection:
+- and:
+  - ParentImage|endswith: \java.exe
+  - or:
+    - Image|endswith: \AppVLP.exe
+    - Image|endswith: \bitsadmin.exe
+    - Image|endswith: \certutil.exe
+    - Image|endswith: \cscript.exe
+    - Image|endswith: \curl.exe
+    - Image|endswith: \forfiles.exe
+    - Image|endswith: \hh.exe
+    - Image|endswith: \mftrace.exe
+    - Image|endswith: \mshta.exe
+    - Image|endswith: \net.exe
+    - Image|endswith: \net1.exe
+    - Image|endswith: \query.exe
+    - Image|endswith: \reg.exe
+    - Image|endswith: \regsvr32.exe
+    - Image|endswith: \rundll32.exe
+    - Image|endswith: \schtasks.exe
+    - Image|endswith: \scrcons.exe
+    - Image|endswith: \scriptrunner.exe
+    - Image|endswith: \sh.exe
+    - Image|endswith: \systeminfo.exe
+    - Image|endswith: \whoami.exe
+    - Image|endswith: \wmic.exe
+    - Image|endswith: \wscript.exe
+id: 0d34ed8b-1c12-4ff2-828c-16fc860b766d

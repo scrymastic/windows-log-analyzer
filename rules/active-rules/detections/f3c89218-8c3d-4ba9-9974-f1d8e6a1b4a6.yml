@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Payload|matches: (?i).*&&set.*(\{\d\}){2,}\\"\s+?-f.*&&.*cmd.*/c
+id: f3c89218-8c3d-4ba9-9974-f1d8e6a1b4a6

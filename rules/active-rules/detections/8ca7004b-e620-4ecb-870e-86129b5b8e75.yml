@@ -1,0 +1,11 @@
+detection:
+- and:
+  - Provider_Name|==: Service Control Manager
+  - EventID|==: 7045
+  - ImagePath|contains: cmd
+  - ImagePath|contains: '"set'
+  - ImagePath|contains: -f
+  - or:
+    - ImagePath|contains: /c
+    - ImagePath|contains: /r
+id: 8ca7004b-e620-4ecb-870e-86129b5b8e75

@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - TargetFilename|endswith: \AppData\Local\Microsoft\Cache134.dat
+    - TargetFilename|endswith: \AppData\Local\Microsoft\ExplorerSync.db
+id: 805c55d9-31e6-4846-9878-c34c75054fe9

@@ -1,0 +1,9 @@
+detection:
+- and:
+  - ParentImage|endswith: \w3wp.exe
+  - CommandLine|contains: appcmd.exe add module
+  - CommandLine|contains: ' system.enterpriseservices.internal.publish'
+  - Image|endswith: \powershell.exe
+  - CommandLine|contains: gacutil
+  - CommandLine|contains: ' /I'
+id: 043c4b8b-3a54-4780-9682-081cb6b8185c

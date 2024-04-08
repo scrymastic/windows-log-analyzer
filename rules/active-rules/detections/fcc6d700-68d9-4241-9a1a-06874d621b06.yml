@@ -1,0 +1,23 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \onenote.exe
+    - Image|endswith: \onenotem.exe
+    - Image|endswith: \onenoteim.exe
+  - TargetFilename|contains: \AppData\Local\Temp\OneNote\
+  - or:
+    - TargetFilename|endswith: .bat
+    - TargetFilename|endswith: .chm
+    - TargetFilename|endswith: .cmd
+    - TargetFilename|endswith: .dll
+    - TargetFilename|endswith: .exe
+    - TargetFilename|endswith: .hta
+    - TargetFilename|endswith: .htm
+    - TargetFilename|endswith: .html
+    - TargetFilename|endswith: .js
+    - TargetFilename|endswith: .lnk
+    - TargetFilename|endswith: .ps1
+    - TargetFilename|endswith: .vbe
+    - TargetFilename|endswith: .vbs
+    - TargetFilename|endswith: .wsf
+id: fcc6d700-68d9-4241-9a1a-06874d621b06

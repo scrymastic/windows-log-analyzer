@@ -1,0 +1,7 @@
+detection:
+- and:
+  - Image|endswith: \runonce.exe
+  - ParentImage|endswith: \rundll32.exe
+  - ParentCommandLine|contains: setupapi.dll
+  - ParentCommandLine|contains: InstallHinfSection
+id: 285b85b1-a555-4095-8652-a8a4106af63f

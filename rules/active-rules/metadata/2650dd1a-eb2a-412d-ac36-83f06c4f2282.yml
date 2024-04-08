@@ -1,0 +1,22 @@
+author: Nikita Nazarov, oscd.community
+date: 2020/10/16
+description: Adversaries may attempt to enumerate software for a variety of reasons,
+  such as figuring out what security measures are present or if the compromised system
+  has a version of software that is vulnerable.
+falsepositives:
+- Legitimate administration activities
+filename: posh_ps_software_discovery.yml
+level: medium
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2022/12/02
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1518/T1518.md
+- https://github.com/harleyQu1nn/AggressorScripts
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.t1518

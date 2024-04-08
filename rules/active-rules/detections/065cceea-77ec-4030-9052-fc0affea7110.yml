@@ -1,0 +1,4 @@
+detection:
+- and:
+  - QueryName|contains: .anonfiles.com
+id: 065cceea-77ec-4030-9052-fc0affea7110

@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: '-SecurityDescriptorSddl '
+    - ScriptBlockText|contains: '-sd '
+  - ScriptBlockText|contains: 'Set-Service '
+  - ScriptBlockText|contains: D;;
+  - or:
+    - ScriptBlockText|contains: ;;;IU
+    - ScriptBlockText|contains: ;;;SU
+    - ScriptBlockText|contains: ;;;BA
+    - ScriptBlockText|contains: ;;;SY
+    - ScriptBlockText|contains: ;;;WD
+id: 22d80745-6f2c-46da-826b-77adaededd74

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - EventID|==: 1121
+  - or:
+    - ProcessName|endswith: \wmiprvse.exe
+    - ProcessName|endswith: \psexesvc.exe
+id: 97b9ce1e-c5ab-11ea-87d0-0242ac130003

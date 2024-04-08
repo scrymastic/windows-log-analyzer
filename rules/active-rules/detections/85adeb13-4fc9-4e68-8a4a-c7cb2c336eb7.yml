@@ -1,0 +1,46 @@
+detection:
+- and:
+  - or:
+    - or:
+      - or:
+        - PipeName|startswith: \DserNamePipe
+        - PipeName|startswith: \f4c3
+        - PipeName|startswith: \f53f
+        - PipeName|startswith: \fullduplex_
+        - PipeName|startswith: \mojo.5688.8052.183894939787088877
+        - PipeName|startswith: \mojo.5688.8052.35780273329370473
+        - PipeName|startswith: \MsFteWds
+        - PipeName|startswith: \msrpc_
+        - PipeName|startswith: \mypipe-f
+        - PipeName|startswith: \mypipe-h
+        - PipeName|startswith: \ntsvcs
+        - PipeName|startswith: \PGMessagePipe
+        - PipeName|startswith: \rpc_
+        - PipeName|startswith: \scerpc
+        - PipeName|startswith: \SearchTextHarvester
+        - PipeName|startswith: \spoolss
+        - PipeName|startswith: \win_svc
+        - PipeName|startswith: \win\msrpc_
+        - PipeName|startswith: \windows.update.manager
+        - PipeName|startswith: \wkssvc
+      - or:
+        - PipeName|==: \demoagent_11
+        - PipeName|==: \demoagent_22
+  - or:
+    - PipeName|startswith: \Winsock2\CatalogChangeListener-
+    - PipeName|endswith: -0,
+  - or:
+    - PipeName|==: \wkssvc
+    - PipeName|==: \spoolss
+    - PipeName|==: \scerpc
+    - PipeName|==: \ntsvcs
+    - PipeName|==: \SearchTextHarvester
+    - PipeName|==: \PGMessagePipe
+    - PipeName|==: \MsFteWds
+  - or:
+    - Image|contains: :\Program Files\Websense\
+    - Image|contains: :\Program Files (x86)\Websense\
+  - or:
+    - PipeName|startswith: \DserNamePipeR
+    - PipeName|startswith: \DserNamePipeW
+id: 85adeb13-4fc9-4e68-8a4a-c7cb2c336eb7

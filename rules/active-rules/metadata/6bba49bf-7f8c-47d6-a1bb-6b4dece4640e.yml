@@ -1,0 +1,20 @@
+author: juju4
+date: 2019/01/16
+description: Detects suspicious process related to rasdial.exe
+falsepositives:
+- False positives depend on scripts and administrative tools used in the monitored
+  environment
+filename: proc_creation_win_rasdial_execution.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2021/11/27
+references:
+- https://twitter.com/subTee/status/891298217907830785
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.execution
+- attack.t1059

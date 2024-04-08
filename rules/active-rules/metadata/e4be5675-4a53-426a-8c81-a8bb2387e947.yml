@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/11/10
+description: Detects blocked load events that did not meet the authenticode signing
+  level requirements or violated the code integrity policy.
+falsepositives:
+- Unknown
+filename: win_codeintegrity_enforced_policy_block.yml
+level: high
+logsource:
+  product: windows
+  service: codeintegrity-operational
+modified: 2023/06/07
+references:
+- https://twitter.com/wdormann/status/1590434950335320065
+- https://github.com/MicrosoftDocs/windows-itpro-docs/blob/40fe118976734578f83e5e839b9c63ae7a4af82d/windows/security/threat-protection/windows-defender-application-control/event-id-explanations.md#windows-codeintegrity-operational-log
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/event-id-explanations
+related: []
+status: experimental
+tags:
+- attack.privilege_escalation
+- attack.t1543

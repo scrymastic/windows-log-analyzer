@@ -1,0 +1,7 @@
+detection:
+- and:
+  - Image|endswith: \aspnet_compiler.exe
+  - TargetFilename|contains: \Temporary ASP.NET Files\
+  - TargetFilename|contains: \assembly\tmp\
+  - TargetFilename|contains: .dll
+id: 4c7f49ee-2638-43bb-b85b-ce676c30b260

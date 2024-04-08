@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|endswith: \dism.exe
+  - ImageLoaded|endswith: \dismcore.dll
+id: a5ea83a7-05a5-44c1-be2e-addccbbd8c03

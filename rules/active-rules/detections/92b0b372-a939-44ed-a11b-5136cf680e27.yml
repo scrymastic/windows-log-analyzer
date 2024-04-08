@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|endswith: \CurrentControlSet\Services\wercplsupport\Parameters\ServiceDll
+id: 92b0b372-a939-44ed-a11b-5136cf680e27

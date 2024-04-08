@@ -1,0 +1,20 @@
+author: Tim Rauch, Elastic (idea)
+date: 2022/09/14
+description: Detects attempts to disable the Windows Firewall using PowerShell
+falsepositives:
+- Unknown
+filename: proc_creation_win_powershell_disable_firewall.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/13
+references:
+- https://www.elastic.co/guide/en/security/current/windows-firewall-disabled-via-powershell.html
+related:
+- id: 488b44e7-3781-4a71-888d-c95abfacf44d
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562

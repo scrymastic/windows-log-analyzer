@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/04/18
+description: Detects potential RDP connection via Mstsc using a local ".rdp" file
+  located in suspicious locations.
+falsepositives:
+- Likelihood is related to how often the paths are used in the environment
+filename: proc_creation_win_mstsc_run_local_rdp_file_susp_location.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.blackhillsinfosec.com/rogue-rdp-revisiting-initial-access-methods/
+- https://blog.thickmints.dev/mintsights/detecting-rogue-rdp/
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1219

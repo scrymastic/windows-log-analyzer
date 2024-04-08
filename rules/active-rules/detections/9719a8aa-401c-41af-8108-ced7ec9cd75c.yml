@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \MpCmdRun.exe
+    - OriginalFileName|==: MpCmdRun.exe
+  - CommandLine|contains: ' -RemoveDefinitions'
+  - CommandLine|contains: ' -All'
+id: 9719a8aa-401c-41af-8108-ced7ec9cd75c

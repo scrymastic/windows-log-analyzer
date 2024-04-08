@@ -1,0 +1,19 @@
+author: Max Altgelt (Nextron Systems)
+date: 2022/04/14
+description: Detects network connections from Equation Editor
+falsepositives:
+- Unlikely
+filename: net_connection_win_eqnedt.yml
+level: high
+logsource:
+  category: network_connection
+  product: windows
+modified: ''
+references:
+- https://twitter.com/forensicitguy/status/1513538712986079238
+- https://news.sophos.com/en-us/2019/07/18/a-new-equation-editor-exploit-goes-commercial-as-maldoc-attacks-using-it-spike/
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1203

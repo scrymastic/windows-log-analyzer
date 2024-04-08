@@ -1,0 +1,7 @@
+detection:
+- and:
+  - ParentImage|==: C:\Windows\PSEXESVC.exe
+  - or:
+    - User|contains: AUTHORI
+    - User|contains: AUTORI
+id: 7c0dcd3d-acf8-4f71-9570-f448b0034f94

@@ -1,0 +1,13 @@
+detection:
+- and:
+  - DestinationPort|==: 88
+  - Initiated|==: 'true'
+  - or:
+    - Image|!==: C:\Windows\System32\lsass.exe
+  - Image|!==: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+  - Image|!==: C:\Program Files\Google\Chrome\Application\chrome.exe
+  - Image|!==: C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+  - Image|!==: C:\Program Files\Mozilla Firefox\firefox.exe
+  - or:
+    - Image|not endswith: \tomcat\bin\tomcat8.exe
+id: e54979bd-c5f9-4d6c-967b-a04b19ac4c74

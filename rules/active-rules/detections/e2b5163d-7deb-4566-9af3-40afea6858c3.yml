@@ -1,0 +1,4 @@
+detection:
+- and:
+  - EventID|==: 70
+id: e2b5163d-7deb-4566-9af3-40afea6858c3

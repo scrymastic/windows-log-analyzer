@@ -1,0 +1,6 @@
+detection:
+- and:
+  - TargetFilename|startswith: C:\Windows\System32\config\systemprofile\AppData\Local\CrashDumps\
+  - TargetFilename|contains: lsass.exe.
+  - TargetFilename|endswith: .dmp
+id: 6902955a-01b7-432c-b32a-6f5f81d8f625

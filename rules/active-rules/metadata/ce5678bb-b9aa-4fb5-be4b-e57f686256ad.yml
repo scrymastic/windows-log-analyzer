@@ -1,0 +1,22 @@
+author: James Pemberton
+date: 2020/05/22
+description: Detects logons using NTLM to hosts that are potentially not part of the
+  domain.
+falsepositives:
+- Host connections to valid domains, exclude these.
+- Host connections not using host FQDN.
+- Host connections to external legitimate domains.
+filename: win_susp_ntlm_rdp.yml
+level: medium
+logsource:
+  definition: Requires events from Microsoft-Windows-NTLM/Operational
+  product: windows
+  service: ntlm
+modified: 2021/11/27
+references:
+- n/a
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1219

@@ -20,6 +20,8 @@ detection:
     - Image|endswith: \csvde.exe
     - OriginalFileName|==: csvde.exe
   - CommandLine|contains: ' -f'
+  - or:
+    - CommandLine|not contains: ' -i'
 falsepositives:
 - Unknown
 level: medium

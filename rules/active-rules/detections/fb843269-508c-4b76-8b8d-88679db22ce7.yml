@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+  - or:
+    - CommandLine|contains: ' -e '
+    - CommandLine|contains: ' -en '
+    - CommandLine|contains: ' -enc '
+    - CommandLine|contains: ' -enco'
+    - CommandLine|contains: ' -ec '
+  - or:
+    - CommandLine|not contains: ' -Encoding '
+  - ParentImage|not contains: C:\Packages\Plugins\Microsoft.GuestConfiguration.ConfigurationforWindows\
+  - ParentImage|not contains: \gc_worker.exe
+id: fb843269-508c-4b76-8b8d-88679db22ce7

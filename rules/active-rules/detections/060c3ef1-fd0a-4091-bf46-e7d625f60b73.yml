@@ -1,0 +1,6 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Get-ADReplAccount
+  - ScriptBlockText|contains: '-All '
+  - ScriptBlockText|contains: '-Server '
+id: 060c3ef1-fd0a-4091-bf46-e7d625f60b73

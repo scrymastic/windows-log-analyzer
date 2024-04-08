@@ -1,0 +1,5 @@
+detection:
+- and:
+  - EventType|==: CreateKey
+  - TargetObject|contains: \SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\
+id: d4f4e0be-cf12-439f-9e25-4e2cdcf7df5a

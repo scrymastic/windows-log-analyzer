@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Destination|None: WriteProcessMemory
+    - Destination|None: This program cannot be run in DOS mode
+    - Destination|None: This program must be run under Win32
+id: 83844185-1c5b-45bc-bcf3-b5bf3084ca5b

@@ -1,0 +1,5 @@
+detection:
+- and:
+  - TargetFilename|contains: iphlpapi.dll
+  - TargetFilename|contains: \AppData\Local\Microsoft
+id: 1908fcc1-1b92-4272-8214-0fbaf2fa5163

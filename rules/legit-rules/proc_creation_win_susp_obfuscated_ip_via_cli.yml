@@ -33,6 +33,8 @@ detection:
     - CommandLine|matches: https?://(0[0-9]{1,11}\.){3}0[0-9]{1,11}
     - CommandLine|matches: https?://0[0-9]{1,11}
     - CommandLine|matches: ' [0-7]{7,13}'
+  - or:
+    - CommandLine|not matches: https?://((25[0-5]|(2[0-4]|1\d|[1-9])?\d)(\.|\b)){4}
 falsepositives:
 - Unknown
 level: medium

@@ -1,0 +1,32 @@
+title: Uncommon AppX Package Locations
+id: c977cb50-3dff-4a9f-b873-9290f56132f1
+status: test
+description: Detects an appx package added the pipeline of the "to be processed" packages
+  which is located in uncommon locations
+references:
+- Internal Research
+- https://www.sentinelone.com/labs/inside-malicious-windows-apps-for-malware-deployment/
+- https://learn.microsoft.com/en-us/windows/win32/appxpkg/troubleshooting
+- https://news.sophos.com/en-us/2021/11/11/bazarloader-call-me-back-attack-abuses-windows-10-apps-mechanism/
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/11
+tags:
+- attack.defense_evasion
+logsource:
+  product: windows
+  service: appxdeployment-server
+detection:
+- and:
+  - EventID|==: 854
+  - Path|not contains: C:\Program Files\WindowsApps\
+  - Path|not contains: C:\Program Files (x86)\
+  - Path|not contains: C:\Windows\SystemApps\
+  - Path|not contains: C:\Windows\PrintDialog\
+  - Path|not contains: C:\Windows\ImmersiveControlPanel\
+  - Path|not contains: x-windowsupdate://
+  - Path|not contains: file:///C:/Program%20Files
+  - Path|not contains: https://statics.teams.cdn.office.net/
+  - Path|not contains: microsoft.com
+falsepositives:
+- Unknown
+level: medium

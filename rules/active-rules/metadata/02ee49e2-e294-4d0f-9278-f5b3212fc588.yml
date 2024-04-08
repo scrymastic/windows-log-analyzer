@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing
+date: 2018/08/25
+description: Detects suspicious new RUN key element pointing to an executable in a
+  suspicious folder
+falsepositives:
+- Software using weird folders for updates
+filename: registry_set_susp_run_key_img_folder.yml
+level: high
+logsource:
+  category: registry_set
+  product: windows
+modified: 2024/03/18
+references:
+- https://www.fireeye.com/blog/threat-research/2018/08/fin7-pursuing-an-enigmatic-and-evasive-global-criminal-operation.html
+related: []
+status: experimental
+tags:
+- attack.persistence
+- attack.t1547.001

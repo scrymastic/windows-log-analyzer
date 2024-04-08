@@ -1,0 +1,22 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/08/22
+description: Detects the use of the lesser known remote execution tool named CsExec
+  a PsExec alternative
+falsepositives:
+- Unknown
+filename: proc_creation_win_pua_csexec.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/21
+references:
+- https://github.com/malcomvetter/CSExec
+- https://www.microsoft.com/security/blog/2022/05/09/ransomware-as-a-service-understanding-the-cybercrime-gig-economy-and-how-to-protect-yourself/
+related: []
+status: test
+tags:
+- attack.resource_development
+- attack.t1587.001
+- attack.execution
+- attack.t1569.002

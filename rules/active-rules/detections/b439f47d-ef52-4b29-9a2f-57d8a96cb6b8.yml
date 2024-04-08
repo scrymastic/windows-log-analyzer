@@ -1,0 +1,9 @@
+detection:
+- and:
+  - Image|endswith: \scrcons.exe
+  - or:
+    - ImageLoaded|endswith: \vbscript.dll
+    - ImageLoaded|endswith: \wbemdisp.dll
+    - ImageLoaded|endswith: \wshom.ocx
+    - ImageLoaded|endswith: \scrrun.dll
+id: b439f47d-ef52-4b29-9a2f-57d8a96cb6b8

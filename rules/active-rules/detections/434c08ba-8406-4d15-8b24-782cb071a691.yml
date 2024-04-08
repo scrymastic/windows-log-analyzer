@@ -1,0 +1,29 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+  - or:
+    - OriginalFileName|==: PowerShell.EXE
+    - OriginalFileName|==: pwsh.dll
+  - or:
+    - CommandLine|contains: 'Get-ChildItem '
+    - CommandLine|contains: 'dir '
+    - CommandLine|contains: 'gci '
+    - CommandLine|contains: 'ls '
+  - or:
+    - CommandLine|contains: 'Get-Content '
+    - CommandLine|contains: 'gc '
+    - CommandLine|contains: 'cat '
+    - CommandLine|contains: 'type '
+    - CommandLine|contains: ReadAllBytes
+  - or:
+    - CommandLine|contains: ' ^| '
+    - CommandLine|contains: \*.lnk
+    - CommandLine|contains: -Recurse
+    - CommandLine|contains: '-Skip '
+    - CommandLine|contains: ' -ExpandProperty '
+    - CommandLine|contains: \*.lnk
+    - CommandLine|contains: WriteAllBytes
+    - CommandLine|contains: ' .length '
+id: 434c08ba-8406-4d15-8b24-782cb071a691

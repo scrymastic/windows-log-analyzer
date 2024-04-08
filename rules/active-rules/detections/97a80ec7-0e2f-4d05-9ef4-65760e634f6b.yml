@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \whoami.exe
+    - OriginalFileName|==: whoami.exe
+  - or:
+    - CommandLine|contains: ' /priv'
+    - CommandLine|contains: ' -priv'
+id: 97a80ec7-0e2f-4d05-9ef4-65760e634f6b

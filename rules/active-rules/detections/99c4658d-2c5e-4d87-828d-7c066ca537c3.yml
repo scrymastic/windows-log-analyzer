@@ -1,0 +1,11 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Disable-WindowsOptionalFeature
+  - ScriptBlockText|contains: -Online
+  - ScriptBlockText|contains: -FeatureName
+  - or:
+    - ScriptBlockText|contains: Windows-Defender-Gui
+    - ScriptBlockText|contains: Windows-Defender-Features
+    - ScriptBlockText|contains: Windows-Defender
+    - ScriptBlockText|contains: Windows-Defender-ApplicationGuard
+id: 99c4658d-2c5e-4d87-828d-7c066ca537c3

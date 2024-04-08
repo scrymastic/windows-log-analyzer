@@ -1,0 +1,10 @@
+detection:
+- and:
+  - Image|endswith: \wusa.exe
+  - CommandLine|contains: '/extract:'
+  - or:
+    - CommandLine|contains: :\PerfLogs\
+    - CommandLine|contains: :\Users\Public\
+    - CommandLine|contains: :\Windows\Temp\
+    - CommandLine|contains: \Appdata\Local\Temp\
+id: c74c0390-3e20-41fd-a69a-128f0275a5ea

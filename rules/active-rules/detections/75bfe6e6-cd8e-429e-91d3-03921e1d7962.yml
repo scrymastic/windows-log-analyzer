@@ -1,0 +1,8 @@
+detection:
+- and:
+  - CommandLine|contains: e=Access&
+  - CommandLine|contains: y=Guest&
+  - CommandLine|contains: '&p='
+  - CommandLine|contains: '&c='
+  - CommandLine|contains: '&k='
+id: 75bfe6e6-cd8e-429e-91d3-03921e1d7962

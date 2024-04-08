@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|endswith: \mstsc.exe
+  - TargetFilename|contains: \Microsoft\Windows\Start Menu\Programs\Startup\
+id: 52753ea4-b3a0-4365-910d-36cff487b789

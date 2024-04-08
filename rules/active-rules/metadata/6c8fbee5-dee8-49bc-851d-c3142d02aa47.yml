@@ -1,0 +1,24 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/02/28
+description: Detects suspicious DACL modifications to allow access to a service from
+  a suspicious trustee. This can be used to override access restrictions set by previous
+  ACLs.
+falsepositives:
+- Unknown
+filename: proc_creation_win_sc_sdset_allow_service_changes.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://twitter.com/0gtweet/status/1628720819537936386
+- https://itconnect.uw.edu/tools-services-support/it-systems-infrastructure/msinf/other-help/understanding-sddl-syntax/
+- https://learn.microsoft.com/en-us/windows/win32/secauthz/sid-strings
+related:
+- id: a537cfc3-4297-4789-92b5-345bfd845ad0
+  type: similar
+status: test
+tags:
+- attack.persistence
+- attack.t1543.003

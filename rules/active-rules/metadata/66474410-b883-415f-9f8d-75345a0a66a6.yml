@@ -1,0 +1,22 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/16
+description: Detects DNS queries for subdomains related to MEGA sharing website
+falsepositives:
+- Legitimate DNS queries and usage of Mega
+filename: win_dns_client_mega_nz.yml
+level: medium
+logsource:
+  definition: 'Requirements: Microsoft-Windows-DNS Client Events/Operational Event
+    Log must be enabled/collected in order to receive the events.'
+  product: windows
+  service: dns-client
+modified: ''
+references:
+- https://research.nccgroup.com/2021/05/27/detecting-rclone-an-effective-tool-for-exfiltration/
+related:
+- id: 613c03ba-0779-4a53-8a1f-47f914a4ded3
+  type: similar
+status: test
+tags:
+- attack.exfiltration
+- attack.t1567.002

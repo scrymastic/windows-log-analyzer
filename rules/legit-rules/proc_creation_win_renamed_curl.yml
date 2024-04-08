@@ -21,6 +21,8 @@ detection:
   - or:
     - OriginalFileName|==: curl.exe
     - Description|==: The curl executable
+  - or:
+    - Image|not contains: \curl
 falsepositives:
 - Unknown
 level: medium

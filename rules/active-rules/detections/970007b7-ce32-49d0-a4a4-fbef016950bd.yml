@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \reg.exe
+    - OriginalFileName|==: reg.exe
+  - CommandLine|contains: query
+  - or:
+    - CommandLine|contains: currentVersion\windows
+    - CommandLine|contains: winlogon\
+    - CommandLine|contains: currentVersion\shellServiceObjectDelayLoad
+    - CommandLine|contains: currentVersion\run
+    - CommandLine|contains: currentVersion\policies\explorer\run
+    - CommandLine|contains: currentcontrolset\services
+id: 970007b7-ce32-49d0-a4a4-fbef016950bd

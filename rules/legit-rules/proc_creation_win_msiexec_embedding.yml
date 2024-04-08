@@ -22,6 +22,9 @@ detection:
     - Image|endswith: \cmd.exe
   - ParentCommandLine|contains: MsiExec.exe
   - ParentCommandLine|contains: '-Embedding '
+  - or:
+    - Image|not endswith: :\Windows\System32\cmd.exe
+    - CommandLine|not contains: C:\Program Files\SplunkUniversalForwarder\bin\
   - CommandLine|not contains: \DismFoDInstall.cmd
   - ParentCommandLine|not contains: '\MsiExec.exe -Embedding '
   - ParentCommandLine|not contains: Global\MSI0000

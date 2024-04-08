@@ -1,0 +1,22 @@
+detection:
+- and:
+  - or:
+    - or:
+      - CommandLine|None: 'Add-MpPreference '
+      - CommandLine|None: 'Set-MpPreference '
+      - CommandLine|None: 'add-mppreference '
+      - CommandLine|None: 'set-mppreference '
+    - or:
+      - CommandLine|contains: QQBkAGQALQBNAHAAUAByAGUAZgBlAHIAZQBuAGMAZQAgA
+      - CommandLine|contains: EAZABkAC0ATQBwAFAAcgBlAGYAZQByAGUAbgBjAGUAIA
+      - CommandLine|contains: BAGQAZAAtAE0AcABQAHIAZQBmAGUAcgBlAG4AYwBlACAA
+      - CommandLine|contains: UwBlAHQALQBNAHAAUAByAGUAZgBlAHIAZQBuAGMAZQAgA
+      - CommandLine|contains: MAZQB0AC0ATQBwAFAAcgBlAGYAZQByAGUAbgBjAGUAIA
+      - CommandLine|contains: TAGUAdAAtAE0AcABQAHIAZQBmAGUAcgBlAG4AYwBlACAA
+      - CommandLine|contains: YQBkAGQALQBtAHAAcAByAGUAZgBlAHIAZQBuAGMAZQAgA
+      - CommandLine|contains: EAZABkAC0AbQBwAHAAcgBlAGYAZQByAGUAbgBjAGUAIA
+      - CommandLine|contains: hAGQAZAAtAG0AcABwAHIAZQBmAGUAcgBlAG4AYwBlACAA
+      - CommandLine|contains: cwBlAHQALQBtAHAAcAByAGUAZgBlAHIAZQBuAGMAZQAgA
+      - CommandLine|contains: MAZQB0AC0AbQBwAHAAcgBlAGYAZQByAGUAbgBjAGUAIA
+      - CommandLine|contains: zAGUAdAAtAG0AcABwAHIAZQBmAGUAcgBlAG4AYwBlACAA
+id: c6fb44c6-71f5-49e6-9462-1425d328aee3

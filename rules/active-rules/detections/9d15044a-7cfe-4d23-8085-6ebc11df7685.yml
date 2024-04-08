@@ -1,0 +1,21 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: \Software\Microsoft\Office\Outlook\Addins\
+    - TargetObject|contains: \Software\Microsoft\Office\Word\Addins\
+    - TargetObject|contains: \Software\Microsoft\Office\Excel\Addins\
+    - TargetObject|contains: \Software\Microsoft\Office\Powerpoint\Addins\
+    - TargetObject|contains: \Software\Microsoft\VSTO\Security\Inclusion\
+  - Image|not endswith: \msiexec.exe
+  - Image|not endswith: \regsvr32.exe
+  - Image|not endswith: \excel.exe
+  - Image|not endswith: \integrator.exe
+  - Image|not endswith: \OfficeClickToRun.exe
+  - Image|not endswith: \winword.exe
+  - Image|not endswith: \visio.exe
+  - or:
+    - Image|not endswith: \Teams.exe
+  - or:
+    - Image|!==: C:\Program Files\AVG\Antivirus\RegSvr.exe
+    - TargetObject|not contains: \Microsoft\Office\Outlook\Addins\Antivirus.AsOutExt\
+id: 9d15044a-7cfe-4d23-8085-6ebc11df7685

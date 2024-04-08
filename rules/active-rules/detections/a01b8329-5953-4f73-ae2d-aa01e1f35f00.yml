@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|contains: C:\Windows\Microsoft.NET\Framework\
+    - Image|contains: C:\Windows\Microsoft.NET\Framework64\
+  - Image|endswith: \aspnet_compiler.exe
+id: a01b8329-5953-4f73-ae2d-aa01e1f35f00

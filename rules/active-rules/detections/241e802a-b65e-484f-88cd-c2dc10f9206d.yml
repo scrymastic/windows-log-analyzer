@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: Cmd.Exe
+    - Image|endswith: \cmd.exe
+  - CommandLine|contains: <
+id: 241e802a-b65e-484f-88cd-c2dc10f9206d

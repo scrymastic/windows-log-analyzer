@@ -1,0 +1,21 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \esentutl.exe
+    - OriginalFileName|==: \esentutl.exe
+  - or:
+    - CommandLine|contains: vss
+    - CommandLine|contains: ' /m '
+    - CommandLine|contains: ' /y '
+  - or:
+    - CommandLine|contains: \windows\ntds\ntds.dit
+    - CommandLine|contains: \config\sam
+    - CommandLine|contains: \config\security
+    - CommandLine|contains: '\config\system '
+    - CommandLine|contains: \repair\sam
+    - CommandLine|contains: \repair\system
+    - CommandLine|contains: \repair\security
+    - CommandLine|contains: \config\RegBack\sam
+    - CommandLine|contains: \config\RegBack\system
+    - CommandLine|contains: \config\RegBack\security
+id: e7be6119-fc37-43f0-ad4f-1f3f99be2f9f

@@ -1,0 +1,26 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/06/28
+description: Detects usage of bitsadmin downloading a file from a suspicious domain
+falsepositives:
+- Some legitimate apps use this, but limited.
+filename: proc_creation_win_bitsadmin_download_file_sharing_domains.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/02/09
+references:
+- https://blog.netspi.com/15-ways-to-download-a-file/#bitsadmin
+- https://isc.sans.edu/diary/22264
+- https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/ransomware-hive-conti-avoslocker
+- https://www.cisa.gov/uscert/ncas/alerts/aa22-321a
+- https://www.microsoft.com/en-us/security/blog/2024/01/17/new-ttps-observed-in-mint-sandstorm-campaign-targeting-high-profile-individuals-at-universities-and-research-orgs/
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.persistence
+- attack.t1197
+- attack.s0190
+- attack.t1036.003

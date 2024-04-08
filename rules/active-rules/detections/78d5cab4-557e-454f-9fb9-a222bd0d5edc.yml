@@ -1,0 +1,15 @@
+detection:
+- and:
+  - EventID|==: 4624
+  - LogonType|==: 3
+  - IpAddress|not cidr: ::1/128
+  - IpAddress|not cidr: 10.0.0.0/8
+  - IpAddress|not cidr: 127.0.0.0/8
+  - IpAddress|not cidr: 172.16.0.0/12
+  - IpAddress|not cidr: 192.168.0.0/16
+  - IpAddress|not cidr: 169.254.0.0/16
+  - IpAddress|not cidr: fc00::/7
+  - IpAddress|not cidr: fe80::/10
+  - or:
+    - IpAddress|!==: '-'
+id: 78d5cab4-557e-454f-9fb9-a222bd0d5edc

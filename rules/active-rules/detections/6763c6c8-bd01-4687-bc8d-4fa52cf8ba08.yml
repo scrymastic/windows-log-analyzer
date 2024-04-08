@@ -1,0 +1,5 @@
+detection:
+- and:
+  - TargetObject|endswith: \Outlook\Security\EnableUnsafeClientMailRules
+  - Details|==: DWORD (0x00000001)
+id: 6763c6c8-bd01-4687-bc8d-4fa52cf8ba08

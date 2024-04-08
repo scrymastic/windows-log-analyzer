@@ -1,0 +1,23 @@
+detection:
+- and:
+  - or:
+    - ImageLoaded|endswith: \coreclr.dll
+    - ImageLoaded|endswith: \facesdk.dll
+    - ImageLoaded|endswith: \HPCustPartUI.dll
+    - ImageLoaded|endswith: \libcef.dll
+    - ImageLoaded|endswith: \ZIPDLL.dll
+  - or:
+    - ImageLoaded|contains: :\Perflogs\
+    - ImageLoaded|contains: :\Users\Public\
+    - ImageLoaded|contains: \Temporary Internet
+    - ImageLoaded|contains: \Windows\Temp\
+  - or:
+    - ImageLoaded|contains: :\Users\
+    - ImageLoaded|contains: \Favorites\
+    - ImageLoaded|contains: :\Users\
+    - ImageLoaded|contains: \Favourites\
+    - ImageLoaded|contains: :\Users\
+    - ImageLoaded|contains: \Contacts\
+    - ImageLoaded|contains: :\Users\
+    - ImageLoaded|contains: \Pictures\
+id: 799a5f48-0ac1-4e0f-9152-71d137d48c2a

@@ -1,0 +1,23 @@
+detection:
+- and:
+  - or:
+    - ParentImage|endswith: \explorer.exe
+    - ParentImage|endswith: \dopus.exe
+  - or:
+    - or:
+      - Image|endswith: \EXCEL.EXE
+      - Image|endswith: \POWERPNT.EXE
+      - Image|endswith: \WINWORD.exe
+    - or:
+      - OriginalFileName|==: Excel.exe
+      - OriginalFileName|==: POWERPNT.EXE
+      - OriginalFileName|==: WinWord.exe
+  - or:
+    - CommandLine|contains: \AppData\Roaming\Microsoft\Templates
+    - CommandLine|contains: \AppData\Roaming\Microsoft\Word\Startup\
+    - CommandLine|contains: \Microsoft Office\root\Templates\
+    - CommandLine|contains: \Microsoft Office\Templates\
+  - CommandLine|not endswith: .dotx
+  - CommandLine|not endswith: .xltx
+  - CommandLine|not endswith: .potx
+id: f99abdf0-6283-4e71-bd2b-b5c048a94743

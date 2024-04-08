@@ -1,0 +1,21 @@
+detection:
+- and:
+  - Image|endswith: \msiexec.exe
+  - CommandLine|None: ' -y'
+  - CommandLine|not contains: \MsiExec.exe" /Y "C:\Program Files\Bonjour\mdnsNSP.dll
+  - CommandLine|not contains: \MsiExec.exe" /Y "C:\Program Files (x86)\Bonjour\mdnsNSP.dll
+  - CommandLine|not contains: \MsiExec.exe" /Y "C:\Program Files (x86)\Apple Software
+      Update\ScriptingObjectModel.dll
+  - CommandLine|not contains: \MsiExec.exe" /Y "C:\Program Files (x86)\Apple Software
+      Update\SoftwareUpdateAdmin.dll
+  - CommandLine|not contains: \MsiExec.exe" /Y "C:\Windows\CCM\
+  - CommandLine|not contains: \MsiExec.exe" /Y C:\Windows\CCM\
+  - CommandLine|not contains: \MsiExec.exe" -Y "C:\Program Files\Bonjour\mdnsNSP.dll
+  - CommandLine|not contains: \MsiExec.exe" -Y "C:\Program Files (x86)\Bonjour\mdnsNSP.dll
+  - CommandLine|not contains: \MsiExec.exe" -Y "C:\Program Files (x86)\Apple Software
+      Update\ScriptingObjectModel.dll
+  - CommandLine|not contains: \MsiExec.exe" -Y "C:\Program Files (x86)\Apple Software
+      Update\SoftwareUpdateAdmin.dll
+  - CommandLine|not contains: \MsiExec.exe" -Y "C:\Windows\CCM\
+  - CommandLine|not contains: \MsiExec.exe" -Y C:\Windows\CCM\
+id: 6f4191bb-912b-48a8-9ce7-682769541e6d

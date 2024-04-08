@@ -1,0 +1,21 @@
+author: Matthew Matchen
+date: 2020/09/04
+description: Detects the use of Windows Defender MpCmdRun.EXE to download files
+falsepositives:
+- Unknown
+filename: proc_creation_win_mpcmdrun_download_arbitrary_file.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/11/09
+references:
+- https://web.archive.org/web/20200903194959/https://twitter.com/djmtshepana/status/1301608169496612866
+- https://lolbas-project.github.io/lolbas/Binaries/MpCmdRun/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218
+- attack.command_and_control
+- attack.t1105

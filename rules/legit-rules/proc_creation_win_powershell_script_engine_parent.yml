@@ -22,6 +22,8 @@ detection:
   - or:
     - Image|endswith: \powershell.exe
     - Image|endswith: \pwsh.exe
+  - or:
+    - CurrentDirectory|not contains: \Health Service State\
 falsepositives:
 - Microsoft Operations Manager (MOM)
 - Other scripts

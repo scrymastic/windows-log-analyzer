@@ -1,0 +1,6 @@
+detection:
+- and:
+  - TargetObject|contains: \Services\HybridConnectionManager
+  - EventType|==: SetValue
+  - Details|contains: Microsoft.HybridConnectionManager.Listener.exe
+id: ac8866c7-ce44-46fd-8c17-b24acff96ca8

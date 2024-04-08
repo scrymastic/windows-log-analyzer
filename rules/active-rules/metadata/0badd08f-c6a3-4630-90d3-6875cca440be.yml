@@ -1,0 +1,21 @@
+author: frack113
+date: 2022/10/14
+description: Detects a user log-off activity. Could be used for example to correlate
+  information during forensic investigations
+falsepositives:
+- Unknown
+filename: win_security_user_logoff.yml
+level: informational
+logsource:
+  product: windows
+  service: security
+modified: ''
+references:
+- https://github.com/Yamato-Security/EnableWindowsLogSettings/blob/7f6d755d45ac7cc9fc35b0cbf498e6aa4ef19def/ConfiguringSecurityLogAuditPolicies.md
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4634
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4647
+related: []
+status: test
+tags:
+- attack.impact
+- attack.t1531

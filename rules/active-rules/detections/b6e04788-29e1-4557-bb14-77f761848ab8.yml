@@ -1,0 +1,43 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - or:
+    - CommandLine|contains: anonfiles.com
+    - CommandLine|contains: cdn.discordapp.com
+    - CommandLine|contains: cdn.discordapp.com/attachments/
+    - CommandLine|contains: ddns.net
+    - CommandLine|contains: dl.dropboxusercontent.com
+    - CommandLine|contains: ghostbin.co
+    - CommandLine|contains: glitch.me
+    - CommandLine|contains: gofile.io
+    - CommandLine|contains: hastebin.com
+    - CommandLine|contains: mediafire.com
+    - CommandLine|contains: mega.nz
+    - CommandLine|contains: onrender.com
+    - CommandLine|contains: paste.ee
+    - CommandLine|contains: pastebin.com
+    - CommandLine|contains: pastebin.pl
+    - CommandLine|contains: pastetext.net
+    - CommandLine|contains: privatlab.com
+    - CommandLine|contains: privatlab.net
+    - CommandLine|contains: send.exploit.in
+    - CommandLine|contains: sendspace.com
+    - CommandLine|contains: storage.googleapis.com
+    - CommandLine|contains: storjshare.io
+    - CommandLine|contains: supabase.co
+    - CommandLine|contains: temp.sh
+    - CommandLine|contains: transfer.sh
+    - CommandLine|contains: ufile.io
+  - or:
+    - CommandLine|contains: .DownloadString(
+    - CommandLine|contains: .DownloadFile(
+    - CommandLine|contains: 'Invoke-WebRequest '
+    - CommandLine|contains: 'iwr '
+    - CommandLine|contains: 'wget '
+id: b6e04788-29e1-4557-bb14-77f761848ab8

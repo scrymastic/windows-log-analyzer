@@ -1,0 +1,12 @@
+detection:
+- and:
+  - ParentImage|endswith: \java.exe
+  - or:
+    - Image|endswith: \bash.exe
+    - Image|endswith: \cmd.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+  - or:
+    - ParentImage|not contains: build
+    - CommandLine|not contains: build
+id: dff1e1cc-d3fd-47c8-bfc2-aeb878a754c0

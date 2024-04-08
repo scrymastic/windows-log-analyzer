@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
+date: 2021/07/27
+description: Detects potential process patterns related to Cobalt Strike beacon activity
+falsepositives:
+- Unknown
+filename: proc_creation_win_hktl_cobaltstrike_process_patterns.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/03/29
+references:
+- https://hausec.com/2021/07/26/cobalt-strike-and-tradecraft/
+- https://thedfirreport.com/2021/08/29/cobalt-strike-a-defenders-guide/
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059

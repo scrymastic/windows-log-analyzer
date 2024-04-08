@@ -1,0 +1,9 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Set-ExecutionPolicy
+  - or:
+    - ScriptBlockText|contains: Unrestricted
+    - ScriptBlockText|contains: bypass
+  - ScriptBlockText|not contains: (New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')
+  - ScriptBlockText|not contains: (New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')
+id: 61d0475c-173f-4844-86f7-f3eebae1c66b

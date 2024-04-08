@@ -51,6 +51,12 @@ detection:
     - CommandLine|endswith: .txt
     - CommandLine|endswith: .vbe
     - CommandLine|endswith: .vbs
+  - or:
+    - ParentImage|!==: C:\Program Files\Git\usr\bin\sh.exe
+    - Image|!==: C:\Program Files\Git\mingw64\bin\curl.exe
+    - CommandLine|not contains: '--silent --show-error --output '
+    - CommandLine|not contains: gfw-httpget-
+    - CommandLine|not contains: AppData
 falsepositives:
 - Unknown
 level: high

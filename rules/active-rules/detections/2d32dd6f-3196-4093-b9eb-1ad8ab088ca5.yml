@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \odbcconf.exe
+    - OriginalFileName|==: odbcconf.exe
+  - CommandLine|None: ' -f '
+  - or:
+    - CommandLine|not contains: .rsp
+  - or:
+    - ParentImage|!==: C:\Windows\System32\runonce.exe
+    - Image|!==: C:\Windows\System32\odbcconf.exe
+    - CommandLine|not contains: .exe /E /F "C:\WINDOWS\system32\odbcconf.tmp"
+id: 2d32dd6f-3196-4093-b9eb-1ad8ab088ca5

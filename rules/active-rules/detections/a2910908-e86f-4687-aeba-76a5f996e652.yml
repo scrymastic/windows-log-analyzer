@@ -1,0 +1,6 @@
+detection:
+- and:
+  - Image|endswith: \register-cimprovider.exe
+  - CommandLine|contains: -path
+  - CommandLine|contains: dll
+id: a2910908-e86f-4687-aeba-76a5f996e652

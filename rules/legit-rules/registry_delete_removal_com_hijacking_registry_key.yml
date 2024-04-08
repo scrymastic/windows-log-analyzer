@@ -1,0 +1,59 @@
+title: Removal of Potential COM Hijacking Registry Keys
+id: 96f697b0-b499-4e5d-9908-a67bec11cdb6
+status: test
+description: 'Detects any deletion of entries in ".*\shell\open\command" registry
+  keys.
+
+  These registry keys might have been used for COM hijacking activities by a threat
+  actor or an attacker and the deletion could indicate steps to remove its tracks.
+
+  '
+references:
+- https://github.com/OTRF/detection-hackathon-apt29/issues/7
+- https://github.com/OTRF/ThreatHunter-Playbook/blob/2d4257f630f4c9770f78d0c1df059f891ffc3fec/docs/evals/apt29/detections/3.C.1_22A46621-7A92-48C1-81BF-B3937EB4FDC3.md
+- https://docs.microsoft.com/en-us/windows/win32/shell/launch
+- https://docs.microsoft.com/en-us/windows/win32/api/shobjidl_core/nn-shobjidl_core-iexecutecommand
+- https://docs.microsoft.com/en-us/windows/win32/shell/shell-and-managed-code
+author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
+date: 2020/05/02
+modified: 2023/01/19
+tags:
+- attack.defense_evasion
+- attack.t1112
+logsource:
+  product: windows
+  category: registry_delete
+detection:
+- and:
+  - EventType|==: DeleteKey
+  - TargetObject|endswith: \shell\open\command
+  - or:
+    - Image|!==: C:\Windows\system32\svchost.exe
+  - Image|not startswith: C:\Program Files\Common Files\Microsoft Shared\ClickToRun\
+  - Image|not startswith: C:\Program Files\Common Files\Microsoft Shared\ClickToRun\Updates\
+  - or:
+    - Image|!==: C:\Program Files (x86)\Microsoft Office\root\integration\integrator.exe
+  - or:
+    - Image|not endswith: \Dropbox.exe
+    - TargetObject|not contains: \Dropbox.
+  - or:
+    - Image|not endswith: \AppData\Local\Temp\Wireshark_uninstaller.exe
+    - TargetObject|not contains: \wireshark-capture-file\
+  - Image|not startswith: C:\Program Files\Opera\
+  - Image|not startswith: C:\Program Files (x86)\Opera\
+  - or:
+    - Image|not contains: peazip
+    - TargetObject|not contains: \PeaZip.
+  - or:
+    - Image|not endswith: \Everything.exe
+    - TargetObject|not contains: \Everything.
+  - or:
+    - Image|not startswith: C:\Windows\Installer\MSI
+  - or:
+    - Image|not startswith: C:\Program Files (x86)\Java\
+    - Image|not endswith: \installer.exe
+    - TargetObject|not contains: \Classes\WOW6432Node\CLSID\{4299124F-F2C3-41b4-9C73-9236B2AD0E8F}
+falsepositives:
+- Legitimate software (un)installations are known to cause some false positives. Please
+  add them as a filter when encountered
+level: medium

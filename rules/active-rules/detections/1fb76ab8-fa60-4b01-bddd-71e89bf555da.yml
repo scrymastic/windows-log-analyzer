@@ -1,0 +1,5 @@
+detection:
+- and:
+  - CommandLine|contains: \pubprn.vbs
+  - CommandLine|contains: 'script:'
+id: 1fb76ab8-fa60-4b01-bddd-71e89bf555da

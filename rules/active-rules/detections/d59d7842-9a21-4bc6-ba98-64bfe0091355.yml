@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: Invoke-DNSExfiltrator
+    - ScriptBlockText|contains: ' -i '
+    - ScriptBlockText|contains: ' -d '
+    - ScriptBlockText|contains: ' -p '
+    - ScriptBlockText|contains: ' -doh '
+    - ScriptBlockText|contains: ' -t '
+id: d59d7842-9a21-4bc6-ba98-64bfe0091355

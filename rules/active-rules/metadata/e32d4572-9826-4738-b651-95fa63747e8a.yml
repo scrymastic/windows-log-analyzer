@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems)
+date: 2020/01/29
+description: Detects usage of the "FromBase64String" function in the commandline which
+  is used to decode a base64 encoded string
+falsepositives:
+- Administrative script libraries
+filename: proc_creation_win_powershell_frombase64string.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/01/26
+references:
+- https://gist.github.com/Neo23x0/6af876ee72b51676c82a2db8d2cd3639
+related: []
+status: test
+tags:
+- attack.t1027
+- attack.defense_evasion
+- attack.t1140
+- attack.t1059.001

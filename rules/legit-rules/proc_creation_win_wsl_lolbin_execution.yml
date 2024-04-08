@@ -34,6 +34,10 @@ detection:
     - CommandLine|contains: ' --user root'
     - CommandLine|contains: ' -u root'
     - CommandLine|contains: --debug-shell
+  - or:
+    - ParentImage|not endswith: \cmd.exe
+    - CommandLine|not contains: ' -d '
+    - CommandLine|not contains: ' -e kill '
 falsepositives:
 - Automation and orchestration scripts may use this method to execute scripts etc.
 - Legitimate use by Windows to kill processes opened via WSL (example VsCode WSL server)

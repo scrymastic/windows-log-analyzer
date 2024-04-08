@@ -1,0 +1,13 @@
+detection:
+- and:
+  - ParentImage|contains: \servers\Stable-
+  - ParentImage|endswith: \server\node.exe
+  - ParentCommandLine|contains: .vscode-server
+  - or:
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+  - CommandLine|contains: \terminal\browser\media\shellIntegration.ps1
+  - or:
+    - Image|endswith: \wsl.exe
+    - Image|endswith: \bash.exe
+id: f4a623c2-4ef5-4c33-b811-0642f702c9f1

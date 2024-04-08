@@ -1,0 +1,29 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cmd.exe
+    - OriginalFileName|==: Cmd.Exe
+  - CommandLine|contains: 'dir '
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - CommandLine|contains: 'Get-ChildItem '
+  - or:
+    - Image|endswith: \findstr.exe
+    - OriginalFileName|==: FINDSTR.EXE
+  - or:
+    - CommandLine|contains: .key
+    - CommandLine|contains: .pgp
+    - CommandLine|contains: .gpg
+    - CommandLine|contains: .ppk
+    - CommandLine|contains: .p12
+    - CommandLine|contains: .pem
+    - CommandLine|contains: .pfx
+    - CommandLine|contains: .cer
+    - CommandLine|contains: .p7b
+    - CommandLine|contains: .asc
+id: 213d6a77-3d55-4ce8-ba74-fcfef741974e

@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/05/27
+description: Detects a regedit started with TrustedInstaller privileges or by ProcessHacker.exe
+falsepositives:
+- Unlikely
+filename: proc_creation_win_regedit_trustedinstaller.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/10/09
+references:
+- https://twitter.com/1kwpeter/status/1397816101455765504
+related: []
+status: test
+tags:
+- attack.privilege_escalation
+- attack.t1548

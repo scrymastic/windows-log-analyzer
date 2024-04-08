@@ -1,0 +1,18 @@
+author: frack113
+date: 2022/12/25
+description: Detects inline execution of PowerShell code from a file
+falsepositives:
+- Unknown
+filename: proc_creation_win_powershell_exec_data_file.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=50
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

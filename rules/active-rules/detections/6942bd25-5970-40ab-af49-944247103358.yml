@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - Payload|contains: get-smbshare
+    - ContextInfo|contains: get-smbshare
+id: 6942bd25-5970-40ab-af49-944247103358

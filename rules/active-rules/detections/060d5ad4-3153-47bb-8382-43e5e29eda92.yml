@@ -1,0 +1,7 @@
+detection:
+- and:
+  - Image|contains: \AppData\Local\Apps\2.0\
+  - or:
+    - Signed|==: 'false'
+    - SignatureStatus|==: Expired
+id: 060d5ad4-3153-47bb-8382-43e5e29eda92

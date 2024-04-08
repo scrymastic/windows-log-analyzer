@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: System.Reflection.Assembly.Load($
+    - ScriptBlockText|contains: '[System.Reflection.Assembly]::Load($'
+    - ScriptBlockText|contains: '[Reflection.Assembly]::Load($'
+    - ScriptBlockText|contains: System.Reflection.AssemblyName
+    - ScriptBlockText|contains: Reflection.Emit.AssemblyBuilderAccess
+    - ScriptBlockText|contains: Reflection.Emit.CustomAttributeBuilder
+    - ScriptBlockText|contains: Runtime.InteropServices.UnmanagedType
+    - ScriptBlockText|contains: Runtime.InteropServices.DllImportAttribute
+    - ScriptBlockText|contains: SuspendThread
+    - ScriptBlockText|contains: rundll32
+id: 1f49f2ab-26bc-48b3-96cc-dcffbc93eadf

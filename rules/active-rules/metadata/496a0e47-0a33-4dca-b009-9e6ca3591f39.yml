@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems)
+date: 2017/02/06
+description: Detects service ticket requests using RC4 encryption type
+falsepositives:
+- Service accounts used on legacy systems (e.g. NetApp)
+- Windows Domains with DFL 2003 and legacy systems
+filename: win_security_susp_rc4_kerberos.yml
+level: medium
+logsource:
+  product: windows
+  service: security
+modified: 2022/06/19
+references:
+- https://adsecurity.org/?p=3458
+- https://www.trimarcsecurity.com/single-post/TrimarcResearch/Detecting-Kerberoasting-Activity
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1558.003

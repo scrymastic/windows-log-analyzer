@@ -1,0 +1,28 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+  - or:
+    - CommandLine|contains: 'curl '
+    - CommandLine|contains: Invoke-WebRequest
+    - CommandLine|contains: 'iwr '
+    - CommandLine|contains: 'wget '
+  - or:
+    - CommandLine|contains: ' -ur'
+    - CommandLine|contains: ' -o'
+  - or:
+    - CommandLine|contains: \AppData\
+    - CommandLine|contains: \Desktop\
+    - CommandLine|contains: \Temp\
+    - CommandLine|contains: \Users\Public\
+    - CommandLine|contains: '%AppData%'
+    - CommandLine|contains: '%Public%'
+    - CommandLine|contains: '%Temp%'
+    - CommandLine|contains: '%tmp%'
+    - CommandLine|contains: :\Windows\
+id: 5e3cc4d8-3e68-43db-8656-eaaeefdec9cc

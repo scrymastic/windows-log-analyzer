@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/19
+description: Detects the execution of sigverif binary as a parent process which could
+  indicate it being used as a LOLBIN to proxy execution
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_sigverif.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.hexacorn.com/blog/2018/04/27/i-shot-the-sigverif-exe-the-gui-based-lolbin/
+- https://twitter.com/0gtweet/status/1457676633809330184
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1216

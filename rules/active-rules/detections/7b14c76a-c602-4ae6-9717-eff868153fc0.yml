@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 5447
+    - FilterName|contains: RonPolicy
+  - or:
+    - EventID|==: 5449
+    - ProviderContextName|contains: RonPolicy
+id: 7b14c76a-c602-4ae6-9717-eff868153fc0

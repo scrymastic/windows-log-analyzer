@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - AccessList|contains: '%%4417'
+    - AccessList|contains: '%%4418'
+  - or:
+    - EventID|==: 4656
+    - EventID|==: 4663
+  - ObjectName|contains: \Microsoft\Windows Defender\Exclusions\
+id: e9c8808f-4cfb-4ba9-97d4-e5f3beaa244d

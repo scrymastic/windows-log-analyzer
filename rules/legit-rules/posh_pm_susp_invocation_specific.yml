@@ -1,0 +1,69 @@
+title: Suspicious PowerShell Invocations - Specific - PowerShell Module
+id: 8ff28fdd-e2fa-4dfa-aeda-ef3d61c62090
+related:
+- id: fce5f582-cc00-41e1-941a-c6fabf0fdb8c
+  type: obsoletes
+- id: ae7fbf8e-f3cb-49fd-8db4-5f3bed522c71
+  type: similar
+- id: 536e2947-3729-478c-9903-745aaffe60d2
+  type: similar
+status: test
+description: Detects suspicious PowerShell invocation command parameters
+references:
+- Internal Research
+author: Florian Roth (Nextron Systems), Jonhnathan Ribeiro
+date: 2017/03/05
+modified: 2023/01/05
+tags:
+- attack.execution
+- attack.t1059.001
+logsource:
+  product: windows
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+detection:
+- and:
+  - or:
+    - ContextInfo|contains: -nop
+    - ContextInfo|contains: ' -w '
+    - ContextInfo|contains: hidden
+    - ContextInfo|contains: ' -c '
+    - ContextInfo|contains: '[Convert]::FromBase64String'
+  - or:
+    - ContextInfo|contains: ' -w '
+    - ContextInfo|contains: hidden
+    - ContextInfo|contains: -noni
+    - ContextInfo|contains: -nop
+    - ContextInfo|contains: ' -c '
+    - ContextInfo|contains: iex
+    - ContextInfo|contains: New-Object
+  - or:
+    - ContextInfo|contains: ' -w '
+    - ContextInfo|contains: hidden
+    - ContextInfo|contains: -ep
+    - ContextInfo|contains: bypass
+    - ContextInfo|contains: -Enc
+  - or:
+    - ContextInfo|contains: powershell
+    - ContextInfo|contains: reg
+    - ContextInfo|contains: add
+    - ContextInfo|contains: HKCU\software\microsoft\windows\currentversion\run
+  - or:
+    - ContextInfo|contains: bypass
+    - ContextInfo|contains: -noprofile
+    - ContextInfo|contains: -windowstyle
+    - ContextInfo|contains: hidden
+    - ContextInfo|contains: new-object
+    - ContextInfo|contains: system.net.webclient
+    - ContextInfo|contains: .download
+  - or:
+    - ContextInfo|contains: iex
+    - ContextInfo|contains: New-Object
+    - ContextInfo|contains: Net.WebClient
+    - ContextInfo|contains: .Download
+  - or:
+    - ContextInfo|contains: (New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1
+    - ContextInfo|contains: Write-ChocolateyWarning
+falsepositives:
+- Unknown
+level: high

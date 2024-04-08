@@ -1,0 +1,13 @@
+detection:
+- and:
+  - Image|endswith: \mshta.exe
+  - or:
+    - CommandLine|contains: vbscript
+    - CommandLine|contains: .jpg
+    - CommandLine|contains: .png
+    - CommandLine|contains: .lnk
+    - CommandLine|contains: .xls
+    - CommandLine|contains: .doc
+    - CommandLine|contains: .zip
+    - CommandLine|contains: .dll
+id: cc7abbd0-762b-41e3-8a26-57ad50d2eea3

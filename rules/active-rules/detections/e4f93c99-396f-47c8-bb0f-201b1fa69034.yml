@@ -1,0 +1,14 @@
+detection:
+- and:
+  - ScriptBlockText|contains: '[System.Math]::'
+  - ScriptBlockText|contains: '[IO.FileMode]::'
+  - ScriptBlockText|contains: BinaryWriter
+  - ScriptBlockText|contains: '0x52'
+  - ScriptBlockText|contains: '0x49'
+  - ScriptBlockText|contains: '0x46'
+  - ScriptBlockText|contains: '0x57'
+  - ScriptBlockText|contains: '0x41'
+  - ScriptBlockText|contains: '0x56'
+  - ScriptBlockText|contains: '0x45'
+  - ScriptBlockText|contains: '0xAC'
+id: e4f93c99-396f-47c8-bb0f-201b1fa69034

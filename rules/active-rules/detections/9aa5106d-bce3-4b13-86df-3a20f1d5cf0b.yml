@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \forfiles.exe
+    - OriginalFileName|==: forfiles.exe
+  - CommandLine|None: ' -c '
+id: 9aa5106d-bce3-4b13-86df-3a20f1d5cf0b

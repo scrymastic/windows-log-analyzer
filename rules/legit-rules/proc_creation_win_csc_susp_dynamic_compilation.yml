@@ -39,6 +39,15 @@ detection:
   - CommandLine|matches: ([Pp]rogram[Dd]ata|%([Ll]ocal)?[Aa]pp[Dd]ata%|\\[Aa]pp[Dd]ata\\([Ll]ocal(Ll]ow)?|[Rr]oaming))\\[^\\]{1,256}$
   - ParentImage|not startswith: C:\Program Files (x86)\
   - ParentImage|not startswith: C:\Program Files\
+  - or:
+    - ParentImage|!==: C:\Windows\System32\sdiagnhost.exe
+  - or:
+    - ParentImage|!==: C:\Windows\System32\inetsrv\w3wp.exe
+  - or:
+    - ParentImage|!==: C:\ProgramData\chocolatey\choco.exe
+  - or:
+    - ParentCommandLine|not contains: \ProgramData\Microsoft\Windows Defender Advanced
+        Threat Protection
   - ParentCommandLine|not contains: JwB7ACIAZgBhAGkAbABlAGQAIgA6AHQAcgB1AGUALAAiAG0AcwBnACIAOgAiAEEAbgBzAGkAYgBsAGUAIAByAGUAcQB1AGkAcgBlAHMAIABQAG8AdwBlAHIAUwBoAGUAbABsACAAdgAzAC4AMAAgAG8AcgAgAG4AZQB3AGUAcgAiAH0AJw
   - ParentCommandLine|not contains: cAewAiAGYAYQBpAGwAZQBkACIAOgB0AHIAdQBlACwAIgBtAHMAZwAiADoAIgBBAG4AcwBpAGIAbABlACAAcgBlAHEAdQBpAHIAZQBzACAAUABvAHcAZQByAFMAaABlAGwAbAAgAHYAMwAuADAAIABvAHIAIABuAGUAdwBlAHIAIgB9ACcA
   - ParentCommandLine|not contains: nAHsAIgBmAGEAaQBsAGUAZAAiADoAdAByAHUAZQAsACIAbQBzAGcAIgA6ACIAQQBuAHMAaQBiAGwAZQAgAHIAZQBxAHUAaQByAGUAcwAgAFAAbwB3AGUAcgBTAGgAZQBsAGwAIAB2ADMALgAwACAAbwByACAAbgBlAHcAZQByACIAfQAnA

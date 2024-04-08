@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 4657
+    - EventID|==: 4656
+    - EventID|==: 4663
+  - or:
+    - ObjectName|contains: \SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone\NonPackaged
+    - ObjectName|contains: \SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam\NonPackaged
+id: 8cd538a4-62d5-4e83-810b-12d41e428d6e

@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \netsh.exe
+    - OriginalFileName|==: netsh.exe
+  - CommandLine|contains: ' firewall '
+  - CommandLine|contains: ' add '
+  - CommandLine|not contains: advfirewall firewall add rule name=Dropbox dir=in action=allow
+      "program=?:\Program Files (x86)\Dropbox\Client\Dropbox.exe" enable=yes profile=Any
+  - CommandLine|not contains: advfirewall firewall add rule name=Dropbox dir=in action=allow
+      "program=?:\Program Files\Dropbox\Client\Dropbox.exe" enable=yes profile=Any
+id: cd5cfd80-aa5f-44c0-9c20-108c4ae12e3c

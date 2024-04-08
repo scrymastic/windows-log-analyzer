@@ -1,0 +1,7 @@
+detection:
+- and:
+  - CommandLine|contains: rundll32.exe
+  - or:
+    - CommandLine|contains: .sys,
+    - CommandLine|contains: '.sys '
+id: 731231b9-0b5d-4219-94dd-abb6959aa7ea

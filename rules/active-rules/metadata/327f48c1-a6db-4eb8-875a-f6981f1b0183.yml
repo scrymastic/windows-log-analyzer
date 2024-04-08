@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/12
+description: Detects port forwarding activity via SSH.exe
+falsepositives:
+- Administrative activity using a remote port forwarding to a local port
+filename: proc_creation_win_ssh_port_forward.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/05
+references:
+- https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/
+related: []
+status: experimental
+tags:
+- attack.command_and_control
+- attack.lateral_movement
+- attack.t1572
+- attack.t1021.001
+- attack.t1021.004

@@ -1,0 +1,6 @@
+detection:
+- and:
+  - TargetObject|contains: SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User
+      Shell Folders
+  - TargetObject|endswith: Startup
+id: 9c226817-8dc9-46c2-a58d-66655aafd7dc

@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \rundll32.exe
+    - OriginalFileName|==: RUNDLL32.EXE
+    - CommandLine|contains: rundll32
+  - CommandLine|contains: ' \\\\'
+id: 5cdb711b-5740-4fb2-ba88-f7945027afac

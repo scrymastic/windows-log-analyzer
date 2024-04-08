@@ -1,0 +1,6 @@
+detection:
+- and:
+  - EventID|==: 4673
+  - Service|==: LsaRegisterLogonProcess()
+  - Keywords|==: '0x8010000000000000'
+id: 6daac7fc-77d1-449a-a71a-e6b4d59a0e54

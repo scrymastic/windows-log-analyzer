@@ -35,6 +35,9 @@ detection:
     - Image|endswith: \sh.exe
     - Image|endswith: \wmic.exe
     - Image|endswith: \wscript.exe
+  - or:
+    - ParentCommandLine|not contains: \Program Files\Amazon\WorkspacesConfig\Scripts\
+    - CommandLine|not contains: \Program Files\Amazon\WorkspacesConfig\Scripts\
 falsepositives:
 - Some false positive is to be expected from PowerShell scripts that might make use
   of additional binaries such as "mshta", "bitsadmin", etc. Apply additional filters

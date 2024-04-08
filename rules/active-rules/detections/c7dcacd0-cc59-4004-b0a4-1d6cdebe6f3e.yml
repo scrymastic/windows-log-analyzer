@@ -1,0 +1,8 @@
+detection:
+- and:
+  - TargetObject|contains: \Services\LanmanServer\Parameters\
+  - or:
+    - TargetObject|endswith: \AutoShareWks
+    - TargetObject|endswith: \AutoShareServer
+  - Details|==: DWORD (0x00000000)
+id: c7dcacd0-cc59-4004-b0a4-1d6cdebe6f3e

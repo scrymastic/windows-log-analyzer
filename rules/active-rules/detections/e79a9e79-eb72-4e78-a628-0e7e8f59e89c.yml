@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \rundll32.exe
+    - OriginalFileName|==: RUNDLL32.EXE
+  - or:
+    - CommandLine|contains: ',#'
+    - CommandLine|contains: ', #'
+    - CommandLine|contains: '.dll #'
+    - CommandLine|contains: '.ocx #'
+  - or:
+    - CommandLine|not contains: EDGEHTML.dll
+    - CommandLine|not contains: '#141'
+  - ParentImage|not contains: \Msbuild\Current\Bin\
+  - ParentImage|not contains: \VC\Tools\MSVC\
+  - ParentImage|not contains: \Tracker.exe
+id: e79a9e79-eb72-4e78-a628-0e7e8f59e89c

@@ -1,0 +1,10 @@
+detection:
+- and:
+  - EventID|==: 4697
+  - ServiceFileName|contains: cmd
+  - ServiceFileName|contains: '"set'
+  - ServiceFileName|contains: -f
+  - or:
+    - ServiceFileName|contains: /c
+    - ServiceFileName|contains: /r
+id: dcf2db1f-f091-425b-a821-c05875b8925a

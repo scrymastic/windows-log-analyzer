@@ -1,0 +1,12 @@
+detection:
+- and:
+  - Image|endswith: \mobsync.exe
+  - DestinationIp|not cidr: 127.0.0.0/8
+  - DestinationIp|not cidr: 10.0.0.0/8
+  - DestinationIp|not cidr: 172.16.0.0/12
+  - DestinationIp|not cidr: 192.168.0.0/16
+  - DestinationIp|not cidr: 169.254.0.0/16
+  - DestinationIp|not cidr: ::1/128
+  - DestinationIp|not cidr: fe80::/10
+  - DestinationIp|not cidr: fc00::/7
+id: 9f2cc74d-78af-4eb2-bb64-9cd1d292b87b

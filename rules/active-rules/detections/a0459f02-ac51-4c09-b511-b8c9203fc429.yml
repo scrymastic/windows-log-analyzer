@@ -1,0 +1,4 @@
+detection:
+- and:
+  - CommandLine|contains: 'SyncInvoke '
+id: a0459f02-ac51-4c09-b511-b8c9203fc429

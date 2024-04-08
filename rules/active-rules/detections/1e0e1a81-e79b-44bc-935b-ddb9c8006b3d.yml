@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - ParentImage|endswith: \powershell.exe
+    - ParentImage|endswith: \pwsh.exe
+  - Image|endswith: \powershell.exe
+  - CommandLine|contains: ' -nologo -windowstyle minimized -file '
+  - or:
+    - CommandLine|contains: \AppData\Local\Temp\
+    - CommandLine|contains: \Windows\Temp\
+id: 1e0e1a81-e79b-44bc-935b-ddb9c8006b3d

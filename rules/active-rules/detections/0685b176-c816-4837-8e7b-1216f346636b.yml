@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \QuarksPwDump.exe
+  - or:
+    - or:
+      - CommandLine|==: ' -dhl'
+      - CommandLine|==: ' --dump-hash-local'
+      - CommandLine|==: ' -dhdc'
+      - CommandLine|==: ' --dump-hash-domain-cached'
+      - CommandLine|==: ' --dump-bitlocker'
+      - CommandLine|==: ' -dhd '
+      - CommandLine|==: ' --dump-hash-domain '
+      - CommandLine|==: --ntds-file
+id: 0685b176-c816-4837-8e7b-1216f346636b

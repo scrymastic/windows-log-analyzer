@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - TargetFilename|contains: \Microsoft\Word\Startup\
+    - TargetFilename|endswith: .wll
+  - or:
+    - TargetFilename|contains: \Microsoft\Excel\Startup\
+    - TargetFilename|endswith: .xll
+  - or:
+    - TargetFilename|contains: Microsoft\Excel\XLSTART\
+    - TargetFilename|endswith: .xlam
+  - or:
+    - TargetFilename|contains: \Microsoft\Addins\
+    - or:
+      - TargetFilename|endswith: .xlam
+      - TargetFilename|endswith: .xla
+      - TargetFilename|endswith: .ppam
+id: 8e1cb247-6cf6-42fa-b440-3f27d57e9936

@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|endswith: \ScreenConnect.WindowsClient.exe
+  - TargetFilename|contains: \Documents\ConnectWiseControl\Temp\
+id: 0afecb6e-6223-4a82-99fb-bf5b981e92a5

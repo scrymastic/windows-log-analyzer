@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+    - or:
+      - OriginalFileName|==: net.exe
+      - OriginalFileName|==: net1.exe
+  - CommandLine|contains: ' use '
+  - CommandLine|contains: :*\\
+  - CommandLine|contains: /USER:* *
+  - or:
+    - CommandLine|not endswith: ' '
+id: d4498716-1d52-438f-8084-4a603157d131

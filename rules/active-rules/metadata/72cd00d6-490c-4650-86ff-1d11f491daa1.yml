@@ -1,0 +1,24 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/03
+description: Detects the load of known vulnerable drivers via the file name of the
+  drivers.
+falsepositives:
+- False positives may occur if one of the vulnerable driver names mentioned above
+  didn't change its name between versions. So always make sure that the driver being
+  loaded is the legitimate one and the non vulnerable version.
+- If you experience a lot of FP you could comment the driver name or its exact known
+  legitimate location (when possible)
+filename: driver_load_win_vuln_drivers_names.yml
+level: low
+logsource:
+  category: driver_load
+  product: windows
+modified: 2023/12/02
+references:
+- https://loldrivers.io/
+related: []
+status: experimental
+tags:
+- attack.privilege_escalation
+- attack.t1543.003
+- attack.t1068

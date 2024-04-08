@@ -1,0 +1,23 @@
+author: Ilya Krestinichev
+date: 2022/11/03
+description: Detects a method often used by ransomware. Which combines the "ping"
+  to wait a couple of seconds and then "del" to delete the file in question. Its used
+  to hide the file responsible for the initial infection for example
+falsepositives:
+- Unknown
+filename: proc_creation_win_cmd_ping_del_combined_execution.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/05
+references:
+- https://blog.sygnia.co/kaseya-ransomware-supply-chain-attack
+- https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2022/06/23093553/Common-TTPs-of-the-modern-ransomware_low-res.pdf
+- https://www.acronis.com/en-us/blog/posts/lockbit-ransomware/
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/blackbyte-exbyte-ransomware
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1070.004

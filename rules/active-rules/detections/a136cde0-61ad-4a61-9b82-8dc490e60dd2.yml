@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Payload|matches: .*cmd.{0,5}(?:/c|/r).+clip(?:\.exe)?.{0,4}&&.+clipboard]::\(\s\\"\{\d\}.+-f.+"
+id: a136cde0-61ad-4a61-9b82-8dc490e60dd2

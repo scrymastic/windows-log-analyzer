@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Image|endswith: \scrcons.exe
+id: 493fb4ab-cdcc-4c4f-818c-0e363bd1e4bb

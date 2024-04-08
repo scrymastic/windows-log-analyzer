@@ -1,0 +1,34 @@
+detection:
+- and:
+  - ParentImage|contains: PDQDeployRunner-
+  - or:
+    - or:
+      - Image|endswith: \wscript.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \wmic.exe
+      - Image|endswith: \msiexec.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \csc.exe
+      - Image|endswith: \dllhost.exe
+      - Image|endswith: \certutil.exe
+      - Image|endswith: \scriptrunner.exe
+      - Image|endswith: \bash.exe
+      - Image|endswith: \wsl.exe
+    - or:
+      - Image|contains: C:\Users\Public\
+      - Image|contains: C:\ProgramData\
+      - Image|contains: C:\Windows\TEMP\
+      - Image|contains: \AppData\Local\Temp
+    - or:
+      - CommandLine|contains: 'iex '
+      - CommandLine|contains: Invoke-
+      - CommandLine|contains: DownloadString
+      - CommandLine|contains: http
+      - CommandLine|contains: ' -enc '
+      - CommandLine|contains: ' -encodedcommand '
+      - CommandLine|contains: FromBase64String
+      - CommandLine|contains: ' -decode '
+      - CommandLine|contains: ' -w hidden'
+id: 12b8e9f5-96b2-41e1-9a42-8c6779a5c184

@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 4656
+    - EventID|==: 4663
+  - ObjectType|==: Key
+  - ObjectName|==: \REGISTRY\MACHINE\SOFTWARE\Microsoft\ADHealthAgent
+id: 1d2ab8ac-1a01-423b-9c39-001510eae8e8

@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|endswith: Software\Microsoft\Windows\CurrentVersion\Run\Backup Mgr
+id: b98968aa-dbc0-4a9c-ac35-108363cbf8d5

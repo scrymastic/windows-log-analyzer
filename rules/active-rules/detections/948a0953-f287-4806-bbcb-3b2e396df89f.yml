@@ -1,0 +1,7 @@
+detection:
+- and:
+  - ImageLoaded|endswith: \mfdetours.dll
+  - or:
+    - ImageLoaded|not contains: :\Program Files (x86)\Windows Kits\10\bin\
+    - SignatureStatus|!==: Valid
+id: 948a0953-f287-4806-bbcb-3b2e396df89f

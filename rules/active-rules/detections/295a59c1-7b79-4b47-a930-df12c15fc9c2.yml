@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|contains: \Security\Trusted Documents\TrustRecords
+id: 295a59c1-7b79-4b47-a930-df12c15fc9c2

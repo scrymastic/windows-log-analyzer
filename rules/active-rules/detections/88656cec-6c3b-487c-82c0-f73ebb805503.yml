@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - Product|==: UltraViewer
+    - Company|==: DucFabulous Co,ltd
+    - OriginalFileName|==: UltraViewer_Desktop.exe
+id: 88656cec-6c3b-487c-82c0-f73ebb805503

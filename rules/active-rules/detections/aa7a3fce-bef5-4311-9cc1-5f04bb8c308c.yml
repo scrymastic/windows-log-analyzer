@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: Export-PfxCertificate
+    - ScriptBlockText|contains: Export-Certificate
+  - or:
+    - ScriptBlockText|not contains: CmdletsToExport = @(
+id: aa7a3fce-bef5-4311-9cc1-5f04bb8c308c

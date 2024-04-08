@@ -1,0 +1,17 @@
+detection:
+- and:
+  - Initiated|==: 'true'
+  - or:
+    - Image|endswith: \wscript.exe
+    - Image|endswith: \cscript.exe
+  - DestinationIp|not cidr: 127.0.0.0/8
+  - DestinationIp|not cidr: 10.0.0.0/8
+  - DestinationIp|not cidr: 172.16.0.0/12
+  - DestinationIp|not cidr: 192.168.0.0/16
+  - DestinationIp|not cidr: 169.254.0.0/16
+  - DestinationIp|not cidr: ::1/128
+  - DestinationIp|not cidr: fe80::/10
+  - DestinationIp|not cidr: fc00::/7
+  - or:
+    - DestinationIp|not cidr: 20.0.0.0/11
+id: 992a6cae-db6a-43c8-9cec-76d7195c96fc

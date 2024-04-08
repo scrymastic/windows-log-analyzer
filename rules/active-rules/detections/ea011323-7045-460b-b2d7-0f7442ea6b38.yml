@@ -1,0 +1,7 @@
+detection:
+- and:
+  - CommandLine|contains: accepteula
+  - CommandLine|contains: ' -u '
+  - CommandLine|contains: ' -p '
+  - CommandLine|contains: ' \\\\'
+id: ea011323-7045-460b-b2d7-0f7442ea6b38

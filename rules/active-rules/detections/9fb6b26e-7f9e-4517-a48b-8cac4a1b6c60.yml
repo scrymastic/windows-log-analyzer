@@ -1,0 +1,5 @@
+detection:
+- and:
+  - Image|endswith: \format.com
+  - CommandLine|contains: '/fs:'
+id: 9fb6b26e-7f9e-4517-a48b-8cac4a1b6c60

@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \AnyDesk.exe
+    - Description|==: AnyDesk
+    - Product|==: AnyDesk
+    - Company|==: AnyDesk Software GmbH
+id: 065b00ca-5d5c-4557-ac95-64a6d0b64d86

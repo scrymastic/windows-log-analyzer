@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - ParentImage|endswith: \Winrar.exe
+    - ParentImage|endswith: \7zFM.exe
+    - ParentImage|endswith: \peazip.exe
+  - or:
+    - Image|endswith: \isoburn.exe
+    - Image|endswith: \PowerISO.exe
+    - Image|endswith: \ImgBurn.exe
+id: fcdf69e5-a3d3-452a-9724-26f2308bf2b1

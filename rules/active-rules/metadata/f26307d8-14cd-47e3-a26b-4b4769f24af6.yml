@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/03/12
+description: Detects suspicious process patterns found in logs when CrackMapExec is
+  used
+falsepositives:
+- Unknown
+filename: proc_creation_win_hktl_crackmapexec_patterns.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/13
+references:
+- https://mpgn.gitbook.io/crackmapexec/smb-protocol/obtaining-credentials/dump-lsass
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.001

@@ -1,0 +1,13 @@
+detection:
+- and:
+  - Initiated|==: 'true'
+  - Image|endswith: \wordpad.exe
+  - DestinationPort|!==: 80
+  - DestinationPort|!==: 139
+  - DestinationPort|!==: 443
+  - DestinationPort|!==: 445
+  - DestinationPort|!==: 465
+  - DestinationPort|!==: 587
+  - DestinationPort|!==: 993
+  - DestinationPort|!==: 995
+id: 786cdae8-fefb-4eb2-9227-04e34060db01

@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cmd.exe
+    - OriginalFileName|==: Cmd.Exe
+  - CommandLine|contains: /q
+  - CommandLine|contains: /c
+  - CommandLine|contains: chcp
+id: 5cddf373-ef00-4112-ad72-960ac29bac34

@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: 'Clear-EventLog '
+    - ScriptBlockText|contains: 'Remove-EventLog '
+    - ScriptBlockText|contains: 'Limit-EventLog '
+    - ScriptBlockText|contains: 'Clear-WinEvent '
+id: 0f017df3-8f5a-414f-ad6b-24aff1128278

@@ -1,0 +1,11 @@
+detection:
+- and:
+  - EventID|==: 7036
+  - Provider_Name|==: Service Control Manager
+  - or:
+    - param1|==: Windows Defender Antivirus Service
+    - param1|==: Service antivirus Microsoft Defender
+  - or:
+    - param2|==: stopped
+    - param2|==: "arr\xEAt\xE9"
+id: 6c0a7755-6d31-44fa-80e1-133e57752680

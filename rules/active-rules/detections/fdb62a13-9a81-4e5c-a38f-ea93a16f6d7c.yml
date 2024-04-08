@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - CommandLine|None: ::FromBase64String
+    - or:
+      - CommandLine|contains: OgA6AEYAcgBvAG0AQgBhAHMAZQA2ADQAUwB0AHIAaQBuAGcA
+      - CommandLine|contains: oAOgBGAHIAbwBtAEIAYQBzAGUANgA0AFMAdAByAGkAbgBnA
+      - CommandLine|contains: 6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZw
+id: fdb62a13-9a81-4e5c-a38f-ea93a16f6d7c

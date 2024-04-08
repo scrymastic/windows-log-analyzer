@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel
+date: 2023/11/27
+description: Detects process access requests from hacktool processes based on their
+  default image name
+falsepositives:
+- Unlikely
+filename: proc_access_win_hktl_generic_access.yml
+level: high
+logsource:
+  category: process_access
+  product: windows
+modified: ''
+references:
+- https://jsecurity101.medium.com/bypassing-access-mask-auditing-strategies-480fb641c158
+- https://www.splunk.com/en_us/blog/security/you-bet-your-lsass-hunting-lsass-access.html
+related: []
+status: experimental
+tags:
+- attack.credential_access
+- attack.t1003.001
+- attack.s0002

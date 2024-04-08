@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/12/14
+description: Detects usage of the "type" command to download/upload data from WebDAV
+  server
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_type.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://mr0range.com/a-new-lolbin-using-the-windows-type-command-to-upload-download-files-81d7b6179e22
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1105

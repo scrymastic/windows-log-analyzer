@@ -1,0 +1,18 @@
+author: Dmitriy Lifanov, oscd.community
+date: 2019/10/25
+description: Detects abusing Windows 10 Narrator's Feedback-Hub
+falsepositives:
+- Unknown
+filename: registry_event_narrator_feedback_persistance.yml
+level: high
+logsource:
+  category: registry_event
+  product: windows
+modified: 2022/03/26
+references:
+- https://giuliocomi.blogspot.com/2019/10/abusing-windows-10-narrators-feedback.html
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.t1547.001

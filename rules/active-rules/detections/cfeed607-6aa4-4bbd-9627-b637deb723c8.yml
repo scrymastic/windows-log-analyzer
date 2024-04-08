@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 4720
+    - SamAccountName|contains: $
+  - or:
+    - EventID|==: 4781
+    - NewTargetUserName|contains: $
+  - EventID|==: 4720
+  - TargetUserName|==: HomeGroupUser$
+id: cfeed607-6aa4-4bbd-9627-b637deb723c8

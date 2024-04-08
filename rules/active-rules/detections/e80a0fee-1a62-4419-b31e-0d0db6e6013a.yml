@@ -1,0 +1,7 @@
+detection:
+- and:
+  - Provider_Name|==: Microsoft-Windows-Directory-Services-SAM
+  - or:
+    - EventID|==: 16990
+    - EventID|==: 16991
+id: e80a0fee-1a62-4419-b31e-0d0db6e6013a

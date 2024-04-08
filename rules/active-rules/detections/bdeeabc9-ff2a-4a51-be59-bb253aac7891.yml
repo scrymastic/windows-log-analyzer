@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \wsudo.exe
+      - OriginalFileName|==: wsudo.exe
+      - Description|==: Windows sudo utility
+      - ParentImage|endswith: \wsudo-bridge.exe
+  - or:
+    - or:
+      - CommandLine|contains: -u System
+      - CommandLine|contains: -uSystem
+      - CommandLine|contains: -u TrustedInstaller
+      - CommandLine|contains: -uTrustedInstaller
+      - CommandLine|contains: ' --ti '
+id: bdeeabc9-ff2a-4a51-be59-bb253aac7891

@@ -1,0 +1,11 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: /logon:none
+    - CommandLine|contains: /system:none
+    - CommandLine|contains: /sam:none
+    - CommandLine|contains: /privilege:none
+    - CommandLine|contains: /object:none
+    - CommandLine|contains: /process:none
+    - CommandLine|contains: /policy:none
+id: c6c56ada-612b-42d1-9a29-adad3c5c2c1e

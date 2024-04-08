@@ -1,0 +1,8 @@
+detection:
+- and:
+  - CommandLine|contains: ' tunnel '
+  - CommandLine|contains: 'cleanup '
+  - or:
+    - CommandLine|contains: '-config '
+    - CommandLine|contains: '-connector-id '
+id: 7050bba1-1aed-454e-8f73-3f46f09ce56a

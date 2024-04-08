@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ImageLoaded|endswith: \JSESPR.dll
+id: 68654bf0-4412-43d5-bfe8-5eaa393cd939

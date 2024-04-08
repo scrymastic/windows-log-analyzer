@@ -1,0 +1,27 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/21
+description: "Detects when an attacker modifies values of the Disk Cleanup Handler\
+  \ in the registry to achieve persistence.\nThe disk cleanup manager is part of the\
+  \ operating system. It displays the dialog box [\u2026]\nThe user has the option\
+  \ of enabling or disabling individual handlers by selecting or clearing their check\
+  \ box in the disk cleanup manager's UI.\nAlthough Windows comes with a number of\
+  \ disk cleanup handlers, they aren't designed to handle files produced by other\
+  \ applications.\nInstead, the disk cleanup manager is designed to be flexible and\
+  \ extensible by enabling any developer to implement and register their own disk\
+  \ cleanup handler.\nAny developer can extend the available disk cleanup services\
+  \ by implementing and registering a disk cleanup handler.\n"
+falsepositives:
+- Legitimate new entry added by windows
+filename: registry_add_persistence_disk_cleanup_handler_entry.yml
+level: medium
+logsource:
+  category: registry_add
+  product: windows
+modified: 2023/02/07
+references:
+- https://persistence-info.github.io/Data/diskcleanuphandler.html
+- https://www.hexacorn.com/blog/2018/09/02/beyond-good-ol-run-key-part-86/
+related: []
+status: test
+tags:
+- attack.persistence

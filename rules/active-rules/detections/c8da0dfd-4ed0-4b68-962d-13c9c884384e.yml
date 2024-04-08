@@ -1,0 +1,5 @@
+detection:
+- and:
+  - ParentImage|endswith: \Windows\System32\lsass.exe
+  - Image|endswith: \Windows\System32\lsass.exe
+id: c8da0dfd-4ed0-4b68-962d-13c9c884384e

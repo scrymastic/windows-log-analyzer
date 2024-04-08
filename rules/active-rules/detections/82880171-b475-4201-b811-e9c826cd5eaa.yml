@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \regedit.exe
+    - OriginalFileName|==: REGEDIT.EXE
+  - CommandLine|None: ' -E '
+  - or:
+    - CommandLine|contains: hklm
+    - CommandLine|contains: hkey_local_machine
+  - or:
+    - CommandLine|endswith: \system
+    - CommandLine|endswith: \sam
+    - CommandLine|endswith: \security
+id: 82880171-b475-4201-b811-e9c826cd5eaa

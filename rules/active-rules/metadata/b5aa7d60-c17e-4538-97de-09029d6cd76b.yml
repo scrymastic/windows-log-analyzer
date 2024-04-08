@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/16
+description: Detects execution of AppX packages with known suspicious or malicious
+  signature
+falsepositives:
+- Unknown
+filename: win_appxpackaging_om_sups_appx_signature.yml
+level: medium
+logsource:
+  product: windows
+  service: appxpackaging-om
+modified: ''
+references:
+- Internal Research
+- https://www.sentinelone.com/labs/inside-malicious-windows-apps-for-malware-deployment/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.execution

@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \nltest.exe
+    - OriginalFileName|==: nltestrk.exe
+  - or:
+    - CommandLine|contains: server
+    - CommandLine|contains: query
+    - or:
+      - CommandLine|contains: /user
+      - CommandLine|contains: all_trusts
+      - CommandLine|contains: 'dclist:'
+      - CommandLine|contains: 'dnsgetdc:'
+      - CommandLine|contains: domain_trusts
+      - CommandLine|contains: 'dsgetdc:'
+      - CommandLine|contains: parentdomain
+      - CommandLine|contains: trusted_domains
+id: 5cc90652-4cbd-4241-aa3b-4b462fa5a248

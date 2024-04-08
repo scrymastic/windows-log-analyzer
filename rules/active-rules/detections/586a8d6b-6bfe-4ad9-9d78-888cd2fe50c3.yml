@@ -1,0 +1,7 @@
+detection:
+- and:
+  - EventID|==: 5145
+  - ShareName|==: \\\\\*\\IPC$
+  - RelativeTargetName|==: svcctl
+  - Accesses|contains: WriteData
+id: 586a8d6b-6bfe-4ad9-9d78-888cd2fe50c3

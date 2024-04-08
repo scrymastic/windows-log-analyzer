@@ -1,0 +1,22 @@
+author: '@gott_cyber'
+date: 2022/07/31
+description: Detects an attempt to leverage dnscmd.exe to enumerate the DNS zones
+  of a domain. DNS zones used to host the DNS records for a particular domain.
+falsepositives:
+- Legitimate administration use
+filename: proc_creation_win_dnscmd_discovery.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/04
+references:
+- https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dnscmd
+- https://docs.microsoft.com/en-us/azure/dns/dns-zones-records
+- https://lolbas-project.github.io/lolbas/Binaries/Dnscmd/
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.execution
+- attack.t1543.003

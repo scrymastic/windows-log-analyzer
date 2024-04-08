@@ -1,0 +1,21 @@
+author: frack113
+date: 2022/03/17
+description: Detetcts PowerShell activity in which Get-Addefaultdomainpasswordpolicy
+  is used to get the default password policy for an Active Directory domain.
+falsepositives:
+- Legitimate PowerShell scripts
+filename: posh_ps_susp_get_addefaultdomainpasswordpolicy.yml
+level: low
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: ''
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1201/T1201.md#atomic-test-9---enumerate-active-directory-password-policy-with-get-addefaultdomainpasswordpolicy
+- https://docs.microsoft.com/en-us/powershell/module/activedirectory/get-addefaultdomainpasswordpolicy
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.t1201

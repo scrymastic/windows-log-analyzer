@@ -1,0 +1,27 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \wget.exe
+    - OriginalFileName|==: wget.exe
+  - CommandLine|matches: ://[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
+  - CommandLine|contains: http
+  - or:
+    - CommandLine|matches: \s-O\s
+    - CommandLine|contains: --output-document
+  - or:
+    - or:
+      - CommandLine|contains: :\PerfLogs\
+      - CommandLine|contains: :\Temp\
+      - CommandLine|contains: :\Users\Public\
+      - CommandLine|contains: :\Windows\Help\
+      - CommandLine|contains: :\Windows\Temp\
+      - CommandLine|contains: \Temporary Internet
+    - CommandLine|contains: :\Users\
+    - CommandLine|contains: \Favorites\
+    - CommandLine|contains: :\Users\
+    - CommandLine|contains: \Favourites\
+    - CommandLine|contains: :\Users\
+    - CommandLine|contains: \Contacts\
+    - CommandLine|contains: :\Users\
+    - CommandLine|contains: \Pictures\
+id: 40aa399c-7b02-4715-8e5f-73572b493f33

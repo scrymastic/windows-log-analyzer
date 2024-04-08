@@ -1,0 +1,16 @@
+detection:
+- and:
+  - Contents|matches: http[s]?://[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
+  - or:
+    - TargetFilename|contains: .ps1:Zone
+    - TargetFilename|contains: .bat:Zone
+    - TargetFilename|contains: .exe:Zone
+    - TargetFilename|contains: .vbe:Zone
+    - TargetFilename|contains: .vbs:Zone
+    - TargetFilename|contains: .dll:Zone
+    - TargetFilename|contains: .one:Zone
+    - TargetFilename|contains: .cmd:Zone
+    - TargetFilename|contains: .hta:Zone
+    - TargetFilename|contains: .xll:Zone
+    - TargetFilename|contains: .lnk:Zone
+id: 025bd229-fd1f-4fdb-97ab-20006e1a5368

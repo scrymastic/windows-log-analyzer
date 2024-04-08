@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ParentImage|endswith: \fodhelper.exe
+id: 7f741dcf-fc22-4759-87b4-9ae8376676a2

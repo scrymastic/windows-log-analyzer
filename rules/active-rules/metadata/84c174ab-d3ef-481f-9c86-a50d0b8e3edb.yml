@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/04/23
+description: Detects a Get-Process command on lsass process, which is in almost all
+  cases a sign of malicious activity
+falsepositives:
+- Legitimate certificate exports invoked by administrators or users (depends on processes
+  in the environment - filter if unusable)
+filename: posh_ps_susp_getprocess_lsass.yml
+level: high
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2022/12/25
+references:
+- https://twitter.com/PythonResponder/status/1385064506049630211
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.001

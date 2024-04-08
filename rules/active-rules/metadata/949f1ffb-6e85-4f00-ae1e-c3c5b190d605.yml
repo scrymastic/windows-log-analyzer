@@ -1,0 +1,28 @@
+author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems),
+  @gott_cyber
+date: 2019/06/29
+description: 'Detects a command line process that uses explorer.exe to launch arbitrary
+  commands or binaries,
+
+  which is similar to cmd.exe /c, only it breaks the process tree and makes its parent
+  a new instance of explorer spawning from "svchost"
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_explorer_break_process_tree.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2022/09/20
+references:
+- https://twitter.com/CyberRaiju/status/1273597319322058752
+- https://twitter.com/bohops/status/1276357235954909188?s=12
+- https://twitter.com/nas_bench/status/1535322450858233858
+- https://securityboulevard.com/2019/09/deobfuscating-ostap-trickbots-34000-line-javascript-downloader/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036

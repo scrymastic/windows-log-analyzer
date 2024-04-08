@@ -1,0 +1,19 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cmd.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+    - Image|endswith: \wt.exe
+    - Image|endswith: \rundll32.exe
+    - Image|endswith: \regsvr32.exe
+  - or:
+    - TargetFilename|endswith: .VHD
+    - TargetFilename|endswith: .bac
+    - TargetFilename|endswith: .bak
+    - TargetFilename|endswith: .wbcat
+    - TargetFilename|endswith: .bkf
+    - TargetFilename|endswith: .set
+    - TargetFilename|endswith: .win
+    - TargetFilename|endswith: .dsk
+id: 06125661-3814-4e03-bfa2-1e4411c60ac3

@@ -1,0 +1,19 @@
+author: pH-T (Nextron Systems)
+date: 2023/04/17
+description: Detects Crassus, a Windows privilege escalation discovery tool, based
+  on PE metadata characteristics.
+falsepositives:
+- Unlikely
+filename: proc_creation_win_pua_crassus.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://github.com/vu-ls/Crassus
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.t1590.001

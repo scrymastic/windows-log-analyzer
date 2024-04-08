@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \WINWORD.exe
+    - OriginalFileName|==: WinWord.exe
+  - CommandLine|contains: '/l '
+  - CommandLine|contains: .dll
+id: f7375e28-5c14-432f-b8d1-1db26c832df3

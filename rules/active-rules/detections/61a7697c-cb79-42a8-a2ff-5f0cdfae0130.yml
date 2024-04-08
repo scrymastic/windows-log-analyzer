@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: \System\CurrentControlSet\Services
+    - TargetObject|contains: \System\ControlSet
+    - TargetObject|contains: \Services
+  - or:
+    - Details|contains: ADMIN$
+    - Details|contains: .exe
+    - Details|contains: '%COMSPEC%'
+    - Details|contains: start
+    - Details|contains: powershell
+id: 61a7697c-cb79-42a8-a2ff-5f0cdfae0130

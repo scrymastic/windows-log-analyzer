@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cscript.exe
+    - OriginalFileName|==: cscript.exe
+  - CommandLine|contains: winrm
+  - CommandLine|contains: invoke Create wmicimv2/Win32_
+  - CommandLine|contains: -r:http
+id: 9df0dd3a-1a5c-47e3-a2bc-30ed177646a0

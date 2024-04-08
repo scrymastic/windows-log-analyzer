@@ -1,0 +1,7 @@
+detection:
+- and:
+  - Image|endswith: \Psr.exe
+  - or:
+    - CommandLine|contains: /start
+    - CommandLine|contains: -start
+id: 2158f96f-43c2-43cb-952a-ab4580f32382

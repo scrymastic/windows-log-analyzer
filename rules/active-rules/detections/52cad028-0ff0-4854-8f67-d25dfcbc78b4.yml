@@ -1,0 +1,20 @@
+detection:
+- and:
+  - ParentImage|endswith: \hh.exe
+  - or:
+    - Image|endswith: \CertReq.exe
+    - Image|endswith: \CertUtil.exe
+    - Image|endswith: \cmd.exe
+    - Image|endswith: \cscript.exe
+    - Image|endswith: \installutil.exe
+    - Image|endswith: \MSbuild.exe
+    - Image|endswith: \MSHTA.EXE
+    - Image|endswith: \msiexec.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+    - Image|endswith: \regsvr32.exe
+    - Image|endswith: \rundll32.exe
+    - Image|endswith: \schtasks.exe
+    - Image|endswith: \wmic.exe
+    - Image|endswith: \wscript.exe
+id: 52cad028-0ff0-4854-8f67-d25dfcbc78b4

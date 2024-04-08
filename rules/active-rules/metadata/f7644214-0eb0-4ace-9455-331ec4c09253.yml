@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2017/02/10
+description: Detects failed Kerberos TGT issue operation. This can be a sign of manipulations
+  of TGT messages by an attacker.
+falsepositives:
+- Faulty legacy applications
+filename: win_security_susp_kerberos_manipulation.yml
+level: high
+logsource:
+  product: windows
+  service: security
+modified: 2024/01/16
+references:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4771
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1212

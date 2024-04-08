@@ -1,0 +1,5 @@
+detection:
+- and:
+  - TargetObject|contains: \Policies\Microsoft\Windows Defender\PUAProtection
+  - Details|==: DWORD (0x00000000)
+id: 8ffc5407-52e3-478f-9596-0a7371eafe13

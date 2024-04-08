@@ -1,0 +1,22 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: WMImplant
+    - ScriptBlockText|contains: ' change_user '
+    - ScriptBlockText|contains: ' gen_cli '
+    - ScriptBlockText|contains: ' command_exec '
+    - ScriptBlockText|contains: ' disable_wdigest '
+    - ScriptBlockText|contains: ' disable_winrm '
+    - ScriptBlockText|contains: ' enable_wdigest '
+    - ScriptBlockText|contains: ' enable_winrm '
+    - ScriptBlockText|contains: ' registry_mod '
+    - ScriptBlockText|contains: ' remote_posh '
+    - ScriptBlockText|contains: ' sched_job '
+    - ScriptBlockText|contains: ' service_mod '
+    - ScriptBlockText|contains: ' process_kill '
+    - ScriptBlockText|contains: ' active_users '
+    - ScriptBlockText|contains: ' basic_info '
+    - ScriptBlockText|contains: ' power_off '
+    - ScriptBlockText|contains: ' vacant_system '
+    - ScriptBlockText|contains: ' logon_events '
+id: 8028c2c3-e25a-46e3-827f-bbb5abf181d7

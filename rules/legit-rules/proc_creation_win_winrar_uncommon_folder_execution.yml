@@ -21,8 +21,12 @@ detection:
       - Image|endswith: \rar.exe
       - Image|endswith: \winrar.exe
     - Description|==: Command line RAR
+  - or:
+    - Image|not endswith: \UnRAR.exe
   - Image|not contains: :\Program Files (x86)\WinRAR\
   - Image|not contains: :\Program Files\WinRAR\
+  - or:
+    - Image|not contains: :\Windows\Temp\
 falsepositives:
 - Legitimate use of WinRAR in a folder of a software that bundles WinRAR
 level: medium

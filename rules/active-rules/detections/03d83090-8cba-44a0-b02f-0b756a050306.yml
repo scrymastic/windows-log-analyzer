@@ -1,0 +1,21 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: VirtualAlloc
+    - ScriptBlockText|contains: OpenProcess
+    - ScriptBlockText|contains: WriteProcessMemory
+    - ScriptBlockText|contains: CreateRemoteThread
+  - or:
+    - ScriptBlockText|contains: OpenProcessToken
+    - ScriptBlockText|contains: LookupPrivilegeValue
+    - ScriptBlockText|contains: AdjustTokenPrivileges
+  - or:
+    - ScriptBlockText|contains: OpenProcessToken
+    - ScriptBlockText|contains: DuplicateTokenEx
+    - ScriptBlockText|contains: CloseHandle
+  - or:
+    - ScriptBlockText|contains: WriteProcessMemory
+    - ScriptBlockText|contains: VirtualAlloc
+    - ScriptBlockText|contains: ReadProcessMemory
+    - ScriptBlockText|contains: VirtualFree
+id: 03d83090-8cba-44a0-b02f-0b756a050306

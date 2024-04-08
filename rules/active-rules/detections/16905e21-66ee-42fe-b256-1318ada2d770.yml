@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \ntvdm.exe
+    - Image|endswith: \csrstub.exe
+id: 16905e21-66ee-42fe-b256-1318ada2d770

@@ -1,0 +1,4 @@
+detection:
+- and:
+  - ScriptBlockText|matches: .*cmd.{0,5}(?:/c|/r)(?:\s|)"set\s[a-zA-Z]{3,6}.*(?:\{\d\}){1,}\\"\s+?-f(?:.*\)){1,}.*"
+id: 0adfbc14-0ed1-11eb-adc1-0242ac120002

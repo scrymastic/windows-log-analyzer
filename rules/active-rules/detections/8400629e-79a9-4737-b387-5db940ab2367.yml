@@ -1,0 +1,5 @@
+detection:
+- and:
+  - EventID|==: 4625
+  - TargetUserName|==: AAAAAAA
+id: 8400629e-79a9-4737-b387-5db940ab2367

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - TargetObject|contains: \Control\Keyboard Layouts\
+  - TargetObject|contains: Ime File
+  - or:
+    - Details|not endswith: .ime
+id: b888e3f2-224d-4435-b00b-9dd66e9ea1f1

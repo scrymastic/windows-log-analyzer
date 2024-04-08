@@ -1,0 +1,12 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+    - or:
+      - OriginalFileName|==: net.exe
+      - OriginalFileName|==: net1.exe
+  - CommandLine|contains: share
+  - CommandLine|contains: /delete
+id: cb7c4a03-2871-43c0-9bbb-18bbdb079896

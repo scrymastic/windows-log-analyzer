@@ -1,0 +1,85 @@
+title: Tamper Windows Defender - ScriptBlockLogging
+id: 14c71865-6cd3-44ae-adaa-1db923fae5f2
+related:
+- id: ec19ebab-72dc-40e1-9728-4c0b805d722c
+  type: derived
+status: experimental
+description: Detects PowerShell scripts attempting to disable scheduled scanning and
+  other parts of Windows Defender ATP or set default actions to allow.
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1562.001/T1562.001.md
+- https://docs.microsoft.com/en-us/powershell/module/defender/set-mppreference?view=windowsserver2022-ps
+- https://bidouillesecurity.com/disable-windows-defender-in-powershell/
+author: frack113, elhoim, Tim Shelton (fps, alias support), Swachchhanda Shrawan Poudel,
+  Nasreddine Bencherchali (Nextron Systems)
+date: 2022/01/16
+modified: 2024/01/02
+tags:
+- attack.defense_evasion
+- attack.t1562.001
+logsource:
+  product: windows
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+detection:
+- and:
+  - ScriptBlockText|contains: Set-MpPreference
+  - or:
+    - ScriptBlockText|contains: -dbaf $true
+    - ScriptBlockText|contains: -dbaf 1
+    - ScriptBlockText|contains: -dbm $true
+    - ScriptBlockText|contains: -dbm 1
+    - ScriptBlockText|contains: -dips $true
+    - ScriptBlockText|contains: -dips 1
+    - ScriptBlockText|contains: -DisableArchiveScanning $true
+    - ScriptBlockText|contains: -DisableArchiveScanning 1
+    - ScriptBlockText|contains: -DisableBehaviorMonitoring $true
+    - ScriptBlockText|contains: -DisableBehaviorMonitoring 1
+    - ScriptBlockText|contains: -DisableBlockAtFirstSeen $true
+    - ScriptBlockText|contains: -DisableBlockAtFirstSeen 1
+    - ScriptBlockText|contains: -DisableCatchupFullScan $true
+    - ScriptBlockText|contains: -DisableCatchupFullScan 1
+    - ScriptBlockText|contains: -DisableCatchupQuickScan $true
+    - ScriptBlockText|contains: -DisableCatchupQuickScan 1
+    - ScriptBlockText|contains: -DisableIntrusionPreventionSystem $true
+    - ScriptBlockText|contains: -DisableIntrusionPreventionSystem 1
+    - ScriptBlockText|contains: -DisableIOAVProtection $true
+    - ScriptBlockText|contains: -DisableIOAVProtection 1
+    - ScriptBlockText|contains: -DisableRealtimeMonitoring $true
+    - ScriptBlockText|contains: -DisableRealtimeMonitoring 1
+    - ScriptBlockText|contains: -DisableRemovableDriveScanning $true
+    - ScriptBlockText|contains: -DisableRemovableDriveScanning 1
+    - ScriptBlockText|contains: -DisableScanningMappedNetworkDrivesForFullScan $true
+    - ScriptBlockText|contains: -DisableScanningMappedNetworkDrivesForFullScan 1
+    - ScriptBlockText|contains: -DisableScanningNetworkFiles $true
+    - ScriptBlockText|contains: -DisableScanningNetworkFiles 1
+    - ScriptBlockText|contains: -DisableScriptScanning $true
+    - ScriptBlockText|contains: -DisableScriptScanning 1
+    - ScriptBlockText|contains: -MAPSReporting $false
+    - ScriptBlockText|contains: -MAPSReporting 0
+    - ScriptBlockText|contains: -drdsc $true
+    - ScriptBlockText|contains: -drdsc 1
+    - ScriptBlockText|contains: -drtm $true
+    - ScriptBlockText|contains: -drtm 1
+    - ScriptBlockText|contains: -dscrptsc $true
+    - ScriptBlockText|contains: -dscrptsc 1
+    - ScriptBlockText|contains: -dsmndf $true
+    - ScriptBlockText|contains: -dsmndf 1
+    - ScriptBlockText|contains: -dsnf $true
+    - ScriptBlockText|contains: -dsnf 1
+    - ScriptBlockText|contains: -dss $true
+    - ScriptBlockText|contains: -dss 1
+  - ScriptBlockText|contains: Set-MpPreference
+  - or:
+    - ScriptBlockText|contains: HighThreatDefaultAction Allow
+    - ScriptBlockText|contains: htdefac Allow
+    - ScriptBlockText|contains: LowThreatDefaultAction Allow
+    - ScriptBlockText|contains: ltdefac Allow
+    - ScriptBlockText|contains: ModerateThreatDefaultAction Allow
+    - ScriptBlockText|contains: mtdefac Allow
+    - ScriptBlockText|contains: SevereThreatDefaultAction Allow
+    - ScriptBlockText|contains: stdefac Allow
+falsepositives:
+- Legitimate PowerShell scripts that disable Windows Defender for troubleshooting
+  purposes. Must be investigated.
+level: high

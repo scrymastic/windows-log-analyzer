@@ -1,0 +1,7 @@
+detection:
+- and:
+  - AuditSourceName|==: VSSAudit
+  - or:
+    - EventID|==: 4904
+    - EventID|==: 4905
+id: e9faba72-4974-4ab2-a4c5-46e25ad59e9b

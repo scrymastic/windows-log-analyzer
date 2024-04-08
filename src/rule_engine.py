@@ -4,6 +4,14 @@ import yaml
 import shutil
 from pathlib import Path
 from config import ROOT
+from colorama import Fore, Style
+
+RED = Fore.RED
+GREEN = Fore.GREEN
+YELLOW = Fore.YELLOW
+CYAN = Fore.CYAN
+RESET = Style.RESET_ALL
+
 
 
 class RuleEngine:
@@ -20,7 +28,7 @@ class RuleEngine:
             try:
                 rule = yaml.safe_load(f)
             except yaml.YAMLError as e:
-                print(f"Error loading YAML file: {e}")
+                print(f"{RED}[ERROR] Rule '{rule_file.name}' is not a valid YAML file.{RESET}")
                 return False
 
         # Check if the rule has the same format as the example rule
@@ -53,10 +61,10 @@ class RuleEngine:
         if rule_file.exists() and self.check_rule(rule_path):
             # Copy the rule file to the legit-rules folder
             shutil.copy(rule_file, self.legit_rules_folder)
-            print(f"Rule '{rule_file.name}' added successfully.")
+            print(f"{GREEN}[INFO] Rule '{rule_file.name}' added successfully.{RESET}")
             return True
         else:
-            print(f"Rule file '{rule_file.name}' does not exist.")
+            print(f"{RED}[ERROR] Rule '{rule_file.name}' not added.{RESET}")
             return False
 
 
@@ -66,10 +74,10 @@ class RuleEngine:
         if rule_file.exists():
             # Remove the rule file from the legit-rules folder
             rule_file.unlink()
-            print(f"Rule '{rule_file_name}' removed successfully.")
+            print(f"{GREEN}[INFO] Rule '{rule_file_name}' removed successfully.{RESET}")
             return True
         else:
-            print(f"Rule '{rule_file_name}' does not exist in legit-folder")
+            print(f"{RED}[ERROR] Rule '{rule_file_name}' not found.{RESET}")
             return False
 
 
@@ -86,47 +94,48 @@ class RuleEngine:
         # Get the rule file from the legit-rules folder
         rule_file = self.legit_rules_folder / f"{rule_file_name}"
         if rule_file.exists():
+            print(f"{CYAN}[INFO] Deploying rule '{rule_file_name}'...{RESET}")
             # Move the rule file to the active-rules folder
             rule_content = yaml.safe_load(open(rule_file, "r"))
             # Create log source and detection file
-            log_source_detection = {
-                "id": rule_content["id"],
-                "detection": rule_content["detection"]
+            detection = {
+                'id': rule_content['id'],
+                'detection': rule_content['detection']
             }
-            with open(self.active_rules_folder / "detections" / f"{rule_content["id"]}.yml", "w") as f:
-                yaml.dump(log_source_detection, f)
+            with open(self.active_rules_folder / "detections" / f"{rule_content['id']}.yml", "w") as f:
+                yaml.dump(detection, f)
 
             # Create headers file
             headers = {
                 "title": rule_content["title"]
             }
-            with open(self.active_rules_folder / "headers" / f"{rule_content["id"]}.yml", "w") as f:
+            with open(self.active_rules_folder / "headers" / f"{rule_content['id']}.yml", "w") as f:
                 yaml.dump(headers, f)
 
             # Create metadata file
             metadata = {
                 "filename": rule_file_name,
-                "related": rule_content["related"],
+                "related": rule_content.get("related", []),
                 "status": rule_content["status"],
                 "description": rule_content["description"],
                 "references": rule_content["references"],
                 "author": rule_content["author"],
                 "date": rule_content["date"],
-                "modified": rule_content["modified"],
+                "modified": rule_content.get("modified", ""),
                 "tags": rule_content["tags"],
                 "logsource": rule_content["logsource"],
-                "falsepositives": rule_content["falsepositives"],
+                "falsepositives": rule_content.get("falsepositives", []),
                 "level": rule_content["level"]
             }
-            with open(self.active_rules_folder / "metadata" / f"{rule_content["id"]}.yml", "w") as f:
+            with open(self.active_rules_folder / "metadata" / f"{rule_content['id']}.yml", "w") as f:
                 yaml.dump(metadata, f)
 
-            print(f"Rule file '{rule_file_name}' deployed successfully.")
-            print(f"Rule ID: {rule_content['id']}")
+            print(f"{GREEN}[INFO] Rule '{rule_file_name}' deployed successfully.{RESET}")
+            print(f"{CYAN}[INFO] Rule ID: {rule_content['id']}{RESET}")
             return True
 
         else:
-            print(f"Rule file '{rule_file_name}' does not exist in legit-folder")
+            print(f"{RED}[ERROR] Rule '{rule_file_name}' not found.{RESET}")
             return False
 
 
@@ -143,10 +152,10 @@ class RuleEngine:
             (arf / "headers" / f"{rule_id}.yml").unlink()
             (arf / "metadata" / f"{rule_id}.yml").unlink()
             
-            print(f"Rule '{rule_id}' un-deployed and removed successfully.")
+            print(f"{GREEN}[INFO] Rule '{rule_id}' undeployed successfully.{RESET}")
             return True
         else:
-            print(f"Rule '{rule_id}' is not deployed in the active-rules folder.")
+            print(f"{RED}[ERROR] Rule '{rule_id}' not found.{RESET}")
             return False
 
 
@@ -191,11 +200,9 @@ class RuleEngine:
     
 
 if __name__ == "__main__":
-    re = RuleEngine()
-    # print(re.check_rule(re,"D:\\windows-log-analyzer\\format\\rules\\id1-process-creation-after.yml"))
-    # re.add_rule("D:\\windows-log-analyzer\\format\\rules\\id1-process-creation-after.yml")
-    # re.remove_rule("id1-process-creation-after.yml")
-    re.deploy_rule("proc_creation_win_cmd_redirect.yml")
-    # re.undeploy_rule("4f4eaa9f-5ad4-410c-a4be-bc6132b0175a")
-    print(re.get_active_rules())
-    print(re.search_rules("CMD SHELL"))
+    rule_engine = RuleEngine()
+    
+    # deploy all rules from legit-rules folder
+    rule_folder = rule_engine.legit_rules_folder
+    for rule_file in os.listdir(rule_folder):
+        rule_engine.deploy_rule(rule_file)

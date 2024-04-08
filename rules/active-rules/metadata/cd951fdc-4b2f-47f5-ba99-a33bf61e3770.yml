@@ -1,0 +1,21 @@
+author: Teymur Kheirkhabarov (idea), Mangatas Tondang (rule), oscd.community
+date: 2020/10/13
+description: Detects Windows Installer service (msiexec.exe) trying to install MSI
+  packages with SYSTEM privilege
+falsepositives:
+- System administrator usage
+- Anti virus products
+- WindowsApps located in "C:\Program Files\WindowsApps\"
+filename: proc_creation_win_susp_always_install_elevated_windows_installer.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/03/23
+references:
+- https://image.slidesharecdn.com/kheirkhabarovoffzonefinal-181117201458/95/hunting-for-privilege-escalation-in-windows-environment-48-638.jpg
+related: []
+status: test
+tags:
+- attack.privilege_escalation
+- attack.t1548.002

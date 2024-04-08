@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - ContextInfo|contains: ' -enc '
+    - ContextInfo|contains: ' -EncodedCommand '
+    - ContextInfo|contains: ' -ec '
+  - or:
+    - ContextInfo|contains: ' -w hidden '
+    - ContextInfo|contains: ' -window hidden '
+    - ContextInfo|contains: ' -windowstyle hidden '
+    - ContextInfo|contains: ' -w 1 '
+  - or:
+    - ContextInfo|contains: ' -noni '
+    - ContextInfo|contains: ' -noninteractive '
+id: bbb80e91-5746-4fbe-8898-122e2cafdbf4

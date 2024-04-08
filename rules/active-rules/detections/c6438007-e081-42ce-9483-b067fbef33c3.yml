@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: .CreationTime =
+    - ScriptBlockText|contains: .LastWriteTime =
+    - ScriptBlockText|contains: .LastAccessTime =
+    - ScriptBlockText|contains: '[IO.File]::SetCreationTime'
+    - ScriptBlockText|contains: '[IO.File]::SetLastAccessTime'
+    - ScriptBlockText|contains: '[IO.File]::SetLastWriteTime'
+id: c6438007-e081-42ce-9483-b067fbef33c3

@@ -1,0 +1,10 @@
+detection:
+- and:
+  - TargetObject|contains: \Microsoft\Windows Defender\Features\TamperProtection
+  - Details|==: DWORD (0x00000000)
+  - or:
+    - Image|not startswith: C:\ProgramData\Microsoft\Windows Defender\Platform\
+    - Image|not endswith: \MsMpEng.exe
+  - or:
+    - Image|!==: C:\Program Files\Windows Defender\MsMpEng.exe
+id: 93d298a1-d28f-47f1-a468-d971e7796679

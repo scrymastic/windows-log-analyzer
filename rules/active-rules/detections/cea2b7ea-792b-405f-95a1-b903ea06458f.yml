@@ -1,0 +1,32 @@
+detection:
+- and:
+  - ParentImage|contains: \ManageEngine\ServiceDesk\
+  - ParentImage|contains: \java.exe
+  - or:
+    - Image|endswith: \AppVLP.exe
+    - Image|endswith: \bash.exe
+    - Image|endswith: \bitsadmin.exe
+    - Image|endswith: \calc.exe
+    - Image|endswith: \certutil.exe
+    - Image|endswith: \cscript.exe
+    - Image|endswith: \curl.exe
+    - Image|endswith: \forfiles.exe
+    - Image|endswith: \mftrace.exe
+    - Image|endswith: \mshta.exe
+    - Image|endswith: \net.exe
+    - Image|endswith: \net1.exe
+    - Image|endswith: \notepad.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+    - Image|endswith: \query.exe
+    - Image|endswith: \reg.exe
+    - Image|endswith: \schtasks.exe
+    - Image|endswith: \scrcons.exe
+    - Image|endswith: \sh.exe
+    - Image|endswith: \systeminfo.exe
+    - Image|endswith: \whoami.exe
+    - Image|endswith: \wmic.exe
+    - Image|endswith: \wscript.exe
+  - Image|not endswith: \net.exe
+  - Image|not endswith: \net1.exe
+id: cea2b7ea-792b-405f-95a1-b903ea06458f

@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/31
+description: Detects the presence of the keywords "Wscript", "Shell" and "Run" in
+  the command, which could indicate a suspicious activity
+falsepositives:
+- Inline scripting can be used by some rare third party applications or administrators.
+  Investigate and apply additional filters accordingly
+filename: proc_creation_win_mshta_inline_vbscript.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/05/15
+references:
+- https://web.archive.org/web/20220830122045/http://blog.talosintelligence.com/2022/08/modernloader-delivers-multiple-stealers.html
+- https://blog.talosintelligence.com/modernloader-delivers-multiple-stealers-cryptominers-and-rats/
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059

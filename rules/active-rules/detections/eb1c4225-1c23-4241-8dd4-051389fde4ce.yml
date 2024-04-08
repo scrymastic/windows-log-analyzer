@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \DumpMinitool.exe
+      - Image|endswith: \DumpMinitool.x86.exe
+      - Image|endswith: \DumpMinitool.arm64.exe
+    - or:
+      - OriginalFileName|==: DumpMinitool.exe
+      - OriginalFileName|==: DumpMinitool.x86.exe
+      - OriginalFileName|==: DumpMinitool.arm64.exe
+  - Image|not contains: \Microsoft Visual Studio\
+  - Image|not contains: \Extensions\
+  - or:
+    - CommandLine|not contains: --dumpType
+id: eb1c4225-1c23-4241-8dd4-051389fde4ce

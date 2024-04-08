@@ -29,6 +29,8 @@ detection:
   - CommandLine|not None: ' -e '
   - CommandLine|not None: ' -a '
   - CommandLine|not None: ' -c '
+  - or:
+    - CommandLine|not matches: :[^ \\]
 fields:
 - ParentImage
 - CommandLine

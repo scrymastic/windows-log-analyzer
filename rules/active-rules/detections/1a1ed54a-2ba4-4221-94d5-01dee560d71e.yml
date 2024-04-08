@@ -1,0 +1,13 @@
+detection:
+- and:
+  - or:
+    - OriginalFileName|==: FX_VER_INTERNALNAME_STR
+  - or:
+    - or:
+      - CommandLine|contains: ' -u '
+      - CommandLine|contains: ' -f '
+      - CommandLine|contains: .dmp
+      - CommandLine|contains: ' --full '
+      - CommandLine|contains: ' --name '
+      - CommandLine|contains: .dmp
+id: 1a1ed54a-2ba4-4221-94d5-01dee560d71e

@@ -1,0 +1,7 @@
+detection:
+- and:
+  - Image|endswith: \outlook.exe
+  - or:
+    - TargetFilename|contains: \AppData\Local\Microsoft\FORMS\IPM
+    - TargetFilename|contains: \Local Settings\Application Data\Microsoft\Forms
+id: c3edc6a5-d9d4-48d8-930e-aab518390917

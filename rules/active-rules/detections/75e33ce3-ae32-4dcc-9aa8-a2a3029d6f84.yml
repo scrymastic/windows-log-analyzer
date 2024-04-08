@@ -1,0 +1,24 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \excel.exe
+    - Image|endswith: \powerpnt.exe
+    - Image|endswith: \winword.exe
+    - Image|endswith: \wordview.exe
+  - Initiated|==: 'true'
+  - DestinationIp|not cidr: 127.0.0.0/8
+  - DestinationIp|not cidr: 10.0.0.0/8
+  - DestinationIp|not cidr: 172.16.0.0/12
+  - DestinationIp|not cidr: 192.168.0.0/16
+  - DestinationIp|not cidr: 169.254.0.0/16
+  - DestinationIp|not cidr: ::1/128
+  - DestinationIp|not cidr: fe80::/10
+  - DestinationIp|not cidr: fc00::/7
+  - DestinationIp|not cidr: 20.184.0.0/13
+  - DestinationIp|not cidr: 20.192.0.0/10
+  - DestinationIp|not cidr: 23.72.0.0/13
+  - DestinationIp|not cidr: 51.10.0.0/15
+  - DestinationIp|not cidr: 51.103.0.0/16
+  - DestinationIp|not cidr: 51.104.0.0/15
+  - DestinationIp|not cidr: 204.79.197.0/24
+id: 75e33ce3-ae32-4dcc-9aa8-a2a3029d6f84

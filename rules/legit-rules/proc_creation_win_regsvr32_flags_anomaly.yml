@@ -18,6 +18,8 @@ detection:
 - and:
   - Image|endswith: \regsvr32.exe
   - CommandLine|None: ' -i:'
+  - or:
+    - CommandLine|not None: ' -n '
 falsepositives:
 - Administrator typo might cause some false positives
 level: medium

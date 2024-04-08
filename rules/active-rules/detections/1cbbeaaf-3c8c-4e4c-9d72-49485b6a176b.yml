@@ -1,0 +1,4 @@
+detection:
+- and:
+  - QueryName|contains: ufile.io
+id: 1cbbeaaf-3c8c-4e4c-9d72-49485b6a176b

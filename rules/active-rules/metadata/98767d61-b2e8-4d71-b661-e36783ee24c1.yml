@@ -1,0 +1,20 @@
+author: Hieu Tran
+date: 2023/03/13
+description: Detects attempts of decoding encoded Gzip archives via PowerShell.
+falsepositives:
+- Legitimate administrative scripts may use this functionality. Use "ParentImage"
+  in combination with the script names and allowed users and applications to filter
+  legitimate executions
+filename: proc_creation_win_powershell_decode_gzip.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.zscaler.com/blogs/security-research/onenote-growing-threat-malware-distribution
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1132.001

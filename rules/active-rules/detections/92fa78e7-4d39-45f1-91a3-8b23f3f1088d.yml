@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+  - TargetFilename|contains: \start menu\programs\startup\
+  - TargetFilename|endswith: .lnk
+id: 92fa78e7-4d39-45f1-91a3-8b23f3f1088d

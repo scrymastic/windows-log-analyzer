@@ -1,0 +1,17 @@
+detection:
+- and:
+  - EventID|==: 854
+  - or:
+    - Path|contains: C:\Users\Public\
+    - Path|contains: /users/public/
+    - Path|contains: C:\PerfLogs\
+    - Path|contains: C:/perflogs/
+    - Path|contains: \Desktop\
+    - Path|contains: /desktop/
+    - Path|contains: \Downloads\
+    - Path|contains: /Downloads/
+    - Path|contains: C:\Windows\Temp\
+    - Path|contains: C:/Windows/Temp/
+    - Path|contains: \AppdData\Local\Temp\
+    - Path|contains: /AppdData/Local/Temp/
+id: 5cdeaf3d-1489-477c-95ab-c318559fc051

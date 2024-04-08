@@ -1,0 +1,11 @@
+detection:
+- and:
+  - TargetImage|endswith: \mstsc.exe
+  - or:
+    - SourceImage|contains: :\Temp\
+    - SourceImage|contains: :\Users\Public\
+    - SourceImage|contains: :\Windows\PerfLogs\
+    - SourceImage|contains: :\Windows\Tasks\
+    - SourceImage|contains: :\Windows\Temp\
+    - SourceImage|contains: \AppData\Local\Temp\
+id: c0aac16a-b1e7-4330-bab0-3c27bb4987c7

@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \Regsvcs.exe
+      - Image|endswith: \Regasm.exe
+    - or:
+      - OriginalFileName|==: RegSvcs.exe
+      - OriginalFileName|==: RegAsm.exe
+  - or:
+    - CommandLine|contains: .dat
+    - CommandLine|contains: .gif
+    - CommandLine|contains: .jpeg
+    - CommandLine|contains: .jpg
+    - CommandLine|contains: .png
+    - CommandLine|contains: .txt
+id: e9f8f8cc-07cc-4e81-b724-f387db9175e4

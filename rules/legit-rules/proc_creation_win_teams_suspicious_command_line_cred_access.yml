@@ -25,6 +25,8 @@ detection:
   - or:
     - CommandLine|contains: \Microsoft\Teams\Cookies
     - CommandLine|contains: \Microsoft\Teams\Local Storage\leveldb
+  - or:
+    - Image|not endswith: \Microsoft\Teams\current\Teams.exe
 falsepositives:
 - Unknown
 level: medium

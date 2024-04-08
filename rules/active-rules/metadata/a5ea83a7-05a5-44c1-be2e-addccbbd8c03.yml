@@ -1,0 +1,21 @@
+author: oscd.community, Dmitry Uchakin
+date: 2020/10/06
+description: Attempts to load dismcore.dll after dropping it
+falsepositives:
+- Actions of a legitimate telnet client
+filename: image_load_uac_bypass_via_dism.yml
+level: high
+logsource:
+  category: image_load
+  product: windows
+modified: 2022/12/25
+references:
+- https://steemit.com/utopian-io/@ah101/uac-bypassing-utility
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.defense_evasion
+- attack.privilege_escalation
+- attack.t1548.002
+- attack.t1574.002

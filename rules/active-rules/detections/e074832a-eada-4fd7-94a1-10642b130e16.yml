@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetFilename|endswith: \Temp\debug.bin
+id: e074832a-eada-4fd7-94a1-10642b130e16

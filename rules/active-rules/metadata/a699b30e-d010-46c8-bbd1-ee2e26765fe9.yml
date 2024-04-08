@@ -1,0 +1,19 @@
+author: frack113
+date: 2021/09/02
+description: Storing files in Alternate Data Stream (ADS) similar to Astaroth malware.
+falsepositives:
+- Unknown
+filename: posh_ps_store_file_in_alternate_data_stream.yml
+level: medium
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2022/12/25
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1564.004/T1564.004.md
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1564.004

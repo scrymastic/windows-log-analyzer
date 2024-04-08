@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Payload|matches: (?i).*?echo.*clip.*&&.*(Clipboard|i`?n`?v`?o`?k`?e`?).*
+id: ebdf49d8-b89c-46c9-8fdf-2c308406f6bd

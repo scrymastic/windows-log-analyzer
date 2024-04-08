@@ -28,6 +28,8 @@ detection:
   - CommandLine|contains: rundll32
   - CommandLine|contains: .dll,a
   - CommandLine|contains: '/p:'
+  - or:
+    - CommandLine|not contains: MpCmdRun
 fields:
 - ComputerName
 - User

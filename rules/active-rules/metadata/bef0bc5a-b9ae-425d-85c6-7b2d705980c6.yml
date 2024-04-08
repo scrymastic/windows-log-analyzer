@@ -1,0 +1,25 @@
+author: frack113
+date: 2021/12/10
+description: Detects a Python process initiating a network connection. While this
+  often relates to package installation, it can also indicate a potential malicious
+  script communicating with a C&C server.
+falsepositives:
+- Legitimate python scripts using the socket library or similar will trigger this.
+  Apply additional filters and perform an initial baseline before deploying.
+filename: net_connection_win_python.yml
+level: medium
+logsource:
+  category: network_connection
+  definition: 'Requirements: Field enrichment is required for the filters to work.
+    As field such as CommandLine and ParentImage are not available by default on this
+    event type'
+  product: windows
+modified: 2023/09/07
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1046/T1046.md#atomic-test-4---port-scan-using-python
+- https://pypi.org/project/scapy/
+related: []
+status: experimental
+tags:
+- attack.discovery
+- attack.t1046

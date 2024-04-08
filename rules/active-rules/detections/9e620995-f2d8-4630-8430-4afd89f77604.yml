@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: 'Import-Module '
+    - ScriptBlockText|contains: Microsoft.ActiveDirectory.Management.dll
+  - or:
+    - ScriptBlockText|contains: ipmo Microsoft.ActiveDirectory.Management.dll
+id: 9e620995-f2d8-4630-8430-4afd89f77604

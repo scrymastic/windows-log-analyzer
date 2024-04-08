@@ -1,0 +1,24 @@
+author: Florian Roth (Nextron Systems), @twjackomo, Jonhnathan Ribeiro, oscd.community
+date: 2018/03/15
+description: Detects the usage and installation of a backdoor that uses an option
+  to register a malicious debugger for built-in tools that are accessible in the login
+  screen
+falsepositives:
+- Unlikely
+filename: registry_event_stickykey_like_backdoor.yml
+level: critical
+logsource:
+  category: registry_event
+  product: windows
+modified: 2022/11/26
+references:
+- https://blogs.technet.microsoft.com/jonathantrull/2016/10/03/detecting-sticky-key-backdoors/
+- https://bazaar.abuse.ch/sample/6f3aa9362d72e806490a8abce245331030d1ab5ac77e400dd475748236a6cc81/
+related: []
+status: test
+tags:
+- attack.privilege_escalation
+- attack.persistence
+- attack.t1546.008
+- car.2014-11-003
+- car.2014-11-008

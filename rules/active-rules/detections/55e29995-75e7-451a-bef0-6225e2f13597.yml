@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetObject|contains: Microsoft\Windows NT\CurrentVersion\SilentProcessExit\lsass.exe
+id: 55e29995-75e7-451a-bef0-6225e2f13597

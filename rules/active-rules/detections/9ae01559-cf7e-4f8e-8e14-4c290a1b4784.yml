@@ -1,0 +1,28 @@
+detection:
+- and:
+  - or:
+    - or:
+      - ImageLoaded|endswith: \credui.dll
+      - ImageLoaded|endswith: \wincredui.dll
+    - or:
+      - OriginalFileName|==: credui.dll
+      - OriginalFileName|==: wincredui.dll
+  - Image|not startswith: C:\Program Files (x86)\
+  - Image|not startswith: C:\Program Files\
+  - Image|not startswith: C:\Windows\System32\
+  - Image|not startswith: C:\Windows\SysWOW64\
+  - Image|!==: C:\Windows\explorer.exe
+  - Image|!==: C:\Windows\ImmersiveControlPanel\SystemSettings.exe
+  - Image|!==: C:\Windows\regedit.exe
+  - or:
+    - Image|not endswith: \opera_autoupdate.exe
+  - Image|not endswith: \procexp64.exe
+  - Image|not endswith: \procexp.exe
+  - or:
+    - Image|not startswith: C:\Users\
+    - Image|not contains: \AppData\Local\Microsoft\Teams\
+    - Image|not endswith: \Teams.exe
+  - or:
+    - Image|not startswith: C:\Users\
+    - Image|not contains: \AppData\Local\Microsoft\OneDrive\
+id: 9ae01559-cf7e-4f8e-8e14-4c290a1b4784

@@ -1,0 +1,26 @@
+detection:
+- and:
+  - or:
+    - or:
+      - User|contains: AUTHORI
+      - User|contains: AUTORI
+  - or:
+    - Image|contains: \Windows\Installer\
+    - Image|contains: msi
+    - Image|endswith: tmp
+  - or:
+    - Image|endswith: \msiexec.exe
+    - IntegrityLevel|==: System
+  - ParentImage|==: C:\Windows\System32\services.exe
+  - or:
+    - CommandLine|endswith: \system32\msiexec.exe /V
+    - ParentCommandLine|endswith: \system32\msiexec.exe /V
+  - ParentImage|startswith: C:\ProgramData\Sophos\
+  - ParentImage|startswith: C:\ProgramData\Avira\
+  - or:
+    - ParentImage|startswith: C:\Program Files\Avast Software\
+    - ParentImage|startswith: C:\Program Files (x86)\Avast Software\
+  - or:
+    - ParentImage|startswith: C:\Program Files\Google\Update\
+    - ParentImage|startswith: C:\Program Files (x86)\Google\Update\
+id: cd951fdc-4b2f-47f5-ba99-a33bf61e3770

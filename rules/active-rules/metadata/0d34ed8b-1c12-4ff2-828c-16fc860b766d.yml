@@ -1,0 +1,23 @@
+author: Andreas Hunkeler (@Karneades), Florian Roth
+date: 2021/12/17
+description: Detects suspicious processes spawned from a Java host process which could
+  indicate a sign of exploitation (e.g. log4j)
+falsepositives:
+- Legitimate calls to system binaries
+- Company specific internal usage
+filename: proc_creation_win_java_susp_child_process.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/01/18
+references:
+- https://www.lunasec.io/docs/blog/log4j-zero-day/
+related:
+- id: dff1e1cc-d3fd-47c8-bfc2-aeb878a754c0
+  type: similar
+status: experimental
+tags:
+- attack.initial_access
+- attack.persistence
+- attack.privilege_escalation

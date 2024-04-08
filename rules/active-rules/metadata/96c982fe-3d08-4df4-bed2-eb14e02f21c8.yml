@@ -1,0 +1,21 @@
+author: frack113
+date: 2022/03/17
+description: Detects AS-REP roasting is an attack that is often-overlooked. It is
+  not very common as you have to explicitly set accounts that do not require pre-authentication.
+falsepositives:
+- Legitimate PowerShell scripts
+filename: posh_ps_as_rep_roasting.yml
+level: medium
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: ''
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1069.002/T1069.002.md#atomic-test-11---get-aduser-enumeration-using-useraccountcontrol-flags-as-rep-roasting
+- https://shellgeek.com/useraccountcontrol-flags-to-manipulate-properties/
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.t1033

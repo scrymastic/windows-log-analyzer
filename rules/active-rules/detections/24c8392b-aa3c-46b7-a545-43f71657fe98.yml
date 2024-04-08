@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \schtasks.exe
+    - OriginalFileName|==: schtasks.exe
+  - or:
+    - CommandLine|contains: ' ONLOGON '
+    - CommandLine|contains: ' ONSTART '
+    - CommandLine|contains: ' ONCE '
+    - CommandLine|contains: ' ONIDLE '
+  - CommandLine|not contains: NT AUT
+  - CommandLine|not contains: ' SYSTEM'
+  - CommandLine|not contains: HIGHEST
+id: 24c8392b-aa3c-46b7-a545-43f71657fe98

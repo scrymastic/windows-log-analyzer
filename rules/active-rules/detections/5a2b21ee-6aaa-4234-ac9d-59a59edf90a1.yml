@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - TargetObject|contains: \SOFTWARE\Microsoft\Cryptography\Providers\
+    - TargetObject|contains: \SOFTWARE\Microsoft\Cryptography\OID\EncodingType
+    - TargetObject|contains: \SOFTWARE\WOW6432Node\Microsoft\Cryptography\Providers\
+    - TargetObject|contains: \SOFTWARE\WOW6432Node\Microsoft\Cryptography\OID\EncodingType
+  - or:
+    - TargetObject|contains: \Dll
+    - TargetObject|contains: \$DLL
+  - or:
+    - Image|!==: C:\Windows\System32\poqexec.exe
+    - TargetObject|not contains: \CryptSIPDll
+    - Details|!==: C:\Windows\System32\PsfSip.dll
+id: 5a2b21ee-6aaa-4234-ac9d-59a59edf90a1

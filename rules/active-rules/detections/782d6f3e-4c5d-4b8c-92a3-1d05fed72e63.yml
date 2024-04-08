@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \netsh.exe
+    - OriginalFileName|==: netsh.exe
+  - CommandLine|contains: ' i'
+  - CommandLine|contains: ' p'
+  - CommandLine|contains: =3389
+  - CommandLine|contains: ' c'
+id: 782d6f3e-4c5d-4b8c-92a3-1d05fed72e63

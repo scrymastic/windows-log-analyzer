@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - ImageLoaded|endswith: \RstrtMgr.dll
+    - OriginalFileName|==: RstrtMgr.dll
+  - or:
+    - Image|contains: :\Perflogs\
+    - Image|contains: :\Users\Public\
+    - Image|contains: \Temporary Internet
+  - or:
+    - Image|contains: :\Users\
+    - Image|contains: \Favorites\
+    - Image|contains: :\Users\
+    - Image|contains: \Favourites\
+    - Image|contains: :\Users\
+    - Image|contains: \Contacts\
+id: b48492dc-c5ef-4572-8dff-32bc241c15c8

@@ -30,6 +30,8 @@ detection:
     - CommandLine|matches: .*\{.*\{.*\{.*\{.*\{.*\{.*\{.*\{.*\{.*\{.*
     - CommandLine|matches: .*\^.*\^.*\^.*\^.*\^.*
     - CommandLine|matches: .*`.*`.*`.*`.*`.*
+  - or:
+    - ParentImage|!==: C:\Program Files\Amazon\SSM\ssm-document-worker.exe
   - CommandLine|not contains: new EventSource("Microsoft.Windows.Sense.Client.Management"
   - CommandLine|not contains: public static extern bool InstallELAMCertificateInfo(SafeFileHandle
       handle);

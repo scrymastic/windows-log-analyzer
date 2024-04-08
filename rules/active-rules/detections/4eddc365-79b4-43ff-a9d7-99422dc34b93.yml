@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \remote.exe
+    - OriginalFileName|==: remote.exe
+id: 4eddc365-79b4-43ff-a9d7-99422dc34b93

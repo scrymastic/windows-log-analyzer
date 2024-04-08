@@ -1,0 +1,9 @@
+detection:
+- and:
+  - Image|endswith: \dnscmd.exe
+  - or:
+    - CommandLine|contains: /enumrecords
+    - CommandLine|contains: /enumzones
+    - CommandLine|contains: /ZonePrint
+    - CommandLine|contains: /info
+id: b6457d63-d2a2-4e29-859d-4e7affc153d1

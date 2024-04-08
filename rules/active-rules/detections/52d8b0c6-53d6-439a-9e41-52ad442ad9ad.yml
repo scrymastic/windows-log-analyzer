@@ -1,0 +1,5 @@
+detection:
+- and:
+  - EventID|==: 5145
+  - ShareName|==: \\\\\*\\IPC$
+id: 52d8b0c6-53d6-439a-9e41-52ad442ad9ad

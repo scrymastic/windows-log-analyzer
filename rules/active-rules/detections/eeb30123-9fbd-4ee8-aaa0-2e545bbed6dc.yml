@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - TargetObject|endswith: \Control\Lsa\Security Packages
+    - TargetObject|endswith: \Control\Lsa\OSConfig\Security Packages
+  - Image|!==: C:\Windows\system32\msiexec.exe
+  - Image|!==: C:\Windows\syswow64\MsiExec.exe
+id: eeb30123-9fbd-4ee8-aaa0-2e545bbed6dc

@@ -65,6 +65,9 @@ detection:
     - CommandLine|contains: WriteInt32
     - CommandLine|contains: WriteProcessMemory
     - CommandLine|contains: ZeroFreeGlobalAllocUnicode
+  - or:
+    - Image|not endswith: \MpCmdRun.exe
+    - CommandLine|not contains: GetLoadLibraryWAddress32
 falsepositives:
 - Unknown
 level: high

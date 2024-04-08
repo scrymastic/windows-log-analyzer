@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \whoami.exe
+    - OriginalFileName|==: whoami.exe
+  - or:
+    - CommandLine|contains: ' /groups'
+    - CommandLine|contains: ' -groups'
+id: bd8b828d-0dca-48e1-8a63-8a58ecf2644f

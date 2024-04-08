@@ -1,0 +1,27 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+    - or:
+      - OriginalFileName|==: net.exe
+      - OriginalFileName|==: net1.exe
+  - or:
+    - CommandLine|contains: ' group '
+    - CommandLine|contains: ' localgroup '
+  - or:
+    - CommandLine|contains: domain admins
+    - CommandLine|contains: ' administrator'
+    - CommandLine|contains: ' administrateur'
+    - CommandLine|contains: enterprise admins
+    - CommandLine|contains: Exchange Trusted Subsystem
+    - CommandLine|contains: Remote Desktop Users
+    - CommandLine|contains: "Utilisateurs du Bureau \xE0 distance"
+    - CommandLine|contains: Usuarios de escritorio remoto
+    - CommandLine|contains: ' /do'
+  - or:
+    - CommandLine|not contains: ' /add'
+  - CommandLine|contains: ' accounts '
+  - CommandLine|contains: ' /do'
+id: d95de845-b83c-4a9a-8a6a-4fc802ebf6c0

@@ -1,0 +1,29 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \Seatbelt.exe
+    - OriginalFileName|==: Seatbelt.exe
+    - Description|==: Seatbelt
+    - or:
+      - CommandLine|contains: ' DpapiMasterKeys'
+      - CommandLine|contains: ' InterestingProcesses'
+      - CommandLine|contains: ' InterestingFiles'
+      - CommandLine|contains: ' CertificateThumbprints'
+      - CommandLine|contains: ' ChromiumBookmarks'
+      - CommandLine|contains: ' ChromiumHistory'
+      - CommandLine|contains: ' ChromiumPresence'
+      - CommandLine|contains: ' CloudCredentials'
+      - CommandLine|contains: ' CredEnum'
+      - CommandLine|contains: ' CredGuard'
+      - CommandLine|contains: ' FirefoxHistory'
+      - CommandLine|contains: ' ProcessCreationEvents'
+  - or:
+    - CommandLine|contains: ' -group=misc'
+    - CommandLine|contains: ' -group=remote'
+    - CommandLine|contains: ' -group=chromium'
+    - CommandLine|contains: ' -group=slack'
+    - CommandLine|contains: ' -group=system'
+    - CommandLine|contains: ' -group=user'
+    - CommandLine|contains: ' -group=all'
+  - CommandLine|contains: ' -outputfile='
+id: 38646daa-e78f-4ace-9de0-55547b2d30da

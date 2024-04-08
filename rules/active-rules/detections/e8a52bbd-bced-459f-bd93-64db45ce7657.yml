@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - TargetFilename|endswith: \\WindowsPowerShell\\Modules\\*\.ps
+    - TargetFilename|endswith: \\WindowsPowerShell\\Modules\\*\.dll
+id: e8a52bbd-bced-459f-bd93-64db45ce7657

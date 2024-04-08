@@ -1,0 +1,21 @@
+author: jmallette, Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron
+  Systems)
+date: 2019/01/16
+description: Detects usage of cmdkey to look for cached credentials on the system
+falsepositives:
+- Legitimate administrative tasks
+filename: proc_creation_win_cmdkey_recon.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2024/03/05
+references:
+- https://www.peew.pw/blog/2017/11/26/exploring-cmdkey-an-edge-case-for-privilege-escalation
+- https://technet.microsoft.com/en-us/library/cc754243(v=ws.11).aspx
+- https://github.com/redcanaryco/atomic-red-team/blob/b27a3cb25025161d49ac861cb216db68c46a3537/atomics/T1003.005/T1003.005.md#atomic-test-1---cached-credential-dump-via-cmdkey
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.005

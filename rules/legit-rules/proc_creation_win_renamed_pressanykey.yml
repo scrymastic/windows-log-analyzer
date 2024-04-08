@@ -21,6 +21,8 @@ logsource:
 detection:
 - and:
   - OriginalFileName|==: Microsoft.NodejsTools.PressAnyKey.exe
+  - or:
+    - Image|not endswith: \Microsoft.NodejsTools.PressAnyKey.exe
 falsepositives:
 - Unknown
 level: medium

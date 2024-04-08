@@ -1,0 +1,18 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \SharpMove.exe
+    - OriginalFileName|==: SharpMove.exe
+  - CommandLine|contains: computername=
+  - or:
+    - CommandLine|contains: action=create
+    - CommandLine|contains: action=dcom
+    - CommandLine|contains: action=executevbs
+    - CommandLine|contains: action=hijackdcom
+    - CommandLine|contains: action=modschtask
+    - CommandLine|contains: action=modsvc
+    - CommandLine|contains: action=query
+    - CommandLine|contains: action=scm
+    - CommandLine|contains: action=startservice
+    - CommandLine|contains: action=taskscheduler
+id: 055fb54c-a8f4-4aee-bd44-f74cf30a0d9d

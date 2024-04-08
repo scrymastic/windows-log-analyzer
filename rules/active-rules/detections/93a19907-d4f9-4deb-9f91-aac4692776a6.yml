@@ -1,0 +1,5 @@
+detection:
+- and:
+  - TargetFilename|startswith: C:\Users\
+  - TargetFilename|endswith: \AppData\Local\Temp\pe386.dll
+id: 93a19907-d4f9-4deb-9f91-aac4692776a6

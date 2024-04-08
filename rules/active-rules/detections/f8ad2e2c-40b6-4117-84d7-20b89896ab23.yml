@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: 'for '
+    - CommandLine|contains: 'foreach '
+  - or:
+    - CommandLine|contains: nslookup
+    - CommandLine|contains: ping
+id: f8ad2e2c-40b6-4117-84d7-20b89896ab23

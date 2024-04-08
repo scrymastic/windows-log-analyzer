@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - SourceImage|endswith: \powershell.exe
+    - SourceImage|endswith: \pwsh.exe
+  - or:
+    - TargetImage|endswith: \rundll32.exe
+    - TargetImage|endswith: \regsvr32.exe
+id: 99b97608-3e21-4bfe-8217-2a127c396a0e

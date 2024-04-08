@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/16
+description: Triggers on any Sysmon "FileBlockExecutable" event, which indicates a
+  violation of the configured block policy
+falsepositives:
+- Unlikely
+filename: sysmon_file_block_executable.yml
+level: high
+logsource:
+  product: windows
+  service: sysmon
+modified: 2023/09/16
+references:
+- https://medium.com/@olafhartong/sysmon-14-0-fileblockexecutable-13d7ba3dff3e
+related: []
+status: experimental
+tags:
+- attack.defense_evasion

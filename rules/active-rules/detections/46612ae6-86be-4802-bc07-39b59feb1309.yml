@@ -1,0 +1,10 @@
+detection:
+- and:
+  - or:
+    - FileName|contains: \Microsoft\Protect\S-1-5-18\
+    - FileName|contains: \Microsoft\Protect\S-1-5-21-
+  - Image|not contains: :\Program Files\
+  - Image|not contains: :\Program Files (x86)\
+  - Image|not contains: :\Windows\system32\
+  - Image|not contains: :\Windows\SysWOW64\
+id: 46612ae6-86be-4802-bc07-39b59feb1309

@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - or:
+      - ScriptBlockText|contains: Get-PasswordVaultCredentials
+      - ScriptBlockText|contains: Get-CredManCreds
+  - or:
+    - ScriptBlockText|contains: New-Object
+    - ScriptBlockText|contains: Windows.Security.Credentials.PasswordVault
+  - or:
+    - ScriptBlockText|contains: New-Object
+    - ScriptBlockText|contains: Microsoft.CSharp.CSharpCodeProvider
+    - ScriptBlockText|contains: '[System.Runtime.InteropServices.RuntimeEnvironment]::GetRuntimeDirectory())'
+    - ScriptBlockText|contains: Collections.ArrayList
+    - ScriptBlockText|contains: System.CodeDom.Compiler.CompilerParameters
+id: 99c49d9c-34ea-45f7-84a7-4751ae6b2cbc

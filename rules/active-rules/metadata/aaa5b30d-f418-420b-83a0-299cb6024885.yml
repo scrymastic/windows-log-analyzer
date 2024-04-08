@@ -1,0 +1,20 @@
+author: Lionel PRAT, Christophe BROCAS, @atc_project (improvements)
+date: 2019/05/24
+description: Detect suspicious error on protocol RDP, potential CVE-2019-0708
+falsepositives:
+- Bad connections or network interruptions
+filename: win_system_rdp_potential_cve_2019_0708.yml
+level: medium
+logsource:
+  product: windows
+  service: system
+modified: 2022/12/25
+references:
+- https://github.com/zerosum0x0/CVE-2019-0708
+- https://github.com/Ekultek/BlueKeep
+related: []
+status: test
+tags:
+- attack.lateral_movement
+- attack.t1210
+- car.2013-07-002

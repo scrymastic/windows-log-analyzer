@@ -1,0 +1,10 @@
+detection:
+- and:
+  - PipeName|==: \PSEXESVC
+  - or:
+    - Image|contains: :\Users\Public\
+    - Image|contains: :\Windows\Temp\
+    - Image|contains: \AppData\Local\Temp\
+    - Image|contains: \Desktop\
+    - Image|contains: \Downloads\
+id: 41504465-5e3a-4a5b-a5b4-2a0baadd4463

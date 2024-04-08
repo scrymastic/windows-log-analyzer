@@ -1,0 +1,12 @@
+detection:
+- and:
+  - ParentImage|endswith: \explorer.exe
+  - or:
+    - Image|endswith: \cmd.exe
+    - Image|endswith: \cscript.exe
+    - Image|endswith: \mshta.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+    - Image|endswith: \wscript.exe
+  - CommandLine|contains: \DavWWWRoot\
+id: 1412aa78-a24c-4abd-83df-767dfb2c5bbe

@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/05
+description: Detects creation of a file named "ntds.dit" (Active Directory Database)
+falsepositives:
+- Unknown
+filename: file_event_win_ntds_dit_creation.yml
+level: low
+logsource:
+  category: file_event
+  product: windows
+modified: ''
+references:
+- Internal Research
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.003

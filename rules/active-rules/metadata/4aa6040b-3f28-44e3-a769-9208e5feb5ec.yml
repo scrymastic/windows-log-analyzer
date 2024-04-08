@@ -1,0 +1,21 @@
+author: Hieu Tran
+date: 2023/03/13
+description: Detects the execution of Rundll32.exe with DLL files masquerading as
+  image files
+falsepositives:
+- Unknown
+filename: proc_creation_win_rundll32_susp_execution_with_image_extension.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.zscaler.com/blogs/security-research/onenote-growing-threat-malware-distribution
+related:
+- id: 089fc3d2-71e8-4763-a8a5-c97fbb0a403e
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218.011

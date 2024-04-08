@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 1031
+    - EventID|==: 1032
+    - EventID|==: 1034
+  - Provider_Name|==: Microsoft-Windows-DHCP-Server
+id: 75edd3fd-7146-48e5-9848-3013d7f0282c

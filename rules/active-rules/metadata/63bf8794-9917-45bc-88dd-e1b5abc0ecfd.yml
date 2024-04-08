@@ -1,0 +1,20 @@
+author: frack113, Nasreddine Bencherchali (Nextron Systems)
+date: 2021/12/27
+description: Uses PowerShell to install/copy a file into a system directory such as
+  "System32" or "SysWOW64"
+falsepositives:
+- Unknown
+filename: posh_ps_copy_item_system_directory.yml
+level: high
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows
+modified: 2024/01/22
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1556.002/T1556.002.md#atomic-test-1---install-and-register-password-filter-dll
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1556.002

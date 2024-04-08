@@ -1,0 +1,20 @@
+author: Teymur Kheirkhabarov, Harish Segar
+date: 2020/03/20
+description: Detects a suspicious or uncommon parent processes of PowerShell
+falsepositives:
+- Other scripts
+filename: proc_creation_win_powershell_susp_parent_process.yml
+level: high
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/02/04
+references:
+- https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=26
+related:
+- id: 692f0bec-83ba-4d04-af7e-e884a96059b6
+  type: derived
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

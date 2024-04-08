@@ -1,0 +1,34 @@
+author: "Luc G\xE9naux"
+date: 2023/11/28
+description: 'Detects the load of RstrtMgr DLL (Restart Manager) by an uncommon process.
+
+  This library has been used during ransomware campaigns to kill processes that would
+  prevent file encryption by locking them (e.g. Conti ransomware, Cactus ransomware).
+  It has also recently been seen used by the BiBi wiper for Windows.
+
+  It could also be used for anti-analysis purposes by shut downing specific processes.
+
+  '
+falsepositives:
+- Other legitimate Windows processes not currently listed
+- Processes related to software installation
+filename: image_load_dll_rstrtmgr_uncommon_load.yml
+level: low
+logsource:
+  category: image_load
+  product: windows
+modified: ''
+references:
+- https://www.crowdstrike.com/blog/windows-restart-manager-part-1/
+- https://www.crowdstrike.com/blog/windows-restart-manager-part-2/
+- https://www.swascan.com/cactus-ransomware-malware-analysis/
+- https://taiwan.postsen.com/business/88601/Hamas-hackers-use-data-destruction-software-BiBi-which-consumes-a-lot-of-processor-resources-to-wipe-Windows-computer-data--iThome.html
+related:
+- id: b48492dc-c5ef-4572-8dff-32bc241c15c8
+  type: derived
+status: experimental
+tags:
+- attack.impact
+- attack.defense_evasion
+- attack.t1486
+- attack.t1562.001

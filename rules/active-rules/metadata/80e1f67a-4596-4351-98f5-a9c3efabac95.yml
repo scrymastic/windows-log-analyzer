@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/11/16
+description: Detects the creation of tasks from processes executed from suspicious
+  locations
+falsepositives:
+- Unknown
+filename: file_event_win_susp_task_write.yml
+level: high
+logsource:
+  category: file_event
+  product: windows
+modified: 2022/01/12
+references:
+- Internal Research
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.execution
+- attack.t1053

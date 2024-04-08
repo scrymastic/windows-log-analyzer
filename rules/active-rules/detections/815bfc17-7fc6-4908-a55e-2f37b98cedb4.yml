@@ -1,0 +1,17 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Payload|contains: get-ADPrincipalGroupMembership
+      - ContextInfo|contains: get-ADPrincipalGroupMembership
+  - or:
+    - or:
+      - Payload|contains: get-aduser
+      - Payload|contains: '-f '
+      - Payload|contains: '-pr '
+      - Payload|contains: DoesNotRequirePreAuth
+      - ContextInfo|contains: get-aduser
+      - ContextInfo|contains: '-f '
+      - ContextInfo|contains: '-pr '
+      - ContextInfo|contains: DoesNotRequirePreAuth
+id: 815bfc17-7fc6-4908-a55e-2f37b98cedb4

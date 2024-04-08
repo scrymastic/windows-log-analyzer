@@ -52,6 +52,8 @@ detection:
   - CommandLine|not contains: windowtracking
   - CommandLine|not contains: windowtrackingtimeout
   - CommandLine|not contains: windowtrackingzorder
+  - or:
+    - CommandLine|not contains: Oracle_JavaAccessBridge
 falsepositives:
 - Legitimate, non-default assistive technology applications execution
 level: medium

@@ -1,0 +1,60 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: 'Add-MpPreference '
+    - CommandLine|contains: 'Set-MpPreference '
+  - or:
+    - CommandLine|contains: 'DisableArchiveScanning '
+    - CommandLine|contains: 'DisableRealtimeMonitoring '
+    - CommandLine|contains: 'DisableIOAVProtection '
+    - CommandLine|contains: 'DisableBehaviorMonitoring '
+    - CommandLine|contains: 'DisableBlockAtFirstSeen '
+    - CommandLine|contains: 'DisableCatchupFullScan '
+    - CommandLine|contains: 'DisableCatchupQuickScan '
+  - or:
+    - CommandLine|contains: $true
+    - CommandLine|contains: ' 1 '
+  - or:
+    - CommandLine|None: 'disablearchivescanning '
+    - CommandLine|None: 'DisableArchiveScanning '
+    - CommandLine|None: 'disablebehaviormonitoring '
+    - CommandLine|None: 'DisableBehaviorMonitoring '
+    - CommandLine|None: 'disableblockatfirstseen '
+    - CommandLine|None: 'DisableBlockAtFirstSeen '
+    - CommandLine|None: 'disablecatchupfullscan '
+    - CommandLine|None: 'DisableCatchupFullScan '
+    - CommandLine|None: 'disablecatchupquickscan '
+    - CommandLine|None: 'DisableCatchupQuickScan '
+    - CommandLine|None: 'disableioavprotection '
+    - CommandLine|None: 'DisableIOAVProtection '
+    - CommandLine|None: 'disablerealtimemonitoring '
+    - CommandLine|None: 'DisableRealtimeMonitoring '
+  - or:
+    - CommandLine|contains: RABpAHMAYQBiAGwAZQBSAGUAYQBsAHQAaQBtAGUATQBvAG4AaQB0AG8AcgBpAG4AZwAgA
+    - CommandLine|contains: QAaQBzAGEAYgBsAGUAUgBlAGEAbAB0AGkAbQBlAE0AbwBuAGkAdABvAHIAaQBuAGcAIA
+    - CommandLine|contains: EAGkAcwBhAGIAbABlAFIAZQBhAGwAdABpAG0AZQBNAG8AbgBpAHQAbwByAGkAbgBnACAA
+    - CommandLine|contains: RABpAHMAYQBiAGwAZQBJAE8AQQBWAFAAcgBvAHQAZQBjAHQAaQBvAG4AIA
+    - CommandLine|contains: QAaQBzAGEAYgBsAGUASQBPAEEAVgBQAHIAbwB0AGUAYwB0AGkAbwBuACAA
+    - CommandLine|contains: EAGkAcwBhAGIAbABlAEkATwBBAFYAUAByAG8AdABlAGMAdABpAG8AbgAgA
+    - CommandLine|contains: RABpAHMAYQBiAGwAZQBCAGUAaABhAHYAaQBvAHIATQBvAG4AaQB0AG8AcgBpAG4AZwAgA
+    - CommandLine|contains: QAaQBzAGEAYgBsAGUAQgBlAGgAYQB2AGkAbwByAE0AbwBuAGkAdABvAHIAaQBuAGcAIA
+    - CommandLine|contains: EAGkAcwBhAGIAbABlAEIAZQBoAGEAdgBpAG8AcgBNAG8AbgBpAHQAbwByAGkAbgBnACAA
+    - CommandLine|contains: RABpAHMAYQBiAGwAZQBCAGwAbwBjAGsAQQB0AEYAaQByAHMAdABTAGUAZQBuACAA
+    - CommandLine|contains: QAaQBzAGEAYgBsAGUAQgBsAG8AYwBrAEEAdABGAGkAcgBzAHQAUwBlAGUAbgAgA
+    - CommandLine|contains: EAGkAcwBhAGIAbABlAEIAbABvAGMAawBBAHQARgBpAHIAcwB0AFMAZQBlAG4AIA
+    - CommandLine|contains: ZABpAHMAYQBiAGwAZQByAGUAYQBsAHQAaQBtAGUAbQBvAG4AaQB0AG8AcgBpAG4AZwAgA
+    - CommandLine|contains: QAaQBzAGEAYgBsAGUAcgBlAGEAbAB0AGkAbQBlAG0AbwBuAGkAdABvAHIAaQBuAGcAIA
+    - CommandLine|contains: kAGkAcwBhAGIAbABlAHIAZQBhAGwAdABpAG0AZQBtAG8AbgBpAHQAbwByAGkAbgBnACAA
+    - CommandLine|contains: ZABpAHMAYQBiAGwAZQBpAG8AYQB2AHAAcgBvAHQAZQBjAHQAaQBvAG4AIA
+    - CommandLine|contains: QAaQBzAGEAYgBsAGUAaQBvAGEAdgBwAHIAbwB0AGUAYwB0AGkAbwBuACAA
+    - CommandLine|contains: kAGkAcwBhAGIAbABlAGkAbwBhAHYAcAByAG8AdABlAGMAdABpAG8AbgAgA
+    - CommandLine|contains: ZABpAHMAYQBiAGwAZQBiAGUAaABhAHYAaQBvAHIAbQBvAG4AaQB0AG8AcgBpAG4AZwAgA
+    - CommandLine|contains: QAaQBzAGEAYgBsAGUAYgBlAGgAYQB2AGkAbwByAG0AbwBuAGkAdABvAHIAaQBuAGcAIA
+    - CommandLine|contains: kAGkAcwBhAGIAbABlAGIAZQBoAGEAdgBpAG8AcgBtAG8AbgBpAHQAbwByAGkAbgBnACAA
+    - CommandLine|contains: ZABpAHMAYQBiAGwAZQBiAGwAbwBjAGsAYQB0AGYAaQByAHMAdABzAGUAZQBuACAA
+    - CommandLine|contains: QAaQBzAGEAYgBsAGUAYgBsAG8AYwBrAGEAdABmAGkAcgBzAHQAcwBlAGUAbgAgA
+    - CommandLine|contains: kAGkAcwBhAGIAbABlAGIAbABvAGMAawBhAHQAZgBpAHIAcwB0AHMAZQBlAG4AIA
+    - CommandLine|contains: RABpAHMAYQBiAGwAZQBDAGEAdABjAGgAdQBwAEYAdQBsAGwAUwBjAGEAbgA
+    - CommandLine|contains: RABpAHMAYQBiAGwAZQBDAGEAdABjAGgAdQBwAFEAdQBpAGMAawBTAGMAYQBuAA
+    - CommandLine|contains: RABpAHMAYQBiAGwAZQBBAHIAYwBoAGkAdgBlAFMAYwBhAG4AbgBpAG4AZwA
+id: 1ec65a5f-9473-4f12-97da-622044d6df21

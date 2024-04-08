@@ -29,6 +29,16 @@ detection:
   - ParentImage|endswith: \appvlp.exe
   - Image|not endswith: :\Windows\SysWOW64\rundll32.exe
   - Image|not endswith: :\Windows\System32\rundll32.exe
+  - or:
+    - Image|not contains: :\Program Files\Microsoft Office
+    - Image|not endswith: \msoasb.exe
+  - or:
+    - Image|not contains: :\Program Files\Microsoft Office
+    - Image|not contains: \SkypeSrv\
+    - Image|not endswith: \SKYPESERVER.EXE
+  - or:
+    - Image|not contains: :\Program Files\Microsoft Office
+    - Image|not endswith: \MSOUC.EXE
 falsepositives:
 - Unknown
 level: medium

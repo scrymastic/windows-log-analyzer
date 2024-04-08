@@ -1,0 +1,22 @@
+detection:
+- and:
+  - or:
+    - or:
+      - TargetFilename|endswith: .exe
+      - TargetFilename|endswith: .iso
+      - TargetFilename|endswith: .rar
+      - TargetFilename|endswith: .zip
+    - or:
+      - TargetFilename|contains: .doc.
+      - TargetFilename|contains: .docx.
+      - TargetFilename|contains: .jpg.
+      - TargetFilename|contains: .pdf.
+      - TargetFilename|contains: .ppt.
+      - TargetFilename|contains: .pptx.
+      - TargetFilename|contains: .xls.
+      - TargetFilename|contains: .xlsx.
+  - or:
+    - or:
+      - TargetFilename|endswith: .rar.exe
+      - TargetFilename|endswith: .zip.exe
+id: b4926b47-a9d7-434c-b3a0-adc3fa0bd13e

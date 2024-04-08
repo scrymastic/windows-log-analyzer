@@ -1,0 +1,9 @@
+detection:
+- and:
+  - CommandLine|contains: cmd
+  - CommandLine|contains: '"set'
+  - CommandLine|contains: -f
+  - or:
+    - CommandLine|contains: /c
+    - CommandLine|contains: /r
+id: 27aec9c9-dbb0-4939-8422-1742242471d0

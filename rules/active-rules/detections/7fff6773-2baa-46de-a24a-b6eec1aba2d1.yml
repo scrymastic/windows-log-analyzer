@@ -1,0 +1,5 @@
+detection:
+- and:
+  - TargetFilename|startswith: C:\Users\
+  - TargetFilename|endswith: \AppData\Local\Temp\api-ms-win-core-kernel32-legacy-l1.DLL
+id: 7fff6773-2baa-46de-a24a-b6eec1aba2d1

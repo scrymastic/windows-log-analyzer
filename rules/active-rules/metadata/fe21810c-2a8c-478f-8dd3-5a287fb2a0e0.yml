@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems), Jonhnathan Ribeiro
+date: 2019/04/15
+description: Detects suspicious commands that are related to scripting/powershell
+  in WMI Event Consumers
+falsepositives:
+- Legitimate administrative scripts
+filename: sysmon_wmi_susp_scripting.yml
+level: high
+logsource:
+  category: wmi_event
+  product: windows
+modified: 2023/09/09
+references:
+- https://in.security/an-intro-into-abusing-and-identifying-wmi-event-subscriptions-for-persistence/
+- https://github.com/Neo23x0/signature-base/blob/615bf1f6bac3c1bdc417025c40c073e6c2771a76/yara/gen_susp_lnk_files.yar#L19
+- https://github.com/RiccardoAncarani/LiquidSnake
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.t1059.005

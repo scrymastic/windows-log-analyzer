@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cmd.exe
+    - Image|endswith: \cscript.exe
+    - Image|endswith: \mshta.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+    - Image|endswith: \wscript.exe
+  - or:
+    - TargetFilename|endswith: .dmp
+    - TargetFilename|endswith: .dump
+    - TargetFilename|endswith: .hdmp
+id: aba15bdd-657f-422a-bab3-ac2d2a0d6f1c

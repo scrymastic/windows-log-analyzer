@@ -1,0 +1,4 @@
+detection:
+- and:
+  - TargetFilename|endswith: \Microsoft\Outlook\VbaProject.OTM
+id: 117d3d3a-755c-4a61-b23e-9171146d094c

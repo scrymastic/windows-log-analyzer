@@ -1,0 +1,14 @@
+detection:
+- and:
+  - CommandLine|contains: Win32_NTEventlogFile
+  - or:
+    - CommandLine|contains: .BackupEventlog(
+    - CommandLine|contains: .ChangeSecurityPermissions(
+    - CommandLine|contains: .ChangeSecurityPermissionsEx(
+    - CommandLine|contains: .ClearEventLog(
+    - CommandLine|contains: .Delete(
+    - CommandLine|contains: .DeleteEx(
+    - CommandLine|contains: .Rename(
+    - CommandLine|contains: .TakeOwnerShip(
+    - CommandLine|contains: .TakeOwnerShipEx(
+id: caf201a9-c2ce-4a26-9c3a-2b9525413711

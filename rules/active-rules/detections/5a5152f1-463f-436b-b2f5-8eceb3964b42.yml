@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - TargetObject|endswith: \Microsoft\Windows\CurrentVersion\Explorer\Advanced\ShowSuperHidden
+    - TargetObject|endswith: \Microsoft\Windows\CurrentVersion\Explorer\Advanced\Hidden
+  - Details|==: DWORD (0x00000000)
+id: 5a5152f1-463f-436b-b2f5-8eceb3964b42

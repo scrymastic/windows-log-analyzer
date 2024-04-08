@@ -22,6 +22,9 @@ detection:
     - Image|endswith: \WMIC.exe
     - OriginalFileName|==: wmic.exe
   - CommandLine|contains: process
+  - or:
+    - CommandLine|not contains: call
+    - CommandLine|not contains: create
 falsepositives:
 - Unknown
 level: medium

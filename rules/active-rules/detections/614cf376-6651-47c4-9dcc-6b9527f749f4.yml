@@ -1,0 +1,38 @@
+detection:
+- and:
+  - EventID|==: 4702
+  - or:
+    - TaskContentNew|contains: \AppData\Local\Temp\
+    - TaskContentNew|contains: \AppData\Roaming\
+    - TaskContentNew|contains: \Users\Public\
+    - TaskContentNew|contains: \WINDOWS\Temp\
+    - TaskContentNew|contains: C:\Temp\
+    - TaskContentNew|contains: \Desktop\
+    - TaskContentNew|contains: \Downloads\
+    - TaskContentNew|contains: \Temporary Internet
+    - TaskContentNew|contains: C:\ProgramData\
+    - TaskContentNew|contains: C:\Perflogs\
+  - or:
+    - TaskContentNew|contains: regsvr32
+    - TaskContentNew|contains: rundll32
+    - TaskContentNew|contains: cmd.exe</Command>
+    - TaskContentNew|contains: cmd</Command>
+    - TaskContentNew|contains: '<Arguments>/c '
+    - TaskContentNew|contains: '<Arguments>/k '
+    - TaskContentNew|contains: '<Arguments>/r '
+    - TaskContentNew|contains: powershell
+    - TaskContentNew|contains: pwsh
+    - TaskContentNew|contains: mshta
+    - TaskContentNew|contains: wscript
+    - TaskContentNew|contains: cscript
+    - TaskContentNew|contains: certutil
+    - TaskContentNew|contains: bitsadmin
+    - TaskContentNew|contains: bash.exe
+    - TaskContentNew|contains: 'bash '
+    - TaskContentNew|contains: scrcons
+    - TaskContentNew|contains: 'wmic '
+    - TaskContentNew|contains: wmic.exe
+    - TaskContentNew|contains: forfiles
+    - TaskContentNew|contains: scriptrunner
+    - TaskContentNew|contains: hh.exe
+id: 614cf376-6651-47c4-9dcc-6b9527f749f4

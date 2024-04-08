@@ -35,6 +35,9 @@ detection:
     - User|endswith: "\\Syst\xE8me"
     - User|endswith: "\\\u0421\u0418\u0421\u0422\u0415\u041C\u0410"
   - IntegrityLevel|==: System
+  - or:
+    - Image|not endswith: \rundll32.exe
+    - CommandLine|not contains: DavSetCookie
 falsepositives:
 - Unknown
 level: high

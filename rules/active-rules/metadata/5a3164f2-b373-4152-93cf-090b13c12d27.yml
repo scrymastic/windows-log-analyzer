@@ -1,0 +1,25 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/26
+description: Detects uncommon or suspicious child processes spawning from a VsCode
+  "code.exe" process. This could indicate an attempt of persistence via VsCode tasks
+  or terminal profiles.
+falsepositives:
+- In development environment where VsCode is used heavily. False positives may occur
+  when developers use task to compile or execute different types of code. Remove or
+  add processes accordingly
+filename: proc_creation_win_vscode_child_processes_anomalies.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/10/25
+references:
+- https://twitter.com/nas_bench/status/1618021838407495681
+- https://twitter.com/nas_bench/status/1618021415852335105
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.defense_evasion
+- attack.t1218
+- attack.t1202

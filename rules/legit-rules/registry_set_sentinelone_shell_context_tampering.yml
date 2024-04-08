@@ -1,0 +1,24 @@
+title: Potential SentinelOne Shell Context Menu Scan Command Tampering
+id: 6c304b02-06e6-402d-8be4-d5833cdf8198
+status: experimental
+description: Detects potentially suspicious changes to the SentinelOne context menu
+  scan command by a process other than SentinelOne.
+references:
+- https://mrd0x.com/sentinelone-persistence-via-menu-context/
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2024/03/06
+tags:
+- attack.persistence
+logsource:
+  category: registry_set
+  product: windows
+detection:
+- and:
+  - TargetObject|contains: \shell\SentinelOneScan\command\
+  - Details|not startswith: C:\Program Files\SentinelOne\Sentinel Agent
+  - Details|not startswith: C:\Program Files (x86)\SentinelOne\Sentinel Agent
+  - Image|not endswith: C:\Program Files\SentinelOne\
+  - Image|not endswith: C:\Program Files (x86)\SentinelOne\
+falsepositives:
+- Unknown
+level: medium

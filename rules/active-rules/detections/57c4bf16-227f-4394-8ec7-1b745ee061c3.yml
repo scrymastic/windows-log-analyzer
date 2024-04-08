@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \netsh.exe
+    - OriginalFileName|==: netsh.exe
+  - CommandLine|contains: firewall
+  - CommandLine|contains: set
+  - CommandLine|contains: opmode
+  - CommandLine|contains: disable
+  - CommandLine|contains: advfirewall
+  - CommandLine|contains: set
+  - CommandLine|contains: state
+  - CommandLine|contains: 'off'
+id: 57c4bf16-227f-4394-8ec7-1b745ee061c3

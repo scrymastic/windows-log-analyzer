@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - EventID|==: 4657
+    - ObjectName|endswith: \SOFTWARE\Microsoft\.NETFramework
+    - ObjectValueName|==: ETWEnabled
+    - NewValue|==: 0
+  - or:
+    - EventID|==: 4657
+    - ObjectName|contains: \Environment
+    - or:
+      - ObjectValueName|==: COMPlus_ETWEnabled
+      - ObjectValueName|==: COMPlus_ETWFlags
+    - NewValue|==: 0
+id: a4c90ea1-2634-4ca0-adbb-35eae169b6fc

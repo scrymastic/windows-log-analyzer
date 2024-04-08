@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Image|endswith: rasdial.exe
+id: 6bba49bf-7f8c-47d6-a1bb-6b4dece4640e

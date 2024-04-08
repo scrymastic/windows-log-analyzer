@@ -1,0 +1,11 @@
+detection:
+- and:
+  - EventID|==: 129
+  - or:
+    - Path|contains: C:\Windows\Temp\
+    - Path|contains: \AppData\Local\Temp\
+    - Path|contains: \Desktop\
+    - Path|contains: \Downloads\
+    - Path|contains: \Users\Public\
+    - Path|contains: C:\Temp\
+id: 424273ea-7cf8-43a6-b712-375f925e481f

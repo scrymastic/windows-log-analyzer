@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/09/28
+description: Detects piping the password to an anydesk instance via CMD and the '--set-password'
+  flag.
+falsepositives:
+- Legitimate piping of the password to anydesk
+- Some FP could occur with similar tools that uses the same command line '--set-password'
+filename: proc_creation_win_remote_access_tools_anydesk_piped_password_via_cli.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: 2023/03/05
+references:
+- https://redcanary.com/blog/misbehaving-rats/
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1219

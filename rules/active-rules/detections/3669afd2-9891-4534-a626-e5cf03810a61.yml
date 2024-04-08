@@ -1,0 +1,25 @@
+detection:
+- and:
+  - or:
+    - ImageLoaded|endswith: \RstrtMgr.dll
+    - OriginalFileName|==: RstrtMgr.dll
+  - Image|not contains: :\$WINDOWS.~BT\
+  - Image|not contains: :\$WinREAgent\
+  - Image|not contains: :\Program Files (x86)\
+  - Image|not contains: :\Program Files\
+  - Image|not contains: :\ProgramData\
+  - Image|not contains: :\Windows\explorer.exe
+  - Image|not contains: :\Windows\SoftwareDistribution\
+  - Image|not contains: :\Windows\SysNative\
+  - Image|not contains: :\Windows\System32\
+  - Image|not contains: :\Windows\SysWOW64\
+  - Image|not contains: :\Windows\WinSxS\
+  - Image|not contains: :\WUDownloadCache\
+  - or:
+    - Image|not contains: :\Users\
+    - Image|not contains: \AppData\Local\Temp\is-
+    - Image|not contains: .tmp\
+    - Image|not endswith: .tmp
+  - or:
+    - Image|not contains: :\Windows\Temp\
+id: 3669afd2-9891-4534-a626-e5cf03810a61

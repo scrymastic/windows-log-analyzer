@@ -1,0 +1,6 @@
+detection:
+- and:
+  - ScriptBlockText|contains: Start-Process
+  - ScriptBlockText|contains: '-PassThru '
+  - ScriptBlockText|contains: '-FilePath '
+id: 0718cd72-f316-4aa2-988f-838ea8533277

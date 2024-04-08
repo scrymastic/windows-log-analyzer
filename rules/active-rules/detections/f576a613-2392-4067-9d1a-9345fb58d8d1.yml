@@ -1,0 +1,20 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: .doc
+    - CommandLine|contains: .docx
+    - CommandLine|contains: .xls
+    - CommandLine|contains: .xlsx
+    - CommandLine|contains: .ppt
+    - CommandLine|contains: .pptx
+    - CommandLine|contains: .rtf
+    - CommandLine|contains: .pdf
+    - CommandLine|contains: .txt
+  - CommandLine|contains: 'dir '
+  - CommandLine|contains: ' /b '
+  - CommandLine|contains: ' /s '
+  - OriginalFileName|==: FINDSTR.EXE
+  - or:
+    - CommandLine|contains: ' /e '
+    - CommandLine|contains: ' /si '
+id: f576a613-2392-4067-9d1a-9345fb58d8d1

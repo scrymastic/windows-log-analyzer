@@ -1,0 +1,11 @@
+detection:
+- and:
+  - ScriptBlockText|contains: 'Set-NetFirewallProfile '
+  - ScriptBlockText|contains: ' -Enabled '
+  - ScriptBlockText|contains: ' False'
+  - or:
+    - ScriptBlockText|contains: ' -All '
+    - ScriptBlockText|contains: Public
+    - ScriptBlockText|contains: Domain
+    - ScriptBlockText|contains: Private
+id: 488b44e7-3781-4a71-888d-c95abfacf44d

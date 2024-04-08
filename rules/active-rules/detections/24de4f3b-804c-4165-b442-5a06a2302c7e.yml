@@ -1,0 +1,4 @@
+detection:
+- and:
+  - CommandLine|contains: .SettingContent-ms
+id: 24de4f3b-804c-4165-b442-5a06a2302c7e

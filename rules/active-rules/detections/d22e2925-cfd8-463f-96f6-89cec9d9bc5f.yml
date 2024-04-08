@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \presentationhost.exe
+    - OriginalFileName|==: PresentationHost.exe
+  - CommandLine|contains: .xbap
+  - CommandLine|not contains: ' C:\Windows\'
+  - CommandLine|not contains: ' C:\Program Files'
+id: d22e2925-cfd8-463f-96f6-89cec9d9bc5f

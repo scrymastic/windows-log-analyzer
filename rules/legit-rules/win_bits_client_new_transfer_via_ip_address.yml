@@ -1,0 +1,69 @@
+title: BITS Transfer Job Download From Direct IP
+id: 90f138c1-f578-4ac3-8c49-eecfd847c8b7
+related:
+- id: 99c840f2-2012-46fd-9141-c761987550ef
+  type: similar
+status: test
+description: Detects a BITS transfer job downloading file(s) from a direct IP address.
+references:
+- https://blog.netspi.com/15-ways-to-download-a-file/#bitsadmin
+- https://isc.sans.edu/diary/22264
+- https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/
+- https://blog.talosintelligence.com/breaking-the-silence-recent-truebot-activity/
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/11
+modified: 2023/03/27
+tags:
+- attack.defense_evasion
+- attack.persistence
+- attack.t1197
+logsource:
+  product: windows
+  service: bits-client
+detection:
+- and:
+  - EventID|==: 16403
+  - or:
+    - RemoteName|contains: http://1
+    - RemoteName|contains: http://2
+    - RemoteName|contains: http://3
+    - RemoteName|contains: http://4
+    - RemoteName|contains: http://5
+    - RemoteName|contains: http://6
+    - RemoteName|contains: http://7
+    - RemoteName|contains: http://8
+    - RemoteName|contains: http://9
+    - RemoteName|contains: https://1
+    - RemoteName|contains: https://2
+    - RemoteName|contains: https://3
+    - RemoteName|contains: https://4
+    - RemoteName|contains: https://5
+    - RemoteName|contains: https://6
+    - RemoteName|contains: https://7
+    - RemoteName|contains: https://8
+    - RemoteName|contains: https://9
+  - RemoteName|not contains: ://10.
+  - RemoteName|not contains: ://192.168.
+  - RemoteName|not contains: ://172.16.
+  - RemoteName|not contains: ://172.17.
+  - RemoteName|not contains: ://172.18.
+  - RemoteName|not contains: ://172.19.
+  - RemoteName|not contains: ://172.20.
+  - RemoteName|not contains: ://172.21.
+  - RemoteName|not contains: ://172.22.
+  - RemoteName|not contains: ://172.23.
+  - RemoteName|not contains: ://172.24.
+  - RemoteName|not contains: ://172.25.
+  - RemoteName|not contains: ://172.26.
+  - RemoteName|not contains: ://172.27.
+  - RemoteName|not contains: ://172.28.
+  - RemoteName|not contains: ://172.29.
+  - RemoteName|not contains: ://172.30.
+  - RemoteName|not contains: ://172.31.
+  - RemoteName|not contains: ://127.
+  - RemoteName|not contains: ://169.254.
+  - RemoteName|not contains: https://7-
+  - RemoteName|not contains: http://7-
+falsepositives:
+- Unknown
+level: high

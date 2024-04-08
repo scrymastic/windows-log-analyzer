@@ -1,0 +1,7 @@
+detection:
+- and:
+  - CommandLine|contains: ' -hp'
+  - or:
+    - CommandLine|contains: ' -m'
+    - CommandLine|contains: ' a '
+id: faa48cae-6b25-4f00-a094-08947fef582f

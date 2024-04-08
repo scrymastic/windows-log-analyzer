@@ -1,0 +1,16 @@
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \wmic.exe
+      - Image|endswith: \vssadmin.exe
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+      - OriginalFileName|==: wmic.exe
+      - OriginalFileName|==: VSSADMIN.EXE
+  - CommandLine|contains: shadow
+  - CommandLine|contains: create
+id: b17ea6f7-6e90-447e-a799-e6c0a493d6ce

@@ -1,0 +1,24 @@
+author: Patryk Prauze - ING Tech
+date: 2019/05/20
+description: Detects remote access to the LSASS process via WinRM. This could be a
+  sign of credential dumping from tools like mimikatz.
+falsepositives:
+- Unlikely
+filename: proc_access_win_lsass_remote_access_trough_winrm.yml
+level: high
+logsource:
+  category: process_access
+  product: windows
+modified: 2023/11/29
+references:
+- https://pentestlab.blog/2018/05/15/lateral-movement-winrm/
+related: []
+status: stable
+tags:
+- attack.credential_access
+- attack.execution
+- attack.t1003.001
+- attack.t1059.001
+- attack.lateral_movement
+- attack.t1021.006
+- attack.s0002

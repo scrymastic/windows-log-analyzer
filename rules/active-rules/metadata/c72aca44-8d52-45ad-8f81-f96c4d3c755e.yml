@@ -1,0 +1,23 @@
+author: Nikita Nazarov, oscd.community
+date: 2020/10/12
+description: Detects Obfuscated Powershell via Stdin in Scripts
+falsepositives:
+- Unknown
+filename: posh_pm_invoke_obfuscation_via_stdin.yml
+level: high
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows
+modified: 2022/11/29
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+related:
+- id: 86b896ba-ffa1-4fea-83e3-ee28a4c915c7
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

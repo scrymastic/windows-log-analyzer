@@ -29,6 +29,8 @@ detection:
   - CommandLine|contains: ' -u -p '
   - CommandLine|contains: ' -ip '
   - CommandLine|contains: ' -s '
+  - or:
+    - ParentImage|!==: C:\Windows\System32\lsass.exe
 falsepositives:
 - Windows Error Reporting might produce similar behavior. In that case, check the
   PID associated with the "-p" parameter in the CommandLine.

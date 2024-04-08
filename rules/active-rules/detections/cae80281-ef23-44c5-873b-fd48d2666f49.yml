@@ -1,0 +1,6 @@
+detection:
+- and:
+  - ScriptBlockText|contains: 'Set-Acl '
+  - ScriptBlockText|contains: '-AclObject '
+  - ScriptBlockText|contains: '-Path '
+id: cae80281-ef23-44c5-873b-fd48d2666f49

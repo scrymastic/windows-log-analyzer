@@ -1,0 +1,4 @@
+detection:
+- and:
+  - Payload|contains: Get-Clipboard
+id: 4cbd4f12-2e22-43e3-882f-bff3247ffb78

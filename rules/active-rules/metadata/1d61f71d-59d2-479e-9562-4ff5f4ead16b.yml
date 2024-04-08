@@ -1,0 +1,24 @@
+author: pH-T (Nextron Systems), Florian Roth (Nextron Systems)
+date: 2022/03/18
+description: Detects suspicious service installation commands
+falsepositives:
+- Unknown
+filename: win_system_service_install_susp.yml
+level: high
+logsource:
+  product: windows
+  service: system
+modified: 2023/12/04
+references:
+- Internal Research
+related:
+- id: ca83e9f3-657a-45d0-88d6-c1ac280caf53
+  type: obsoletes
+- id: 26481afe-db26-4228-b264-25a29fe6efc7
+  type: similar
+status: test
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- car.2013-09-005
+- attack.t1543.003

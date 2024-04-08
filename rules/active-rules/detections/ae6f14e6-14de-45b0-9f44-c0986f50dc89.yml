@@ -1,0 +1,8 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \cmd.exe
+    - OriginalFileName|==: Cmd.Exe
+  - CommandLine|contains: 'assoc '
+  - CommandLine|contains: exefile
+id: ae6f14e6-14de-45b0-9f44-c0986f50dc89

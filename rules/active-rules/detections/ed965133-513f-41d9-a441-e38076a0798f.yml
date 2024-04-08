@@ -1,0 +1,15 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: ' -enc '
+    - ScriptBlockText|contains: ' -EncodedCommand '
+    - ScriptBlockText|contains: ' -ec '
+  - or:
+    - ScriptBlockText|contains: ' -w hidden '
+    - ScriptBlockText|contains: ' -window hidden '
+    - ScriptBlockText|contains: ' -windowstyle hidden '
+    - ScriptBlockText|contains: ' -w 1 '
+  - or:
+    - ScriptBlockText|contains: ' -noni '
+    - ScriptBlockText|contains: ' -noninteractive '
+id: ed965133-513f-41d9-a441-e38076a0798f

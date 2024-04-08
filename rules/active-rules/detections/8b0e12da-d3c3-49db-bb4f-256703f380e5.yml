@@ -1,0 +1,14 @@
+detection:
+- and:
+  - Image|endswith: \chisel.exe
+  - or:
+    - CommandLine|contains: 'exe client '
+    - CommandLine|contains: 'exe server '
+  - or:
+    - CommandLine|contains: -socks5
+    - CommandLine|contains: -reverse
+    - CommandLine|contains: ' r:'
+    - CommandLine|contains: ':127.0.0.1:'
+    - CommandLine|contains: '-tls-skip-verify '
+    - CommandLine|contains: :socks
+id: 8b0e12da-d3c3-49db-bb4f-256703f380e5

@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \runonce.exe
+    - Description|==: Run Once Wrapper
+  - or:
+    - CommandLine|contains: /AlternateShellStartup
+    - CommandLine|endswith: /r
+id: 198effb6-6c98-4d0c-9ea3-451fa143c45c

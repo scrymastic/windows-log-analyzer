@@ -1,0 +1,24 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/22
+description: 'Detects PDQDeploy service installation on the target system.
+
+  When a package is deployed via PDQDeploy it installs a remote service on the target
+  machine with the name "PDQDeployRunner-X" where "X" is an integer starting from
+  1
+
+  '
+falsepositives:
+- Legitimate use of the tool
+filename: win_system_service_install_pdqdeploy_runner.yml
+level: medium
+logsource:
+  product: windows
+  service: system
+modified: ''
+references:
+- https://documentation.pdq.com/PDQDeploy/13.0.3.0/index.html?windows-services.htm
+related: []
+status: test
+tags:
+- attack.privilege_escalation
+- attack.t1543.003

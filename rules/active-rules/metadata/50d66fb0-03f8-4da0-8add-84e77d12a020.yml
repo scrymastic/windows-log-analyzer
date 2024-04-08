@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/11/11
+description: Detects suspicious command line flags that let the user set a target
+  user and command as e.g. seen in PsExec-like tools
+falsepositives:
+- Unknown
+filename: proc_creation_win_susp_privilege_escalation_cli_patterns.yml
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.trendmicro.com/en_us/research/22/k/hack-the-real-box-apt41-new-subgroup-earth-longzhi.html
+related: []
+status: test
+tags:
+- attack.privilege_escalation

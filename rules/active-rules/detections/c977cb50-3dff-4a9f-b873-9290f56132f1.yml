@@ -1,0 +1,13 @@
+detection:
+- and:
+  - EventID|==: 854
+  - Path|not contains: C:\Program Files\WindowsApps\
+  - Path|not contains: C:\Program Files (x86)\
+  - Path|not contains: C:\Windows\SystemApps\
+  - Path|not contains: C:\Windows\PrintDialog\
+  - Path|not contains: C:\Windows\ImmersiveControlPanel\
+  - Path|not contains: x-windowsupdate://
+  - Path|not contains: file:///C:/Program%20Files
+  - Path|not contains: https://statics.teams.cdn.office.net/
+  - Path|not contains: microsoft.com
+id: c977cb50-3dff-4a9f-b873-9290f56132f1

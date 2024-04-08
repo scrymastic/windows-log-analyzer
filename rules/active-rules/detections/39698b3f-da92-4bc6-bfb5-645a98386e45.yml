@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - SamAccountName|startswith: SAMTHEADMIN-
+    - SamAccountName|endswith: $
+  - or:
+    - TargetUserName|startswith: SAMTHEADMIN-
+    - TargetUserName|endswith: $
+id: 39698b3f-da92-4bc6-bfb5-645a98386e45

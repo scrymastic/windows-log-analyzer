@@ -1,0 +1,6 @@
+detection:
+- and:
+  - or:
+    - CommandLine|contains: X509Enrollment.CBinaryConverter
+    - CommandLine|contains: 884e2002-217d-11da-b2a4-000e7bbb2b09
+id: 114de787-4eb2-48cc-abdb-c0b449f93ea4

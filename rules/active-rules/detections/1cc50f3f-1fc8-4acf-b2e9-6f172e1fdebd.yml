@@ -1,0 +1,7 @@
+detection:
+- and:
+  - CommandLine|contains: rundll32.exe
+  - CommandLine|contains: Execute
+  - CommandLine|contains: RegRead
+  - CommandLine|contains: window.close
+id: 1cc50f3f-1fc8-4acf-b2e9-6f172e1fdebd

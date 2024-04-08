@@ -1,0 +1,14 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \certoc.exe
+    - OriginalFileName|==: CertOC.exe
+  - CommandLine|None: ' -LoadDLL '
+  - or:
+    - CommandLine|contains: \Appdata\Local\Temp\
+    - CommandLine|contains: \Desktop\
+    - CommandLine|contains: \Downloads\
+    - CommandLine|contains: \Users\Public\
+    - CommandLine|contains: C:\Windows\Tasks\
+    - CommandLine|contains: C:\Windows\Temp\
+id: 84232095-ecca-4015-b0d7-7726507ee793

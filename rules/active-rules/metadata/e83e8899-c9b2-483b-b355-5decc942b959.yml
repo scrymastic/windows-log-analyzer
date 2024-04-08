@@ -1,0 +1,24 @@
+author: Swachchhanda Shrawan Poudel
+date: 2024/02/12
+description: 'Detects the enumeration and query of interesting and in some cases sensitive
+  services on the system via "sc.exe".
+
+  Attackers often try to enumerate the services currently running on a system in order
+  to find different attack vectors.
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_sc_query_interesting_services.yml
+level: low
+logsource:
+  category: process_creation
+  product: windows
+modified: ''
+references:
+- https://www.n00py.io/2021/05/dumping-plaintext-rdp-credentials-from-svchost-exe/
+- https://pentestlab.blog/tag/svchost/
+related: []
+status: experimental
+tags:
+- attack.t1003

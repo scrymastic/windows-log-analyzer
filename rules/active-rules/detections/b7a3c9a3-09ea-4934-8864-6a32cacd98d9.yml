@@ -1,0 +1,7 @@
+detection:
+- and:
+  - or:
+    - ScriptBlockText|contains: Compress-Archive -Path*-DestinationPath $env:TEMP
+    - ScriptBlockText|contains: Compress-Archive -Path*-DestinationPath*\AppData\Local\Temp\
+    - ScriptBlockText|contains: Compress-Archive -Path*-DestinationPath*:\Windows\Temp\
+id: b7a3c9a3-09ea-4934-8864-6a32cacd98d9

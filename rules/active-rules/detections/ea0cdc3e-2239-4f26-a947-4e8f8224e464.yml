@@ -1,0 +1,21 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \certutil.exe
+    - OriginalFileName|==: CertUtil.exe
+  - CommandLine|None: -encode
+  - or:
+    - CommandLine|contains: .acl
+    - CommandLine|contains: .bat
+    - CommandLine|contains: .doc
+    - CommandLine|contains: .gif
+    - CommandLine|contains: .jpeg
+    - CommandLine|contains: .jpg
+    - CommandLine|contains: .mp3
+    - CommandLine|contains: .pdf
+    - CommandLine|contains: .png
+    - CommandLine|contains: .ppt
+    - CommandLine|contains: .tmp
+    - CommandLine|contains: .xls
+    - CommandLine|contains: .xml
+id: ea0cdc3e-2239-4f26-a947-4e8f8224e464

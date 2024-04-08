@@ -1,0 +1,9 @@
+detection:
+- and:
+  - or:
+    - Image|endswith: \msedge_proxy.exe
+    - OriginalFileName|==: msedge_proxy.exe
+  - or:
+    - CommandLine|contains: http://
+    - CommandLine|contains: https://
+id: e84d89c4-f544-41ca-a6af-4b92fd38b023

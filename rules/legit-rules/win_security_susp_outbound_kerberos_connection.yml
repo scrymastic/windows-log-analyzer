@@ -1,0 +1,37 @@
+title: Uncommon Outbound Kerberos Connection - Security
+id: eca91c7c-9214-47b9-b4c5-cb1d7e4f2350
+related:
+- id: e54979bd-c5f9-4d6c-967b-a04b19ac4c74
+  type: similar
+status: test
+description: 'Detects uncommon outbound network activity via Kerberos default port
+  indicating possible lateral movement or first stage PrivEsc via delegation.
+
+  '
+references:
+- https://github.com/GhostPack/Rubeus
+author: Ilyas Ochkov, oscd.community
+date: 2019/10/24
+modified: 2024/03/15
+tags:
+- attack.lateral_movement
+- attack.t1558.003
+logsource:
+  product: windows
+  service: security
+detection:
+- and:
+  - EventID|==: 5156
+  - DestPort|==: 88
+  - Application|not startswith: \device\harddiskvolume
+  - Application|not startswith: 'C:'
+  - Application|not startswith: \device\harddiskvolume
+  - Application|not startswith: 'C:'
+  - Application|not startswith: \device\harddiskvolume
+  - Application|not startswith: 'C:'
+  - or:
+    - Application|not endswith: \tomcat\bin\tomcat8.exe
+falsepositives:
+- Web Browsers and third party application might generate similar activity. An initial
+  baseline is required.
+level: medium

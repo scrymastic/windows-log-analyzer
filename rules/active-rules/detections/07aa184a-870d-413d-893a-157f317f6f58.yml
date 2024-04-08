@@ -1,0 +1,4 @@
+detection:
+- and:
+  - CommandLine|contains: gatherNetworkInfo.vbs
+id: 07aa184a-870d-413d-893a-157f317f6f58

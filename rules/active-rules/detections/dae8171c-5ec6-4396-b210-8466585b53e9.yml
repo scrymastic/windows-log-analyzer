@@ -1,0 +1,7 @@
+detection:
+- and:
+  - EventID|==: 4674
+  - ObjectType|==: SC_MANAGER OBJECT
+  - ObjectName|==: servicesactive
+  - PrivilegeList|==: SeTakeOwnershipPrivilege
+id: dae8171c-5ec6-4396-b210-8466585b53e9

@@ -1,0 +1,24 @@
+detection:
+- and:
+  - ParentImage|endswith: \sqlservr.exe
+  - or:
+    - Image|endswith: \bash.exe
+    - Image|endswith: \bitsadmin.exe
+    - Image|endswith: \cmd.exe
+    - Image|endswith: \netstat.exe
+    - Image|endswith: \nltest.exe
+    - Image|endswith: \ping.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+    - Image|endswith: \regsvr32.exe
+    - Image|endswith: \rundll32.exe
+    - Image|endswith: \sh.exe
+    - Image|endswith: \systeminfo.exe
+    - Image|endswith: \tasklist.exe
+    - Image|endswith: \wsl.exe
+  - or:
+    - ParentImage|not startswith: C:\Program Files\Microsoft SQL Server\
+    - ParentImage|not endswith: DATEV_DBENGINE\MSSQL\Binn\sqlservr.exe
+    - Image|!==: C:\Windows\System32\cmd.exe
+    - CommandLine|not startswith: '"C:\Windows\system32\cmd.exe" '
+id: 869b9ca7-9ea2-4a5a-8325-e80e62f75445
