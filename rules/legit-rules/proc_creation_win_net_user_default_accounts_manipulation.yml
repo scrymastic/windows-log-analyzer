@@ -1,0 +1,64 @@
+title: Suspicious Manipulation Of Default Accounts Via Net.EXE
+id: 5b768e71-86f2-4879-b448-81061cbae951
+status: test
+description: Detects suspicious manipulations of default accounts such as 'administrator'
+  and 'guest'. For example 'enable' or 'disable' accounts or change the password...etc
+references:
+- https://www.trellix.com/en-sg/about/newsroom/stories/threat-labs/lockergoga-ransomware-family-used-in-targeted-attacks.html
+- https://redacted.com/blog/bianlian-ransomware-gang-gives-it-a-go/
+- https://www.microsoft.com/security/blog/2022/09/07/profiling-dev-0270-phosphorus-ransomware-operations/
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/09/01
+modified: 2023/02/21
+tags:
+- attack.collection
+- attack.t1560.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - or:
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+    - or:
+      - OriginalFileName|==: net.exe
+      - OriginalFileName|==: net1.exe
+  - CommandLine|contains: ' user '
+  - or:
+    - CommandLine|contains: " J\xE4rjestelm\xE4nvalvoja "
+    - CommandLine|contains: ' Rendszergazda '
+    - CommandLine|contains: " \u0410\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\
+        \u0430\u0442\u043E\u0440 "
+    - CommandLine|contains: ' Administrateur '
+    - CommandLine|contains: ' Administrador '
+    - CommandLine|contains: " Administrat\xF6r "
+    - CommandLine|contains: ' Administrator '
+    - CommandLine|contains: ' guest '
+    - CommandLine|contains: ' DefaultAccount '
+    - CommandLine|contains: " \"J\xE4rjestelm\xE4nvalvoja\" "
+    - CommandLine|contains: ' "Rendszergazda" '
+    - CommandLine|contains: " \"\u0410\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\
+        \u0430\u0442\u043E\u0440\" "
+    - CommandLine|contains: ' "Administrateur" '
+    - CommandLine|contains: ' "Administrador" '
+    - CommandLine|contains: " \"Administrat\xF6r\" "
+    - CommandLine|contains: ' "Administrator" '
+    - CommandLine|contains: ' "guest" '
+    - CommandLine|contains: ' "DefaultAccount" '
+    - CommandLine|contains: " 'J\xE4rjestelm\xE4nvalvoja' "
+    - CommandLine|contains: ' ''Rendszergazda'' '
+    - CommandLine|contains: " '\u0410\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\
+        \u0430\u0442\u043E\u0440' "
+    - CommandLine|contains: ' ''Administrateur'' '
+    - CommandLine|contains: ' ''Administrador'' '
+    - CommandLine|contains: " 'Administrat\xF6r' "
+    - CommandLine|contains: ' ''Administrator'' '
+    - CommandLine|contains: ' ''guest'' '
+    - CommandLine|contains: ' ''DefaultAccount'' '
+falsepositives:
+- Some false positives could occur with the admin or guest account. It depends on
+  the scripts being used by the admins in your env. If you experience a lot of FP
+  you could reduce the level to medium
+level: high

@@ -1,0 +1,28 @@
+title: Invoke-Obfuscation VAR+ Launcher
+id: 27aec9c9-dbb0-4939-8422-1742242471d0
+status: test
+description: Detects Obfuscated use of Environment Variables to execute PowerShell
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+author: Jonathan Cheong, oscd.community
+date: 2020/10/15
+modified: 2022/11/17
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - CommandLine|contains: cmd
+  - CommandLine|contains: '"set'
+  - CommandLine|contains: -f
+  - or:
+    - CommandLine|contains: /c
+    - CommandLine|contains: /r
+falsepositives:
+- Unknown
+level: high

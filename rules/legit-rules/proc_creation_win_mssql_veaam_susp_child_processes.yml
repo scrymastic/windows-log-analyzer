@@ -1,0 +1,50 @@
+title: Suspicious Child Process Of Veeam Dabatase
+id: d55b793d-f847-4eea-b59a-5ab09908ac90
+related:
+- id: 869b9ca7-9ea2-4a5a-8325-e80e62f75445
+  type: similar
+status: test
+description: Detects suspicious child processes of the Veeam service process. This
+  could indicate potential RCE or SQL Injection.
+references:
+- https://labs.withsecure.com/publications/fin7-target-veeam-servers
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/04
+tags:
+- attack.initial_access
+- attack.persistence
+- attack.privilege_escalation
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - ParentImage|endswith: \sqlservr.exe
+  - ParentCommandLine|contains: VEEAMSQL
+  - or:
+    - Image|endswith: \cmd.exe
+    - Image|endswith: \powershell.exe
+    - Image|endswith: \pwsh.exe
+    - Image|endswith: \wsl.exe
+    - Image|endswith: \wt.exe
+  - or:
+    - CommandLine|contains: '-ex '
+    - CommandLine|contains: bypass
+    - CommandLine|contains: cscript
+    - CommandLine|contains: DownloadString
+    - CommandLine|contains: http://
+    - CommandLine|contains: https://
+    - CommandLine|contains: mshta
+    - CommandLine|contains: regsvr32
+    - CommandLine|contains: rundll32
+    - CommandLine|contains: wscript
+    - CommandLine|contains: 'copy '
+  - or:
+    - Image|endswith: \net.exe
+    - Image|endswith: \net1.exe
+    - Image|endswith: \netstat.exe
+    - Image|endswith: \nltest.exe
+    - Image|endswith: \ping.exe
+    - Image|endswith: \tasklist.exe
+    - Image|endswith: \whoami.exe
+level: critical

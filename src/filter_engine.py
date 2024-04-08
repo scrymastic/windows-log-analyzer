@@ -84,8 +84,7 @@ class FilterEngine:
             return regex.match(value, field_value)
         elif operator == 'not matches':
             return not regex.match(value, field_value)
-        # for ip address, Classless Inter-Domain Routing
-        elif operator == 'cidr':
+        elif operator == 'cidr':    # for ip address, Classless Inter-Domain Routing
             import ipaddress
             return ipaddress.IPv4Address(field_value) in ipaddress.IPv4Network(value) \
                 if '.' in field_value else \

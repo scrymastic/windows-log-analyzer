@@ -1,0 +1,57 @@
+title: Uncommon  Assistive Technology Applications Execution Via AtBroker.EXE
+id: f24bcaea-0cd1-11eb-adc1-0242ac120002
+status: test
+description: Detects the start of a non built-in assistive technology applications
+  via "Atbroker.EXE".
+references:
+- http://www.hexacorn.com/blog/2016/07/22/beyond-good-ol-run-key-part-42/
+- https://lolbas-project.github.io/lolbas/Binaries/Atbroker/
+author: Mateusz Wydra, oscd.community
+date: 2020/10/12
+modified: 2024/03/06
+tags:
+- attack.defense_evasion
+- attack.t1218
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - Image|endswith: \AtBroker.exe
+    - OriginalFileName|==: AtBroker.exe
+  - CommandLine|contains: start
+  - CommandLine|not contains: animations
+  - CommandLine|not contains: audiodescription
+  - CommandLine|not contains: caretbrowsing
+  - CommandLine|not contains: caretwidth
+  - CommandLine|not contains: colorfiltering
+  - CommandLine|not contains: cursorindicator
+  - CommandLine|not contains: cursorscheme
+  - CommandLine|not contains: filterkeys
+  - CommandLine|not contains: focusborderheight
+  - CommandLine|not contains: focusborderwidth
+  - CommandLine|not contains: highcontrast
+  - CommandLine|not contains: keyboardcues
+  - CommandLine|not contains: keyboardpref
+  - CommandLine|not contains: livecaptions
+  - CommandLine|not contains: magnifierpane
+  - CommandLine|not contains: messageduration
+  - CommandLine|not contains: minimumhitradius
+  - CommandLine|not contains: mousekeys
+  - CommandLine|not contains: Narrator
+  - CommandLine|not contains: osk
+  - CommandLine|not contains: overlappedcontent
+  - CommandLine|not contains: showsounds
+  - CommandLine|not contains: soundsentry
+  - CommandLine|not contains: speechreco
+  - CommandLine|not contains: stickykeys
+  - CommandLine|not contains: togglekeys
+  - CommandLine|not contains: voiceaccess
+  - CommandLine|not contains: windowarranging
+  - CommandLine|not contains: windowtracking
+  - CommandLine|not contains: windowtrackingtimeout
+  - CommandLine|not contains: windowtrackingzorder
+falsepositives:
+- Legitimate, non-default assistive technology applications execution
+level: medium

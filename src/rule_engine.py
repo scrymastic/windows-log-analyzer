@@ -79,7 +79,7 @@ class RuleEngine:
         # Deploy the rule to the rule engine
         # By moving the rule from the legit-rules folder to the active-rules folder
         # As follows:
-        # /active-rules/detections/{rule_id}.yml: log source, detection
+        # /active-rules/detections/{rule_id}.yml: detection
         # /active-rules/headers/{rule_id}.yml: title
         # /active-rules/metadata/{rule_id}.yml: add filename field, other metadata
 
@@ -91,7 +91,6 @@ class RuleEngine:
             # Create log source and detection file
             log_source_detection = {
                 "id": rule_content["id"],
-                "logsource": rule_content["logsource"],
                 "detection": rule_content["detection"]
             }
             with open(self.active_rules_folder / "detections" / f"{rule_content["id"]}.yml", "w") as f:
@@ -115,6 +114,7 @@ class RuleEngine:
                 "date": rule_content["date"],
                 "modified": rule_content["modified"],
                 "tags": rule_content["tags"],
+                "logsource": rule_content["logsource"],
                 "falsepositives": rule_content["falsepositives"],
                 "level": rule_content["level"]
             }

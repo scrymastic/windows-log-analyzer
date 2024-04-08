@@ -1,7 +1,4 @@
 id: 4f4eaa9f-5ad4-410c-a4be-bc6132b0175a
-logsource:
-    category: process_creation
-    product: windows
 detection:
     - and:
         - EventID: 1

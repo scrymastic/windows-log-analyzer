@@ -1,0 +1,61 @@
+title: Suspicious PowerShell Parent Process
+id: 754ed792-634f-40ae-b3bc-e0448d33f695
+related:
+- id: 692f0bec-83ba-4d04-af7e-e884a96059b6
+  type: derived
+status: test
+description: Detects a suspicious or uncommon parent processes of PowerShell
+references:
+- https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=26
+author: Teymur Kheirkhabarov, Harish Segar
+date: 2020/03/20
+modified: 2023/02/04
+tags:
+- attack.execution
+- attack.t1059.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - ParentImage|contains: tomcat
+    - or:
+      - ParentImage|endswith: \amigo.exe
+      - ParentImage|endswith: \browser.exe
+      - ParentImage|endswith: \chrome.exe
+      - ParentImage|endswith: \firefox.exe
+      - ParentImage|endswith: \httpd.exe
+      - ParentImage|endswith: \iexplore.exe
+      - ParentImage|endswith: \jbosssvc.exe
+      - ParentImage|endswith: \microsoftedge.exe
+      - ParentImage|endswith: \microsoftedgecp.exe
+      - ParentImage|endswith: \MicrosoftEdgeSH.exe
+      - ParentImage|endswith: \mshta.exe
+      - ParentImage|endswith: \nginx.exe
+      - ParentImage|endswith: \outlook.exe
+      - ParentImage|endswith: \php-cgi.exe
+      - ParentImage|endswith: \regsvr32.exe
+      - ParentImage|endswith: \rundll32.exe
+      - ParentImage|endswith: \safari.exe
+      - ParentImage|endswith: \services.exe
+      - ParentImage|endswith: \sqlagent.exe
+      - ParentImage|endswith: \sqlserver.exe
+      - ParentImage|endswith: \sqlservr.exe
+      - ParentImage|endswith: \vivaldi.exe
+      - ParentImage|endswith: \w3wp.exe
+  - or:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - CommandLine|contains: /c powershell
+      - CommandLine|contains: /c pwsh
+    - Description|==: Windows PowerShell
+    - Product|==: PowerShell Core 6
+    - or:
+      - OriginalFileName|==: PowerShell.EXE
+      - OriginalFileName|==: pwsh.dll
+falsepositives:
+- Other scripts
+level: high

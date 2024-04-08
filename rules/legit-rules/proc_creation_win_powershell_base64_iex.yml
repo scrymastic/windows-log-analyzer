@@ -1,0 +1,45 @@
+title: PowerShell Base64 Encoded IEX Cmdlet
+id: 88f680b8-070e-402c-ae11-d2914f2257f1
+status: test
+description: Detects usage of a base64 encoded "IEX" cmdlet in a process command line
+references:
+- Internal Research
+author: Florian Roth (Nextron Systems)
+date: 2019/08/23
+modified: 2023/04/06
+tags:
+- attack.execution
+- attack.t1059.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - or:
+      - CommandLine|None: IEX ([
+      - CommandLine|None: iex ([
+      - CommandLine|None: iex (New
+      - CommandLine|None: IEX (New
+      - CommandLine|None: IEX([
+      - CommandLine|None: iex([
+      - CommandLine|None: iex(New
+      - CommandLine|None: IEX(New
+      - CommandLine|None: IEX(('
+      - CommandLine|None: iex(('
+    - or:
+      - CommandLine|contains: SQBFAFgAIAAoAFsA
+      - CommandLine|contains: kARQBYACAAKABbA
+      - CommandLine|contains: JAEUAWAAgACgAWw
+      - CommandLine|contains: aQBlAHgAIAAoAFsA
+      - CommandLine|contains: kAZQB4ACAAKABbA
+      - CommandLine|contains: pAGUAeAAgACgAWw
+      - CommandLine|contains: aQBlAHgAIAAoAE4AZQB3A
+      - CommandLine|contains: kAZQB4ACAAKABOAGUAdw
+      - CommandLine|contains: pAGUAeAAgACgATgBlAHcA
+      - CommandLine|contains: SQBFAFgAIAAoAE4AZQB3A
+      - CommandLine|contains: kARQBYACAAKABOAGUAdw
+      - CommandLine|contains: JAEUAWAAgACgATgBlAHcA
+falsepositives:
+- Unknown
+level: high

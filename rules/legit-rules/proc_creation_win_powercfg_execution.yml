@@ -1,0 +1,30 @@
+title: Suspicious Powercfg Execution To Change Lock Screen Timeout
+id: f8d6a15e-4bc8-4c27-8e5d-2b10f0b73e5b
+status: test
+description: Detects suspicious execution of 'Powercfg.exe' to change lock screen
+  timeout
+references:
+- https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html
+- https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options
+author: frack113
+date: 2022/11/18
+tags:
+- attack.defense_evasion
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - Image|endswith: \powercfg.exe
+    - OriginalFileName|==: PowerCfg.exe
+  - or:
+    - CommandLine|contains: '/setacvalueindex '
+    - CommandLine|contains: SCHEME_CURRENT
+    - CommandLine|contains: SUB_VIDEO
+    - CommandLine|contains: VIDEOCONLOCK
+    - CommandLine|contains: '-change '
+    - CommandLine|contains: -standby-timeout-
+falsepositives:
+- Unknown
+level: medium

@@ -3,6 +3,14 @@ import yaml
 import regex
 from pathlib import Path
 from config import ROOT
+from colorama import Fore, Style
+
+RED = Fore.RED
+GREEN = Fore.GREEN
+YELLOW = Fore.YELLOW
+CYAN = Fore.CYAN
+RESET = Style.RESET_ALL
+
 
 class RuleConverter:
     def __init__(self):
@@ -13,14 +21,17 @@ class RuleConverter:
     def convert(self, rule_path: str) -> bool:
         rule_file = Path(rule_path)
         if not rule_file.exists():
-            print(f"Rule file '{rule_file.name}' does not exist.")
+            print(f"{RED}[ERROR] Rule file '{rule_file.name}' not found.{RESET}")
             return False
         
-        with open(rule_file, 'r') as f:
+        print(f"{CYAN}[INFO] Converting rule '{rule_file.name}'...{RESET}")
+
+        with open(rule_file, 'r', encoding='utf-8') as f:
             try:
                 rule = yaml.safe_load(f)
-            except yaml.YAMLError as e:
-                print(f"Error loading YAML file: {e}")
+            except Exception as e:
+                print(e)
+                print(f"{RED}[ERROR] Cannot load rule '{rule_file.name}': {e}{RESET}")
                 return False
             
         # convert the rule['detection'] block
@@ -28,8 +39,9 @@ class RuleConverter:
         if detection:
             try:
                 converted_detection = self.convert_detection_block(detection)
-            except ValueError as e:
+            except Exception as e:
                 print(e)
+                print(f"{RED}[ERROR] Cannot convert rule '{rule_file.name}'{RESET}")
                 return False
             converted_detection = [{'and': converted_detection}]
             
@@ -39,7 +51,7 @@ class RuleConverter:
             converted_rule_path = Path(self.legit_rules_folder, rule_file.name)
             with open(converted_rule_path, 'w') as f:
                 yaml.dump(converted_rule, f, sort_keys=False)
-                print(f"Rule '{converted_rule_path.name}' converted successfully.")
+                print(f"{GREEN}[SUCCESS] Rule '{rule_file.name}' converted successfully.{RESET}")
                 return True
         else:
             print(f"Rule '{rule_file.name}' has no detection block.")
@@ -170,6 +182,19 @@ class RuleConverter:
         return inverted_conditions
 
 if __name__ == '__main__':
-    rule_path = "D:\AtSchool\windows-log-analyzer\\rules\sigma-rules\process_creation\proc_creation_win_addinutil_uncommon_child_process.yml"
+    sigma_rule_folder = Path(ROOT, "rules", "sigma-rules", "process_creation")
     rule_converter = RuleConverter()
-    rule_converter.convert(rule_path)
+    total = 0
+    success = 0
+    failed = []
+    for rule in sigma_rule_folder.glob('*.yml'):
+        total += 1
+        if rule_converter.convert(rule):
+            success += 1
+        else:
+            failed.append(rule)
+    print(f"Total rules: {total}")
+    print(f"Converted rules: {success}")
+    print(f"Failed rules: {failed}")
+
+    # rule_converter.convert("D:\AtSchool\windows-log-analyzer\\rules\sigma-rules\process_creation\proc_creation_win_7zip_exfil_dmp_files.yml")

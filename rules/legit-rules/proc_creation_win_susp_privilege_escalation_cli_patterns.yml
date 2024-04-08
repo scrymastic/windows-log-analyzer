@@ -1,0 +1,37 @@
+title: Suspicious RunAs-Like Flag Combination
+id: 50d66fb0-03f8-4da0-8add-84e77d12a020
+status: test
+description: Detects suspicious command line flags that let the user set a target
+  user and command as e.g. seen in PsExec-like tools
+references:
+- https://www.trendmicro.com/en_us/research/22/k/hack-the-real-box-apt41-new-subgroup-earth-longzhi.html
+author: Florian Roth (Nextron Systems)
+date: 2022/11/11
+tags:
+- attack.privilege_escalation
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - CommandLine|contains: ' -u system '
+    - CommandLine|contains: ' --user system '
+    - CommandLine|contains: ' -u NT'
+    - CommandLine|contains: ' -u "NT'
+    - CommandLine|contains: ' -u ''NT'
+    - CommandLine|contains: ' --system '
+    - CommandLine|contains: ' -u administrator '
+  - or:
+    - CommandLine|contains: ' -c cmd'
+    - CommandLine|contains: ' -c "cmd'
+    - CommandLine|contains: ' -c powershell'
+    - CommandLine|contains: ' -c "powershell'
+    - CommandLine|contains: ' --command cmd'
+    - CommandLine|contains: ' --command powershell'
+    - CommandLine|contains: ' -c whoami'
+    - CommandLine|contains: ' -c wscript'
+    - CommandLine|contains: ' -c cscript'
+falsepositives:
+- Unknown
+level: medium

@@ -1,0 +1,50 @@
+title: Suspicious Service Path Modification
+id: 138d3531-8793-4f50-a2cd-f291b2863d78
+status: test
+description: Detects service path modification via the "sc" binary to a suspicious
+  command or path
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1543.003/T1543.003.md
+- https://web.archive.org/web/20180331144337/https://www.fireeye.com/blog/threat-research/2018/03/sanny-malware-delivery-method-updated-in-recently-observed-attacks.html
+author: Victor Sergeev, oscd.community, Nasreddine Bencherchali (Nextron Systems)
+date: 2019/10/21
+modified: 2022/11/18
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1543.003
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - Image|endswith: \sc.exe
+  - CommandLine|contains: config
+  - CommandLine|contains: binPath
+  - or:
+    - CommandLine|contains: powershell
+    - CommandLine|contains: 'cmd '
+    - CommandLine|contains: mshta
+    - CommandLine|contains: wscript
+    - CommandLine|contains: cscript
+    - CommandLine|contains: rundll32
+    - CommandLine|contains: svchost
+    - CommandLine|contains: dllhost
+    - CommandLine|contains: cmd.exe /c
+    - CommandLine|contains: cmd.exe /k
+    - CommandLine|contains: cmd.exe /r
+    - CommandLine|contains: cmd /c
+    - CommandLine|contains: cmd /k
+    - CommandLine|contains: cmd /r
+    - CommandLine|contains: C:\Users\Public
+    - CommandLine|contains: \Downloads\
+    - CommandLine|contains: \Desktop\
+    - CommandLine|contains: \Microsoft\Windows\Start Menu\Programs\Startup\
+    - CommandLine|contains: C:\Windows\TEMP\
+    - CommandLine|contains: \AppData\Local\Temp
+fields:
+- CommandLine
+- ParentCommandLine
+falsepositives:
+- Unlikely
+level: high

@@ -1,0 +1,71 @@
+title: Recon Command Output Piped To Findstr.EXE
+id: ccb5742c-c248-4982-8c5c-5571b9275ad3
+related:
+- id: fe63010f-8823-4864-a96b-a7b4a0f7b929
+  type: derived
+status: experimental
+description: 'Detects the excution of a potential recon command where the results
+  are piped to "findstr". This is meant to trigger on inline calls of "cmd.exe" via
+  the "/c" or "/k" for example. Attackers often time use this to extract specific
+  information they require in their chain.
+
+  '
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/02cb591f75064ffe1e0df9ac3ed5972a2e491c97/atomics/T1057/T1057.md#atomic-test-6---discover-specific-process---tasklist
+- https://www.hhs.gov/sites/default/files/manage-engine-vulnerability-sector-alert-tlpclear.pdf
+- https://www.trendmicro.com/en_us/research/22/d/spring4shell-exploited-to-deploy-cryptocurrency-miners.html
+author: Nasreddine Bencherchali (Nextron Systems), frack113
+date: 2023/07/06
+modified: 2023/11/11
+tags:
+- attack.discovery
+- attack.t1057
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - CommandLine|contains: 'ipconfig /all | find '
+    - CommandLine|contains: 'ipconfig /all | findstr '
+    - CommandLine|contains: 'ipconfig | find '
+    - CommandLine|contains: 'ipconfig | findstr '
+    - CommandLine|contains: 'ipconfig.exe /all | find '
+    - CommandLine|contains: 'ipconfig.exe /all | findstr '
+    - CommandLine|contains: 'ipconfig.exe | find '
+    - CommandLine|contains: 'ipconfig.exe | findstr '
+    - CommandLine|contains: net start | find
+    - CommandLine|contains: net start | findstr
+    - CommandLine|contains: net.exe start | find
+    - CommandLine|contains: net.exe start | findstr
+    - CommandLine|contains: net1 start | find
+    - CommandLine|contains: net1 start | findstr
+    - CommandLine|contains: net1.exe start | find
+    - CommandLine|contains: net1.exe start | findstr
+    - CommandLine|contains: netstat -ano | find
+    - CommandLine|contains: netstat -ano | findstr
+    - CommandLine|contains: netstat | find
+    - CommandLine|contains: netstat | findstr
+    - CommandLine|contains: netstat.exe -ano | find
+    - CommandLine|contains: netstat.exe -ano | findstr
+    - CommandLine|contains: netstat.exe | find
+    - CommandLine|contains: netstat.exe | findstr
+    - CommandLine|contains: ping | find
+    - CommandLine|contains: ping | findstr
+    - CommandLine|contains: ping.exe | find
+    - CommandLine|contains: ping.exe | findstr
+    - CommandLine|contains: 'systeminfo | find '
+    - CommandLine|contains: 'systeminfo | findstr '
+    - CommandLine|contains: 'systeminfo.exe | find '
+    - CommandLine|contains: 'systeminfo.exe | findstr '
+    - CommandLine|contains: 'tasklist | find '
+    - CommandLine|contains: 'tasklist | findstr '
+    - CommandLine|contains: 'tasklist.exe | find '
+    - CommandLine|contains: 'tasklist.exe | findstr '
+    - CommandLine|contains: 'whoami /all | find '
+    - CommandLine|contains: 'whoami /all | findstr '
+    - CommandLine|contains: 'whoami.exe /all | find '
+    - CommandLine|contains: 'whoami.exe /all | findstr '
+falsepositives:
+- Unknown
+level: medium

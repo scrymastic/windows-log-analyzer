@@ -1,0 +1,66 @@
+title: Csc.EXE Execution Form Potentially Suspicious Parent
+id: b730a276-6b63-41b8-bcf8-55930c8fc6ee
+status: test
+description: Detects a potentially suspicious parent of "csc.exe", which could be
+  a sign of payload delivery.
+references:
+- https://www.uptycs.com/blog/warzonerat-can-now-evade-with-process-hollowing
+- https://reaqta.com/2017/11/short-journey-darkvnc/
+- https://www.pwc.com/gx/en/issues/cybersecurity/cyber-threat-intelligence/yellow-liderc-ships-its-scripts-delivers-imaploader-malware.html
+author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems),
+  X__Junior (Nextron Systems)
+date: 2019/02/11
+modified: 2023/10/27
+tags:
+- attack.execution
+- attack.t1059.005
+- attack.t1059.007
+- attack.defense_evasion
+- attack.t1218.005
+- attack.t1027.004
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - Image|endswith: \csc.exe
+    - OriginalFileName|==: csc.exe
+  - or:
+    - ParentImage|endswith: \cscript.exe
+    - ParentImage|endswith: \excel.exe
+    - ParentImage|endswith: \mshta.exe
+    - ParentImage|endswith: \onenote.exe
+    - ParentImage|endswith: \outlook.exe
+    - ParentImage|endswith: \powerpnt.exe
+    - ParentImage|endswith: \winword.exe
+    - ParentImage|endswith: \wscript.exe
+  - or:
+    - ParentImage|endswith: \powershell.exe
+    - ParentImage|endswith: \pwsh.exe
+  - or:
+    - ParentCommandLine|contains: '-Encoded '
+    - ParentCommandLine|contains: FromBase64String
+  - or:
+    - ParentCommandLine|matches: ([Pp]rogram[Dd]ata|%([Ll]ocal)?[Aa]pp[Dd]ata%|\\[Aa]pp[Dd]ata\\([Ll]ocal(Ll]ow)?|[Rr]oaming))\\[^\\]{1,256}$
+    - or:
+      - ParentCommandLine|contains: :\PerfLogs\
+      - ParentCommandLine|contains: :\Users\Public\
+      - ParentCommandLine|contains: :\Windows\Temp\
+      - ParentCommandLine|contains: \Temporary Internet
+    - ParentCommandLine|contains: :\Users\
+    - ParentCommandLine|contains: \Favorites\
+    - ParentCommandLine|contains: :\Users\
+    - ParentCommandLine|contains: \Favourites\
+    - ParentCommandLine|contains: :\Users\
+    - ParentCommandLine|contains: \Contacts\
+    - ParentCommandLine|contains: :\Users\
+    - ParentCommandLine|contains: \Pictures\
+  - ParentImage|not startswith: C:\Program Files (x86)\
+  - ParentImage|not startswith: C:\Program Files\
+  - ParentCommandLine|not contains: JwB7ACIAZgBhAGkAbABlAGQAIgA6AHQAcgB1AGUALAAiAG0AcwBnACIAOgAiAEEAbgBzAGkAYgBsAGUAIAByAGUAcQB1AGkAcgBlAHMAIABQAG8AdwBlAHIAUwBoAGUAbABsACAAdgAzAC4AMAAgAG8AcgAgAG4AZQB3AGUAcgAiAH0AJw
+  - ParentCommandLine|not contains: cAewAiAGYAYQBpAGwAZQBkACIAOgB0AHIAdQBlACwAIgBtAHMAZwAiADoAIgBBAG4AcwBpAGIAbABlACAAcgBlAHEAdQBpAHIAZQBzACAAUABvAHcAZQByAFMAaABlAGwAbAAgAHYAMwAuADAAIABvAHIAIABuAGUAdwBlAHIAIgB9ACcA
+  - ParentCommandLine|not contains: nAHsAIgBmAGEAaQBsAGUAZAAiADoAdAByAHUAZQAsACIAbQBzAGcAIgA6ACIAQQBuAHMAaQBiAGwAZQAgAHIAZQBxAHUAaQByAGUAcwAgAFAAbwB3AGUAcgBTAGgAZQBsAGwAIAB2ADMALgAwACAAbwByACAAbgBlAHcAZQByACIAfQAnA
+falsepositives:
+- Unknown
+level: high

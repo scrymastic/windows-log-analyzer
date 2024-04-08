@@ -1,0 +1,75 @@
+title: Potentially Suspicious Rundll32 Activity
+id: e593cf51-88db-4ee1-b920-37e89012a3c9
+status: test
+description: Detects suspicious execution of rundll32, with specific calls to some
+  DLLs with known LOLBIN functionalities
+references:
+- http://www.hexacorn.com/blog/2017/05/01/running-programs-via-proxy-jumping-on-a-edr-bypass-trampoline/
+- https://twitter.com/Hexacorn/status/885258886428725250
+- https://gist.github.com/ryhanson/227229866af52e2d963cf941af135a52
+- https://twitter.com/nas_bench/status/1433344116071583746
+- https://twitter.com/eral4m/status/1479106975967240209
+- https://twitter.com/eral4m/status/1479080793003671557
+author: juju4, Jonhnathan Ribeiro, oscd.community, Nasreddine Bencherchali (Nextron
+  Systems)
+date: 2019/01/16
+modified: 2023/05/17
+tags:
+- attack.defense_evasion
+- attack.t1218.011
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - CommandLine|contains: 'javascript:'
+    - CommandLine|contains: .RegisterXLL
+    - CommandLine|contains: url.dll
+    - CommandLine|contains: OpenURL
+    - CommandLine|contains: url.dll
+    - CommandLine|contains: OpenURLA
+    - CommandLine|contains: url.dll
+    - CommandLine|contains: FileProtocolHandler
+    - CommandLine|contains: zipfldr.dll
+    - CommandLine|contains: RouteTheCall
+    - CommandLine|contains: shell32.dll
+    - CommandLine|contains: Control_RunDLL
+    - CommandLine|contains: shell32.dll
+    - CommandLine|contains: ShellExec_RunDLL
+    - CommandLine|contains: mshtml.dll
+    - CommandLine|contains: PrintHTML
+    - CommandLine|contains: advpack.dll
+    - CommandLine|contains: LaunchINFSection
+    - CommandLine|contains: advpack.dll
+    - CommandLine|contains: RegisterOCX
+    - CommandLine|contains: ieadvpack.dll
+    - CommandLine|contains: LaunchINFSection
+    - CommandLine|contains: ieadvpack.dll
+    - CommandLine|contains: RegisterOCX
+    - CommandLine|contains: ieframe.dll
+    - CommandLine|contains: OpenURL
+    - CommandLine|contains: shdocvw.dll
+    - CommandLine|contains: OpenURL
+    - CommandLine|contains: syssetup.dll
+    - CommandLine|contains: SetupInfObjectInstallAction
+    - CommandLine|contains: setupapi.dll
+    - CommandLine|contains: InstallHinfSection
+    - CommandLine|contains: pcwutl.dll
+    - CommandLine|contains: LaunchApplication
+    - CommandLine|contains: dfshim.dll
+    - CommandLine|contains: ShOpenVerbApplication
+    - CommandLine|contains: dfshim.dll
+    - CommandLine|contains: ShOpenVerbShortcut
+    - CommandLine|contains: scrobj.dll
+    - CommandLine|contains: GenerateTypeLib
+    - CommandLine|contains: http
+    - CommandLine|contains: shimgvw.dll
+    - CommandLine|contains: ImageView_Fullscreen
+    - CommandLine|contains: http
+    - CommandLine|contains: comsvcs.dll
+    - CommandLine|contains: MiniDump
+falsepositives:
+- False positives depend on scripts and administrative tools used in the monitored
+  environment
+level: medium

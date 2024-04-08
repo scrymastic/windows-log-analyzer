@@ -1,0 +1,34 @@
+title: Reg Add Suspicious Paths
+id: b7e2a8d4-74bb-4b78-adc9-3f92af2d4829
+status: test
+description: Detects when an adversary uses the reg.exe utility to add or modify new
+  keys or subkeys
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/40b77d63808dd4f4eafb83949805636735a1fd15/atomics/T1112/T1112.md
+- https://github.com/redcanaryco/atomic-red-team/blob/40b77d63808dd4f4eafb83949805636735a1fd15/atomics/T1562.001/T1562.001.md
+- https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/
+author: frack113, Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/19
+modified: 2022/10/10
+tags:
+- attack.defense_evasion
+- attack.t1112
+- attack.t1562.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- and:
+  - or:
+    - Image|endswith: \reg.exe
+    - OriginalFileName|==: reg.exe
+  - or:
+    - CommandLine|contains: \AppDataLow\Software\Microsoft\
+    - CommandLine|contains: \Policies\Microsoft\Windows\OOBE
+    - CommandLine|contains: \Policies\Microsoft\Windows NT\CurrentVersion\Winlogon
+    - CommandLine|contains: \SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon
+    - CommandLine|contains: \CurrentControlSet\Control\SecurityProviders\WDigest
+    - CommandLine|contains: \Microsoft\Windows Defender\
+falsepositives:
+- Rare legitimate add to registry via cli (to these locations)
+level: high
