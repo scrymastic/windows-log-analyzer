@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - TargetFilename|==: C:\Windows\System32\config\systemprofile\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
-    - TargetFilename|==: C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\PowerShell\StartupProfileData-Interactive
-id: 5b40a734-99b6-4b98-a1d0-1cea51a08ab2
-logsource:
-  category: file_event
-  product: windows

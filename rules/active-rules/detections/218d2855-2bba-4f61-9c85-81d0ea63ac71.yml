@@ -1,9 +1,0 @@
-detection:
-- and:
-  - Provider_Name|==: MSSQLSERVER
-  - EventID|==: 18456
-id: 218d2855-2bba-4f61-9c85-81d0ea63ac71
-logsource:
-  definition: 'Requirements: Must enable MSSQL authentication.'
-  product: windows
-  service: application

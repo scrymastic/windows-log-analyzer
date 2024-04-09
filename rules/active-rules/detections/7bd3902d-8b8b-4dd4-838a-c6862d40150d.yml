@@ -1,8 +1,0 @@
-detection:
-- and:
-  - QueryName|contains: servicebus.windows.net
-  - Image|contains: HybridConnectionManager
-id: 7bd3902d-8b8b-4dd4-838a-c6862d40150d
-logsource:
-  category: dns_query
-  product: windows

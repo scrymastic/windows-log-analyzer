@@ -1,7 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: ::FromBase64String(
-id: e32d4572-9826-4738-b651-95fa63747e8a
-logsource:
-  category: process_creation
-  product: windows

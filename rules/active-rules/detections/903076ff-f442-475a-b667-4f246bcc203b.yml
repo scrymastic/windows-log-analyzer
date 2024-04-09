@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \nltest.exe
-    - OriginalFileName|==: nltestrk.exe
-id: 903076ff-f442-475a-b667-4f246bcc203b
-logsource:
-  category: process_creation
-  product: windows

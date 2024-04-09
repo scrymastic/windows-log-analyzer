@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \ssh.exe
-  - CommandLine|contains: :3389
-id: f7d7ebd5-a016-46e2-9c54-f9932f2d386d
-logsource:
-  category: process_creation
-  product: windows

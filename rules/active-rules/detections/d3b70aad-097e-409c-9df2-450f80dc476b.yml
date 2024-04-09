@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \ditsnap.exe
-    - CommandLine|contains: ditsnap.exe
-id: d3b70aad-097e-409c-9df2-450f80dc476b
-logsource:
-  category: process_creation
-  product: windows

@@ -1,7 +1,0 @@
-detection:
-- and:
-  - Product|==: Remote Utilities
-id: 9ef27c24-4903-4192-881a-3adde7ff92a5
-logsource:
-  category: process_creation
-  product: windows

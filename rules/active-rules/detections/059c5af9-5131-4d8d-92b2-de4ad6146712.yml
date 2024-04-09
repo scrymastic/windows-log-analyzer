@@ -1,9 +1,0 @@
-detection:
-- and:
-  - TargetFilename|==: C:\Windows\System32\drivers\LiveKdD.SYS
-  - Image|not endswith: \livekd.exe
-  - Image|not endswith: \livek64.exe
-id: 059c5af9-5131-4d8d-92b2-de4ad6146712
-logsource:
-  category: file_event
-  product: windows

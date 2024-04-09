@@ -1,9 +1,0 @@
-detection:
-- and:
-  - OriginalFileName|==: BrowserCore.exe
-  - or:
-    - Image|not endswith: \BrowserCore.exe
-id: 8a4519e8-e64a-40b6-ae85-ba8ad2177559
-logsource:
-  category: process_creation
-  product: windows

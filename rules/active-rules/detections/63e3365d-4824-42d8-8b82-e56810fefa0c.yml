@@ -1,9 +1,0 @@
-detection:
-- and:
-  - Provider_Name|==: Service Control Manager
-  - EventID|==: 7045
-  - ImagePath|contains: (Clipboard|i
-id: 63e3365d-4824-42d8-8b82-e56810fefa0c
-logsource:
-  product: windows
-  service: system

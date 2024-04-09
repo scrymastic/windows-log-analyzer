@@ -1,9 +1,0 @@
-detection:
-- and:
-  - OriginalFileName|==: ftp.exe
-  - or:
-    - Image|not endswith: \ftp.exe
-id: 277a4393-446c-449a-b0ed-7fdc7795244c
-logsource:
-  category: process_creation
-  product: windows

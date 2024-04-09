@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - TargetFilename|endswith: \Microsoft\Event Viewer\RecentViews
-    - TargetFilename|endswith: \Microsoft\EventV~1\RecentViews
-id: 63e4f530-65dc-49cc-8f80-ccfa95c69d43
-logsource:
-  category: file_event
-  product: windows

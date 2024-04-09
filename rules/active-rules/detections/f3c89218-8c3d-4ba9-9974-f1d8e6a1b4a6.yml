@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Payload|matches: (?i).*&&set.*(\{\d\}){2,}\\"\s+?-f.*&&.*cmd.*/c
-id: f3c89218-8c3d-4ba9-9974-f1d8e6a1b4a6
-logsource:
-  category: ps_module
-  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
-  product: windows

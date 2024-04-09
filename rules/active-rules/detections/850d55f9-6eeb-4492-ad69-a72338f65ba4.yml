@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \ilasm.exe
-    - OriginalFileName|==: ilasm.exe
-id: 850d55f9-6eeb-4492-ad69-a72338f65ba4
-logsource:
-  category: process_creation
-  product: windows

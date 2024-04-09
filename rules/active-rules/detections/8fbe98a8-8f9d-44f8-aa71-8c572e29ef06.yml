@@ -1,8 +1,0 @@
-detection:
-- and:
-  - TargetObject|contains: \Microsoft\Windows\CurrentVersion\Explorer\MyComputer
-  - TargetObject|endswith: (Default)
-id: 8fbe98a8-8f9d-44f8-aa71-8c572e29ef06
-logsource:
-  category: registry_set
-  product: windows

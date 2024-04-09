@@ -1,9 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \notepad.exe
-  - or:
-    - DestinationPort|!==: 9100
-id: e81528db-fc02-45e8-8e98-4e84aba1f10b
-logsource:
-  category: network_connection
-  product: windows

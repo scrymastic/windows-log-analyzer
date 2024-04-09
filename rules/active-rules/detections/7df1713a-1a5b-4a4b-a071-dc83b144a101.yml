@@ -1,8 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: esentutl
-  - CommandLine|contains: ' /p'
-id: 7df1713a-1a5b-4a4b-a071-dc83b144a101
-logsource:
-  category: process_creation
-  product: windows

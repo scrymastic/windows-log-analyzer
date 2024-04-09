@@ -1,9 +1,0 @@
-detection:
-- and:
-  - ImageLoaded|endswith: \7za.dll
-  - Image|not startswith: C:\Program Files (x86)\
-  - Image|not startswith: C:\Program Files\
-id: 4f6edb78-5c21-42ab-a558-fd2a6fc1fd57
-logsource:
-  category: image_load
-  product: windows

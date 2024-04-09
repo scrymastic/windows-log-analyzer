@@ -1,8 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: \Services\VSS\Diag
-  - CommandLine|contains: /d Disabled
-id: dee4af55-1f22-4e1d-a9d2-4bdc7ecb472a
-logsource:
-  category: process_creation
-  product: windows

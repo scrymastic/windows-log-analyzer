@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - CommandLine|contains: if(0){{{0}}}' -f $(0 -as [char]) +
-    - CommandLine|contains: '#<NULL>'
-id: 92a974db-ab84-457f-9ec0-55db83d7a825
-logsource:
-  category: process_creation
-  product: windows

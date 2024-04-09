@@ -1,9 +1,0 @@
-detection:
-- and:
-  - TargetObject|contains: \SOFTWARE\Microsoft\Provisioning\Commands\
-id: 7021255e-5db3-4946-a8b9-0ba7a4644a69
-logsource:
-  category: registry_set
-  definition: 'Requirements: The registry key "\SOFTWARE\Microsoft\Provisioning\Commands\"
-    and its subkey must be monitored'
-  product: windows

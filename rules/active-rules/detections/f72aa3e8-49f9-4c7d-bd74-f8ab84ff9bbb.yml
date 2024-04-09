@@ -1,7 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: ' /dest:rdp-tcp#'
-id: f72aa3e8-49f9-4c7d-bd74-f8ab84ff9bbb
-logsource:
-  category: process_creation
-  product: windows

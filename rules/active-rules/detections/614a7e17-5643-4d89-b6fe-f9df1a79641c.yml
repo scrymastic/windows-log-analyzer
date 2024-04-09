@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|==: System
-  - TargetFilename|endswith: \wbem\wbemcomn.dll
-id: 614a7e17-5643-4d89-b6fe-f9df1a79641c
-logsource:
-  category: file_event
-  product: windows

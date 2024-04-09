@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - EventID|==: 633
-    - EventID|==: 4729
-id: 02c39d30-02b5-45d2-b435-8aebfe5a8629
-logsource:
-  product: windows
-  service: security

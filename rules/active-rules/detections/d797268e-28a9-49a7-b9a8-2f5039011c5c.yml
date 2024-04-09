@@ -1,7 +1,0 @@
-detection:
-- and:
-  - ParentImage|endswith: \wsreset.exe
-id: d797268e-28a9-49a7-b9a8-2f5039011c5c
-logsource:
-  category: process_creation
-  product: windows

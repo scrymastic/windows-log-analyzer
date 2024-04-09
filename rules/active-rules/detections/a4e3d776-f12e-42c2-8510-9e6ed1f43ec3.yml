@@ -1,7 +1,0 @@
-detection:
-- and:
-  - ParentImage|endswith: \dns.exe
-id: a4e3d776-f12e-42c2-8510-9e6ed1f43ec3
-logsource:
-  category: process_creation
-  product: windows

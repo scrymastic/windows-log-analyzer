@@ -1,7 +1,0 @@
-detection:
-- and:
-  - TargetFilename|endswith: \RemComSvc.exe
-id: 7eff1a7f-dd45-4c20-877a-f21e342a7611
-logsource:
-  category: file_event
-  product: windows

@@ -1,9 +1,0 @@
-detection:
-- and:
-  - ScriptBlockText|contains: 'invoke-command '
-  - ScriptBlockText|contains: ' -ComputerName '
-id: 7b836d7f-179c-4ba4-90a7-a7e60afb48e6
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows

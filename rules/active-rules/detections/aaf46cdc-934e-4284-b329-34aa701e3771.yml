@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - ParentImage|endswith: \bginfo.exe
-    - ParentImage|endswith: \bginfo64.exe
-id: aaf46cdc-934e-4284-b329-34aa701e3771
-logsource:
-  category: process_creation
-  product: windows

@@ -1,8 +1,0 @@
-detection:
-- and:
-  - ParentImage|endswith: \setres.exe
-  - Image|endswith: \choice
-id: 835e75bf-4bfd-47a4-b8a6-b766cac8bcb7
-logsource:
-  category: process_creation
-  product: windows

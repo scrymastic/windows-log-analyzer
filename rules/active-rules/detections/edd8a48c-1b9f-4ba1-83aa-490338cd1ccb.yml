@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - Description|==: Java Update Scheduler
-    - Description|==: Java(TM) Update Scheduler
-id: edd8a48c-1b9f-4ba1-83aa-490338cd1ccb
-logsource:
-  category: process_creation
-  product: windows

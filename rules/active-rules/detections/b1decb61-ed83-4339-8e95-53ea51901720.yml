@@ -1,8 +1,0 @@
-detection:
-- and:
-  - TargetFilename|contains: \TeamViewer_
-  - TargetFilename|endswith: .log
-id: b1decb61-ed83-4339-8e95-53ea51901720
-logsource:
-  category: file_delete
-  product: windows

@@ -1,9 +1,0 @@
-detection:
-- and:
-  - ImageLoaded|endswith: \libvlc.dll
-  - ImageLoaded|not startswith: C:\Program Files (x86)\VideoLAN\VLC\
-  - ImageLoaded|not startswith: C:\Program Files\VideoLAN\VLC\
-id: bf9808c4-d24f-44a2-8398-b65227d406b6
-logsource:
-  category: image_load
-  product: windows

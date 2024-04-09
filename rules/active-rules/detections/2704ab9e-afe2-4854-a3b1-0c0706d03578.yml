@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - Hashes|contains: 09D278F9DE118EF09163C6140255C690
-    - CommandLine|contains: Dumpert.dll
-id: 2704ab9e-afe2-4854-a3b1-0c0706d03578
-logsource:
-  category: process_creation
-  product: windows

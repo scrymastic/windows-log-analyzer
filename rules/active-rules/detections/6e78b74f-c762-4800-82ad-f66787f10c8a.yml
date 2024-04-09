@@ -1,7 +1,0 @@
-detection:
-- and:
-  - ImageLoaded|endswith: \rcdll.dll
-id: 6e78b74f-c762-4800-82ad-f66787f10c8a
-logsource:
-  category: image_load
-  product: windows

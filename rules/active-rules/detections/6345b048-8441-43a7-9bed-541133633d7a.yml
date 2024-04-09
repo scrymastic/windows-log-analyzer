@@ -1,7 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \dctask64.exe
-id: 6345b048-8441-43a7-9bed-541133633d7a
-logsource:
-  category: process_creation
-  product: windows

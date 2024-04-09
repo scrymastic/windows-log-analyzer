@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \svchost.exe
-  - TargetFilename|contains: \Personalization\LockScreenImage\
-id: fc4f4817-0c53-4683-a4ee-b17a64bc1039
-logsource:
-  category: file_event
-  product: windows

@@ -1,7 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \HOSTNAME.EXE
-id: 7be5fb68-f9ef-476d-8b51-0256ebece19e
-logsource:
-  category: process_creation
-  product: windows

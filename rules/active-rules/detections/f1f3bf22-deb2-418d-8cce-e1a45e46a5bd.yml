@@ -1,9 +1,0 @@
-detection:
-- and:
-  - ParentImage|endswith: \svchost.exe
-  - Image|endswith: \mmc.exe
-  - CommandLine|contains: -Embedding
-id: f1f3bf22-deb2-418d-8cce-e1a45e46a5bd
-logsource:
-  category: process_creation
-  product: windows

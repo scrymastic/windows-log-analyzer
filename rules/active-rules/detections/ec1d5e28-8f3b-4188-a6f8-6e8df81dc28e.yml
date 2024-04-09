@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|==: C:\WINDOWS\system32\wbem\scrcons.exe
-  - ParentImage|==: C:\Windows\System32\svchost.exe
-id: ec1d5e28-8f3b-4188-a6f8-6e8df81dc28e
-logsource:
-  category: process_creation
-  product: windows

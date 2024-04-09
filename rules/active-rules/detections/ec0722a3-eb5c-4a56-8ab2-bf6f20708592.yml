@@ -1,9 +1,0 @@
-detection:
-- and:
-  - OriginalFileName|==: gpg.exe
-  - Image|not endswith: \gpg.exe
-  - Image|not endswith: \gpg2.exe
-id: ec0722a3-eb5c-4a56-8ab2-bf6f20708592
-logsource:
-  category: process_creation
-  product: windows

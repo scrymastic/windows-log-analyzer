@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \SoundRecorder.exe
-  - CommandLine|contains: /FILE
-id: 83865853-59aa-449e-9600-74b9d89a6d6e
-logsource:
-  category: process_creation
-  product: windows

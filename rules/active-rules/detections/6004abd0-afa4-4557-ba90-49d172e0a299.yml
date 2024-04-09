@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \pcwrun.exe
-  - CommandLine|contains: ../
-id: 6004abd0-afa4-4557-ba90-49d172e0a299
-logsource:
-  category: process_creation
-  product: windows

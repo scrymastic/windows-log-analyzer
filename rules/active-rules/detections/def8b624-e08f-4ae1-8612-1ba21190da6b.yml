@@ -1,8 +1,0 @@
-detection:
-- and:
-  - EventID|==: 4624
-  - LogonType|==: 9
-id: def8b624-e08f-4ae1-8612-1ba21190da6b
-logsource:
-  product: windows
-  service: security

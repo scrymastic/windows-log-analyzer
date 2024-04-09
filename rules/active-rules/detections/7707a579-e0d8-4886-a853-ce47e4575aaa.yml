@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \wmiprvse.exe
-  - ImageLoaded|endswith: \wbem\wbemcomn.dll
-id: 7707a579-e0d8-4886-a853-ce47e4575aaa
-logsource:
-  category: image_load
-  product: windows

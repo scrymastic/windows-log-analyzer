@@ -1,8 +1,0 @@
-detection:
-- and:
-  - TargetFilename|contains: \AppData\Local\Temp\
-  - TargetFilename|endswith: PROCEXP152.sys
-id: 3da70954-0f2c-4103-adff-b7440368f50e
-logsource:
-  category: file_event
-  product: windows

@@ -1,8 +1,0 @@
-detection:
-- and:
-  - ScriptBlockText|contains: SyncAppvPublishingServer.exe
-id: dddfebae-c46f-439c-af7a-fdb6bde90218
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows

@@ -1,8 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: GZipStream
-  - CommandLine|contains: ::Decompress
-id: 98767d61-b2e8-4d71-b661-e36783ee24c1
-logsource:
-  category: process_creation
-  product: windows

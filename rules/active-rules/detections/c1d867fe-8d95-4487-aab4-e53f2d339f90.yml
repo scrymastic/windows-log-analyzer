@@ -1,7 +1,0 @@
-detection:
-- and:
-  - OriginalFileName|==: sdelete.exe
-id: c1d867fe-8d95-4487-aab4-e53f2d339f90
-logsource:
-  category: process_creation
-  product: windows

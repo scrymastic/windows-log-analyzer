@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Description|==: Command-line SSH, Telnet, and Rlogin client
-  - CommandLine|contains: ' -R '
-id: 48a61b29-389f-4032-b317-b30de6b95314
-logsource:
-  category: process_creation
-  product: windows

@@ -1,9 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: reg
-  - CommandLine|contains: ' ADD '
-  - CommandLine|contains: Software\Microsoft\Windows\CurrentVersion\Run
-id: de587dce-915e-4218-aac4-835ca6af6f70
-logsource:
-  category: process_creation
-  product: windows

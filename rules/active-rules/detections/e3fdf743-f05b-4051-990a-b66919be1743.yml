@@ -1,7 +1,0 @@
-detection:
-- and:
-  - TargetObject|==: HKLM\System\CurrentControlSet\Services\Fax\ObjectName
-id: e3fdf743-f05b-4051-990a-b66919be1743
-logsource:
-  category: registry_set
-  product: windows

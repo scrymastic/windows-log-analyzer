@@ -1,7 +1,0 @@
-detection:
-- and:
-  - TargetObject|contains: \SOFTWARE\Microsoft\OneDrive\UpdateOfficeConfig\UpdateRingSettingURLFromOC
-id: 3aff0be0-7802-4a7e-a4fa-c60c74bc5e1d
-logsource:
-  category: registry_set
-  product: windows

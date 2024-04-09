@@ -1,7 +1,0 @@
-detection:
-- and:
-  - TargetFilename|contains: \Bin\ScreenConnect.
-id: fec96f39-988b-4586-b746-b93d59fd1922
-logsource:
-  category: file_event
-  product: windows

@@ -1,9 +1,0 @@
-detection:
-- and:
-  - EventID|==: 4624
-  - LogonType|==: 3
-  - ProcessName|endswith: scrcons.exe
-id: 9599c180-e3a8-4743-8f92-7fb96d3be648
-logsource:
-  product: windows
-  service: security

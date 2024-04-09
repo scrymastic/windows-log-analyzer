@@ -1,8 +1,0 @@
-detection:
-- and:
-  - TargetObject|contains: \SOFTWARE\Microsoft\Office\
-  - TargetObject|contains: \Outlook\Security\
-id: c3cefdf4-6703-4e1c-bad8-bf422fc5015a
-logsource:
-  category: registry_set
-  product: windows

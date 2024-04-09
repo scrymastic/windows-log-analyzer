@@ -1,9 +1,0 @@
-detection:
-- and:
-  - EventID|==: 4656
-  - ObjectType|==: Key
-  - ObjectName|endswith: \SAM
-id: f8748f2c-89dc-4d95-afb0-5a2dfdbad332
-logsource:
-  product: windows
-  service: security

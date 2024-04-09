@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \clip.exe
-    - OriginalFileName|==: clip.exe
-id: ddeff553-5233-4ae9-bbab-d64d2bd634be
-logsource:
-  category: process_creation
-  product: windows

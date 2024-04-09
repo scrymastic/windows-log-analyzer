@@ -1,9 +1,0 @@
-detection:
-- and:
-  - ScriptBlockText|contains: 'Add-WindowsCapability '
-  - ScriptBlockText|contains: -Name OpenSSH.
-id: 155c7fd5-47b4-49b2-bbeb-eb4fab335429
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows

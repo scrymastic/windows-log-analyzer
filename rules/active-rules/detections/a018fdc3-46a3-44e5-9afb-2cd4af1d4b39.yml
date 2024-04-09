@@ -1,7 +1,0 @@
-detection:
-- and:
-  - Image|contains: \Temporary Internet Files\Content.Outlook\
-id: a018fdc3-46a3-44e5-9afb-2cd4af1d4b39
-logsource:
-  category: process_creation
-  product: windows

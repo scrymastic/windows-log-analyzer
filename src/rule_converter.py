@@ -71,7 +71,12 @@ class RuleConverter:
                 print(e)
                 print(f"{RED}[ERROR] Cannot convert rule '{rule_file.name}'{RESET}")
                 return False
-            converted_detection = [{'and': converted_detection}]
+            
+            # if len(converted_detection) is 1 and is a 'and' block, don't include 'and' key
+            if len(converted_detection) == 1 and converted_detection[0].keys() == {'and'}:
+                pass
+            else:
+                converted_detection = [{'and': converted_detection}]
             
             # try to dump to file
             converted_rule = rule.copy()
@@ -103,28 +108,35 @@ class RuleConverter:
                 converted_block = self.convert_or_block(value)
             else:
                 raise ValueError('Unexpected value type:', value)
+            
             if can_convert == 1:
-                if 'selection' in key:
+                if 'selection' in key or 'registry' in key:
                     converted_detection.extend(converted_block)
-                elif 'filter_' in key:
+                elif 'filter' in key:
                     converted_detection.extend(self.invert_conditions(converted_block))
 
             elif can_convert == 2:
                 if 'selection' in key:
-                    converted_detection.extend([{'or': converted_block}])
-                elif 'filter_' in key:
+                    # if 'or' block is already present, append to it
+                    if len(converted_detection) > 0 and 'or' in converted_detection[0]:
+                        converted_detection[0]['or'].extend(converted_block)
+                    else:
+                        converted_detection.extend([{'or': converted_block}])
+                elif 'filter' in key:
                     converted_detection.extend(converted_block)
 
         return converted_detection
     
 
     def handle_condition(self, condition):
-        if regex.match(r'^(?:all of )?selection(?:_[^\s]*)?(?: (?:and not 1 of filter_[^\s]+))*', condition) or \
-            regex.match(r'^not 1 of filter_[^\s]+(?: (?:and not 1 of filter_[^\s]+))*', condition) or \
-            regex.match(r'^(?:all of )?selection(?:_[^\s]*)? and not filter(?:_[^\s]*)?', condition):
+        if regex.match(r'^(?:all of )?selection(?:_[^\s]*)?(?: (?:and not 1 of filter_[^\s]+))*$', condition) or \
+            regex.match(r'^not 1 of filter_[^\s]+(?: (?:and not 1 of filter_[^\s]+))*$', condition) or \
+            regex.match(r'^(?:all of )?selection(?:_[^\s]*)? and not filter(?:_[^\s]*)?$', condition) or \
+            regex.match(r'^selection(?:_[^\s]*)? and registry(?:_[^\s]*)?(?: and not filter(?:_[^\s]*)?)*$', condition) or \
+            regex.match(r'^registry(?:_[^\s]*)?(?: and not filter(?:_[^\s]*)?)*$', condition):
             return 1
-        elif regex.match(r'^1 of selection(?:_[^\s]*)?(?: (?:and not 1 of filter_[^\s]+))*', condition) or \
-            regex.match(r'^1 of selection(?:_[^\s]*)? and not filter(?:_[^\s]*)?', condition):
+        elif regex.match(r'^1 of selection(?:_[^\s]*)?(?: (?:and not 1 of filter_[^\s]+))*$', condition) or \
+            regex.match(r'^1 of selection(?:_[^\s]*)? and not filter(?:_[^\s]*)?$', condition):
             return 2
         else:
             return 0
@@ -189,17 +201,17 @@ class RuleConverter:
             else:
                 raise ValueError('Unexpected value type:', value)
 
-        return converted_block
+        return [{'and': converted_block}] if len(converted_block) > 1 else converted_block
 
 
     def convert_or_block(self, block) -> list:
-        converted_block = {'or': []}
+        converted_block = []
         for value in block:
             if isinstance(value, dict):
-                converted_block['or'].extend(self.convert_and_block(value))
+                converted_block.extend(self.convert_and_block(value))
             else:
                 raise ValueError('Unexpected value type:', value)
-        return [converted_block]
+        return [{'or': converted_block}]
     
 
     def invert_conditions(self, conditions: list) -> list:

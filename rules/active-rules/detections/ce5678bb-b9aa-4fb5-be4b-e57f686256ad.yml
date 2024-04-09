@@ -1,9 +1,0 @@
-detection:
-- and:
-  - EventID|==: 8001
-  - TargetName|startswith: TERMSRV
-id: ce5678bb-b9aa-4fb5-be4b-e57f686256ad
-logsource:
-  definition: Requires events from Microsoft-Windows-NTLM/Operational
-  product: windows
-  service: ntlm

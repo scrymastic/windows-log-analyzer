@@ -1,8 +1,0 @@
-detection:
-- and:
-  - ScriptBlockText|contains: '[Reflection.Assembly]::load'
-id: ddcd88cb-7f62-4ce5-86f9-1704190feb0a
-logsource:
-  category: ps_script
-  definition: Script Block Logging must be enable
-  product: windows

@@ -1,8 +1,0 @@
-detection:
-- and:
-  - ScriptBlockText|matches: .*cmd.{0,5}(?:/c|/r).+powershell.+(?:\$?\{?input\}?|noexit).+"
-id: 779c8c12-0eb1-11eb-adc1-0242ac120002
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows

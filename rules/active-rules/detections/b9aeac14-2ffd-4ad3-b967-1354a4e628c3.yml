@@ -1,7 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: Get-Clipboard
-id: b9aeac14-2ffd-4ad3-b967-1354a4e628c3
-logsource:
-  category: process_creation
-  product: windows

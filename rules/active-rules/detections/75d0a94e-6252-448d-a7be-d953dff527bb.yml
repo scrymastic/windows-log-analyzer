@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \msxsl.exe
-  - CommandLine|contains: http
-id: 75d0a94e-6252-448d-a7be-d953dff527bb
-logsource:
-  category: process_creation
-  product: windows

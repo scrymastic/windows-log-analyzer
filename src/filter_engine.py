@@ -121,46 +121,43 @@ class FilterEngine:
         if provider != 'Microsoft-Windows-Sysmon':
             return True
         
-        mapping_event_ids = {
-            'network_connection': [3],
-            'process_access': [10],
-            'registry_set': [13],
-            'registry_delete': [12],
-            'registry_add': [12],
-            'registry_event': [12, 13, 14],
-            'create_remote_thread': [8],
-            'pipe_created': [17],
-            'process_creation': [1],
-            'wmi_event': [19, 20, 21],
-            'file_executable_detected': [29],
-            'file_change': [],
-            'file_rename': [],
-            'file_delete': [23],
-            'file_access': [],
-            'file_event': [],
-            'dns_query': [22],
-            'raw_access_thread': [10],
-            'ps_script': [],
-            'ps_classic_start': [],
-            'ps_classic_provider_start': [],
-            'ps_module': [],
-            'image_load': [7],
-            'driver_load': [6],
-            'create_stream_hash': [15],
-            'process_tampering': [25],
-            'sysmon_error': [],
-            'sysmon_status': [],
+        event_ids_sysmon = {
+            "process_creation": 1,
+            "file_change": 2,
+            "network_connection": 3,
+            "sysmon_status": 4,
+            "process_termination": 5,
+            "driver_load": 6,
+            "image_load": 7,
+            "create_remote_thread": 8,
+            "raw_access_thread": 9,
+            "process_access": 10,
+            "file_event": 11,
+            "registry_add": 12,
+            "registry_delete": 13,
+            "registry_set": 14,
+            "create_stream_hash": 15,
+            "pipe_created": 17,
+            "wmi_event": 19,
+            "dns_query": 22,
+            "file_delete": 23,
+            "clipboard_change": 24,
+            "process_tampering": 25,
+            "file_delete_detected": 26,
+            "file_block_executable": 27,
+            "file_block_shredding": 28,
+            "file_executable_detected": 29,
+            "sysmon_error": 255
         }
+
 
         # Check if the event ID matches logsource category
         category = logsource.get('category', None)
         if category:
-            event_ids = mapping_event_ids.get(category, [])
-            if not event_ids:
+            try:
+                return event_ids_sysmon[category] == event['System']['EventID']
+            except KeyError:
                 return True
-            event_id = event['System']['EventID']
-            return event_id in event_ids
-
 
 
     def filter_events(self, events: list) -> dict:

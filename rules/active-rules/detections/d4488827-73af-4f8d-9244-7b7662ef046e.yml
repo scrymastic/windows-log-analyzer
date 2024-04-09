@@ -1,9 +1,0 @@
-detection:
-- and:
-  - ScriptBlockText|contains: Invoke-WebRequest
-  - ScriptBlockText|contains: '-UserAgent '
-id: d4488827-73af-4f8d-9244-7b7662ef046e
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows

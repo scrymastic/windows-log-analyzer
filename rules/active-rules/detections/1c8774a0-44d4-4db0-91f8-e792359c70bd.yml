@@ -1,8 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: \register_app.vbs
-  - CommandLine|contains: -register
-id: 1c8774a0-44d4-4db0-91f8-e792359c70bd
-logsource:
-  category: process_creation
-  product: windows

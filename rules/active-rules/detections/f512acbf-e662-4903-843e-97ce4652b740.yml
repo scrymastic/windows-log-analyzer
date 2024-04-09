@@ -1,9 +1,0 @@
-detection:
-- and:
-  - Provider_Name|==: Microsoft-Windows-Ntfs
-  - EventID|==: 98
-  - DeviceName|contains: HarddiskVolumeShadowCopy
-id: f512acbf-e662-4903-843e-97ce4652b740
-logsource:
-  product: windows
-  service: system

@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \vsls-agent.exe
-  - CommandLine|contains: --agentExtensionPath
-id: 43103702-5886-11ed-9b6a-0242ac120002
-logsource:
-  category: process_creation
-  product: windows

@@ -1,8 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: ' /am51'
-  - CommandLine|contains: ' /password'
-id: d78b5d61-187d-44b6-bf02-93486a80de5a
-logsource:
-  category: process_creation
-  product: windows

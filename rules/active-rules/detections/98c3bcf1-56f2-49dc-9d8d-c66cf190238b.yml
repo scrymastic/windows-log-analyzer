@@ -1,9 +1,0 @@
-detection:
-- and:
-  - EventID|==: 8002
-  - ProcessName|contains: '*'
-id: 98c3bcf1-56f2-49dc-9d8d-c66cf190238b
-logsource:
-  definition: Requires events from Microsoft-Windows-NTLM/Operational
-  product: windows
-  service: ntlm

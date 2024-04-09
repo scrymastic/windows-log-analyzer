@@ -1,8 +1,0 @@
-detection:
-- and:
-  - ScriptBlockText|contains: Get-GPO
-id: eb2fd349-ec67-4caa-9143-d79c7fb34441
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows

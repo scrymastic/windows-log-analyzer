@@ -1,7 +1,0 @@
-detection:
-- and:
-  - TargetObject|endswith: \AppX82a6gwre4fdg3bt635tn5ctqjf8msdd2\Shell\open\command
-id: 6ea3bf32-9680-422d-9f50-e90716b12a66
-logsource:
-  category: registry_event
-  product: windows

@@ -1,7 +1,0 @@
-detection:
-- and:
-  - ParentImage|endswith: \pcwrun.exe
-id: b97cd4b1-30b8-4a9d-bd72-6293928d52bc
-logsource:
-  category: process_creation
-  product: windows

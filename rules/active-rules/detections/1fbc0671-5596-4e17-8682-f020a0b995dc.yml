@@ -1,9 +1,0 @@
-detection:
-- and:
-  - ImageLoaded|endswith: \CCleanerDU.dll
-  - Image|not startswith: C:\Program Files\CCleaner\
-  - Image|not startswith: C:\Program Files (x86)\CCleaner\
-id: 1fbc0671-5596-4e17-8682-f020a0b995dc
-logsource:
-  category: image_load
-  product: windows

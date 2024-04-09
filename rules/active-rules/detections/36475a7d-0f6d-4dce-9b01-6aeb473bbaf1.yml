@@ -1,8 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: \SyncAppvPublishingServer.vbs
-  - CommandLine|contains: ;
-id: 36475a7d-0f6d-4dce-9b01-6aeb473bbaf1
-logsource:
-  category: process_creation
-  product: windows

@@ -1,8 +1,0 @@
-detection:
-- and:
-  - TargetObject|contains: \SOFTWARE\Microsoft\NetSh
-  - Details|contains: .dll
-id: c90362e0-2df3-4e61-94fe-b37615814cb1
-logsource:
-  category: registry_set
-  product: windows

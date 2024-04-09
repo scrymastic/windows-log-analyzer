@@ -1,9 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \tpmvscmgr.exe
-  - OriginalFileName|==: TpmVscMgr.exe
-  - CommandLine|contains: create
-id: c633622e-cab9-4eaa-bb13-66a1d68b3e47
-logsource:
-  category: process_creation
-  product: windows

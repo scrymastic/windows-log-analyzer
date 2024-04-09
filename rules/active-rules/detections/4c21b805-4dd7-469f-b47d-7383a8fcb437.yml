@@ -1,7 +1,0 @@
-detection:
-- and:
-  - ImageLoaded|endswith: \iviewers.dll
-id: 4c21b805-4dd7-469f-b47d-7383a8fcb437
-logsource:
-  category: image_load
-  product: windows

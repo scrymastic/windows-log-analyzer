@@ -1,9 +1,0 @@
-detection:
-- and:
-  - ImageLoaded|endswith: \waveedit.dll
-  - Image|!==: C:\Program Files (x86)\Nero\Nero Apps\Nero WaveEditor\waveedit.exe
-  - Image|!==: C:\Program Files\Nero\Nero Apps\Nero WaveEditor\waveedit.exe
-id: 71b31e99-9ad0-47d4-aeb5-c0ca3928eeeb
-logsource:
-  category: image_load
-  product: windows

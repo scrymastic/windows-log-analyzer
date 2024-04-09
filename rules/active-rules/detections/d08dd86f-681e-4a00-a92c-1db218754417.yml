@@ -1,9 +1,0 @@
-detection:
-- and:
-  - Provider_Name|==: MSSQLSERVER
-  - EventID|==: 15457
-  - Data|contains: xp_cmdshell
-id: d08dd86f-681e-4a00-a92c-1db218754417
-logsource:
-  product: windows
-  service: application

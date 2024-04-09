@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - CommandLine|contains: h^t^t^p
-    - CommandLine|contains: h"t"t"p
-id: f0cdd048-82dc-4f7a-8a7a-b87a52b6d0fd
-logsource:
-  category: process_creation
-  product: windows

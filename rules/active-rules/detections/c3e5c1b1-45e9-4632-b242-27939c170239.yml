@@ -1,7 +1,0 @@
-detection:
-- and:
-  - EventID|==: 28
-id: c3e5c1b1-45e9-4632-b242-27939c170239
-logsource:
-  product: windows
-  service: sysmon

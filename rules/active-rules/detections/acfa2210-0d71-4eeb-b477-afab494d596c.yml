@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Provider_Name|==: Service Control Manager
-  - EventID|==: 7023
-id: acfa2210-0d71-4eeb-b477-afab494d596c
-logsource:
-  product: windows
-  service: system

@@ -1,9 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: diantz.exe
-  - CommandLine|contains: ' \\\\'
-  - CommandLine|contains: .cab
-id: 185d7418-f250-42d0-b72e-0c8b70661e93
-logsource:
-  category: process_creation
-  product: windows

@@ -1,9 +1,0 @@
-detection:
-- and:
-  - ImageLoaded|contains: \VMware\VMware Tools\vmStatsProvider\win32
-  - ImageLoaded|contains: \vmGuestLib.dll
-  - Image|endswith: \Windows\System32\wbem\WmiApSrv.exe
-id: 70e8e9b4-6a93-4cb7-8cde-da69502e7aff
-logsource:
-  category: image_load
-  product: windows

@@ -1,9 +1,0 @@
-detection:
-- and:
-  - CommandLine|contains: FromBase64String
-  - CommandLine|contains: MemoryStream
-  - CommandLine|contains: H4sI
-id: d75d6b6b-adb9-48f7-824b-ac2e786efe1f
-logsource:
-  category: process_creation
-  product: windows

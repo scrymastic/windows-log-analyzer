@@ -1,7 +1,0 @@
-detection:
-- and:
-  - TargetFilename|endswith: .sed
-id: ab90dab8-c7da-4010-9193-563528cfa347
-logsource:
-  category: file_executable_detected
-  product: windows

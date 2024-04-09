@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - CommandLine|contains: 'LoadAssemblyFromPath '
-    - CommandLine|contains: 'LoadAssemblyFromNS '
-id: c57872c7-614f-4d7f-a40d-b78c8df2d30d
-logsource:
-  category: process_creation
-  product: windows

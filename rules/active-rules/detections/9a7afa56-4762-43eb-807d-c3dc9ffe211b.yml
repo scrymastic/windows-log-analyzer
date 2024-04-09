@@ -1,8 +1,0 @@
-detection:
-- and:
-  - ScriptBlockText|contains: Send-MailMessage
-id: 9a7afa56-4762-43eb-807d-c3dc9ffe211b
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows

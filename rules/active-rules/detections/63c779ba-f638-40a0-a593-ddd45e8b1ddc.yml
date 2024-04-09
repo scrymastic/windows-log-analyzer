@@ -1,8 +1,0 @@
-detection:
-- and:
-  - TargetFilename|startswith: C:\Windows\System32\winevt\Logs\
-  - TargetFilename|endswith: .evtx
-id: 63c779ba-f638-40a0-a593-ddd45e8b1ddc
-logsource:
-  category: file_delete
-  product: windows

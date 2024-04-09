@@ -1,8 +1,0 @@
-detection:
-- and:
-  - TargetFilename|startswith: C:\Windows\PSEXEC-
-  - TargetFilename|endswith: .key
-id: 304afd73-55a5-4bb9-8c21-0b1fc84ea9e4
-logsource:
-  category: file_event
-  product: windows

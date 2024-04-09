@@ -1,8 +1,0 @@
-detection:
-- and:
-  - TargetObject|endswith: \Microsoft\Windows NT\CurrentVersion\Winlogon\AllowMultipleTSSessions
-  - Details|endswith: DWORD (0x00000001)
-id: f7997770-92c3-4ec9-b112-774c4ef96f96
-logsource:
-  category: registry_set
-  product: windows

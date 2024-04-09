@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \kd.exe
-    - OriginalFileName|==: kd.exe
-id: 27ee9438-90dc-4bef-904b-d3ef927f5e7e
-logsource:
-  category: process_creation
-  product: windows

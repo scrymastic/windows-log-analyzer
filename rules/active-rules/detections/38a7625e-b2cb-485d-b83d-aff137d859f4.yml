@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Payload|contains: ModuleContents=function Get-VMRemoteFXPhysicalVideoAdapter {
-id: 38a7625e-b2cb-485d-b83d-aff137d859f4
-logsource:
-  category: ps_module
-  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
-  product: windows

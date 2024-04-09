@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Initiated|==: 'true'
-  - Image|endswith: \regsvr32.exe
-id: c7e91a02-d771-4a6d-a700-42587e0b1095
-logsource:
-  category: network_connection
-  product: windows

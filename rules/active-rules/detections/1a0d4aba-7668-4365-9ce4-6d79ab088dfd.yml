@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \ping.exe
-  - CommandLine|contains: 0x
-id: 1a0d4aba-7668-4365-9ce4-6d79ab088dfd
-logsource:
-  category: process_creation
-  product: windows

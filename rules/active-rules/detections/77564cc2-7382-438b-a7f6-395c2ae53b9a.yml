@@ -1,7 +1,0 @@
-detection:
-- and:
-  - TargetImage|endswith: \KeePass.exe
-id: 77564cc2-7382-438b-a7f6-395c2ae53b9a
-logsource:
-  category: create_remote_thread
-  product: windows

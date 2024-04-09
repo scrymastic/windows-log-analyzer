@@ -1,7 +1,0 @@
-detection:
-- and:
-  - TargetObject|contains: \Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths\
-id: 086ae989-9ca6-4fe7-895a-759c5544f247
-logsource:
-  category: registry_set
-  product: windows

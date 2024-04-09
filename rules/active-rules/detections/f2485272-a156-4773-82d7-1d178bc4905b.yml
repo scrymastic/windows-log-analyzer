@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - TargetObject|==: HKLM\System\CurrentControlSet\Services\NalDrv\ImagePath
-    - TargetObject|==: HKLM\System\CurrentControlSet\Services\PROCEXP152\ImagePath
-id: f2485272-a156-4773-82d7-1d178bc4905b
-logsource:
-  category: registry_set
-  product: windows

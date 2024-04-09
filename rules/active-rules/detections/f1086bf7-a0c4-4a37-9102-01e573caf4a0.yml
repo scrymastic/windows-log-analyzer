@@ -1,7 +1,0 @@
-detection:
-- and:
-  - OriginalFileName|==: whoami.exe
-id: f1086bf7-a0c4-4a37-9102-01e573caf4a0
-logsource:
-  category: process_creation
-  product: windows

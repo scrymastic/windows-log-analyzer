@@ -1,7 +1,0 @@
-detection:
-- and:
-  - Data|contains: Get-NetTCPConnection
-id: b366adb4-d63d-422d-8a2c-186463b5ded0
-logsource:
-  category: ps_classic_start
-  product: windows

@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - Hashes|contains: IMPHASH=330768A4F172E10ACB6287B87289D83B
-    - Imphash|==: 330768a4f172e10acb6287b87289d83b
-id: 49329257-089d-46e6-af37-4afce4290685
-logsource:
-  category: image_load
-  product: windows
