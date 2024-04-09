@@ -38,3 +38,6 @@ detection:
     - CommandLine|contains: '%TEMP%'
     - CommandLine|contains: '%TMP%'
 id: a35f5a72-f347-4e36-8895-9869b0d5fc6d
+logsource:
+  category: process_creation
+  product: windows

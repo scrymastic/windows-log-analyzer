@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of the UI Accessibility Checker
 filename: proc_creation_win_lolbin_susp_acccheckconsole.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://gist.github.com/bohops/2444129419c8acf837aedda5f0e7f340

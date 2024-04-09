@@ -7,3 +7,6 @@ detection:
     - TargetObject|contains: \Software\Microsoft\Windows\CurrentVersion\PackagedAppXDebug\Microsoft.
     - TargetObject|endswith: \(Default)
 id: df4dc653-1029-47ba-8231-3c44238cc0ae
+logsource:
+  category: registry_set
+  product: windows

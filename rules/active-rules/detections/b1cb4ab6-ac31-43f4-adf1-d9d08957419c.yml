@@ -154,3 +154,6 @@ detection:
     - CommandLine|contains: --healthcheck
     - CommandLine|contains: '--server '
 id: b1cb4ab6-ac31-43f4-adf1-d9d08957419c
+logsource:
+  category: process_creation
+  product: windows

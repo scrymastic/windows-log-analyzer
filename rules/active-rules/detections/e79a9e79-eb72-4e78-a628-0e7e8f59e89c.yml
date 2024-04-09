@@ -15,3 +15,6 @@ detection:
   - ParentImage|not contains: \VC\Tools\MSVC\
   - ParentImage|not contains: \Tracker.exe
 id: e79a9e79-eb72-4e78-a628-0e7e8f59e89c
+logsource:
+  category: process_creation
+  product: windows

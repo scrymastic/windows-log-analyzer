@@ -3,3 +3,6 @@ detection:
   - Image|==: C:\Windows\SysWOW64\iscsicpl.exe
   - ImageLoaded|endswith: \iscsiexe.dll
 id: 9ed5959a-c43c-4c59-84e3-d28628429456
+logsource:
+  category: image_load
+  product: windows

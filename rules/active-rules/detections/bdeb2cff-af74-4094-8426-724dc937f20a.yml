@@ -11,3 +11,6 @@ detection:
   - CommandLine|contains: '-AclObject '
   - CommandLine|contains: '-Path '
 id: bdeb2cff-af74-4094-8426-724dc937f20a
+logsource:
+  category: process_creation
+  product: windows

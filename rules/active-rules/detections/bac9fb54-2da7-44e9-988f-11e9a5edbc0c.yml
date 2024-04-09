@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: '/user:'
   - CommandLine|contains: '/passwd:'
 id: bac9fb54-2da7-44e9-988f-11e9a5edbc0c
+logsource:
+  category: process_creation
+  product: windows

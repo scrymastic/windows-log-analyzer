@@ -12,3 +12,7 @@ detection:
     - ScriptBlockText|contains: 'wget '
     - ScriptBlockText|contains: WinHttp.WinHttpRequest
 id: 1139d2e2-84b1-4226-b445-354492eba8ba
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

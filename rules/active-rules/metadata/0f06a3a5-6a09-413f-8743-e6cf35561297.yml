@@ -5,9 +5,6 @@ falsepositives:
 - Exclude legitimate (vetted) use of WMI event subscription in your network
 filename: sysmon_wmi_event_subscription.yml
 level: medium
-logsource:
-  category: wmi_event
-  product: windows
 modified: 2021/11/27
 references:
 - https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-19-wmievent-wmieventfilter-activity-detected

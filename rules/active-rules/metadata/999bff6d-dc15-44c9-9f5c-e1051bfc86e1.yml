@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_pc_abuse_nslookup_with_dns_records.yml
 level: medium
-logsource:
-  category: ps_classic_start
-  product: windows
 modified: 2023/10/27
 references:
 - https://twitter.com/Alh4zr3d/status/1566489367232651264

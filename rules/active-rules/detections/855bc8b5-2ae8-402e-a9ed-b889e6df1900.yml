@@ -31,3 +31,6 @@ detection:
     - CommandLine|contains: ' mi '
     - CommandLine|contains: ' mv '
 id: 855bc8b5-2ae8-402e-a9ed-b889e6df1900
+logsource:
+  category: process_creation
+  product: windows

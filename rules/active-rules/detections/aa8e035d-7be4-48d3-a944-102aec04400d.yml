@@ -10,3 +10,6 @@ detection:
     - CommandLine|contains: /Y
     - CommandLine|contains: ' \\\\'
 id: aa8e035d-7be4-48d3-a944-102aec04400d
+logsource:
+  category: process_creation
+  product: windows

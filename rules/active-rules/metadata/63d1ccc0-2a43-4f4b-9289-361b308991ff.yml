@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wab_unusual_parents.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/09/27
 references:
 - https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/

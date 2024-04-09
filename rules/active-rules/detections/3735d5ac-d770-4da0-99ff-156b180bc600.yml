@@ -4,3 +4,6 @@ detection:
   - Image|not startswith: C:\Program Files\CCleaner\
   - Image|not startswith: C:\Program Files (x86)\CCleaner\
 id: 3735d5ac-d770-4da0-99ff-156b180bc600
+logsource:
+  category: image_load
+  product: windows

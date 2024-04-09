@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hh_chm_remote_download_or_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/01/31
 references:
 - https://www.splunk.com/en_us/blog/security/follina-for-protocol-handlers.html

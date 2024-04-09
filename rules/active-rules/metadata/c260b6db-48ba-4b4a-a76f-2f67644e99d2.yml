@@ -4,9 +4,6 @@ description: Detects suspicious command lines used in Covenant luanchers
 falsepositives: []
 filename: proc_creation_win_hktl_covenant.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://posts.specterops.io/covenant-v0-5-eee0507b85ba

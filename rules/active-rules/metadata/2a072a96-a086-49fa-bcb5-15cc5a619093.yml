@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administrator or user executes a service for legitimate reasons.
 filename: proc_creation_win_net_start_service.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/05
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1569.002/T1569.002.md

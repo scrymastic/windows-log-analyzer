@@ -7,9 +7,6 @@ falsepositives:
 - Dumping hives for legitimate purpouse i.e. backup or forensic investigation
 filename: proc_creation_win_reg_dumping_sensitive_hives.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/13
 references:
 - https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment

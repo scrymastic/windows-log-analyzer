@@ -8,9 +8,6 @@ falsepositives:
   like to monitor for
 filename: registry_set_persistence_mycomputer.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2024/01/11
 references:
 - https://www.hexacorn.com/blog/2017/01/18/beyond-good-ol-run-key-part-55/

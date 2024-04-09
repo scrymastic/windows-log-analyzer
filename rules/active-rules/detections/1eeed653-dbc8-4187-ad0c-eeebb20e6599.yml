@@ -9,3 +9,6 @@ detection:
     - CommandLine|contains: ' -q '
     - CommandLine|contains: ' /q '
 id: 1eeed653-dbc8-4187-ad0c-eeebb20e6599
+logsource:
+  category: process_creation
+  product: windows

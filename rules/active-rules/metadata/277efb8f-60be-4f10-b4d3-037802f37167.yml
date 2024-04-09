@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: registry_event_persistence_recycle_bin.yml
 level: high
-logsource:
-  category: registry_event
-  product: windows
 modified: 2022/12/06
 references:
 - https://github.com/vxunderground/VXUG-Papers/blob/751edb8d50f95bd7baa730adf2c6c3bb1b034276/The%20Persistence%20Series/Persistence%20via%20Recycle%20Bin/Persistence_via_Recycle_Bin.pdf

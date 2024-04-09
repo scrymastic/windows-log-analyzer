@@ -47,3 +47,6 @@ detection:
       - CommandLine|contains: encode.ps1
       - CommandLine|contains: powercat.ps1
 id: efdd8dd5-cee8-4e59-9390-7d4d5e4dd6f6
+logsource:
+  category: process_creation
+  product: windows

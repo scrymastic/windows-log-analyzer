@@ -7,3 +7,6 @@ detection:
     - DestinationIp|cidr: 127.0.0.0/8
     - DestinationIp|cidr: ::1/128
 id: 5f699bc5-5446-4a4a-a0b7-5ef2885a3eb4
+logsource:
+  category: network_connection
+  product: windows

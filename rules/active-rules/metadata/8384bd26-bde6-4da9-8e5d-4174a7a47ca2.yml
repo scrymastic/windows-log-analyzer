@@ -5,11 +5,6 @@ falsepositives:
 - Unlikely
 filename: win_dns_client_tor_onion.yml
 level: high
-logsource:
-  definition: 'Requirements: Microsoft-Windows-DNS Client Events/Operational Event
-    Log must be enabled/collected in order to receive the events.'
-  product: windows
-  service: dns-client
 modified: ''
 references:
 - https://www.logpoint.com/en/blog/detecting-tor-use-with-logpoint/

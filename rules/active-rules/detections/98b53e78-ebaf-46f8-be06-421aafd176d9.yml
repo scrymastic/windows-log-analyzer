@@ -27,3 +27,6 @@ detection:
       - ParentCommandLine|endswith: ' -linpeas'
       - CommandLine|endswith: ' -linpeas'
 id: 98b53e78-ebaf-46f8-be06-421aafd176d9
+logsource:
+  category: process_creation
+  product: windows

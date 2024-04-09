@@ -20,3 +20,6 @@ detection:
     - CommandLine|contains: oAOgAoACcATABvAGEAJwArACcAZAAnACkA
     - CommandLine|contains: 6ADoAKAAnAEwAbwBhACcAKwAnAGQAJwApA
 id: 9c0295ce-d60d-40bd-bd74-84673b7592b1
+logsource:
+  category: process_creation
+  product: windows

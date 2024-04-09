@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate internal requirements.
 filename: registry_set_clickonce_trust_prompt.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://posts.specterops.io/less-smartscreen-more-caffeine-ab-using-clickonce-for-trusted-code-execution-1446ea8051c5

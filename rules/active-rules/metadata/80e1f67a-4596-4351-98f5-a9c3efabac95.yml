@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_susp_task_write.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/01/12
 references:
 - Internal Research

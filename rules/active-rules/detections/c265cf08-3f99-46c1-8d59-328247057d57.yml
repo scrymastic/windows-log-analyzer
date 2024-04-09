@@ -7,3 +7,6 @@ detection:
   - or:
     - SubjectUserName|not endswith: $
 id: c265cf08-3f99-46c1-8d59-328247057d57
+logsource:
+  product: windows
+  service: security

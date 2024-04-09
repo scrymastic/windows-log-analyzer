@@ -20,3 +20,6 @@ detection:
       - Binary|contains: '450046005300'
       - Binary|contains: '420044004500530056004300'
 id: d6b5520d-3934-48b4-928c-2aa3f92d6963
+logsource:
+  product: windows
+  service: system

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_privilege_escalation_cli_patterns.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.trendmicro.com/en_us/research/22/k/hack-the-real-box-apt41-new-subgroup-earth-longzhi.html

@@ -6,9 +6,6 @@ falsepositives:
 - Administrative activity
 filename: proc_creation_win_powershell_get_localgroup_member_recon.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/

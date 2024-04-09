@@ -39,3 +39,6 @@ detection:
       - Image|endswith: \split_windows.exe
       - Image|endswith: \ticketer_windows.exe
 id: 4627c6ae-6899-46e2-aa0c-6ebcb1becd19
+logsource:
+  category: process_creation
+  product: windows

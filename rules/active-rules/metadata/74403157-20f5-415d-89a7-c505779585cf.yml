@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use to pass password to different powershell commands
 filename: proc_creation_win_powershell_cmdline_convertto_securestring.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/01
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=65

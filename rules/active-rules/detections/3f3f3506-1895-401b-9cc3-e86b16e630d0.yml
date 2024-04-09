@@ -43,3 +43,6 @@ detection:
     - TargetImage|not contains: :\Program Files\Adobe\Acrobat DC\Acrobat\
     - TargetImage|not endswith: \AcroCEF.exe
 id: 3f3f3506-1895-401b-9cc3-e86b16e630d0
+logsource:
+  category: process_access
+  product: windows

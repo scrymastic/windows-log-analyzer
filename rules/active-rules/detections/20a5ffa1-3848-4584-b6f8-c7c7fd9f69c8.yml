@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: ruby.exe
   - CommandLine|contains: ' -e'
 id: 20a5ffa1-3848-4584-b6f8-c7c7fd9f69c8
+logsource:
+  category: process_creation
+  product: windows

@@ -6,3 +6,6 @@ detection:
   - Image|not contains: :\Windows\SysWOW64\
   - Image|not contains: :\Windows\WinSxS\
 id: 737e618a-a410-49b5-bec3-9e55ff7fbc15
+logsource:
+  category: process_creation
+  product: windows

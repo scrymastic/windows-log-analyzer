@@ -11,3 +11,7 @@ detection:
     - ScriptBlockText|contains: \Lsa\Data
     - ScriptBlockText|contains: \Lsa\GBG
 id: 2f77047c-e6e9-4c11-b088-a3de399524cd
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

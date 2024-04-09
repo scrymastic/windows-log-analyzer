@@ -42,3 +42,6 @@ detection:
     - CommandLine|contains: 'whoami.exe /all | find '
     - CommandLine|contains: 'whoami.exe /all | findstr '
 id: ccb5742c-c248-4982-8c5c-5571b9275ad3
+logsource:
+  category: process_creation
+  product: windows

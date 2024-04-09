@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: http://
     - CommandLine|contains: https://
 id: 75edd216-1939-4c73-8d61-7f3a0d85b5cc
+logsource:
+  category: process_creation
+  product: windows

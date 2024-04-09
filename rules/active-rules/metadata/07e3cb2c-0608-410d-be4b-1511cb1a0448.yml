@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate PowerShell scripts
 filename: proc_creation_win_powershell_remove_mppreference.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/windows-10-controlled-folder-access-event-search/ba-p/2326088

@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: -i
   - CommandLine|contains: -f
 id: 6f535e01-ca1f-40be-ab8d-45b19c0c8b7f
+logsource:
+  category: process_creation
+  product: windows

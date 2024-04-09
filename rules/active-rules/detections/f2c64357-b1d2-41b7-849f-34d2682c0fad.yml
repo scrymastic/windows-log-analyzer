@@ -40,3 +40,6 @@ detection:
     - CommandLine|contains: curl
     - CommandLine|contains: wscript
 id: f2c64357-b1d2-41b7-849f-34d2682c0fad
+logsource:
+  category: process_creation
+  product: windows

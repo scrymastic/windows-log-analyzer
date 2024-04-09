@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_lolbin_extrac32_ads.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/30
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Extrac32/

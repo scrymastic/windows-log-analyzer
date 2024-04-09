@@ -27,3 +27,6 @@ detection:
     - CommandLine|contains: WriteAllBytes
     - CommandLine|contains: ' .length '
 id: 434c08ba-8406-4d15-8b24-782cb071a691
+logsource:
+  category: process_creation
+  product: windows

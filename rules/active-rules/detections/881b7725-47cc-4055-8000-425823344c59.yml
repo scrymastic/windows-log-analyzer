@@ -4,3 +4,6 @@ detection:
     - EventID|==: 3032
     - EventID|==: 3035
 id: 881b7725-47cc-4055-8000-425823344c59
+logsource:
+  product: windows
+  service: codeintegrity-operational

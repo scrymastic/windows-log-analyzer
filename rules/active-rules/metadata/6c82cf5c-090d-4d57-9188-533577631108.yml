@@ -6,9 +6,6 @@ falsepositives:
 - MsMpEng might crash if the "C:\" partition is full
 filename: win_application_msmpeng_crash_wer.yml
 level: high
-logsource:
-  product: windows
-  service: application
 modified: 2023/04/14
 references:
 - https://bugs.chromium.org/p/project-zero/issues/detail?id=1252&desc=5

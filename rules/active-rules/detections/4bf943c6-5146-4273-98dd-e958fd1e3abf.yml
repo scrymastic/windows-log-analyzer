@@ -9,3 +9,6 @@ detection:
     - CommandLine|matches: \$VerbosePreference\.ToString\(
     - CommandLine|matches: \[String\]\s*\$VerbosePreference
 id: 4bf943c6-5146-4273-98dd-e958fd1e3abf
+logsource:
+  category: process_creation
+  product: windows

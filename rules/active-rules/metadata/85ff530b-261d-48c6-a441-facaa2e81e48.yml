@@ -6,9 +6,6 @@ falsepositives:
 - Software installation
 filename: proc_creation_win_sc_create_service.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1543.003/T1543.003.md

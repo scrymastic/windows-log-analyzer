@@ -17,11 +17,6 @@ falsepositives:
   in the "C:\Windows\Temp" directory in the form "<log_name">_<uuid>.evtx". See https://superuser.com/questions/1371229/low-disk-space-after-filling-up-c-windows-temp-with-evtx-and-txt-files
 filename: file_event_win_create_evtx_non_common_locations.yml
 level: medium
-logsource:
-  category: file_event
-  definition: 'Requirements: The ".evtx" extension should be monitored via a Sysmon
-    configuration. Example: <TargetFilename condition="end with">.evtx<TargetFilename>'
-  product: windows
 modified: 2024/03/26
 references:
 - https://learn.microsoft.com/en-us/windows/win32/eventlog/eventlog-key

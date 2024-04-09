@@ -28,3 +28,6 @@ detection:
     - ParentImage|==: C:\Windows\System32\msiexec.exe
   - CommandLine|contains: ' sl '
 id: cc36992a-4671-4f21-a91d-6c2b72a2edf5
+logsource:
+  category: process_creation
+  product: windows

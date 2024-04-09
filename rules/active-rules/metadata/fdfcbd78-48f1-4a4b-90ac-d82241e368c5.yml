@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administrative tasks
 filename: proc_creation_win_sysinternals_psexesvc.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/28
 references:
 - https://docs.microsoft.com/en-us/sysinternals/downloads/psexec

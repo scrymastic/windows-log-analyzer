@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: 'rule '
     - CommandLine|contains: name=all
 id: 0e4164da-94bc-450d-a7be-a4b176179f1f
+logsource:
+  category: process_creation
+  product: windows

@@ -14,3 +14,6 @@ detection:
     - CommandLine|contains: ' -p '
     - CommandLine|contains: ' /p '
 id: edadb1e5-5919-4e4c-8462-a9e643b02c4b
+logsource:
+  category: process_creation
+  product: windows

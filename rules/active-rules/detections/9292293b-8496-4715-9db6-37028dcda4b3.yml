@@ -1,4 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \replace.exe
-id: 9292293b-8496-4715-9db6-37028dcda4b3

@@ -11,3 +11,6 @@ detection:
   - DestinationIp|not cidr: fe80::/10
   - DestinationIp|not cidr: fc00::/7
 id: 7610a4ea-c06d-495f-a2ac-0a696abcfd3b
+logsource:
+  category: network_connection
+  product: windows

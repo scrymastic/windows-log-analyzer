@@ -2,3 +2,6 @@ detection:
 - and:
   - QueryName|contains: userstorage.mega.co.nz
 id: 613c03ba-0779-4a53-8a1f-47f914a4ded3
+logsource:
+  category: dns_query
+  product: windows

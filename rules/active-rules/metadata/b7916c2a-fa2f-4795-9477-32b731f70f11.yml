@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_set_susp_reg_persist_explorer_run.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/12/11
 references:
 - https://researchcenter.paloaltonetworks.com/2018/07/unit42-upatre-continues-evolve-new-anti-analysis-techniques/

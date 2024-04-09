@@ -7,3 +7,6 @@ detection:
   - or:
     - CommandLine|not contains: https://gameplayapi.intel.com/
 id: eee00933-a761-4cd0-be70-c42fe91731e7
+logsource:
+  category: process_creation
+  product: windows

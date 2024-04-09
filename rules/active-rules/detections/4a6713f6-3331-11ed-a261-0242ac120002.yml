@@ -5,3 +5,6 @@ detection:
   - CommandLine|contains: ' /IM '
   - CommandLine|contains: ccSvcHst.exe
 id: 4a6713f6-3331-11ed-a261-0242ac120002
+logsource:
+  category: process_creation
+  product: windows

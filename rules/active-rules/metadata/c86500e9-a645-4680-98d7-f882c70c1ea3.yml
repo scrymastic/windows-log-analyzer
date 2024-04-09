@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate use of the library for administrative activity
 filename: proc_creation_win_powershell_aadinternals_cmdlets_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://o365blog.com/aadinternals/

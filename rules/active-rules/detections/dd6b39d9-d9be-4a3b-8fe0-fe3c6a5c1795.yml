@@ -20,3 +20,6 @@ detection:
     - CommandLine|contains: ~2.js
     - CommandLine|contains: ~2.hta
 id: dd6b39d9-d9be-4a3b-8fe0-fe3c6a5c1795
+logsource:
+  category: process_creation
+  product: windows

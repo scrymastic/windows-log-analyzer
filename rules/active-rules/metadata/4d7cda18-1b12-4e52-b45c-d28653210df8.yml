@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_fltmc_unload_driver_sysmon.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/13
 references:
 - https://www.darkoperator.com/blog/2018/10/5/operating-offensively-against-sysmon

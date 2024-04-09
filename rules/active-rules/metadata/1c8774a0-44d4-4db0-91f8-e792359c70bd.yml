@@ -7,9 +7,6 @@ falsepositives:
   if it's benign
 filename: proc_creation_win_lolbin_register_app.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/sblmsrsn/status/1456613494783160325?s=20

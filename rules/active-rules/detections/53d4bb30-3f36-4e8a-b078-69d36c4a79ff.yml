@@ -3,3 +3,6 @@ detection:
   - Image|endswith: \xwizard.exe
   - CommandLine|matches: \{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}
 id: 53d4bb30-3f36-4e8a-b078-69d36c4a79ff
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: file_event_win_perflogs_susp_files.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - Internal Research

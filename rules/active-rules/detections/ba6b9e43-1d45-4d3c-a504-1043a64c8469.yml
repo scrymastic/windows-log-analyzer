@@ -14,3 +14,6 @@ detection:
     - TargetObject|contains: mimikatz printer
     - TargetObject|contains: Kiwi Legit Printer
 id: ba6b9e43-1d45-4d3c-a504-1043a64c8469
+logsource:
+  category: registry_event
+  product: windows

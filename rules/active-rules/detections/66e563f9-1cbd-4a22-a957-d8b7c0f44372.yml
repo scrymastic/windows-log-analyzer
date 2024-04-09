@@ -8,3 +8,6 @@ detection:
       - CommandLine|contains: ' -m dbghelp '
       - CommandLine|contains: ' -m dbgcore '
 id: 66e563f9-1cbd-4a22-a957-d8b7c0f44372
+logsource:
+  category: process_creation
+  product: windows

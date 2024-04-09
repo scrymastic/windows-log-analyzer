@@ -15,9 +15,6 @@ falsepositives:
 - Unknown
 filename: registry_set_net_cli_ngenassemblyusagelog.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://bohops.com/2021/03/16/investigating-net-clr-usage-log-tampering-techniques-for-edr-evasion/

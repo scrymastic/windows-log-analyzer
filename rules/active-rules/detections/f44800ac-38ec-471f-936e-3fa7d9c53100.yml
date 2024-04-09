@@ -13,3 +13,6 @@ detection:
     - CommandLine|contains: /uninstall
     - CommandLine|contains: /enterprise
 id: f44800ac-38ec-471f-936e-3fa7d9c53100
+logsource:
+  category: process_creation
+  product: windows

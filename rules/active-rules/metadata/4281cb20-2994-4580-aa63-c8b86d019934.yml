@@ -7,9 +7,6 @@ falsepositives:
 - Msiexec.exe hiding desktop.ini
 filename: proc_creation_win_attrib_hiding_files.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/14
 references:
 - https://unit42.paloaltonetworks.com/unit42-sure-ill-take-new-combojack-malware-alters-clipboards-steal-cryptocurrency/

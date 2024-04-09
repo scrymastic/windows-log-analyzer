@@ -6,10 +6,6 @@ falsepositives:
 - Legitimate use of the library
 filename: posh_ps_dotnet_assembly_from_file.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: Script Block Logging must be enable
-  product: windows
 modified: ''
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=50

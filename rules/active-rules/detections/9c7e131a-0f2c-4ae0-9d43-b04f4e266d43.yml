@@ -14,3 +14,6 @@ detection:
     - Image|not contains: :\Program Files\Microsoft Office
     - Image|not endswith: \MSOUC.EXE
 id: 9c7e131a-0f2c-4ae0-9d43-b04f4e266d43
+logsource:
+  category: process_creation
+  product: windows

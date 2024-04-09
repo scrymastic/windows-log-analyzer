@@ -16,3 +16,7 @@ detection:
     - ScriptBlockText|contains: ipmo $Env:Appdata\
     - ScriptBlockText|contains: ipmo C:\Users\Public\
 id: 21f9162c-5f5d-4b01-89a8-b705bd7d10ab
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

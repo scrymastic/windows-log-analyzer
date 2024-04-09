@@ -10,9 +10,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_create_non_existent_dlls.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2024/01/10
 references:
 - https://decoded.avast.io/martinchlumecky/png-steganography/

@@ -9,9 +9,6 @@ falsepositives:
 - Discord
 filename: proc_creation_win_reg_add_run_key.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/30
 references:
 - https://app.any.run/tasks/9c0f37bc-867a-4314-b685-e101566766d7/

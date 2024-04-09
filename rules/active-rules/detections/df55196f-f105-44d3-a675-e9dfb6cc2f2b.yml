@@ -32,3 +32,6 @@ detection:
   - or:
     - OriginalFileName|==: AdFind.exe
 id: df55196f-f105-44d3-a675-e9dfb6cc2f2b
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - NTDS maintenance
 filename: proc_creation_win_ntdsutil_usage.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/03/11
 references:
 - https://jpcertcc.github.io/ToolAnalysisResultSheet/details/ntdsutil.htm

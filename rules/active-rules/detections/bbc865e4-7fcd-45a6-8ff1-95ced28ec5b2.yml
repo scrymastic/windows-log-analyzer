@@ -6,3 +6,6 @@ detection:
     - CommandLine|contains: type c:\windows\system32\ntdll.dll
     - CommandLine|contains: \\ntdll.dll > \\\\.\\pipe\\
 id: bbc865e4-7fcd-45a6-8ff1-95ced28ec5b2
+logsource:
+  category: process_creation
+  product: windows

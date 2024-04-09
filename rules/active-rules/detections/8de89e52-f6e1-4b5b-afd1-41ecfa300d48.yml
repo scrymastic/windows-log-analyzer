@@ -38,3 +38,6 @@ detection:
     - CommandLine|not contains: C:\Program Files\Microsoft Visual Studio\
     - CommandLine|not contains: \Common7\Tools\VsDevCmd.bat
 id: 8de89e52-f6e1-4b5b-afd1-41ecfa300d48
+logsource:
+  category: process_creation
+  product: windows

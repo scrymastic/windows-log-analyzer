@@ -7,3 +7,6 @@ detection:
     - ProcessPath|endswith: \MpCmdRun.exe
     - ProcessPath|endswith: \NisSrv.exe
 id: 0b0ea3cc-99c8-4730-9c53-45deee2a4c86
+logsource:
+  product: windows
+  service: security-mitigations

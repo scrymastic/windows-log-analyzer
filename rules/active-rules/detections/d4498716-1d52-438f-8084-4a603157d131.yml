@@ -13,3 +13,6 @@ detection:
   - or:
     - CommandLine|not endswith: ' '
 id: d4498716-1d52-438f-8084-4a603157d131
+logsource:
+  category: process_creation
+  product: windows

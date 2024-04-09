@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: registry_add_malware_netwire.yml
 level: high
-logsource:
-  category: registry_add
-  product: windows
 modified: 2023/02/07
 references:
 - https://www.fortinet.com/blog/threat-research/new-netwire-rat-variant-spread-by-phishing

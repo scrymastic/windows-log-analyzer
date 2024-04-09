@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_hktl_execution_via_pe_metadata.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/01/15
 references:
 - https://github.com/cube0x0

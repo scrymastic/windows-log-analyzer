@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_eventvwr_susp_child_process.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/09/28
 references:
 - https://enigma0x3.net/2016/08/15/fileless-uac-bypass-using-eventvwr-exe-and-registry-hijacking/

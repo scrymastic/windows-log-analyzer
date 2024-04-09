@@ -3,3 +3,6 @@ detection:
   - EventType|==: CreateKey
   - TargetObject|contains: UserInitMprLogonScript
 id: 9ace0707-b560-49b8-b6ca-5148b42f39fb
+logsource:
+  category: registry_add
+  product: windows

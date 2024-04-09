@@ -23,3 +23,6 @@ detection:
       - CommandLine|contains: '.exe authtoken '
       - CommandLine|contains: .exe start --all
 id: ee37eb7c-a4e7-4cd5-8fa4-efa27f1c3f31
+logsource:
+  category: process_creation
+  product: windows

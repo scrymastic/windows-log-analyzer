@@ -26,3 +26,6 @@ detection:
     - CommandLine|contains: B7ADIAfQB7ADAAfQAnACAALQBmAC
     - CommandLine|contains: AewAyAH0AewAwAH0AJwAgAC0AZgAg
 id: 8d01b53f-456f-48ee-90f6-bc28e67d4e35
+logsource:
+  category: process_creation
+  product: windows

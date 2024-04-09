@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_set_susp_user_shell_folders.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/9e5b12c4912c07562aec7500447b11fa3e17e254/atomics/T1547.001/T1547.001.md

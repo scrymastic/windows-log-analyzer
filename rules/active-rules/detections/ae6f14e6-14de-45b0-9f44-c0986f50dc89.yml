@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: 'assoc '
   - CommandLine|contains: exefile
 id: ae6f14e6-14de-45b0-9f44-c0986f50dc89
+logsource:
+  category: process_creation
+  product: windows

@@ -8,3 +8,7 @@ detection:
     - ScriptBlockText|contains: '[IO.File]::SetLastAccessTime'
     - ScriptBlockText|contains: '[IO.File]::SetLastWriteTime'
 id: c6438007-e081-42ce-9483-b067fbef33c3
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

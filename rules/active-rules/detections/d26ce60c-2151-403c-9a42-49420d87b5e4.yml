@@ -15,3 +15,6 @@ detection:
     - ServiceName|contains: winexesvc
   - ImagePath|contains: bypass
 id: d26ce60c-2151-403c-9a42-49420d87b5e4
+logsource:
+  product: windows
+  service: system

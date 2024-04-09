@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_shadowcopy_deletion.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/30
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1490/T1490.md#atomic-test-5---windows---delete-volume-shadow-copies-via-wmi-with-powershell

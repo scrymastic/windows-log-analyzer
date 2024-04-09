@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_protected_storage_service_access.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2021/11/27
 references:
 - https://threathunterplaybook.com/hunts/windows/190620-DomainDPAPIBackupKeyExtraction/notebook.html

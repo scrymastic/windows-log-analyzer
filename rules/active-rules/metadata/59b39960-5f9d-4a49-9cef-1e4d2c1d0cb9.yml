@@ -8,9 +8,6 @@ falsepositives:
   use (monitor the path of the cab being extracted)
 filename: proc_creation_win_wusa_cab_files_extraction.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://web.archive.org/web/20180331144337/https://www.fireeye.com/blog/threat-research/2018/03/sanny-malware-delivery-method-updated-in-recently-observed-attacks.html

@@ -4,3 +4,6 @@ detection:
     - Image|endswith: \Microsoft.Workflow.Compiler.exe
     - OriginalFileName|==: Microsoft.Workflow.Compiler.exe
 id: 419dbf2b-8a9b-4bea-bf99-7544b050ec8d
+logsource:
+  category: process_creation
+  product: windows

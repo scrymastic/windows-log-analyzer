@@ -3,3 +3,6 @@ detection:
   - TargetObject|endswith: WDigest\UseLogonCredential
   - Details|==: DWORD (0x00000001)
 id: d6a9b252-c666-4de6-8806-5561bbbd3bdc
+logsource:
+  category: registry_set
+  product: windows

@@ -10,9 +10,6 @@ falsepositives:
 - Legitimate child processes can occur in cases of debugging
 filename: proc_creation_win_susp_electron_app_children.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/09/05
 references:
 - https://taggart-tech.com/quasar-electron/

@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: registry_set_dns_server_level_plugin_dll.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83

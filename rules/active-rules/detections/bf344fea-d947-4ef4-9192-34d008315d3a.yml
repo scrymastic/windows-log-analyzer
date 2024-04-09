@@ -13,3 +13,6 @@ detection:
     - TargetObject|endswith: \winlogon.exe
     - TargetObject|endswith: \WmiPrvSe.exe
 id: bf344fea-d947-4ef4-9192-34d008315d3a
+logsource:
+  category: registry_set
+  product: windows

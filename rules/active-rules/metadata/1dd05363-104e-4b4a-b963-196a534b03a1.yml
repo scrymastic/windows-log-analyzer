@@ -13,9 +13,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_mofcomp_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/11
 references:
 - https://thedfirreport.com/2022/07/11/select-xmrig-from-sqlserver/

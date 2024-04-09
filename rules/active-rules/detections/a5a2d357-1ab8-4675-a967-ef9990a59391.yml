@@ -24,3 +24,6 @@ detection:
     - TargetFilename|startswith: nanodump
     - TargetFilename|endswith: .dmp
 id: a5a2d357-1ab8-4675-a967-ef9990a59391
+logsource:
+  category: file_event
+  product: windows

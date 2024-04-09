@@ -8,3 +8,7 @@ detection:
   - or:
     - Image|not endswith: :\Windows\explorer.exe
 id: 7a2a22ea-a203-4cd3-9abf-20eb1c5c6cd2
+logsource:
+  category: file_access
+  definition: 'Requirements: Microsoft-Windows-Kernel-File ETW provider'
+  product: windows

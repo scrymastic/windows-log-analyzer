@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_exchange_webshell_drop.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://www.microsoft.com/security/blog/2022/09/30/analyzing-attacks-using-the-exchange-vulnerabilities-cve-2022-41040-and-cve-2022-41082/

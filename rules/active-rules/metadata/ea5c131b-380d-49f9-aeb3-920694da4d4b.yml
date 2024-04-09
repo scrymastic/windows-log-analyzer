@@ -5,9 +5,6 @@ falsepositives:
 - Other legitimate binaries named "thor.exe" that aren't published by Nextron Systems
 filename: image_load_thor_unsigned_execution.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - Internal Research

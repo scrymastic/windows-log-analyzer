@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate macro usage. Add the appropriate filter according to your environment
 filename: image_load_office_vbadll_load.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/02/10
 references:
 - https://medium.com/threatpunter/detecting-adversary-tradecraft-with-image-load-event-logging-and-eql-8de93338c16

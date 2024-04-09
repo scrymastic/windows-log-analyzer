@@ -11,9 +11,6 @@ falsepositives:
 - Unknown
 filename: registry_set_hide_file.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2024/03/26
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1564.001/T1564.001.md#atomic-test-8---hide-files-through-registry

@@ -6,3 +6,6 @@ detection:
     - CommandLine|contains: '-u '
     - CommandLine|contains: '-p '
 id: a197e378-d31b-41c0-9635-cfdf1c1bb423
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_sysinternals_psexec_service.yml
 level: low
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/10/26
 references:
 - https://www.jpcert.or.jp/english/pub/sr/ir_research.html

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_impacket_lateral_movement.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://github.com/SecureAuthCorp/impacket/blob/8b1a99f7c715702eafe3f24851817bb64721b156/examples/wmiexec.py

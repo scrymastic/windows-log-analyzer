@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: registry_event_narrator_feedback_persistance.yml
 level: high
-logsource:
-  category: registry_event
-  product: windows
 modified: 2022/03/26
 references:
 - https://giuliocomi.blogspot.com/2019/10/abusing-windows-10-narrators-feedback.html

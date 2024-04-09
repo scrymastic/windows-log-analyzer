@@ -5,9 +5,6 @@ falsepositives:
 - Dell Power Manager (C:\Program Files\Dell\PowerManager\DpmPowerPlanSetup.exe)
 filename: file_event_win_wmi_persistence_script_event_consumer_write.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2021/11/27
 references:
 - https://www.eideon.com/2018-03-02-THL03-WMIBackdoors/

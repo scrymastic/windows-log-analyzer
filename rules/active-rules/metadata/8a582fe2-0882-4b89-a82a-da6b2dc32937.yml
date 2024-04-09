@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmiprvse_susp_child_processes.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/10
 references:
 - https://thedfirreport.com/2021/03/29/sodinokibi-aka-revil-ransomware/

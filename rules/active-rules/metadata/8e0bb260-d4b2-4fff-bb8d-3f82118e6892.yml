@@ -12,9 +12,6 @@ falsepositives:
   some false positives
 filename: proc_creation_win_cmd_redirection_susp_folder.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/03/19
 references:
 - https://thedfirreport.com/2022/07/11/select-xmrig-from-sqlserver/

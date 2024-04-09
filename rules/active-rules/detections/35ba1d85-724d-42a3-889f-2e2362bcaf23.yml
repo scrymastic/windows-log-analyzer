@@ -17,3 +17,7 @@ detection:
       - ObjectName|endswith: '-555'
     - ObjectName|contains: admin
 id: 35ba1d85-724d-42a3-889f-2e2362bcaf23
+logsource:
+  definition: 'Requirements: enable Object Access SAM on your Domain Controllers'
+  product: windows
+  service: security

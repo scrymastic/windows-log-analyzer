@@ -7,3 +7,7 @@ detection:
   - ScriptBlockText|contains: 'invoke-item '
   - ScriptBlockText|contains: ):\
 id: 902cedee-0398-4e3a-8183-6f3a89773a96
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_mstsc_rdp_hijack_shadowing.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/05
 references:
 - https://twitter.com/kmkz_security/status/1220694202301976576

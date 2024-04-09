@@ -16,3 +16,6 @@ detection:
       - CommandLine|contains: parentdomain
       - CommandLine|contains: trusted_domains
 id: 5cc90652-4cbd-4241-aa3b-4b462fa5a248
+logsource:
+  category: process_creation
+  product: windows

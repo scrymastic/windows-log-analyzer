@@ -4,3 +4,6 @@ detection:
   - Provider_Name|==: Kerberos-Key-Distribution-Center
   - Level|==: 2
 id: e6f81941-b1cd-4766-87db-9fc156f658ee
+logsource:
+  product: windows
+  service: system

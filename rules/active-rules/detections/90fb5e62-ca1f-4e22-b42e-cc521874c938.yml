@@ -27,3 +27,6 @@ detection:
     - Image|endswith: \reg.exe
     - Image|endswith: \query.exe
 id: 90fb5e62-ca1f-4e22-b42e-cc521874c938
+logsource:
+  category: process_creation
+  product: windows

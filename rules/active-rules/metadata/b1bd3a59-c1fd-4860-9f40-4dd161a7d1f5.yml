@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_access_win_hktl_handlekatz_lsass_access.yml
 level: high
-logsource:
-  category: process_access
-  product: windows
 modified: 2023/11/28
 references:
 - https://github.com/codewhitesec/HandleKatz

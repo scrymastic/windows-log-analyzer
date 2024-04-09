@@ -21,11 +21,6 @@ falsepositives:
   We recommend filtering Account_Name to the Domain Controller computer accounts.
 filename: win_security_petitpotam_susp_tgt_request.yml
 level: high
-logsource:
-  definition: The advanced audit policy setting "Account Logon > Kerberos Authentication
-    Service" must be configured for Success/Failure
-  product: windows
-  service: security
 modified: 2022/10/05
 references:
 - https://github.com/topotam/PetitPotam

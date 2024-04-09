@@ -27,3 +27,6 @@ detection:
     - CommandLine|contains: .p7b
     - CommandLine|contains: .asc
 id: 213d6a77-3d55-4ce8-ba74-fcfef741974e
+logsource:
+  category: process_creation
+  product: windows

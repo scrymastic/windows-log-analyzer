@@ -20,3 +20,6 @@ detection:
     - CommandLine|contains: :\*
     - CommandLine|contains: password
 id: 2d3cdeec-c0db-45b4-aa86-082f7eb75701
+logsource:
+  category: process_creation
+  product: windows

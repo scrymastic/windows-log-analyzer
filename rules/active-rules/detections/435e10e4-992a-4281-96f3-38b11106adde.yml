@@ -16,3 +16,6 @@ detection:
     - CommandLine|contains: Set-Content
     - CommandLine|contains: Add-Content
 id: 435e10e4-992a-4281-96f3-38b11106adde
+logsource:
+  category: process_creation
+  product: windows

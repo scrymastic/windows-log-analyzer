@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_ntds_dit_creation.yml
 level: low
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - Internal Research

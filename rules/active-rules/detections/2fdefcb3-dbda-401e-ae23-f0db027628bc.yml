@@ -19,3 +19,6 @@ detection:
     - CommandLine|contains: Narrator.exe
     - CommandLine|contains: DisplaySwitch.exe
 id: 2fdefcb3-dbda-401e-ae23-f0db027628bc
+logsource:
+  category: process_creation
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
   printer (unlikely)
 filename: registry_event_mimikatz_printernightmare.yml
 level: critical
-logsource:
-  category: registry_event
-  product: windows
 modified: 2023/06/12
 references:
 - https://github.com/gentilkiwi/mimikatz/commit/c21276072b3f2a47a21e215a46962a17d54b3760

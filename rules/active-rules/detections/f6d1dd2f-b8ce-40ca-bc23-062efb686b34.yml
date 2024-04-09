@@ -15,3 +15,6 @@ detection:
     - Image|endswith: \msiexec.exe
     - Image|endswith: \msbuild.exe
 id: f6d1dd2f-b8ce-40ca-bc23-062efb686b34
+logsource:
+  category: process_creation
+  product: windows

@@ -4,3 +4,6 @@ detection:
     - TargetFilename|endswith: .kirbi
     - TargetFilename|endswith: mimilsa.log
 id: 9e099d99-44c2-42b6-a6d8-54c3545cab29
+logsource:
+  category: file_event
+  product: windows

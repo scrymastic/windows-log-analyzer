@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: :\Windows\Temp\
     - CommandLine|contains: \AppData\Local\Temp\
 id: b2b048b0-7857-4380-b0fb-d3f0ab820b71
+logsource:
+  category: process_creation
+  product: windows

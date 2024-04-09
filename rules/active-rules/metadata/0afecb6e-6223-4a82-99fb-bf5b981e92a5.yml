@@ -12,9 +12,6 @@ falsepositives:
 - Legitimate use of ScreenConnect
 filename: file_event_win_remote_access_tools_screenconnect_remote_file.yml
 level: low
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://github.com/SigmaHQ/sigma/pull/4467

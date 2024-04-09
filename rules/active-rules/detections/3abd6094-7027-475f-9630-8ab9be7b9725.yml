@@ -10,3 +10,6 @@ detection:
   - CommandLine|contains: ' use '
   - CommandLine|contains: ' \\\\*\\*$'
 id: 3abd6094-7027-475f-9630-8ab9be7b9725
+logsource:
+  category: process_creation
+  product: windows

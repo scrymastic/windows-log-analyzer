@@ -11,3 +11,6 @@ detection:
     - CommandLine|!==: +R +H +S +A \\\*.cui
     - ParentCommandLine|!==: C:\\WINDOWS\\system32\\\*.bat
 id: 4281cb20-2994-4580-aa63-c8b86d019934
+logsource:
+  category: process_creation
+  product: windows

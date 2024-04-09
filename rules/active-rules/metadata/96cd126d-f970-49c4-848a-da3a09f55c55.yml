@@ -6,10 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_susp_set_alias.yml
 level: low
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://github.com/1337Rin/Swag-PSO

@@ -5,9 +5,6 @@ falsepositives:
 - Some legitimate apps use this, but limited.
 filename: proc_creation_win_bitsadmin_download_file_sharing_domains.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/02/09
 references:
 - https://blog.netspi.com/15-ways-to-download-a-file/#bitsadmin

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_ksetup_password_change_user.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-gb/windows-server/administration/windows-commands/ksetup

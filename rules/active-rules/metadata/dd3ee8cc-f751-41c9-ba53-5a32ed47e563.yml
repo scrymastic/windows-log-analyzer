@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_reg_open_command.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/25
 references:
 - https://thedfirreport.com/2021/12/13/diavol-ransomware/

@@ -11,3 +11,6 @@ detection:
   - Path|not contains: https://statics.teams.cdn.office.net/
   - Path|not contains: microsoft.com
 id: c977cb50-3dff-4a9f-b873-9290f56132f1
+logsource:
+  product: windows
+  service: appxdeployment-server

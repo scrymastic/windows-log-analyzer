@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: dns_query_win_mal_cobaltstrike.yml
 level: critical
-logsource:
-  category: dns_query
-  product: windows
 modified: 2023/01/16
 references:
 - https://www.icebrg.io/blog/footprints-of-fin7-tracking-actor-patterns

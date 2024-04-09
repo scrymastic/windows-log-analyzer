@@ -4,3 +4,6 @@ detection:
   - ParentImage|endswith: \desktopimgdownldr.exe
   - CommandLine|contains: /lockscreenurl:http
 id: 214641c2-c579-4ecb-8427-0cf19df6842e
+logsource:
+  category: process_creation
+  product: windows

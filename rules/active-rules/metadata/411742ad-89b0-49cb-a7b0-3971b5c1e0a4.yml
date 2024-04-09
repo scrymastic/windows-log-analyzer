@@ -6,9 +6,6 @@ falsepositives:
 - Likely
 filename: win_security_workstation_was_locked.yml
 level: informational
-logsource:
-  product: windows
-  service: security
 modified: 2023/12/11
 references:
 - https://www.cisecurity.org/controls/cis-controls-list/

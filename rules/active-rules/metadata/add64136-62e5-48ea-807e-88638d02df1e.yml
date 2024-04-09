@@ -11,9 +11,6 @@ falsepositives:
 - Scripts and administrative tools used in the monitored environment
 filename: proc_creation_win_fsutil_usage.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/09/09
 references:
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-usn

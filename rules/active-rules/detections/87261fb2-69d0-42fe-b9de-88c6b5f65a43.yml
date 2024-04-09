@@ -4,3 +4,6 @@ detection:
   - Provider_Name|==: MsiInstaller
   - Message|contains: AteraAgent
 id: 87261fb2-69d0-42fe-b9de-88c6b5f65a43
+logsource:
+  product: windows
+  service: application

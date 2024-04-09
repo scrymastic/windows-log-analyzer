@@ -6,9 +6,6 @@ falsepositives:
 - Administrative activity
 filename: proc_creation_win_rundll32_keymgr.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/09
 references:
 - https://twitter.com/NinjaParanoid/status/1516442028963659777

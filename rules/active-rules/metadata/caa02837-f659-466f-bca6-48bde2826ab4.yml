@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: image_load_side_load_classicexplorer32.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://blogs.blackberry.com/en/2022/12/mustang-panda-uses-the-russian-ukrainian-war-to-attack-europe-and-asia-pacific-targets

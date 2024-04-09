@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_powershell_cmdline_reversed_strings.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/31
 references:
 - https://2019.offzone.moscow/ru/report/hunting-for-powershell-abuses/

@@ -13,3 +13,6 @@ detection:
     - TargetFilename|endswith: \Inveigh.ps1
     - TargetFilename|endswith: \Inveigh-Relay.ps1
 id: bb09dd3e-2b78-4819-8e35-a7c1b874e449
+logsource:
+  category: file_event
+  product: windows

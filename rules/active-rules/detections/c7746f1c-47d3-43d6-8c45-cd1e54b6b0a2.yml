@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - or:
-      - Image|endswith: \livekd.exe
-      - Image|endswith: \livekd64.exe
-    - OriginalFileName|==: livekd.exe
-  - CommandLine|None: ' -m'
-id: c7746f1c-47d3-43d6-8c45-cd1e54b6b0a2

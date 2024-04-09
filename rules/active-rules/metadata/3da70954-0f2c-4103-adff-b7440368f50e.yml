@@ -13,9 +13,6 @@ falsepositives:
   Therefore just Medium-level and don't rely on it.
 filename: file_event_win_susp_procexplorer_driver_created_in_tmp_folder.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/11/22
 references:
 - https://blog.dylan.codes/evading-sysmon-and-windows-event-logging/

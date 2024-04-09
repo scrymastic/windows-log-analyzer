@@ -8,9 +8,6 @@ falsepositives:
 - Legitimate use of WinRAR to compress WER ".dmp" files for troubleshooting
 filename: proc_creation_win_winrar_exfil_dmp_files.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/09/12
 references:
 - https://www.crowdstrike.com/blog/overwatch-exposes-aquatic-panda-in-possession-of-log-4-shell-exploit-tools/

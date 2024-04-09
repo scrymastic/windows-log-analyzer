@@ -5,3 +5,6 @@ detection:
     - CommandLine|contains: /z
     - CommandLine|contains: /v
 id: e56d3073-83ff-4021-90fe-c658e0709e72
+logsource:
+  category: process_creation
+  product: windows

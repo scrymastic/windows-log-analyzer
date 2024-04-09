@@ -4,3 +4,7 @@ detection:
   - ScriptBlockText|contains: WindowStyle
   - ScriptBlockText|contains: Hidden
 id: 313fbb0a-a341-4682-848d-6d6f8c4fab7c
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

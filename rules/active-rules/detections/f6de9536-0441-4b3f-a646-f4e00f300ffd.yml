@@ -2,3 +2,10 @@ detection:
 - and:
   - EventID|==: 4738
 id: f6de9536-0441-4b3f-a646-f4e00f300ffd
+logsource:
+  definition: 'Requirements: Audit Policy : Account Management > Audit User Account
+    Management, Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced
+    Audit Policy Configuration\Audit Policies\Account Management\Audit User Account
+    Management'
+  product: windows
+  service: security

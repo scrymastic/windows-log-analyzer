@@ -5,3 +5,6 @@ detection:
   - ServiceName|startswith: ProcessHacker
   - AccountName|==: LocalSystem
 id: c4ff1eac-84ad-44dd-a6fb-d56a92fc43a9
+logsource:
+  product: windows
+  service: system

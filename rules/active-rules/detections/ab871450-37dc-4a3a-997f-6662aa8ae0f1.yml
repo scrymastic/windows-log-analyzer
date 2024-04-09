@@ -6,3 +6,6 @@ detection:
   - TargetObject|endswith: \MacroRuntimeScanScope
   - Details|==: DWORD (0x00000000)
 id: ab871450-37dc-4a3a-997f-6662aa8ae0f1
+logsource:
+  category: registry_set
+  product: windows

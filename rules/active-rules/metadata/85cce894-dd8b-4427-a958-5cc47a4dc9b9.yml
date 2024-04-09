@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use of the tool
 filename: win_system_service_install_remote_utilities.yml
 level: medium
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - https://www.remoteutilities.com/support/kb/host-service-won-t-start/

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_dumpstack_log_evasion.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/06/17
 references:
 - https://twitter.com/mrd0x/status/1479094189048713219

@@ -29,3 +29,6 @@ detection:
     - Image|not endswith: \installer.exe
     - TargetObject|not contains: \Classes\WOW6432Node\CLSID\{4299124F-F2C3-41b4-9C73-9236B2AD0E8F}
 id: 96f697b0-b499-4e5d-9908-a67bec11cdb6
+logsource:
+  category: registry_delete
+  product: windows

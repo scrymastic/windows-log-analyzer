@@ -11,9 +11,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_teams_suspicious_command_line_cred_access.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/18
 references:
 - https://www.bleepingcomputer.com/news/security/microsoft-teams-stores-auth-tokens-as-cleartext-in-windows-linux-macs/

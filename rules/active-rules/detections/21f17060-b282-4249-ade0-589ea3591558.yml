@@ -3,3 +3,6 @@ detection:
   - EventType|==: CreateKey
   - TargetObject|contains: \Software\AppDataLow\Software\Microsoft\
 id: 21f17060-b282-4249-ade0-589ea3591558
+logsource:
+  category: registry_add
+  product: windows

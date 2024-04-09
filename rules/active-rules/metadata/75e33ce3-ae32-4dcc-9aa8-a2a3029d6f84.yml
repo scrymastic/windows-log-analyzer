@@ -18,9 +18,6 @@ falsepositives:
   use cases.
 filename: net_connection_win_office_outbound_non_local_ip.yml
 level: medium
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/03/13
 references:
 - https://corelight.com/blog/detecting-cve-2021-42292

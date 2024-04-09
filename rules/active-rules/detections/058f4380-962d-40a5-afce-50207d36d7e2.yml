@@ -7,3 +7,6 @@ detection:
     - CommandLine|contains: powershell.exe -exec bypass -noni -nop -w 1 -C "
     - CommandLine|contains: 'powershell.exe -noni -nop -w 1 -enc '
 id: 058f4380-962d-40a5-afce-50207d36d7e2
+logsource:
+  category: process_creation
+  product: windows

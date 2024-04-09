@@ -3,3 +3,6 @@ detection:
   - Image|endswith: \control.exe
   - ParentImage|endswith: \WorkFolders.exe
 id: 0bbc6369-43e3-453d-9944-cae58821c173
+logsource:
+  category: process_creation
+  product: windows

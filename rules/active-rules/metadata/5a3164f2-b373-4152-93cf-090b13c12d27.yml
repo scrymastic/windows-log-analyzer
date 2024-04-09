@@ -9,9 +9,6 @@ falsepositives:
   add processes accordingly
 filename: proc_creation_win_vscode_child_processes_anomalies.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/10/25
 references:
 - https://twitter.com/nas_bench/status/1618021838407495681

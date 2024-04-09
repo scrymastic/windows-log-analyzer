@@ -61,3 +61,6 @@ detection:
         "C:\Windows\System32\'
     - CommandLine|not endswith: .cpl",
 id: e593cf51-88db-4ee1-b920-37e89012a3c9
+logsource:
+  category: process_creation
+  product: windows

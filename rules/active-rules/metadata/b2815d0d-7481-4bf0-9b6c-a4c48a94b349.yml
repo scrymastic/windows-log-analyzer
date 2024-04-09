@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_getprocess_lsass.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/05
 references:
 - https://twitter.com/PythonResponder/status/1385064506049630211

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_renamed_autohotkey.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.autohotkey.com/download/

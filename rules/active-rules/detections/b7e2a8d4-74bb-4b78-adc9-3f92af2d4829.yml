@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: \CurrentControlSet\Control\SecurityProviders\WDigest
     - CommandLine|contains: \Microsoft\Windows Defender\
 id: b7e2a8d4-74bb-4b78-adc9-3f92af2d4829
+logsource:
+  category: process_creation
+  product: windows

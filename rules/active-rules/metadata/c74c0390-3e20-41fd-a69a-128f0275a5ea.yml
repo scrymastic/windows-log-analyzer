@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wusa_cab_files_extraction_from_susp_paths.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/28
 references:
 - https://web.archive.org/web/20180331144337/https://www.fireeye.com/blog/threat-research/2018/03/sanny-malware-delivery-method-updated-in-recently-observed-attacks.html

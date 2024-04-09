@@ -4,3 +4,7 @@ detection:
   - Payload|contains: 'BootKey '
   - Payload|contains: 'DatabasePath '
 id: b140afd9-474b-4072-958e-2ebb435abd68
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows

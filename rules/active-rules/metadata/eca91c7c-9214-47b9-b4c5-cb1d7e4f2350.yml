@@ -9,9 +9,6 @@ falsepositives:
   baseline is required.
 filename: win_security_susp_outbound_kerberos_connection.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2024/03/15
 references:
 - https://github.com/GhostPack/Rubeus

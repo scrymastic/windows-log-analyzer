@@ -4,3 +4,6 @@ detection:
     - Image|endswith: \iodine.exe
     - Image|contains: \dnscat2
 id: 98a96a5a-64a0-4c42-92c5-489da3866cb0
+logsource:
+  category: process_creation
+  product: windows

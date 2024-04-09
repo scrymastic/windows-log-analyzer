@@ -6,3 +6,6 @@ detection:
     - ImagePath|contains: tacticalrmm.exe
     - ServiceName|contains: TacticalRMM Agent Service
 id: 4bb79b62-ef12-4861-981d-2aab43fab642
+logsource:
+  product: windows
+  service: system

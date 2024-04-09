@@ -4,3 +4,6 @@ detection:
   - or:
     - Data|not contains: HostVersion=2.
 id: 6331d09b-4785-4c13-980f-f96661356249
+logsource:
+  category: ps_classic_start
+  product: windows

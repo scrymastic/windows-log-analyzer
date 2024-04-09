@@ -11,9 +11,6 @@ falsepositives:
 - Legitimate use
 filename: proc_creation_win_fsutil_symlinkevaluation.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/19
 references:
 - https://www.cybereason.com/blog/cybereason-vs.-blackcat-ransomware

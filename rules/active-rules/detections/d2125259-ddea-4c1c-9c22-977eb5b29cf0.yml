@@ -1,8 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \certutil.exe
-    - OriginalFileName|==: CertUtil.exe
-  - CommandLine|None: -addstore
-  - CommandLine|contains: root
-id: d2125259-ddea-4c1c-9c22-977eb5b29cf0

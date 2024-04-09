@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: registry_set_wdigest_enable_uselogoncredential.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://threathunterplaybook.com/hunts/windows/190510-RegModWDigestDowngrade/notebook.html

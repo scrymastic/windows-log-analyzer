@@ -15,3 +15,6 @@ detection:
     - CommandLine|contains: ;;;SY
     - CommandLine|contains: ;;;WD
 id: a95b9b42-1308-4735-a1af-abb1c5e6f5ac
+logsource:
+  category: process_creation
+  product: windows

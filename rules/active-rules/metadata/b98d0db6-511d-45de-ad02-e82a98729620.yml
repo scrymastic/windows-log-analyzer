@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_mshta_http.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/06
 references:
 - https://www.trendmicro.com/en_us/research/22/e/avoslocker-ransomware-variant-abuses-driver-file-to-disable-anti-Virus-scans-log4shell.html

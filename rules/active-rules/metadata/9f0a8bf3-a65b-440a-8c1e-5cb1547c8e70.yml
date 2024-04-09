@@ -9,9 +9,6 @@ falsepositives:
   the path of the DLL and its content to determine if the action is authorized.
 filename: proc_creation_win_odbcconf_register_dll_regsvr.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/sql/odbc/odbcconf-exe?view=sql-server-ver16

@@ -4,3 +4,6 @@ detection:
   - CommandLine|contains: scecli\0*
   - CommandLine|contains: reg add
 id: b7966f4a-b333-455b-8370-8ca53c229762
+logsource:
+  category: process_creation
+  product: windows

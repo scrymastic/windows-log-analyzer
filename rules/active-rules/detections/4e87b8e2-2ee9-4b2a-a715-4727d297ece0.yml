@@ -23,3 +23,6 @@ detection:
       - TargetFilename|contains: \sam.bck
       - TargetFilename|contains: \sam.backup
 id: 4e87b8e2-2ee9-4b2a-a715-4727d297ece0
+logsource:
+  category: file_event
+  product: windows

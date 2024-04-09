@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_iphlpapi_dll_sideloading.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://blog.cyble.com/2022/07/27/targeted-attacks-being-carried-out-via-dll-sideloading/

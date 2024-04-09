@@ -23,3 +23,6 @@ detection:
     - TargetFilename|contains: .xlsm:Zone
     - TargetFilename|contains: .zip:Zone
 id: 0bb4bbeb-fe52-4044-b40c-430a04577ebe
+logsource:
+  category: create_stream_hash
+  product: windows

@@ -5,10 +5,6 @@ falsepositives:
 - Unknown
 filename: win_security_net_ntlm_downgrade.yml
 level: high
-logsource:
-  definition: 'Requirements: Audit Policy : Object Access > Audit Registry (Success)'
-  product: windows
-  service: security
 modified: 2022/10/09
 references:
 - https://www.optiv.com/blog/post-exploitation-using-netntlm-downgrade-attacks

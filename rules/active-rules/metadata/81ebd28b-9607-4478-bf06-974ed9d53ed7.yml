@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use of dnx.exe by legitimate user
 filename: proc_creation_win_lolbin_dnx.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Csi/

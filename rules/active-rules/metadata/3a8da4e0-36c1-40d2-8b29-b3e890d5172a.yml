@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_ntds_exfil_tools.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/05/05
 references:
 - https://github.com/rapid7/metasploit-framework/blob/eb6535009f5fdafa954525687f09294918b5398d/modules/post/windows/gather/ntds_grabber.rb

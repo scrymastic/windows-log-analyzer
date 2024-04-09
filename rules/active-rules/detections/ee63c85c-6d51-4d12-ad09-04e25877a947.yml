@@ -4,3 +4,6 @@ detection:
     - TargetFilename|contains: :\Windows\apppatch\Custom\
     - TargetFilename|contains: :\Windows\apppatch\CustomSDB\
 id: ee63c85c-6d51-4d12-ad09-04e25877a947
+logsource:
+  category: file_event
+  product: windows

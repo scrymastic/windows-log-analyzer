@@ -5,9 +5,6 @@ falsepositives:
 - Some PowerShell installers were seen using similar combinations. Apply filters accordingly
 filename: proc_creation_win_powershell_download_iex.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/04
 references:
 - https://github.com/VirtualAlllocEx/Payload-Download-Cradles/blob/88e8eca34464a547c90d9140d70e9866dcbc6a12/Download-Cradles.cmd

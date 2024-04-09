@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_system_hack_smbexec.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2023/11/09
 references:
 - https://blog.ropnop.com/using-credentials-to-own-windows-boxes-part-2-psexec-and-services/

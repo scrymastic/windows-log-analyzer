@@ -6,3 +6,6 @@ detection:
   - ParentImage|endswith: \AppData\Local\Temp\system32\winsat.exe
   - ParentCommandLine|contains: C:\Windows \system32\winsat.exe
 id: 7a01183d-71a2-46ad-ad5c-acd989ac1793
+logsource:
+  category: process_creation
+  product: windows

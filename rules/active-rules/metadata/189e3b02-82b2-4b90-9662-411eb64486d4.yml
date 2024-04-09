@@ -6,9 +6,6 @@ falsepositives:
 - Mimikatz can be useful for testing the security of networks
 filename: posh_ps_potential_invoke_mimikatz.yml
 level: high
-logsource:
-  category: ps_script
-  product: windows
 modified: ''
 references:
 - https://www.elastic.co/guide/en/security/current/potential-invoke-mimikatz-powershell-script.html#potential-invoke-mimikatz-powershell-script

@@ -6,3 +6,6 @@ detection:
     - CommandLine|contains: 'Invoke-WebRequest '
     - CommandLine|contains: 'iwr '
 id: 6e897651-f157-4d8f-aaeb-df8151488385
+logsource:
+  category: process_creation
+  product: windows

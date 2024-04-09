@@ -8,3 +8,8 @@ detection:
     - EventID|==: 4663
   - ObjectName|contains: \Microsoft\Windows Defender\Exclusions\
 id: e9c8808f-4cfb-4ba9-97d4-e5f3beaa244d
+logsource:
+  definition: 'Requirements: Audit Policy : Security Settings/Local Policies/Audit
+    Policy, Registry System Access Control (SACL): Auditing/User'
+  product: windows
+  service: security

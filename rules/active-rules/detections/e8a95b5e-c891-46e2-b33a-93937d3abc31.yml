@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: \Users\Public\
     - CommandLine|contains: \Windows\Temp\
 id: e8a95b5e-c891-46e2-b33a-93937d3abc31
+logsource:
+  category: process_creation
+  product: windows

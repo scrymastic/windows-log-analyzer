@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate administration use but user and host must be investigated
 filename: proc_creation_win_nltest_recon.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/15
 references:
 - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11)

@@ -17,3 +17,6 @@ detection:
     - CommandLine|contains: ' s^e^t '
     - CommandLine|contains: ' se^t '
 id: a77c1610-fc73-4019-8e29-0f51efc04a51
+logsource:
+  category: process_creation
+  product: windows

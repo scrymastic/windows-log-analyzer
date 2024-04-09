@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: win_system_susp_system_update_error.yml
 level: informational
-logsource:
-  product: windows
-  service: system
 modified: 2023/09/07
 references:
 - https://github.com/nasbench/EVTX-ETW-Resources/blob/f1b010ce0ee1b71e3024180de1a3e67f99701fe4/ETWProvidersManifests/Windows10/1903/W10_1903_Pro_20200714_18362.959/WEPExplorer/Microsoft-Windows-WindowsUpdateClient.xml

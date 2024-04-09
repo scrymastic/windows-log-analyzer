@@ -10,9 +10,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_rundll32_webdav_client_susp_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/09/18
 references:
 - https://twitter.com/aceresponder/status/1636116096506818562

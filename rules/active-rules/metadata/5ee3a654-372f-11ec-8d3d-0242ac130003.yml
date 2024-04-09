@@ -7,12 +7,6 @@ falsepositives:
 - Smart card enrollement
 filename: win_security_adcs_certificate_template_configuration_vulnerability.yml
 level: low
-logsource:
-  definition: Certificate services loaded a template would trigger event ID 4898 and
-    certificate Services template was updated would trigger event ID 4899. A risk
-    permission seems to be coming if template contain specific flag.
-  product: windows
-  service: security
 modified: 2022/12/25
 references:
 - https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf

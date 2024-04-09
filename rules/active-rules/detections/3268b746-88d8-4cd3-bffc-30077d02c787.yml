@@ -6,3 +6,6 @@ detection:
     - CommandLine|contains: ' -NoP -NonI -c $x=$((gp HKCU:Software\Microsoft\Windows
         Update).Update);'
 id: 3268b746-88d8-4cd3-bffc-30077d02c787
+logsource:
+  category: process_creation
+  product: windows

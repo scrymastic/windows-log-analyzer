@@ -9,3 +9,6 @@ detection:
     - CommandLine|contains: SetValue($null,$true)
     - CommandLine|contains: NonPublic,Static
 id: 30edb182-aa75-42c0-b0a9-e998bb29067c
+logsource:
+  category: process_creation
+  product: windows

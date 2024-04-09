@@ -6,3 +6,6 @@ detection:
   - CallTrace|contains: '|UNKNOWN('
   - CallTrace|endswith: )
 id: b1bd3a59-c1fd-4860-9f40-4dd161a7d1f5
+logsource:
+  category: process_access
+  product: windows

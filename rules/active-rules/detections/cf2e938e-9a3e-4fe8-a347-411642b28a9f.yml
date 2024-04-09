@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: RemoteSigned
     - CommandLine|contains: Unrestricted
 id: cf2e938e-9a3e-4fe8-a347-411642b28a9f
+logsource:
+  category: process_creation
+  product: windows

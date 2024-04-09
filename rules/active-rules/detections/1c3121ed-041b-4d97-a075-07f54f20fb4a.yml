@@ -13,3 +13,6 @@ detection:
     - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoTrayContextMenu
   - Details|==: DWORD (0x00000001)
 id: 1c3121ed-041b-4d97-a075-07f54f20fb4a
+logsource:
+  category: registry_set
+  product: windows

@@ -11,3 +11,6 @@ detection:
     - Image|endswith: \rundll32.exe
     - Image|endswith: \wscript.exe
 id: 9f546b25-5f12-4c8d-8532-5893dcb1e4b8
+logsource:
+  category: process_creation
+  product: windows

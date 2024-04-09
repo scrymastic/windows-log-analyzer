@@ -6,3 +6,6 @@ detection:
     - ImagePath|contains: powershell
     - ImagePath|contains: pwsh
 id: a2e5019d-a658-4c6a-92bf-7197b54e2cae
+logsource:
+  product: windows
+  service: system

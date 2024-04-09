@@ -7,9 +7,6 @@ falsepositives:
   environment
 filename: proc_creation_win_mshta_susp_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/11/07
 references:
 - http://blog.sevagas.com/?Hacking-around-HTA-files

@@ -7,9 +7,6 @@ falsepositives:
 - IPv4-to-IPv6 mapped IPs
 filename: win_security_susp_failed_logon_source.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2024/03/11
 references:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4625

@@ -13,9 +13,6 @@ falsepositives:
   spawned by smss.exe is a legitimate action.
 filename: proc_creation_win_mssql_sqltoolsps_susp_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/02/25
 references:
 - https://github.com/LOLBAS-Project/LOLBAS/blob/8283d8d91552213ded165fd36deb6cb9534cb443/yml/OtherMSBinaries/Sqltoolsps.yml

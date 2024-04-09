@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_powershell_public_folder.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/07/14
 references:
 - https://www.mandiant.com/resources/evolution-of-fin7

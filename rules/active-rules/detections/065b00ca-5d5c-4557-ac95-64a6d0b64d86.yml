@@ -6,3 +6,6 @@ detection:
     - Product|==: AnyDesk
     - Company|==: AnyDesk Software GmbH
 id: 065b00ca-5d5c-4557-ac95-64a6d0b64d86
+logsource:
+  category: process_creation
+  product: windows

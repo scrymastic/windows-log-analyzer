@@ -7,9 +7,6 @@ falsepositives:
 - Administrator actions via the Windows Defender interface
 filename: registry_set_windows_defender_tamper.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://thedfirreport.com/2021/10/18/icedid-to-xinglocker-ransomware-in-24-hours/

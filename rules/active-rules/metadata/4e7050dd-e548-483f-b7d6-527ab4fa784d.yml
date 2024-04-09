@@ -6,12 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_ntds_dit_uncommon_parent_process.yml
 level: high
-logsource:
-  category: file_event
-  definition: 'Requirements: The "ParentImage" field is not available by default on
-    EID 11 of Sysmon logs. To be able to use this rule to the full extent you need
-    to enrich the log with additional ParentImage data'
-  product: windows
 modified: 2023/01/05
 references:
 - https://www.ired.team/offensive-security/credential-access-and-credential-dumping/ntds.dit-enumeration

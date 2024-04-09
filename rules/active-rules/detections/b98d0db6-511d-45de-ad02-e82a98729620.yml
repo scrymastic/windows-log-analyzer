@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: https://
     - CommandLine|contains: ftp://
 id: b98d0db6-511d-45de-ad02-e82a98729620
+logsource:
+  category: process_creation
+  product: windows

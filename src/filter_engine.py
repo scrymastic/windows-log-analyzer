@@ -7,8 +7,12 @@ class FilterEngine:
 
 
     def matches_rule(self, rule, event) -> bool:
-        # # ignore logsource for now
-        # logsource = rule.get('logsource', None)
+        logsource = rule.get('logsource', None)
+        if not logsource:
+            print(f"Logsource not found in rule {rule}")
+            return False
+        if not self.match_event_id(logsource, event):
+            return False
         # detection
         detection = rule.get('detection', None)
 
@@ -66,7 +70,7 @@ class FilterEngine:
         # Perform the comparison based on the operator
         if operator == '==':
             return field_value == value
-        elif operator == '!=':
+        elif operator == '!==':
             return field_value != value
         elif operator == 'contains':
             return value in field_value
@@ -95,7 +99,7 @@ class FilterEngine:
                 if '.' in field_value else \
                 IPv6Address(field_value) not in IPv6Network(value)
         else:
-            print(f"Invalid operator '{operator}'")
+            print(f"Invalid operator '{operator}, key: {key}, value: {value}'")
             return False
 
 
@@ -105,11 +109,63 @@ class FilterEngine:
             return event.get('System', {}).get(field, None)
         else:
             return event.get('EventData', {}).get(field, None)
+        
+    
+    def match_event_id(self, logsource, event) -> bool:
+        # Check if "Microsoft-Windows-Sysmon"
+        # Only Sysmon events are considered, other events are ignored
+        try:
+            provider = event['System']['Provider']['#attributes']['Name']
+        except KeyError:
+            return True
+        if provider != 'Microsoft-Windows-Sysmon':
+            return True
+        
+        mapping_event_ids = {
+            'network_connection': [3],
+            'process_access': [10],
+            'registry_set': [13],
+            'registry_delete': [12],
+            'registry_add': [12],
+            'registry_event': [12, 13, 14],
+            'create_remote_thread': [8],
+            'pipe_created': [17],
+            'process_creation': [1],
+            'wmi_event': [19, 20, 21],
+            'file_executable_detected': [29],
+            'file_change': [],
+            'file_rename': [],
+            'file_delete': [23],
+            'file_access': [],
+            'file_event': [],
+            'dns_query': [22],
+            'raw_access_thread': [10],
+            'ps_script': [],
+            'ps_classic_start': [],
+            'ps_classic_provider_start': [],
+            'ps_module': [],
+            'image_load': [7],
+            'driver_load': [6],
+            'create_stream_hash': [15],
+            'process_tampering': [25],
+            'sysmon_error': [],
+            'sysmon_status': [],
+        }
+
+        # Check if the event ID matches logsource category
+        category = logsource.get('category', None)
+        if category:
+            event_ids = mapping_event_ids.get(category, [])
+            if not event_ids:
+                return True
+            event_id = event['System']['EventID']
+            return event_id in event_ids
+
 
 
     def filter_events(self, events: list) -> dict:
         # Filter the events based on the rules
-        # Return the {event id: rule id list} dictionary
+        # Return the {event record id: [rule id]} dictionary
         filtered_events = {}
         for event in events:
             rule_id_list = []
@@ -129,46 +185,4 @@ class FilterEngine:
 
 
 if __name__ == '__main__':
-    import glob
-    import yaml
-    from config import ROOT
-    rules = []
-    i = 0
-    for rule_file in glob.glob(f"{ROOT}/rules/active-rules/detections/*.yml"):
-        with open(rule_file, 'r') as file:
-            rule = yaml.safe_load(file)
-            rules.append(rule)
-        i += 1
-        if i == 2:
-            break
-    print(f"Loaded {i} rules")
-    print(rules)
-    
-    events = [
-        {   
-            "System": {
-                "Provider": "Microsoft-Windows-Sysmon",
-                "EventID": 1,
-                "EventRecordID": 306346,
-                "TimeCreated": "2019-07-01T00:00:00.000Z"
-            },
-            "EventData": {
-                "Image": "C:\\Windows\\System32\\wscript.exe\\auditpol.exe",
-                "Description": "Microsoft ® Windows Based Script Host",
-                "Product": "Microsoft® Windows Script Host",
-                "Company": "Microsoft Corporation",
-                "CommandLine": "wscript.exe C:\\Users\\user\\Desktop\\malicious.vbs disable",
-                "User": "user",
-                "ParentImage": "C:\\Windows\\explorer.exe",
-                "ParentCommandLine": "explorer.exe"
-            }
-        }
-    ]
-
-    filter_engine = FilterEngine(rules)
-    filtered_events = filter_engine.filter_events(events)
-
-    for event_id, rule_id_list in filtered_events.items():
-        print(f"Event ID: {event_id}")
-        print(f"Rule ID list: {rule_id_list}")
-        print()
+    pass

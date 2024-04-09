@@ -29,3 +29,6 @@ detection:
     - Image|endswith: \tasklist.exe
     - Image|endswith: \whoami.exe
 id: d55b793d-f847-4eea-b59a-5ab09908ac90
+logsource:
+  category: process_creation
+  product: windows

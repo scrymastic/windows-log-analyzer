@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_ad_replication_non_machine_account.yml
 level: critical
-logsource:
-  product: windows
-  service: security
 modified: 2021/11/27
 references:
 - https://threathunterplaybook.com/hunts/windows/180815-ADObjectAccessReplication/notebook.html

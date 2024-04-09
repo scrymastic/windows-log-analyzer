@@ -9,3 +9,6 @@ detection:
     - Image|endswith: \PowerISO.exe
     - Image|endswith: \ImgBurn.exe
 id: fcdf69e5-a3d3-452a-9724-26f2308bf2b1
+logsource:
+  category: process_creation
+  product: windows

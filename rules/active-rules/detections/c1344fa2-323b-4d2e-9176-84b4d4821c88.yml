@@ -9,3 +9,7 @@ detection:
     - ScriptBlockText|contains: 'Add-MpPreference '
     - ScriptBlockText|contains: 'Set-MpPreference '
 id: c1344fa2-323b-4d2e-9176-84b4d4821c88
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

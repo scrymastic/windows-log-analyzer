@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_createminidump.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://ired.team/offensive-security/credential-access-and-credential-dumping/dumping-lsass-passwords-without-mimikatz-minidumpwritedump-av-signature-bypass

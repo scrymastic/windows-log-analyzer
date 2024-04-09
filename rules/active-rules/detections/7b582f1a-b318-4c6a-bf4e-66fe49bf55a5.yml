@@ -14,3 +14,6 @@ detection:
     - Image|endswith: \rundll32.exe
     - Image|endswith: \wevtutil.exe
 id: 7b582f1a-b318-4c6a-bf4e-66fe49bf55a5
+logsource:
+  category: process_creation
+  product: windows

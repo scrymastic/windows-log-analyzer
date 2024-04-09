@@ -7,12 +7,6 @@ falsepositives:
 - Administrator activity
 filename: win_security_susp_net_recon_activity.yml
 level: high
-logsource:
-  definition: The volume of Event ID 4661 is high on Domain Controllers and therefore
-    "Audit SAM" and "Audit Kernel Object" advanced audit policy settings are not configured
-    in the recommendations for server systems
-  product: windows
-  service: security
 modified: 2022/08/22
 references:
 - https://findingbad.blogspot.de/2017/01/hunting-what-does-it-look-like.html

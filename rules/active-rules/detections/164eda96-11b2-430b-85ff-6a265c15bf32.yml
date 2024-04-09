@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: wmic.exe
   - CommandLine|contains: ' group'
 id: 164eda96-11b2-430b-85ff-6a265c15bf32
+logsource:
+  category: process_creation
+  product: windows

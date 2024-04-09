@@ -40,3 +40,6 @@ detection:
     - CommandLine|contains: ' ''guest'' '
     - CommandLine|contains: ' ''DefaultAccount'' '
 id: 5b768e71-86f2-4879-b448-81061cbae951
+logsource:
+  category: process_creation
+  product: windows

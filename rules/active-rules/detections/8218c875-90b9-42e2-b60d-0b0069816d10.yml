@@ -3,3 +3,6 @@ detection:
   - TargetObject|endswith: \Policies\Microsoft\Windows\PowerShell\EnableScripts
   - Details|==: DWORD (0x00000001)
 id: 8218c875-90b9-42e2-b60d-0b0069816d10
+logsource:
+  category: registry_set
+  product: windows

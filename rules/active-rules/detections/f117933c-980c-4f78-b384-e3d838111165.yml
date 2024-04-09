@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: ' use '
     - CommandLine|contains: ' \\\\'
 id: f117933c-980c-4f78-b384-e3d838111165
+logsource:
+  category: process_creation
+  product: windows

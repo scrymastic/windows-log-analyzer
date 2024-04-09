@@ -25,3 +25,6 @@ detection:
     - CommandLine|contains: "\\\u02E2am"
     - CommandLine|contains: "\\\u02E2ecurity"
 id: fd877b94-9bb5-4191-bb25-d79cbd93c167
+logsource:
+  category: process_creation
+  product: windows

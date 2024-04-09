@@ -2,3 +2,6 @@ detection:
 - and:
   - TargetFilename|==: C:\Windows\System32\wpbbin.exe
 id: e94b9ddc-eec5-4bb8-8a58-b9dc5f4e185f
+logsource:
+  category: file_event
+  product: windows

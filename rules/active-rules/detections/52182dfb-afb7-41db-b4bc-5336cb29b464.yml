@@ -39,3 +39,6 @@ detection:
     - TargetFilename|contains: .xll:Zone
     - TargetFilename|contains: .cpl:Zone
 id: 52182dfb-afb7-41db-b4bc-5336cb29b464
+logsource:
+  category: create_stream_hash
+  product: windows

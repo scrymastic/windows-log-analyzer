@@ -7,3 +7,6 @@ detection:
   - Image|!==: C:\Windows\explorer.exe
   - Image|!==: C:\Windows\System32\ie4uinit.exe
 id: ab567429-1dfb-4674-b6d2-979fd2f9d125
+logsource:
+  category: registry_set
+  product: windows

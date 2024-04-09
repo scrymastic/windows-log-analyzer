@@ -7,11 +7,6 @@ falsepositives:
   you use one of the tools mentioned, comment it out
 filename: win_security_service_install_remote_access_software.yml
 level: medium
-logsource:
-  definition: The 'System Security Extension' audit subcategory need to be enabled
-    to log the EID 4697
-  product: windows
-  service: security
 modified: 2023/11/15
 references:
 - https://redcanary.com/blog/misbehaving-rats/

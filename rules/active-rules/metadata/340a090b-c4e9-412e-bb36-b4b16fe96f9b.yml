@@ -6,9 +6,6 @@ falsepositives:
 - Unknown yet
 filename: proc_creation_win_renamed_dctask64.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://twitter.com/gN3mes1s/status/1222088214581825540

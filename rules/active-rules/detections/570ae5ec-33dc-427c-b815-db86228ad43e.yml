@@ -5,3 +5,6 @@ detection:
     - EventID|==: 1034
     - EventID|==: 11724
 id: 570ae5ec-33dc-427c-b815-db86228ad43e
+logsource:
+  product: windows
+  service: application

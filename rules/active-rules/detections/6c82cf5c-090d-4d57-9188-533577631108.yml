@@ -5,3 +5,6 @@ detection:
   - Data|contains: MsMpEng.exe
   - Data|contains: mpengine.dll
 id: 6c82cf5c-090d-4d57-9188-533577631108
+logsource:
+  product: windows
+  service: application

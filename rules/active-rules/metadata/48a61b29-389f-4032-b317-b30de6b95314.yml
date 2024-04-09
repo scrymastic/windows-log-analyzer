@@ -5,9 +5,6 @@ falsepositives:
 - Administrative activity using a remote port forwarding to a local port
 filename: proc_creation_win_plink_port_forwarding.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://www.real-sec.com/2019/04/bypassing-network-restrictions-through-rdp-tunneling/

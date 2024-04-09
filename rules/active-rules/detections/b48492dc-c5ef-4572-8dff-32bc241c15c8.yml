@@ -15,3 +15,6 @@ detection:
     - Image|contains: :\Users\
     - Image|contains: \Contacts\
 id: b48492dc-c5ef-4572-8dff-32bc241c15c8
+logsource:
+  category: image_load
+  product: windows

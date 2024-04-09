@@ -8,3 +8,6 @@ detection:
     - ParentImage|!==: C:\Windows\System32\lxss\wslhost.exe
     - CommandLine|not contains: C:\ProgramData\Microsoft\WSL\wslg.rdp
 id: 954f0af7-62dd-418f-b3df-a84bc2c7a774
+logsource:
+  category: process_creation
+  product: windows

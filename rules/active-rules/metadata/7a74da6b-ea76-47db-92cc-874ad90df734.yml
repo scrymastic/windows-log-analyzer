@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_msdt_susp_parent.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/06
 references:
 - https://twitter.com/nao_sec/status/1530196847679401984

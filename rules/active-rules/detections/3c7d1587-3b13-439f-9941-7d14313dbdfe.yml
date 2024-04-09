@@ -13,3 +13,7 @@ detection:
     - ScriptBlockText|contains: 000209FF-0000-0000-C000-000000000046
     - ScriptBlockText|contains: 00024500-0000-0000-C000-000000000046
 id: 3c7d1587-3b13-439f-9941-7d14313dbdfe
+logsource:
+  category: ps_script
+  definition: Script Block Logging must be enable
+  product: windows

@@ -7,10 +7,6 @@ falsepositives:
   Heavy baselining and tuning might be required.
 filename: file_access_win_reg_and_hive_access.yml
 level: low
-logsource:
-  category: file_access
-  definition: 'Requirements: Microsoft-Windows-Kernel-File ETW provider'
-  product: windows
 modified: ''
 references:
 - https://github.com/tccontre/Reg-Restore-Persistence-Mole

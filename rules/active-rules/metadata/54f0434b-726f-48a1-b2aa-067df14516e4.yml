@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate used of encrypted ZIP files
 filename: win_security_susp_opened_encrypted_zip_filename.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: ''
 references:
 - https://twitter.com/sbousseaden/status/1523383197513379841

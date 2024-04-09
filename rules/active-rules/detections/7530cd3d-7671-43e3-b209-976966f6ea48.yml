@@ -6,3 +6,6 @@ detection:
   - or:
     - Image|not contains: \curl
 id: 7530cd3d-7671-43e3-b209-976966f6ea48
+logsource:
+  category: process_creation
+  product: windows

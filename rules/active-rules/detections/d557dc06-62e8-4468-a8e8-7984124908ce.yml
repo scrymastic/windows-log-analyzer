@@ -6,3 +6,6 @@ detection:
     - CommandLine|contains: WinPwn.exe
     - CommandLine|contains: WinPwn.ps1
 id: d557dc06-62e8-4468-a8e8-7984124908ce
+logsource:
+  category: process_creation
+  product: windows

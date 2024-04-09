@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_smb_file_creation_admin_shares.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2021/11/27
 references:
 - https://github.com/OTRF/ThreatHunter-Playbook/blob/f7a58156dbfc9b019f17f638b8c62d22e557d350/playbooks/WIN-201012004336.yaml

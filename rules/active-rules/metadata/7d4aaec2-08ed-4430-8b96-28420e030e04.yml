@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_lolbin_sigverif.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.hexacorn.com/blog/2018/04/27/i-shot-the-sigverif-exe-the-gui-based-lolbin/

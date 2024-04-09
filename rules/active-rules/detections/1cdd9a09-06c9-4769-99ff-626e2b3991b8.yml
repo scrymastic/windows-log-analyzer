@@ -43,3 +43,6 @@ detection:
     - CommandLine|contains: .pdf.js
     - CommandLine|contains: .txt.js
 id: 1cdd9a09-06c9-4769-99ff-626e2b3991b8
+logsource:
+  category: process_creation
+  product: windows

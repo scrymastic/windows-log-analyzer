@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_hktl_rubeus.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/20
 references:
 - https://blog.harmj0y.net/redteaming/from-kekeo-to-rubeus

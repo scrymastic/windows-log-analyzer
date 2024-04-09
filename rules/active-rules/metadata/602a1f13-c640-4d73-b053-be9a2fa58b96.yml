@@ -13,9 +13,6 @@ falsepositives:
 - Any powershell script that creates bat files
 filename: file_event_win_hktl_powerup_dllhijacking.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/10/09
 references:
 - https://powersploit.readthedocs.io/en/latest/Privesc/Write-HijackDll/

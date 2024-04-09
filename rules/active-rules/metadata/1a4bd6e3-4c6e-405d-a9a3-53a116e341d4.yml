@@ -5,11 +5,6 @@ falsepositives:
 - Legitimate administrative activity
 filename: win_usb_device_plugged.yml
 level: low
-logsource:
-  definition: Requires enabling and collection of the Microsoft-Windows-DriverFrameworks-UserMode/Operational
-    eventlog
-  product: windows
-  service: driver-framework
 modified: 2021/11/30
 references:
 - https://df-stream.com/2014/01/the-windows-7-event-log-and-usb-device/

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_system_susp_dhcp_config_failed.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2022/12/25
 references:
 - https://blog.3or.de/mimilib-dhcp-server-callout-dll-injection.html

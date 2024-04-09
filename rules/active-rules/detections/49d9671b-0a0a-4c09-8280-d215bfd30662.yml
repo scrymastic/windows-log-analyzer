@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: call
   - CommandLine|contains: terminate
 id: 49d9671b-0a0a-4c09-8280-d215bfd30662
+logsource:
+  category: process_creation
+  product: windows

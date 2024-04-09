@@ -6,10 +6,6 @@ falsepositives:
   filters as needed
 filename: win_capi2_acquire_certificate_private_key.yml
 level: medium
-logsource:
-  definition: 'Requirements: The CAPI2 Operational log needs to be enabled'
-  product: windows
-  service: capi2
 modified: ''
 references:
 - https://www.splunk.com/en_us/blog/security/breaking-the-chain-defending-against-certificate-services-abuse.html

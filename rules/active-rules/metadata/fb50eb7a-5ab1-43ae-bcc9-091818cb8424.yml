@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_disable_ie_features.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://unit42.paloaltonetworks.com/operation-ke3chang-resurfaces-with-new-tidepool-malware/

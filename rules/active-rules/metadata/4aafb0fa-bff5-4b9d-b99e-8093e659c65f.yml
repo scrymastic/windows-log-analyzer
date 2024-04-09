@@ -10,9 +10,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_writing_local_admin_share.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/08/13
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1021.002/T1021.002.md#atomic-test-4---execute-command-writing-output-to-local-admin-share

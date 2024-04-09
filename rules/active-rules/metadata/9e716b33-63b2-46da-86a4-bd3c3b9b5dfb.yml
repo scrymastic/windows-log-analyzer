@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate certificate exports by administrators. Additional filters might be required.
 filename: proc_creation_win_powershell_export_certificate.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://us-cert.cisa.gov/ncas/analysis-reports/ar21-112a

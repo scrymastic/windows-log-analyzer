@@ -7,10 +7,6 @@ falsepositives:
   filters accordingly.
 filename: posh_ps_add_windows_capability.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2023/05/09
 references:
 - https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell

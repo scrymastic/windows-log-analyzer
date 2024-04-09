@@ -35,3 +35,6 @@ detection:
       - CommandLine|contains: :\Users\
       - CommandLine|contains: \Contacts\
 id: 1228c958-e64e-4e71-92ad-7d429f4138ba
+logsource:
+  category: process_creation
+  product: windows

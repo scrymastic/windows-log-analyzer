@@ -6,9 +6,6 @@ falsepositives:
 - Software Installers
 filename: proc_creation_win_susp_ntfs_short_name_use_image.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/07/20
 references:
 - https://www.acunetix.com/blog/articles/windows-short-8-3-filenames-web-security-problem/

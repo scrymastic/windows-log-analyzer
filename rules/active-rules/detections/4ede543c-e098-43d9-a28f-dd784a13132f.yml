@@ -12,3 +12,6 @@ detection:
   - or:
     - Image|not contains: :\Windows\Temp\
 id: 4ede543c-e098-43d9-a28f-dd784a13132f
+logsource:
+  category: process_creation
+  product: windows

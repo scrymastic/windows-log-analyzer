@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate microsoft diagcab
 filename: file_event_win_susp_diagcab.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://threadreaderapp.com/thread/1533879688141086720.html

@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: ://run.mocky
     - CommandLine|contains: ://mockbin
 id: 1c526788-0abe-4713-862f-b520da5e5316
+logsource:
+  category: process_creation
+  product: windows

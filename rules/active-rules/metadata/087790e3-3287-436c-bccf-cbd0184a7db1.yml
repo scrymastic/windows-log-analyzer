@@ -6,9 +6,6 @@ falsepositives:
 - Java tools are known to produce false-positive when loading libraries
 filename: proc_creation_win_cmd_path_traversal.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/06
 references:
 - https://hackingiscool.pl/cmdhijack-command-argument-confusion-with-path-traversal-in-cmd-exe/

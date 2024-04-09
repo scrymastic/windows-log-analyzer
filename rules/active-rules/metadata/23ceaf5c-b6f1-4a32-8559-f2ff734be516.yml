@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate MSSQL Server actions
 filename: proc_creation_win_lolbin_susp_sqldumper_activity.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://twitter.com/countuponsec/status/910977826853068800

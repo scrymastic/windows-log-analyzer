@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: :\Windows\Temp\
     - CommandLine|contains: \Appdata\Local\Temp\
 id: c74c0390-3e20-41fd-a69a-128f0275a5ea
+logsource:
+  category: process_creation
+  product: windows

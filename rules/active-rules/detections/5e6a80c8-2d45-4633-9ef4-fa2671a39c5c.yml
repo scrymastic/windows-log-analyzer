@@ -40,3 +40,6 @@ detection:
       - ParentCommandLine|contains: .pdf.js
       - ParentCommandLine|contains: .txt.js
 id: 5e6a80c8-2d45-4633-9ef4-fa2671a39c5c
+logsource:
+  category: process_creation
+  product: windows

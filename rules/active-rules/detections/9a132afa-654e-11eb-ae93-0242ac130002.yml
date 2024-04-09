@@ -21,3 +21,6 @@ detection:
     - CommandLine|contains: computers_active
     - CommandLine|contains: computers_pwdnotreqd
 id: 9a132afa-654e-11eb-ae93-0242ac130002
+logsource:
+  category: process_creation
+  product: windows

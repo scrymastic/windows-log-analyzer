@@ -17,3 +17,6 @@ detection:
     - CommandLine|contains: Domain
     - CommandLine|contains: Private
 id: 12f6b752-042d-483e-bf9c-915a6d06ad75
+logsource:
+  category: process_creation
+  product: windows

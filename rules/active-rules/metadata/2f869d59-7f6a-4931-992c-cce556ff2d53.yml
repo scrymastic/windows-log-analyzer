@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate usage of Adplus for debugging purposes
 filename: proc_creation_win_adplus_memory_dump.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/06/23
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Adplus/

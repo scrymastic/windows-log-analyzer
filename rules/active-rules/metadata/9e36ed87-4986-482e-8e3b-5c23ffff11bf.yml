@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_system_service_install_remcom.yml
 level: medium
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - https://github.com/kavika13/RemCom/

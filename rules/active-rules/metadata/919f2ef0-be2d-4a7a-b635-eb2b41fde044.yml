@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_event_disable_security_events_logging_adding_reg_key_minint.yml
 level: high
-logsource:
-  category: registry_event
-  product: windows
 modified: 2021/11/27
 references:
 - https://twitter.com/0gtweet/status/1182516740955226112

@@ -11,3 +11,6 @@ detection:
     - OriginalFileName|==: netsh.exe
     - OriginalFileName|==: InstallUtil.exe
 id: 36480ae1-a1cb-4eaa-a0d6-29801d7e9142
+logsource:
+  category: process_creation
+  product: windows

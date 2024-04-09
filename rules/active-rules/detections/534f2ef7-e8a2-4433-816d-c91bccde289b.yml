@@ -5,3 +5,6 @@ detection:
   - ParentCommandLine|!==: C:\Windows\system32\svchost.exe -k netsvcs -p -s Schedule
   - ParentImage|!==: C:\Windows\System32\svchost.exe
 id: 534f2ef7-e8a2-4433-816d-c91bccde289b
+logsource:
+  category: process_creation
+  product: windows

@@ -8,9 +8,6 @@ falsepositives:
 - Ansible
 filename: proc_creation_win_csc_susp_dynamic_compilation.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/10/27
 references:
 - https://securityboulevard.com/2019/08/agent-tesla-evading-edr-by-removing-api-hooks/

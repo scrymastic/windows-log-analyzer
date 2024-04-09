@@ -7,9 +7,6 @@ falsepositives:
   (unknown)
 filename: registry_set_disabled_microsoft_defender_eventlog.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://twitter.com/WhichbufferArda/status/1543900539280293889/photo/2

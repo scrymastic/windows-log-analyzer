@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_hktl_powersploit_empire_default_schtasks.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/03
 references:
 - https://github.com/0xdeadbeefJERKY/PowerSploit/blob/8690399ef70d2cad10213575ac67e8fa90ddf7c3/Persistence/Persistence.psm1

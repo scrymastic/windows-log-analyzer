@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_access_win_svchost_credential_dumping.yml
 level: high
-logsource:
-  category: process_access
-  product: windows
 modified: 2022/10/09
 references:
 - Internal Research

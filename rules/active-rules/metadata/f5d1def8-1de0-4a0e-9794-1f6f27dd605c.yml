@@ -6,10 +6,6 @@ falsepositives:
 - Legitimate administration scripts
 filename: posh_ps_hotfix_enum.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://github.com/411Hall/JAWS/blob/233f142fcb1488172aa74228a666f6b3c5c48f1d/jaws-enum.ps1

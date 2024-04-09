@@ -8,9 +8,6 @@ falsepositives:
 - Legitimate use of Visual Studio Code tunnel will also trigger this.
 filename: dns_query_win_vscode_tunnel_communication.yml
 level: medium
-logsource:
-  category: dns_query
-  product: windows
 modified: 2023/11/20
 references:
 - https://ipfyx.fr/post/visual-studio-code-tunnel/

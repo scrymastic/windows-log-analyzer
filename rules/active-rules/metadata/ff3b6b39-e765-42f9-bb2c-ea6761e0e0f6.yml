@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_mstsc_run_local_rpd_file_susp_parent.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/18
 references:
 - https://www.blackhillsinfosec.com/rogue-rdp-revisiting-initial-access-methods/

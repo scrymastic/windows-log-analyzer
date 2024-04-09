@@ -36,3 +36,6 @@ detection:
   - CommandLine|not contains: ' -EncodedCommand '
   - CommandLine|not contains: ' -enc '
 id: b6b49cd1-34d6-4ead-b1bf-176e9edba9a4
+logsource:
+  category: process_creation
+  product: windows

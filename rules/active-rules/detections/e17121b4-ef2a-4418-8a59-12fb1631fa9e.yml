@@ -4,3 +4,7 @@ detection:
   - ScriptBlockText|contains: Win32_Shadowcopy
   - ScriptBlockText|contains: .Delete()
 id: e17121b4-ef2a-4418-8a59-12fb1631fa9e
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

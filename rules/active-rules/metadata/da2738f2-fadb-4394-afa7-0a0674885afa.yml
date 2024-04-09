@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_sdclt_child_process.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://github.com/OTRF/detection-hackathon-apt29/issues/6

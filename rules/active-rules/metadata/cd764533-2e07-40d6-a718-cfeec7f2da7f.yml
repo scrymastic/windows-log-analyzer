@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_renamed_sysinternals_debugview.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://www.epicturla.com/blog/sysinturla

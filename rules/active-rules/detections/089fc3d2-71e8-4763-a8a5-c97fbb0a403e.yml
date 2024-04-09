@@ -25,3 +25,6 @@ detection:
     - CommandLine|endswith: .rtf
     - CommandLine|endswith: .txt
 id: 089fc3d2-71e8-4763-a8a5-c97fbb0a403e
+logsource:
+  category: process_creation
+  product: windows

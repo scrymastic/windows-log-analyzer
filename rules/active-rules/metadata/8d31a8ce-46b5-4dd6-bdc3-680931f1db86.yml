@@ -14,10 +14,6 @@ falsepositives:
   of high specificity, fp appears to be fairly limited in many environments.
 filename: posh_pm_bad_opsec_artifacts.yml
 level: critical
-logsource:
-  category: ps_module
-  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
-  product: windows
 modified: 2022/12/25
 references:
 - https://newtonpaul.com/analysing-fileless-malware-cobalt-strike-beacon/

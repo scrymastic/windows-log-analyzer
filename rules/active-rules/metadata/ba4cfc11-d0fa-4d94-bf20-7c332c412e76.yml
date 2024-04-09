@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_odbcconf_register_dll_regsvr_susp.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/sql/odbc/odbcconf-exe?view=sql-server-ver16

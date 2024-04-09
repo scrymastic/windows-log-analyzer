@@ -21,3 +21,6 @@ detection:
     - ImageLoaded|contains: :\Users\
     - ImageLoaded|contains: \Pictures\
 id: 799a5f48-0ac1-4e0f-9152-71d137d48c2a
+logsource:
+  category: image_load
+  product: windows

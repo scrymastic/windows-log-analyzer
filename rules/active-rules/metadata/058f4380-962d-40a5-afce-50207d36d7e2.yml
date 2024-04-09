@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_crackmapexec_execution_patterns.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/06
 references:
 - https://github.com/byt3bl33d3r/CrackMapExec

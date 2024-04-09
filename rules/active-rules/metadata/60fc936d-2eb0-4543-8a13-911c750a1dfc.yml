@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely (at.exe deprecated as of Windows 8)
 filename: proc_creation_win_at_interactive_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1053.002/T1053.002.md

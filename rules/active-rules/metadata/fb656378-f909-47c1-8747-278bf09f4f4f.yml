@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: create_remote_thread_win_powershell_lsass.yml
 level: high
-logsource:
-  category: create_remote_thread
-  product: windows
 modified: 2022/12/18
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse

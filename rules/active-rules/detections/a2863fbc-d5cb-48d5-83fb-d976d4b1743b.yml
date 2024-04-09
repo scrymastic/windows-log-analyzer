@@ -6,3 +6,6 @@ detection:
     - TargetObject|endswith: \UserAuthentication
   - Details|==: DWORD (0x00000000)
 id: a2863fbc-d5cb-48d5-83fb-d976d4b1743b
+logsource:
+  category: registry_set
+  product: windows

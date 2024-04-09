@@ -5,3 +5,6 @@ detection:
     - TargetFilename|endswith: .aspx
     - TargetFilename|endswith: .asp
 id: 7280c9f3-a5af-45d0-916a-bc01cb4151c9
+logsource:
+  category: file_event
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_cmd_copy_dmp_from_share.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/09/12
 references:
 - https://thedfirreport.com/2022/09/26/bumblebee-round-two/

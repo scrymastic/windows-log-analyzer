@@ -13,3 +13,7 @@ detection:
     - ScriptBlockText|contains: ' -noni '
     - ScriptBlockText|contains: ' -noninteractive '
 id: ed965133-513f-41d9-a441-e38076a0798f
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

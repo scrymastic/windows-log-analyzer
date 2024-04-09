@@ -46,3 +46,6 @@ detection:
       - Imphash|==: 41923ea1f824fe63ea5beb84db7a3e74
       - Imphash|==: 3de09703c8e79ed2ca3f01074719906b
 id: d38d2fa4-98e6-4a24-aff1-410b0c9ad177
+logsource:
+  category: process_creation
+  product: windows

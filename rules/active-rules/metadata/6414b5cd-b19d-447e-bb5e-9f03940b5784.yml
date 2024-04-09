@@ -6,9 +6,6 @@ falsepositives:
   rule
 filename: image_load_side_load_dbghelp_dll.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/05/05
 references:
 - https://hijacklibs.net/

@@ -3,3 +3,6 @@ detection:
   - EventType|==: CreateKey
   - TargetObject|endswith: \EulaAccepted
 id: 25ffa65d-76d8-4da5-a832-3f2b0136e133
+logsource:
+  category: registry_add
+  product: windows

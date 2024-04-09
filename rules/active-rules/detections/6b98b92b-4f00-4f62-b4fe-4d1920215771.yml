@@ -12,3 +12,6 @@ detection:
     - SignatureStatus|!==: Valid
     - Signature|!==: Microsoft Windows
 id: 6b98b92b-4f00-4f62-b4fe-4d1920215771
+logsource:
+  category: image_load
+  product: windows

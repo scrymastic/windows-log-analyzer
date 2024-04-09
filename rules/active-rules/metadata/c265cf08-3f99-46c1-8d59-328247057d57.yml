@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administrative activity
 filename: win_security_user_added_to_local_administrators.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2021/01/17
 references:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4732

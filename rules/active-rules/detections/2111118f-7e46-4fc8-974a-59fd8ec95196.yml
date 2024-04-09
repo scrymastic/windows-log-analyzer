@@ -4,3 +4,6 @@ detection:
   - LogonType|==: 9
   - TargetOutboundUserName|==: thisisnotvaliduser
 id: 2111118f-7e46-4fc8-974a-59fd8ec95196
+logsource:
+  product: windows
+  service: security

@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of outlook forms
 filename: file_event_win_office_outlook_newform.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/02/22
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-persistence-via-microsoft-exchange-server-or-outlook?slide=76

@@ -5,9 +5,6 @@ falsepositives:
 - Administrator actions
 filename: win_defender_config_change_exclusion_added.yml
 level: medium
-logsource:
-  product: windows
-  service: windefend
 modified: 2022/12/06
 references:
 - https://twitter.com/_nullbind/status/1204923340810543109

@@ -15,3 +15,7 @@ detection:
     - ScriptBlockText|contains: -NameSpace
     - ScriptBlockText|contains: Root\Microsoft\Windows\TaskScheduler
 id: 363eccc0-279a-4ccf-a3ab-24c2e63b11fb
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -4,10 +4,6 @@ description: Detects when the password policy is enumerated.
 falsepositives: []
 filename: win_security_password_policy_enumerated.yml
 level: medium
-logsource:
-  definition: dfd8c0f4-e6ad-4e07-b91b-f2fca0ddef64
-  product: windows
-  service: security
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4661

@@ -14,3 +14,6 @@ detection:
   - CommandLine|contains: 'format:'
   - CommandLine|contains: http
 id: 8d63dadf-b91b-4187-87b6-34a1114577ea
+logsource:
+  category: process_creation
+  product: windows

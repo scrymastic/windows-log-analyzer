@@ -27,3 +27,6 @@ detection:
     - ParentImage|endswith: \wlanext.exe
     - ParentImage|endswith: \WUDFHost.exe
 id: 4b991083-3d0e-44ce-8fc4-b254025d8d4b
+logsource:
+  category: process_creation
+  product: windows

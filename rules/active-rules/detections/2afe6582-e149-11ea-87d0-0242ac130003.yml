@@ -2,3 +2,6 @@ detection:
 - and:
   - EventID|==: 1013
 id: 2afe6582-e149-11ea-87d0-0242ac130003
+logsource:
+  product: windows
+  service: windefend

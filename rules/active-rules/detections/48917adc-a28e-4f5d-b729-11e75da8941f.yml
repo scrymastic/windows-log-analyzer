@@ -11,3 +11,6 @@ detection:
   - CommandLine|contains: '/d '
   - CommandLine|contains: '0'
 id: 48917adc-a28e-4f5d-b729-11e75da8941f
+logsource:
+  category: process_creation
+  product: windows

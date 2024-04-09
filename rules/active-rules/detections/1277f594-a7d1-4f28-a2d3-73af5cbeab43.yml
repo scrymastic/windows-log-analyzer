@@ -26,3 +26,6 @@ detection:
       - TargetFilename|contains: C:\Users\Public\
       - TargetFilename|contains: C:\Windows\Temp\
 id: 1277f594-a7d1-4f28-a2d3-73af5cbeab43
+logsource:
+  category: file_event
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Windows installed on non-C drive
 filename: proc_creation_win_lolbin_dll_sideload_xwizard.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Xwizard/

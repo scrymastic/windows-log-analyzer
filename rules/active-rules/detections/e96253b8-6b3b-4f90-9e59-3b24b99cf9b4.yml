@@ -17,3 +17,6 @@ detection:
     - CommandLine|contains: 'session '
     - CommandLine|contains: 'clsid '
 id: e96253b8-6b3b-4f90-9e59-3b24b99cf9b4
+logsource:
+  category: process_creation
+  product: windows

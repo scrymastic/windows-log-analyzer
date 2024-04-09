@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmic_process_creation.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://www.sans.org/blog/wmic-for-incident-response/

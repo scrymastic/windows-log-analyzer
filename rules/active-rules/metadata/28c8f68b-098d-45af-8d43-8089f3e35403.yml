@@ -8,9 +8,6 @@ falsepositives:
 - Other VB scripts that leverage the same starting command line flags
 filename: proc_creation_win_lolscript_register_app.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/07/07
 references:
 - https://twitter.com/sblmsrsn/status/1456613494783160325?s=20

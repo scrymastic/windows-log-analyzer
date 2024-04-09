@@ -18,3 +18,6 @@ detection:
     - ImageLoaded|endswith: \winsta.dll
     - ImageLoaded|endswith: \dpapi.dll
 id: 90ae0469-0cee-4509-b67f-e5efcef040f7
+logsource:
+  category: image_load
+  product: windows

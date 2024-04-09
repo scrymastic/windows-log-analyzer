@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_base64_wmi_classes.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://github.com/Neo23x0/Raccine/blob/20a569fa21625086433dcce8bb2765d0ea08dcb6/yara/mal_revil.yar

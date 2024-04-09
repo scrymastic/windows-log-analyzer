@@ -16,3 +16,6 @@ detection:
     - Details|contains: .htm;
     - Details|contains: .html;
 id: a9b6c011-ab69-4ddb-bc0a-c4f21c80ec47
+logsource:
+  category: registry_set
+  product: windows

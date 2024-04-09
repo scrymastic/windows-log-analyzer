@@ -6,9 +6,6 @@ falsepositives:
 - Transferring sensitive files for legitimate administration work by legitimate administrator
 filename: win_security_transf_files_with_cred_data_via_network_shares.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2021/11/30
 references:
 - https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment

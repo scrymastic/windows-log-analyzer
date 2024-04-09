@@ -53,3 +53,6 @@ detection:
       - CommandLine|contains: "\u051D"
       - CommandLine|contains: "\u03BF"
 id: 32e280f1-8ad4-46ef-9e80-910657611fbc
+logsource:
+  category: process_creation
+  product: windows

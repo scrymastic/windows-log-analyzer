@@ -6,3 +6,6 @@ detection:
     - TargetFilename|startswith: C:\Program Files (x86) \
   - TargetFilename|endswith: .dll
 id: b6f91281-20aa-446a-b986-38a92813a18f
+logsource:
+  category: file_event
+  product: windows

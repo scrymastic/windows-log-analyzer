@@ -3,3 +3,6 @@ detection:
   - TargetObject|endswith: \Security\AccessVBOM
   - Details|==: DWORD (0x00000001)
 id: 1a5c46e9-f32f-42f7-b2bc-6e9084db7fbf
+logsource:
+  category: registry_set
+  product: windows

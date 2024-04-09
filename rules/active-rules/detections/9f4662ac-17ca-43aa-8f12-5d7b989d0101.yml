@@ -6,3 +6,6 @@ detection:
     - TargetObject|contains: \Sophos\SAVService\TamperProtection\Enabled
   - Details|==: DWORD (0x00000000)
 id: 9f4662ac-17ca-43aa-8f12-5d7b989d0101
+logsource:
+  category: registry_set
+  product: windows

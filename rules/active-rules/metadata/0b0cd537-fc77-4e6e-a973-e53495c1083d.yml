@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_renamed_office_processes.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/13
 references:
 - https://infosec.exchange/@sbousseaden/109542254124022664

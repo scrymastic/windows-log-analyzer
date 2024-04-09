@@ -5,10 +5,6 @@ falsepositives:
 - Systems with names equal to the spoofed ones used by the brute force tools
 filename: win_susp_ntlm_brute_force.yml
 level: medium
-logsource:
-  definition: Requires events from Microsoft-Windows-NTLM/Operational
-  product: windows
-  service: ntlm
 modified: ''
 references:
 - https://www.varonis.com/blog/investigate-ntlm-brute-force

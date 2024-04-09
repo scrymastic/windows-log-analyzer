@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_reg_add_safeboot.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/03/19
 references:
 - https://redacted.com/blog/bianlian-ransomware-gang-gives-it-a-go/

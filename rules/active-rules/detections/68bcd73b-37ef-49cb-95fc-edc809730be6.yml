@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: ' service get '
   - CommandLine|contains: name,displayname,pathname,startmode
 id: 68bcd73b-37ef-49cb-95fc-edc809730be6
+logsource:
+  category: process_creation
+  product: windows

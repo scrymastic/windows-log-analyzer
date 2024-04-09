@@ -7,3 +7,6 @@ detection:
     - Image|not startswith: C:\Program Files\Microsoft\Exchange Server\
     - Image|not endswith: \Bin\OleConverter.exe
 id: 797011dc-44f4-4e6f-9f10-a8ceefbe566b
+logsource:
+  category: process_creation
+  product: windows

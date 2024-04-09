@@ -11,9 +11,6 @@ falsepositives:
   this character
 filename: proc_creation_win_susp_right_to_left_override.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://redcanary.com/blog/right-to-left-override/

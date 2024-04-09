@@ -14,3 +14,6 @@ detection:
     - CommandLine|contains: string(
     - CommandLine|contains: file(
 id: 3b6ab547-8ec2-4991-b9d2-2b06702a48d7
+logsource:
+  category: process_creation
+  product: windows

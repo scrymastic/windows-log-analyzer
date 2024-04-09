@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: DXCap.exe
   - CommandLine|contains: ' -c '
 id: 60f16a96-db70-42eb-8f76-16763e333590
+logsource:
+  category: process_creation
+  product: windows

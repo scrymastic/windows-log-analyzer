@@ -8,9 +8,6 @@ falsepositives:
 - Legitimate use of Devtunnels will also trigger this.
 filename: dns_query_win_devtunnels_communication.yml
 level: medium
-logsource:
-  category: dns_query
-  product: windows
 modified: 2023/11/20
 references:
 - https://blueteamops.medium.com/detecting-dev-tunnels-16f0994dc3e2

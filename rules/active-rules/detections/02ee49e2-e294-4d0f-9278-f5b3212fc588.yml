@@ -23,3 +23,6 @@ detection:
     - Details|not contains: rundll32.exe C:\WINDOWS\system32\advpack.dll,DelNodeRunDLL32
     - Details|not contains: C:\Windows\Temp\
 id: 02ee49e2-e294-4d0f-9278-f5b3212fc588
+logsource:
+  category: registry_set
+  product: windows

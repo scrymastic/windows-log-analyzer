@@ -1,9 +1,0 @@
-detection:
-- and:
-  - or:
-    - or:
-      - Image|endswith: \Sysmon64.exe
-      - Image|endswith: \Sysmon.exe
-    - Description|==: System activity monitor
-  - CommandLine|None: -c
-id: 87911521-7098-470b-a459-9a57fc80bdfd

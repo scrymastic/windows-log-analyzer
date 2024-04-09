@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: RUNDLL32.EXE
   - CommandLine|contains: InstallScreenSaver
 id: 15bd98ea-55f4-4d37-b09a-e7caa0fa2221
+logsource:
+  category: process_creation
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate use
 filename: proc_creation_win_susp_16bit_application.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/07/16
 references:
 - https://docs.microsoft.com/en-us/windows/compatibility/ntvdm-and-16-bit-app-support

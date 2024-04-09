@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_renamed_pingcastle.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/

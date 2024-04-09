@@ -10,9 +10,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_powershell_execution_via_dll.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/03/07
 references:
 - https://github.com/p3nt4/PowerShdll/blob/62cfa172fb4e1f7f4ac00ca942685baeb88ff356/README.md

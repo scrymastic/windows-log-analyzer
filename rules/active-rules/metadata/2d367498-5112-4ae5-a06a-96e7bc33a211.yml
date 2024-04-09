@@ -13,9 +13,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_anydesk_writing_susp_binaries.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://redcanary.com/blog/misbehaving-rats/

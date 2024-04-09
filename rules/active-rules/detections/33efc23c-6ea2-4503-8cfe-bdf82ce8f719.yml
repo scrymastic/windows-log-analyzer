@@ -5,3 +5,6 @@ detection:
     - TargetObject|contains: \SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps\lsass.exe\DumpType
   - Details|==: DWORD (0x00000002)
 id: 33efc23c-6ea2-4503-8cfe-bdf82ce8f719
+logsource:
+  category: registry_set
+  product: windows

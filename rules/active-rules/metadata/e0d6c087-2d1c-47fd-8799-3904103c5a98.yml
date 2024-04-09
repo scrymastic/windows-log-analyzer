@@ -6,10 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_amsi_bypass_pattern_nov22.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://www.mdsec.co.uk/2018/06/exploring-powershell-amsi-and-logging-evasion/

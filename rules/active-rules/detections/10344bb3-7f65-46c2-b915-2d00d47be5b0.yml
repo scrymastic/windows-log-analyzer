@@ -4,3 +4,6 @@ detection:
   - CommandLine|contains: http
   - CommandLine|contains: ' 0'
 id: 10344bb3-7f65-46c2-b915-2d00d47be5b0
+logsource:
+  category: process_creation
+  product: windows

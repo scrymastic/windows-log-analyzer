@@ -5,3 +5,6 @@ detection:
     - CommandLine|contains: ' -m'
     - CommandLine|contains: ' a '
 id: faa48cae-6b25-4f00-a094-08947fef582f
+logsource:
+  category: process_creation
+  product: windows

@@ -7,3 +7,6 @@ detection:
     - IntegrityLevel|==: High
     - IntegrityLevel|==: System
 id: 853e74f9-9392-4935-ad3b-2e8c040dae86
+logsource:
+  category: process_creation
+  product: windows

@@ -23,3 +23,7 @@ detection:
     - ScriptBlockText|contains: Start-AADInt
     - ScriptBlockText|contains: Update-AADInt
 id: 91e69562-2426-42ce-a647-711b8152ced6
+logsource:
+  category: ps_script
+  definition: Script Block Logging must be enable
+  product: windows

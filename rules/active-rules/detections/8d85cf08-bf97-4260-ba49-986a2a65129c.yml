@@ -23,3 +23,6 @@ detection:
     - Details|contains: ' -noni '
     - Details|contains: ' -noninteractive '
 id: 8d85cf08-bf97-4260-ba49-986a2a65129c
+logsource:
+  category: registry_set
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate use of external DB to save the results
 filename: registry_set_bginfo_custom_db.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: ''
 references:
 - Internal Research

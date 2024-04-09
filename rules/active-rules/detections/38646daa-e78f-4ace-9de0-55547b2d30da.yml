@@ -27,3 +27,6 @@ detection:
     - CommandLine|contains: ' -group=all'
   - CommandLine|contains: ' -outputfile='
 id: 38646daa-e78f-4ace-9de0-55547b2d30da
+logsource:
+  category: process_creation
+  product: windows

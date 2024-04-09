@@ -21,3 +21,6 @@ detection:
     - CommandLine|contains: ' | IEX | '
     - CommandLine|contains: ' | iex\"'
 id: 09576804-7a05-458e-a817-eb718ca91f54
+logsource:
+  category: process_creation
+  product: windows

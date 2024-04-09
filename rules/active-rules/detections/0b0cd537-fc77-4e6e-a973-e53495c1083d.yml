@@ -29,3 +29,6 @@ detection:
   - Image|not endswith: \POWERPNT.EXE
   - Image|not endswith: \WINWORD.exe
 id: 0b0cd537-fc77-4e6e-a973-e53495c1083d
+logsource:
+  category: process_creation
+  product: windows

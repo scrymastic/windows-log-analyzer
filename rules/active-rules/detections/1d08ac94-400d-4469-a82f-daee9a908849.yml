@@ -9,3 +9,6 @@ detection:
     - DestinationHostname|contains: tunnel.jp.ngrok.com
     - DestinationHostname|contains: tunnel.in.ngrok.com
 id: 1d08ac94-400d-4469-a82f-daee9a908849
+logsource:
+  category: network_connection
+  product: windows

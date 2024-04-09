@@ -11,9 +11,6 @@ falsepositives:
   investigate the command line and parent/child processes to get more insights
 filename: image_load_wmic_remote_xsl_scripting_dlls.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: 2022/10/13
 references:
 - https://securitydatasets.com/notebooks/atomic/windows/defense_evasion/SDWIN-201017061100.html

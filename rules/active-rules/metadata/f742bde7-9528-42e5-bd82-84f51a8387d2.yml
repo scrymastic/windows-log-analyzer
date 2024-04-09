@@ -7,9 +7,6 @@ falsepositives:
 - Other unknown legitimate or custom paths need to be filtered to avoid false positives
 filename: registry_set_office_trusted_location_uncommon.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/09/29
 references:
 - Internal Research

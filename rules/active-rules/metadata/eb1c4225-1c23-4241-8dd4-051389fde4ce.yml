@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_dumpminitool_susp_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/12
 references:
 - https://twitter.com/mrd0x/status/1511415432888131586

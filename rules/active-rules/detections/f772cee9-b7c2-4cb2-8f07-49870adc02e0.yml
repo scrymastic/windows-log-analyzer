@@ -74,3 +74,7 @@ detection:
     - ScriptBlockText|contains: StringtoBase64
     - ScriptBlockText|contains: TexttoExe
 id: f772cee9-b7c2-4cb2-8f07-49870adc02e0
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

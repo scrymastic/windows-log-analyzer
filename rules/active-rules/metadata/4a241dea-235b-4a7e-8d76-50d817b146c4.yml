@@ -6,10 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_mailboxexport_share.yml
 level: critical
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://youtu.be/5mqid-7zp8k?t=2481

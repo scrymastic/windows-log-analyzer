@@ -42,3 +42,7 @@ detection:
     - ContextInfo|contains: (New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1
     - ContextInfo|contains: Write-ChocolateyWarning
 id: 8ff28fdd-e2fa-4dfa-aeda-ef3d61c62090
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows

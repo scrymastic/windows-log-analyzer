@@ -10,3 +10,6 @@ detection:
     - ParentImage|not contains: build
     - CommandLine|not contains: build
 id: dff1e1cc-d3fd-47c8-bfc2-aeb878a754c0
+logsource:
+  category: process_creation
+  product: windows

@@ -21,3 +21,6 @@ detection:
         - OriginalFileName|==: robocopy.exe
         - OriginalFileName|==: XCOPY.EXE
 id: fff9d2b7-e11c-4a69-93d3-40ef66189767
+logsource:
+  category: process_creation
+  product: windows

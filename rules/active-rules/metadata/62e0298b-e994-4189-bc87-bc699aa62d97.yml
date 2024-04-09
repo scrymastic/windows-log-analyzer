@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate import of keys
 filename: proc_creation_win_reg_import_from_suspicious_paths.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/05
 references:
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-import

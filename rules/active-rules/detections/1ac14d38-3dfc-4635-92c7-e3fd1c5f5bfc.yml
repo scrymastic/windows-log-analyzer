@@ -10,3 +10,6 @@ detection:
     - CommandLine|contains: .dump
     - CommandLine|contains: .hdmp
 id: 1ac14d38-3dfc-4635-92c7-e3fd1c5f5bfc
+logsource:
+  category: process_creation
+  product: windows

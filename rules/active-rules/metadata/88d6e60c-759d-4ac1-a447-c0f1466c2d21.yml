@@ -7,9 +7,6 @@ falsepositives:
   alert
 filename: proc_creation_win_browsers_chromium_load_extension.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/28
 references:
 - https://redcanary.com/blog/chromeloader/

@@ -3,3 +3,10 @@ detection:
   - EventID|==: 4704
   - PrivilegeList|contains: SeEnableDelegationPrivilege
 id: 311b6ce2-7890-4383-a8c2-663a9f6b43cd
+logsource:
+  definition: 'Requirements: Audit Policy : Policy Change > Audit Authorization Policy
+    Change, Group Policy : Computer Configuration\Windows Settings\Security Settings\Advanced
+    Audit Policy Configuration\Audit Policies\Policy Change\Audit Authorization Policy
+    Change'
+  product: windows
+  service: security

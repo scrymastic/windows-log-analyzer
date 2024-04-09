@@ -6,9 +6,6 @@ falsepositives:
 - Approved installs of Windows SDK with Debugging Tools for Windows (WinDbg).
 filename: proc_creation_win_lolbin_remote.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://blog.thecybersecuritytutor.com/Exeuction-AWL-Bypass-Remote-exe-LOLBin/

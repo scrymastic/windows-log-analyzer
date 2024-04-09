@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: registry_event_redmimicry_winnti_reg.yml
 level: high
-logsource:
-  category: registry_event
-  product: windows
 modified: 2021/11/27
 references:
 - https://redmimicry.com

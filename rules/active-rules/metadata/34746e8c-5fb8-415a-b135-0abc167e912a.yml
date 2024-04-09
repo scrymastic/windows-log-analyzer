@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_susp_winsxs_binary_creation.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://media.defense.gov/2023/May/09/2003218554/-1/-1/0/JOINT_CSA_HUNTING_RU_INTEL_SNAKE_MALWARE_20230509.PDF

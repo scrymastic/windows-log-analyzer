@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_delete_schtasks_hide_task_via_sd_value_removal.yml
 level: medium
-logsource:
-  category: registry_delete
-  product: windows
 modified: 2023/02/08
 references:
 - https://www.microsoft.com/security/blog/2022/04/12/tarrask-malware-uses-scheduled-tasks-for-defense-evasion/

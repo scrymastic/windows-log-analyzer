@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate usage of the utility in order to debug and trace a program.
 filename: proc_creation_win_dotnet_trace_lolbin_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/bohops/status/1740022869198037480

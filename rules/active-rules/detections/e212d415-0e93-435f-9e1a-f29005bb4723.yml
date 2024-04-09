@@ -3,3 +3,6 @@ detection:
   - ParentImage|endswith: \outlook.exe
   - Image|startswith: \\\\
 id: e212d415-0e93-435f-9e1a-f29005bb4723
+logsource:
+  category: process_creation
+  product: windows

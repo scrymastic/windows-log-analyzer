@@ -6,9 +6,6 @@ falsepositives:
 - Other legitimate network providers used and not filtred in this rule
 filename: proc_creation_win_registry_new_network_provider.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/02
 references:
 - https://docs.microsoft.com/en-us/troubleshoot/windows-client/deployment/network-provider-settings-removed-in-place-upgrade

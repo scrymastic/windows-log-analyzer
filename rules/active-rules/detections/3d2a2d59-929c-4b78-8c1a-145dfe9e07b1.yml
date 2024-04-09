@@ -7,3 +7,6 @@ detection:
     - TargetFilename|contains: C:\Temp\
   - TargetFilename|endswith: .pub
 id: 3d2a2d59-929c-4b78-8c1a-145dfe9e07b1
+logsource:
+  category: file_event
+  product: windows

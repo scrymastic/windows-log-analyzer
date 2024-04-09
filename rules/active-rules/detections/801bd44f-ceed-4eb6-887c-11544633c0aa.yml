@@ -8,3 +8,6 @@ detection:
     - NewValue|contains: '\Windows Defender\SpyNet\DisableBlockAtFirstSeen '
     - NewValue|contains: '\Real-Time Protection\SpyNetReporting '
 id: 801bd44f-ceed-4eb6-887c-11544633c0aa
+logsource:
+  product: windows
+  service: windefend

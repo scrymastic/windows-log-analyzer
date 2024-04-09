@@ -21,3 +21,6 @@ detection:
     - CommandLine|contains: ::Join
     - CommandLine|contains: '[char]'
 id: bb780e0c-16cf-4383-8383-1e5471db6cf9
+logsource:
+  category: process_creation
+  product: windows

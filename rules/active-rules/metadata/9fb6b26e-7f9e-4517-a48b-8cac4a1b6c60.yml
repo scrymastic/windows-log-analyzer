@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_lolbin_format.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/0gtweet/status/1477925112561209344

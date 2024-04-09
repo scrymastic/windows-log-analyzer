@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_rundll32_obfuscated_ordinal_call.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - Internal Research

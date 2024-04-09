@@ -6,9 +6,6 @@ falsepositives:
 - Administrative activity
 filename: registry_set_enable_anonymous_connection.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista

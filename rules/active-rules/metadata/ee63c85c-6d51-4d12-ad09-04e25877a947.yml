@@ -12,9 +12,6 @@ falsepositives:
 - Legitimate custom SHIM installations will also trigger this rule
 filename: file_event_win_creation_new_shim_database.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/12/06
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.011/T1546.011.md#atomic-test-2---new-shim-database-files-created-in-the-default-shim-database-directory

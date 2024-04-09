@@ -8,3 +8,6 @@ detection:
   - or:
     - Image|!==: C:\Program Files\Windows Defender\MsMpEng.exe
 id: 93d298a1-d28f-47f1-a468-d971e7796679
+logsource:
+  category: registry_set
+  product: windows

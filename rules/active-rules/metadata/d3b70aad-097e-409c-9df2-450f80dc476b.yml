@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate admin usage
 filename: proc_creation_win_pua_ditsnap.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://thedfirreport.com/2020/06/21/snatch-ransomware/

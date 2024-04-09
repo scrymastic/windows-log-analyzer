@@ -2,3 +2,6 @@ detection:
 - and:
   - CommandLine|contains: ::$index_allocation
 id: 0900463c-b33b-49a8-be1d-552a3b553dae
+logsource:
+  category: process_creation
+  product: windows

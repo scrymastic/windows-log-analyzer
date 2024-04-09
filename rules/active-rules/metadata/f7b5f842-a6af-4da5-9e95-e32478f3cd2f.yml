@@ -6,9 +6,6 @@ falsepositives:
   environment
 filename: proc_creation_win_msiexec_web_install.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/01/07
 references:
 - https://blog.trendmicro.com/trendlabs-security-intelligence/attack-using-windows-installer-msiexec-exe-leads-lokibot/

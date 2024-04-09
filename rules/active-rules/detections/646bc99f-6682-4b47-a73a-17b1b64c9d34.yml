@@ -5,3 +5,6 @@ detection:
   - CommandLine|contains: -dest:runCommand
   - Image|endswith: \msdeploy.exe
 id: 646bc99f-6682-4b47-a73a-17b1b64c9d34
+logsource:
+  category: process_creation
+  product: windows

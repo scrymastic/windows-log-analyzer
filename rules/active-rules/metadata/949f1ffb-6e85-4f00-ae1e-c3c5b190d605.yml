@@ -12,9 +12,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_explorer_break_process_tree.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/09/20
 references:
 - https://twitter.com/CyberRaiju/status/1273597319322058752

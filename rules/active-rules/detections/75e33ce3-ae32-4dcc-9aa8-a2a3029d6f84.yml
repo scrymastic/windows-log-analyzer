@@ -22,3 +22,6 @@ detection:
   - DestinationIp|not cidr: 51.104.0.0/15
   - DestinationIp|not cidr: 204.79.197.0/24
 id: 75e33ce3-ae32-4dcc-9aa8-a2a3029d6f84
+logsource:
+  category: network_connection
+  product: windows

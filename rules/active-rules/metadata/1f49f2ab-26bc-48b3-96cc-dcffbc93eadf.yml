@@ -6,10 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_susp_keywords.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2023/04/21
 references:
 - https://posts.specterops.io/entering-a-covenant-net-command-and-control-e11038bcf462

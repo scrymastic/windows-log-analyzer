@@ -18,3 +18,6 @@ detection:
     - CommandLine|contains: ' /e '
     - CommandLine|contains: ' /si '
 id: f576a613-2392-4067-9d1a-9345fb58d8d1
+logsource:
+  category: process_creation
+  product: windows

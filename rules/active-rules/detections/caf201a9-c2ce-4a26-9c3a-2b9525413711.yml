@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: .TakeOwnerShip(
     - CommandLine|contains: .TakeOwnerShipEx(
 id: caf201a9-c2ce-4a26-9c3a-2b9525413711
+logsource:
+  category: process_creation
+  product: windows

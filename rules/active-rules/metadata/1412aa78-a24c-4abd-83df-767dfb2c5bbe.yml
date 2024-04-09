@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_webdav_lnk_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.trellix.com/en-us/about/newsroom/stories/research/beyond-file-search-a-novel-method.html

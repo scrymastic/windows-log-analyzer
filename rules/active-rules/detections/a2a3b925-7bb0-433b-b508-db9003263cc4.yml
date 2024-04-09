@@ -10,3 +10,6 @@ detection:
     - Image|endswith: \winword.exe
   - ImageLoaded|contains: \dsparse.dll
 id: a2a3b925-7bb0-433b-b508-db9003263cc4
+logsource:
+  category: image_load
+  product: windows

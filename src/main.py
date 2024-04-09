@@ -12,13 +12,14 @@ from filter_engine import FilterEngine
 from rule_engine import RuleEngine
 from reporter import Reporter
 from pathlib import Path
+from config import ROOT
 import yaml
 import os
 
 # Initialize the log parser
 log_parser = LogParser()
 # Parse the log file
-events = log_parser.parse_log_file("D:\AtSchool\windows-log-analyzer\sample-logs\sideloading_wwlib_sysmon_7_1_11.evtx")
+events = log_parser.parse_log_file(Path(ROOT) / "sample-logs" / "AutomatedTestingTools" / "Malware" / "rundll32_cmd_schtask.evtx")
 # Initialize the rule engine
 rule_engine = RuleEngine()
 
@@ -31,7 +32,7 @@ filtered_events = filter_engine.filter_events(events)
 
 # print the filtered events
 for event_id, rule_id_list in filtered_events.items():
-    print(f"Event ID: {event_id}")
+    print(f"EventRecordID: {event_id}")
     print(f"Rule ID list: {rule_id_list}")
     print()
 

@@ -7,9 +7,6 @@ falsepositives:
 - Software installations and removal
 filename: proc_creation_win_netsh_fw_set_rule.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://ss64.com/nt/netsh.html

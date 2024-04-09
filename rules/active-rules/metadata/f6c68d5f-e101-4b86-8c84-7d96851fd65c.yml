@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_wmiprvse_wbemcomn_dll_hijack.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2022/02/24
 references:
 - https://threathunterplaybook.com/hunts/windows/201009-RemoteWMIWbemcomnDLLHijack/notebook.html

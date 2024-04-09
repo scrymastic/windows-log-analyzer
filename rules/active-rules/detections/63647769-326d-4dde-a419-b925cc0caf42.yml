@@ -11,3 +11,6 @@ detection:
       - TargetObject|endswith: \Excel\Security\DisableDDEServerLookup
     - Details|==: DWORD (0x00000000)
 id: 63647769-326d-4dde-a419-b925cc0caf42
+logsource:
+  category: registry_set
+  product: windows

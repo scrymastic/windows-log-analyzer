@@ -6,3 +6,6 @@ detection:
     - TargetObject|endswith: Software\Classes\Folder\shell\open\command\SymbolicLinkValue
     - Details|matches: -1[0-9]{3}\\Software\\Classes\\
 id: 5b872a46-3b90-45c1-8419-f675db8053aa
+logsource:
+  category: registry_set
+  product: windows

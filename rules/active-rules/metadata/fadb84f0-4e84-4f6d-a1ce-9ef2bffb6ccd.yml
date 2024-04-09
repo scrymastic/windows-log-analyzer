@@ -8,9 +8,6 @@ falsepositives:
 - Legitimate usage of Cloudflared portable versions
 filename: proc_creation_win_cloudflared_portable_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/

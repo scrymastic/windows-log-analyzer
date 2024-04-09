@@ -6,9 +6,6 @@ falsepositives:
 - False positives are expected if VLC is installed in non-default locations
 filename: image_load_side_load_libvlc.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://www.trendmicro.com/en_us/research/23/c/earth-preta-updated-stealthy-strategies.html

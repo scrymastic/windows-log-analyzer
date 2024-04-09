@@ -6,9 +6,6 @@ falsepositives:
 - Some false positives may occur with legitimate renamed process monitor binaries
 filename: file_event_win_sysinternals_procmon_driver_susp_creation.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - Internal Research

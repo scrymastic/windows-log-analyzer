@@ -11,3 +11,6 @@ detection:
   - Image|!==: C:\Windows\system32\msiexec.exe
   - Image|!==: C:\Windows\SysWOW64\msiexec.exe
 id: dc5c24af-6995-49b2-86eb-a9ff62199e82
+logsource:
+  category: registry_set
+  product: windows

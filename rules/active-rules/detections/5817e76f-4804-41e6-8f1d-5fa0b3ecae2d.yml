@@ -5,3 +5,6 @@ detection:
     - Product|==: Radmin Viewer
     - OriginalFileName|==: Radmin.exe
 id: 5817e76f-4804-41e6-8f1d-5fa0b3ecae2d
+logsource:
+  category: process_creation
+  product: windows

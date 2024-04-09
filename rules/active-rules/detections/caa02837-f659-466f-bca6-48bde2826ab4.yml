@@ -4,3 +4,6 @@ detection:
   - or:
     - ImageLoaded|not startswith: C:\Program Files\Classic Shell\
 id: caa02837-f659-466f-bca6-48bde2826ab4
+logsource:
+  category: image_load
+  product: windows

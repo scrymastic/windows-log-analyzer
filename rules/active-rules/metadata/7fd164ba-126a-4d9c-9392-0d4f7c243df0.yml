@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate usage of ".one" or ".onepkg" files from those locations
 filename: file_event_win_office_onenote_files_in_susp_locations.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/09/19
 references:
 - https://www.bleepingcomputer.com/news/security/hackers-now-use-microsoft-onenote-attachments-to-spread-malware/

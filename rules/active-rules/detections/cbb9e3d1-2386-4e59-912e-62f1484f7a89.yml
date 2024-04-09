@@ -26,3 +26,6 @@ detection:
   - ParentCommandLine|not contains: C:\Program Files (x86)\Dropbox\Client\
   - ParentCommandLine|not contains: C:\Program Files\Dropbox\Client\
 id: cbb9e3d1-2386-4e59-912e-62f1484f7a89
+logsource:
+  category: process_creation
+  product: windows

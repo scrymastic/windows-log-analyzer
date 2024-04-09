@@ -5,3 +5,6 @@ detection:
   - Image|not endswith: :\Windows\System32\werfault.exe
   - Image|not endswith: :\Windows\SysWOW64\werfault.exe
 id: b5746143-59d6-4603-8d06-acbd60e166ee
+logsource:
+  category: process_creation
+  product: windows

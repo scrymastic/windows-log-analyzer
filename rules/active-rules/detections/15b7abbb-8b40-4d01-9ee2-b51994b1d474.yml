@@ -4,3 +4,7 @@ detection:
   - ScriptBlockText|contains: ' -DeliverToMailboxAndForward '
   - ScriptBlockText|contains: ' -ForwardingSmtpAddress '
 id: 15b7abbb-8b40-4d01-9ee2-b51994b1d474
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

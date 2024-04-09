@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate usage of the script by a developer
 filename: proc_creation_win_lolbin_launch_vsdevshell.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/nas_bench/status/1535981653239255040

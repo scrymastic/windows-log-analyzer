@@ -2,3 +2,6 @@ detection:
 - and:
   - OriginalFileName|==: megasync.exe
 id: 643bdcac-8b82-49f4-9fd9-25a90b929f3b
+logsource:
+  category: process_creation
+  product: windows

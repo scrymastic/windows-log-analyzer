@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_webshell_recon_commands_and_processes.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/05/13
 references:
 - https://www.fireeye.com/blog/threat-research/2013/08/breaking-down-the-china-chopper-web-shell-part-ii.html

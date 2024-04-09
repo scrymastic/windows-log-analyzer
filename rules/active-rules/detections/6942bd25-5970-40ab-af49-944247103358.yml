@@ -4,3 +4,7 @@ detection:
     - Payload|contains: get-smbshare
     - ContextInfo|contains: get-smbshare
 id: 6942bd25-5970-40ab-af49-944247103358
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows

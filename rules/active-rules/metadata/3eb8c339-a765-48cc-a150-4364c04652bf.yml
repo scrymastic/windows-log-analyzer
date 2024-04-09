@@ -7,9 +7,6 @@ falsepositives:
 - During log rotation
 filename: file_delete_win_delete_iis_access_logs.yml
 level: medium
-logsource:
-  category: file_delete
-  product: windows
 modified: 2023/02/15
 references:
 - https://www.elastic.co/guide/en/security/current/webserver-access-logs-deleted.html

@@ -6,9 +6,6 @@ falsepositives:
   best correlated with EID 16403 via the JobID field
 filename: win_bits_client_new_job_via_bitsadmin.yml
 level: low
-logsource:
-  product: windows
-  service: bits-client
 modified: 2023/03/27
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1197/T1197.md

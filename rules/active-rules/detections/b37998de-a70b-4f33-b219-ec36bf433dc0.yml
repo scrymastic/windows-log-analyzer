@@ -59,3 +59,6 @@ detection:
       - CommandLine|contains: --healthcheck
       - CommandLine|contains: '--server '
 id: b37998de-a70b-4f33-b219-ec36bf433dc0
+logsource:
+  category: process_creation
+  product: windows

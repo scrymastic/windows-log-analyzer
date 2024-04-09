@@ -5,9 +5,6 @@ falsepositives:
 - Rare legitimate installation of kernel drivers via sc.exe
 filename: proc_creation_win_sc_new_kernel_driver.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/08/08
 references:
 - https://www.aon.com/cyber-solutions/aon_cyber_labs/yours-truly-signed-av-driver-weaponizing-an-antivirus-driver/

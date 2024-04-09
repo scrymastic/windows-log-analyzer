@@ -10,3 +10,6 @@ detection:
   - or:
     - TargetFilename|not startswith: C:\$WINDOWS.~BT\NewOS\
 id: 81315b50-6b60-4d8f-9928-3466e1022515
+logsource:
+  category: file_event
+  product: windows

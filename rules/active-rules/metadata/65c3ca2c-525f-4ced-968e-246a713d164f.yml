@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_renamed_pressanykey.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/mrd0x/status/1463526834918854661

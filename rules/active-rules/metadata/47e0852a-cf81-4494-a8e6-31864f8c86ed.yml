@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: registry_event_apt_pandemic.yml
 level: critical
-logsource:
-  category: registry_event
-  product: windows
 modified: 2022/10/09
 references:
 - https://wikileaks.org/vault7/#Pandemic

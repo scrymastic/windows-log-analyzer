@@ -10,9 +10,6 @@ falsepositives:
 - Legitimate driver altitude change to hide sysmon
 filename: registry_set_change_sysmon_driver_altitude.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2024/03/25
 references:
 - https://posts.specterops.io/shhmon-silencing-sysmon-via-driver-unload-682b5be57650

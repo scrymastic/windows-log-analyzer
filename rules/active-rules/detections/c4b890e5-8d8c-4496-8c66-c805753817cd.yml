@@ -11,3 +11,6 @@ detection:
   - or:
     - Image|not endswith: \WindowsApps\MicrosoftEdge.exe
 id: c4b890e5-8d8c-4496-8c66-c805753817cd
+logsource:
+  category: process_tampering
+  product: windows

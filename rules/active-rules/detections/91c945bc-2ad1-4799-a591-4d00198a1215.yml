@@ -15,3 +15,6 @@ detection:
     - RelativeTargetName|endswith: .rdp
     - RelativeTargetName|endswith: \groups.xml
 id: 91c945bc-2ad1-4799-a591-4d00198a1215
+logsource:
+  product: windows
+  service: security

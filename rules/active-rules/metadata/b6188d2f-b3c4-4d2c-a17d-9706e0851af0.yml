@@ -7,9 +7,6 @@ falsepositives:
 - Other third party chromium browsers located in AppData
 filename: image_load_side_load_goopdate.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/05/20
 references:
 - https://www.ncsc.gov.uk/static-assets/documents/malware-analysis-reports/goofy-guineapig/NCSC-MAR-Goofy-Guineapig.pdf

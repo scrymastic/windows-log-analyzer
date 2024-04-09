@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_ntds_dit_uncommon_process.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/07/14
 references:
 - https://stealthbits.com/blog/extracting-password-hashes-from-the-ntds-dit-file/

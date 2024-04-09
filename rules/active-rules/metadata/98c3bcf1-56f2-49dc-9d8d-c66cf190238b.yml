@@ -6,10 +6,6 @@ falsepositives:
 - Legacy hosts
 filename: win_susp_ntlm_auth.yml
 level: low
-logsource:
-  definition: Requires events from Microsoft-Windows-NTLM/Operational
-  product: windows
-  service: ntlm
 modified: 2022/10/05
 references:
 - https://twitter.com/JohnLaTwC/status/1004895028995477505

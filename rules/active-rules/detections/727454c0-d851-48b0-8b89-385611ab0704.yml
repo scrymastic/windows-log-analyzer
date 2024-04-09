@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: unregmp2.exe
   - CommandLine|contains: ' /HideWMP'
 id: 727454c0-d851-48b0-8b89-385611ab0704
+logsource:
+  category: process_creation
+  product: windows

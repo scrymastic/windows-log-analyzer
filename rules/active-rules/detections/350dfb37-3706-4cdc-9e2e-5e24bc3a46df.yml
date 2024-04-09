@@ -6,3 +6,8 @@ detection:
     - Data|contains: statement:ALTER SERVER AUDIT
     - Data|contains: statement:DROP SERVER AUDIT
 id: 350dfb37-3706-4cdc-9e2e-5e24bc3a46df
+logsource:
+  definition: MSSQL audit policy must be enabled in order to receive this event in
+    the application log
+  product: windows
+  service: application

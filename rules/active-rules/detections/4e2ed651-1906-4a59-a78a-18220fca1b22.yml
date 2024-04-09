@@ -11,3 +11,6 @@ detection:
       - CommandLine|contains: '.exe shexec '
       - CommandLine|contains: ' runinteractive '
 id: 4e2ed651-1906-4a59-a78a-18220fca1b22
+logsource:
+  category: process_creation
+  product: windows

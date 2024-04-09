@@ -5,11 +5,6 @@ falsepositives:
 - Legitimate use of Hybrid Connection Manager via Azure function apps.
 filename: win_security_hybridconnectionmgr_svc_installation.yml
 level: high
-logsource:
-  definition: The 'System Security Extension' audit subcategory need to be enabled
-    to log the EID 4697
-  product: windows
-  service: security
 modified: 2022/10/09
 references:
 - https://twitter.com/Cyb3rWard0g/status/1381642789369286662

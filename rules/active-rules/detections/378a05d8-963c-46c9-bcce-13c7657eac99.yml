@@ -31,3 +31,6 @@ detection:
     - CommandLine|contains: --renderer-cmd-prefix
     - CommandLine|contains: --utility-cmd-prefix
 id: 378a05d8-963c-46c9-bcce-13c7657eac99
+logsource:
+  category: process_creation
+  product: windows

@@ -3,3 +3,8 @@ detection:
   - EventID|==: 3008
   - QueryName|contains: ufile.io
 id: 090ffaad-c01a-4879-850c-6d57da98452d
+logsource:
+  definition: 'Requirements: Microsoft-Windows-DNS Client Events/Operational Event
+    Log must be enabled/collected in order to receive the events.'
+  product: windows
+  service: dns-client

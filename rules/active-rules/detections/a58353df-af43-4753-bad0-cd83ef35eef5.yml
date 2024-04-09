@@ -10,3 +10,6 @@ detection:
     - CommandLine|contains: ' i'
     - CommandLine|contains: ' ntds'
 id: a58353df-af43-4753-bad0-cd83ef35eef5
+logsource:
+  category: process_creation
+  product: windows

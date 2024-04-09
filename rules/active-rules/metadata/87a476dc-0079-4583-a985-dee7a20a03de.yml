@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_registry_enumeration_for_credentials_cli.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://isc.sans.edu/diary/More+Data+Exfiltration/25698

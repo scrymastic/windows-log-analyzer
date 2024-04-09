@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_lolbin_kavremover.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://nasbench.medium.com/lolbined-using-kaspersky-endpoint-security-kes-installer-to-execute-arbitrary-commands-1c999f1b7fea

@@ -53,3 +53,6 @@ detection:
       - TargetFilename|contains: "\u051D"
       - TargetFilename|contains: "\u03BF"
 id: 4f1707b1-b50b-45b4-b5a2-3978b5a5d0d6
+logsource:
+  category: file_event
+  product: windows

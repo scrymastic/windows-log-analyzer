@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_codeintegrity_enforced_policy_block.yml
 level: high
-logsource:
-  product: windows
-  service: codeintegrity-operational
 modified: 2023/06/07
 references:
 - https://twitter.com/wdormann/status/1590434950335320065

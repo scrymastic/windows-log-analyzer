@@ -10,3 +10,6 @@ detection:
     - ImagePath|matches: \$VerbosePreference\.ToString\(
     - ImagePath|matches: \String\]\s*\$VerbosePreference
 id: 51aa9387-1c53-4153-91cc-d73c59ae1ca9
+logsource:
+  product: windows
+  service: system

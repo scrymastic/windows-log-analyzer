@@ -5,3 +5,6 @@ detection:
     - CommandLine|contains: .sys,
     - CommandLine|contains: '.sys '
 id: 731231b9-0b5d-4219-94dd-abb6959aa7ea
+logsource:
+  category: process_creation
+  product: windows

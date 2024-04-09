@@ -16,3 +16,6 @@ detection:
     - CommandLine|contains: History
     - CommandLine|contains: Bookmarks
 id: 24c77512-782b-448a-8950-eddb0785fc71
+logsource:
+  category: process_creation
+  product: windows

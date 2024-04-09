@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_browsers_inline_file_download.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/09
 references:
 - https://twitter.com/mrd0x/status/1478116126005641220

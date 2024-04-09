@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_winrm_execution_via_scripting_api_winrm_vbs.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/03
 references:
 - https://twitter.com/bohops/status/994405551751815170

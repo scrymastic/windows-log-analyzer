@@ -5,3 +5,6 @@ detection:
   - CommandLine|contains: ' /sc once '
   - CommandLine|contains: \Temp\
 id: 39019a4e-317f-4ce3-ae63-309a8c6b53c5
+logsource:
+  category: process_creation
+  product: windows

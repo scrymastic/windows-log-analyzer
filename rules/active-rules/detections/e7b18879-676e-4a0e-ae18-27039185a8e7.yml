@@ -17,3 +17,6 @@ detection:
     - Details|contains: :\Users\
     - Details|contains: \Pictures\
 id: e7b18879-676e-4a0e-ae18-27039185a8e7
+logsource:
+  category: registry_set
+  product: windows

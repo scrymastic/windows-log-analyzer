@@ -4,3 +4,6 @@ detection:
   - Details|!==: '%windir%\System32\ActXPrxy.dll'
   - Details|!==: C:\Windows\System32\ActXPrxy.dll
 id: 243380fa-11eb-4141-af92-e14925e77c1b
+logsource:
+  category: registry_set
+  product: windows

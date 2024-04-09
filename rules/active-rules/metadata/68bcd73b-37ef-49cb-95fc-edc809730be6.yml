@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmic_recon_unquoted_service_search.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/09/11
 references:
 - https://github.com/nccgroup/redsnarf/blob/35949b30106ae543dc6f2bc3f1be10c6d9a8d40e/redsnarf.py

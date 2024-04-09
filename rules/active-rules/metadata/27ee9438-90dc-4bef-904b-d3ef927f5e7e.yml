@@ -6,9 +6,6 @@ falsepositives:
   Investigation is required
 filename: proc_creation_win_kd_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - Internal Research

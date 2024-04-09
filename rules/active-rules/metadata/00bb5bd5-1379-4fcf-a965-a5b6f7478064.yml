@@ -5,9 +5,6 @@ description: Detects activity when the settings of the Windows firewall have bee
 falsepositives: []
 filename: win_firewall_as_setting_change.yml
 level: low
-logsource:
-  product: windows
-  service: firewall-as
 modified: 2023/04/21
 references:
 - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd364427(v=ws.10)

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_net_use_password_plaintext.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - Internal Research

@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: registry_set_special_accounts.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/01/26
 references:
 - https://thedfirreport.com/2022/07/11/select-xmrig-from-sqlserver/

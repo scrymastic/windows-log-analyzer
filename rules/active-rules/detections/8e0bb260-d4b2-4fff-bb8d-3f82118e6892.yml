@@ -19,3 +19,6 @@ detection:
   - CommandLine|contains: C:\Users\
   - CommandLine|contains: \AppData\Local\
 id: 8e0bb260-d4b2-4fff-bb8d-3f82118e6892
+logsource:
+  category: process_creation
+  product: windows

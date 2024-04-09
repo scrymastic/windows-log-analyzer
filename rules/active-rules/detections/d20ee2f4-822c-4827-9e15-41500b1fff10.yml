@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: '-id '
   - CommandLine|contains: '-region '
 id: d20ee2f4-822c-4827-9e15-41500b1fff10
+logsource:
+  category: process_creation
+  product: windows

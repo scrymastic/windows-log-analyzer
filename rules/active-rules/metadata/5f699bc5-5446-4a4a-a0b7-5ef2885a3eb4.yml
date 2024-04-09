@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: net_connection_win_rdp_reverse_tunnel.yml
 level: high
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/03/12
 references:
 - https://twitter.com/cyb3rops/status/1096842275437625346

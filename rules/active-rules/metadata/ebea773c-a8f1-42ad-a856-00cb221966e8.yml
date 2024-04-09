@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_dll_sideload_vmware_xfer.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.sentinelone.com/labs/lockbit-ransomware-side-loads-cobalt-strike-beacon-with-legitimate-vmware-utility/

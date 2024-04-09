@@ -22,3 +22,6 @@ detection:
     - CommandLine|contains: Invoke-Command
     - CommandLine|contains: Invoke-Expression
 id: 6812a10b-60ea-420c-832f-dfcc33b646ba
+logsource:
+  category: process_creation
+  product: windows

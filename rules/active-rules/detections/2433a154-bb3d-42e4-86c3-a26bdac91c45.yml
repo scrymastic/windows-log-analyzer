@@ -31,3 +31,6 @@ detection:
   - Image|not endswith: \PingCastleCloud.exe
   - Image|not endswith: \PingCastle.exe
 id: 2433a154-bb3d-42e4-86c3-a26bdac91c45
+logsource:
+  category: process_creation
+  product: windows

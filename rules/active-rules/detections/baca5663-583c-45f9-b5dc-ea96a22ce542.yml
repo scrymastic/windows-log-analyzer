@@ -18,3 +18,6 @@ detection:
     - TargetObject|endswith: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File
         Execution Options\HelpPane.exe\Debugger
 id: baca5663-583c-45f9-b5dc-ea96a22ce542
+logsource:
+  category: registry_event
+  product: windows

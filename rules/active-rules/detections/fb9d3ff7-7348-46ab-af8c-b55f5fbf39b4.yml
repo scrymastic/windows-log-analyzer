@@ -17,3 +17,6 @@ detection:
     - CommandLine|contains: -file "C:\Users\Public
     - CommandLine|contains: -file %Public%
 id: fb9d3ff7-7348-46ab-af8c-b55f5fbf39b4
+logsource:
+  category: process_creation
+  product: windows

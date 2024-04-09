@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_msedge_proxy_download.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/msedge_proxy/

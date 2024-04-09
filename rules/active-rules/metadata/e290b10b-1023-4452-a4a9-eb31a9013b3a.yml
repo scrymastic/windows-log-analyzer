@@ -9,9 +9,6 @@ falsepositives:
   known behavior is causing false positives, it can be exempted from the rule.
 filename: proc_creation_win_lolbin_data_exfiltration_by_using_datasvcutil.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/05/16
 references:
 - https://gist.github.com/teixeira0xfffff/837e5bfed0d1b0a29a7cb1e5dbdd9ca6

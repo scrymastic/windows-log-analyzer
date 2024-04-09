@@ -16,9 +16,6 @@ falsepositives:
 - Legitimate use
 filename: proc_creation_win_remote_access_tools_ultraviewer.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/03/14
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1219/T1219.md

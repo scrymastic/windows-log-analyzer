@@ -12,9 +12,6 @@ falsepositives:
   might be required.
 filename: net_connection_win_msiexec_http.yml
 level: high
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/02/01
 references:
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/msiexec

@@ -4,3 +4,6 @@ detection:
   - Image|not contains: C:\Program Files (x86)\G DATA\
   - Image|not contains: C:\Program Files\G DATA\
 id: 952ed57c-8f99-453d-aee0-53a49c22f95d
+logsource:
+  category: image_load
+  product: windows

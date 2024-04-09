@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_splwow64_cli_anomaly.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/25
 references:
 - https://twitter.com/sbousseaden/status/1429401053229891590?s=12

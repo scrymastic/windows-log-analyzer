@@ -5,9 +5,6 @@ falsepositives:
 - Administrative activity
 filename: proc_creation_win_susp_sysvol_access.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/01/07
 references:
 - https://adsecurity.org/?p=2288

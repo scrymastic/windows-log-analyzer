@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: registry_set_persistence_natural_language.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://persistence-info.github.io/Data/naturallanguage6.html

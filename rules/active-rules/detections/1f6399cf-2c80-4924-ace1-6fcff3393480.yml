@@ -6,3 +6,7 @@ detection:
   - ScriptBlockText|contains: .findall()
   - ScriptBlockText|contains: Properties.name
 id: 1f6399cf-2c80-4924-ace1-6fcff3393480
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - This will alert on legitimate macro usage as well, additional tuning is required
 filename: registry_event_office_trust_record_modification.yml
 level: medium
-logsource:
-  category: registry_event
-  product: windows
 modified: 2023/06/21
 references:
 - https://outflank.nl/blog/2018/01/16/hunting-for-evil-detect-macros-being-executed/

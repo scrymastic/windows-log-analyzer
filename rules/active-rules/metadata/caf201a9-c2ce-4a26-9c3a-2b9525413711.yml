@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_nteventlogfile_usage.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)

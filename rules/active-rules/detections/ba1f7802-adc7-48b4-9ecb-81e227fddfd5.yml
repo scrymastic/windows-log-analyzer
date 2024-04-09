@@ -6,3 +6,6 @@ detection:
   - or:
     - Image|endswith: \windump.exe
 id: ba1f7802-adc7-48b4-9ecb-81e227fddfd5
+logsource:
+  category: process_creation
+  product: windows

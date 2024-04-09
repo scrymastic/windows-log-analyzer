@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: pcwutl
   - CommandLine|contains: LaunchApplication
 id: 9386d78a-7207-4048-9c9f-a93a7c2d1c05
+logsource:
+  category: process_creation
+  product: windows

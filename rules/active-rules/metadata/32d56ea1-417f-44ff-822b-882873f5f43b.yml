@@ -5,11 +5,6 @@ falsepositives:
 - Unknown
 filename: win_security_impacket_psexec.yml
 level: high
-logsource:
-  definition: The advanced audit policy setting "Object Access > Audit Detailed File
-    Share" must be configured for Success/Failure
-  product: windows
-  service: security
 modified: 2022/09/22
 references:
 - https://blog.menasec.net/2019/02/threat-hunting-3-detecting-psexec.html

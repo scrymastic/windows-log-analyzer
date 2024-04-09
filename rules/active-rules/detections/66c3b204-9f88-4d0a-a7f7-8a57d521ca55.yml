@@ -18,3 +18,6 @@ detection:
     - CommandLine|contains: N0cmF0dW0rdWRwOi8v
     - CommandLine|contains: zdHJhdHVtK3VkcDovL
 id: 66c3b204-9f88-4d0a-a7f7-8a57d521ca55
+logsource:
+  category: process_creation
+  product: windows

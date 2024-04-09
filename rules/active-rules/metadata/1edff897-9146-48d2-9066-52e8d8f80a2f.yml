@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_invoke_webrequest_direct_ip.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.huntress.com/blog/critical-vulnerabilities-in-papercut-print-management-software

@@ -5,3 +5,6 @@ detection:
     - TargetFilename|endswith: \sigcmm-2.4.dll
     - TargetFilename|endswith: \Windows\Temp\tmp.bat
 id: 130c9e58-28ac-4f83-8574-0a4cc913b97e
+logsource:
+  category: file_event
+  product: windows

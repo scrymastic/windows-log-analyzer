@@ -13,3 +13,6 @@ detection:
   - CommandLine|contains: ' x '
   - CommandLine|contains: ' -o'
 id: b717b8fd-6467-4d7d-b3d3-27f9a463af77
+logsource:
+  category: process_creation
+  product: windows

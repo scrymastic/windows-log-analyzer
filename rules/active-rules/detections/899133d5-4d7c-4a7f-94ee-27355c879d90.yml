@@ -14,3 +14,6 @@ detection:
   - or:
     - ParentImage|not endswith: \AppData\Local\Programs\Microsoft VS Code\Code.exe
 id: 899133d5-4d7c-4a7f-94ee-27355c879d90
+logsource:
+  category: process_creation
+  product: windows

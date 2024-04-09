@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_set_persistence_reflectdebugger.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: ''
 references:
 - https://cocomelonc.github.io/malware/2022/11/02/malware-pers-18.html

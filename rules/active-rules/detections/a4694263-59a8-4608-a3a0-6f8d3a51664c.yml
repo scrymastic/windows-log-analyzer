@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: keymgr
   - CommandLine|contains: KRShowKeyMgr
 id: a4694263-59a8-4608-a3a0-6f8d3a51664c
+logsource:
+  category: process_creation
+  product: windows

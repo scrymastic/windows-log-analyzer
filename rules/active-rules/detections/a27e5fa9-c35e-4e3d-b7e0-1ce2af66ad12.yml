@@ -6,3 +6,6 @@ detection:
     - ServiceName|==: csexecsvc
     - ImagePath|endswith: \csexecsvc.exe
 id: a27e5fa9-c35e-4e3d-b7e0-1ce2af66ad12
+logsource:
+  product: windows
+  service: system

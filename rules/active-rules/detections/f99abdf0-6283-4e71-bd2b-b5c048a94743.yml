@@ -21,3 +21,6 @@ detection:
   - CommandLine|not endswith: .xltx
   - CommandLine|not endswith: .potx
 id: f99abdf0-6283-4e71-bd2b-b5c048a94743
+logsource:
+  category: process_creation
+  product: windows

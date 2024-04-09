@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: image_load_rundll32_remote_share_load.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://github.com/gabe-k/themebleed

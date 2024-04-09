@@ -11,3 +11,6 @@ detection:
     - EventID|==: 4776
     - Workstation|matches: ^[A-Za-z0-9]{16}$
 id: 72124974-a68b-4366-b990-d30e0b2a190d
+logsource:
+  product: windows
+  service: security

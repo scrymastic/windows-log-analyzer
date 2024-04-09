@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of cmstp.exe utility by legitimate user
 filename: proc_creation_win_uac_bypass_cmstp.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/08/30
 references:
 - https://eqllib.readthedocs.io/en/latest/analytics/e584f1a1-c303-4885-8a66-21360c90995b.html

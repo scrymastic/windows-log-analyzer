@@ -8,3 +8,6 @@ detection:
   - or:
     - TargetObject|contains: \CORECLR_PROFILER_PATH
 id: ad89044a-8f49-4673-9a55-cbd88a1b374f
+logsource:
+  category: registry_set
+  product: windows

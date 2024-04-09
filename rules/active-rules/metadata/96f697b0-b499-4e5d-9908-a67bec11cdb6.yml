@@ -12,9 +12,6 @@ falsepositives:
   add them as a filter when encountered
 filename: registry_delete_removal_com_hijacking_registry_key.yml
 level: medium
-logsource:
-  category: registry_delete
-  product: windows
 modified: 2023/01/19
 references:
 - https://github.com/OTRF/detection-hackathon-apt29/issues/7

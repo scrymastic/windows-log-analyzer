@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: ' copy '
     - CommandLine|contains: ' add '
 id: d7662ff6-9e97-4596-a61d-9839e32dee8d
+logsource:
+  category: process_creation
+  product: windows

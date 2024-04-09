@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_instalutil_no_log_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/02/04
 references:
 - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/

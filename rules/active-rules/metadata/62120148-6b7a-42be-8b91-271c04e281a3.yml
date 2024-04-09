@@ -7,9 +7,6 @@ falsepositives:
   the devices
 filename: registry_event_susp_mic_cam_access.yml
 level: high
-logsource:
-  category: registry_event
-  product: windows
 modified: 2022/10/09
 references:
 - https://medium.com/@7a616368/can-you-track-processes-accessing-the-camera-and-microphone-7e6885b37072

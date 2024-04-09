@@ -4,3 +4,6 @@ detection:
   - process|==: sshd
   - payload|startswith: 'Server listening on '
 id: 3ce8e9a4-bc61-4c9b-8e69-d7e2492a8781
+logsource:
+  product: windows
+  service: openssh

@@ -193,3 +193,6 @@ detection:
     - CommandLine|contains: Start-WebcamRecorder
     - CommandLine|contains: VolumeShadowCopyTools
 id: 02030f2f-6199-49ec-b258-ea71b07e03dc
+logsource:
+  category: process_creation
+  product: windows

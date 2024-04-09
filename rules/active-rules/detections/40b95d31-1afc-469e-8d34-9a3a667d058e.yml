@@ -9,3 +9,6 @@ detection:
       - OriginalFileName|==: rcsi.exe
   - Company|==: Microsoft Corporation
 id: 40b95d31-1afc-469e-8d34-9a3a667d058e
+logsource:
+  category: process_creation
+  product: windows

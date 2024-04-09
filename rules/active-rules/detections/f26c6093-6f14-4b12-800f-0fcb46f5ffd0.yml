@@ -58,3 +58,6 @@ detection:
     - CommandLine|contains: bWVtbW92Z
     - CommandLine|contains: ZW1tb3Zl
 id: f26c6093-6f14-4b12-800f-0fcb46f5ffd0
+logsource:
+  category: process_creation
+  product: windows

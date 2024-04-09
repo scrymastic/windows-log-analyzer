@@ -4,3 +4,6 @@ detection:
   - ShareName|contains: IPC
   - RelativeTargetName|==: protected_storage
 id: 45545954-4016-43c6-855e-eae8f1c369dc
+logsource:
+  product: windows
+  service: security

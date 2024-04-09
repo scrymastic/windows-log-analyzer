@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_pc_powercat.yml
 level: medium
-logsource:
-  category: ps_classic_start
-  product: windows
 modified: 2023/10/27
 references:
 - https://nmap.org/ncat/

@@ -39,3 +39,6 @@ detection:
         - Image|contains: \Public\
         - Image|contains: \PerfLogs\
 id: 8bc64091-6875-4881-aaf9-7bd25b5dda08
+logsource:
+  category: process_creation
+  product: windows

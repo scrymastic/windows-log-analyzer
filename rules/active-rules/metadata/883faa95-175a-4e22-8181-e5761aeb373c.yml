@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_service_dir.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://blog.truesec.com/2021/03/07/exchange-zero-day-proxylogon-and-hafnium/

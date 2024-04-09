@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: win_security_new_or_renamed_user_account_with_dollar_sign.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2024/01/16
 references:
 - https://twitter.com/SBousseaden/status/1387743867663958021

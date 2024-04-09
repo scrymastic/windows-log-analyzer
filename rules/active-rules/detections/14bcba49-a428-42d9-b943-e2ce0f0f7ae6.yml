@@ -14,3 +14,6 @@ detection:
     - ImagePath|contains: '{4}'
     - ImagePath|contains: '{5}'
 id: 14bcba49-a428-42d9-b943-e2ce0f0f7ae6
+logsource:
+  product: windows
+  service: system

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_base64_encoded_obfusc.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://app.any.run/tasks/fcadca91-3580-4ede-aff4-4d2bf809bf99/

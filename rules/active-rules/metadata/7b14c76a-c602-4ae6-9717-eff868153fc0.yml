@@ -8,10 +8,6 @@ falsepositives:
 - Unknown
 filename: win_security_hktl_nofilter.yml
 level: high
-logsource:
-  definition: 'Requirements: Audit Filtering Platform Policy Change needs to be enabled'
-  product: windows
-  service: security
 modified: ''
 references:
 - https://github.com/deepinstinct/NoFilter/blob/121d215ab130c5e8e3ad45a7e7fcd56f4de97b4d/NoFilter/Consts.cpp

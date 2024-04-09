@@ -5,3 +5,6 @@ detection:
     - Product|==: GoTo Opener
     - Company|==: LogMeIn, Inc.
 id: b6d98a4f-cef0-4abf-bbf6-24132854a83d
+logsource:
+  category: process_creation
+  product: windows

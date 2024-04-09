@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_regasm_regsvcs_uncommon_extension_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.fortiguard.com/threat-signal-report/4718?s=09

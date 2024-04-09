@@ -4,9 +4,6 @@ description: Detects a Windows command line executable started from MMC
 falsepositives: []
 filename: proc_creation_win_mmc_susp_child_process.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/07/14
 references:
 - https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/

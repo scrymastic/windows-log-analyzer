@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_susp_legitimate_app_dropping_exe.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/06/22
 references:
 - https://github.com/Neo23x0/sysmon-config/blob/3f808d9c022c507aae21a9346afba4a59dd533b9/sysmonconfig-export-block.xml#L1326

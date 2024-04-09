@@ -23,3 +23,6 @@ detection:
   - Image|contains: \Common Files\
   - Image|contains: \Temp\
 id: a07f0359-4c90-4dc4-a681-8ffea40b4f47
+logsource:
+  category: registry_set
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_office_exec_from_trusted_locations.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/10/18
 references:
 - Internal Research

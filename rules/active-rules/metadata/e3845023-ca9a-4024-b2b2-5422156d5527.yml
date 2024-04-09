@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_powershell_module_uncommon_creation.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/10/18
 references:
 - Internal Research

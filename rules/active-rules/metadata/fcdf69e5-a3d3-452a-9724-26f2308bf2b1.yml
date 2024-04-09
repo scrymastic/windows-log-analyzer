@@ -9,9 +9,6 @@ falsepositives:
   archive and the image via clicking and not extraction
 filename: proc_creation_win_susp_archiver_iso_phishing.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/1ZRR4H/status/1534259727059787783

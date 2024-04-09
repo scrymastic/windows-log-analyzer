@@ -2,3 +2,7 @@ detection:
 - and:
   - ScriptBlockText|contains: PromptForCredential
 id: ca8b77a9-d499-4095-b793-5d5f330d450e
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

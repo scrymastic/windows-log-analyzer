@@ -7,3 +7,6 @@ detection:
   - CommandLine|contains: \osk.exe
   - CommandLine|contains: \cmd.exe
 id: e9b61244-893f-427c-b287-3e708f321c6b
+logsource:
+  category: process_creation
+  product: windows

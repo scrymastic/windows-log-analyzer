@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_access_win_susp_shellcode_injection.yml
 level: high
-logsource:
-  category: process_access
-  product: windows
 modified: 2023/11/29
 references:
 - https://github.com/EmpireProject/PSInject

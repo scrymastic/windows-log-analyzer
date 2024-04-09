@@ -13,3 +13,6 @@ detection:
   - or:
     - CommandLine|not contains: MpCmdRun
 id: 15619216-e993-4721-b590-4c520615a67d
+logsource:
+  category: process_creation
+  product: windows

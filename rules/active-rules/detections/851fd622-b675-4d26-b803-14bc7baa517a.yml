@@ -6,3 +6,7 @@ detection:
     - ScriptBlockText|contains: WinPwn.exe
     - ScriptBlockText|contains: WinPwn.ps1
 id: 851fd622-b675-4d26-b803-14bc7baa517a
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

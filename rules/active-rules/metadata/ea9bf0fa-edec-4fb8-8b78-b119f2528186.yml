@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: win_defender_malware_detected_amsi_source.yml
 level: high
-logsource:
-  product: windows
-  service: windefend
 modified: 2022/12/07
 references:
 - https://docs.microsoft.com/en-us/windows/win32/amsi/how-amsi-helps

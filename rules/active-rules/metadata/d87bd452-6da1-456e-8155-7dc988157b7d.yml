@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_rundll32_susp_shellexec_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/30
 references:
 - https://redcanary.com/blog/raspberry-robin/

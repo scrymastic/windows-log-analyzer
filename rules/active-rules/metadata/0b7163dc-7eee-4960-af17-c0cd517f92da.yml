@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmic_service_manipulation.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_windows.html

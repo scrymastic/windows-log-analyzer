@@ -5,3 +5,6 @@ detection:
   - or:
     - CommandLine|contains: ' -o DumpStack.log'
 id: 4f647cfa-b598-4e12-ad69-c68dd16caef8
+logsource:
+  category: process_creation
+  product: windows

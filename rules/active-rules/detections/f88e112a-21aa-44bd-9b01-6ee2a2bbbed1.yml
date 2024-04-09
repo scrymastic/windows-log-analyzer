@@ -12,3 +12,6 @@ detection:
   - IpAddress|not cidr: fc00::/7
   - IpAddress|not cidr: fe80::/10
 id: f88e112a-21aa-44bd-9b01-6ee2a2bbbed1
+logsource:
+  product: windows
+  service: security

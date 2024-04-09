@@ -15,3 +15,6 @@ detection:
       - CommandLine|endswith: ' /m:ntlm'
       - CommandLine|endswith: ' /m:kerb'
 id: d9367cbb-c2e0-47ce-bdc0-128cb6da898d
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_hktl_krbrelayup.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://github.com/Dec0ne/KrbRelayUp

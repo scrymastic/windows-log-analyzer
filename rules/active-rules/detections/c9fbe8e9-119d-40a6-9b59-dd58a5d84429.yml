@@ -10,3 +10,6 @@ detection:
     - CommandLine|contains: safeboot
     - CommandLine|contains: network
 id: c9fbe8e9-119d-40a6-9b59-dd58a5d84429
+logsource:
+  category: process_creation
+  product: windows

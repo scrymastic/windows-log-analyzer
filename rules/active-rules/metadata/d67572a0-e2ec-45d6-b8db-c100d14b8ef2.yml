@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: registry_event_net_ntlm_downgrade.yml
 level: high
-logsource:
-  category: registry_event
-  product: windows
 modified: 2022/11/29
 references:
 - https://web.archive.org/web/20171113231705/https://www.optiv.com/blog/post-exploitation-using-netntlm-downgrade-attacks

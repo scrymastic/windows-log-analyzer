@@ -11,9 +11,6 @@ falsepositives:
 - Unlikely
 filename: registry_set_persistence_lsa_extension.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://persistence-info.github.io/Data/lsaaextension.html

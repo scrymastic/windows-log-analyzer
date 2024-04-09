@@ -19,10 +19,6 @@ falsepositives:
 - Unknown
 filename: win_security_disable_event_auditing.yml
 level: low
-logsource:
-  definition: dfd8c0f4-e6ad-4e07-b91b-f2fca0ddef64
-  product: windows
-  service: security
 modified: 2023/11/15
 references:
 - https://docs.google.com/presentation/d/1dkrldTTlN3La-OjWtkWJBb4hVk6vfsSMBFBERs6R8zA/edit

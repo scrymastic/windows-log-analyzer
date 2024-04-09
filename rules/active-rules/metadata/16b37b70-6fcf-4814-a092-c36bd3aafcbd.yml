@@ -5,10 +5,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_shellcode_b64.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2024/01/25
 references:
 - https://twitter.com/cyb3rops/status/1063072865992523776

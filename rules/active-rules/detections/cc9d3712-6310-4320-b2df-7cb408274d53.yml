@@ -1,6 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \lodctr.exe
-  - OriginalFileName|==: LODCTR.EXE
-  - CommandLine|None: ' -r'
-id: cc9d3712-6310-4320-b2df-7cb408274d53

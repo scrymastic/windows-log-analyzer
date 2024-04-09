@@ -5,3 +5,6 @@ detection:
     - ParentImage|endswith: \TrustedInstaller.exe
     - ParentImage|endswith: \ProcessHacker.exe
 id: 883835a7-df45-43e4-bf1d-4268768afda4
+logsource:
+  category: process_creation
+  product: windows

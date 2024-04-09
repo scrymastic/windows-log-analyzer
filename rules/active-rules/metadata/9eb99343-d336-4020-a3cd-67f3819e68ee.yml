@@ -6,9 +6,6 @@ falsepositives:
 - User using a disabled account
 filename: win_security_susp_failed_logon_reasons.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2022/06/29
 references:
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4625

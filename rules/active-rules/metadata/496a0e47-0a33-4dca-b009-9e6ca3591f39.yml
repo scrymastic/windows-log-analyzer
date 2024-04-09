@@ -6,9 +6,6 @@ falsepositives:
 - Windows Domains with DFL 2003 and legacy systems
 filename: win_security_susp_rc4_kerberos.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2022/06/19
 references:
 - https://adsecurity.org/?p=3458

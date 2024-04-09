@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_firewall_as_add_rule_susp_folder.yml
 level: high
-logsource:
-  product: windows
-  service: firewall-as
 modified: 2024/01/22
 references:
 - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd364427(v=ws.10)

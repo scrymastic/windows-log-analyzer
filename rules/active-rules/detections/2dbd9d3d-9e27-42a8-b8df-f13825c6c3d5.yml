@@ -6,3 +6,6 @@ detection:
     - OriginalFileName|==: RUNDLL32.EXE
   - CommandLine|contains: C:\windows\system32\davclnt.dll,DavSetCookie
 id: 2dbd9d3d-9e27-42a8-b8df-f13825c6c3d5
+logsource:
+  category: process_creation
+  product: windows

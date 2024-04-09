@@ -3,3 +3,6 @@ detection:
   - Image|endswith: \splwow64.exe
   - CommandLine|endswith: splwow64.exe
 id: 1f1a8509-2cbb-44f5-8751-8e1571518ce2
+logsource:
+  category: process_creation
+  product: windows

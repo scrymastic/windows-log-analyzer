@@ -6,3 +6,6 @@ detection:
     - OriginalFileName|==: Cmd.Exe
   - CommandLine|contains: \TEMP\ScreenConnect\
 id: b1f73849-6329-4069-bc8f-78a604bb8b23
+logsource:
+  category: process_creation
+  product: windows

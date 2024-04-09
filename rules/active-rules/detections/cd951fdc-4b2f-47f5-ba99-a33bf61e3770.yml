@@ -24,3 +24,6 @@ detection:
     - ParentImage|startswith: C:\Program Files\Google\Update\
     - ParentImage|startswith: C:\Program Files (x86)\Google\Update\
 id: cd951fdc-4b2f-47f5-ba99-a33bf61e3770
+logsource:
+  category: process_creation
+  product: windows

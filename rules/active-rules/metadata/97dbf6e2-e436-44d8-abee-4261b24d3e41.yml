@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_iis_connection_strings_decryption.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/30
 references:
 - https://www.elastic.co/guide/en/security/current/microsoft-iis-connection-strings-decryption.html

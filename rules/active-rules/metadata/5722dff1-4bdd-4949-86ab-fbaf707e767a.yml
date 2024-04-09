@@ -7,9 +7,6 @@ falsepositives:
   Apply additional filters accordingly
 filename: proc_creation_win_pua_system_informer.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://github.com/winsiderss/systeminformer

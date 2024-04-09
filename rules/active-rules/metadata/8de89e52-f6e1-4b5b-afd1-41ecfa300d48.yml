@@ -6,9 +6,6 @@ falsepositives:
 - Other legitimate "Windows Terminal" profiles
 filename: proc_creation_win_windows_terminal_susp_children.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://persistence-info.github.io/Data/windowsterminalprofile.html

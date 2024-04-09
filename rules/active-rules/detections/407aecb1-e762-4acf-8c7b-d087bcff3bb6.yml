@@ -10,3 +10,7 @@ detection:
   - Image|not contains: :\Windows\system32\
   - Image|not contains: :\Windows\SysWOW64\
 id: 407aecb1-e762-4acf-8c7b-d087bcff3bb6
+logsource:
+  category: file_access
+  definition: 'Requirements: Microsoft-Windows-Kernel-File ETW provider'
+  product: windows

@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_forfiles_child_process_masquerading.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.hexacorn.com/blog/2023/12/31/1-little-known-secret-of-forfiles-exe/

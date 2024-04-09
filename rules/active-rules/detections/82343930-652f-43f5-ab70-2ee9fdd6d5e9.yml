@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: RUNDLL32.EXE
   - CommandLine|contains: RunDll_ShellExecuteW
 id: 82343930-652f-43f5-ab70-2ee9fdd6d5e9
+logsource:
+  category: process_creation
+  product: windows

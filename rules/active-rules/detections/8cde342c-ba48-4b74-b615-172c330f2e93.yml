@@ -8,3 +8,6 @@ detection:
     - Hashes|contains: IMPHASH=407ca0f7b523319d758a40d7c0193699
     - Hashes|contains: IMPHASH=281d618f4e6271e527e6386ea6f748de
 id: 8cde342c-ba48-4b74-b615-172c330f2e93
+logsource:
+  category: image_load
+  product: windows

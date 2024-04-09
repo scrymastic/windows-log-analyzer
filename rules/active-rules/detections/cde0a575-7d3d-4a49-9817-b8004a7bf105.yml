@@ -20,3 +20,6 @@ detection:
   - ApplicationPath|not contains: :\Windows\Temp\
   - ApplicationPath|not contains: \AppData\Local\Temp\
 id: cde0a575-7d3d-4a49-9817-b8004a7bf105
+logsource:
+  product: windows
+  service: firewall-as

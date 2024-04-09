@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_sc_sdset_deny_service_access.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/28
 references:
 - https://www.sans.org/blog/red-team-tactics-hiding-windows-services/

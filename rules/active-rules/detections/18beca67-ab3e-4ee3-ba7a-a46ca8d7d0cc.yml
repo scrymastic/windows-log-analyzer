@@ -14,3 +14,6 @@ detection:
       - ObjectName|contains: WINEVT\Channels\Microsoft-Windows-Sysmon/Operational
     - AccessMask|==: 65536
 id: 18beca67-ab3e-4ee3-ba7a-a46ca8d7d0cc
+logsource:
+  product: windows
+  service: security

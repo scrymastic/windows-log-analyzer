@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: '-- '
   - CommandLine|contains: collect
 id: 9257c05b-4a4a-48e5-a670-b7b073cf401b
+logsource:
+  category: process_creation
+  product: windows

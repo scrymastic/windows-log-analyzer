@@ -16,3 +16,7 @@ detection:
     - ScriptBlockText|contains: -HistorySaveStyle
     - ScriptBlockText|contains: SaveNothing
 id: 26b692dc-1722-49b2-b496-a8258aa6371d
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -11,3 +11,6 @@ detection:
       - Image|endswith: \schdplus.exe
       - Image|endswith: \winproj.exe
 id: 551d9c1f-816c-445b-a7a6-7a3864720d60
+logsource:
+  category: process_creation
+  product: windows

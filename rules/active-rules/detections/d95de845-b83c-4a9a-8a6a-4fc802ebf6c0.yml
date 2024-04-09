@@ -25,3 +25,6 @@ detection:
   - CommandLine|contains: ' accounts '
   - CommandLine|contains: ' /do'
 id: d95de845-b83c-4a9a-8a6a-4fc802ebf6c0
+logsource:
+  category: process_creation
+  product: windows

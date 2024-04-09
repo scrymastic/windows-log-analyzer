@@ -7,3 +7,7 @@ detection:
     - ScriptBlockText|contains: Import-Certificate
     - ScriptBlockText|contains: Cert:\LocalMachine\Root
 id: 42821614-9264-4761-acfc-5772c3286f76
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

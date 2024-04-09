@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wuauclt_dll_loading.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/11
 references:
 - https://dtm.uk/wuauclt/

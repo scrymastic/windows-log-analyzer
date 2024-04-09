@@ -4,3 +4,6 @@ detection:
       Shell Folders
   - TargetObject|endswith: Startup
 id: 9c226817-8dc9-46c2-a58d-66655aafd7dc
+logsource:
+  category: registry_set
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - Software installers that pull packages from remote systems and execute them
 filename: proc_creation_win_powershell_susp_download_patterns.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/03/01
 references:
 - https://gist.github.com/jivoi/c354eaaf3019352ce32522f916c03d70

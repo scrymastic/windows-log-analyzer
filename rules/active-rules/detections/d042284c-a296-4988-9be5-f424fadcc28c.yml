@@ -5,3 +5,6 @@ detection:
   - CommandLine|contains: '/logfile= '
   - CommandLine|contains: /LogToConsole=false
 id: d042284c-a296-4988-9be5-f424fadcc28c
+logsource:
+  category: process_creation
+  product: windows

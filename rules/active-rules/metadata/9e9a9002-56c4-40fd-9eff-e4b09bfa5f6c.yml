@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: image_load_susp_dll_load_system_process.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/09/18
 references:
 - https://github.com/hackerhouse-opensource/iscsicpl_bypassUAC (Idea)

@@ -14,9 +14,6 @@ falsepositives:
   of Process Hacker must be investigated and allowed on a case by case basis
 filename: proc_creation_win_pua_process_hacker.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/11
 references:
 - https://processhacker.sourceforge.io/

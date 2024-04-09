@@ -7,3 +7,6 @@ detection:
     - ImagePath|contains: '.bat & del '
     - ImagePath|contains: __output 2^>^&1 >
 id: 52a85084-6989-40c3-8f32-091e12e13f09
+logsource:
+  product: windows
+  service: system

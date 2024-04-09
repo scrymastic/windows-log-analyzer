@@ -25,3 +25,7 @@ detection:
     - SubcategoryGuid|==: '{0CCE9217-69AE-11D9-BED3-505054503030}'
     - AuditPolicyChanges|contains: '%%8448'
 id: ab4561b1-6c7e-48a7-ad08-087cfb9ce8f1
+logsource:
+  definition: dfd8c0f4-e6ad-4e07-b91b-f2fca0ddef64
+  product: windows
+  service: security

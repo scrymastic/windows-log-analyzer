@@ -14,3 +14,6 @@ detection:
     - CommandLine|contains: ' Mini'
     - CommandLine|contains: ' WithHeap'
 id: dee0a7a3-f200-4112-a99b-952196d81e42
+logsource:
+  category: process_creation
+  product: windows

@@ -5,3 +5,6 @@ detection:
   - Details|startswith: '/R '
   - Details|endswith: .xll
 id: 961e33d1-4f86-4fcf-80ab-930a708b2f82
+logsource:
+  category: registry_set
+  product: windows

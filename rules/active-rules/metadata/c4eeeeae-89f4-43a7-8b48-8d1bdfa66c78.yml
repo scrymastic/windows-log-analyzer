@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_schtasks_reg_loader_encoded.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://thedfirreport.com/2022/02/21/qbot-and-zerologon-lead-to-full-domain-compromise/

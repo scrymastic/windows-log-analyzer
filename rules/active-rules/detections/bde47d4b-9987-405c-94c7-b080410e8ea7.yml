@@ -8,3 +8,7 @@ detection:
     - ScriptBlockText|contains: ConsoleHost_history.txt
     - ScriptBlockText|contains: (Get-PSReadlineOption).HistorySavePath
 id: bde47d4b-9987-405c-94c7-b080410e8ea7
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

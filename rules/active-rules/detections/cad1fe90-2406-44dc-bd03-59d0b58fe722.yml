@@ -4,3 +4,6 @@ detection:
     - TargetFilename|endswith: \NPPSpy.txt
     - TargetFilename|endswith: \NPPSpy.dll
 id: cad1fe90-2406-44dc-bd03-59d0b58fe722
+logsource:
+  category: file_event
+  product: windows

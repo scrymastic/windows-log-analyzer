@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: win_security_rdp_bluekeep_poc_scanner.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2022/12/25
 references:
 - https://twitter.com/AdamTheAnalyst/status/1134394070045003776

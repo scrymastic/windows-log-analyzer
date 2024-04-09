@@ -6,9 +6,6 @@ falsepositives:
 - Installation of unsigned packages for testing purposes
 filename: proc_creation_win_powershell_install_unsigned_appx_packages.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/msix/package/unsigned-package

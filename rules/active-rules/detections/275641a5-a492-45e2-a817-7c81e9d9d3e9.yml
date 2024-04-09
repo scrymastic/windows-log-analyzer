@@ -3,3 +3,6 @@ detection:
   - TargetObject|endswith: Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun
   - Details|==: DWORD (0x00000001)
 id: 275641a5-a492-45e2-a817-7c81e9d9d3e9
+logsource:
+  category: registry_set
+  product: windows

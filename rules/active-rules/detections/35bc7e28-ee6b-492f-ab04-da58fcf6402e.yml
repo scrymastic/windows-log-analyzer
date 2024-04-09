@@ -10,3 +10,6 @@ detection:
     - AccessList|contains: AppendData
     - AccessList|contains: AddSubdirectory
 id: 35bc7e28-ee6b-492f-ab04-da58fcf6402e
+logsource:
+  product: windows
+  service: security

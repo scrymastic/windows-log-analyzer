@@ -6,9 +6,6 @@ falsepositives:
 - Rare legitimate access to anonfiles.com
 filename: dns_query_win_anonymfiles_com.yml
 level: high
-logsource:
-  category: dns_query
-  product: windows
 modified: 2023/01/16
 references:
 - https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-blackbyte

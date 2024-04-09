@@ -7,9 +7,6 @@ falsepositives:
 - Rare intended use of hidden services
 filename: proc_creation_win_powershell_hide_services_via_set_service.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/Alh4zr3d/status/1580925761996828672

@@ -14,3 +14,6 @@ detection:
       - CommandLine|contains: -uTrustedInstaller
       - CommandLine|contains: ' --ti '
 id: bdeeabc9-ff2a-4a51-be59-bb253aac7891
+logsource:
+  category: process_creation
+  product: windows

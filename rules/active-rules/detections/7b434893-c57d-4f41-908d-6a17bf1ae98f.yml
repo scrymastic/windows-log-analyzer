@@ -12,3 +12,8 @@ detection:
   - or:
     - Image|not contains: :\Users\Public\IBM\ClientSolutions\Start_Programs\
 id: 7b434893-c57d-4f41-908d-6a17bf1ae98f
+logsource:
+  category: network_connection
+  definition: Use the following config to generate the necessary Event ID 3 Network
+    Connection events
+  product: windows

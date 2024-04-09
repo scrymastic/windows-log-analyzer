@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate software naming their tasks as GUIDs
 filename: proc_creation_win_schtasks_guid_task_name.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://thedfirreport.com/2022/10/31/follina-exploit-leads-to-domain-compromise/

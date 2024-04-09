@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_ruby_inline_command_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet

@@ -4,3 +4,6 @@ detection:
   - CommandLine|contains: .DownloadFile
   - CommandLine|contains: System.Net.WebClient
 id: 8f70ac5f-1f6f-4f8e-b454-db19561216c5
+logsource:
+  category: process_creation
+  product: windows

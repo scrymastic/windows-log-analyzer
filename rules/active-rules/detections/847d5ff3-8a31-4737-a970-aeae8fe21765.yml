@@ -56,3 +56,6 @@ detection:
       - CommandLine|contains: Webroot SecureAnywhere
       - CommandLine|contains: Windows Defender
 id: 847d5ff3-8a31-4737-a970-aeae8fe21765
+logsource:
+  category: process_creation
+  product: windows

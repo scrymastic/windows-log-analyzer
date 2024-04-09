@@ -8,3 +8,6 @@ detection:
   - CommandLine|contains: section:httplogging
   - CommandLine|contains: dontLog:true
 id: e4ed6030-ffe5-4e6a-8a8a-ab3c1ab9d94e
+logsource:
+  category: process_creation
+  product: windows

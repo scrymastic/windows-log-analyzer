@@ -11,3 +11,6 @@ detection:
     - ImagePath|contains: pwdump
     - ImagePath|contains: servpw
 id: 4976aa50-8f41-45c6-8b15-ab3fc10e79ed
+logsource:
+  product: windows
+  service: system

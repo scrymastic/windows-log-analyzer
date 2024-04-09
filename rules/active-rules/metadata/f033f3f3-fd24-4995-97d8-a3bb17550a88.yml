@@ -6,9 +6,6 @@ falsepositives:
 - Unknown (data set is too small; further testing needed)
 filename: win_security_wmi_persistence.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2022/11/29
 references:
 - https://twitter.com/mattifestation/status/899646620148539397

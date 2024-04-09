@@ -5,3 +5,6 @@ detection:
     - processPath|endswith: \powershell.exe
     - processPath|endswith: \pwsh.exe
 id: fe3a2d49-f255-4d10-935c-bda7391108eb
+logsource:
+  product: windows
+  service: bits-client

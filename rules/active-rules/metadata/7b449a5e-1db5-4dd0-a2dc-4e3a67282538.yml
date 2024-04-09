@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_hidden_user_creation.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2024/01/16
 references:
 - https://twitter.com/SBousseaden/status/1387743867663958021

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_gpg4win_encryption.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html

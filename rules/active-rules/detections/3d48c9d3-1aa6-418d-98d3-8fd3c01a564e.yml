@@ -2,3 +2,6 @@ detection:
 - and:
   - ParentImage|endswith: \mftrace.exe
 id: 3d48c9d3-1aa6-418d-98d3-8fd3c01a564e
+logsource:
+  category: process_creation
+  product: windows

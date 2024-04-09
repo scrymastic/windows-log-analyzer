@@ -14,3 +14,6 @@ detection:
     - Image|not startswith: C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_
     - Image|not endswith: \HxTsr.exe
 id: 9976fa64-2804-423c-8a5b-646ade840773
+logsource:
+  category: network_connection
+  product: windows

@@ -1,8 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \esentutl.exe
-    - OriginalFileName|==: esentutl.exe
-  - CommandLine|None: -r
-  - CommandLine|contains: \Windows\WebCache
-id: 6a69f62d-ce75-4b57-8dce-6351eb55b362

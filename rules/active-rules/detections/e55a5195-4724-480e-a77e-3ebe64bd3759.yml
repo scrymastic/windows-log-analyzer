@@ -7,3 +7,7 @@ detection:
   - ScriptBlockText|contains: .run
   - ScriptBlockText|contains: (window.close)
 id: e55a5195-4724-480e-a77e-3ebe64bd3759
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -9,11 +9,6 @@ falsepositives:
 - Unknown
 filename: win_security_windows_defender_exclusions_write_access.yml
 level: medium
-logsource:
-  definition: 'Requirements: Audit Policy : Security Settings/Local Policies/Audit
-    Policy, Registry System Access Control (SACL): Auditing/User'
-  product: windows
-  service: security
 modified: 2023/11/11
 references:
 - https://www.bleepingcomputer.com/news/security/gootkit-malware-bypasses-windows-defender-by-setting-path-exclusions/

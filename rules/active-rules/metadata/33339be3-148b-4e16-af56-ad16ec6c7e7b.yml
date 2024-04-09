@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_findstr_lnk.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/01/15
 references:
 - https://www.bleepingcomputer.com/news/security/hhsgov-open-redirect-used-by-coronavirus-phishing-to-spread-malware/

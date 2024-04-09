@@ -19,3 +19,6 @@ detection:
     - CommandLine|contains: ' -c wscript'
     - CommandLine|contains: ' -c cscript'
 id: 50d66fb0-03f8-4da0-8add-84e77d12a020
+logsource:
+  category: process_creation
+  product: windows

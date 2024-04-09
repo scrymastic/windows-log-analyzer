@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: ' -RemoveDefinitions'
   - CommandLine|contains: ' -All'
 id: 9719a8aa-401c-41af-8108-ced7ec9cd75c
+logsource:
+  category: process_creation
+  product: windows

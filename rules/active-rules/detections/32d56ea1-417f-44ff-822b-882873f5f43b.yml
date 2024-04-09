@@ -7,3 +7,8 @@ detection:
     - RelativeTargetName|contains: RemCom_stdout
     - RelativeTargetName|contains: RemCom_stderr
 id: 32d56ea1-417f-44ff-822b-882873f5f43b
+logsource:
+  definition: The advanced audit policy setting "Object Access > Audit Detailed File
+    Share" must be configured for Success/Failure
+  product: windows
+  service: security

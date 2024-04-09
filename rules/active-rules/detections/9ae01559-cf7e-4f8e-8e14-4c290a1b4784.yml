@@ -26,3 +26,6 @@ detection:
     - Image|not startswith: C:\Users\
     - Image|not contains: \AppData\Local\Microsoft\OneDrive\
 id: 9ae01559-cf7e-4f8e-8e14-4c290a1b4784
+logsource:
+  category: image_load
+  product: windows

@@ -17,3 +17,6 @@ detection:
     - CommandLine|contains: ' -cn '
     - CommandLine|contains: ' -cp '
 id: 12827a56-61a4-476a-a9cb-f3068f191073
+logsource:
+  category: process_creation
+  product: windows

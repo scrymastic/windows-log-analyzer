@@ -20,3 +20,6 @@ detection:
     - CommandLine|endswith: .vbs
     - CommandLine|endswith: .zip
 id: 94771a71-ba41-4b6e-a757-b531372eaab6
+logsource:
+  category: process_creation
+  product: windows

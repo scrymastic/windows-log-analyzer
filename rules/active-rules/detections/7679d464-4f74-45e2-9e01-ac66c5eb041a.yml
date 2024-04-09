@@ -5,3 +5,6 @@ detection:
     - Image|endswith: PasswordDump.exe
     - OriginalFileName|endswith: PasswordDump.exe
 id: 7679d464-4f74-45e2-9e01-ac66c5eb041a
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of PsService by an administrator
 filename: proc_creation_win_sysinternals_psservice.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/24
 references:
 - https://docs.microsoft.com/en-us/sysinternals/downloads/psservice

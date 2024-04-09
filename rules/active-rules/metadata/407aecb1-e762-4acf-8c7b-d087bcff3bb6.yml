@@ -12,10 +12,6 @@ falsepositives:
   may access these files (for any reason).
 filename: file_access_win_credential_manager_access.yml
 level: medium
-logsource:
-  category: file_access
-  definition: 'Requirements: Microsoft-Windows-Kernel-File ETW provider'
-  product: windows
 modified: 2023/12/18
 references:
 - https://hunter2.gitbook.io/darthsidious/privilege-escalation/mimikatz

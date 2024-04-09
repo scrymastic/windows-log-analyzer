@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: registry_add_malware_ursnif.yml
 level: high
-logsource:
-  category: registry_add
-  product: windows
 modified: 2023/02/07
 references:
 - https://blog.yoroi.company/research/ursnif-long-live-the-steganography/

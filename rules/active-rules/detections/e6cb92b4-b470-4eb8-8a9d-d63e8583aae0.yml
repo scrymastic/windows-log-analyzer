@@ -5,3 +5,7 @@ detection:
   - ScriptBlockText|contains: shellexec_rundll
   - ScriptBlockText|contains: powershell
 id: e6cb92b4-b470-4eb8-8a9d-d63e8583aae0
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: file_event_win_hktl_mimikatz_files.yml
 level: critical
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/02/16
 references:
 - https://cobalt.io/blog/kerberoast-attack-techniques

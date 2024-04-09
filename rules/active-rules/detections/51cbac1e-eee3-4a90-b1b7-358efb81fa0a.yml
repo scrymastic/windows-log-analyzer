@@ -5,3 +5,6 @@ detection:
     - Image|endswith: \WMIC.exe
   - CommandLine|contains: /Namespace:\\\\root\\Microsoft\\Windows\\Defender
 id: 51cbac1e-eee3-4a90-b1b7-358efb81fa0a
+logsource:
+  category: process_creation
+  product: windows

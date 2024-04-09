@@ -9,3 +9,6 @@ detection:
     - param2|==: stopped
     - param2|==: "arr\xEAt\xE9"
 id: 6c0a7755-6d31-44fa-80e1-133e57752680
+logsource:
+  product: windows
+  service: system

@@ -2,3 +2,6 @@ detection:
 - and:
   - TargetObject|endswith: _Classes\mscfile\shell\open\command\(Default)
 id: 674202d0-b22a-4af4-ae5f-2eda1f3da1af
+logsource:
+  category: registry_set
+  product: windows

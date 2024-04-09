@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_system_service_install_sliver.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - https://github.com/BishopFox/sliver/blob/79f2d48fcdfc2bee4713b78d431ea4b27f733f30/client/command/commands.go#L1231

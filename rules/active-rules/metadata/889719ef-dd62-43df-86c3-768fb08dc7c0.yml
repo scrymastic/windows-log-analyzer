@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_mailboxexport_share.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/26
 references:
 - https://youtu.be/5mqid-7zp8k?t=2481

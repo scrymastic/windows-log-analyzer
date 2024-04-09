@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of the library for administrative activity
 filename: proc_creation_win_powershell_active_directory_module_dll_import.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://github.com/samratashok/ADModule

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmic_recon_product.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://thedfirreport.com/2023/03/06/2022-year-in-review/

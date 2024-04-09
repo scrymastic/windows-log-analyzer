@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate usage of the applications from the Windows Store
 filename: win_appmodel_runtime_sysinternals_tools_appx_execution.yml
 level: low
-logsource:
-  product: windows
-  service: appmodel-runtime
 modified: 2023/09/12
 references:
 - Internal Research

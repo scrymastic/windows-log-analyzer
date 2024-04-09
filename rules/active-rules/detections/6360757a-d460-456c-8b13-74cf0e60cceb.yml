@@ -8,3 +8,6 @@ detection:
     - ImageLoaded|startswith: C:\windows\system32\wermgr.exe.local\
   - ImageLoaded|endswith: \comctl32.dll
 id: 6360757a-d460-456c-8b13-74cf0e60cceb
+logsource:
+  category: image_load
+  product: windows

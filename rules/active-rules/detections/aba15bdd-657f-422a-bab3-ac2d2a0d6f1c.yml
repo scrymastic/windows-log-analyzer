@@ -12,3 +12,6 @@ detection:
     - TargetFilename|endswith: .dump
     - TargetFilename|endswith: .hdmp
 id: aba15bdd-657f-422a-bab3-ac2d2a0d6f1c
+logsource:
+  category: file_event
+  product: windows

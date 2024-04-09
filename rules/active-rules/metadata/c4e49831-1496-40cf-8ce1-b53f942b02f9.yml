@@ -9,9 +9,6 @@ falsepositives:
   with a different name. Usually like this "PAExec-[XXXXX]-[ComputerName]"
 filename: proc_creation_win_renamed_paexec.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://www.poweradmin.com/paexec/

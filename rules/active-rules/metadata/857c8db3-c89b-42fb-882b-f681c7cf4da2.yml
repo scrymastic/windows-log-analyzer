@@ -5,9 +5,6 @@ falsepositives:
 - Valid user connecting using RDP
 filename: image_load_lsass_unsigned_image_load.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: 2021/11/27
 references:
 - https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment

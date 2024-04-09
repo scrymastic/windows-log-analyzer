@@ -4,3 +4,7 @@ detection:
   - ScriptBlockText|contains: '-Identity '
   - ScriptBlockText|contains: '-Members '
 id: 48a45d45-8112-416b-8a67-46e03a4b2107
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

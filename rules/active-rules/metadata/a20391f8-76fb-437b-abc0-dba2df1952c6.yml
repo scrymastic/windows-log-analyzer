@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use by developers as part of NodeJS development with Visual Studio Tools
 filename: proc_creation_win_pressanykey_lolbin_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/11
 references:
 - https://twitter.com/mrd0x/status/1463526834918854661

@@ -9,9 +9,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_webshell_hacking.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/09
 references:
 - https://youtu.be/7aemGhaE9ds?t=641

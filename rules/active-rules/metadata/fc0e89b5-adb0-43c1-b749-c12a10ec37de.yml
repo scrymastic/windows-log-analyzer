@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_reg_delete_safeboot.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://www.trendmicro.com/en_us/research/22/e/avoslocker-ransomware-variant-abuses-driver-file-to-disable-anti-Virus-scans-log4shell.html

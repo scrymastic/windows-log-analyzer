@@ -10,9 +10,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_bash_command_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/08/15
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Bash/

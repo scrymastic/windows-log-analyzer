@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_registry_install_reg_debugger_backdoor.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/08/06
 references:
 - https://blogs.technet.microsoft.com/jonathantrull/2016/10/03/detecting-sticky-key-backdoors/

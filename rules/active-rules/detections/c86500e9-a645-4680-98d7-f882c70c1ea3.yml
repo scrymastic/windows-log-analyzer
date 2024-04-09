@@ -30,3 +30,6 @@ detection:
     - CommandLine|contains: Start-AADInt
     - CommandLine|contains: Update-AADInt
 id: c86500e9-a645-4680-98d7-f882c70c1ea3
+logsource:
+  category: process_creation
+  product: windows

@@ -4,3 +4,6 @@ detection:
       Defender/Operational\Enabled
   - Details|==: DWORD (0x00000000)
 id: fcddca7c-b9c0-4ddf-98da-e1e2d18b0157
+logsource:
+  category: registry_set
+  product: windows

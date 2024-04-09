@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: registry_set_evtx_file_key_tamper.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://learn.microsoft.com/en-us/windows/win32/eventlog/eventlog-key

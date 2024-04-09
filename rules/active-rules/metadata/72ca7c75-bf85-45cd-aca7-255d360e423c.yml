@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: image_load_side_load_chrome_frame_helper.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/05/15
 references:
 - https://hijacklibs.net/entries/3rd_party/google/chrome_frame_helper.html

@@ -11,3 +11,6 @@ detection:
     - Value|endswith: \Real-Time Protection\DisableIOAVProtection
     - Value|endswith: \Real-Time Protection\DisableScriptScanning
 id: 49e5bc24-8b86-49f1-b743-535f332c2856
+logsource:
+  product: windows
+  service: windefend

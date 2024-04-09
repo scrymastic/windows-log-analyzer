@@ -11,9 +11,6 @@ falsepositives:
 - Legitimate usage of TeamViewer
 filename: proc_creation_win_remote_access_tools_teamviewer_incoming_connection.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - Internal Research

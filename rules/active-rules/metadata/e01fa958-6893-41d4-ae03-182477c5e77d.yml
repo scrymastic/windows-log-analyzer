@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_remote_access_tools_rurat_non_default_location.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/05
 references:
 - https://redcanary.com/blog/misbehaving-rats/

@@ -15,3 +15,6 @@ detection:
       - CommandLine|contains: GruntHTTP
       - CommandLine|contains: -EncodedCommand cwB2ACAAbwAgA
 id: c260b6db-48ba-4b4a-a76f-2f67644e99d2
+logsource:
+  category: process_creation
+  product: windows

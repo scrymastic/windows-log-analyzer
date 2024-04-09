@@ -15,9 +15,6 @@ falsepositives:
 - Unknown
 filename: registry_set_bypass_uac_using_silentcleanup_task.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2024/01/30
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1548.002/T1548.002.md#atomic-test-9---bypass-uac-using-silentcleanup-task

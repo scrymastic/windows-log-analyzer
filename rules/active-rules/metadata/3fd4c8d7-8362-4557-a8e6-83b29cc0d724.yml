@@ -10,9 +10,6 @@ falsepositives:
 - Unknown
 filename: registry_set_ie_security_zone_protocol_defaults_downgrade.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: ''
 references:
 - https://twitter.com/M_haggis/status/1699056847154725107

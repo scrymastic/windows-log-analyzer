@@ -17,3 +17,6 @@ detection:
       - CommandLine|contains: ' --lua-exec '
       - CommandLine|contains: ' --sh-exec '
 id: e31033fc-33f0-4020-9a16-faf9b31cbf08
+logsource:
+  category: process_creation
+  product: windows

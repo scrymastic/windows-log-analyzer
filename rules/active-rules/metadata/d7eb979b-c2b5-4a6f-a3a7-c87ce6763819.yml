@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_rundll32_susp_control_dll_load.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/09
 references:
 - https://twitter.com/rikvduijn/status/853251879320662017

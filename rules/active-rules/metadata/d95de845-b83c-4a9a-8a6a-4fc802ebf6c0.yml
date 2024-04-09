@@ -13,9 +13,6 @@ falsepositives:
 - Administrative activity
 filename: proc_creation_win_net_groups_and_accounts_recon.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/02
 references:
 - https://redcanary.com/blog/how-one-hospital-thwarted-a-ryuk-ransomware-outbreak/

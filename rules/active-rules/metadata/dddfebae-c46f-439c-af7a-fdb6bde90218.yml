@@ -6,10 +6,6 @@ falsepositives:
 - App-V clients
 filename: posh_ps_syncappvpublishingserver_exe.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2022/12/25
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Syncappvpublishingserver/

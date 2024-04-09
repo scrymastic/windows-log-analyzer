@@ -7,3 +7,6 @@ detection:
     - EventID|==: 2082
     - EventID|==: 2008
 id: 00bb5bd5-1379-4fcf-a965-a5b6f7478064
+logsource:
+  product: windows
+  service: firewall-as

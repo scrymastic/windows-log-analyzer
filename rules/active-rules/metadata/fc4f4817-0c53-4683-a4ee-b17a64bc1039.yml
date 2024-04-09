@@ -7,9 +7,6 @@ falsepositives:
   environment
 filename: file_event_win_susp_desktopimgdownldr_file.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/06/02
 references:
 - https://labs.sentinelone.com/living-off-windows-land-a-new-native-file-downldr/

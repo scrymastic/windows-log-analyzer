@@ -11,9 +11,6 @@ falsepositives:
   setupapi.dll
 filename: proc_creation_win_rundll32_setupapi_installhinfsection.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://lolbas-project.github.io/lolbas/Libraries/Setupapi/

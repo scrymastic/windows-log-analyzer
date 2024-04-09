@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: win_system_service_install_pua_proceshacker.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2022/12/25
 references:
 - https://twitter.com/1kwpeter/status/1397816101455765504

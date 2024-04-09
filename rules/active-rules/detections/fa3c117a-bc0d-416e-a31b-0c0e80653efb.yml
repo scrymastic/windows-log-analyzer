@@ -13,3 +13,6 @@ detection:
     - CommandLine|contains: '&echo [E]'
     - CommandLine|contains: '&echo [S]'
 id: fa3c117a-bc0d-416e-a31b-0c0e80653efb
+logsource:
+  category: process_creation
+  product: windows

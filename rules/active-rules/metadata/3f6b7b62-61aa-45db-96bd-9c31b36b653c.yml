@@ -12,9 +12,6 @@ falsepositives:
   group policy (it should be investigated either way)
 filename: registry_set_terminal_server_tampering.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2024/02/08
 references:
 - https://web.archive.org/web/20200929062532/https://blog.menasec.net/2019/02/threat-hunting-rdp-hijacking-via.html

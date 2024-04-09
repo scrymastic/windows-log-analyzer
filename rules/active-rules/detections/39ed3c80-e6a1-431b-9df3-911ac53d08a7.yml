@@ -17,3 +17,6 @@ detection:
     - CommandLine|contains: \dismhost.exe {
     - Image|endswith: \DismHost.exe
 id: 39ed3c80-e6a1-431b-9df3-911ac53d08a7
+logsource:
+  category: process_creation
+  product: windows

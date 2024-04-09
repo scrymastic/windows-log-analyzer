@@ -6,3 +6,6 @@ detection:
     - CommandLine|contains: ' -af '
     - CommandLine|contains: ' /af '
 id: 9c8c7000-3065-44a8-a555-79bcba5d9955
+logsource:
+  category: process_creation
+  product: windows

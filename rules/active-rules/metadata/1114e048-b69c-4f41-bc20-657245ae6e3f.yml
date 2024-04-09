@@ -7,9 +7,6 @@ falsepositives:
   computers or users who execute these commands or scripts often
 filename: proc_creation_win_powershell_user_discovery_get_aduser.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/11/17
 references:
 - http://blog.talosintelligence.com/2022/09/lazarus-three-rats.html

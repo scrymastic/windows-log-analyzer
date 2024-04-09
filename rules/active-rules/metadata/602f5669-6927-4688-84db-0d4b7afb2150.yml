@@ -6,10 +6,6 @@ falsepositives:
 - Legitimate script that disables the command history
 filename: posh_ps_disable_psreadline_command_history.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://twitter.com/DissectMalware/status/1062879286749773824

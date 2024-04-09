@@ -16,3 +16,6 @@ detection:
     - CommandLine|contains: action=startservice
     - CommandLine|contains: action=taskscheduler
 id: 055fb54c-a8f4-4aee-bd44-f74cf30a0d9d
+logsource:
+  category: process_creation
+  product: windows

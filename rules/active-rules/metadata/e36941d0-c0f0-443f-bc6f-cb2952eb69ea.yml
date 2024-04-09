@@ -6,9 +6,6 @@ falsepositives:
 - Likely
 filename: file_event_win_powershell_module_creation.yml
 level: low
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - Internal Research

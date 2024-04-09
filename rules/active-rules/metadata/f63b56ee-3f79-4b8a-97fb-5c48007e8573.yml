@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_dnscmd_install_new_server_level_plugin_dll.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/05
 references:
 - https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83

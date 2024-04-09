@@ -8,9 +8,6 @@ falsepositives:
 - Legitimate use by a via a batch script or by an administrator.
 filename: proc_creation_win_lolbin_pcalua.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/04
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Pcalua/

@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: bsdtar
   - CommandLine|contains: -x
 id: bf361876-6620-407a-812f-bfe11e51e924
+logsource:
+  category: process_creation
+  product: windows

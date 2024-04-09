@@ -4,3 +4,6 @@ detection:
     - Image|endswith: \procdump.exe
     - Image|endswith: \procdump64.exe
 id: 2e65275c-8288-4ab4-aeb7-6274f58b6b20
+logsource:
+  category: process_creation
+  product: windows

@@ -19,3 +19,7 @@ detection:
     - ScriptBlockText|contains: ReadProcessMemory
     - ScriptBlockText|contains: VirtualFree
 id: 03d83090-8cba-44a0-b02f-0b756a050306
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

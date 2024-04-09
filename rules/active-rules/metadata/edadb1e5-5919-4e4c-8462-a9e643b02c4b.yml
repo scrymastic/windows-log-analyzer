@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_rdrleakdiag_process_dumping.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/24
 references:
 - https://www.pureid.io/dumping-abusing-windows-credentials-part-1/

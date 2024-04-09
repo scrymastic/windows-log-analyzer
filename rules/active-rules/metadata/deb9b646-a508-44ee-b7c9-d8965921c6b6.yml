@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_token_obfuscation.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/30
 references:
 - https://github.com/danielbohannon/Invoke-Obfuscation

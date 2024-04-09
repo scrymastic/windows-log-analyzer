@@ -6,10 +6,6 @@ falsepositives:
 - Administrator script
 filename: posh_ps_set_policies_to_unsecure_level.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2023/12/14
 references:
 - https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.1

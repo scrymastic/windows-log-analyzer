@@ -14,3 +14,7 @@ detection:
     - ScriptBlockText|contains: Collections.ArrayList
     - ScriptBlockText|contains: System.CodeDom.Compiler.CompilerParameters
 id: 99c49d9c-34ea-45f7-84a7-4751ae6b2cbc
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

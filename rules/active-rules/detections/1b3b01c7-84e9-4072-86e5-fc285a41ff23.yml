@@ -10,3 +10,6 @@ detection:
     - CommandLine|contains: ' -q=txt '
     - CommandLine|contains: ' -querytype=txt '
 id: 1b3b01c7-84e9-4072-86e5-fc285a41ff23
+logsource:
+  category: process_creation
+  product: windows

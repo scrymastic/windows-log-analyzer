@@ -7,11 +7,6 @@ falsepositives:
 - Unknown
 filename: win_taskscheduler_execution_from_susp_locations.yml
 level: medium
-logsource:
-  definition: 'Requirements: The "Microsoft-Windows-TaskScheduler/Operational" is
-    disabled by default and needs to be enabled in order for this detection to trigger'
-  product: windows
-  service: taskscheduler
 modified: 2023/02/07
 references:
 - Internal Research

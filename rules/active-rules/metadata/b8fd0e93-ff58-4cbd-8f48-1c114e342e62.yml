@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_shell_write_susp_files_extensions.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2024/04/04
 references:
 - Internal Research

@@ -6,9 +6,6 @@ falsepositives:
 - Administrative activity
 filename: proc_creation_win_susp_add_user_local_admin_group.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/02
 references:
 - https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html?m=1

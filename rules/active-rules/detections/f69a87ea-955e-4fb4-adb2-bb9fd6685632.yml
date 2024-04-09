@@ -5,3 +5,6 @@ detection:
     - ClassName|==: DiskDrive
     - DeviceDescription|==: USB Mass Storage Device
 id: f69a87ea-955e-4fb4-adb2-bb9fd6685632
+logsource:
+  product: windows
+  service: security

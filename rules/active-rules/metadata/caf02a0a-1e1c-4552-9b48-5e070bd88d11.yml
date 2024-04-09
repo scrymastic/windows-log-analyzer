@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_susp_desktop_txt.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1486/T1486.md#atomic-test-5---purelocker-ransom-note

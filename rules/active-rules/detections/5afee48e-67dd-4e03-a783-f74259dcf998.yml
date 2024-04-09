@@ -1,5 +1,0 @@
-detection:
-- and:
-  - CommandLine|None: ' -ma '
-  - CommandLine|contains: ' ls'
-id: 5afee48e-67dd-4e03-a783-f74259dcf998

@@ -7,9 +7,6 @@ falsepositives:
 - Installer tools that disable services, e.g. before log collection agent installation
 filename: proc_creation_win_logman_disable_eventlog.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://twitter.com/0gtweet/status/1359039665232306183?s=21

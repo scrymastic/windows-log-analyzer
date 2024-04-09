@@ -8,3 +8,6 @@ detection:
   - or:
     - Image|not contains: :\Program Files (x86)\Proton Technologies\ProtonVPNTap\installer\
 id: 99793437-3e16-439b-be0f-078782cf953d
+logsource:
+  category: process_creation
+  product: windows

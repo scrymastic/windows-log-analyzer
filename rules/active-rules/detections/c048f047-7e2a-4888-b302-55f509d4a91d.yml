@@ -2,3 +2,6 @@ detection:
 - and:
   - TargetFilename|endswith: .scr
 id: c048f047-7e2a-4888-b302-55f509d4a91d
+logsource:
+  category: file_event
+  product: windows

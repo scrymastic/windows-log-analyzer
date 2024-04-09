@@ -3,3 +3,6 @@ detection:
   - TargetFilename|startswith: C:\Windows\System32\consent.exe.@
   - TargetFilename|endswith: \comctl32.dll
 id: 62ed5b55-f991-406a-85d9-e8e8fdf18789
+logsource:
+  category: file_event
+  product: windows

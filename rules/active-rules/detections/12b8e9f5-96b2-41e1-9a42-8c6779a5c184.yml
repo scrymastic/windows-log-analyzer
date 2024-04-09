@@ -32,3 +32,6 @@ detection:
       - CommandLine|contains: ' -decode '
       - CommandLine|contains: ' -w hidden'
 id: 12b8e9f5-96b2-41e1-9a42-8c6779a5c184
+logsource:
+  category: process_creation
+  product: windows

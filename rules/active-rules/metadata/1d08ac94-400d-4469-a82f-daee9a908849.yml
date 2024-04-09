@@ -14,9 +14,6 @@ falsepositives:
 - Legitimate use of the ngrok service.
 filename: net_connection_win_domain_ngrok_tunnel.yml
 level: high
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/02/02
 references:
 - https://twitter.com/hakluke/status/1587733971814977537/photo/1

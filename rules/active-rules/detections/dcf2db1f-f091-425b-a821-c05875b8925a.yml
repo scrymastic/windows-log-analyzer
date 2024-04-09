@@ -8,3 +8,8 @@ detection:
     - ServiceFileName|contains: /c
     - ServiceFileName|contains: /r
 id: dcf2db1f-f091-425b-a821-c05875b8925a
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security

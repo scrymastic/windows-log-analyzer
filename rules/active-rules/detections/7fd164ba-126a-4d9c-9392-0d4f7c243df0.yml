@@ -12,3 +12,6 @@ detection:
     - Image|not contains: :\Program Files\Microsoft Office\
     - Image|not endswith: \ONENOTE.EXE
 id: 7fd164ba-126a-4d9c-9392-0d4f7c243df0
+logsource:
+  category: file_event
+  product: windows

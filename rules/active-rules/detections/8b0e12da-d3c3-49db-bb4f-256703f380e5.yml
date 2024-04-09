@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: '-tls-skip-verify '
     - CommandLine|contains: :socks
 id: 8b0e12da-d3c3-49db-bb4f-256703f380e5
+logsource:
+  category: process_creation
+  product: windows

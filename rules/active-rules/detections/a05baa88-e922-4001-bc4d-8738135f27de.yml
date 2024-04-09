@@ -5,3 +5,6 @@ detection:
   - Image|not endswith: \procmon.exe
   - Image|not endswith: \procmon64.exe
 id: a05baa88-e922-4001-bc4d-8738135f27de
+logsource:
+  category: file_event
+  product: windows

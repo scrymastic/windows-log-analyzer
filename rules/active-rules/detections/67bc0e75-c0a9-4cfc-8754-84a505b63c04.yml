@@ -20,3 +20,6 @@ detection:
     - Image|endswith: \werfault.exe
     - Image|endswith: \wscript.exe
 id: 67bc0e75-c0a9-4cfc-8754-84a505b63c04
+logsource:
+  category: process_creation
+  product: windows

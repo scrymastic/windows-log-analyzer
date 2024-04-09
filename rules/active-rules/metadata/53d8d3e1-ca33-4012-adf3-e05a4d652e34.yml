@@ -8,9 +8,6 @@ falsepositives:
   investigated
 filename: proc_creation_win_lolbin_dotnet_dump.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-dump#dotnet-dump-collect

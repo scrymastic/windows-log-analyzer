@@ -6,3 +6,6 @@ detection:
     - ImageLoaded|contains: \Windows\System32\spool\drivers\x64\4\
   - ImageLoaded|endswith: .dll
 id: 02fb90de-c321-4e63-a6b9-25f4b03dfd14
+logsource:
+  category: image_load
+  product: windows

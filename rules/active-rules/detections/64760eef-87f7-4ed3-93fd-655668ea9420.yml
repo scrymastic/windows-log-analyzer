@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: ScriptRunner.exe
   - CommandLine|contains: ' -appvscript '
 id: 64760eef-87f7-4ed3-93fd-655668ea9420
+logsource:
+  category: process_creation
+  product: windows

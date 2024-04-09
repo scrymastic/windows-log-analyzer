@@ -8,10 +8,6 @@ falsepositives:
   as parent process - https://twitter.com/SBousseaden/status/1388064061087260675
 filename: file_event_win_net_cli_artefact.yml
 level: high
-logsource:
-  category: file_event
-  definition: 'Requirements: UsageLogs folder must be monitored by the sysmon configuration'
-  product: windows
 modified: 2023/02/23
 references:
 - https://bohops.com/2021/03/16/investigating-net-clr-usage-log-tampering-techniques-for-edr-evasion/

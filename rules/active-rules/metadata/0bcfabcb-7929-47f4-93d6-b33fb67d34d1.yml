@@ -4,9 +4,6 @@ description: Detects javaw.exe in AppData folder as used by Adwind / JRAT
 falsepositives: []
 filename: file_event_win_mal_adwind.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/12/02
 references:
 - https://www.hybrid-analysis.com/sample/ba86fa0d4b6af2db0656a88b1dd29f36fe362473ae8ad04255c4e52f214a541c?environmentId=100

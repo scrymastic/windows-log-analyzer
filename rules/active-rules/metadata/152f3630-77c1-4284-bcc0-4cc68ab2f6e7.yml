@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: registry_event_shell_open_keys_manipulation.yml
 level: high
-logsource:
-  category: registry_event
-  product: windows
 modified: 2022/01/13
 references:
 - https://github.com/hfiref0x/UACME

@@ -6,11 +6,6 @@ falsepositives:
 - Unknown
 filename: win_dns_client__mal_cobaltstrike.yml
 level: critical
-logsource:
-  definition: 'Requirements: Microsoft-Windows-DNS Client Events/Operational Event
-    Log must be enabled/collected in order to receive the events.'
-  product: windows
-  service: dns-client
 modified: ''
 references:
 - https://www.icebrg.io/blog/footprints-of-fin7-tracking-actor-patterns

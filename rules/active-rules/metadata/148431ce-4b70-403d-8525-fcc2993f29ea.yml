@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_lolbin_tracker.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/09
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Tracker/

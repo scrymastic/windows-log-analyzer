@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmi_backdoor_exchange_transport_agent.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/08
 references:
 - https://twitter.com/cglyer/status/1182389676876980224

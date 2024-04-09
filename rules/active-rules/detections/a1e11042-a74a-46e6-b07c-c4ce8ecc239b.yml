@@ -16,3 +16,6 @@ detection:
   - or:
     - Details|!==: (Empty)
 id: a1e11042-a74a-46e6-b07c-c4ce8ecc239b
+logsource:
+  category: registry_set
+  product: windows

@@ -4,3 +4,6 @@ detection:
   - ObjectType|==: WMI Namespace
   - ObjectName|contains: subscription
 id: f033f3f3-fd24-4995-97d8-a3bb17550a88
+logsource:
+  product: windows
+  service: security

@@ -5,3 +5,6 @@ detection:
     - Image|not contains: :\program files\windowsapps\microsoft.windowscommunicationsapps_
     - Image|not endswith: \hxtsr.exe
 id: 4e762605-34a8-406d-b72e-c1a089313320
+logsource:
+  category: process_creation
+  product: windows

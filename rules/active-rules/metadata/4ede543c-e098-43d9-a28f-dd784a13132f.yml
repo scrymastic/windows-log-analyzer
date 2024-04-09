@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of WinRAR in a folder of a software that bundles WinRAR
 filename: proc_creation_win_winrar_uncommon_folder_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/08/31
 references:
 - https://twitter.com/cyb3rops/status/1460978167628406785

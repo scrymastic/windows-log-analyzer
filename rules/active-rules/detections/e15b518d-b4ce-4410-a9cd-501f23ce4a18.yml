@@ -6,3 +6,6 @@ detection:
   - TargetFilename|not endswith: .cdmp
   - TargetFilename|not endswith: .camp
 id: e15b518d-b4ce-4410-a9cd-501f23ce4a18
+logsource:
+  category: file_event
+  product: windows

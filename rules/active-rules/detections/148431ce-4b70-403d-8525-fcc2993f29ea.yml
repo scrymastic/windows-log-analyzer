@@ -11,3 +11,6 @@ detection:
   - ParentImage|not endswith: \Msbuild\Current\Bin\MSBuild.exe
   - ParentImage|not endswith: \Msbuild\Current\Bin\amd64\MSBuild.exe
 id: 148431ce-4b70-403d-8525-fcc2993f29ea
+logsource:
+  category: process_creation
+  product: windows

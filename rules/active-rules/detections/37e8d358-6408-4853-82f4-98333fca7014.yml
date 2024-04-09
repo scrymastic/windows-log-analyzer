@@ -7,3 +7,6 @@ detection:
     - Imphash|==: a9d50692e95b79723f3e76fcf70d023e
     - Hashes|contains: IMPHASH=a9d50692e95b79723f3e76fcf70d023e
 id: 37e8d358-6408-4853-82f4-98333fca7014
+logsource:
+  category: process_creation
+  product: windows

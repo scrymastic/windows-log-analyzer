@@ -8,9 +8,6 @@ falsepositives:
   github domain to a lower level hunting rule.
 filename: net_connection_win_susp_file_sharing_domains_susp_folders.yml
 level: high
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/02/09
 references:
 - https://twitter.com/M_haggis/status/900741347035889665

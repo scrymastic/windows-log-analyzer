@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: registry_set_odbc_driver_registered_susp.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://www.hexacorn.com/blog/2020/08/23/odbcconf-lolbin-trifecta/

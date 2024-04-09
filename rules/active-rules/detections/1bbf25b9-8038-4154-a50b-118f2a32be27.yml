@@ -4,3 +4,6 @@ detection:
   - SamAccountName|contains: ANONYMOUS
   - SamAccountName|contains: LOGON
 id: 1bbf25b9-8038-4154-a50b-118f2a32be27
+logsource:
+  product: windows
+  service: security

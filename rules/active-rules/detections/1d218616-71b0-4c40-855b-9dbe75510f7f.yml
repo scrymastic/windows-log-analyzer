@@ -3,3 +3,6 @@ detection:
   - EventType|==: CreateKey
   - TargetObject|contains: \software\NetWire
 id: 1d218616-71b0-4c40-855b-9dbe75510f7f
+logsource:
+  category: registry_add
+  product: windows

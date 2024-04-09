@@ -2,3 +2,6 @@ detection:
 - and:
   - EventID|==: 4649
 id: 5a44727c-3b85-4713-8c44-4401d5499629
+logsource:
+  product: windows
+  service: security

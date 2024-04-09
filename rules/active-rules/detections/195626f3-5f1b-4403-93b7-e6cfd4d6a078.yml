@@ -4,3 +4,7 @@ detection:
   - ScriptBlockText|contains: Net.Security.RemoteCertificateValidationCallback
   - ScriptBlockText|contains: .AuthenticateAsClient
 id: 195626f3-5f1b-4403-93b7-e6cfd4d6a078
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_pc_exe_calling_ps.yml
 level: high
-logsource:
-  category: ps_classic_start
-  product: windows
 modified: 2023/10/27
 references:
 - https://adsecurity.org/?p=2921

@@ -15,9 +15,6 @@ falsepositives:
 - Unknown
 filename: image_load_dll_dbghelp_dbgcore_unsigned_load.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2022/12/09
 references:
 - https://docs.microsoft.com/en-us/windows/win32/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump

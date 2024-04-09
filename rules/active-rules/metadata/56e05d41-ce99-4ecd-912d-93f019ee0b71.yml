@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_vscode_tunnel_remote_creation_artefacts.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - Internal Research

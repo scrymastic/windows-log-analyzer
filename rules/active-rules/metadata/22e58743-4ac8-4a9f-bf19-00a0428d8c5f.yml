@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_susp_inline_base64_mz_header.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://thedfirreport.com/2022/07/11/select-xmrig-from-sqlserver/

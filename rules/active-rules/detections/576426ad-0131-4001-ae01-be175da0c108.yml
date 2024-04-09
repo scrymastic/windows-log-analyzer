@@ -12,3 +12,6 @@ detection:
   - or:
     - TargetFilename|not startswith: C:\Windows\Temp\
 id: 576426ad-0131-4001-ae01-be175da0c108
+logsource:
+  category: file_event
+  product: windows

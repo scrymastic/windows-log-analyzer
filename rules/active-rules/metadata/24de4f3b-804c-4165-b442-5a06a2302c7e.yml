@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_arbitrary_shell_execution_via_settingcontent.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/04/14
 references:
 - https://posts.specterops.io/the-tale-of-settingcontent-ms-files-f1ea253e4d39

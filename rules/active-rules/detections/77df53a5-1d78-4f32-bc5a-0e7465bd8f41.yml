@@ -11,3 +11,6 @@ detection:
   - Image|not contains: :\Program Files (x86)\GnuPG\bin\
   - Image|not contains: :\Program Files (x86)\Gpg4win\bin\
 id: 77df53a5-1d78-4f32-bc5a-0e7465bd8f41
+logsource:
+  category: process_creation
+  product: windows

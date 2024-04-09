@@ -1,7 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \msdt.exe
-    - OriginalFileName|==: msdt.exe
-  - CommandLine|None: ' -cab '
-id: dc4576d4-7467-424f-9eee-fd2b02855fe0

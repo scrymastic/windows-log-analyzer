@@ -12,9 +12,6 @@ falsepositives:
 - Some false positives may occur with legitimate renamed process explorer binaries
 filename: file_event_win_sysinternals_procexp_driver_susp_creation.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer

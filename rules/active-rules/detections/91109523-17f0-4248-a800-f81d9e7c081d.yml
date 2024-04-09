@@ -6,3 +6,7 @@ detection:
   - ScriptBlockText|contains: '-MethodName '
   - ScriptBlockText|contains: .msi
 id: 91109523-17f0-4248-a800-f81d9e7c081d
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

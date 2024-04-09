@@ -2,3 +2,6 @@ detection:
 - and:
   - Image|endswith: \dns.exe
 id: 9f383dc0-fdeb-4d56-acbc-9f9f4f8f20f3
+logsource:
+  category: file_change
+  product: windows

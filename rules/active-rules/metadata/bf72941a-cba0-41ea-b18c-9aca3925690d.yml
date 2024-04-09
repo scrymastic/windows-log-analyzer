@@ -6,10 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_adrecon_execution.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2022/09/06
 references:
 - https://github.com/sense-of-security/ADRecon/blob/11881a24e9c8b207f31b56846809ce1fb189bcc9/ADRecon.ps1

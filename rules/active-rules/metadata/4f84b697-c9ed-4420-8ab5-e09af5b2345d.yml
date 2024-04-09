@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: registry_event_new_dll_added_to_appinit_dlls_registry_key.yml
 level: medium
-logsource:
-  category: registry_event
-  product: windows
 modified: 2022/12/25
 references:
 - https://eqllib.readthedocs.io/en/latest/analytics/822dc4c5-b355-4df8-bd37-29c458997b8f.html

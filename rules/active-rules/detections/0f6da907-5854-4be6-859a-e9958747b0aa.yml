@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: ' -window '
   - CommandLine|contains: .dll
 id: 0f6da907-5854-4be6-859a-e9958747b0aa
+logsource:
+  category: process_creation
+  product: windows

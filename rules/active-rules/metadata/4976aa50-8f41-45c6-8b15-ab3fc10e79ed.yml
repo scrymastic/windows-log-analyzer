@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate Administrator using credential dumping tool for password recovery
 filename: win_system_mal_creddumper.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2022/11/29
 references:
 - https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment

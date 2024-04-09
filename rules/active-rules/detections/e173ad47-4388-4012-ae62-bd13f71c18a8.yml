@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: deviceenroller.exe
   - CommandLine|contains: /PhoneDeepLink
 id: e173ad47-4388-4012-ae62-bd13f71c18a8
+logsource:
+  category: process_creation
+  product: windows

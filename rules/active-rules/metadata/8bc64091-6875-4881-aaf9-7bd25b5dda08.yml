@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_ntds.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/11/10
 references:
 - https://www.ired.team/offensive-security/credential-access-and-credential-dumping/ntds.dit-enumeration

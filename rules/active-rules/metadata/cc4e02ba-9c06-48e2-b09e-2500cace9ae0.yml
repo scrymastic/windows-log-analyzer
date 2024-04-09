@@ -13,9 +13,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_task_folder_evasion.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/25
 references:
 - https://twitter.com/subTee/status/1216465628946563073

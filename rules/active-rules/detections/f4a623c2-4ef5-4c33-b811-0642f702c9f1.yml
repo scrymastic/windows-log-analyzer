@@ -11,3 +11,6 @@ detection:
     - Image|endswith: \wsl.exe
     - Image|endswith: \bash.exe
 id: f4a623c2-4ef5-4c33-b811-0642f702c9f1
+logsource:
+  category: process_creation
+  product: windows

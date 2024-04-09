@@ -23,3 +23,7 @@ detection:
   - Data|not contains: 'CLIENT: 127.'
   - Data|not contains: 'CLIENT: 169.254.'
 id: ebfe73c2-5bc9-4ed9-aaa8-8b54b2b4777d
+logsource:
+  definition: 'Requirements: Must enable MSSQL authentication.'
+  product: windows
+  service: application

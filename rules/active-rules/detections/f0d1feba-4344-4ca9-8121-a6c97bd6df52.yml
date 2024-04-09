@@ -10,3 +10,8 @@ detection:
     - ServiceFileName|contains: pwdump
     - ServiceFileName|contains: servpw
 id: f0d1feba-4344-4ca9-8121-a6c97bd6df52
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security

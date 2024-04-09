@@ -18,3 +18,6 @@ detection:
     - CommandLine|contains: ' -t schtask -c '
     - CommandLine|contains: ' -m add'
 id: 26488ad0-f9fd-4536-876f-52fea846a2e4
+logsource:
+  category: process_creation
+  product: windows

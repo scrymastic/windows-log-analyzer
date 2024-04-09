@@ -7,9 +7,6 @@ falsepositives:
 - Possible undocumented parents of "msdt" other than "pcwrun"
 filename: proc_creation_win_lolbin_msdt_answer_file.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Msdt/

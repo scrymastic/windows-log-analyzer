@@ -14,3 +14,6 @@ detection:
   - CommandLine|contains: ' /d '
   - CommandLine|contains: ' /o '
 id: 7f43c430-5001-4f8b-aaa9-c3b88f18fa5c
+logsource:
+  category: process_creation
+  product: windows

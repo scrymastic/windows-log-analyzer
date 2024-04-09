@@ -8,9 +8,6 @@ falsepositives:
 - Legitimate usage by software developers
 filename: proc_creation_win_csi_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/07/11
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Csi/

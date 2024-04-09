@@ -181,3 +181,7 @@ detection:
   - ScriptBlockText|not contains: Get-SystemDriveInfo
   - ScriptBlockText|not contains: C:\ProgramData\Amazon\EC2-Windows\Launch\Module\
 id: 89819aa4-bbd6-46bc-88ec-c7f7fe30efa6
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
   for the tip)
 filename: file_event_win_wpbbin_persistence.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://grzegorztworek.medium.com/using-uefi-to-inject-executable-files-into-bitlocker-protected-drives-8ff4ca59c94c

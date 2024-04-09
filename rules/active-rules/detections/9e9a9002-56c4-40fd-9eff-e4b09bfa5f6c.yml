@@ -5,3 +5,6 @@ detection:
     - ImageLoaded|startswith: C:\Users\Public\
     - ImageLoaded|startswith: C:\PerfLogs\
 id: 9e9a9002-56c4-40fd-9eff-e4b09bfa5f6c
+logsource:
+  category: image_load
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Files that accidentally contain these strings
 filename: file_event_win_hktl_hivenightmare_file_exports.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/10/09
 references:
 - https://github.com/GossiTheDog/HiveNightmare

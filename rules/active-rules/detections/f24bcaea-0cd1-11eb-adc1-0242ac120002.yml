@@ -38,3 +38,6 @@ detection:
   - or:
     - CommandLine|not contains: Oracle_JavaAccessBridge
 id: f24bcaea-0cd1-11eb-adc1-0242ac120002
+logsource:
+  category: process_creation
+  product: windows

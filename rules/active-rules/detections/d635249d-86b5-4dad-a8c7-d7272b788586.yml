@@ -30,3 +30,6 @@ detection:
     - RemoteName|contains: transfer.sh
     - RemoteName|contains: ufile.io
 id: d635249d-86b5-4dad-a8c7-d7272b788586
+logsource:
+  product: windows
+  service: bits-client

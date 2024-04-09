@@ -9,3 +9,6 @@ detection:
   - Image|not startswith: C:\ProgramData\Microsoft\Windows Defender\Platform\
   - Image|not startswith: C:\Windows\WinSxS\
 id: 7002aa10-b8d4-47ae-b5ba-51ab07e228b9
+logsource:
+  category: process_creation
+  product: windows

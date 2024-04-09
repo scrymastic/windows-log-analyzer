@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: 'INSTALLDRIVER '
   - CommandLine|contains: .dll
 id: 3f5491e2-8db8-496b-9e95-1029fce852d4
+logsource:
+  category: process_creation
+  product: windows

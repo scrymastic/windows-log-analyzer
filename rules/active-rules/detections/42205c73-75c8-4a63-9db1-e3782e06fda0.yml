@@ -9,3 +9,6 @@ detection:
     - TargetObject|contains: \PerfLogs\
     - TargetObject|contains: \Windows\Temp\
 id: 42205c73-75c8-4a63-9db1-e3782e06fda0
+logsource:
+  category: registry_set
+  product: windows

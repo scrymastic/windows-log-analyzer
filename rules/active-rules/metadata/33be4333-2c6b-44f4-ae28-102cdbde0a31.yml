@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_msbuild_susp_parent_process.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://app.any.run/tasks/abdf586e-df0c-4d39-89a7-06bf24913401/

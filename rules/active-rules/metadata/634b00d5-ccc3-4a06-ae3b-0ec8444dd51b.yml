@@ -12,9 +12,6 @@ falsepositives:
 - It's not an uncommon to use te.exe directly to execute legal TAEF tests
 filename: proc_creation_win_susp_use_of_te_bin.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Te/

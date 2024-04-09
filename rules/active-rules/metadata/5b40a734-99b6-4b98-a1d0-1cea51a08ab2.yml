@@ -7,9 +7,6 @@ falsepositives:
 - PowerShell scripts running as SYSTEM user
 filename: file_event_win_susp_system_interactive_powershell.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/08/13
 references:
 - https://jpcertcc.github.io/ToolAnalysisResultSheet/details/PowerSploit_Invoke-Mimikatz.htm

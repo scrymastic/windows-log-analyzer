@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: win_system_ntfs_vuln_exploit.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2022/12/25
 references:
 - https://twitter.com/jonasLyk/status/1347900440000811010

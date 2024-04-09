@@ -7,9 +7,6 @@ falsepositives:
 - Rare legitimate crashing of the lsass process
 filename: win_werfault_susp_lsass_credential_dump.yml
 level: high
-logsource:
-  product: windows
-  service: application
 modified: ''
 references:
 - https://github.com/deepinstinct/Lsass-Shtinkering

@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_mmc_mmc20_lateral_movement.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/

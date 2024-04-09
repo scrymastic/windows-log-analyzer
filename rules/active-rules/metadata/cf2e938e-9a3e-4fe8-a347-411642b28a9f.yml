@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_registry_set_unsecure_powershell_policy.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/de-de/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3

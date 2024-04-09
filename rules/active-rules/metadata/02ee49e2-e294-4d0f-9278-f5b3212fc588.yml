@@ -6,9 +6,6 @@ falsepositives:
 - Software using weird folders for updates
 filename: registry_set_susp_run_key_img_folder.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2024/03/18
 references:
 - https://www.fireeye.com/blog/threat-research/2018/08/fin7-pursuing-an-enigmatic-and-evasive-global-criminal-operation.html

@@ -10,3 +10,6 @@ detection:
     - CommandLine|endswith: =1251
     - CommandLine|endswith: =866
 id: 12fbff88-16b5-4b42-9754-cd001a789fb3
+logsource:
+  category: process_creation
+  product: windows

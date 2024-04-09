@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_net_use_mount_internet_share.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/07/25
 references:
 - https://drive.google.com/file/d/1lKya3_mLnR3UQuCoiYruO3qgu052_iS_/view

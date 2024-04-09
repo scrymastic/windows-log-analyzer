@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_lolbin_susp_certreq_download.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/06/13
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Certreq/

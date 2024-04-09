@@ -43,3 +43,6 @@ detection:
     - CommandLine|endswith: cmd.exe/c .
     - CommandLine|==: cmd.exe /c
 id: a16980c2-0c56-4de0-9a79-17971979efdd
+logsource:
+  category: process_creation
+  product: windows

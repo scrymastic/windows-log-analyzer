@@ -14,3 +14,6 @@ detection:
     - TargetObject|contains: \Sysinternals
   - TargetObject|endswith: \EulaAccepted
 id: c7da8edc-49ae-45a2-9e61-9fd860e4e73d
+logsource:
+  category: registry_add
+  product: windows

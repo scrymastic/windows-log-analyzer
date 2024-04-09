@@ -11,9 +11,6 @@ falsepositives:
 - Unknown
 filename: registry_event_new_dll_added_to_appcertdlls_registry_key.yml
 level: medium
-logsource:
-  category: registry_event
-  product: windows
 modified: 2021/11/27
 references:
 - http://www.hexacorn.com/blog/2013/01/19/beyond-good-ol-run-key-part-3/

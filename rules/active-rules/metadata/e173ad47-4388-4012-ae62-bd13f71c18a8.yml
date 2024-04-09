@@ -11,9 +11,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_deviceenroller_dll_sideloading.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://mobile.twitter.com/0gtweet/status/1564131230941122561

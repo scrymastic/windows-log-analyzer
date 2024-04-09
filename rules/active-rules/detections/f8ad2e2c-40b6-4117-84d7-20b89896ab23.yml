@@ -7,3 +7,6 @@ detection:
     - CommandLine|contains: nslookup
     - CommandLine|contains: ping
 id: f8ad2e2c-40b6-4117-84d7-20b89896ab23
+logsource:
+  category: process_creation
+  product: windows

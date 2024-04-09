@@ -10,3 +10,6 @@ detection:
     - CommandLine|contains: srvsvc
     - CommandLine|contains: /print/pipe/
 id: bb76d96b-821c-47cf-944b-7ce377864492
+logsource:
+  category: process_creation
+  product: windows

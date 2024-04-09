@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_security_rdp_localhost_login.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2022/10/09
 references:
 - https://www.fireeye.com/blog/threat-research/2019/01/bypassing-network-restrictions-through-rdp-tunneling.html

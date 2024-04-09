@@ -9,3 +9,6 @@ detection:
     - CommandLine|contains: remove
     - CommandLine|contains: restore
 id: 0a13e132-651d-11eb-ae93-0242ac130002
+logsource:
+  category: process_creation
+  product: windows

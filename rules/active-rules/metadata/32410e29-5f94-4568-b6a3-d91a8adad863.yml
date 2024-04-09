@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use
 filename: proc_creation_win_pua_frp.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://asec.ahnlab.com/en/38156/

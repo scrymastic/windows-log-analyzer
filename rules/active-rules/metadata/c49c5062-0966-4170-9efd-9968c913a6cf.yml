@@ -6,9 +6,6 @@ falsepositives:
   any suspicious behaviour in particular. Filter legitimate activity accordingly
 filename: proc_creation_win_powershell_stop_service.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7.4

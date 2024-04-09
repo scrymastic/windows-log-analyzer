@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_sc_sdset_allow_service_changes.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/0gtweet/status/1628720819537936386

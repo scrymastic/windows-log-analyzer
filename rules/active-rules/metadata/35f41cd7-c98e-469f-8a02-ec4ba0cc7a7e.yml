@@ -8,10 +8,6 @@ falsepositives:
   if the action is benign
 filename: posh_ps_susp_write_eventlog.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://www.blackhillsinfosec.com/windows-event-logs-for-red-teams/

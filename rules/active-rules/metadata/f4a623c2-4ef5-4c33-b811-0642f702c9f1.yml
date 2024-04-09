@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate use of Visual Studio Code tunnel and running code from there
 filename: proc_creation_win_vscode_tunnel_remote_shell_.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://ipfyx.fr/post/visual-studio-code-tunnel/

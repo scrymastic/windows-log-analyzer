@@ -5,3 +5,6 @@ detection:
     - CommandLine|contains: ' -D ..'
     - CommandLine|contains: ' -D C:\'
 id: a85ffc3a-e8fd-4040-93bf-78aff284d801
+logsource:
+  category: process_creation
+  product: windows

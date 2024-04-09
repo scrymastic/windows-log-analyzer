@@ -8,9 +8,6 @@ falsepositives:
 - Unknown cases in which WerFault accesses lsass.exe
 filename: proc_access_win_lsass_werfault.yml
 level: high
-logsource:
-  category: process_access
-  product: windows
 modified: 2023/11/29
 references:
 - https://github.com/helpsystems/nanodump/commit/578116faea3d278d53d70ea932e2bbfe42569507

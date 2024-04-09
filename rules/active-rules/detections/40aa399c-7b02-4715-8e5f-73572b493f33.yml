@@ -25,3 +25,6 @@ detection:
     - CommandLine|contains: :\Users\
     - CommandLine|contains: \Pictures\
 id: 40aa399c-7b02-4715-8e5f-73572b493f33
+logsource:
+  category: process_creation
+  product: windows

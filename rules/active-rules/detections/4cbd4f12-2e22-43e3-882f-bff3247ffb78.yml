@@ -2,3 +2,7 @@ detection:
 - and:
   - Payload|contains: Get-Clipboard
 id: 4cbd4f12-2e22-43e3-882f-bff3247ffb78
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows

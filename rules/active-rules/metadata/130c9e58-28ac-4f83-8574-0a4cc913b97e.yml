@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_redmimicry_winnti_filedrop.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/01/05
 references:
 - https://redmimicry.com/posts/redmimicry-winnti/#dropper

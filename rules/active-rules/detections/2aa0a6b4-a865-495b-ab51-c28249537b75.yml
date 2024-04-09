@@ -4,3 +4,6 @@ detection:
   - Image|!==: C:\Windows\System32\wuauclt.exe
   - TargetFilename|not startswith: C:\$WINDOWS.~BT\NewOS\
 id: 2aa0a6b4-a865-495b-ab51-c28249537b75
+logsource:
+  category: file_event
+  product: windows

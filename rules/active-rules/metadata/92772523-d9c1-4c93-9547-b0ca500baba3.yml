@@ -7,9 +7,6 @@ falsepositives:
   common occurrence in an environment and should be investigated either way
 filename: registry_set_persistence_mpnotify.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://persistence-info.github.io/Data/mpnotify.html

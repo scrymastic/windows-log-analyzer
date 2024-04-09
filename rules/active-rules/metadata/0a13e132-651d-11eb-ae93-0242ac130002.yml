@@ -12,9 +12,6 @@ falsepositives:
   detection section. Either way, it should always be monitored
 filename: proc_creation_win_auditpol_susp_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/22
 references:
 - https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/

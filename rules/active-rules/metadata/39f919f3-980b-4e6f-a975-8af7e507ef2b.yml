@@ -14,9 +14,6 @@ falsepositives:
 - Unknown
 filename: win_system_susp_critical_hive_location_access_bits_cleared.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2024/01/18
 references:
 - https://github.com/nasbench/Misc-Research/blob/b20da2336de0f342d31ef4794959d28c8d3ba5ba/ETW/Microsoft-Windows-Kernel-General.md

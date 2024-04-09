@@ -6,3 +6,6 @@ detection:
     - ImagePath|contains: \NetSupport Manager\client32.exe
     - ServiceName|==: Client32
 id: 2d510d8d-912b-45c5-b1df-36faa3d8c3f4
+logsource:
+  product: windows
+  service: system

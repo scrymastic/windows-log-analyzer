@@ -20,3 +20,6 @@ detection:
   - or:
     - CommandLine|not matches: https?://((25[0-5]|(2[0-4]|1\d|[1-9])?\d)(\.|\b)){4}
 id: 56d19cb4-6414-4769-9644-1ed35ffbb148
+logsource:
+  category: process_creation
+  product: windows

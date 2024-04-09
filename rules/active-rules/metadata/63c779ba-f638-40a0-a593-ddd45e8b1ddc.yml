@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_delete_win_delete_event_log_files.yml
 level: medium
-logsource:
-  category: file_delete
-  product: windows
 modified: ''
 references:
 - Internal Research

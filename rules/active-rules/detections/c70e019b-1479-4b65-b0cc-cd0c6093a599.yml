@@ -6,3 +6,6 @@ detection:
     - Data|contains: EngineVersion=5.
   - Data|contains: HostVersion=3.
 id: c70e019b-1479-4b65-b0cc-cd0c6093a599
+logsource:
+  category: ps_classic_start
+  product: windows

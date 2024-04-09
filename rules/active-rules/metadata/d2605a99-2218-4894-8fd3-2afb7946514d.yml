@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: image_load_side_load_mfdetours.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - Internal Research

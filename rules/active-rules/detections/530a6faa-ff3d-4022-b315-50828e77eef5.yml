@@ -4,3 +4,6 @@ detection:
   - EventID|==: 7045
   - ServiceName|==: AnyDesk Service
 id: 530a6faa-ff3d-4022-b315-50828e77eef5
+logsource:
+  product: windows
+  service: system

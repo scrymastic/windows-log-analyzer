@@ -6,9 +6,6 @@ falsepositives:
 - Software installations
 filename: proc_creation_win_netsh_fw_add_rule.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/10
 references:
 - https://www.operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-RAT-and-Staging-Report.pdf

@@ -15,3 +15,6 @@ detection:
         - Hashes|==: IMPHASH=F91624350E2C678C5DCBE5E1F24E22C9
         - Hashes|==: IMPHASH=14C81850A079A87E83D50CA41C709A15
 id: e8d34729-86a4-4140-adfd-0a29c2106307
+logsource:
+  category: process_creation
+  product: windows

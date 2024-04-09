@@ -8,3 +8,6 @@ detection:
   - TargetObject|endswith: \ScanWithAntiVirus
   - Details|==: DWORD (0x00000001)
 id: ee77a5db-b0f3-4be2-bfd4-b58be1c6b15a
+logsource:
+  category: registry_set
+  product: windows

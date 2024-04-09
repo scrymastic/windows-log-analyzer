@@ -8,9 +8,6 @@ falsepositives:
   this is easy to spot and add to whitelist
 filename: proc_creation_win_renamed_binary.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/18
 references:
 - https://mgreen27.github.io/posts/2019/05/12/BinaryRename.html

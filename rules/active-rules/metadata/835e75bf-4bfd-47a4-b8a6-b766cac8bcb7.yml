@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate usage of Setres
 filename: proc_creation_win_lolbin_setres.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Setres/

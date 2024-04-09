@@ -22,3 +22,6 @@ detection:
     - TargetFilename|endswith: .wsf
     - TargetFilename|endswith: .wsh
 id: 7d604714-e071-49ff-8726-edeb95a70679
+logsource:
+  category: file_event
+  product: windows

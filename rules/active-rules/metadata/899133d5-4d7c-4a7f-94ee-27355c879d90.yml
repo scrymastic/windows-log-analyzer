@@ -6,9 +6,6 @@ falsepositives:
 - Python libraries that use a flag starting with "-c". Filter according to your environment
 filename: proc_creation_win_python_inline_command_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/17
 references:
 - https://docs.python.org/3/using/cmdline.html#cmdoption-c

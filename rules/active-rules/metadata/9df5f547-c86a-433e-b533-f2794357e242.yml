@@ -8,9 +8,6 @@ falsepositives:
 - Legitimate administrator sets up autorun keys for legitimate reason
 filename: registry_set_asep_reg_keys_modification_classes.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1547.001/T1547.001.md

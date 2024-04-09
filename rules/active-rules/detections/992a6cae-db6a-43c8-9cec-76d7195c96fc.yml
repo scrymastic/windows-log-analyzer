@@ -15,3 +15,6 @@ detection:
   - or:
     - DestinationIp|not cidr: 20.0.0.0/11
 id: 992a6cae-db6a-43c8-9cec-76d7195c96fc
+logsource:
+  category: network_connection
+  product: windows

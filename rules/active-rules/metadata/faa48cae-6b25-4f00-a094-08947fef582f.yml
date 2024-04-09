@@ -8,9 +8,6 @@ falsepositives:
 - Other command line tools, that use these flags
 filename: proc_creation_win_rar_compression_with_password.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/03/16
 references:
 - https://labs.sentinelone.com/the-anatomy-of-an-apt-attack-and-cobaltstrike-beacons-encoded-configuration/

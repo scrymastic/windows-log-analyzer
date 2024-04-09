@@ -8,3 +8,6 @@ detection:
   - CommandLine|contains: section:system.webServer/rewrite/globalRules
   - CommandLine|contains: 'commit:'
 id: 7c8af9b2-dcae-41a2-a9db-b28c288b5f08
+logsource:
+  category: process_creation
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_devinit_lolbin_usage.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/06
 references:
 - https://twitter.com/mrd0x/status/1460815932402679809

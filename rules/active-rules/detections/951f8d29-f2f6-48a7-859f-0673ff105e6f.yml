@@ -2,3 +2,6 @@ detection:
 - and:
   - EventID|==: 3001
 id: 951f8d29-f2f6-48a7-859f-0673ff105e6f
+logsource:
+  product: windows
+  service: codeintegrity-operational

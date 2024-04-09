@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_sharp_ldap_monitor.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://github.com/p0dalirius/LDAPmonitor

@@ -5,11 +5,6 @@ falsepositives:
 - Administrators configuring new users.
 filename: win_security_ad_user_enumeration.yml
 level: medium
-logsource:
-  definition: 'Requirements: The "Read all properties" permission on the user object
-    needs to be audited for the "Everyone" principal'
-  product: windows
-  service: security
 modified: 2022/11/08
 references:
 - https://www.specterops.io/assets/resources/an_ace_up_the_sleeve.pdf

@@ -26,3 +26,6 @@ detection:
     - CommandLine|contains: ' DCOnly '
     - CommandLine|contains: ' --NoSaveCache '
 id: f376c8a7-a2d0-4ddc-aa0c-16c17236d962
+logsource:
+  category: process_creation
+  product: windows

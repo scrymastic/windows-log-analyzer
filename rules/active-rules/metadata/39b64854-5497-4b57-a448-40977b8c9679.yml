@@ -9,9 +9,6 @@ falsepositives:
   legitimate location (when possible)
 filename: driver_load_win_mal_drivers_names.yml
 level: medium
-logsource:
-  category: driver_load
-  product: windows
 modified: 2023/12/02
 references:
 - https://loldrivers.io/

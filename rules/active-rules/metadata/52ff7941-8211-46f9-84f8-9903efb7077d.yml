@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_hktl_selectmyparent.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/07
 references:
 - https://pentestlab.blog/2020/02/24/parent-pid-spoofing/

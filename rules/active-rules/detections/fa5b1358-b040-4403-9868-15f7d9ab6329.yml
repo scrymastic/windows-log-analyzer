@@ -229,3 +229,6 @@ detection:
     - DestinationHostname|==: zarabotaibitok.ru
     - DestinationHostname|==: zer0day.ru
 id: fa5b1358-b040-4403-9868-15f7d9ab6329
+logsource:
+  category: network_connection
+  product: windows

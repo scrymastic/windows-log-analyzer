@@ -4,3 +4,6 @@ detection:
     - CommandLine|contains: ~1\
     - CommandLine|contains: ~2\
 id: 349d891d-fef0-4fe4-bc53-eee623a15969
+logsource:
+  category: process_creation
+  product: windows

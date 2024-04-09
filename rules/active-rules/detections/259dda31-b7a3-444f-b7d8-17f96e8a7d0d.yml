@@ -3,3 +3,6 @@ detection:
   - Image|==: C:\Windows\System32\SystemResetPlatform\SystemResetPlatform.exe
   - ImageLoaded|==: C:\$SysReset\Framework\Stack\RjvPlatform.dll
 id: 259dda31-b7a3-444f-b7d8-17f96e8a7d0d
+logsource:
+  category: image_load
+  product: windows

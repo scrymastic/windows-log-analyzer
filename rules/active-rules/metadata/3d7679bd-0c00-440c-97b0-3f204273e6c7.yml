@@ -6,9 +6,6 @@ falsepositives:
 - Administrative activity
 filename: proc_creation_win_taskmgr_susp_child_process.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/01/18
 references:
 - https://twitter.com/ReneFreingruber/status/1172244989335810049

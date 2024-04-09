@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_mpcmdrun_download_arbitrary_file.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/09
 references:
 - https://web.archive.org/web/20200903194959/https://twitter.com/djmtshepana/status/1301608169496612866

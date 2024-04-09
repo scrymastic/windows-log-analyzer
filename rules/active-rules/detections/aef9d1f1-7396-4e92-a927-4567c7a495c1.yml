@@ -23,3 +23,6 @@ detection:
     - CommandLine|contains: eternal-blue
     - CommandLine|contains: MS17-
 id: aef9d1f1-7396-4e92-a927-4567c7a495c1
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_registry_typed_paths_persistence.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/dez_/status/1560101453150257154

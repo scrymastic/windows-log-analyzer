@@ -22,3 +22,7 @@ detection:
     - ScriptBlockText|contains: \*symantec\*
     - ScriptBlockText|contains: \*virus\*
 id: 904e8e61-8edf-4350-b59c-b905fc8e810c
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

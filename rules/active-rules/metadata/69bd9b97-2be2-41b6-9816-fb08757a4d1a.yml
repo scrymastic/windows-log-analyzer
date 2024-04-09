@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_execution_from_public_folder_as_parent.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/11/18
 references:
 - https://redcanary.com/blog/blackbyte-ransomware/

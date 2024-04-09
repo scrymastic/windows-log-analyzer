@@ -22,3 +22,6 @@ detection:
     - CommandLine|contains: fSingleSessionPerUser
     - CommandLine|contains: fDenyTSConnections
 id: 0d5675be-bc88-4172-86d3-1e96a4476536
+logsource:
+  category: process_creation
+  product: windows

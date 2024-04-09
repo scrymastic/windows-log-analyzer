@@ -7,9 +7,6 @@ falsepositives:
   party tools
 filename: proc_creation_win_registry_logon_script.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/06/09
 references:
 - https://cocomelonc.github.io/persistence/2022/12/09/malware-pers-20.html

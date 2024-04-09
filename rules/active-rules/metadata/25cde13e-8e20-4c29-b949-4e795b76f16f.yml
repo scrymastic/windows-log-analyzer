@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_teams_suspicious_objectaccess.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: ''
 references:
 - https://www.bleepingcomputer.com/news/security/microsoft-teams-stores-auth-tokens-as-cleartext-in-windows-linux-macs/

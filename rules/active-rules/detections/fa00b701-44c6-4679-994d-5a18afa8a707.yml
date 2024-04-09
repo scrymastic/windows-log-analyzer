@@ -15,3 +15,6 @@ detection:
       - CommandLine|endswith: /RunAs 10
       - CommandLine|endswith: /RunAs 11
 id: fa00b701-44c6-4679-994d-5a18afa8a707
+logsource:
+  category: process_creation
+  product: windows

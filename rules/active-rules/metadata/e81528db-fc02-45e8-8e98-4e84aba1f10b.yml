@@ -14,9 +14,6 @@ falsepositives:
   9100 or similar.
 filename: net_connection_win_notepad.yml
 level: high
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/02/02
 references:
 - https://web.archive.org/web/20200219102749/https://www.sans.org/cyber-security-summit/archives/file/summit-archive-1492186586.pdf

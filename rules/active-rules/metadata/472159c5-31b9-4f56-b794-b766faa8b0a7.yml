@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_access_win_lsass_seclogon_access.yml
 level: high
-logsource:
-  category: process_access
-  product: windows
 modified: ''
 references:
 - https://twitter.com/SBousseaden/status/1541920424635912196

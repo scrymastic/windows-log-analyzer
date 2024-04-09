@@ -12,3 +12,6 @@ detection:
     - TargetObject|endswith: \EnableScripts
   - Details|==: DWORD (0x00000000)
 id: fecfd1a1-cc78-4313-a1ea-2ee2e8ec27a7
+logsource:
+  category: registry_set
+  product: windows

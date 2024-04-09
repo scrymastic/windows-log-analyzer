@@ -2,3 +2,6 @@ detection:
 - and:
   - ImageLoaded|contains: \AppData\Local\Temp\ba9ea7344a4a5f591d6e5dc32a13494b\
 id: 84b0a8f3-680b-4096-a45b-e9a89221727c
+logsource:
+  category: image_load
+  product: windows

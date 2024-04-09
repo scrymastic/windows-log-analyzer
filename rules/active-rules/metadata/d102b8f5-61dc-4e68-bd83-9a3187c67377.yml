@@ -9,9 +9,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_vscode_tunnel_renamed_execution.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://ipfyx.fr/post/visual-studio-code-tunnel/

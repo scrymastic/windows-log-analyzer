@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_ldifde_export.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://businessinsights.bitdefender.com/deep-dive-into-a-backdoordiplomacy-attack-a-study-of-an-attackers-toolkit

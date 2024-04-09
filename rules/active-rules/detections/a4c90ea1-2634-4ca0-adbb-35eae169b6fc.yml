@@ -13,3 +13,6 @@ detection:
       - ObjectValueName|==: COMPlus_ETWFlags
     - NewValue|==: 0
 id: a4c90ea1-2634-4ca0-adbb-35eae169b6fc
+logsource:
+  product: windows
+  service: security

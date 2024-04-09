@@ -14,3 +14,6 @@ detection:
   - or:
     - TargetObject|not contains: \Accepted Documents\
 id: d88d0ab2-e696-4d40-a2ed-9790064e66b3
+logsource:
+  category: registry_set
+  product: windows

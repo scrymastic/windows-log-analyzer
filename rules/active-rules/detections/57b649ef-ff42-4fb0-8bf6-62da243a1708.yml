@@ -6,3 +6,6 @@ detection:
     - EventID|==: 1116
     - EventID|==: 1117
 id: 57b649ef-ff42-4fb0-8bf6-62da243a1708
+logsource:
+  product: windows
+  service: windefend

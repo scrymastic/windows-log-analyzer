@@ -5,9 +5,6 @@ falsepositives:
 - Bad connections or network interruptions
 filename: win_system_rdp_potential_cve_2019_0708.yml
 level: medium
-logsource:
-  product: windows
-  service: system
 modified: 2022/12/25
 references:
 - https://github.com/zerosum0x0/CVE-2019-0708

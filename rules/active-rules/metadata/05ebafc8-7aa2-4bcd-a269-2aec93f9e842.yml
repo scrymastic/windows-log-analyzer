@@ -5,9 +5,6 @@ falsepositives:
 - False positive are expected with legitimate sources
 filename: proc_creation_win_winget_add_custom_source.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/package-manager/winget/source

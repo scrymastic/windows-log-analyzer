@@ -5,10 +5,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_sensitive_file_discovery.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://twitter.com/malmoeb/status/1570814999370801158

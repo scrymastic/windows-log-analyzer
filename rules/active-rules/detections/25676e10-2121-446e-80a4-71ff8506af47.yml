@@ -16,3 +16,6 @@ detection:
     - CommandLine|not contains: $exserver=Get-ExchangeServer ([Environment]::MachineName)
         -ErrorVariable exerr 2> $null
 id: 25676e10-2121-446e-80a4-71ff8506af47
+logsource:
+  category: process_creation
+  product: windows

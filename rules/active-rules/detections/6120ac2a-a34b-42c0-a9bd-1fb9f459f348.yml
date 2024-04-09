@@ -7,3 +7,6 @@ detection:
   - Image|not contains: :\Windows\Microsoft.NET\Framework64\
   - Image|not contains: :\Windows\WinSxS\
 id: 6120ac2a-a34b-42c0-a9bd-1fb9f459f348
+logsource:
+  category: process_creation
+  product: windows

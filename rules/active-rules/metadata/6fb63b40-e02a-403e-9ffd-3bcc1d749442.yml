@@ -7,11 +7,6 @@ falsepositives:
   service name
 filename: win_security_metasploit_or_impacket_smb_psexec_service_install.yml
 level: high
-logsource:
-  definition: The 'System Security Extension' audit subcategory need to be enabled
-    to log the EID 4697
-  product: windows
-  service: security
 modified: 2022/10/05
 references:
 - https://bczyz1.github.io/2021/01/30/psexec.html

@@ -5,11 +5,6 @@ falsepositives:
 - Legitimate administrative activity
 filename: win_security_admin_share_access.yml
 level: low
-logsource:
-  definition: 'Requirements: The advanced audit policy setting "Object Access > Audit
-    File Share" must be configured for Success/Failure'
-  product: windows
-  service: security
 modified: 2024/01/16
 references:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5140

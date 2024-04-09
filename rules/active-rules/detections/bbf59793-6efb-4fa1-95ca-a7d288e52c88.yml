@@ -3,3 +3,6 @@ detection:
   - TargetObject|endswith: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify\logon
   - Details|endswith: .dll
 id: bbf59793-6efb-4fa1-95ca-a7d288e52c88
+logsource:
+  category: registry_set
+  product: windows

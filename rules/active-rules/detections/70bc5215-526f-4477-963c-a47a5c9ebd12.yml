@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: 'ipmo '
   - CommandLine|contains: Microsoft.ActiveDirectory.Management.dll
 id: 70bc5215-526f-4477-963c-a47a5c9ebd12
+logsource:
+  category: process_creation
+  product: windows

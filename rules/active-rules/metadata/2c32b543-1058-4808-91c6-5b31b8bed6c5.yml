@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_pua_crassus.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://github.com/vu-ls/Crassus

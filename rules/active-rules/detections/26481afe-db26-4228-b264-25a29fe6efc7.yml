@@ -8,3 +8,6 @@ detection:
     - ImagePath|not startswith: C:\ProgramData\Microsoft\Windows Defender\Definition
         Updates\
 id: 26481afe-db26-4228-b264-25a29fe6efc7
+logsource:
+  product: windows
+  service: system

@@ -13,9 +13,6 @@ falsepositives:
 - Legitimate registration of IFilters by the OS or software
 filename: registry_set_persistence_ifilter.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2024/03/26
 references:
 - https://persistence-info.github.io/Data/ifilters.html

@@ -6,9 +6,6 @@ falsepositives:
   the public folder or remote shares. A baseline is required before production use.
 filename: win_msi_install_from_susp_locations.yml
 level: medium
-logsource:
-  product: windows
-  service: application
 modified: 2023/10/23
 references:
 - https://www.trendmicro.com/en_us/research/22/h/ransomware-actor-abuses-genshin-impact-anti-cheat-driver-to-kill-antivirus.html

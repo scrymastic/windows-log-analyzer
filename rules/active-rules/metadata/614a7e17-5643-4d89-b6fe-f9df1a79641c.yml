@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_wmiprvse_wbemcomn_dll_hijack.yml
 level: critical
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/12/02
 references:
 - https://threathunterplaybook.com/hunts/windows/201009-RemoteWMIWbemcomnDLLHijack/notebook.html

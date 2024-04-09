@@ -2,3 +2,6 @@ detection:
 - and:
   - TargetObject|endswith: \services\DNS\Parameters\ServerLevelPluginDll
 id: e61e8a88-59a9-451c-874e-70fcc9740d67
+logsource:
+  category: registry_set
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
   added script is legitimate
 filename: registry_add_persistence_logon_scripts_userinitmprlogonscript.yml
 level: medium
-logsource:
-  category: registry_add
-  product: windows
 modified: 2023/06/09
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1037.001/T1037.001.md

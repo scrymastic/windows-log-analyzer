@@ -4,3 +4,6 @@ detection:
   - EventID|==: 201
   - Data|contains: Transferred files with action
 id: 5d19eb78-5b5b-4ef2-a9f0-4bfa94d58a13
+logsource:
+  product: windows
+  service: application

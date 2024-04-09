@@ -22,3 +22,6 @@ detection:
   - CommandLine|contains: .scr
   - CommandLine|contains: /f
 id: 0fc35fc3-efe6-4898-8a37-0b233339524f
+logsource:
+  category: process_creation
+  product: windows

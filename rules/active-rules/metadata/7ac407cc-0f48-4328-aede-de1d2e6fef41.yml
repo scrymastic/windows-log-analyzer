@@ -8,11 +8,6 @@ falsepositives:
   out using the "TargetUserName" field
 filename: win_lsa_server_normal_user_admin.yml
 level: medium
-logsource:
-  definition: 'Requirements: Microsoft-Windows-LSA/Operational (199FE037-2B82-40A9-82AC-E1D46C792B99)
-    Event Log must be enabled and collected in order to use this rule.'
-  product: windows
-  service: lsa-server
 modified: 2023/05/05
 references:
 - https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers

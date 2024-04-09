@@ -5,3 +5,6 @@ detection:
     - Image|endswith: \rundll32.exe
     - OriginalFileName|==: RUNDLL32.EXE
 id: d7eb979b-c2b5-4a6f-a3a7-c87ce6763819
+logsource:
+  category: process_creation
+  product: windows

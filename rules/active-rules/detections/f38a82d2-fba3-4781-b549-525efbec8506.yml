@@ -7,3 +7,6 @@ detection:
   - or:
     - CommandLine|contains: .exe -i127.0.0.1 -p
 id: f38a82d2-fba3-4781-b549-525efbec8506
+logsource:
+  category: process_creation
+  product: windows

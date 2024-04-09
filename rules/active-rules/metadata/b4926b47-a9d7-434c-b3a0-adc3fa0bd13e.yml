@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: file_event_win_susp_double_extension.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/11/07
 references:
 - https://www.crowdstrike.com/blog/meet-crowdstrikes-adversary-of-the-month-for-june-mustang-panda/

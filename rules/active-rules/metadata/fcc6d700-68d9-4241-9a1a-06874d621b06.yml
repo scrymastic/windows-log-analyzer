@@ -10,9 +10,6 @@ falsepositives:
   documents
 filename: file_event_win_office_onenote_susp_dropped_files.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/02/27
 references:
 - https://www.bleepingcomputer.com/news/security/hackers-now-use-microsoft-onenote-attachments-to-spread-malware/

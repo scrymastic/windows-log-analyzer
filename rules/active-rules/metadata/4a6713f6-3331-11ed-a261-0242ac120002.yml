@@ -15,9 +15,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_taskkill_sep.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.exploit-db.com/exploits/37525

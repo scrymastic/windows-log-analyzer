@@ -5,3 +5,6 @@ detection:
     - CommandLine|contains: session >
     - CommandLine|contains: process >
 id: 53ef0cef-fa24-4f25-a34a-6c72dfa2e6e2
+logsource:
+  category: process_creation
+  product: windows

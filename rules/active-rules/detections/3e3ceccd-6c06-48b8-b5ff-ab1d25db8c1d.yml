@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: wmic.exe
   - CommandLine|contains: csproduct
 id: 3e3ceccd-6c06-48b8-b5ff-ab1d25db8c1d
+logsource:
+  category: process_creation
+  product: windows

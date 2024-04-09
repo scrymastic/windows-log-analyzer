@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_reg_credential_access_via_password_filter.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://pentestlab.blog/2020/02/10/credential-access-password-filter-dll/

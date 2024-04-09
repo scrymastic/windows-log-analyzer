@@ -6,3 +6,6 @@ detection:
     - ServiceName|==: RemComSvc
     - ImagePath|endswith: \RemComSvc.exe
 id: 9e36ed87-4986-482e-8e3b-5c23ffff11bf
+logsource:
+  product: windows
+  service: system

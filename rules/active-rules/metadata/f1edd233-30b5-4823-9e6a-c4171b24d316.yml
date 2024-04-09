@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use
 filename: proc_creation_win_rundll32_registered_com_objects.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/09
 references:
 - https://nasbench.medium.com/a-deep-dive-into-rundll32-exe-642344b41e90

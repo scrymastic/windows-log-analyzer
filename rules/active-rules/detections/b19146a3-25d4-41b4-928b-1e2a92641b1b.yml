@@ -5,3 +5,6 @@ detection:
     - Image|endswith: \cmd.exe
     - Image|endswith: \csc.exe
 id: b19146a3-25d4-41b4-928b-1e2a92641b1b
+logsource:
+  category: process_creation
+  product: windows

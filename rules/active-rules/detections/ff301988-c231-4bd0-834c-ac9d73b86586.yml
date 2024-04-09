@@ -2,3 +2,6 @@ detection:
 - and:
   - TargetFilename|endswith: \PSReadLine\ConsoleHost_history.txt
 id: ff301988-c231-4bd0-834c-ac9d73b86586
+logsource:
+  category: file_delete
+  product: windows

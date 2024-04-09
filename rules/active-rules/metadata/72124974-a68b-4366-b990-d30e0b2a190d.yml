@@ -5,9 +5,6 @@ falsepositives:
 - Linux hostnames composed of 16 characters.
 filename: win_security_metasploit_authentication.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2024/01/25
 references:
 - https://github.com/rapid7/metasploit-framework/blob/1416b5776d963f21b7b5b45d19f3e961201e0aed/lib/rex/proto/smb/client.rb

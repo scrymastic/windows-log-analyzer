@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_renamed_curl.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/10/12
 references:
 - https://twitter.com/Kostastsale/status/1700965142828290260

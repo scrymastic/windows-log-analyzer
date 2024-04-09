@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate use of the system utilities to discover system time for legitimate reason
 filename: proc_creation_win_remote_time_discovery.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/06/28
 references:
 - https://eqllib.readthedocs.io/en/latest/analytics/fcdb99c2-ac3c-4bde-b664-4b336329bed2.html

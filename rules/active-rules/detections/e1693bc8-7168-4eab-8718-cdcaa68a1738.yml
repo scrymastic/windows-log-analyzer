@@ -26,3 +26,6 @@ detection:
     - CommandLine|contains: wscript
     - CommandLine|contains: cscript
 id: e1693bc8-7168-4eab-8718-cdcaa68a1738
+logsource:
+  category: process_creation
+  product: windows

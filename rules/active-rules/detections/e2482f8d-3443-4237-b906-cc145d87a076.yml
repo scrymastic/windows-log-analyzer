@@ -21,3 +21,6 @@ detection:
       - TargetObject|endswith: SYSTEM\CurrentControlSet\Control\StorageDevicePolicies\WriteProtect
     - Details|==: DWORD (0x00000000)
 id: e2482f8d-3443-4237-b906-cc145d87a076
+logsource:
+  category: registry_set
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_werfault_reflect_debugger_exec.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://cocomelonc.github.io/malware/2022/11/02/malware-pers-18.html

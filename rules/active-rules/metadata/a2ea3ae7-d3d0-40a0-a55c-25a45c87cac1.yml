@@ -10,9 +10,6 @@ falsepositives:
   behavior is causing false positives, it can be exempted from the rule.
 filename: proc_creation_win_lolbin_susp_driver_installed_by_pnputil.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil-command-syntax

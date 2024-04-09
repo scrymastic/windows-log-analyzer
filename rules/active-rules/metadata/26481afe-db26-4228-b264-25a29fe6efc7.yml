@@ -9,9 +9,6 @@ falsepositives:
 - Unknown
 filename: win_system_service_install_uncommon.yml
 level: medium
-logsource:
-  product: windows
-  service: system
 modified: 2024/02/09
 references:
 - Internal Research

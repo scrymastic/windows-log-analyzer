@@ -6,3 +6,6 @@ detection:
     - ServiceName|startswith: PAExec-
     - ImagePath|startswith: C:\WINDOWS\PAExec-
 id: de7ce410-b3fb-4e8a-b38c-3b999e2c3420
+logsource:
+  product: windows
+  service: system

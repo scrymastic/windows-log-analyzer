@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_empire_powershell_uac_bypass.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://github.com/EmpireProject/Empire/blob/e37fb2eef8ff8f5a0a689f1589f424906fe13055/data/module_source/privesc/Invoke-EventVwrBypass.ps1#L64

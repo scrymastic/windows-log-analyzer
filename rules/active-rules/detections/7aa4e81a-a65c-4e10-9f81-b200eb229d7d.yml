@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: ' script '
   - CommandLine|contains: ' set '
 id: 7aa4e81a-a65c-4e10-9f81-b200eb229d7d
+logsource:
+  category: process_creation
+  product: windows

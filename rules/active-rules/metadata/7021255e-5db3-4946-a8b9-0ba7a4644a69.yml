@@ -6,11 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_set_provisioning_command_abuse.yml
 level: high
-logsource:
-  category: registry_set
-  definition: 'Requirements: The registry key "\SOFTWARE\Microsoft\Provisioning\Commands\"
-    and its subkey must be monitored'
-  product: windows
 modified: 2023/08/17
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Provlaunch/

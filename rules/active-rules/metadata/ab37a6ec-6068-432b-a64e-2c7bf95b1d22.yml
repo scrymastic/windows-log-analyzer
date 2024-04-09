@@ -8,9 +8,6 @@ falsepositives:
 - Some legitimate Windows services
 filename: proc_creation_win_regsvr32_susp_parent.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://web.archive.org/web/20171001085340/https://subt0x10.blogspot.com/2017/04/bypass-application-whitelisting-script.html

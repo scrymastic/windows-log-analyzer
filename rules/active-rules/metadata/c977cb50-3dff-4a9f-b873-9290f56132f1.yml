@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_appxdeployment_server_uncommon_package_locations.yml
 level: medium
-logsource:
-  product: windows
-  service: appxdeployment-server
 modified: ''
 references:
 - Internal Research

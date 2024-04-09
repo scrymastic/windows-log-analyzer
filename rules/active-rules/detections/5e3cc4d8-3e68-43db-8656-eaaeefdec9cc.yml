@@ -26,3 +26,6 @@ detection:
     - CommandLine|contains: '%tmp%'
     - CommandLine|contains: :\Windows\
 id: 5e3cc4d8-3e68-43db-8656-eaaeefdec9cc
+logsource:
+  category: process_creation
+  product: windows

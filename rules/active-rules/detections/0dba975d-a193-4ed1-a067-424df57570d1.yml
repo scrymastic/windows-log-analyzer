@@ -8,3 +8,6 @@ detection:
     - DestinationPort|==: 443
     - DestinationPort|==: 445
 id: 0dba975d-a193-4ed1-a067-424df57570d1
+logsource:
+  category: network_connection
+  product: windows

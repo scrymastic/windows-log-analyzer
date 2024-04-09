@@ -12,9 +12,6 @@ falsepositives:
 - Unknown
 filename: image_load_side_load_shell_chrome_api.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://mobile.twitter.com/0gtweet/status/1564131230941122561

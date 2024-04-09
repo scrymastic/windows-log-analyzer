@@ -19,3 +19,8 @@ detection:
   - Details|not contains: \system32\CompatTelRunner.exe
   - Details|not contains: \system32\DeviceCensus.exe
 id: 73a883d0-0348-4be4-a8d8-51031c2564f8
+logsource:
+  category: registry_set
+  definition: 'Requirements: Sysmon config that monitors \SOFTWARE\Microsoft\Windows
+    NT\CurrentVersion\AppCompatFlags\TelemetryController subkey of the HKLM hives'
+  product: windows

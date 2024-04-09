@@ -6,3 +6,6 @@ detection:
   - or:
     - TargetObject|endswith: \AppXypsaf9f1qserqevf0sws76dx4k9a5206\Shell\open\command\(Default)
 id: f663a6d9-9d1b-49b8-b2b1-0637914d199a
+logsource:
+  category: registry_event
+  product: windows

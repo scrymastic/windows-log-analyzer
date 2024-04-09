@@ -15,3 +15,6 @@ detection:
     - CommandLine|contains: 'ftp:'
     - CommandLine|contains: 'ftps:'
 id: b9cbbc17-d00d-4e3d-a827-b06d03d2380d
+logsource:
+  category: process_creation
+  product: windows

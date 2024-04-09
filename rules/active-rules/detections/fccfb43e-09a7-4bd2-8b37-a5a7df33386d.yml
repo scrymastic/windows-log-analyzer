@@ -22,3 +22,6 @@ detection:
     - Image|endswith: \teams.exe
   - TargetFilename|contains: .rdp
 id: fccfb43e-09a7-4bd2-8b37-a5a7df33386d
+logsource:
+  category: file_event
+  product: windows

@@ -12,3 +12,6 @@ detection:
   - Image|not endswith: :\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell_ise.exe
   - Image|not endswith: :\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
 id: e3845023-ca9a-4024-b2b2-5422156d5527
+logsource:
+  category: file_event
+  product: windows

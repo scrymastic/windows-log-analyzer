@@ -7,3 +7,6 @@ detection:
   - CommandLine|contains: .run
   - CommandLine|contains: (window.close)
 id: ac20ae82-8758-4f38-958e-b44a3140ca88
+logsource:
+  category: process_creation
+  product: windows

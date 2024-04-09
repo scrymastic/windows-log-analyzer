@@ -15,3 +15,6 @@ detection:
   - or:
     - CommandLine|contains: -sc exchaddresses
 id: 455b9d50-15a1-4b99-853f-8d37655a4c1b
+logsource:
+  category: process_creation
+  product: windows

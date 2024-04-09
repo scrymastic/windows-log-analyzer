@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wermgr_susp_child_process.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/08/23
 references:
 - https://www.trendmicro.com/en_us/research/22/j/black-basta-infiltrates-networks-via-qakbot-brute-ratel-and-coba.html

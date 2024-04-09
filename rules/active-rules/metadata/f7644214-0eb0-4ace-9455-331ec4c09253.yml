@@ -6,9 +6,6 @@ falsepositives:
 - Faulty legacy applications
 filename: win_security_susp_kerberos_manipulation.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2024/01/16
 references:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4771

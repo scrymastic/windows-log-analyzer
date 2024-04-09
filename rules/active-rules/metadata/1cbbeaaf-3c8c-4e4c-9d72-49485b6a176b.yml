@@ -7,9 +7,6 @@ falsepositives:
   source to determine the necessary actions to take
 filename: dns_query_win_ufile_io_query.yml
 level: low
-logsource:
-  category: dns_query
-  product: windows
 modified: 2023/09/18
 references:
 - https://thedfirreport.com/2021/12/13/diavol-ransomware/

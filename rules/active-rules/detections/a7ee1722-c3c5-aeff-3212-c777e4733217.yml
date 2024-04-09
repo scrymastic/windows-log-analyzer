@@ -21,3 +21,6 @@ detection:
   - CommandLine|contains: WinDefend
   - CommandLine|contains: start=disabled
 id: a7ee1722-c3c5-aeff-3212-c777e4733217
+logsource:
+  category: process_creation
+  product: windows

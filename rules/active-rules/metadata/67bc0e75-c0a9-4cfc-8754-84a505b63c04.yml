@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_dfsvc_suspicious_child_processes.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://posts.specterops.io/less-smartscreen-more-caffeine-ab-using-clickonce-for-trusted-code-execution-1446ea8051c5

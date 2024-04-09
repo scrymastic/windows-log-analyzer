@@ -11,3 +11,6 @@ detection:
       - CommandLine|contains: ' --name '
       - CommandLine|contains: .dmp
 id: 1a1ed54a-2ba4-4221-94d5-01dee560d71e
+logsource:
+  category: process_creation
+  product: windows

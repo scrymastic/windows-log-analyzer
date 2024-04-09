@@ -6,9 +6,6 @@ falsepositives:
 - Tools with similar commandline (very rare)
 filename: proc_creation_win_pua_advanced_port_scanner.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/07
 references:
 - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/Advanced%20Port%20Scanner

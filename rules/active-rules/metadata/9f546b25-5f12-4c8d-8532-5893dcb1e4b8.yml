@@ -8,9 +8,6 @@ falsepositives:
   execute applications
 filename: proc_creation_win_diskshadow_child_process_susp.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/

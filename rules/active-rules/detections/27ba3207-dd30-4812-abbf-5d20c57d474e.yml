@@ -17,3 +17,6 @@ detection:
     - Image|endswith: \vivaldi.exe
   - CommandLine|contains: --load-extension=
 id: 27ba3207-dd30-4812-abbf-5d20c57d474e
+logsource:
+  category: process_creation
+  product: windows

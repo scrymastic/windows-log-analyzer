@@ -10,3 +10,6 @@ detection:
     - Image|endswith: \wscript.exe
   - CommandLine|contains: \DavWWWRoot\
 id: 1412aa78-a24c-4abd-83df-767dfb2c5bbe
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_mal_wceaux_dll.yml
 level: critical
-logsource:
-  product: windows
-  service: security
 modified: 2021/11/27
 references:
 - https://www.jpcert.or.jp/english/pub/sr/ir_research.html

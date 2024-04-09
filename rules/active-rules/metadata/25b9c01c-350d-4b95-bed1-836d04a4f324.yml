@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_system_moriya_rootkit.yml
 level: critical
-logsource:
-  product: windows
-  service: system
 modified: 2022/11/29
 references:
 - https://securelist.com/operation-tunnelsnake-and-moriya-rootkit/101831

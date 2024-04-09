@@ -13,3 +13,6 @@ detection:
     - ImageLoaded|endswith: \VBEUI.DLL
     - ImageLoaded|endswith: \VBE7INTL.DLL
 id: e6ce8457-68b1-485b-9bdd-3c2b5d679aa9
+logsource:
+  category: image_load
+  product: windows

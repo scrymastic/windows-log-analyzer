@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_schtasks_powershell_persistence.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/03
 references:
 - https://blog.malwarebytes.com/threat-intelligence/2022/04/colibri-loader-combines-task-scheduler-and-powershell-in-clever-persistence-technique/

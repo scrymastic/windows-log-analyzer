@@ -7,9 +7,6 @@ falsepositives:
 - Rare legitimate dump of the process by the operating system due to a crash of lsass
 filename: file_event_win_lsass_shtinkering.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://github.com/deepinstinct/Lsass-Shtinkering

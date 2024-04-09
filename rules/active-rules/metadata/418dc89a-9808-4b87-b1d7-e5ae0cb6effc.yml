@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: image_load_side_load_windows_defender.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/08/04
 references:
 - https://www.sentinelone.com/blog/living-off-windows-defender-lockbit-ransomware-sideloads-cobalt-strike-through-microsoft-security-tool

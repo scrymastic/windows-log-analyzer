@@ -17,11 +17,6 @@ falsepositives:
 - Unknown
 filename: registry_set_telemetry_persistence.yml
 level: high
-logsource:
-  category: registry_set
-  definition: 'Requirements: Sysmon config that monitors \SOFTWARE\Microsoft\Windows
-    NT\CurrentVersion\AppCompatFlags\TelemetryController subkey of the HKLM hives'
-  product: windows
 modified: 2023/08/17
 references:
 - https://www.trustedsec.com/blog/abusing-windows-telemetry-for-persistence/

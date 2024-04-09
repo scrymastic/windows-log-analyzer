@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_trufflesnout.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/13
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/40b77d63808dd4f4eafb83949805636735a1fd15/atomics/T1482/T1482.md

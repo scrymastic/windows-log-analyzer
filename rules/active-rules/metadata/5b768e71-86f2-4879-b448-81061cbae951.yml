@@ -8,9 +8,6 @@ falsepositives:
   you could reduce the level to medium
 filename: proc_creation_win_net_user_default_accounts_manipulation.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://www.trellix.com/en-sg/about/newsroom/stories/threat-labs/lockergoga-ransomware-family-used-in-targeted-attacks.html

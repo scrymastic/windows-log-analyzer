@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_appxdeployment_server_susp_domains.yml
 level: high
-logsource:
-  product: windows
-  service: appxdeployment-server
 modified: 2024/02/09
 references:
 - Internal Research

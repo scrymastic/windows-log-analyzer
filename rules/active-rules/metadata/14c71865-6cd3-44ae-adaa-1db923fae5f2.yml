@@ -8,10 +8,6 @@ falsepositives:
   purposes. Must be investigated.
 filename: posh_ps_tamper_windows_defender_set_mp.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2024/01/02
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1562.001/T1562.001.md

@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use of cloudflare tunnels will also trigger this.
 filename: dns_query_win_cloudflared_communication.yml
 level: medium
-logsource:
-  category: dns_query
-  product: windows
 modified: ''
 references:
 - https://www.guidepointsecurity.com/blog/tunnel-vision-cloudflared-abused-in-the-wild/

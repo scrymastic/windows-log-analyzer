@@ -10,3 +10,6 @@ detection:
   - ParentCommandLine|contains: manage-bde.wsf
   - Image|endswith: \cmd.exe
 id: c363385c-f75d-4753-a108-c1a8e28bdbda
+logsource:
+  category: process_creation
+  product: windows

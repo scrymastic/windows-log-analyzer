@@ -8,9 +8,6 @@ falsepositives:
 - System provisioning (system reset before the golden image creation)
 filename: win_system_eventlog_cleared.yml
 level: medium
-logsource:
-  product: windows
-  service: system
 modified: 2023/11/15
 references:
 - https://twitter.com/deviouspolack/status/832535435960209408

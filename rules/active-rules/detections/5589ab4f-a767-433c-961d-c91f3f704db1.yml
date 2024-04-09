@@ -32,3 +32,6 @@ detection:
     - Image|contains: HotPotatoes7
     - Image|contains: 'HotPotatoes '
 id: 5589ab4f-a767-433c-961d-c91f3f704db1
+logsource:
+  category: process_creation
+  product: windows

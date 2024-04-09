@@ -9,3 +9,6 @@ detection:
     - ScriptBlockText|contains: crypto::certificates
     - ScriptBlockText|contains: CERT_SYSTEM_STORE_LOCAL_MACHINE
 id: 189e3b02-82b2-4b90-9662-411eb64486d4
+logsource:
+  category: ps_script
+  product: windows

@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: ' -FO CSV'
   - CommandLine|contains: whoami*>
 id: c30fb093-1109-4dc8-88a8-b30d11c95a5d
+logsource:
+  category: process_creation
+  product: windows

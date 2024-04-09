@@ -7,9 +7,6 @@ falsepositives:
   Investigate and apply additional filters accordingly
 filename: proc_creation_win_mshta_inline_vbscript.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/15
 references:
 - https://web.archive.org/web/20220830122045/http://blog.talosintelligence.com/2022/08/modernloader-delivers-multiple-stealers.html

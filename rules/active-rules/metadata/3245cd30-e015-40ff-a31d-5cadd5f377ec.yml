@@ -6,10 +6,6 @@ falsepositives:
 - Unlikely
 filename: posh_ps_hktl_rubeus.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://blog.harmj0y.net/redteaming/from-kekeo-to-rubeus

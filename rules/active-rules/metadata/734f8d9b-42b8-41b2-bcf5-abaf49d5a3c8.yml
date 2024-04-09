@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate usage of remote Powershell, e.g. for monitoring purposes.
 filename: proc_creation_win_winrm_remote_powershell_session_process.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://threathunterplaybook.com/hunts/windows/190511-RemotePwshExecution/notebook.html

@@ -8,10 +8,6 @@ falsepositives:
 - Rare FP could occur due to the non linearity of the ScriptBlockText log
 filename: posh_ps_using_set_service_to_hide_services.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://twitter.com/Alh4zr3d/status/1580925761996828672

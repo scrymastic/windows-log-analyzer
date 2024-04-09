@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: iex
     - CommandLine|contains: comspec
 id: d87bd452-6da1-456e-8155-7dc988157b7d
+logsource:
+  category: process_creation
+  product: windows

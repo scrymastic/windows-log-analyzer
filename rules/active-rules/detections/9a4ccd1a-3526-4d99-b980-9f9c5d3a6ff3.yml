@@ -15,3 +15,6 @@ detection:
   - or:
     - ParentImage|!==: C:\Windows\System32\lsass.exe
 id: 9a4ccd1a-3526-4d99-b980-9f9c5d3a6ff3
+logsource:
+  category: process_creation
+  product: windows

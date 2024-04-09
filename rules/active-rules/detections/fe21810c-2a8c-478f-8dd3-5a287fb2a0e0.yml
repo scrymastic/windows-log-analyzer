@@ -16,3 +16,6 @@ detection:
       - Destination|contains: WScript.Shell
       - Destination|contains: System.Security.Cryptography.FromBase64Transform
 id: fe21810c-2a8c-478f-8dd3-5a287fb2a0e0
+logsource:
+  category: wmi_event
+  product: windows

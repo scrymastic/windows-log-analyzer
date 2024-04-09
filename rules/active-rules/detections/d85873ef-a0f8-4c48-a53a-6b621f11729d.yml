@@ -5,3 +5,6 @@ detection:
     - Product|==: LMIGuardianSvc
     - Company|==: LogMeIn, Inc.
 id: d85873ef-a0f8-4c48-a53a-6b621f11729d
+logsource:
+  category: process_creation
+  product: windows

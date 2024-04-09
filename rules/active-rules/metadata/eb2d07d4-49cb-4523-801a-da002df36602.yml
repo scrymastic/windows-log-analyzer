@@ -9,9 +9,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_hktl_edrsilencer.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://github.com/netero1010/EDRSilencer

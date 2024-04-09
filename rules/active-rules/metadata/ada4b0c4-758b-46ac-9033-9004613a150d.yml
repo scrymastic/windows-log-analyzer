@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use
 filename: proc_creation_win_reg_modify_group_policy_settings.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/40b77d63808dd4f4eafb83949805636735a1fd15/atomics/T1484.001/T1484.001.md

@@ -12,9 +12,6 @@ falsepositives:
 - Legitimate custom SHIM installations will also trigger this rule
 filename: registry_set_persistence_shim_database.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.011/T1546.011.md#atomic-test-3---registry-key-creation-andor-modification-events-for-sdb

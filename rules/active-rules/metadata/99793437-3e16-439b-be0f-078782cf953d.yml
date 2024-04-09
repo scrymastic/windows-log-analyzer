@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate OpenVPN TAP installation
 filename: proc_creation_win_tapinstall_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/11
 references:
 - https://community.openvpn.net/openvpn/wiki/ManagingWindowsTAPDrivers

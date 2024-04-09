@@ -22,3 +22,6 @@ detection:
     - ParentImage|!==: C:\Windows\System32\svchost.exe
     - DestinationPort|!==: 443
 id: cdc8da7d-c303-42f8-b08c-b4ab47230263
+logsource:
+  category: network_connection
+  product: windows

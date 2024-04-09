@@ -16,3 +16,6 @@ detection:
     - CommandLine|contains: \AppData\Local\Temp\
     - CommandLine|contains: \Downloads\
 id: 6e22722b-dfb1-4508-a911-49ac840b40f8
+logsource:
+  category: process_creation
+  product: windows

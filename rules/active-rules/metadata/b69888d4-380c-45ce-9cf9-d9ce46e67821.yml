@@ -8,10 +8,6 @@ falsepositives:
   positives are expected from browser processes and similar.
 filename: create_stream_hash_ads_executable.yml
 level: medium
-logsource:
-  category: create_stream_hash
-  definition: 'Requirements: Sysmon or equivalent configured with Imphash logging'
-  product: windows
 modified: 2023/02/10
 references:
 - https://twitter.com/0xrawsec/status/1002478725605273600?s=21

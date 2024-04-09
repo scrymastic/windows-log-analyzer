@@ -7,9 +7,6 @@ falsepositives:
   top level domain.
 filename: create_stream_hash_zip_tld_download.yml
 level: high
-logsource:
-  category: create_stream_hash
-  product: windows
 modified: ''
 references:
 - https://twitter.com/cyb3rops/status/1659175181695287297

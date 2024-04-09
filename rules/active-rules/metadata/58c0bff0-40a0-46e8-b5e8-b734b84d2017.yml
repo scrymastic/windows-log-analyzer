@@ -7,9 +7,6 @@ falsepositives:
   filters as needed
 filename: win_certificateservicesclient_lifecycle_system_cert_exported.yml
 level: medium
-logsource:
-  product: windows
-  service: certificateservicesclient-lifecycle-system
 modified: ''
 references:
 - https://www.splunk.com/en_us/blog/security/breaking-the-chain-defending-against-certificate-services-abuse.html

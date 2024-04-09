@@ -7,9 +7,6 @@ falsepositives:
   reasons
 filename: win_system_service_terminated_unexpectedly.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - https://www.randori.com/blog/vulnerability-analysis-queuejumper-cve-2023-21554/

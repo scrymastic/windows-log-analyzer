@@ -6,9 +6,6 @@ falsepositives:
 - Administrator might try to disable defender features during testing (must be investigated)
 filename: win_defender_tamper_protection_trigger.yml
 level: high
-logsource:
-  product: windows
-  service: windefend
 modified: 2022/12/06
 references:
 - https://bhabeshraj.com/post/tampering-with-microsoft-defenders-tamper-protection

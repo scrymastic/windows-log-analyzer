@@ -5,3 +5,6 @@ detection:
   - Image|not startswith: C:\Windows\SysWOW64\
   - Image|not startswith: C:\Windows\WinSxS\
 id: 5394fcc7-aeb2-43b5-9a09-cac9fc5edcd5
+logsource:
+  category: process_creation
+  product: windows

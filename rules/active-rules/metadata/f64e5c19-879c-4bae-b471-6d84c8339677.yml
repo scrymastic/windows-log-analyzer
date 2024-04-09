@@ -9,9 +9,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_webshell_tool_recon.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/09
 references:
 - https://ragged-lab.blogspot.com/2020/07/webshells-automating-reconnaissance.html

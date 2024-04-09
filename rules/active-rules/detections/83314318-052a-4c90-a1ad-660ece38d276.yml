@@ -6,3 +6,6 @@ detection:
     - TargetObject|==: HKLM\SYSTEM\CurrentControlSet\Control\FileSystem\LongPathsEnabled
   - Details|==: DWORD (0x00000001)
 id: 83314318-052a-4c90-a1ad-660ece38d276
+logsource:
+  category: registry_set
+  product: windows

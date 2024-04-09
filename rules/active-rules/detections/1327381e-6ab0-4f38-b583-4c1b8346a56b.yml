@@ -11,3 +11,6 @@ detection:
   - CommandLine|contains: \Google\Drive\googledrivesync.exe\..\
   - CommandLine|contains: \Citrix\Virtual Smart Card\Citrix.Authentication.VirtualSmartcard.Launcher.exe\..\
 id: 1327381e-6ab0-4f38-b583-4c1b8346a56b
+logsource:
+  category: process_creation
+  product: windows

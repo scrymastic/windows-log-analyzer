@@ -5,3 +5,6 @@ detection:
     - CommandLine|contains: \EventV~1\RecentViews
   - CommandLine|contains: '>'
 id: 30fc8de7-d833-40c4-96b6-28319fbc4f6c
+logsource:
+  category: process_creation
+  product: windows

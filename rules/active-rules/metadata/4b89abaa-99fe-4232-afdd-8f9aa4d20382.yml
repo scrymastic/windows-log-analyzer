@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: net_connection_win_susp_malware_callback_port.yml
 level: high
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/03/12
 references:
 - https://docs.google.com/spreadsheets/d/17pSTDNpa0sf6pHeRhusvWG6rThciE8CsXTSlDUAZDyo

@@ -11,3 +11,6 @@ detection:
     - CommandLine|endswith: ' StartW'
     - CommandLine|endswith: ',StartW'
 id: ae9c6a7c-9521-42a6-915e-5aaa8689d529
+logsource:
+  category: process_creation
+  product: windows

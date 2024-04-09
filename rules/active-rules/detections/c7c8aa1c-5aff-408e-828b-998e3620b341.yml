@@ -15,3 +15,6 @@ detection:
   - or:
     - Data|not contains: C:\Windows\TEMP\UpdHealthTools.msi
 id: c7c8aa1c-5aff-408e-828b-998e3620b341
+logsource:
+  product: windows
+  service: application

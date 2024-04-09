@@ -3,3 +3,6 @@ detection:
   - TargetFilename|startswith: C:\Users\
   - TargetFilename|endswith: \AppData\Local\Temp\pkgmgr.exe
 id: 41bb431f-56d8-4691-bb56-ed34e390906f
+logsource:
+  category: file_event
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_dns_exfiltration_tools_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://github.com/iagox86/dnscat2

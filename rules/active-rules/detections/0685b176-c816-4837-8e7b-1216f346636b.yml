@@ -13,3 +13,6 @@ detection:
       - CommandLine|==: ' --dump-hash-domain '
       - CommandLine|==: --ntds-file
 id: 0685b176-c816-4837-8e7b-1216f346636b
+logsource:
+  category: process_creation
+  product: windows

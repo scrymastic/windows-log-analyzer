@@ -15,3 +15,6 @@ detection:
   - CommandLine|not contains: FromBase64String
   - CommandLine|not contains: encodedcommand
 id: 86588b36-c6d3-465f-9cee-8f9093e07798
+logsource:
+  category: process_creation
+  product: windows

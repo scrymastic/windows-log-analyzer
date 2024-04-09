@@ -8,3 +8,6 @@ detection:
     - ObjectName|endswith: .AAA
     - ObjectName|endswith: .ZZZ
 id: 39a80702-d7ca-4a83-b776-525b1f86a36d
+logsource:
+  product: windows
+  service: security

@@ -29,3 +29,6 @@ detection:
     - TargetObject|endswith: \Windows Defender Exploit Guard\Controlled Folder Access\EnableControlledFolderAccess
   - Details|==: DWORD (0x00000000)
 id: 0eb46774-f1ab-4a74-8238-1155855f2263
+logsource:
+  category: registry_set
+  product: windows

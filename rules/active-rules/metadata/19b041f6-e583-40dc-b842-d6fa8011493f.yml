@@ -6,10 +6,6 @@ falsepositives:
 - Unknown
 filename: create_stream_hash_hktl_generic_download.yml
 level: high
-logsource:
-  category: create_stream_hash
-  definition: 'Requirements: Sysmon config with Imphash logging activated'
-  product: windows
 modified: 2024/01/02
 references:
 - https://github.com/gentilkiwi/mimikatz

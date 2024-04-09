@@ -17,9 +17,6 @@ falsepositives:
 - Unknown
 filename: win_security_aadhealth_svc_agent_regkey_access.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2022/10/09
 references:
 - https://o365blog.com/post/hybridhealthagent/

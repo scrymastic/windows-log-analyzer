@@ -6,3 +6,6 @@ detection:
     - Company|==: NetSupport Ltd
     - OriginalFileName|==: PCICFGUI.EXE
 id: 758ff488-18d5-4cbe-8ec4-02b6285a434f
+logsource:
+  category: process_creation
+  product: windows

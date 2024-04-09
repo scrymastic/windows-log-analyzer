@@ -9,9 +9,6 @@ falsepositives:
 - Unlikely
 filename: file_event_win_susp_hidden_dir_index_allocation.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://twitter.com/pfiatde/status/1681977680688738305

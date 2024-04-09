@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate deployment of AnyDesk
 filename: proc_creation_win_remote_access_tools_anydesk_silent_install.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/05
 references:
 - https://twitter.com/TheDFIRReport/status/1423361119926816776?s=20

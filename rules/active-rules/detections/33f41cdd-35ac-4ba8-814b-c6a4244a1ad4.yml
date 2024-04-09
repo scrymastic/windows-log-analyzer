@@ -2,3 +2,6 @@ detection:
 - and:
   - Image|==: C:\WINDOWS\system32\wbem\scrcons.exe
 id: 33f41cdd-35ac-4ba8-814b-c6a4244a1ad4
+logsource:
+  category: file_event
+  product: windows

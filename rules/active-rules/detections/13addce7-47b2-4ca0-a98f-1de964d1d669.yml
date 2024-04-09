@@ -5,3 +5,6 @@ detection:
   - ObjectName|==: ServicesActive
   - AccessMask|==: '0xf003f'
 id: 13addce7-47b2-4ca0-a98f-1de964d1d669
+logsource:
+  product: windows
+  service: security

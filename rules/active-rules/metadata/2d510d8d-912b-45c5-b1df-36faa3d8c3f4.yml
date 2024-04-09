@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use of the tool
 filename: win_system_service_install_netsupport_manager.yml
 level: medium
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - http://resources.netsupportsoftware.com/resources/manualpdfs/nsm_manual_uk.pdf

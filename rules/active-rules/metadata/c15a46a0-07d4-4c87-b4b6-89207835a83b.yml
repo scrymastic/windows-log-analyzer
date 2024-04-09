@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_winget_add_susp_custom_source.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/04
 references:
 - https://learn.microsoft.com/en-us/windows/package-manager/winget/source

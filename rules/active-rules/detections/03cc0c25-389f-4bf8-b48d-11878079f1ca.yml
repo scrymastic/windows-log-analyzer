@@ -24,3 +24,6 @@ detection:
       - OriginalFileName|==: REGSVR32.EXE
       - OriginalFileName|==: bitsadmin.exe
 id: 03cc0c25-389f-4bf8-b48d-11878079f1ca
+logsource:
+  category: process_creation
+  product: windows

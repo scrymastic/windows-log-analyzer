@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_exec_data_file.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=50

@@ -9,9 +9,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_pua_pingcastle_script_parent.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://github.com/vletoux/pingcastle

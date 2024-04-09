@@ -6,3 +6,6 @@ detection:
       - Image|endswith: \rfusclient.exe
     - Product|==: Remote Utilities
 id: e01fa958-6893-41d4-ae03-182477c5e77d
+logsource:
+  category: process_creation
+  product: windows

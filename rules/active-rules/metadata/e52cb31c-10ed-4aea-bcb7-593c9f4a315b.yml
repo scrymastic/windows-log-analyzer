@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_uac_bypass_hijacking_firwall_snap_in.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.elastic.co/guide/en/security/current/uac-bypass-via-windows-firewall-snap-in-hijack.html#uac-bypass-via-windows-firewall-snap-in-hijack

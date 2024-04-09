@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_obfuscation_via_utf8.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/05
 references:
 - https://twitter.com/0gtweet/status/1281103918693482496

@@ -7,9 +7,6 @@ falsepositives:
 - To be determined
 filename: proc_creation_win_esentutl_params.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://twitter.com/vxunderground/status/1423336151860002816

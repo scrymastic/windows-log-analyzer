@@ -8,3 +8,8 @@ detection:
     - ServiceFileName|contains: system.io.compression.deflatestream
     - ServiceFileName|contains: system.io.streamreader
 id: 7a922f1b-2635-4d6c-91ef-af228b198ad3
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security

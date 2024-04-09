@@ -5,3 +5,6 @@ detection:
   - CommandLine|contains: ://
   - CommandLine|contains: '%AppData%'
 id: 1ac8666b-046f-4201-8aba-1951aaec03a3
+logsource:
+  category: process_creation
+  product: windows

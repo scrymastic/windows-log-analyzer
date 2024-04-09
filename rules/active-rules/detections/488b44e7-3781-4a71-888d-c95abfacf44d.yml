@@ -9,3 +9,7 @@ detection:
     - ScriptBlockText|contains: Domain
     - ScriptBlockText|contains: Private
 id: 488b44e7-3781-4a71-888d-c95abfacf44d
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

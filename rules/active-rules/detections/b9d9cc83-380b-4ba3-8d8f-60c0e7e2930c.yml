@@ -23,3 +23,6 @@ detection:
   - ParentImage|not contains: C:\Packages\Plugins\Microsoft.GuestConfiguration.ConfigurationforWindows\
   - ParentImage|not contains: \gc_worker.exe
 id: b9d9cc83-380b-4ba3-8d8f-60c0e7e2930c
+logsource:
+  category: process_creation
+  product: windows

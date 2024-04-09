@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_appxdeployment_server_policy_block.yml
 level: medium
-logsource:
-  product: windows
-  service: appxdeployment-server
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/win32/appxpkg/troubleshooting

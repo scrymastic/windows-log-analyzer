@@ -6,9 +6,6 @@ falsepositives:
 - Administrator actions
 filename: registry_set_disable_windows_defender_service.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2024/03/25
 references:
 - https://thedfirreport.com/2021/10/18/icedid-to-xinglocker-ransomware-in-24-hours/

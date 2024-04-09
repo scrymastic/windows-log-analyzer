@@ -9,3 +9,7 @@ detection:
     - ScriptBlockText|contains: Rename-LocalUser
     - ScriptBlockText|contains: Remove-LocalUser
 id: 4fdc44df-bfe9-4fcc-b041-68f5a2d3031c
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

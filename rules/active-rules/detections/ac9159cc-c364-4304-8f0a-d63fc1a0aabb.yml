@@ -9,3 +9,6 @@ detection:
     - TargetObject|endswith: \UntrustedSites
   - Details|==: Enabled
 id: ac9159cc-c364-4304-8f0a-d63fc1a0aabb
+logsource:
+  category: registry_set
+  product: windows

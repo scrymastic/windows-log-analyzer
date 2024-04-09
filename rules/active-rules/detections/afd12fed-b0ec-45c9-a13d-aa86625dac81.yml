@@ -4,3 +4,7 @@ detection:
   - ScriptBlockText|contains: ).Create(
   - ScriptBlockText|contains: ClientAccessible
 id: afd12fed-b0ec-45c9-a13d-aa86625dac81
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

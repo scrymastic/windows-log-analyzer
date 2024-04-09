@@ -13,3 +13,6 @@ detection:
     - CommandLine|contains: '.vbs '
     - CommandLine|contains: '.ps1 '
 id: f0507c0f-a3a2-40f5-acc6-7f543c334993
+logsource:
+  category: process_creation
+  product: windows

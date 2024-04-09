@@ -7,9 +7,6 @@ falsepositives:
 - HP software
 filename: proc_creation_win_mshta_susp_child_processes.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/06
 references:
 - https://www.trustedsec.com/july-2015/malicious-htas/

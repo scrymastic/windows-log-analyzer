@@ -19,3 +19,6 @@ detection:
     - ParentImage|not contains: :\Program Files\WindowsApps\Microsoft.WindowsTerminal_
     - ParentImage|not endswith: \WindowsTerminal.exe
 id: f4bbd493-b796-416e-bbf2-121235348529
+logsource:
+  category: process_creation
+  product: windows

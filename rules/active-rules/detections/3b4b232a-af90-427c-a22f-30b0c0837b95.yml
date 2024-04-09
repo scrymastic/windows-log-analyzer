@@ -2,3 +2,6 @@ detection:
 - and:
   - CallTrace|contains: cmlua.dll
 id: 3b4b232a-af90-427c-a22f-30b0c0837b95
+logsource:
+  category: process_access
+  product: windows

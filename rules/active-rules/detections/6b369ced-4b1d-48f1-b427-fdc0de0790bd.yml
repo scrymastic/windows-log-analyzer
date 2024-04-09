@@ -4,3 +4,6 @@ detection:
   - CommandLine|contains: .cab
   - CommandLine|matches: :[^\\]
 id: 6b369ced-4b1d-48f1-b427-fdc0de0790bd
+logsource:
+  category: process_creation
+  product: windows

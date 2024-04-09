@@ -37,3 +37,6 @@ detection:
     - Status|==: '0x43'
     - Status|==: '0x44'
 id: f7644214-0eb0-4ace-9455-331ec4c09253
+logsource:
+  product: windows
+  service: security

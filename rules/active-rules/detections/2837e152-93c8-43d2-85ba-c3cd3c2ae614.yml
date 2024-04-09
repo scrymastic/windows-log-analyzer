@@ -6,3 +6,7 @@ detection:
     - ScriptBlockText|contains: Microsoft.Office.Interop.Outlook.olDefaultFolders
     - ScriptBlockText|contains: -comobject outlook.application
 id: 2837e152-93c8-43d2-85ba-c3cd3c2ae614
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

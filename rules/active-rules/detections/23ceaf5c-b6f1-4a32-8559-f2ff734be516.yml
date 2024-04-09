@@ -5,3 +5,6 @@ detection:
     - CommandLine|contains: '0x0110'
     - CommandLine|contains: 0x01100:40
 id: 23ceaf5c-b6f1-4a32-8559-f2ff734be516
+logsource:
+  category: process_creation
+  product: windows

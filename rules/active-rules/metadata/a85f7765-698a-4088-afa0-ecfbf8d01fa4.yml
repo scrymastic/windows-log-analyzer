@@ -5,9 +5,6 @@ falsepositives:
 - Administration and debugging activity (must be investigated)
 filename: proc_creation_win_sysinternals_livekd_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/sysinternals/downloads/livekd

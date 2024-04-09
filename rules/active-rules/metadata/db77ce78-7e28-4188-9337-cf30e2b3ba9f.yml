@@ -7,9 +7,6 @@ falsepositives:
   Anaconda, GithubDesktop, etc.)
 filename: image_load_side_load_wazuh.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/05/12
 references:
 - https://www.trendmicro.com/en_us/research/23/c/iron-tiger-sysupdate-adds-linux-targeting.html

@@ -23,3 +23,6 @@ detection:
     - CommandLine|contains: ://8
     - CommandLine|contains: ://9
 id: 1edff897-9146-48d2-9066-52e8d8f80a2f
+logsource:
+  category: process_creation
+  product: windows

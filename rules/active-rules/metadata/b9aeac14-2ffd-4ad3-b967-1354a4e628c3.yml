@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_get_clipboard.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/25
 references:
 - https://github.com/OTRF/detection-hackathon-apt29/issues/16

@@ -5,9 +5,6 @@ falsepositives:
 - Likely
 filename: win_security_external_device.yml
 level: low
-logsource:
-  product: windows
-  service: security
 modified: 2024/02/09
 references:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6416

@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: file_event_win_hktl_inveigh_artefacts.yml
 level: critical
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://github.com/Kevin-Robertson/Inveigh/blob/29d9e3c3a625b3033cdaf4683efaafadcecb9007/Inveigh/Support/Output.cs

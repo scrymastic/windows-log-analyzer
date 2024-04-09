@@ -11,3 +11,6 @@ detection:
         Shell Folders
     - CommandLine|contains: \system\CurrentControlSet\Control\SafeBoot\AlternateShell
 id: 24357373-078f-44ed-9ac4-6d334a668a11
+logsource:
+  category: process_creation
+  product: windows

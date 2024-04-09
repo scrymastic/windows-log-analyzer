@@ -6,3 +6,6 @@ detection:
     - Caption|==: sysmon64.exe - Application Error
     - Caption|==: sysmon.exe - Application Error
 id: 4d7f1827-1637-4def-8d8a-fd254f9454df
+logsource:
+  product: windows
+  service: system

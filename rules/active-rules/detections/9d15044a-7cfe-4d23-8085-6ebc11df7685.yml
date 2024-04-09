@@ -19,3 +19,6 @@ detection:
     - Image|!==: C:\Program Files\AVG\Antivirus\RegSvr.exe
     - TargetObject|not contains: \Microsoft\Office\Outlook\Addins\Antivirus.AsOutExt\
 id: 9d15044a-7cfe-4d23-8085-6ebc11df7685
+logsource:
+  category: registry_set
+  product: windows

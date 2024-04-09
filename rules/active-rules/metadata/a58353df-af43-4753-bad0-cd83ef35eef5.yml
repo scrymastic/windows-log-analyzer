@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate admin activity
 filename: proc_creation_win_ntdsutil_susp_usage.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731620(v=ws.11)

@@ -15,3 +15,6 @@ detection:
     - Path|contains: \AppdData\Local\Temp\
     - Path|contains: /AppdData/Local/Temp/
 id: 5cdeaf3d-1489-477c-95ab-c318559fc051
+logsource:
+  product: windows
+  service: appxdeployment-server

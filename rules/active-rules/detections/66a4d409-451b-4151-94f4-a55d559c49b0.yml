@@ -4,3 +4,7 @@ detection:
     - ScriptBlockText|contains: Remove-SmbShare
     - ScriptBlockText|contains: Remove-FileShare
 id: 66a4d409-451b-4151-94f4-a55d559c49b0
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

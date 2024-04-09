@@ -5,3 +5,7 @@ detection:
     - ScriptBlockText|contains: 'Add-AppxPackage '
   - ScriptBlockText|contains: ' -AllowUnsigned'
 id: 975b2262-9a49-439d-92a6-0709cccdf0b2
+logsource:
+  category: ps_script
+  definition: Script Block Logging must be enable
+  product: windows

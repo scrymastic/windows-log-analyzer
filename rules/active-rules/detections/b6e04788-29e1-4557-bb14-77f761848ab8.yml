@@ -41,3 +41,6 @@ detection:
     - CommandLine|contains: 'iwr '
     - CommandLine|contains: 'wget '
 id: b6e04788-29e1-4557-bb14-77f761848ab8
+logsource:
+  category: process_creation
+  product: windows

@@ -3,3 +3,6 @@ detection:
   - Image|endswith: \spoolsv.exe
   - TargetFilename|contains: C:\Windows\System32\spool\drivers\x64\3\
 id: 5b2bbc47-dead-4ef7-8908-0cf73fcbecbf
+logsource:
+  category: file_delete
+  product: windows

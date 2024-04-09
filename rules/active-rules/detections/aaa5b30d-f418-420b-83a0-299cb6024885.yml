@@ -5,3 +5,6 @@ detection:
     - EventID|==: 50
   - Provider_Name|==: TermDD
 id: aaa5b30d-f418-420b-83a0-299cb6024885
+logsource:
+  product: windows
+  service: system

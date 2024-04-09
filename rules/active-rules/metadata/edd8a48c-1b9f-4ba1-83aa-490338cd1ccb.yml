@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_renamed_jusched.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/03
 references:
 - https://www.bitdefender.com/files/News/CaseStudies/study/262/Bitdefender-WhitePaper-An-APT-Blueprint-Gaining-New-Visibility-into-Financial-Threats-interactive.pdf

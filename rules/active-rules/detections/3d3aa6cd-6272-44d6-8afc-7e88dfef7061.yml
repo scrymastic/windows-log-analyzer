@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: Cmd.Exe
   - CommandLine|contains: assoc
 id: 3d3aa6cd-6272-44d6-8afc-7e88dfef7061
+logsource:
+  category: process_creation
+  product: windows

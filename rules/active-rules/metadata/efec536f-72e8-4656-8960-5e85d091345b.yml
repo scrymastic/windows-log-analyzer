@@ -10,9 +10,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_attrib_system_susp_paths.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/14
 references:
 - https://app.any.run/tasks/c28cabc8-a19f-40f3-a78b-cae506a5c0d4

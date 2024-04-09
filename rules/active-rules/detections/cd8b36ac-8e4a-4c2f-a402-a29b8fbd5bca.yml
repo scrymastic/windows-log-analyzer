@@ -8,3 +8,6 @@ detection:
       - TargetFilename|contains: RECYCLERS.BIN\
       - TargetFilename|contains: RECYCLER.BIN\
 id: cd8b36ac-8e4a-4c2f-a402-a29b8fbd5bca
+logsource:
+  category: file_event
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate usage of the uncommon Windows Work Folders feature.
 filename: proc_creation_win_susp_workfolders.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/25
 references:
 - https://twitter.com/elliotkillick/status/1449812843772227588

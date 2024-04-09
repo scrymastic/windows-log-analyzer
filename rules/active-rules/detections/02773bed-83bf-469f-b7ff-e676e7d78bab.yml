@@ -14,3 +14,6 @@ detection:
     - TargetFilename|not startswith: C:\Program Files\WindowsApps\Microsoft.
     - TargetFilename|not endswith: \pocket_containers.json
 id: 02773bed-83bf-469f-b7ff-e676e7d78bab
+logsource:
+  category: file_event
+  product: windows

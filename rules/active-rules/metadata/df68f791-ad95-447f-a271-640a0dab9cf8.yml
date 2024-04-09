@@ -11,9 +11,6 @@ falsepositives:
 - Unlikely
 filename: dns_query_win_onelaunch_update_service.yml
 level: low
-logsource:
-  category: dns_query
-  product: windows
 modified: ''
 references:
 - https://www.malwarebytes.com/blog/detections/pup-optional-onelaunch-silentcf

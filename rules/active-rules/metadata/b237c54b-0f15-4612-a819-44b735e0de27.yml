@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_security_security_enabled_global_group_deleted.yml
 level: low
-logsource:
-  product: windows
-  service: security
 modified: ''
 references:
 - https://www.cisecurity.org/controls/cis-controls-list/

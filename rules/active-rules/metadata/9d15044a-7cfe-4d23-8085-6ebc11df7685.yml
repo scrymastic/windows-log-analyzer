@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate Addin Installation
 filename: registry_set_persistence_office_vsto.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/28
 references:
 - https://twitter.com/_vivami/status/1347925307643355138

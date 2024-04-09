@@ -7,3 +7,6 @@ detection:
     - ParentImage|endswith: \powershell_ise.exe
   - OriginalFileName|==: csi.exe
 id: a9e416a8-e613-4f8b-88b8-a7d1d1af2f61
+logsource:
+  category: process_creation
+  product: windows

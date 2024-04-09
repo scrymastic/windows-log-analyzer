@@ -20,3 +20,6 @@ detection:
     - CommandLine|contains: Windows\Temp\
     - CommandLine|contains: '&1'
 id: 10c14723-61c7-4c75-92ca-9af245723ad2
+logsource:
+  category: process_creation
+  product: windows

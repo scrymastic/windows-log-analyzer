@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: dotnet-dump.dll
   - CommandLine|contains: collect
 id: 53d8d3e1-ca33-4012-adf3-e05a4d652e34
+logsource:
+  category: process_creation
+  product: windows

@@ -31,3 +31,6 @@ detection:
     - CommandLine|endswith: ' virus'
     - CommandLine|endswith: ' virus"'
 id: 4fe074b4-b833-4081-8f24-7dcfeca72b42
+logsource:
+  category: process_creation
+  product: windows

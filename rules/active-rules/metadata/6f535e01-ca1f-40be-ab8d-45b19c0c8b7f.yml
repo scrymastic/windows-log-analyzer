@@ -9,9 +9,6 @@ falsepositives:
 - Since the content of the files are unknown, false positives are expected
 filename: proc_creation_win_ldifde_file_load.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/14
 references:
 - https://twitter.com/0gtweet/status/1564968845726580736

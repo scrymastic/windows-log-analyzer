@@ -56,3 +56,6 @@ detection:
     - Data|contains: SevereThreatDefaultAction Allow
     - Data|contains: stdefac Allow
 id: ec19ebab-72dc-40e1-9728-4c0b805d722c
+logsource:
+  category: ps_classic_provider_start
+  product: windows

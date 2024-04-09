@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wscript_cscript_uncommon_extension_exec.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/06/19
 references:
 - Internal Research

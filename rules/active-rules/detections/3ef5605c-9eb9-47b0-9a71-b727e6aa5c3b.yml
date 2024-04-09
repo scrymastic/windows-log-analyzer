@@ -32,3 +32,6 @@ detection:
   - or:
     - Image|not endswith: \VCREDI~1.EXE
 id: 3ef5605c-9eb9-47b0-9a71-b727e6aa5c3b
+logsource:
+  category: process_creation
+  product: windows

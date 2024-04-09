@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: net_connection_win_susp_outbound_mobsync_connection.yml
 level: medium
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/03/12
 references:
 - https://redcanary.com/blog/intelligence-insights-november-2021/

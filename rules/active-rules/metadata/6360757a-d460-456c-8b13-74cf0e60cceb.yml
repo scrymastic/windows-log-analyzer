@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: image_load_side_load_comctl32.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2022/12/19
 references:
 - https://github.com/binderlabs/DirCreate2System

@@ -1,8 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \odbcconf.exe
-    - OriginalFileName|==: odbcconf.exe
-  - CommandLine|None: ' -f '
-  - CommandLine|contains: .rsp
-id: 5f03babb-12db-4eec-8c82-7b4cb5580868

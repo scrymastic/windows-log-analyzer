@@ -4,3 +4,6 @@ detection:
     - Image|endswith: \wab.exe
     - Image|endswith: \wabmig.exe
 id: 395907ee-96e5-4666-af2e-2ca91688e151
+logsource:
+  category: process_creation
+  product: windows

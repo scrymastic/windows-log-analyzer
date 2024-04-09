@@ -12,3 +12,6 @@ detection:
   - CommandLine|contains: state
   - CommandLine|contains: 'off'
 id: 57c4bf16-227f-4394-8ec7-1b745ee061c3
+logsource:
+  category: process_creation
+  product: windows

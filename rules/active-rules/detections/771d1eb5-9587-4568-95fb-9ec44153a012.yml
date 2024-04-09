@@ -24,3 +24,6 @@ detection:
     - CommandLine|contains: '-M=H '
     - CommandLine|contains: -ShowWindowMode:Hide
 id: 771d1eb5-9587-4568-95fb-9ec44153a012
+logsource:
+  category: process_creation
+  product: windows

@@ -16,3 +16,6 @@ detection:
     - CommandLine|not contains: :\Windows\WinSxS\
     - CommandLine|not contains: '\UpdateDeploy.dll /ClassId '
 id: af77cf95-c469-471c-b6a0-946c685c4798
+logsource:
+  category: process_creation
+  product: windows

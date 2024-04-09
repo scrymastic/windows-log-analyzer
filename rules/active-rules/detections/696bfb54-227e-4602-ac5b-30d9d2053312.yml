@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: Ssh_creds
     - CommandLine|contains: VSphereInfo
 id: 696bfb54-227e-4602-ac5b-30d9d2053312
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate SIP being registered by the OS or different software.
 filename: registry_set_sip_persistence.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://persistence-info.github.io/Data/codesigning.html

@@ -8,3 +8,7 @@ detection:
   - or:
     - ScriptBlockText|contains: SystemParametersInfo(20,0,*,3)
 id: c5ac6a1e-9407-45f5-a0ce-ca9a0806a287
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -5,3 +5,6 @@ detection:
     - EventType|==: CreateKey
     - NewName|==: HKLM\SYSTEM\CurrentControlSet\Control\MiniNt
 id: 919f2ef0-be2d-4a7a-b635-eb2b41fde044
+logsource:
+  category: registry_event
+  product: windows

@@ -16,3 +16,6 @@ detection:
     - CommandLine|contains: 'registry::'
     - CommandLine|contains: HKEY_
 id: c4eeeeae-89f4-43a7-8b48-8d1bdfa66c78
+logsource:
+  category: process_creation
+  product: windows

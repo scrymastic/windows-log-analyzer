@@ -8,9 +8,6 @@ falsepositives:
   false positives when brightness is changed by the corresponding keyboard button
 filename: image_load_scrcons_wmi_scripteventconsumer.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/02/22
 references:
 - https://twitter.com/HunterPlaybook/status/1301207718355759107

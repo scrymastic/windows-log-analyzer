@@ -13,3 +13,6 @@ detection:
     - TargetObject|contains: :#Users#Default#
     - TargetObject|contains: :#Users#Desktop#
 id: 62120148-6b7a-42be-8b91-271c04e281a3
+logsource:
+  category: registry_event
+  product: windows

@@ -14,3 +14,6 @@ detection:
     - TargetFilename|contains: .xll:Zone
     - TargetFilename|contains: .lnk:Zone
 id: 025bd229-fd1f-4fdb-97ab-20006e1a5368
+logsource:
+  category: create_stream_hash
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_cmd_net_use_and_exec_combo.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://twitter.com/ShadowChasing1/status/1552595370961944576

@@ -131,23 +131,24 @@ class RuleConverter:
         
 
     def convert_expression(self, expression):
-        mapping = {
-            'contains': 'contains',
-            'endswith': 'endswith',
-            'startswith': 'startswith',
-            're': 'matches',
-            'cidr': 'cidr',
-            'not contains': 'not contains',
-            'not endswith': 'not endswith',
-            'not startswith': 'not startswith',
-            'not re': 'not matches',
-            'not cidr': 'not cidr',
-            'contains|all': 'contains',
-        }
-        
         if '|' in expression:
+            mapping = {
+                'contains': 'contains',
+                'endswith': 'endswith',
+                'startswith': 'startswith',
+                're': 'matches',
+                'cidr': 'cidr',
+                'not contains': 'not contains',
+                'not endswith': 'not endswith',
+                'not startswith': 'not startswith',
+                'not re': 'not matches',
+                'not cidr': 'not cidr',
+                'contains|all': 'contains',
+            }
             field, operator = expression.split('|', 1)
-            operator = mapping.get(operator)
+            operator = mapping.get(operator, None)
+            if operator is None:
+                raise ValueError(f'Unsupported operator: {operator}')
         else:
             field = expression
             operator = '=='

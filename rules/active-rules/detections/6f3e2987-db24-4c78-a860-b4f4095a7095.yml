@@ -3,3 +3,6 @@ detection:
   - Image|endswith: \rar.exe
   - CommandLine|contains: ' a '
 id: 6f3e2987-db24-4c78-a860-b4f4095a7095
+logsource:
+  category: process_creation
+  product: windows

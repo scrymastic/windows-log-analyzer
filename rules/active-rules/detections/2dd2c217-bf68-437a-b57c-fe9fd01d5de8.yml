@@ -41,3 +41,6 @@ detection:
     - CommandLine|contains: ' -i:https://8'
     - CommandLine|contains: ' -i:https://9'
 id: 2dd2c217-bf68-437a-b57c-fe9fd01d5de8
+logsource:
+  category: process_creation
+  product: windows

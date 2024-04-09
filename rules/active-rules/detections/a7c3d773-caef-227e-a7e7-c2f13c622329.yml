@@ -24,3 +24,6 @@ detection:
   - Image|endswith: \rundll32.exe
   - CommandLine|endswith: rundll32.exe
 id: a7c3d773-caef-227e-a7e7-c2f13c622329
+logsource:
+  category: process_creation
+  product: windows

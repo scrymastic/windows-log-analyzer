@@ -13,3 +13,6 @@ detection:
     - TargetFilename|endswith: .vba
     - TargetFilename|endswith: .vbs
 id: 002bdb95-0cf1-46a6-9e08-d38c128a6127
+logsource:
+  category: file_event
+  product: windows

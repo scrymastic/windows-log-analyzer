@@ -9,3 +9,6 @@ detection:
     - ModifyingApplication|not contains: :\ProgramData\Microsoft\Windows Defender\Platform\
     - ModifyingApplication|not contains: \MsMpEng.exe
 id: 79609c82-a488-426e-abcf-9f341a39365d
+logsource:
+  product: windows
+  service: firewall-as

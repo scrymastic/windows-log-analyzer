@@ -4,3 +4,7 @@ detection:
     - ScriptBlockText|contains: if(0){{{0}}}' -f $(0 -as [char]) +
     - ScriptBlockText|contains: '#<NULL>'
 id: fa2559c8-1197-471d-9cdd-05a0273d4522
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

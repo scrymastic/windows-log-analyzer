@@ -33,3 +33,6 @@ detection:
       - TargetFilename|contains: .potm:Zone
       - TargetFilename|contains: .pptm:Zone
 id: 0e29e3a7-1ad8-40aa-b691-9f82ecd33d66
+logsource:
+  category: file_event
+  product: windows

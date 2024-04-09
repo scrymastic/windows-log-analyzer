@@ -20,3 +20,6 @@ detection:
       - CommandLine|contains: .obf
       - CommandLine|contains: dump
 id: ca621ba5-54ab-4035-9942-d378e6fcde3c
+logsource:
+  category: process_creation
+  product: windows

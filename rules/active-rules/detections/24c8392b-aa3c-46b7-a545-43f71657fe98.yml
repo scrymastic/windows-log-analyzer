@@ -12,3 +12,6 @@ detection:
   - CommandLine|not contains: ' SYSTEM'
   - CommandLine|not contains: HIGHEST
 id: 24c8392b-aa3c-46b7-a545-43f71657fe98
+logsource:
+  category: process_creation
+  product: windows

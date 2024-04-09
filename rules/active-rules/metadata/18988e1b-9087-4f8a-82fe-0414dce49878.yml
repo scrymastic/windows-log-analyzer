@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of Pester for writing tests for Powershell scripts and modules
 filename: proc_creation_win_lolbin_pester.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/Oddvarmoe/status/993383596244258816

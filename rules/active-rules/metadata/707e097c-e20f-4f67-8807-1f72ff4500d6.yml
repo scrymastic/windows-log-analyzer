@@ -17,9 +17,6 @@ falsepositives:
   mentioned above (tune it)
 filename: registry_set_persistence_app_paths.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://www.hexacorn.com/blog/2013/01/19/beyond-good-ol-run-key-part-3/

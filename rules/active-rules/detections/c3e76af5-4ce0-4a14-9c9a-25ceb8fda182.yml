@@ -5,3 +5,6 @@ detection:
     - TargetFilename|contains: \lsass
     - TargetFilename|contains: lsass.exe
 id: c3e76af5-4ce0-4a14-9c9a-25ceb8fda182
+logsource:
+  category: file_event
+  product: windows

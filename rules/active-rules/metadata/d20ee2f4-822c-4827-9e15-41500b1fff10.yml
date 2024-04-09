@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate activity of system administrators
 filename: proc_creation_win_ssm_agent_abuse.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.mitiga.io/blog/mitiga-security-advisory-abusing-the-ssm-agent-as-a-remote-access-trojan

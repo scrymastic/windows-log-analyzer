@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of one of these tools
 filename: proc_creation_win_hktl_execution_via_imphashes.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/02/07
 references:
 - Internal Research

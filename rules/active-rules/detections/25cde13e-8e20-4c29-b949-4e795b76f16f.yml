@@ -5,3 +5,6 @@ detection:
     - ObjectName|contains: \Microsoft\Teams\Cookies
     - ObjectName|contains: \Microsoft\Teams\Local Storage\leveldb
 id: 25cde13e-8e20-4c29-b949-4e795b76f16f
+logsource:
+  product: windows
+  service: security

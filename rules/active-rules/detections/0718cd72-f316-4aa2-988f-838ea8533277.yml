@@ -4,3 +4,7 @@ detection:
   - ScriptBlockText|contains: '-PassThru '
   - ScriptBlockText|contains: '-FilePath '
 id: 0718cd72-f316-4aa2-988f-838ea8533277
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

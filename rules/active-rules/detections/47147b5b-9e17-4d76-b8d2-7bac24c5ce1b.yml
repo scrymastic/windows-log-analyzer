@@ -43,3 +43,6 @@ detection:
     - CommandLine|contains: \uCozMedia\Uran\User Data
     - CommandLine|contains: \Vivaldi\User Data
 id: 47147b5b-9e17-4d76-b8d2-7bac24c5ce1b
+logsource:
+  category: process_creation
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - Very Likely, including launching cmd.exe via Run As Administrator
 filename: proc_creation_win_conhost_legacy_option.yml
 level: informational
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://cybercryptosec.medium.com/covid-19-cyber-infection-c615ead7c29

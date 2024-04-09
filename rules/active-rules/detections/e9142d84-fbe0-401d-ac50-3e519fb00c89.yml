@@ -2,3 +2,6 @@ detection:
 - and:
   - CommandLine|contains: .exe whoami
 id: e9142d84-fbe0-401d-ac50-3e519fb00c89
+logsource:
+  category: process_creation
+  product: windows

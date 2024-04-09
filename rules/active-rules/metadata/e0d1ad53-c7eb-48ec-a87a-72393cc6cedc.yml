@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of the tool
 filename: win_system_service_install_mesh_agent.yml
 level: medium
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - https://thedfirreport.com/2022/11/28/emotet-strikes-again-lnk-file-leads-to-domain-wide-ransomware/

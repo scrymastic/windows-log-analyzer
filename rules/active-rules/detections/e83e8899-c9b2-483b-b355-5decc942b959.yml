@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: query
   - CommandLine|contains: termservice
 id: e83e8899-c9b2-483b-b355-5decc942b959
+logsource:
+  category: process_creation
+  product: windows

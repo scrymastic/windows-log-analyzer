@@ -6,9 +6,6 @@ falsepositives:
 - Potential FP by sysadmin opening a zip file containing a legitimate ISO file
 filename: file_event_win_iso_file_mount.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://twitter.com/Sam0x90/status/1552011547974696960

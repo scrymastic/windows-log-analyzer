@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: image_load_dll_comsvcs_load_renamed_version_by_rundll32.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/02/17
 references:
 - https://twitter.com/sbousseaden/status/1555200155351228419

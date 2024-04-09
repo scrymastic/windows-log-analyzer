@@ -22,3 +22,6 @@ detection:
       - Image|contains: \Windows\Tasks\
       - Image|contains: \Windows\Temp\
 id: f9999590-1f94-4a34-a91e-951e47bedefd
+logsource:
+  category: process_creation
+  product: windows

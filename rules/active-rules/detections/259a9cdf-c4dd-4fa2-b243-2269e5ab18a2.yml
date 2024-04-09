@@ -13,3 +13,6 @@ detection:
   - or:
     - IpAddress|!==: '-'
 id: 259a9cdf-c4dd-4fa2-b243-2269e5ab18a2
+logsource:
+  product: windows
+  service: security

@@ -13,3 +13,6 @@ detection:
   - TargetObject|endswith: \Blob
   - Details|==: Binary Data
 id: d223b46b-5621-4037-88fe-fda32eead684
+logsource:
+  category: registry_set
+  product: windows

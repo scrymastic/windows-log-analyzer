@@ -26,3 +26,6 @@ detection:
   - CommandLine|not contains: ://127.
   - CommandLine|not contains: ://169.254.
 id: 982e9f2d-1a85-4d5b-aea4-31f5e97c6555
+logsource:
+  category: process_creation
+  product: windows

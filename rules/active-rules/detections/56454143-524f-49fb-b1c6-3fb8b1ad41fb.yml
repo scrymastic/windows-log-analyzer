@@ -68,3 +68,6 @@ detection:
     - CommandLine|endswith: .psm1'
     - CommandLine|endswith: .psm1"
 id: 56454143-524f-49fb-b1c6-3fb8b1ad41fb
+logsource:
+  category: process_creation
+  product: windows

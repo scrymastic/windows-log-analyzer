@@ -21,3 +21,7 @@ detection:
     - ScriptBlockText|contains: TOKEN_PRIVILEGES
     - ScriptBlockText|contains: TOKEN_QUERY
 id: f62176f3-8128-4faa-bf6c-83261322e5eb
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

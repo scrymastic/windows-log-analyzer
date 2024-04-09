@@ -16,3 +16,6 @@ detection:
     - Details|contains: '%temp%'
     - Details|contains: '%tmp%'
 id: 3d968d17-ffa4-4bc0-bfdc-f139de76ce77
+logsource:
+  category: registry_set
+  product: windows

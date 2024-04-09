@@ -9,3 +9,6 @@ detection:
       - OriginalFileName|==: net1.exe
   - CommandLine|contains: ' start '
 id: 2a072a96-a086-49fa-bcb5-15cc5a619093
+logsource:
+  category: process_creation
+  product: windows

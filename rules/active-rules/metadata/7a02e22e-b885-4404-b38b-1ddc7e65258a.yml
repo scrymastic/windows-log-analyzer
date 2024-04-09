@@ -7,9 +7,6 @@ falsepositives:
   in your environment
 filename: proc_creation_win_schtasks_schedule_type_system.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/schtasks-change

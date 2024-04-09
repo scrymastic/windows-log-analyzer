@@ -8,9 +8,6 @@ falsepositives:
   environment
 filename: proc_creation_win_rundll32_susp_activity.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/17
 references:
 - http://www.hexacorn.com/blog/2017/05/01/running-programs-via-proxy-jumping-on-a-edr-bypass-trampoline/

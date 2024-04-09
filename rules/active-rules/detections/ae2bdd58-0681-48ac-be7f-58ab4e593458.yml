@@ -7,3 +7,7 @@ detection:
     - ScriptBlockText|contains: '-AttackSurfaceReductionRules_Actions '
     - ScriptBlockText|contains: '-CheckForSignaturesBeforeRunningScan '
 id: ae2bdd58-0681-48ac-be7f-58ab4e593458
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

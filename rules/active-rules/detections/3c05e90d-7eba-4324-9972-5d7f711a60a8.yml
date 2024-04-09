@@ -5,3 +5,6 @@ detection:
     - IntegrityLevel|==: System
   - Image|==: C:\Windows\System32\ComputerDefaults.exe
 id: 3c05e90d-7eba-4324-9972-5d7f711a60a8
+logsource:
+  category: process_creation
+  product: windows

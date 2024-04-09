@@ -19,3 +19,6 @@ detection:
     - TargetFilename|endswith: .vbs
     - TargetFilename|endswith: .zip
 id: bbb7e38c-0b41-4a11-b306-d2a457b7ac2b
+logsource:
+  category: file_event
+  product: windows

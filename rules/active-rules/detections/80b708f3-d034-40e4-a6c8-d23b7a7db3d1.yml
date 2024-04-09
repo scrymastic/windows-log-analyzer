@@ -8,3 +8,8 @@ detection:
     - ServiceFileName|contains: invoke
     - ServiceFileName|contains: ${input)
 id: 80b708f3-d034-40e4-a6c8-d23b7a7db3d1
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_lolbin_gather_network_info_script_output.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://posts.slayerlabs.com/living-off-the-land/#gathernetworkinfovbs

@@ -6,3 +6,6 @@ detection:
       - Image|endswith: \pssuspend.exe
       - Image|endswith: \pssuspend64.exe
 id: 48bbc537-b652-4b4e-bd1d-281172df448f
+logsource:
+  category: process_creation
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Deletion of Defender malware detections history for legitimate reasons
 filename: win_defender_history_delete.yml
 level: informational
-logsource:
-  product: windows
-  service: windefend
 modified: 2023/11/24
 references:
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/troubleshoot-microsoft-defender-antivirus

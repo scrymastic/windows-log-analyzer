@@ -15,3 +15,6 @@ detection:
     - CommandLine|contains: Bypass
     - CommandLine|contains: Unrestricted
 id: 87e3c4e8-a6a8-4ad9-bb4f-46e7ff99a180
+logsource:
+  category: process_creation
+  product: windows

@@ -12,9 +12,6 @@ falsepositives:
 - Unknown
 filename: win_system_kdcsvc_tgs_no_suitable_encryption_key_found.yml
 level: low
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd348773(v=ws.10)

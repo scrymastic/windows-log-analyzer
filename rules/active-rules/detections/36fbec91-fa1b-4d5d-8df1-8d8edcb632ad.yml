@@ -5,3 +5,7 @@ detection:
   - ScriptBlockText|contains: .application
   - ScriptBlockText|contains: .RegisterXLL
 id: 36fbec91-fa1b-4d5d-8df1-8d8edcb632ad
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

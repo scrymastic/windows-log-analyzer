@@ -28,3 +28,6 @@ detection:
     - Details|contains: \AppData\Local\Temp\
     - Details|contains: \AppData\Roaming\
 id: e4d22291-f3d5-4b78-9a0c-a1fbaf32a6a4
+logsource:
+  category: registry_set
+  product: windows

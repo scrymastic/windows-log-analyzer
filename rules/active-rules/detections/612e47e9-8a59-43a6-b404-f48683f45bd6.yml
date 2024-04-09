@@ -16,3 +16,6 @@ detection:
     - Image|not endswith: \regsvr32.exe
     - Details|!==: C:\Windows\System32\STAgent.dll
 id: 612e47e9-8a59-43a6-b404-f48683f45bd6
+logsource:
+  category: registry_set
+  product: windows

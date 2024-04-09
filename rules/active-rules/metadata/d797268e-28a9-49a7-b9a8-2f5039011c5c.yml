@@ -7,9 +7,6 @@ falsepositives:
 - Unknown sub processes of Wsreset.exe
 filename: proc_creation_win_uac_bypass_wsreset.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/05/13
 references:
 - https://eqllib.readthedocs.io/en/latest/analytics/532b5ed4-7930-11e9-8f5c-d46d6d62a49e.html

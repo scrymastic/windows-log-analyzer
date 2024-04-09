@@ -4,3 +4,7 @@ detection:
   - ScriptBlockText|contains: IO.FileStream
   - ScriptBlockText|contains: \\\\.\\
 id: 70ad982f-67c8-40e0-a955-b920c2fa05cb
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

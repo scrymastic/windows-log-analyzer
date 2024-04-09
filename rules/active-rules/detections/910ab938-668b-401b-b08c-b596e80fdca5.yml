@@ -11,3 +11,6 @@ detection:
     - RelativeTargetName|contains: \ntds.dit
     - RelativeTargetName|contains: \security
 id: 910ab938-668b-401b-b08c-b596e80fdca5
+logsource:
+  product: windows
+  service: security

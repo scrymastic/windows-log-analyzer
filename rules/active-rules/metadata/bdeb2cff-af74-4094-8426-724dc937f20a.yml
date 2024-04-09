@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_set_acl.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-acl?view=powershell-5.1

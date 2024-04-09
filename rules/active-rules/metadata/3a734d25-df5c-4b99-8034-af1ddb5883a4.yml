@@ -6,12 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_susp_scheduled_task_creation.yml
 level: high
-logsource:
-  definition: The Advanced Audit Policy setting Object Access > Audit Other Object
-    Access Events has to be configured to allow this detection. We also recommend
-    extracting the Command field from the embedded XML in the event data.
-  product: windows
-  service: security
 modified: 2022/12/07
 references:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4698

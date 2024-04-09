@@ -7,9 +7,6 @@ falsepositives:
   environment
 filename: proc_creation_win_nslookup_domain_discovery.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://thedfirreport.com/2022/02/07/qbot-likes-to-move-it-move-it/

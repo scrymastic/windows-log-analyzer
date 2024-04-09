@@ -9,9 +9,6 @@ falsepositives:
 - Legitimate installation of new application.
 filename: registry_set_new_application_appcompat.yml
 level: informational
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://github.com/OTRF/detection-hackathon-apt29/issues/1

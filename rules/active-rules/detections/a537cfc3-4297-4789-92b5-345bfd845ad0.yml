@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: sdset
   - CommandLine|contains: DCLCWPDTSD
 id: a537cfc3-4297-4789-92b5-345bfd845ad0
+logsource:
+  category: process_creation
+  product: windows

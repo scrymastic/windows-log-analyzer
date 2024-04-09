@@ -6,9 +6,6 @@ falsepositives:
   for this.
 filename: win_exchange_transportagent_failed.yml
 level: high
-logsource:
-  product: windows
-  service: msexchange-management
 modified: 2022/07/12
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-persistence-via-microsoft-exchange-server-or-outlook?slide=8

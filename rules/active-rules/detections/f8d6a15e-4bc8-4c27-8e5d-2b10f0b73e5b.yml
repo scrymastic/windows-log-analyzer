@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: '-change '
     - CommandLine|contains: -standby-timeout-
 id: f8d6a15e-4bc8-4c27-8e5d-2b10f0b73e5b
+logsource:
+  category: process_creation
+  product: windows

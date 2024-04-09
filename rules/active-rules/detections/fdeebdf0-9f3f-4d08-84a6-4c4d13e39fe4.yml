@@ -5,3 +5,6 @@ detection:
     - DestinationHostname|endswith: mega.co.nz
     - DestinationHostname|endswith: mega.nz
 id: fdeebdf0-9f3f-4d08-84a6-4c4d13e39fe4
+logsource:
+  category: network_connection
+  product: windows

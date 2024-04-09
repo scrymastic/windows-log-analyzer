@@ -7,9 +7,6 @@ falsepositives:
 - During log rotation
 filename: file_delete_win_delete_tomcat_logs.yml
 level: medium
-logsource:
-  category: file_delete
-  product: windows
 modified: ''
 references:
 - Internal Research

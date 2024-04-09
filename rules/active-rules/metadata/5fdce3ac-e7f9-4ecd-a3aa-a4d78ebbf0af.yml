@@ -5,9 +5,6 @@ falsepositives:
 - Likely with legitimate usage of ".rdp" files
 filename: proc_creation_win_mstsc_run_local_rdp_file.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/30
 references:
 - https://www.blackhillsinfosec.com/rogue-rdp-revisiting-initial-access-methods/

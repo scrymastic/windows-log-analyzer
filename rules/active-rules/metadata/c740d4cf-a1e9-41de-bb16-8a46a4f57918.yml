@@ -11,9 +11,6 @@ falsepositives:
 - Legitimate usage of the features listed in the rule.
 filename: proc_creation_win_powershell_enable_susp_windows_optional_feature.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://docs.microsoft.com/en-us/powershell/module/dism/enable-windowsoptionalfeature?view=windowsserver2022-ps

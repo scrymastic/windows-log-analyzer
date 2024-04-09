@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_set_turn_on_dev_features.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://twitter.com/malmoeb/status/1560536653709598721

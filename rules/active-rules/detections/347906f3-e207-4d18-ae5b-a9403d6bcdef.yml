@@ -11,3 +11,6 @@ detection:
   - CommandLine|contains: new
   - CommandLine|contains: enable=Yes
 id: 347906f3-e207-4d18-ae5b-a9403d6bcdef
+logsource:
+  category: process_creation
+  product: windows

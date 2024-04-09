@@ -6,3 +6,6 @@ detection:
   - or:
     - Image|not contains: TeamViewer
 id: 778ba9a8-45e4-4b80-8e3e-34a419f0b85e
+logsource:
+  category: dns_query
+  product: windows

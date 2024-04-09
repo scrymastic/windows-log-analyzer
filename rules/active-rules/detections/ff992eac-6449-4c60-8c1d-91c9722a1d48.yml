@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: /add
   - CommandLine|contains: root
 id: ff992eac-6449-4c60-8c1d-91c9722a1d48
+logsource:
+  category: process_creation
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: image_load_side_load_rcdll.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/03/15
 references:
 - https://www.trendmicro.com/en_us/research/23/c/iron-tiger-sysupdate-adds-linux-targeting.html

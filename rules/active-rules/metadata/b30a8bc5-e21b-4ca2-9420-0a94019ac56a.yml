@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate testing of Microsoft UI parts.
 filename: proc_creation_win_lolbin_visualuiaverifynative.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/VisualUiaVerifyNative/

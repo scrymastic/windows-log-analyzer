@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate, non-default assistive technology applications execution
 filename: proc_creation_win_atbroker_uncommon_ats_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/03/06
 references:
 - http://www.hexacorn.com/blog/2016/07/22/beyond-good-ol-run-key-part-42/

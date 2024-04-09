@@ -8,3 +8,6 @@ detection:
     - EventID|==: 213
     - EventID|==: 217
 id: 13cfeb75-9e33-4d04-b0f7-ab8faaa95a59
+logsource:
+  product: windows
+  service: system

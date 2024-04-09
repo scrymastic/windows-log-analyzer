@@ -11,9 +11,6 @@ falsepositives:
 - Antivirus products
 filename: create_remote_thread_win_susp_password_dumper_lsass.yml
 level: high
-logsource:
-  category: create_remote_thread
-  product: windows
 modified: 2021/06/21
 references:
 - https://jpcertcc.github.io/ToolAnalysisResultSheet/details/WCE.htm

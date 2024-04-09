@@ -9,3 +9,6 @@ detection:
     - TargetObject|contains: file:///D:/
     - TargetObject|contains: file:///E:/
 id: a166f74e-bf44-409d-b9ba-ea4b2dd8b3cd
+logsource:
+  category: registry_set
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_lsass_access_non_system_account.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2023/12/11
 references:
 - https://threathunterplaybook.com/hunts/windows/170105-LSASSMemoryReadAccess/notebook.html

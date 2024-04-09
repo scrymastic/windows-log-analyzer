@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_mshta_lethalhta_technique.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/07
 references:
 - https://codewhitesec.blogspot.com/2018/07/lethalhta.html

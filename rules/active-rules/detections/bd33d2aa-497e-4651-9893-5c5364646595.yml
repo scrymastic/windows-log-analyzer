@@ -4,3 +4,7 @@ detection:
   - ScriptBlockText|contains: System.Net.Sockets.TcpListener
   - ScriptBlockText|contains: AcceptTcpClient
 id: bd33d2aa-497e-4651-9893-5c5364646595
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -4434,3 +4434,6 @@ detection:
     - Hashes|contains: IMPHASH=ef102e058f6b88af0d66d26236257706
     - Hashes|contains: IMPHASH=0f371a913e9fa3ba3a923718e489debb
 id: 7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8
+logsource:
+  category: driver_load
+  product: windows

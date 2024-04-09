@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_iis_appcmd_service_account_password_dumped.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/22
 references:
 - https://www.elastic.co/guide/en/security/current/microsoft-iis-service-account-password-dumped.html

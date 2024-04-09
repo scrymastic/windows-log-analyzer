@@ -16,9 +16,6 @@ falsepositives:
 - Unknown
 filename: file_executable_detected_win_susp_embeded_sed_file.yml
 level: medium
-logsource:
-  category: file_executable_detected
-  product: windows
 modified: ''
 references:
 - https://strontic.github.io/xcyclopedia/library/iexpress.exe-D594B2A33EFAFD0EABF09E3FDC05FCEA.html

@@ -3,3 +3,6 @@ detection:
   - TargetObject|contains: SYSTEM\CurrentControlSet\Control\CrashControl
   - Details|==: DWORD (0x00000000)
 id: 2ff692c2-4594-41ec-8fcb-46587de769e0
+logsource:
+  category: registry_set
+  product: windows

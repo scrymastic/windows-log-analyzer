@@ -7,9 +7,6 @@ falsepositives:
 - Jobs and services started with cmd
 filename: proc_creation_win_hktl_meterpreter_getsystem.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/05
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-privilege-escalation-in-windows-environment

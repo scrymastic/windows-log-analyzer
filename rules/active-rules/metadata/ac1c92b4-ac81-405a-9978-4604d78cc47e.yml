@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate usage for tracing and diagnostics purposes
 filename: proc_creation_win_vsdiagnostics_execution_proxy.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/0xBoku/status/1679200664013135872

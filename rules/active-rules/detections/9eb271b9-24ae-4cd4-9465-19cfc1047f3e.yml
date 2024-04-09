@@ -4,3 +4,6 @@ detection:
   - ParentImage|endswith: \cmd.exe
   - CommandLine|contains: explorer.exe
 id: 9eb271b9-24ae-4cd4-9465-19cfc1047f3e
+logsource:
+  category: process_creation
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Administrator activity (must be investigated)
 filename: win_defender_suspicious_features_tampering.yml
 level: high
-logsource:
-  product: windows
-  service: windefend
 modified: 2023/11/24
 references:
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus?view=o365-worldwide

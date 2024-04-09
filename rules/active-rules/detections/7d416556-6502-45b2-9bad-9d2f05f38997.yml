@@ -10,3 +10,7 @@ detection:
     - ScriptBlockText|contains: .kdbx
     - ScriptBlockText|contains: .kdb
 id: 7d416556-6502-45b2-9bad-9d2f05f38997
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

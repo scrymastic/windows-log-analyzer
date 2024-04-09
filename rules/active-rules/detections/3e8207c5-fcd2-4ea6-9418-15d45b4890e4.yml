@@ -4,3 +4,6 @@ detection:
   - CommandLine|contains: --user-data-dir
   - CommandLine|contains: --headless
 id: 3e8207c5-fcd2-4ea6-9418-15d45b4890e4
+logsource:
+  category: process_creation
+  product: windows

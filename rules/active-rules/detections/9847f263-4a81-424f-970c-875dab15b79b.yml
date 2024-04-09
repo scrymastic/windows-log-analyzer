@@ -5,3 +5,6 @@ detection:
     - User|contains: AUTORI
   - Image|endswith: \tscon.exe
 id: 9847f263-4a81-424f-970c-875dab15b79b
+logsource:
+  category: process_creation
+  product: windows

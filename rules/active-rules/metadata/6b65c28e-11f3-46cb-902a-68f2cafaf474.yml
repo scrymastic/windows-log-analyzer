@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_odbcconf_exec_susp_locations.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/26
 references:
 - https://learn.microsoft.com/en-us/sql/odbc/odbcconf-exe?view=sql-server-ver16

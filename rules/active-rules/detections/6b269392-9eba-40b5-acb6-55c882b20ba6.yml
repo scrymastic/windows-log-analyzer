@@ -12,3 +12,6 @@ detection:
     - TargetFilename|endswith: .dll
     - TargetFilename|endswith: .vbs
 id: 6b269392-9eba-40b5-acb6-55c882b20ba6
+logsource:
+  category: file_event
+  product: windows

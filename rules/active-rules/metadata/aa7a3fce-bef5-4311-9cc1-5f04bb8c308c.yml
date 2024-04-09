@@ -7,10 +7,6 @@ falsepositives:
 - Legitimate certificate exports by administrators. Additional filters might be required.
 filename: posh_ps_export_certificate.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2023/05/18
 references:
 - https://us-cert.cisa.gov/ncas/analysis-reports/ar21-112a

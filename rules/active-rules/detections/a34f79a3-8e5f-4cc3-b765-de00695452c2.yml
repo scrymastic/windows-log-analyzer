@@ -6,3 +6,6 @@ detection:
       - Image|endswith: \PowerTool64.exe
     - OriginalFileName|==: PowerTool.exe
 id: a34f79a3-8e5f-4cc3-b765-de00695452c2
+logsource:
+  category: process_creation
+  product: windows

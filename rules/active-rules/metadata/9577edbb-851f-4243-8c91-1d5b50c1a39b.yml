@@ -6,9 +6,6 @@ falsepositives:
 - Creation of non-default, legitimate at usage
 filename: registry_event_susp_atbroker_change.yml
 level: medium
-logsource:
-  category: registry_event
-  product: windows
 modified: 2023/01/19
 references:
 - http://www.hexacorn.com/blog/2016/07/22/beyond-good-ol-run-key-part-42/

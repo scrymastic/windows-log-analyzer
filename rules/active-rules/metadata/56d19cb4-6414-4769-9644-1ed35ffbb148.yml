@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_obfuscated_ip_via_cli.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/06
 references:
 - https://h.43z.one/ipconverter/

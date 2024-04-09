@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: win_security_mitigations_defender_load_unsigned_dll.yml
 level: high
-logsource:
-  product: windows
-  service: security-mitigations
 modified: 2022/09/28
 references:
 - https://www.sentinelone.com/blog/living-off-windows-defender-lockbit-ransomware-sideloads-cobalt-strike-through-microsoft-security-tool

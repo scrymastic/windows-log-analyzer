@@ -6,9 +6,6 @@ falsepositives:
   any suspicious behaviour in particular. Filter legitimate activity accordingly
 filename: proc_creation_win_net_stop_service.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://ss64.com/nt/net-service.html

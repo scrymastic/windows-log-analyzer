@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_set_bypass_uac_using_eventviewer.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://enigma0x3.net/2016/08/15/fileless-uac-bypass-using-eventvwr-exe-and-registry-hijacking/

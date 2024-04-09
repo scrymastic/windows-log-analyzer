@@ -7,9 +7,6 @@ falsepositives:
   regardless
 filename: file_event_win_taskmgr_lsass_dump.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/987e3ca988ae3cff4b9f6e388c139c05bf44bbb8/atomics/T1003.001/T1003.001.md#L1

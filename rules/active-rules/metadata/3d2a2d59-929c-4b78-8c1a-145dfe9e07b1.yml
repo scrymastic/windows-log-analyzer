@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate usage of ".pub" files from those locations
 filename: file_event_win_office_publisher_files_in_susp_locations.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://twitter.com/EmericNasi/status/1623224526220804098

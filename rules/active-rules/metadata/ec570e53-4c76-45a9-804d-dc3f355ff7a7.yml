@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate use of 7z to compress WER ".dmp" files for troubleshooting
 filename: proc_creation_win_7zip_exfil_dmp_files.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/09/12
 references:
 - https://thedfirreport.com/2022/09/26/bumblebee-round-two/

@@ -7,3 +7,6 @@ detection:
     - CommandLine|matches: \s-c\s
     - CommandLine|contains: --cookie-jar
 id: 5a6e1e16-07de-48d8-8aae-faa766c05e88
+logsource:
+  category: process_creation
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - Windows Defender ATP
 filename: proc_creation_win_powershell_cmdline_special_characters.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/06
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=64

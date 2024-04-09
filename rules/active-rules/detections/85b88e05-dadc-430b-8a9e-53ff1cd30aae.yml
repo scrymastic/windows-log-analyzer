@@ -12,3 +12,6 @@ detection:
   - or:
     - Image|not endswith: \svchost.exe
 id: 85b88e05-dadc-430b-8a9e-53ff1cd30aae
+logsource:
+  category: registry_set
+  product: windows

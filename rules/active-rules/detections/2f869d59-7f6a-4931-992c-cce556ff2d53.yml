@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: ' -c '
     - CommandLine|contains: ' -sc '
 id: 2f869d59-7f6a-4931-992c-cce556ff2d53
+logsource:
+  category: process_creation
+  product: windows

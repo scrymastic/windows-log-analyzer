@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_office_spawn_exe_from_users_directory.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://blog.morphisec.com/fin7-not-finished-morphisec-spots-new-campaign

@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: EnableSmartScreen
     - CommandLine|contains: ShellSmartScreenLevel
 id: ada4b0c4-758b-46ac-9033-9004613a150d
+logsource:
+  category: process_creation
+  product: windows

@@ -7,3 +7,6 @@ detection:
     - CommandLine|contains: ' -p '
     - CommandLine|contains: ' -a '
 id: 18749301-f1c5-4efc-a4c3-276ff1f5b6f8
+logsource:
+  category: process_creation
+  product: windows

@@ -8,9 +8,6 @@ falsepositives:
 - Read only access list authority
 filename: file_event_win_susp_desktop_ini.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/10/07
 references:
 - https://isc.sans.edu/forums/diary/Desktopini+as+a+postexploitation+tool/25912/

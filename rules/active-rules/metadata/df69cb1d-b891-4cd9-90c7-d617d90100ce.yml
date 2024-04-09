@@ -6,10 +6,6 @@ falsepositives:
 - Legitimate administrative script
 filename: posh_ps_frombase64string_archive.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=43

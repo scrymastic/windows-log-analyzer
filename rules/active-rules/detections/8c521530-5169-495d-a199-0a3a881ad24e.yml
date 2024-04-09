@@ -5,3 +5,7 @@ detection:
     - ScriptBlockText|contains: add-content
   - ScriptBlockText|contains: -stream
 id: 8c521530-5169-495d-a199-0a3a881ad24e
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

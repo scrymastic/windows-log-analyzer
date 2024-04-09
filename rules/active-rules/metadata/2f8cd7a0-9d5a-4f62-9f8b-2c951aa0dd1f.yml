@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: win_codeintegrity_whql_failure.yml
 level: high
-logsource:
-  product: windows
-  service: codeintegrity-operational
 modified: 2023/06/14
 references:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/event-id-explanations

@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: registry_set_exploit_guard_susp_allowed_apps.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://www.microsoft.com/security/blog/2017/10/23/windows-defender-exploit-guard-reduce-the-attack-surface-against-next-generation-malware/

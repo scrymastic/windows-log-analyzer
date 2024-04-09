@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate administration activity
 filename: proc_creation_win_nltest_execution.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://jpcertcc.github.io/ToolAnalysisResultSheet/details/nltest.htm

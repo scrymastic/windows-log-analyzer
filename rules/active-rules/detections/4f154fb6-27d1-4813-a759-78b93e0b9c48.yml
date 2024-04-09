@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: zerologon
     - CommandLine|contains: av_query
 id: 4f154fb6-27d1-4813-a759-78b93e0b9c48
+logsource:
+  category: process_creation
+  product: windows

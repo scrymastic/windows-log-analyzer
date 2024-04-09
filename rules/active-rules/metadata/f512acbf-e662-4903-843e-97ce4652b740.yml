@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use of volume shadow copy mounts (backups maybe).
 filename: win_system_volume_shadow_copy_mount.yml
 level: low
-logsource:
-  product: windows
-  service: system
 modified: 2022/12/25
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1003.002/T1003.002.md#atomic-test-3---esentutlexe-sam-copy

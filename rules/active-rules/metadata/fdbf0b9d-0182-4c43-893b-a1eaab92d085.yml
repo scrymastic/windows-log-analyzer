@@ -9,9 +9,6 @@ falsepositives:
   filters needs to applied according to your environment.
 filename: registry_set_persistence_custom_protocol_handler.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/05/12
 references:
 - https://ladydebug.com/blog/2019/06/21/custom-protocol-handler-cph/

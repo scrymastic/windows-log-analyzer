@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_regsvr32_network_pattern.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/26
 references:
 - https://twitter.com/mrd0x/status/1461041276514623491

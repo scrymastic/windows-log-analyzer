@@ -13,3 +13,6 @@ detection:
     - TargetFilename|endswith: .scr
     - TargetFilename|endswith: .cmd
 id: 28208707-fe31-437f-9a7f-4b1108b94d2e
+logsource:
+  category: file_event
+  product: windows

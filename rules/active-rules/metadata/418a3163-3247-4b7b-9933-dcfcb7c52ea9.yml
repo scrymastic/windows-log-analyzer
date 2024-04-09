@@ -9,9 +9,6 @@ falsepositives:
 - Likely
 filename: proc_creation_win_tar_compression.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://unit42.paloaltonetworks.com/chromeloader-malware/

@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_hiding_malware_in_fonts_folder.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/03/08
 references:
 - https://thedfirreport.com/2020/04/20/sqlserver-or-the-miner-in-the-basement/

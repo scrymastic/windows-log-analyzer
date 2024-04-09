@@ -6,9 +6,6 @@ falsepositives:
 - Rare legitimate usage of some of the extensions mentioned in the rule
 filename: file_event_win_susp_startup_folder_persistence.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/01/06
 references:
 - https://github.com/last-byte/PersistenceSniper

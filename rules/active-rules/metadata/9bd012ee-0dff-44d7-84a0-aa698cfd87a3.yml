@@ -6,9 +6,6 @@ falsepositives:
 - Rare programs that contain the word dump in their name and access lsass
 filename: proc_access_win_lsass_dump_keyword_image.yml
 level: high
-logsource:
-  category: process_access
-  product: windows
 modified: 2023/11/29
 references:
 - https://twitter.com/_xpn_/status/1491557187168178176

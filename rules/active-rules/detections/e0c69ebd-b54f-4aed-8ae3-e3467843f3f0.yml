@@ -62,3 +62,6 @@ detection:
     - Image|endswith: \cloudflared-windows-386.exe
     - Image|endswith: \cloudflared-windows-amd64.exe
 id: e0c69ebd-b54f-4aed-8ae3-e3467843f3f0
+logsource:
+  category: process_creation
+  product: windows

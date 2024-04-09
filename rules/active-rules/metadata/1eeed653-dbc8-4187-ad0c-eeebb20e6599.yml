@@ -5,9 +5,6 @@ falsepositives:
 - Administration activity
 filename: proc_creation_win_setspn_spn_enumeration.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/10/23
 references:
 - https://web.archive.org/web/20200329173843/https://p16.praetorian.com/blog/how-to-use-kerberoasting-t1208-for-privilege-escalation

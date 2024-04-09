@@ -18,3 +18,6 @@ detection:
       - sha1|==: 039130337e28a6623ecf9a0a3da7d92c5964d8dd
       - sha256|==: c6cf82919b809967d9d90ea73772a8aa1c1eb3bc59252d977500f64f1a0d6731
 id: d7654f02-e04b-4934-9838-65c46f187ebc
+logsource:
+  category: process_creation
+  product: windows

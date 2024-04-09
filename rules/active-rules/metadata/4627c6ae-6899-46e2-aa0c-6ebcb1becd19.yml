@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of the impacket tools
 filename: proc_creation_win_hktl_impacket_tools.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/07
 references:
 - https://github.com/ropnop/impacket_static_binaries/releases/tag/0.9.21-dev-binaries

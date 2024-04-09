@@ -17,3 +17,6 @@ detection:
     - CommandLine|contains: C:\ProgramData\
     - CommandLine|contains: '%ProgramData%'
 id: 8a8379b8-780b-4dbf-b1e9-31c8d112fefb
+logsource:
+  category: process_creation
+  product: windows

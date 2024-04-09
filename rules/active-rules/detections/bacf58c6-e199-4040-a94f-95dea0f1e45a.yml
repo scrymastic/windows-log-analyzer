@@ -72,3 +72,7 @@ detection:
     - Application|endswith: \WSCommunicator.exe
     - Application|endswith: \xagt.exe
 id: bacf58c6-e199-4040-a94f-95dea0f1e45a
+logsource:
+  definition: 'Requirements: Audit Filtering Platform Connection needs to be enabled'
+  product: windows
+  service: security

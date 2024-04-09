@@ -16,9 +16,6 @@ falsepositives:
 - Legitimate use of AnyDesk from a non-standard folder
 filename: proc_creation_win_remote_access_tools_anydesk_susp_exec.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/05
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1219/T1219.md#atomic-test-2---anydesk-files-detected-test-on-windows

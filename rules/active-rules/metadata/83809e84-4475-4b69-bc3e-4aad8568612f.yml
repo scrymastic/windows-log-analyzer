@@ -6,9 +6,6 @@ falsepositives:
   for this.
 filename: proc_creation_win_powershell_msexchange_transport_agent.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-persistence-via-microsoft-exchange-server-or-outlook?slide=7

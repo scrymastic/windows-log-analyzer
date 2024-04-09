@@ -6,11 +6,6 @@ falsepositives:
 - Administrator activity
 filename: win_security_pass_the_hash_2.yml
 level: medium
-logsource:
-  definition: The successful use of PtH for lateral movement between workstations
-    would trigger event ID 4624
-  product: windows
-  service: security
 modified: 2022/10/05
 references:
 - https://github.com/iadgov/Event-Forwarding-Guidance/tree/master/Events

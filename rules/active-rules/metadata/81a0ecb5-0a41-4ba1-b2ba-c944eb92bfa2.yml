@@ -10,9 +10,6 @@ falsepositives:
 - False positives might occur if the users are unaware of such control checks
 filename: proc_creation_win_winget_add_insecure_custom_source.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/package-manager/winget/source

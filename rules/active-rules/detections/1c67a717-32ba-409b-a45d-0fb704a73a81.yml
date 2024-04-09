@@ -15,3 +15,6 @@ detection:
       - CommandLine|contains: ' use '
       - CommandLine|contains: ' sessions '
 id: 1c67a717-32ba-409b-a45d-0fb704a73a81
+logsource:
+  category: process_creation
+  product: windows

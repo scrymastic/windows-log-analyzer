@@ -11,3 +11,6 @@ detection:
   - Image|startswith: C:\users\
   - Image|endswith: .exe
 id: aa3a6f94-890e-4e22-b634-ffdfd54792cc
+logsource:
+  category: process_creation
+  product: windows

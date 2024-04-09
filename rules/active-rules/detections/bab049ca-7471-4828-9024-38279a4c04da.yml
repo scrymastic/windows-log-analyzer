@@ -10,3 +10,6 @@ detection:
       - CommandLine|contains: startvm
       - CommandLine|contains: controlvm
 id: bab049ca-7471-4828-9024-38279a4c04da
+logsource:
+  category: process_creation
+  product: windows

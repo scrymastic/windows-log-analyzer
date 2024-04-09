@@ -8,9 +8,6 @@ falsepositives:
 - Rare legitimate use by administrators to test software (should always be investigated)
 filename: proc_creation_win_reg_windows_defender_tamper.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/06/05
 references:
 - https://thedfirreport.com/2022/03/21/apt35-automates-initial-access-using-proxyshell/

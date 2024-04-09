@@ -10,3 +10,6 @@ detection:
     - CommandLine|contains: input
     - CommandLine|contains: $
 id: 6c96fc76-0eb1-11eb-adc1-0242ac120002
+logsource:
+  category: process_creation
+  product: windows

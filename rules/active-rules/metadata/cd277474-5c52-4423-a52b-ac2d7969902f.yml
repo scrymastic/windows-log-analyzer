@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate WMI query
 filename: registry_set_bginfo_custom_wmi_query.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: ''
 references:
 - Internal Research

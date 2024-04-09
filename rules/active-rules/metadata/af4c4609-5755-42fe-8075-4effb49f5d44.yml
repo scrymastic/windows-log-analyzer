@@ -7,9 +7,6 @@ falsepositives:
   if you consider them as safe locations
 filename: image_load_office_excel_xll_susp_load.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://www.mandiant.com/resources/blog/lnk-between-browsers

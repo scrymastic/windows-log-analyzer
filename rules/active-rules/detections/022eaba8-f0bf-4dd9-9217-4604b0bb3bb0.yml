@@ -2,3 +2,6 @@ detection:
 - and:
   - CommandLine|contains: -NoP -NoL -sta -NonI -W Hidden -Exec Bypass -Enc
 id: 022eaba8-f0bf-4dd9-9217-4604b0bb3bb0
+logsource:
+  category: process_creation
+  product: windows

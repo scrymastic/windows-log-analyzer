@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: registry_event_office_test_regadd.yml
 level: medium
-logsource:
-  category: registry_event
-  product: windows
 modified: 2023/11/08
 references:
 - https://unit42.paloaltonetworks.com/unit42-technical-walkthrough-office-test-persistence-method-used-in-recent-sofacy-attacks/

@@ -10,3 +10,6 @@ detection:
     - CommandLine|contains: password123
     - CommandLine|contains: test@202
 id: 91edcfb1-2529-4ac2-9ecc-7617f895c7e4
+logsource:
+  category: process_creation
+  product: windows

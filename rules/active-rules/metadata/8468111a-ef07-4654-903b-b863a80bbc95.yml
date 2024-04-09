@@ -10,9 +10,6 @@ falsepositives:
 - Legitimate downloads of ".vhd" files would also trigger this
 filename: file_event_win_vhd_download_via_browsers.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/05/05
 references:
 - https://redcanary.com/blog/intelligence-insights-october-2021/

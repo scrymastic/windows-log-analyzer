@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_susp_etw_modification_cmdline.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/09
 references:
 - https://twitter.com/_xpn_/status/1268712093928378368

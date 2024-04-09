@@ -15,9 +15,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_ripzip_attack.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/01/05
 references:
 - https://twitter.com/jonasLyk/status/1549338335243534336?t=CrmPocBGLbDyE4p6zTX1cg&s=19

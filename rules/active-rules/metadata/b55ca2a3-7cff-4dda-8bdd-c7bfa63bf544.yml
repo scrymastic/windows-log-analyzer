@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: dns_query_win_tor_onion_domain_query.yml
 level: high
-logsource:
-  category: dns_query
-  product: windows
 modified: 2023/09/18
 references:
 - https://www.logpoint.com/en/blog/detecting-tor-use-with-logpoint/

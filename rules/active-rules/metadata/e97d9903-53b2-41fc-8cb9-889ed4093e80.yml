@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_system_krbrelayup_service_installation.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2022/10/05
 references:
 - https://github.com/Dec0ne/KrbRelayUp

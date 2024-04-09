@@ -6,11 +6,6 @@ falsepositives:
 - Rare legitimate access to anonfiles.com
 filename: win_dns_client_anonymfiles_com.yml
 level: high
-logsource:
-  definition: 'Requirements: Microsoft-Windows-DNS Client Events/Operational Event
-    Log must be enabled/collected in order to receive the events.'
-  product: windows
-  service: dns-client
 modified: ''
 references:
 - https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-blackbyte

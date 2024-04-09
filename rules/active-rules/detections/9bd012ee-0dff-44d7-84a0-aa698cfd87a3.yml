@@ -30,3 +30,6 @@ detection:
     - GrantedAccess|endswith: '0x14C2'
     - GrantedAccess|endswith: FF
 id: 9bd012ee-0dff-44d7-84a0-aa698cfd87a3
+logsource:
+  category: process_access
+  product: windows

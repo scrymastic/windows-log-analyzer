@@ -5,3 +5,7 @@ detection:
     - ScriptBlockText|contains: System.Net.NetworkCredential
     - ScriptBlockText|contains: System.DirectoryServices.Protocols.LdapConnection
 id: 1883444f-084b-419b-ac62-e0d0c5b3693f
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -4,3 +4,6 @@ detection:
     - Image|endswith: \wfc.exe
     - OriginalFileName|==: wfc.exe
 id: 49be8799-7b4d-4fda-ad23-cafbefdebbc5
+logsource:
+  category: process_creation
+  product: windows

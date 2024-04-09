@@ -6,9 +6,6 @@ falsepositives:
 - Admin activity (unclear what they do nowadays with finger.exe)
 filename: proc_creation_win_finger_usage.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/08/16
 references:
 - https://twitter.com/bigmacjpg/status/1349727699863011328?s=12

@@ -6,9 +6,6 @@ falsepositives:
 - SCCM
 filename: win_security_scrcons_remote_wmi_scripteventconsumer.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2021/11/27
 references:
 - https://threathunterplaybook.com/hunts/windows/200902-RemoteWMIActiveScriptEventConsumers/notebook.html

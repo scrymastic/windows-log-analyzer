@@ -30,3 +30,6 @@ detection:
     - CommandLine|contains: .jar
     - CommandLine|contains: .pl
 id: 38879043-7e1e-47a9-8d46-6bec88e201df
+logsource:
+  category: process_creation
+  product: windows

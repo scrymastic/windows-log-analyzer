@@ -20,3 +20,7 @@ detection:
   - SubcategoryGuid|!==: '{0CCE9240-69AE-11D9-BED3-505054503030}'
   - SubcategoryGuid|!==: '{0CCE9242-69AE-11D9-BED3-505054503030}'
 id: 69aeb277-f15f-4d2d-b32a-55e883609563
+logsource:
+  definition: dfd8c0f4-e6ad-4e07-b91b-f2fca0ddef64
+  product: windows
+  service: security

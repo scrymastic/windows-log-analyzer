@@ -8,3 +8,6 @@ detection:
     - ImageName|==: livekd.exe
     - ImageName|==: ADExplorer.exe
 id: d29a20b2-be4b-4827-81f2-3d8a59eab5fc
+logsource:
+  product: windows
+  service: appmodel-runtime

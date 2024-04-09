@@ -6,3 +6,6 @@ detection:
     - EventID|==: 8022
     - EventID|==: 8025
 id: 401e5d00-b944-11ea-8f9a-00163ecd60ae
+logsource:
+  product: windows
+  service: applocker

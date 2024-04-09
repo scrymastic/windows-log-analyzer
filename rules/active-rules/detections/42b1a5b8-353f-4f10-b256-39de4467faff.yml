@@ -9,3 +9,6 @@ detection:
   - CommandLine|contains: ' k'
   - CommandLine|contains: =clear
 id: 42b1a5b8-353f-4f10-b256-39de4467faff
+logsource:
+  category: process_creation
+  product: windows

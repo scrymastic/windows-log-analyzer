@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: registry_event_mal_azorult.yml
 level: critical
-logsource:
-  category: registry_event
-  product: windows
 modified: 2021/11/27
 references:
 - https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/trojan.win32.azoruit.a

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_hktl_quarkspw_filedump.yml
 level: critical
-logsource:
-  category: file_event
-  product: windows
 modified: 2021/11/27
 references:
 - https://jpcertcc.github.io/ToolAnalysisResultSheet/details/QuarksPWDump.htm

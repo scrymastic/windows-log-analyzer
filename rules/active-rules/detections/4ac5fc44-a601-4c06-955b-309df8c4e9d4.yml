@@ -15,3 +15,6 @@ detection:
     - TargetObject|endswith: Application
     - TargetObject|endswith: DefaultIcon
 id: 4ac5fc44-a601-4c06-955b-309df8c4e9d4
+logsource:
+  category: registry_event
+  product: windows

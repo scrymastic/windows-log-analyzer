@@ -3,3 +3,6 @@ detection:
   - TargetObject|contains: \Microsoft\WBEM\CIMOM\AllowAnonymousCallback
   - Details|==: DWORD (0x00000001)
 id: 4d431012-2ab5-4db7-a84e-b29809da2172
+logsource:
+  category: registry_set
+  product: windows

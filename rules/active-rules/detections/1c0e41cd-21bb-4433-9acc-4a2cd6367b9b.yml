@@ -42,3 +42,6 @@ detection:
     - CommandLine|contains: hh.exe
     - CommandLine|contains: 'hh '
 id: 1c0e41cd-21bb-4433-9acc-4a2cd6367b9b
+logsource:
+  category: process_creation
+  product: windows

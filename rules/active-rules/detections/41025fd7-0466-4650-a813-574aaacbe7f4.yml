@@ -229,3 +229,7 @@ detection:
     - ContextInfo|contains: Invoke-Sharp
     - ContextInfo|contains: .ps1
 id: 41025fd7-0466-4650-a813-574aaacbe7f4
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows

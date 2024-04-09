@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of the tool by administrators or users to update metadata of a binary
 filename: proc_creation_win_pua_rcedit_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/05
 references:
 - https://security.stackexchange.com/questions/210843/is-it-possible-to-change-original-filename-of-an-exe

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_system_invoke_obfuscation_clip_services.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2023/02/20
 references:
 - https://github.com/SigmaHQ/sigma/issues/1009

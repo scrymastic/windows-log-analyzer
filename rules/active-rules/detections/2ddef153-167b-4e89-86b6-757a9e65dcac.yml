@@ -19,3 +19,6 @@ detection:
     - CommandLine|contains: '%ProgramData%'
     - CommandLine|contains: '%public%'
 id: 2ddef153-167b-4e89-86b6-757a9e65dcac
+logsource:
+  category: process_creation
+  product: windows

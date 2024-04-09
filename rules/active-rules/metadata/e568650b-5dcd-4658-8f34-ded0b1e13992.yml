@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmic_recon_product_class.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/07
 references:
 - https://github.com/albertzsigovits/malware-notes/blob/c820c7fea76cf76a861b28ebc77e06100e20ec29/Ransomware/Maze.md

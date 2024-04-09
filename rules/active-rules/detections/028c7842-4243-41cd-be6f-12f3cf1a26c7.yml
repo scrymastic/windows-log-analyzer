@@ -7,3 +7,6 @@ detection:
     - ObjectType|==: 19195a5b-6da0-11d0-afd3-00c04fd930c9
     - ObjectType|==: domainDNS
 id: 028c7842-4243-41cd-be6f-12f3cf1a26c7
+logsource:
+  product: windows
+  service: security

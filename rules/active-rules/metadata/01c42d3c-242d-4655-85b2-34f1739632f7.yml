@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate administrators granting over permissive permissions to users
 filename: proc_creation_win_dsacls_abuse_permissions.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://ss64.com/nt/dsacls.html

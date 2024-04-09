@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use of dsacls to bind to an LDAP session
 filename: proc_creation_win_dsacls_password_spray.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/using-dsacls-to-check-ad-object-permissions#password-spraying-anyone

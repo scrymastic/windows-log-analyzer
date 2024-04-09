@@ -9,9 +9,6 @@ falsepositives:
 - Some tuning is required for other general purpose directories of third party apps
 filename: file_event_win_susp_lnk_double_extension.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/10/18
 references:
 - https://www.crowdstrike.com/blog/meet-crowdstrikes-adversary-of-the-month-for-june-mustang-panda/

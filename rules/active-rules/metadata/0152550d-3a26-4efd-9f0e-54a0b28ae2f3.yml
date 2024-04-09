@@ -13,9 +13,6 @@ falsepositives:
   spawned by sqlagent.exe is a legitimate action.
 filename: proc_creation_win_mssql_sqlps_susp_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/09
 references:
 - https://docs.microsoft.com/en-us/sql/tools/sqlps-utility?view=sql-server-ver15

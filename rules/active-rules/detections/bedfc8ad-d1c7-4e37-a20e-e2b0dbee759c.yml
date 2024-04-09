@@ -7,3 +7,6 @@ detection:
       - CommandLine|contains: '--Filter "rule '
       - CommandLine|contains: --Encoded --Filter \"
 id: bedfc8ad-d1c7-4e37-a20e-e2b0dbee759c
+logsource:
+  category: process_creation
+  product: windows

@@ -36,3 +36,6 @@ detection:
       - CommandLine|contains: \rundll32.exe
       - CommandLine|contains: \wscript.exe
 id: f5d19838-41b5-476c-98d8-ba8af4929ee2
+logsource:
+  category: process_creation
+  product: windows

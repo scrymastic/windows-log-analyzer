@@ -18,3 +18,6 @@ detection:
   - CommandLine|not contains: public static extern bool InstallELAMCertificateInfo(SafeFileHandle
       handle);
 id: d7bcd677-645d-4691-a8d4-7a5602b780d1
+logsource:
+  category: process_creation
+  product: windows

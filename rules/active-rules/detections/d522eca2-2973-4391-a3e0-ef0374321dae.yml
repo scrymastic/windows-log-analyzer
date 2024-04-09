@@ -22,3 +22,6 @@ detection:
       - OriginalFileName|==: pwsh.dll
       - OriginalFileName|==: Cmd.Exe
 id: d522eca2-2973-4391-a3e0-ef0374321dae
+logsource:
+  category: process_creation
+  product: windows

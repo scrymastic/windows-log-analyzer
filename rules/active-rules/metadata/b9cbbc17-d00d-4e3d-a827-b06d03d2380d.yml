@@ -15,9 +15,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_bitsadmin_potential_persistence.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/01/25
 references:
 - https://www.fireeye.com/blog/threat-research/2020/10/kegtap-and-singlemalt-with-a-ransomware-chaser.html

@@ -5,3 +5,6 @@ detection:
   - CommandLine|contains: '/v '
   - CommandLine|contains: MachineGuid
 id: f5240972-3938-4e56-8e4b-e33893176c1f
+logsource:
+  category: process_creation
+  product: windows

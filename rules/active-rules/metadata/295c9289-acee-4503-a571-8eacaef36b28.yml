@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: driver_load_win_vuln_hevd_driver.yml
 level: high
-logsource:
-  category: driver_load
-  product: windows
 modified: 2022/11/19
 references:
 - https://github.com/hacksysteam/HackSysExtremeVulnerableDriver

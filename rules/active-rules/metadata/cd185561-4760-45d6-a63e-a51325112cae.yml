@@ -6,10 +6,6 @@ falsepositives:
 - Diagnostics
 filename: posh_ps_memorydump_getstoragediagnosticinfo.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2022/12/25
 references:
 - https://docs.microsoft.com/en-us/powershell/module/storage/get-storagediagnosticinfo

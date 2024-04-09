@@ -1,8 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \tasklist.exe
-    - OriginalFileName|==: tasklist.exe
-  - CommandLine|None: -m
-  - CommandLine|contains: rdpcorets.dll
-id: 34275eb8-fa19-436b-b959-3d9ecd53fa1f

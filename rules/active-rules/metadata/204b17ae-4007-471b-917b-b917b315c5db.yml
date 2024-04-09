@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_cmd_del_greedy_deletion.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/09/11
 references:
 - https://www.joesandbox.com/analysis/509330/0/html#1044F3BDBE3BB6F734E357235F4D5898582D

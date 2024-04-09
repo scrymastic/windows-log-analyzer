@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: \AppData\Local\Temp\
     - CommandLine|contains: \AppData\Roaming\
 id: 9525dc73-0327-438c-8c04-13c0e037e9da
+logsource:
+  category: process_creation
+  product: windows

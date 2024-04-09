@@ -24,3 +24,6 @@ detection:
     - CurrentDirectory|contains: \Users\Public\
     - CurrentDirectory|contains: \Windows\Temp\
 id: 631b22a4-70f4-4e2f-9ea8-42f84d9df6d8
+logsource:
+  category: process_creation
+  product: windows

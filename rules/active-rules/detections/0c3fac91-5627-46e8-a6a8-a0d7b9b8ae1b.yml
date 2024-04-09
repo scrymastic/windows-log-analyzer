@@ -2,3 +2,6 @@ detection:
 - and:
   - TargetFilename|endswith: Local\Microsoft\WindowsApps\Get-Variable.exe
 id: 0c3fac91-5627-46e8-a6a8-a0d7b9b8ae1b
+logsource:
+  category: file_event
+  product: windows

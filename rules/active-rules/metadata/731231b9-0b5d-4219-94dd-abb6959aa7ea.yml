@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_rundll32_sys.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://www.microsoft.com/security/blog/2021/03/04/goldmax-goldfinder-sibot-analyzing-nobelium-malware/

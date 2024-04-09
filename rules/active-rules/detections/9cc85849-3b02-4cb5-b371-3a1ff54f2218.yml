@@ -52,3 +52,6 @@ detection:
   - CommandLine|not endswith: .vbe'
   - CommandLine|not endswith: .vbs'
 id: 9cc85849-3b02-4cb5-b371-3a1ff54f2218
+logsource:
+  category: process_creation
+  product: windows

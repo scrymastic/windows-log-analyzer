@@ -10,3 +10,8 @@ detection:
     - Path|endswith: \regsvr32.exe
     - Path|endswith: \wscript.exe
 id: f0767f15-0fb3-44b9-851e-e8d9a6d0005d
+logsource:
+  definition: 'Requirements: The "Microsoft-Windows-TaskScheduler/Operational" is
+    disabled by default and needs to be enabled in order for this detection to trigger'
+  product: windows
+  service: taskscheduler

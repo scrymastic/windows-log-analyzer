@@ -11,3 +11,6 @@ detection:
   - or:
     - ImageLoaded|not endswith: \Steam\bin\cef\cef.win7x64\dbgcore.dll
 id: 9ca2bf31-0570-44d8-a543-534c47c33ed7
+logsource:
+  category: image_load
+  product: windows

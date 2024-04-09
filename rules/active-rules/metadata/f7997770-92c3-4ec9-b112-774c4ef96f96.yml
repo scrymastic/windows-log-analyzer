@@ -12,9 +12,6 @@ falsepositives:
 - Legitimate use of the multi session functionality
 filename: registry_set_winlogon_allow_multiple_tssessions.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - http://blog.talosintelligence.com/2022/09/lazarus-three-rats.html

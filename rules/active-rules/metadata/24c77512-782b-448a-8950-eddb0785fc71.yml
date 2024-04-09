@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_sqlite_chromium_profile_data.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/19
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/84d9edaaaa2c5511144521b0e4af726d1c7276ce/atomics/T1539/T1539.md#atomic-test-2---steal-chrome-cookies-windows

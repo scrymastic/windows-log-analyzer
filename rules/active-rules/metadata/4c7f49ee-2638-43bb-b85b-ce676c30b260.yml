@@ -9,9 +9,6 @@ falsepositives:
 - Legitimate assembly compilation using a build provider
 filename: file_event_win_aspnet_temp_files.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - Internal Research

@@ -13,3 +13,6 @@ detection:
     - Image|endswith: \rundll32.exe
     - Image|endswith: \calc.exe
 id: f3d39c45-de1a-4486-a687-ab126124f744
+logsource:
+  category: process_creation
+  product: windows

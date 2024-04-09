@@ -33,3 +33,6 @@ detection:
     - TargetFilename|contains: .bat:Zone
     - TargetFilename|contains: .cmd:Zone
 id: ae02ed70-11aa-4a22-b397-c0d0e8f6ea99
+logsource:
+  category: create_stream_hash
+  product: windows

@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: SYSMON TRACE
     - CommandLine|contains: SysmonDnsEtwSession
 id: cd1f961e-0b96-436b-b7c6-38da4583ec00
+logsource:
+  category: process_creation
+  product: windows

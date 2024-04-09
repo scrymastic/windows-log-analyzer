@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate backup operation/creating shadow copies
 filename: win_esent_ntdsutil_abuse_susp_location.yml
 level: medium
-logsource:
-  product: windows
-  service: application
 modified: 2023/10/23
 references:
 - https://twitter.com/mgreen27/status/1558223256704122882

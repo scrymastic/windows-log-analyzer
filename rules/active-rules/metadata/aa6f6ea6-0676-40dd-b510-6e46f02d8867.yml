@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_curl_local_file_read.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://curl.se/docs/manpage.html

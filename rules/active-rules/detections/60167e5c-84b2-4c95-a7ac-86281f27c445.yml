@@ -3,3 +3,6 @@ detection:
   - Data|contains: HostName=ServerRemoteHost
   - Data|contains: wsmprovhost.exe
 id: 60167e5c-84b2-4c95-a7ac-86281f27c445
+logsource:
+  category: ps_classic_start
+  product: windows

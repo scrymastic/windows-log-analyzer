@@ -3,3 +3,7 @@ detection:
   - ScriptBlockText|contains: ::GetTypeFromCLSID(
   - ScriptBlockText|contains: .ShellExecute(
 id: 8bc063d5-3a3a-4f01-a140-bc15e55e8437
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

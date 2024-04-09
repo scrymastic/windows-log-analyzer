@@ -6,10 +6,6 @@ falsepositives:
 - Unlikely
 filename: posh_ps_psasyncshell.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://github.com/JoelGMSec/PSAsyncShell

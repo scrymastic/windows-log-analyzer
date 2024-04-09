@@ -10,9 +10,6 @@ falsepositives:
 - Local accounts managed by privileged account management tools
 filename: win_security_user_creation.yml
 level: low
-logsource:
-  product: windows
-  service: security
 modified: 2021/01/17
 references:
 - https://patrick-bareiss.com/detecting-local-user-creation-in-ad-with-sigma/

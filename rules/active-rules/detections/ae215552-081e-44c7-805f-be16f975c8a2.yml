@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: atbroker.exe
     - CommandLine|contains: HelpPane.exe
 id: ae215552-081e-44c7-805f-be16f975c8a2
+logsource:
+  category: process_creation
+  product: windows

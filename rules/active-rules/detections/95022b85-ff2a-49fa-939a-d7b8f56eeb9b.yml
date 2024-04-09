@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: \Windows\Temp\tmp.bat
     - CommandLine|contains: sigcmm-2.4.dll
 id: 95022b85-ff2a-49fa-939a-d7b8f56eeb9b
+logsource:
+  category: process_creation
+  product: windows

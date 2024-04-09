@@ -6,3 +6,6 @@ detection:
     - Image|not contains: \EACoreServer.exe
     - ImageLoaded|not startswith: C:\Program Files\Electronic Arts\EA Desktop\
 id: edd3ddc3-386f-4ba5-9ada-4376b2cfa7b5
+logsource:
+  category: image_load
+  product: windows

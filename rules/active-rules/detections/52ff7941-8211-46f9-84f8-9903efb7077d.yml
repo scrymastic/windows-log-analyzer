@@ -31,3 +31,6 @@ detection:
       - Hashes|contains: IMPHASH=89059503D7FBF470E68F7E63313DA3AD
       - Hashes|contains: IMPHASH=CA28337632625C8281AB8A130B3D6BAD
 id: 52ff7941-8211-46f9-84f8-9903efb7077d
+logsource:
+  category: process_creation
+  product: windows

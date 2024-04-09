@@ -30,3 +30,6 @@ detection:
   - Image|not endswith: \net.exe
   - Image|not endswith: \net1.exe
 id: cea2b7ea-792b-405f-95a1-b903ea06458f
+logsource:
+  category: process_creation
+  product: windows

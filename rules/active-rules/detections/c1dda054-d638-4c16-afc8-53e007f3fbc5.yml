@@ -14,3 +14,7 @@ detection:
   - ScriptBlockText|contains: ' -Recurse '
   - ScriptBlockText|contains: ' -Include '
 id: c1dda054-d638-4c16-afc8-53e007f3fbc5
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_office_excel_dcom_lateral_movement.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://posts.specterops.io/lateral-movement-abuse-the-power-of-dcom-excel-application-3c016d0d9922

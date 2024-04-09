@@ -5,3 +5,6 @@ detection:
     - Image|endswith: \livekd.exe
     - Image|endswith: \livek64.exe
 id: 16fe46bb-4f64-46aa-817d-ff7bec4a2352
+logsource:
+  category: file_event
+  product: windows

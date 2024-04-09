@@ -7,3 +7,6 @@ detection:
   - TargetFilename|contains: \lsass
   - TargetFilename|contains: .DMP
 id: 69ca12af-119d-44ed-b50f-a47af0ebc364
+logsource:
+  category: file_event
+  product: windows

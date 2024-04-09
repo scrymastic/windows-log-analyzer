@@ -5,3 +5,6 @@ detection:
   - SourceImage|not endswith: \services.exe
   - SourceImage|not endswith: \msiexec.exe
 id: 174afcfa-6e40-4ae9-af64-496546389294
+logsource:
+  category: process_access
+  product: windows

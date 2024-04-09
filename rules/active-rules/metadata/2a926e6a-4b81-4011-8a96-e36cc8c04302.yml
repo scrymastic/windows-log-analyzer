@@ -5,11 +5,6 @@ falsepositives:
 - Unknown
 filename: win_security_powershell_script_installed_as_service.yml
 level: high
-logsource:
-  definition: The 'System Security Extension' audit subcategory need to be enabled
-    to log the EID 4697
-  product: windows
-  service: security
 modified: 2022/11/29
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse

@@ -8,3 +8,6 @@ detection:
       - Binary|contains: 4d0053004d005100
       - Binary|contains: 6d0073006d007100
 id: 56abae0c-6212-4b97-adc0-0b559bb950c3
+logsource:
+  product: windows
+  service: system

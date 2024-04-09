@@ -5,3 +5,6 @@ detection:
     - EventID|==: 39
     - EventID|==: 41
 id: 993c2665-e6ef-40e3-a62a-e1a97686af79
+logsource:
+  product: windows
+  service: system

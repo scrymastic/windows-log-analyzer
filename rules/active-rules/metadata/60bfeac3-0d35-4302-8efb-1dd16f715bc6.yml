@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_java_sysaidserver_susp_child_process.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.microsoft.com/security/blog/2022/08/25/mercury-leveraging-log4j-2-vulnerabilities-in-unpatched-systems-to-target-israeli-organizations/

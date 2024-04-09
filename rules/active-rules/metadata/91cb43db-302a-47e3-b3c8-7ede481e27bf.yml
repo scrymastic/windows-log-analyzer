@@ -15,10 +15,6 @@ falsepositives:
 - Searching software such as "everything.exe"
 filename: file_access_win_browser_credential_access.yml
 level: medium
-logsource:
-  category: file_access
-  definition: 'Requirements: Microsoft-Windows-Kernel-File ETW provider'
-  product: windows
 modified: 2023/12/18
 references:
 - https://www.zscaler.com/blogs/security-research/ffdroider-stealer-targeting-social-media-platform-users

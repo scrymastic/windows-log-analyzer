@@ -6,3 +6,6 @@ detection:
     - HiveName|contains: \Temp\SAM
     - HiveName|contains: \Temp\SECURITY
 id: 39f919f3-980b-4e6f-a975-8af7e507ef2b
+logsource:
+  product: windows
+  service: system

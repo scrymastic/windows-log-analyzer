@@ -8,10 +8,6 @@ falsepositives:
 - Host connections to external legitimate domains.
 filename: win_susp_ntlm_rdp.yml
 level: medium
-logsource:
-  definition: Requires events from Microsoft-Windows-NTLM/Operational
-  product: windows
-  service: ntlm
 modified: 2021/11/27
 references:
 - n/a

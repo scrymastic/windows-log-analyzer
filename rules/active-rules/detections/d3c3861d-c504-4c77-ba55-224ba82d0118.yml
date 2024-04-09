@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: trace
   - CommandLine|contains: start
 id: d3c3861d-c504-4c77-ba55-224ba82d0118
+logsource:
+  category: process_creation
+  product: windows

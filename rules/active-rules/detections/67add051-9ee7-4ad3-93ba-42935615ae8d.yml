@@ -15,3 +15,6 @@ detection:
       - Imphash|==: 0A64EEB85419257D0CE32BD5D55C3A18
       - Imphash|==: 6E7B34DFC017700B1517B230DF6FF0D0
 id: 67add051-9ee7-4ad3-93ba-42935615ae8d
+logsource:
+  category: driver_load
+  product: windows

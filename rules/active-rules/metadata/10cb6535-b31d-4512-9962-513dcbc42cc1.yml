@@ -6,9 +6,6 @@ falsepositives:
   Apply additional filters accordingly
 filename: driver_load_win_pua_system_informer.yml
 level: medium
-logsource:
-  category: driver_load
-  product: windows
 modified: ''
 references:
 - https://systeminformer.sourceforge.io/

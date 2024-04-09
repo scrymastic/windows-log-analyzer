@@ -5,9 +5,6 @@ falsepositives:
 - Command lines that use the same flags
 filename: proc_creation_win_createdump_lolbin_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/08/19
 references:
 - https://www.crowdstrike.com/blog/overwatch-exposes-aquatic-panda-in-possession-of-log-4-shell-exploit-tools/

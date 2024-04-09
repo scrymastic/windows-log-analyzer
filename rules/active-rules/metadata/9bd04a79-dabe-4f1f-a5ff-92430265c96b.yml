@@ -6,9 +6,6 @@ falsepositives:
 - Other programs that cause these patterns (please report)
 filename: proc_creation_win_susp_priv_escalation_via_named_pipe.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/30
 references:
 - https://www.elastic.co/guide/en/security/current/privilege-escalation-via-named-pipe-impersonation.html

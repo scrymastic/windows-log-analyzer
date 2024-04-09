@@ -10,3 +10,6 @@ detection:
     - ImageLoaded|contains: \Windows\Tasks\
   - ImageLoaded|endswith: .xll
 id: af4c4609-5755-42fe-8075-4effb49f5d44
+logsource:
+  category: image_load
+  product: windows

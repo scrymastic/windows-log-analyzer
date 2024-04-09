@@ -7,9 +7,6 @@ falsepositives:
 - Other legitimate processes loading those DLLs in your environment.
 filename: image_load_dll_credui_uncommon_process_load.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/07/28
 references:
 - https://securitydatasets.com/notebooks/atomic/windows/credential_access/SDWIN-201020013208.html

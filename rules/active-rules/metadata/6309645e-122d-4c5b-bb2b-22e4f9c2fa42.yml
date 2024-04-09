@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: create_remote_thread_win_hktl_cobaltstrike.yml
 level: high
-logsource:
-  category: create_remote_thread
-  product: windows
 modified: 2023/05/05
 references:
 - https://medium.com/@olafhartong/cobalt-strike-remote-threads-detection-206372d11d0f

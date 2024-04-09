@@ -12,3 +12,6 @@ detection:
     - Image|not startswith: C:\Windows\WinSxS\
     - Image|not endswith: \TiWorker.exe
 id: 7d9263bd-dc47-4a58-bc92-5474abab390c
+logsource:
+  category: registry_set
+  product: windows

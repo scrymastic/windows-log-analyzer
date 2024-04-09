@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_software_restriction_policies_block.yml
 level: high
-logsource:
-  product: windows
-  service: application
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows-server/identity/software-restriction-policies/software-restriction-policies

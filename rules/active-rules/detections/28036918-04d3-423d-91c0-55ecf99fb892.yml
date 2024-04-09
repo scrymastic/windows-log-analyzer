@@ -2,3 +2,6 @@ detection:
 - and:
   - TargetObject|endswith: SOFTWARE\Microsoft\.NETFramework\NGenAssemblyUsageLog
 id: 28036918-04d3-423d-91c0-55ecf99fb892
+logsource:
+  category: registry_set
+  product: windows

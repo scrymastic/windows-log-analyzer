@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_schtasks_appdata_local_system.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/07/28
 references:
 - https://thedfirreport.com/2022/02/21/qbot-and-zerologon-lead-to-full-domain-compromise/

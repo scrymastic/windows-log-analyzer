@@ -7,11 +7,6 @@ falsepositives:
   source to determine the necessary actions to take
 filename: win_dns_client_ufile_io.yml
 level: low
-logsource:
-  definition: 'Requirements: Microsoft-Windows-DNS Client Events/Operational Event
-    Log must be enabled/collected in order to receive the events.'
-  product: windows
-  service: dns-client
 modified: 2023/09/18
 references:
 - https://thedfirreport.com/2021/12/13/diavol-ransomware/

@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: WP
     - CommandLine|contains: WD
 id: 01c42d3c-242d-4655-85b2-34f1739632f7
+logsource:
+  category: process_creation
+  product: windows

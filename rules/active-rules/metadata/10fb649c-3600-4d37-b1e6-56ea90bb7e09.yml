@@ -5,9 +5,6 @@ falsepositives:
 - Administrative activity that must be investigated
 filename: proc_creation_win_susp_add_user_privileged_group.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708

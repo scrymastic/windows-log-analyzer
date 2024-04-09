@@ -5,3 +5,6 @@ detection:
     - TargetObject|endswith: \SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\EnableFirewall
   - Details|==: DWORD (0x00000000)
 id: e78c408a-e2ea-43cd-b5ea-51975cf358c0
+logsource:
+  category: registry_set
+  product: windows

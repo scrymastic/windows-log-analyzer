@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administrative use
 filename: proc_creation_win_secedit_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/30
 references:
 - https://blueteamops.medium.com/secedit-and-i-know-it-595056dee53d

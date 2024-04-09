@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: '#+'
     - CommandLine|contains: '#-'
 id: 43fa5350-db63-4b8f-9a01-789a427074e1
+logsource:
+  category: process_creation
+  product: windows

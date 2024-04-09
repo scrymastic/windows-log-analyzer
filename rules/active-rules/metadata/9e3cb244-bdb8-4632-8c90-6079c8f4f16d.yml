@@ -8,11 +8,6 @@ falsepositives:
 - Unknown
 filename: win_taskscheduler_susp_schtasks_delete.yml
 level: high
-logsource:
-  definition: 'Requirements: The "Microsoft-Windows-TaskScheduler/Operational" is
-    disabled by default and needs to be enabled in order for this detection to trigger'
-  product: windows
-  service: taskscheduler
 modified: 2023/02/07
 references:
 - https://www.socinvestigation.com/most-common-windows-event-ids-to-hunt-mind-map/

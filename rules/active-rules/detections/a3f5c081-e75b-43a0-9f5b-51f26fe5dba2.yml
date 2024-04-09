@@ -14,3 +14,6 @@ detection:
   - TargetFilename|endswith: :Zone.Identifier
   - TargetFilename|contains: \AppData\Local\Temp\WinGet\
 id: a3f5c081-e75b-43a0-9f5b-51f26fe5dba2
+logsource:
+  category: create_stream_hash
+  product: windows

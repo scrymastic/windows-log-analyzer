@@ -6,9 +6,6 @@ falsepositives:
 - Runas command-line tool using /netonly parameter
 filename: win_security_overpass_the_hash.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2021/11/27
 references:
 - https://web.archive.org/web/20220419045003/https://cyberwardog.blogspot.com/2017/04/chronicles-of-threat-hunter-hunting-for.html

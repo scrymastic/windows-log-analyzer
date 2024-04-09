@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate installation of code-tunnel as a service
 filename: proc_creation_win_vscode_tunnel_service_install.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://ipfyx.fr/post/visual-studio-code-tunnel/

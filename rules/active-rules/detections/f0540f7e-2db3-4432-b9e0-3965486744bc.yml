@@ -19,3 +19,6 @@ detection:
     - TargetFilename|endswith: .dll
     - TargetFilename|endswith: .ocx
 id: f0540f7e-2db3-4432-b9e0-3965486744bc
+logsource:
+  category: file_event
+  product: windows

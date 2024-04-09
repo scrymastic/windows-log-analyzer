@@ -22,3 +22,6 @@ detection:
       - CommandLine|contains: ' ?:\Windows\'
       - CommandLine|contains: ' %public%'
 id: afe52666-401e-4a02-b4ff-5d128990b8cb
+logsource:
+  category: process_creation
+  product: windows

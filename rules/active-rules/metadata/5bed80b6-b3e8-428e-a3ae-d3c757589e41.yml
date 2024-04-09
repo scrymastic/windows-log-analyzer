@@ -6,9 +6,6 @@ falsepositives:
 - Programs that connect locally to the RDP port
 filename: win_security_rdp_reverse_tunnel.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2022/09/02
 references:
 - https://twitter.com/SBousseaden/status/1096148422984384514

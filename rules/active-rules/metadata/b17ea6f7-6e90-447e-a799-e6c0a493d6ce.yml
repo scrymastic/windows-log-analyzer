@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administrator working with shadow copies, access for backup purposes
 filename: proc_creation_win_susp_shadow_copies_creation.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/11/10
 references:
 - https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_browsers_remote_debugging.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/23
 references:
 - https://yoroi.company/wp-content/uploads/2022/05/EternityGroup_report_compressed.pdf

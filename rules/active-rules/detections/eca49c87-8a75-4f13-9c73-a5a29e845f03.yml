@@ -3,3 +3,6 @@ detection:
   - Image|endswith: \Runscripthelper.exe
   - CommandLine|contains: surfacecheck
 id: eca49c87-8a75-4f13-9c73-a5a29e845f03
+logsource:
+  category: process_creation
+  product: windows

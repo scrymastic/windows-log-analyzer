@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate installation of a new screensaver
 filename: proc_creation_win_rundll32_installscreensaver.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/09
 references:
 - https://lolbas-project.github.io/lolbas/Libraries/Desk/

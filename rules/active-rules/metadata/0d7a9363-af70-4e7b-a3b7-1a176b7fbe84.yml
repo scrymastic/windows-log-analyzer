@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: create_stream_hash_regedit_export_to_ads.yml
 level: high
-logsource:
-  category: create_stream_hash
-  product: windows
 modified: 2021/11/27
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Regedit/

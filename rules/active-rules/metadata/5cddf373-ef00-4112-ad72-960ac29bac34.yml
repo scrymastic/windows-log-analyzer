@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_koadic.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/11
 references:
 - https://unit42.paloaltonetworks.com/unit42-sofacy-groups-parallel-attacks/

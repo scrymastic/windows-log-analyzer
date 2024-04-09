@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: file_change_win_unusual_modification_by_dns_exe.yml
 level: high
-logsource:
-  category: file_change
-  product: windows
 modified: ''
 references:
 - https://www.elastic.co/guide/en/security/current/unusual-file-modification-by-dns-exe.html

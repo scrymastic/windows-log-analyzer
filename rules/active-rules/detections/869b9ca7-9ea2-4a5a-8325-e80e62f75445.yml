@@ -22,3 +22,6 @@ detection:
     - Image|!==: C:\Windows\System32\cmd.exe
     - CommandLine|not startswith: '"C:\Windows\system32\cmd.exe" '
 id: 869b9ca7-9ea2-4a5a-8325-e80e62f75445
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
   command-line args, etc.
 filename: proc_creation_win_csi_use_of_csharp_console.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/07/14
 references:
 - https://redcanary.com/blog/detecting-attacks-leveraging-the-net-framework/

@@ -8,11 +8,6 @@ falsepositives:
   depends on the organisation's user base)
 filename: registry_set_susp_keyboard_layout_load.yml
 level: medium
-logsource:
-  category: registry_set
-  definition: 'Requirements: Sysmon config that monitors \Keyboard Layout\Preload
-    subkey of the HKLU hives - see https://github.com/SwiftOnSecurity/sysmon-config/pull/92/files'
-  product: windows
 modified: 2023/08/17
 references:
 - https://renenyffenegger.ch/notes/Windows/registry/tree/HKEY_CURRENT_USER/Keyboard-Layout/Preload/index

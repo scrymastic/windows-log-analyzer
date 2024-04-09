@@ -28,3 +28,6 @@ detection:
     - TargetFilename|endswith: .diagcab
     - TargetFilename|endswith: .appx
 id: 654fcc6d-840d-4844-9b07-2c3300e54a26
+logsource:
+  category: file_event
+  product: windows

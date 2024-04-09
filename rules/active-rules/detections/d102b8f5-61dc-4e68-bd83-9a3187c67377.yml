@@ -4,3 +4,6 @@ detection:
   - Image|not endswith: \code-tunnel.exe
   - Image|not endswith: \code.exe
 id: d102b8f5-61dc-4e68-bd83-9a3187c67377
+logsource:
+  category: file_event
+  product: windows

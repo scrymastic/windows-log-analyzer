@@ -56,3 +56,6 @@ detection:
     - ParentImage|not endswith: \Discord.exe
     - CommandLine|not contains: \NVSMI\nvidia-smi.exe
 id: f26eb764-fd89-464b-85e2-dc4a8e6e77b8
+logsource:
+  category: process_creation
+  product: windows

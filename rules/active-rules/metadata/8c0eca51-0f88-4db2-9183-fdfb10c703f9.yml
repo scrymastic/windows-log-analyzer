@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_reg_lsa_ppl_protection_disabled.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/26
 references:
 - https://thedfirreport.com/2022/03/21/apt35-automates-initial-access-using-proxyshell/

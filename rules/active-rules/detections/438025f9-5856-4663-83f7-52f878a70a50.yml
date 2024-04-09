@@ -90,3 +90,6 @@ detection:
     - Image|contains: \Windows\Temp\
     - Image|contains: \Windows\System32\Tasks\
 id: 438025f9-5856-4663-83f7-52f878a70a50
+logsource:
+  category: process_creation
+  product: windows

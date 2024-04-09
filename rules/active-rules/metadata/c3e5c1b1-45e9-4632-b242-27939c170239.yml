@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: sysmon_file_block_shredding.yml
 level: high
-logsource:
-  product: windows
-  service: sysmon
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon

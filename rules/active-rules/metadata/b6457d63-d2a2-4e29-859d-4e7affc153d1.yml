@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administration use
 filename: proc_creation_win_dnscmd_discovery.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dnscmd

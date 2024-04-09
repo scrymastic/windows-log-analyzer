@@ -16,3 +16,8 @@ detection:
   - or:
     - SubjectUserName|not startswith: MSOL_
 id: ab6bffca-beff-4baa-af11-6733f296d57a
+logsource:
+  definition: 'Requirements: The "Read all properties" permission on the user object
+    needs to be audited for the "Everyone" principal'
+  product: windows
+  service: security

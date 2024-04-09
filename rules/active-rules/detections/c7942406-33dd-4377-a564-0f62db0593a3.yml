@@ -5,3 +5,6 @@ detection:
     - CommandLine|endswith: ' 936'
     - CommandLine|endswith: ' 1258'
 id: c7942406-33dd-4377-a564-0f62db0593a3
+logsource:
+  category: process_creation
+  product: windows

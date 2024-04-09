@@ -25,3 +25,6 @@ detection:
       - OriginalFileName|==: wmic.exe
       - OriginalFileName|==: wscript.exe
 id: 0ba1da6d-b6ce-4366-828c-18826c9de23e
+logsource:
+  category: process_creation
+  product: windows

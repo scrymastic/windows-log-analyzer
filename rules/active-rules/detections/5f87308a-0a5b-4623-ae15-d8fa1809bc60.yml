@@ -5,3 +5,6 @@ detection:
     - TargetFilename|endswith: .dll
     - TargetFilename|endswith: .exe
 id: 5f87308a-0a5b-4623-ae15-d8fa1809bc60
+logsource:
+  category: file_event
+  product: windows

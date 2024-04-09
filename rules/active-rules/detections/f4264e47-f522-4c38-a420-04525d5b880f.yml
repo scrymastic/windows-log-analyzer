@@ -25,3 +25,6 @@ detection:
     - Image|endswith: \AutoIt3_x64.exe
     - Image|endswith: \AutoIt3.exe
 id: f4264e47-f522-4c38-a420-04525d5b880f
+logsource:
+  category: process_creation
+  product: windows

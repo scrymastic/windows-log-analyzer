@@ -4,3 +4,6 @@ detection:
     - Image|endswith: \DefenderCheck.exe
     - Description|==: DefenderCheck
 id: f0ca6c24-3225-47d5-b1f5-352bf07ecfa7
+logsource:
+  category: process_creation
+  product: windows

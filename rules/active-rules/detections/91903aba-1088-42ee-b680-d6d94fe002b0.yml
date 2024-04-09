@@ -3,3 +3,6 @@ detection:
   - EventID|==: 5007
   - NewValue|contains: \Real-Time Protection\SubmitSamplesConsent = 0x0
 id: 91903aba-1088-42ee-b680-d6d94fe002b0
+logsource:
+  product: windows
+  service: windefend

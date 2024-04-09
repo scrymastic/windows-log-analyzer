@@ -6,9 +6,6 @@ falsepositives:
 - Rare cases of administrative activity
 filename: file_event_win_sam_dump.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/01/05
 references:
 - https://github.com/search?q=CVE-2021-36934

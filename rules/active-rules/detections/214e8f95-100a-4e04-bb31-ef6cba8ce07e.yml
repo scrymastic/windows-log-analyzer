@@ -4,3 +4,6 @@ detection:
   - ShareName|==: \\\\\*\\IPC$
   - RelativeTargetName|==: spoolss
 id: 214e8f95-100a-4e04-bb31-ef6cba8ce07e
+logsource:
+  product: windows
+  service: security

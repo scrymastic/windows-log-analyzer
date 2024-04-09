@@ -1,4 +1,0 @@
-detection:
-- and:
-  - CommandLine|None: dir*-s
-id: 7c9340a9-e2ee-4e43-94c5-c54ebbea1006

@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: wmic.exe
   - CommandLine|contains: service
 id: 76f55eaa-d27f-4213-9d45-7b0e4b60bbae
+logsource:
+  category: process_creation
+  product: windows

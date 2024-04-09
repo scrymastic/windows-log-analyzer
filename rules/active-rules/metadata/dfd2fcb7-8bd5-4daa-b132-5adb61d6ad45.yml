@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmic_recon_hotfix.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://github.com/carlospolop/PEASS-ng/blob/fa0f2e17fbc1d86f1fd66338a40e665e7182501d/winPEAS/winPEASbat/winPEAS.bat

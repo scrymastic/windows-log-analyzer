@@ -12,3 +12,6 @@ detection:
     - CommandLine|endswith: .exe -S
     - ParentImage|endswith: \services.exe
 id: 7aa7009a-28b9-4344-8c1f-159489a390df
+logsource:
+  category: process_creation
+  product: windows

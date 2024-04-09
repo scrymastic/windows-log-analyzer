@@ -5,3 +5,6 @@ detection:
   - CommandLine|contains: internal-run
   - CommandLine|contains: tunnel-service.log
 id: 30bf1789-379d-4fdc-900f-55cd0a90a801
+logsource:
+  category: process_creation
+  product: windows

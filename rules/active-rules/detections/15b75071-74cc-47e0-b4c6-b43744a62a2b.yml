@@ -14,3 +14,6 @@ detection:
       - Image|startswith: C:\Windows\cursors\
       - Image|startswith: C:\Windows\system32\tasks\
 id: 15b75071-74cc-47e0-b4c6-b43744a62a2b
+logsource:
+  category: process_creation
+  product: windows

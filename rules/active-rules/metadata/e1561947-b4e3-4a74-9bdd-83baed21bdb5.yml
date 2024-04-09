@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_invoke_obfuscation_via_use_clip.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/11/16
 references:
 - https://github.com/SigmaHQ/sigma/issues/1009

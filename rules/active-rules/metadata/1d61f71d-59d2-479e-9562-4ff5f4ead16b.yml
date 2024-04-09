@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_system_service_install_susp.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2023/12/04
 references:
 - Internal Research

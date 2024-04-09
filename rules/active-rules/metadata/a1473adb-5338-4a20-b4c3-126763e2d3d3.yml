@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_rundll32_advpack_obfuscated_ordinal_call.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/Hexacorn/status/1224848930795552769

@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_browsers_chromium_mockbin_abuse.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.zscaler.com/blogs/security-research/steal-it-campaign

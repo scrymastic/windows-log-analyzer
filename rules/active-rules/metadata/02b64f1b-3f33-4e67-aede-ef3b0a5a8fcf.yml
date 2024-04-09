@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of the library
 filename: proc_creation_win_powershell_download_com_cradles.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/dotnet/api/system.type.gettypefromclsid?view=net-7.0

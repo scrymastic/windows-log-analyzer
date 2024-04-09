@@ -9,3 +9,6 @@ detection:
     - CommandLine|contains: ' -ExclusionProcess '
     - CommandLine|contains: ' -ExclusionIpAddress '
 id: 17769c90-230e-488b-a463-e05c08e9d48f
+logsource:
+  category: process_creation
+  product: windows

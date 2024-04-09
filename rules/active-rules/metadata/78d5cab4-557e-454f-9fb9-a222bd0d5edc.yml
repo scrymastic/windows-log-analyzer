@@ -7,9 +7,6 @@ falsepositives:
   port.
 filename: win_security_successful_external_remote_smb_login.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2024/03/11
 references:
 - https://www.inversecos.com/2020/04/successful-4624-anonymous-logons-to.html

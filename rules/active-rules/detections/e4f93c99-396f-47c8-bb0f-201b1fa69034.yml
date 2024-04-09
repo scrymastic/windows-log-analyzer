@@ -12,3 +12,7 @@ detection:
   - ScriptBlockText|contains: '0x45'
   - ScriptBlockText|contains: '0xAC'
 id: e4f93c99-396f-47c8-bb0f-201b1fa69034
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

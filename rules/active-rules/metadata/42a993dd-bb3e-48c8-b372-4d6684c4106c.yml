@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_crackmapexec_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/08
 references:
 - https://mpgn.gitbook.io/crackmapexec/smb-protocol/authentication/checking-credentials-local

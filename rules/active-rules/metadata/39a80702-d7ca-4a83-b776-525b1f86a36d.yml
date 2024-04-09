@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate usage of SDelete
 filename: win_security_susp_sdelete.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2021/11/27
 references:
 - https://jpcertcc.github.io/ToolAnalysisResultSheet/details/sdelete.htm

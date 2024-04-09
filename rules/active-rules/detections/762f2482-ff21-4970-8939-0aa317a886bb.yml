@@ -18,3 +18,6 @@ detection:
     - CommandLine|contains: ' /path:'
     - CommandLine|contains: ' /ca:'
 id: 762f2482-ff21-4970-8939-0aa317a886bb
+logsource:
+  category: process_creation
+  product: windows

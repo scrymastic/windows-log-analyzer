@@ -6,9 +6,6 @@ falsepositives:
 - Other programs that use these command line option and accepts an 'All' parameter
 filename: proc_creation_win_hktl_bloodhound_sharphound.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://github.com/BloodHoundAD/BloodHound

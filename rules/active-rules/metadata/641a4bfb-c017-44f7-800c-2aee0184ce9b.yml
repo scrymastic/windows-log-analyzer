@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_system_invoke_obfuscation_via_use_rundll32_services.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2022/11/29
 references:
 - https://github.com/SigmaHQ/sigma/issues/1009

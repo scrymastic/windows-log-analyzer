@@ -6,9 +6,6 @@ falsepositives:
 - Software that uses the caret encased keywords PASS and USER in its command line
 filename: proc_creation_win_hktl_hydra.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://github.com/vanhauser-thc/thc-hydra

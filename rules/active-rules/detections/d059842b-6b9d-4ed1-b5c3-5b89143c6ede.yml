@@ -9,3 +9,6 @@ detection:
     - CommandLine|contains: ' /addfile '
   - CommandLine|contains: http
 id: d059842b-6b9d-4ed1-b5c3-5b89143c6ede
+logsource:
+  category: process_creation
+  product: windows

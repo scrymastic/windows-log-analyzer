@@ -9,9 +9,6 @@ falsepositives:
   documentation; see https://learn.microsoft.com/en-us/mem/intune/apps/intune-management-extension
 filename: proc_creation_win_sysinternals_psexesvc_as_system.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/28
 references:
 - https://docs.microsoft.com/en-us/sysinternals/downloads/psexec

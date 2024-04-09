@@ -7,3 +7,6 @@ detection:
     - TargetFilename|contains: \WindowsPowerShell\Modules\
     - TargetFilename|contains: \PowerShell\7\Modules\
 id: e36941d0-c0f0-443f-bc6f-cb2952eb69ea
+logsource:
+  category: file_event
+  product: windows

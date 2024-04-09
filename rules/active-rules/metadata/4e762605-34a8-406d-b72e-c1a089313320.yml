@@ -14,9 +14,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hxtsr_masquerading.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/02/08
 references:
 - Internal Research

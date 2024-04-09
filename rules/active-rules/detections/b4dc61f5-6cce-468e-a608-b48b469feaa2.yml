@@ -4,3 +4,6 @@ detection:
     - OriginalFileName|==: DirLister.exe
     - Image|endswith: \dirlister.exe
 id: b4dc61f5-6cce-468e-a608-b48b469feaa2
+logsource:
+  category: process_creation
+  product: windows

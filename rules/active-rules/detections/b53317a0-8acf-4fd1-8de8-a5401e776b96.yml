@@ -7,3 +7,6 @@ detection:
     - CommandLine|contains: call
     - CommandLine|contains: uninstall
 id: b53317a0-8acf-4fd1-8de8-a5401e776b96
+logsource:
+  category: process_creation
+  product: windows

@@ -8,9 +8,6 @@ falsepositives:
   machines
 filename: registry_set_dbgmanageddebugger_persistence.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://www.hexacorn.com/blog/2013/09/19/beyond-good-ol-run-key-part-4/

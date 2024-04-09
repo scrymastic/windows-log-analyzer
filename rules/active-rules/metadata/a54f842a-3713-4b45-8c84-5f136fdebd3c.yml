@@ -7,9 +7,6 @@ falsepositives:
 - Synergy Software KVM (https://symless.com/synergy)
 filename: registry_event_portproxy_registry_key.yml
 level: medium
-logsource:
-  category: registry_event
-  product: windows
 modified: 2024/03/25
 references:
 - https://www.fireeye.com/blog/threat-research/2019/01/bypassing-network-restrictions-through-rdp-tunneling.html

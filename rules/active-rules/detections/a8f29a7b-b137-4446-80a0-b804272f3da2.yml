@@ -7,3 +7,8 @@ detection:
     - Accesses|contains: WriteData
     - Accesses|contains: '%%4417'
 id: a8f29a7b-b137-4446-80a0-b804272f3da2
+logsource:
+  definition: The advanced audit policy setting "Object Access > Audit Detailed File
+    Share" must be configured for Success/Failure
+  product: windows
+  service: security

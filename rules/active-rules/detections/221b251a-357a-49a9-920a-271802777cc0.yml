@@ -8,3 +8,6 @@ detection:
     - CommandLine|not contains: call
     - CommandLine|not contains: create
 id: 221b251a-357a-49a9-920a-271802777cc0
+logsource:
+  category: process_creation
+  product: windows

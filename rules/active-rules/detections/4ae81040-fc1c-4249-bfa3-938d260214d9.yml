@@ -7,3 +7,6 @@ detection:
   - CommandLine|contains: /deny
   - CommandLine|contains: '*S-1-1-0:'
 id: 4ae81040-fc1c-4249-bfa3-938d260214d9
+logsource:
+  category: process_creation
+  product: windows

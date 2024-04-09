@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_ssh_rdp_tunneling.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/25
 references:
 - https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wab_execution_from_non_default_location.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/09/27
 references:
 - https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/

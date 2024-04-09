@@ -7,9 +7,6 @@ falsepositives:
   filters accordingly.
 filename: proc_creation_win_powershell_add_windows_capability.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/09
 references:
 - https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell

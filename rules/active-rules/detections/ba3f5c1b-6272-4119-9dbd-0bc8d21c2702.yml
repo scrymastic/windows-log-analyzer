@@ -50,3 +50,6 @@ detection:
     - Image|not endswith: \MpCmdRun.exe
     - CommandLine|not contains: GetLoadLibraryWAddress32
 id: ba3f5c1b-6272-4119-9dbd-0bc8d21c2702
+logsource:
+  category: process_creation
+  product: windows

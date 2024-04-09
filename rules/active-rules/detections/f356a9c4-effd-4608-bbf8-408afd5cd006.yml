@@ -7,3 +7,6 @@ detection:
   - or:
     - QueryName|contains: .stage.123456.
 id: f356a9c4-effd-4608-bbf8-408afd5cd006
+logsource:
+  category: dns_query
+  product: windows

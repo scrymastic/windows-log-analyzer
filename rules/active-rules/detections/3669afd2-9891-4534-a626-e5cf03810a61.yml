@@ -23,3 +23,6 @@ detection:
   - or:
     - Image|not contains: :\Windows\Temp\
 id: 3669afd2-9891-4534-a626-e5cf03810a61
+logsource:
+  category: image_load
+  product: windows

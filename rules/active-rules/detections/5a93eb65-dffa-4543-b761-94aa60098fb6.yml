@@ -14,3 +14,6 @@ detection:
       - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\ShowCompColor
     - Details|==: DWORD (0x00000000)
 id: 5a93eb65-dffa-4543-b761-94aa60098fb6
+logsource:
+  category: registry_set
+  product: windows

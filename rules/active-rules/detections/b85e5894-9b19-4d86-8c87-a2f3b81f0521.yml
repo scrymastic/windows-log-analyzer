@@ -15,3 +15,6 @@ detection:
     - LocalName|not contains: \AppData\
     - RemoteName|not contains: .com
 id: b85e5894-9b19-4d86-8c87-a2f3b81f0521
+logsource:
+  product: windows
+  service: bits-client

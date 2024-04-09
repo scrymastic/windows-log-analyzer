@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_security_susp_computer_name.yml
 level: critical
-logsource:
-  product: windows
-  service: security
 modified: 2023/01/04
 references:
 - https://twitter.com/malmoeb/status/1511760068743766026

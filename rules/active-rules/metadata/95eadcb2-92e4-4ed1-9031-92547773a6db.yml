@@ -7,9 +7,6 @@ falsepositives:
 - Other scripts
 filename: proc_creation_win_powershell_script_engine_parent.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/05
 references:
 - https://www.securitynewspaper.com/2017/03/20/attackers-leverage-excel-powershell-dns-latest-non-malware-attack/

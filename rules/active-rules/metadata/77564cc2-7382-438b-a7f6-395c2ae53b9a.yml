@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: create_remote_thread_win_keepass.yml
 level: high
-logsource:
-  category: create_remote_thread
-  product: windows
 modified: 2023/05/05
 references:
 - https://www.cisa.gov/uscert/ncas/alerts/aa20-259a

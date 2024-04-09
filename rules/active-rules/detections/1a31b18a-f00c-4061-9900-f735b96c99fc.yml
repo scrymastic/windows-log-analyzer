@@ -27,3 +27,6 @@ detection:
     - ServiceName|contains: vncserver
     - ServiceName|contains: Zoho
 id: 1a31b18a-f00c-4061-9900-f735b96c99fc
+logsource:
+  product: windows
+  service: system

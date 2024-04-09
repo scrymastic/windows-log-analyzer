@@ -24,3 +24,8 @@ detection:
     - ServiceName|contains: vncserver
     - ServiceName|contains: Zoho
 id: c8b00925-926c-47e3-beea-298fd563728e
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security

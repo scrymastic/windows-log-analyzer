@@ -11,9 +11,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_dll_sideloading_space_path.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://twitter.com/cyb3rops/status/1552932770464292864

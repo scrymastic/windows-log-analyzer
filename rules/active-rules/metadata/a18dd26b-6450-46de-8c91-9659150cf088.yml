@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate software such as AV and EDR
 filename: proc_access_win_lsass_susp_access_flag.yml
 level: medium
-logsource:
-  category: process_access
-  product: windows
 modified: 2023/11/29
 references:
 - https://docs.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights

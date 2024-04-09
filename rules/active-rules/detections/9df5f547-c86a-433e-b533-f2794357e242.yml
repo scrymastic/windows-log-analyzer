@@ -28,3 +28,6 @@ detection:
     - Image|!==: C:\Windows\System32\svchost.exe
     - TargetObject|not contains: \lnkfile\shellex\ContextMenuHandlers\
 id: 9df5f547-c86a-433e-b533-f2794357e242
+logsource:
+  category: registry_set
+  product: windows

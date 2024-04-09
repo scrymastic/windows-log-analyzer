@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate macro files sent as attachments via emails
 filename: file_event_win_office_macro_files_downloaded.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/04/18
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1566.001/T1566.001.md

@@ -7,3 +7,6 @@ detection:
     - CommandLine|contains: '-m 1000 '
     - CommandLine|contains: '-r '
 id: 39b31e81-5f5f-4898-9c0e-2160cfc0f9bf
+logsource:
+  category: process_creation
+  product: windows

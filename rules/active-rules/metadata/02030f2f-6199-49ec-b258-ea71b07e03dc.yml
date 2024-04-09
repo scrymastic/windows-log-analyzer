@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_malicious_cmdlets.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/01/25
 references:
 - https://adsecurity.org/?p=2921

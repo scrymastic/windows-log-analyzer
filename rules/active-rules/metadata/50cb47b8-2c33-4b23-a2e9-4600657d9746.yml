@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate package hosted on a known and authorized remote location
 filename: win_diagnosis_scripted_load_remote_diagcab.yml
 level: high
-logsource:
-  product: windows
-  service: diagnosis-scripted
 modified: ''
 references:
 - https://twitter.com/nas_bench/status/1539679555908141061

@@ -7,3 +7,6 @@ detection:
     - CommandLine|contains: /ZonePrint
     - CommandLine|contains: /info
 id: b6457d63-d2a2-4e29-859d-4e7affc153d1
+logsource:
+  category: process_creation
+  product: windows

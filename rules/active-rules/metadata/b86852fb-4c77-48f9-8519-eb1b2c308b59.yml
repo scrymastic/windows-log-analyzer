@@ -13,9 +13,6 @@ falsepositives:
 - Legitimate applications making use of this feature for compatibility reasons
 filename: registry_set_persistence_app_cpmpat_layer_registerapprestart.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: ''
 references:
 - https://github.com/nasbench/Misc-Research/blob/d114d6a5e0a437d3818e492ef9864367152543e7/Other/Persistence-Via-RegisterAppRestart-Shim.md

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_uac_bypass_idiagnostic_profile.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://github.com/Wh04m1001/IDiagnosticProfileUAC

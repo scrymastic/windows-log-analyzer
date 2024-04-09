@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate usage of Cloudflared tunnel.
 filename: proc_creation_win_cloudflared_tunnel_run.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/20
 references:
 - https://blog.reconinfosec.com/emergence-of-akira-ransomware-group

@@ -5,3 +5,6 @@ detection:
     - Image|not endswith: \rundll32.exe
     - CommandLine|not contains: ' shell32.dll,Control_RunDLL '
 id: ba42babc-0666-4393-a4f7-ceaf5a69191e
+logsource:
+  category: process_creation
+  product: windows

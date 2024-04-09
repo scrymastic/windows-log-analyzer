@@ -65,3 +65,6 @@ detection:
   - Image|not startswith: C:\Program Files\
   - Image|not startswith: C:\Program Files (x86)\
 id: 4b89abaa-99fe-4232-afdd-8f9aa4d20382
+logsource:
+  category: network_connection
+  product: windows

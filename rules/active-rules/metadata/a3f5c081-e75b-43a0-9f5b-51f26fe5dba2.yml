@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: create_stream_hash_winget_susp_package_source.yml
 level: high
-logsource:
-  category: create_stream_hash
-  product: windows
 modified: ''
 references:
 - https://github.com/nasbench/Misc-Research/tree/b9596e8109dcdb16ec353f316678927e507a5b8d/LOLBINs/Winget

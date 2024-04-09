@@ -5,3 +5,6 @@ detection:
     - EventID|==: 6038
     - EventID|==: 6039
 id: e9d4ab66-a532-4ef7-a502-66a9e4a34f5d
+logsource:
+  product: windows
+  service: system

@@ -9,3 +9,6 @@ detection:
   - Details|not contains: C:\Program Files (x86)\Microsoft\Edge\Application\
   - Details|not contains: C:\Program Files\Microsoft\Edge\Application\
 id: c74d7efc-8826-45d9-b8bb-f04fac9e4eff
+logsource:
+  category: registry_event
+  product: windows

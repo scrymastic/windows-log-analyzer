@@ -2,3 +2,7 @@ detection:
 - and:
   - ScriptBlockText|contains: System.DirectoryServices.AccountManagement
 id: b29a93fb-087c-4b5b-a84d-ee3309e69d08
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

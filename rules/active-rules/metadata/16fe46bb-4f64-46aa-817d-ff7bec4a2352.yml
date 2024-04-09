@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate usage of LiveKD for debugging purposes will also trigger this
 filename: file_event_win_sysinternals_livekd_driver.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - Internal Research

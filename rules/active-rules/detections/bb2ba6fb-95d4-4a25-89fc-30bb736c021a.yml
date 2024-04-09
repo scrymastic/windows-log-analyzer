@@ -12,3 +12,6 @@ detection:
     - ImageLoaded|contains: \System.Management.Automation.Dll
     - ImageLoaded|contains: \System.Management.Automation.ni.Dll
 id: bb2ba6fb-95d4-4a25-89fc-30bb736c021a
+logsource:
+  category: image_load
+  product: windows

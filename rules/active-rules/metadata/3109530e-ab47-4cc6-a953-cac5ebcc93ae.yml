@@ -7,9 +7,6 @@ falsepositives:
 - Other third party applications not listed.
 filename: file_delete_win_zone_identifier_ads_uncommon.yml
 level: medium
-logsource:
-  category: file_delete
-  product: windows
 modified: 2023/10/18
 references:
 - https://securityliterate.com/how-malware-abuses-the-zone-identifier-to-circumvent-detection-and-analysis/

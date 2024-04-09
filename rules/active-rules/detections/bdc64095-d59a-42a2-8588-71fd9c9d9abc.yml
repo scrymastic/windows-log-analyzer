@@ -5,3 +5,6 @@ detection:
     - ImageLoaded|endswith: \dbgcore.dll
   - Signed|==: 'false'
 id: bdc64095-d59a-42a2-8588-71fd9c9d9abc
+logsource:
+  category: image_load
+  product: windows

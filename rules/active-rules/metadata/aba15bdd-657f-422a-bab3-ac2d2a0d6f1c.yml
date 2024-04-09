@@ -9,9 +9,6 @@ falsepositives:
   and move them to other folders which might trigger a false positive.
 filename: file_event_win_dump_file_susp_creation.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/win32/wer/collecting-user-mode-dumps

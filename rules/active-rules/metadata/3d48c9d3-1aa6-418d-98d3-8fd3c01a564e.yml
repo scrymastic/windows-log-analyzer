@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use for tracing purposes
 filename: proc_creation_win_mftrace_child_process.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/08/03
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Mftrace/

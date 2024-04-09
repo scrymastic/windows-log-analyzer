@@ -57,3 +57,7 @@ detection:
     - ScriptBlockText|contains: SevereThreatDefaultAction Allow
     - ScriptBlockText|contains: stdefac Allow
 id: 14c71865-6cd3-44ae-adaa-1db923fae5f2
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

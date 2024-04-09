@@ -14,3 +14,6 @@ detection:
   - or:
     - CommandLine|not contains: --dumpType
 id: eb1c4225-1c23-4241-8dd4-051389fde4ce
+logsource:
+  category: process_creation
+  product: windows

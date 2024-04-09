@@ -7,3 +7,6 @@ detection:
     - DestinationPort|==: 80
     - DestinationPort|==: 443
 id: b1e5da3b-ca8e-4adf-915c-9921f3d85481
+logsource:
+  category: network_connection
+  product: windows

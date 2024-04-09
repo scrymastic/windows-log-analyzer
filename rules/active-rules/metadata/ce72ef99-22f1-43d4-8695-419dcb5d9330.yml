@@ -9,9 +9,6 @@ falsepositives:
   process launching this command and not removing the entry
 filename: proc_creation_win_susp_service_tamper.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/08/07
 references:
 - https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/h/ransomware-actor-abuses-genshin-impact-anti-cheat-driver-to-kill-antivirus/Genshin%20Impact%20Figure%2010.jpg

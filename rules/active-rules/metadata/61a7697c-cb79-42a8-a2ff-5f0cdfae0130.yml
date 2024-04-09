@@ -8,9 +8,6 @@ falsepositives:
 - Unlikely
 filename: registry_set_cobaltstrike_service_installs.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2024/03/25
 references:
 - https://www.sans.org/webcasts/tech-tuesday-workshop-cobalt-strike-detection-log-analysis-119395

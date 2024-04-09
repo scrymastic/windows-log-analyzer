@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_cmd_sticky_key_like_backdoor_execution.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/07
 references:
 - https://learn.microsoft.com/en-us/archive/blogs/jonathantrull/detecting-sticky-key-backdoors

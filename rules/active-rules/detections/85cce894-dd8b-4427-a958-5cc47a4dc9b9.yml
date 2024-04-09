@@ -7,3 +7,6 @@ detection:
     - ImagePath|contains: -service
     - ServiceName|==: Remote Utilities - Host
 id: 85cce894-dd8b-4427-a958-5cc47a4dc9b9
+logsource:
+  product: windows
+  service: system

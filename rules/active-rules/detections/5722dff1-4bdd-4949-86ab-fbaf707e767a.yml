@@ -19,3 +19,6 @@ detection:
       - sha256|==: 8EE9D84DE50803545937A63C686822388A3338497CDDB660D5D69CF68B68F287
       - Imphash|==: B68908ADAEB5D662F87F2528AF318F12
 id: 5722dff1-4bdd-4949-86ab-fbaf707e767a
+logsource:
+  category: process_creation
+  product: windows

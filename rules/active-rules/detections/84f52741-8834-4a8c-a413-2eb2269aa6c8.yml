@@ -1,8 +1,0 @@
-detection:
-- and:
-  - or:
-    - Image|endswith: \msiexec.exe
-    - OriginalFileName|==: \msiexec.exe
-  - CommandLine|None: ' -z '
-  - CommandLine|contains: .dll
-id: 84f52741-8834-4a8c-a413-2eb2269aa6c8

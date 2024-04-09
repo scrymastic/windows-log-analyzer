@@ -13,3 +13,6 @@ detection:
     - ImageLoaded|endswith: \mscoree.dll
     - ImageLoaded|endswith: \mscorlib.dll
 id: 4508a70e-97ef-4300-b62b-ff27992990ea
+logsource:
+  category: image_load
+  product: windows

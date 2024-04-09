@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_system_susp_service_installation_folder_pattern.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2022/03/24
 references:
 - Internal Research

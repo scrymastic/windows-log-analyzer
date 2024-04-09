@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate admin script
 filename: registry_set_disable_function_user.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/11/20
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1112/T1112.md

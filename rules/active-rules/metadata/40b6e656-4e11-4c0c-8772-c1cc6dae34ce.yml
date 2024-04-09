@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of screen saver
 filename: registry_set_scr_file_executed_by_rundll32.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://twitter.com/VakninHai/status/1517027824984547329

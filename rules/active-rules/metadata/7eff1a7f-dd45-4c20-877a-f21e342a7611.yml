@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_remcom_service.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://github.com/kavika13/RemCom/

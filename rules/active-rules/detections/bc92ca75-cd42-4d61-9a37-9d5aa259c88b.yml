@@ -2,3 +2,6 @@ detection:
 - and:
   - EventID|==: 1009
 id: bc92ca75-cd42-4d61-9a37-9d5aa259c88b
+logsource:
+  product: windows
+  service: windefend

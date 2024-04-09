@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_lolbin_printbrm.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/PrintBrm/

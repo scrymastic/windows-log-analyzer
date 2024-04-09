@@ -5,9 +5,6 @@ falsepositives:
 - Rare legitimate files with similar filename structure
 filename: file_event_win_hktl_safetykatz.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2021/11/27
 references:
 - https://github.com/GhostPack/SafetyKatz

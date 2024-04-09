@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: add
   - CommandLine|contains: helper
 id: 56321594-9087-49d9-bf10-524fe8479452
+logsource:
+  category: process_creation
+  product: windows

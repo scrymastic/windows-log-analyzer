@@ -43,3 +43,6 @@ detection:
   - RemoteName|not contains: https://7-
   - RemoteName|not contains: http://7-
 id: 90f138c1-f578-4ac3-8c49-eecfd847c8b7
+logsource:
+  product: windows
+  service: bits-client

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_sysmon_channel_reference_deletion.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2022/10/05
 references:
 - https://twitter.com/Flangvik/status/1283054508084473861

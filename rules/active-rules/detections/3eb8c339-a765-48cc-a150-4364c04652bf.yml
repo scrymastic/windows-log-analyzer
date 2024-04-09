@@ -3,3 +3,6 @@ detection:
   - TargetFilename|contains: \inetpub\logs\LogFiles\
   - TargetFilename|endswith: .log
 id: 3eb8c339-a765-48cc-a150-4364c04652bf
+logsource:
+  category: file_delete
+  product: windows

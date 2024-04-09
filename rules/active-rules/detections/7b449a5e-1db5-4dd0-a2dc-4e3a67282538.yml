@@ -5,3 +5,6 @@ detection:
   - or:
     - TargetUserName|!==: HomeGroupUser$
 id: 7b449a5e-1db5-4dd0-a2dc-4e3a67282538
+logsource:
+  product: windows
+  service: security

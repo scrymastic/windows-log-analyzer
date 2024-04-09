@@ -9,3 +9,6 @@ detection:
     - CommandLine|contains: stopservice
     - CommandLine|contains: startservice
 id: 0b7163dc-7eee-4960-af17-c0cd517f92da
+logsource:
+  category: process_creation
+  product: windows

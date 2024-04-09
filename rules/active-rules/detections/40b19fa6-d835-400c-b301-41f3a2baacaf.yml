@@ -3,3 +3,6 @@ detection:
   - CommandLine|contains: mklink
   - CommandLine|contains: HarddiskVolumeShadowCopy
 id: 40b19fa6-d835-400c-b301-41f3a2baacaf
+logsource:
+  category: process_creation
+  product: windows

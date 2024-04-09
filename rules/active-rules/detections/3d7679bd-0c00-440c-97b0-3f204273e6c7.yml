@@ -5,3 +5,6 @@ detection:
   - Image|not endswith: :\Windows\System32\resmon.exe
   - Image|not endswith: :\Windows\System32\Taskmgr.exe
 id: 3d7679bd-0c00-440c-97b0-3f204273e6c7
+logsource:
+  category: process_creation
+  product: windows

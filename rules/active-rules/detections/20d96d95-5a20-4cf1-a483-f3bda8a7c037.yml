@@ -4,3 +4,6 @@ detection:
     - EventID|==: 4741
     - EventID|==: 4743
 id: 20d96d95-5a20-4cf1-a483-f3bda8a7c037
+logsource:
+  product: windows
+  service: security

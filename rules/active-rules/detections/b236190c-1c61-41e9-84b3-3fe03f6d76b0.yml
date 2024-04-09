@@ -1,7 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \regsvr32.exe
-  - CommandLine|None: ' -i:'
-  - or:
-    - CommandLine|not None: ' -n '
-id: b236190c-1c61-41e9-84b3-3fe03f6d76b0

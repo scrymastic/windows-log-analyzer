@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_renamed_rundll32_dllregisterserver.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/03
 references:
 - https://twitter.com/swisscom_csirt/status/1331634525722521602?s=20

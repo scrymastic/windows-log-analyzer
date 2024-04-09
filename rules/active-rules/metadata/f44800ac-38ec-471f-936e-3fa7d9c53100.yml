@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate administrative use (Should be investigated either way)
 filename: proc_creation_win_pua_cleanwipe.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://github.com/3CORESec/MAL-CL/tree/master/Descriptors/Other/CleanWipe

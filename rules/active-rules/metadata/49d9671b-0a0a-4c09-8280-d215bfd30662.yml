@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmic_terminate_application.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://cyble.com/blog/lockfile-ransomware-using-proxyshell-attack-to-deploy-ransomware/

@@ -11,9 +11,6 @@ falsepositives:
 - Other ports can be used, apply additional filters accordingly
 filename: net_connection_win_wordpad_uncommon_ports.yml
 level: medium
-logsource:
-  category: network_connection
-  product: windows
 modified: 2023/12/15
 references:
 - https://blogs.blackberry.com/en/2023/07/romcom-targets-ukraine-nato-membership-talks-at-nato-summit

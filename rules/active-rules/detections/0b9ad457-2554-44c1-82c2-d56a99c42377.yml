@@ -5,3 +5,6 @@ detection:
     - TargetFilename|contains: \AppData\Roaming\AnyDesk\system.conf
   - TargetFilename|endswith: .temp
 id: 0b9ad457-2554-44c1-82c2-d56a99c42377
+logsource:
+  category: file_event
+  product: windows

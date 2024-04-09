@@ -6,3 +6,6 @@ detection:
   - ObjectType|==: Key
   - ObjectName|==: \REGISTRY\MACHINE\SOFTWARE\Microsoft\ADHealthAgent
 id: 1d2ab8ac-1a01-423b-9c39-001510eae8e8
+logsource:
+  product: windows
+  service: security

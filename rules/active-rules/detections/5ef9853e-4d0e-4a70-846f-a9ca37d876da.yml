@@ -22,3 +22,6 @@ detection:
   - or:
     - SourceImage|not endswith: :\Windows\Sysmon64.exe
 id: 5ef9853e-4d0e-4a70-846f-a9ca37d876da
+logsource:
+  category: process_access
+  product: windows

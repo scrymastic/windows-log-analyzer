@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_uac_bypass_eventvwr_recentviews.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/orange_8361/status/1518970259868626944

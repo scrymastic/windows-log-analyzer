@@ -6,3 +6,6 @@ detection:
     - Details|contains: powershell
     - Details|contains: pwsh
 id: 4a5f5a5e-ac01-474b-9b4e-d61298c9df1d
+logsource:
+  category: registry_set
+  product: windows

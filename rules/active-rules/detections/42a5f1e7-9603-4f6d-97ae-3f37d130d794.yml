@@ -35,3 +35,6 @@ detection:
     - CommandLine|contains: transfer.sh
     - CommandLine|contains: ufile.io
 id: 42a5f1e7-9603-4f6d-97ae-3f37d130d794
+logsource:
+  category: process_creation
+  product: windows

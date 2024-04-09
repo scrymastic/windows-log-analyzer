@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: net_connection_win_eqnedt.yml
 level: high
-logsource:
-  category: network_connection
-  product: windows
 modified: ''
 references:
 - https://twitter.com/forensicitguy/status/1513538712986079238

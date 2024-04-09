@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_nslookup_poweshell_download.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/19
 references:
 - https://twitter.com/Alh4zr3d/status/1566489367232651264

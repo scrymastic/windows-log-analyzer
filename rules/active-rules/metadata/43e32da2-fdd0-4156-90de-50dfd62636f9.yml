@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate script
 filename: proc_creation_win_dsim_remove.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/08/26
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1562.001/T1562.001.md#atomic-test-26---disable-windows-defender-with-dism

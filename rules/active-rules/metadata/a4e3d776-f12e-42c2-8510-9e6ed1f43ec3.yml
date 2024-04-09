@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_dns_susp_child_process.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/05
 references:
 - https://www.elastic.co/guide/en/security/current/unusual-child-process-of-dns-exe.html

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_double_extension_parent.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/28
 references:
 - https://www.virustotal.com/gui/file/7872d8845a332dce517adae9c3389fde5313ff2fed38c2577f3b498da786db68/behavior

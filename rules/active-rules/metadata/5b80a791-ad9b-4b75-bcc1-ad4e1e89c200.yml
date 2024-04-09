@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_bitsadmin_download_susp_extensions.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/30
 references:
 - https://blog.netspi.com/15-ways-to-download-a-file/#bitsadmin

@@ -5,16 +5,6 @@ falsepositives:
 - Valid on domain controllers; exclude known DCs
 filename: win_security_possible_dc_shadow.yml
 level: medium
-logsource:
-  definition: The "Audit Directory Service Changes" logging policy must be configured
-    in order to receive events. Audit events are generated only for objects with configured
-    system access control lists (SACLs). Audit events are generated only for objects
-    with configured system access control lists (SACLs) and only when accessed in
-    a manner that matches their SACL settings. This policy covers the following events
-    ids - 5136, 5137, 5138, 5139, 5141. Note that the default policy does not cover
-    User objects. For that a custom AuditRule need to be setup (See https://github.com/OTRF/Set-AuditRule)
-  product: windows
-  service: security
 modified: 2022/10/17
 references:
 - https://twitter.com/gentilkiwi/status/1003236624925413376

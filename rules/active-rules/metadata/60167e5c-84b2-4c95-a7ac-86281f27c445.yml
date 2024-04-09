@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use remote PowerShell sessions
 filename: posh_pc_remote_powershell_session.yml
 level: low
-logsource:
-  category: ps_classic_start
-  product: windows
 modified: 2024/01/03
 references:
 - https://threathunterplaybook.com/hunts/windows/190511-RemotePwshExecution/notebook.html

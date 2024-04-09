@@ -4,3 +4,6 @@ detection:
     - OriginalFileName|==: TruffleSnout.exe
     - Image|endswith: \TruffleSnout.exe
 id: 69ca006d-b9a9-47f5-80ff-ecd4d25d481a
+logsource:
+  category: process_creation
+  product: windows

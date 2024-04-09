@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_regedit_trustedinstaller.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://twitter.com/1kwpeter/status/1397816101455765504

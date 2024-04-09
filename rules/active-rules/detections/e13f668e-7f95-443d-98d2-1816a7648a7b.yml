@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: /v
   - CommandLine|contains: svcversion
 id: e13f668e-7f95-443d-98d2-1816a7648a7b
+logsource:
+  category: process_creation
+  product: windows

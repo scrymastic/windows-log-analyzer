@@ -7,9 +7,6 @@ falsepositives:
 - The installation of new screen savers by third party software
 filename: file_event_win_new_scr_file.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/08/23
 references:
 - https://lolbas-project.github.io/lolbas/Libraries/Desk/

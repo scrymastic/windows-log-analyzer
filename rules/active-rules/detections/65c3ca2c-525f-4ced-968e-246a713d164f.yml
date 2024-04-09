@@ -4,3 +4,6 @@ detection:
   - or:
     - Image|not endswith: \Microsoft.NodejsTools.PressAnyKey.exe
 id: 65c3ca2c-525f-4ced-968e-246a713d164f
+logsource:
+  category: process_creation
+  product: windows

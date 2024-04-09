@@ -11,3 +11,6 @@ detection:
   - or:
     - Image|not endswith: \tomcat\bin\tomcat8.exe
 id: e54979bd-c5f9-4d6c-967b-a04b19ac4c74
+logsource:
+  category: network_connection
+  product: windows

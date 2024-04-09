@@ -8,3 +8,6 @@ detection:
     - TargetFilename|contains: \TeamViewer
     - TargetFilename|contains: _Logfile.log
 id: 162ab1e4-6874-4564-853c-53ec3ab8be01
+logsource:
+  category: file_event
+  product: windows

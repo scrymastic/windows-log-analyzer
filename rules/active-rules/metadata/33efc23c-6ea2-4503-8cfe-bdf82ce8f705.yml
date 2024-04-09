@@ -7,9 +7,6 @@ falsepositives:
   to your environment
 filename: registry_add_persistence_amsi_providers.yml
 level: high
-logsource:
-  category: registry_add
-  product: windows
 modified: 2023/02/07
 references:
 - https://persistence-info.github.io/Data/amsi.html

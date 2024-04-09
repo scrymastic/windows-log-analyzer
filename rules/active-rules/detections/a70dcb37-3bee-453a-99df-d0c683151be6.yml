@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: ' firewall '
   - CommandLine|contains: ' set '
 id: a70dcb37-3bee-453a-99df-d0c683151be6
+logsource:
+  category: process_creation
+  product: windows

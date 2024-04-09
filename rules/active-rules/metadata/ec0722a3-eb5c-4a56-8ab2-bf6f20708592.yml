@@ -5,9 +5,6 @@ description: Detects the execution of a renamed "gpg.exe". Often used by ransomw
 falsepositives: []
 filename: proc_creation_win_renamed_gpg4win.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://securelist.com/locked-out/68960/

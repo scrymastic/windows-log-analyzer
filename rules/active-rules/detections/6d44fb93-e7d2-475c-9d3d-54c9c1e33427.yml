@@ -6,3 +6,6 @@ detection:
   - RemoteName|not contains: .sfx.ms/
   - RemoteName|not contains: download.mozilla.org/
 id: 6d44fb93-e7d2-475c-9d3d-54c9c1e33427
+logsource:
+  product: windows
+  service: bits-client

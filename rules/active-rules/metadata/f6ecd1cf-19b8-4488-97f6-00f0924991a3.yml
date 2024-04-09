@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate administrator activity
 filename: proc_creation_win_pua_nmap_zenmap.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/11
 references:
 - https://nmap.org/

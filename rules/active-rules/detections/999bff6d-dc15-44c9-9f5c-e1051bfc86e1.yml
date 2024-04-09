@@ -7,3 +7,6 @@ detection:
     - Data|contains: -q=txt http
     - Data|contains: -querytype=txt http
 id: 999bff6d-dc15-44c9-9f5c-e1051bfc86e1
+logsource:
+  category: ps_classic_start
+  product: windows

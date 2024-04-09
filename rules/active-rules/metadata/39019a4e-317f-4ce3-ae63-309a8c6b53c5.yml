@@ -7,9 +7,6 @@ falsepositives:
 - Software installation
 filename: proc_creation_win_schtasks_creation_temp_folder.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://discuss.elastic.co/t/detection-and-response-for-hafnium-activity/266289/3

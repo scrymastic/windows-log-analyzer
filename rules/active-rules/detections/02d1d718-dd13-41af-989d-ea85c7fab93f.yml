@@ -42,3 +42,6 @@ detection:
     - SourceImage|endswith: \wmic.exe
     - SourceImage|endswith: \wscript.exe
 id: 02d1d718-dd13-41af-989d-ea85c7fab93f
+logsource:
+  category: create_remote_thread
+  product: windows

@@ -6,3 +6,6 @@ detection:
   - Description|contains: contains a corrupted file record
   - Description|contains: The name of the file is "\"
 id: f14719ce-d3ab-4e25-9ce6-2899092260b0
+logsource:
+  product: windows
+  service: system

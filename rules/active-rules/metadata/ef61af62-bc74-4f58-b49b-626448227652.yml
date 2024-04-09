@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_sysinternals_adexplorer_susp_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.documentcloud.org/documents/5743766-Global-Threat-Report-2019.html

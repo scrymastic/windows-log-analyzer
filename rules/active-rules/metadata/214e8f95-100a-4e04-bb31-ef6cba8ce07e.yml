@@ -7,9 +7,6 @@ falsepositives:
 - Domain Controllers acting as printer servers too? :)
 filename: win_security_dce_rpc_smb_spoolss_named_pipe.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2022/08/11
 references:
 - https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1

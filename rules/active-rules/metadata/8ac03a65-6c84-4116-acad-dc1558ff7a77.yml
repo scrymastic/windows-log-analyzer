@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administrative action
 filename: sysmon_config_modification.yml
 level: medium
-logsource:
-  product: windows
-  service: sysmon
 modified: ''
 references:
 - https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon

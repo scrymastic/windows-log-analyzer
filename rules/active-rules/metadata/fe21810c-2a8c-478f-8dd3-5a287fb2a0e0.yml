@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administrative scripts
 filename: sysmon_wmi_susp_scripting.yml
 level: high
-logsource:
-  category: wmi_event
-  product: windows
 modified: 2023/09/09
 references:
 - https://in.security/an-intro-into-abusing-and-identifying-wmi-event-subscriptions-for-persistence/

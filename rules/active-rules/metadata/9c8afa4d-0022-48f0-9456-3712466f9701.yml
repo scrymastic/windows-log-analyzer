@@ -8,11 +8,6 @@ falsepositives:
 - Legitimate OpenVPN TAP installation
 filename: win_security_tap_driver_installation.yml
 level: low
-logsource:
-  definition: 'Requirements: The System Security Extension audit subcategory need
-    to be enabled to log the EID 4697'
-  product: windows
-  service: security
 modified: 2022/11/29
 references:
 - https://community.openvpn.net/openvpn/wiki/ManagingWindowsTAPDrivers

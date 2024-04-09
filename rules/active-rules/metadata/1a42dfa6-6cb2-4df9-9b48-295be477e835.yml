@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: driver_load_win_vuln_winring0_driver.yml
 level: high
-logsource:
-  category: driver_load
-  product: windows
 modified: 2022/11/19
 references:
 - https://github.com/xmrig/xmrig/tree/master/bin/WinRing0

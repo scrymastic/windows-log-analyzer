@@ -3,3 +3,6 @@ detection:
   - TargetFilename|contains: \AppData\Local\Temp\SAM-
   - TargetFilename|contains: .dmp
 id: 847def9e-924d-4e90-b7c4-5f581395a2b4
+logsource:
+  category: file_event
+  product: windows

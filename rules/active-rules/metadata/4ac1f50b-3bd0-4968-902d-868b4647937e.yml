@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_security_dpapi_domain_backupkey_extraction.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2022/02/24
 references:
 - https://threathunterplaybook.com/hunts/windows/190620-DomainDPAPIBackupKeyExtraction/notebook.html

@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: Local\
     - CommandLine|contains: Roaming\
 id: ac175779-025a-4f12-98b0-acdaeb77ea85
+logsource:
+  category: process_creation
+  product: windows

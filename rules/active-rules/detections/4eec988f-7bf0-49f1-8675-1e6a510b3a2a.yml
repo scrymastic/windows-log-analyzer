@@ -9,3 +9,6 @@ detection:
     - Image|endswith: \reg.exe
     - Image|endswith: \regedit.exe
 id: 4eec988f-7bf0-49f1-8675-1e6a510b3a2a
+logsource:
+  category: registry_set
+  product: windows

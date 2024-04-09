@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of debugging tools
 filename: proc_creation_win_lolbin_cdb.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/04
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Cdb/

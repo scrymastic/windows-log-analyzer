@@ -23,3 +23,6 @@ detection:
   - ParentImage|not endswith: :\Program Files (x86)\Zemana\AntiMalware\AntiMalware.exe
   - ParentImage|not endswith: :\Program Files\Dell\SupportAssist\pcdrcui.exe
 id: dd2a821e-3b07-4d3b-a9ac-929fe4c6ca0c
+logsource:
+  category: process_creation
+  product: windows

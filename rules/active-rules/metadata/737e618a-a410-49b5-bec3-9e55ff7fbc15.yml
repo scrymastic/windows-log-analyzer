@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_calc_uncommon_exec.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/09
 references:
 - https://twitter.com/ItsReallyNick/status/1094080242686312448

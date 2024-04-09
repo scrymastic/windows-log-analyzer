@@ -8,3 +8,6 @@ detection:
   - CommandLine|contains: ' -c '
   - CommandLine|contains: passphrase
 id: 550bbb84-ce5d-4e61-84ad-e590f0024dcd
+logsource:
+  category: process_creation
+  product: windows

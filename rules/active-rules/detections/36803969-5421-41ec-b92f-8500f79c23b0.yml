@@ -11,3 +11,6 @@ detection:
       - TargetObject|contains: \ReportingMode
       - TargetObject|contains: \MonitorProcess
 id: 36803969-5421-41ec-b92f-8500f79c23b0
+logsource:
+  category: registry_set
+  product: windows

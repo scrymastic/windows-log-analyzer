@@ -11,9 +11,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_errorhandler_persistence.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/12/19
 references:
 - https://www.hexacorn.com/blog/2022/01/16/beyond-good-ol-run-key-part-135/

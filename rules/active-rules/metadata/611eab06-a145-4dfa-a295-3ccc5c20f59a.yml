@@ -6,9 +6,6 @@ falsepositives:
 - Local Domain Admin account used for Azure AD Connect
 filename: win_security_dcsync.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2022/04/26
 references:
 - https://twitter.com/gentilkiwi/status/1003236624925413376

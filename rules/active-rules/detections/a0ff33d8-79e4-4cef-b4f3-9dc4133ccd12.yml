@@ -49,3 +49,6 @@ detection:
   - Image|not endswith: :\Windows\System32\poqexec.exe
   - Image|not endswith: :\Windows\System32\regsvr32.exe
 id: a0ff33d8-79e4-4cef-b4f3-9dc4133ccd12
+logsource:
+  category: registry_set
+  product: windows

@@ -7,3 +7,6 @@ detection:
   - or:
     - CommandLine|not contains: print.exe
 id: bafac3d6-7de9-4dd9-8874-4a1194b493ed
+logsource:
+  category: process_creation
+  product: windows

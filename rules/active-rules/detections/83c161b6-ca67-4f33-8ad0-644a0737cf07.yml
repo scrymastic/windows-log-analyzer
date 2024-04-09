@@ -15,3 +15,6 @@ detection:
       - AppID|contains: wireshark
       - AppID|contains: openvpn
 id: 83c161b6-ca67-4f33-8ad0-644a0737cf07
+logsource:
+  product: windows
+  service: shell-core

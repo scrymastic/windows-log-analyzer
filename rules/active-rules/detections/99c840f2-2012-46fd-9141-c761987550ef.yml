@@ -20,3 +20,6 @@ detection:
   - or:
     - CommandLine|not contains: ://7-
 id: 99c840f2-2012-46fd-9141-c761987550ef
+logsource:
+  category: process_creation
+  product: windows

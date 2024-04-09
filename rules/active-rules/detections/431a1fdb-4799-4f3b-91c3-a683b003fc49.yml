@@ -8,3 +8,6 @@ detection:
   - CommandLine|contains: type
   - CommandLine|contains: kernel
 id: 431a1fdb-4799-4f3b-91c3-a683b003fc49
+logsource:
+  category: process_creation
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_system_application_sysmon_crash.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2024/01/17
 references:
 - https://github.com/nasbench/EVTX-ETW-Resources/blob/f1b010ce0ee1b71e3024180de1a3e67f99701fe4/ETWProvidersManifests/Windows10/1803/W10_1803_Pro_19700101_17134.1/WEPExplorer/Application%20Popup.xml#L36

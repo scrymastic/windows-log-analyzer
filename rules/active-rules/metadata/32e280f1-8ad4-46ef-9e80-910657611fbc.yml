@@ -15,9 +15,6 @@ falsepositives:
   usable) in countries where these alphabets are in use.
 filename: proc_creation_win_susp_homoglyph_cyrillic_lookalikes.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://redcanary.com/threat-detection-report/threats/socgholish/#threat-socgholish

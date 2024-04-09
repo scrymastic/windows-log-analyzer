@@ -11,3 +11,6 @@ detection:
     - ImageName|contains: \AppData\Local\Temp\
     - ImageName|contains: C:\Windows\TEMP\
 id: 8289bf8c-4aca-4f5a-9db3-dc3d7afe5c10
+logsource:
+  product: windows
+  service: security-mitigations

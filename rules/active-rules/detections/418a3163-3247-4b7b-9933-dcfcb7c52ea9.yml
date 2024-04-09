@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: -r
     - CommandLine|contains: -u
 id: 418a3163-3247-4b7b-9933-dcfcb7c52ea9
+logsource:
+  category: process_creation
+  product: windows

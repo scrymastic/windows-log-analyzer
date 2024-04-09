@@ -63,3 +63,6 @@ detection:
       - CommandLine|contains: 'reg save '
       - CommandLine|contains: whoami /priv
 id: 4ebc877f-4612-45cb-b3a5-8e3834db36c9
+logsource:
+  category: process_creation
+  product: windows

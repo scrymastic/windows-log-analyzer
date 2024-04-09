@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: ' /n 1 '
     - CommandLine|contains: ' -n 1 '
 id: 729ce0ea-5d8f-4769-9762-e35de441586d
+logsource:
+  category: process_creation
+  product: windows

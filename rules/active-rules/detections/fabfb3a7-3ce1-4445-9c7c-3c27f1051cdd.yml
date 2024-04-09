@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: WerFault.exe
   - CommandLine|contains: ' -pr '
 id: fabfb3a7-3ce1-4445-9c7c-3c27f1051cdd
+logsource:
+  category: process_creation
+  product: windows

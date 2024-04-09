@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: file_event_win_tsclient_filewrite_startup.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2021/11/27
 references:
 - Internal Research

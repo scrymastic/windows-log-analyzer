@@ -3,3 +3,6 @@ detection:
   - TargetFilename|contains: \\\\127.0.0
   - TargetFilename|contains: \ADMIN$\
 id: 4aafb0fa-bff5-4b9d-b99e-8093e659c65f
+logsource:
+  category: file_event
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_certutil_download_file_sharing_domains.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/02/09
 references:
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certutil

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_set_persistence_shim_database_susp_application.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/12/06
 references:
 - https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/pillowmint-fin7s-monkey-thief/

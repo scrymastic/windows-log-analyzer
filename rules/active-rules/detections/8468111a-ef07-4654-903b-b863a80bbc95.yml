@@ -16,3 +16,6 @@ detection:
     - Image|endswith: \whale.exe
   - TargetFilename|contains: .vhd
 id: 8468111a-ef07-4654-903b-b863a80bbc95
+logsource:
+  category: file_event
+  product: windows

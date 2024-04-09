@@ -5,3 +5,6 @@ detection:
     - CommandLine|contains: 'VsWherePath '
     - CommandLine|contains: 'VsInstallationPath '
 id: 45d3a03d-f441-458c-8883-df101a3bb146
+logsource:
+  category: process_creation
+  product: windows

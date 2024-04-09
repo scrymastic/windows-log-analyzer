@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_bitsadmin_download_direct_ip.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/15
 references:
 - https://blog.netspi.com/15-ways-to-download-a-file/#bitsadmin

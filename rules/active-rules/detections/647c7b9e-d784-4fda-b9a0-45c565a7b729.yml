@@ -18,3 +18,6 @@ detection:
     - CommandLine|contains: execute-assembly
     - CommandLine|contains: getsystem
 id: 647c7b9e-d784-4fda-b9a0-45c565a7b729
+logsource:
+  category: process_creation
+  product: windows

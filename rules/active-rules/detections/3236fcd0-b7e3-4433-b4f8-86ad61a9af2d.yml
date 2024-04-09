@@ -5,3 +5,6 @@ detection:
     - Data|contains: .DownloadFile(
     - Data|contains: .DownloadString(
 id: 3236fcd0-b7e3-4433-b4f8-86ad61a9af2d
+logsource:
+  category: ps_classic_start
+  product: windows

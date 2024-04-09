@@ -5,9 +5,6 @@ falsepositives:
 - Another tool that uses the command line switches of XORdump
 filename: proc_creation_win_hktl_xordump.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/08
 references:
 - https://github.com/audibleblink/xordump

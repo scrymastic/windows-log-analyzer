@@ -8,9 +8,6 @@ falsepositives:
 - System provisioning (system reset before the golden image creation)
 filename: win_security_audit_log_cleared.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2022/02/24
 references:
 - https://twitter.com/deviouspolack/status/832535435960209408

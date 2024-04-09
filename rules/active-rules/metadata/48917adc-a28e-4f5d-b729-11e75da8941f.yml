@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate use
 filename: proc_creation_win_reg_defender_exclusion.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://thedfirreport.com/2022/02/07/qbot-likes-to-move-it-move-it/

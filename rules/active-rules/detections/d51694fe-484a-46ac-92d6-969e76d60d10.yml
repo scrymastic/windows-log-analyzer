@@ -19,3 +19,7 @@ detection:
   - Image|not startswith: :\Windows\system32\
   - Image|not startswith: :\Windows\SysWOW64\
 id: d51694fe-484a-46ac-92d6-969e76d60d10
+logsource:
+  category: file_access
+  definition: 'Requirements: Microsoft-Windows-Kernel-File ETW provider'
+  product: windows

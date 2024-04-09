@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_gather_network_info_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://posts.slayerlabs.com/living-off-the-land/#gathernetworkinfovbs

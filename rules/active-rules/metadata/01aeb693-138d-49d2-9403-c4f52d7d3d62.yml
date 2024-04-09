@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administration activity
 filename: proc_creation_win_netsh_fw_allow_rdp.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/11
 references:
 - https://labs.sentinelone.com/sarwent-malware-updates-command-detonation/

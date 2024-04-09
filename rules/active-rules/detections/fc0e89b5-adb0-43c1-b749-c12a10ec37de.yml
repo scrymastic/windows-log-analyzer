@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: ' delete '
   - CommandLine|contains: \SYSTEM\CurrentControlSet\Control\SafeBoot
 id: fc0e89b5-adb0-43c1-b749-c12a10ec37de
+logsource:
+  category: process_creation
+  product: windows

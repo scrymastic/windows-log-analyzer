@@ -11,9 +11,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_schtasks_persistence_windows_telemetry.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/10
 references:
 - https://www.trustedsec.com/blog/abusing-windows-telemetry-for-persistence/

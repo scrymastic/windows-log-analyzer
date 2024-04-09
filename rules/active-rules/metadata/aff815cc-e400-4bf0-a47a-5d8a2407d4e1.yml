@@ -7,10 +7,6 @@ falsepositives:
 - Unknown
 filename: posh_pm_susp_get_nettcpconnection.yml
 level: low
-logsource:
-  category: ps_module
-  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
-  product: windows
 modified: 2022/12/02
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1049/T1049.md#atomic-test-2---system-network-connections-discovery-with-powershell

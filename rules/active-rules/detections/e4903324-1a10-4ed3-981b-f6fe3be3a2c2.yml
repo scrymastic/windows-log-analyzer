@@ -5,3 +5,6 @@ detection:
   - ImageLoaded|not startswith: C:\Windows\SysWOW64\
   - ImageLoaded|not startswith: C\Windows\WinSxS\
 id: e4903324-1a10-4ed3-981b-f6fe3be3a2c2
+logsource:
+  category: image_load
+  product: windows

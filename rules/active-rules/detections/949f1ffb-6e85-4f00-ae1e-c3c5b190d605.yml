@@ -5,3 +5,6 @@ detection:
     - CommandLine|contains: explorer.exe
     - CommandLine|contains: ' /root,'
 id: 949f1ffb-6e85-4f00-ae1e-c3c5b190d605
+logsource:
+  category: process_creation
+  product: windows

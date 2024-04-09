@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: dsquery.exe
   - CommandLine|contains: trustedDomain
 id: 3bad990e-4848-4a78-9530-b427d854aac0
+logsource:
+  category: process_creation
+  product: windows

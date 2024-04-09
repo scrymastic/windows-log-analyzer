@@ -180,3 +180,6 @@ detection:
       - Hashes|contains: IMPHASH=8A790F401B29FA87BC1E56F7272B3AA6
       - Hashes|contains: IMPHASH=B50199E952C875241B9CE06C971CE3C1
 id: 24e3e58a-646b-4b50-adef-02ef935b9fc8
+logsource:
+  category: process_creation
+  product: windows

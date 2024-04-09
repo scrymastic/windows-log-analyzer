@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_appxdeployment_server_susp_package_locations.yml
 level: high
-logsource:
-  product: windows
-  service: appxdeployment-server
 modified: ''
 references:
 - Internal Research

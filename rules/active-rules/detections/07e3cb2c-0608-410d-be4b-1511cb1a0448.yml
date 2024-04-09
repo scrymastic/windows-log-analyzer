@@ -7,3 +7,6 @@ detection:
     - CommandLine|contains: '-AttackSurfaceReductionRules_Actions '
     - CommandLine|contains: '-CheckForSignaturesBeforeRunningScan '
 id: 07e3cb2c-0608-410d-be4b-1511cb1a0448
+logsource:
+  category: process_creation
+  product: windows

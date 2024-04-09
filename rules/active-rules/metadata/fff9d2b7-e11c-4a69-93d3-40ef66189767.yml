@@ -15,9 +15,6 @@ falsepositives:
 - When the command contains the keywords but not in the correct order
 filename: proc_creation_win_susp_copy_system_dir.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/08/29
 references:
 - https://www.hybrid-analysis.com/sample/8da5b75b6380a41eee3a399c43dfe0d99eeefaa1fd21027a07b1ecaa4cd96fdd?environmentId=120

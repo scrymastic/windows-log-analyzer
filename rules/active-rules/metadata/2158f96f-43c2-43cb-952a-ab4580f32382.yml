@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_psr_capture_screenshots.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/01/04
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Psr/

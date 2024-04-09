@@ -5,11 +5,6 @@ falsepositives:
 - Legitimate DNS queries and usage of Mega
 filename: win_dns_client_mega_nz.yml
 level: medium
-logsource:
-  definition: 'Requirements: Microsoft-Windows-DNS Client Events/Operational Event
-    Log must be enabled/collected in order to receive the events.'
-  product: windows
-  service: dns-client
 modified: ''
 references:
 - https://research.nccgroup.com/2021/05/27/detecting-rclone-an-effective-tool-for-exfiltration/

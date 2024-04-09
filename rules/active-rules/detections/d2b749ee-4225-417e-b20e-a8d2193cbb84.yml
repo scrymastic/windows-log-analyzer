@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: ' /RunAs '
     - CommandLine|contains: ' /CommandLine '
 id: d2b749ee-4225-417e-b20e-a8d2193cbb84
+logsource:
+  category: process_creation
+  product: windows

@@ -10,3 +10,6 @@ detection:
     - CommandLine|contains: '-m '
     - CommandLine|contains: --manifest
 id: 313d6012-51a0-4d93-8dfc-de8553239e25
+logsource:
+  category: process_creation
+  product: windows

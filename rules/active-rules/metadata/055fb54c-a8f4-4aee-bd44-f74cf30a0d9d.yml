@@ -9,9 +9,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_sharpmove.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://github.com/0xthirteen/SharpMove/

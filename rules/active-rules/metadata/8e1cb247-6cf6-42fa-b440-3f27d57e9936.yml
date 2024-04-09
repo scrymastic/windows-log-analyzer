@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate add-ins
 filename: file_event_win_office_addin_persistence.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/02/08
 references:
 - Internal Research

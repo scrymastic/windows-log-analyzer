@@ -8,3 +8,6 @@ detection:
   - CommandLine|contains: ' -d '
   - CommandLine|contains: passphrase
 id: 037dcd71-33a8-4392-bb01-293c94663e5a
+logsource:
+  category: process_creation
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - In rare administrative cases, this function might be used to check network connectivity
 filename: proc_creation_win_powershell_reverse_shell_connection.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/05
 references:
 - https://www.volexity.com/blog/2021/03/02/active-exploitation-of-microsoft-exchange-zero-day-vulnerabilities/

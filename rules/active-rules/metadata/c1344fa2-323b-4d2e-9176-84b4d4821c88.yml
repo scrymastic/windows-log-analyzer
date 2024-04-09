@@ -6,10 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_win_defender_exclusions_added.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2022/11/26
 references:
 - https://www.elastic.co/guide/en/security/current/windows-defender-exclusions-added-via-powershell.html

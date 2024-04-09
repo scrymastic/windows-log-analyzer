@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use of ScreenConnect
 filename: win_app_remote_access_tools_screenconnect_command_exec.yml
 level: low
-logsource:
-  product: windows
-  service: application
 modified: ''
 references:
 - https://www.huntandhackett.com/blog/revil-the-usage-of-legitimate-remote-admin-tooling

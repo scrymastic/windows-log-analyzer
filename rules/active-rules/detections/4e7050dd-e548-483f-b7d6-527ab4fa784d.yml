@@ -18,3 +18,9 @@ detection:
     - ParentImage|contains: \Public\
     - ParentImage|contains: \PerfLogs\
 id: 4e7050dd-e548-483f-b7d6-527ab4fa784d
+logsource:
+  category: file_event
+  definition: 'Requirements: The "ParentImage" field is not available by default on
+    EID 11 of Sysmon logs. To be able to use this rule to the full extent you need
+    to enrich the log with additional ParentImage data'
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: image_load_side_load_cpl_from_non_system_location.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://www.hexacorn.com/blog/2024/01/06/1-little-known-secret-of-fondue-exe/

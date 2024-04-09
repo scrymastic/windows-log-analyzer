@@ -6,9 +6,6 @@ falsepositives:
 - Administrative activity
 filename: proc_creation_win_susp_add_user_remote_desktop_group.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/09/09
 references:
 - https://www.microsoft.com/security/blog/2021/11/16/evolving-trends-in-iranian-threat-actor-activity-mstic-presentation-at-cyberwarcon-2021/

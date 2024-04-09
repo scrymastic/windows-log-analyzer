@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_msiexec_masquerading.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://twitter.com/200_okay_/status/1194765831911215104

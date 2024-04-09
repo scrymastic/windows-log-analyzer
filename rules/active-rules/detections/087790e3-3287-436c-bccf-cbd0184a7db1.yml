@@ -19,3 +19,6 @@ detection:
   - or:
     - CommandLine|not contains: \Tasktop\keycloak\bin\/../../jre\bin\java
 id: 087790e3-3287-436c-bccf-cbd0184a7db1
+logsource:
+  category: process_creation
+  product: windows

@@ -8,9 +8,6 @@ falsepositives:
   to hunt for anomalies
 filename: proc_creation_win_powershell_non_interactive_execution.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/09/07
 references:
 - https://web.archive.org/web/20200925032237/https://threathunterplaybook.com/notebooks/windows/02_execution/WIN-190410151110.html

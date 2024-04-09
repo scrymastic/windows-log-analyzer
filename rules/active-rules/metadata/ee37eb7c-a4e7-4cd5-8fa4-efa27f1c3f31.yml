@@ -11,9 +11,6 @@ falsepositives:
 - Ngrok http 3978 (https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-channel-ngrok?view=azure-bot-service-4.0)
 filename: proc_creation_win_pua_ngrok.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://ngrok.com/docs

@@ -6,3 +6,6 @@ detection:
     - EventID|==: 1042
   - Data|contains: ://
 id: 5594e67a-7f92-4a04-b65d-1a42fd824a60
+logsource:
+  product: windows
+  service: application

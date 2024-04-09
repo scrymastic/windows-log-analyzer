@@ -22,3 +22,6 @@ detection:
     - TargetImage|not endswith: :\Windows\system32\lsass.exe
     - CallTrace|not startswith: ?:\Windows\SYSTEM32\ntdll.dll
 id: 250ae82f-736e-4844-a68b-0b5e8cc887da
+logsource:
+  category: process_access
+  product: windows

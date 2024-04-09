@@ -10,9 +10,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_rundll32_mshtml_runhtmlapplication.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/02/23
 references:
 - https://twitter.com/n1nj4sec/status/1421190238081277959

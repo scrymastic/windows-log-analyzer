@@ -7,9 +7,6 @@ falsepositives:
   of the data. Which will trigger this event.
 filename: win_security_dpapi_domain_masterkey_backup_attempt.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2023/03/15
 references:
 - https://threathunterplaybook.com/hunts/windows/190620-DomainDPAPIBackupKeyExtraction/notebook.html

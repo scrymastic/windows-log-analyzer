@@ -11,9 +11,6 @@ falsepositives:
 - Unlikely
 filename: registry_set_hide_scheduled_task_via_index_tamper.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://blog.qualys.com/vulnerabilities-threat-research/2022/06/20/defending-against-scheduled-task-attacks-in-windows-environments

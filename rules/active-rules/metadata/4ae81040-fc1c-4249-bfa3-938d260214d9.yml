@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use
 filename: proc_creation_win_icacls_deny.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://app.any.run/tasks/1df999e6-1cb8-45e3-8b61-499d1b7d5a9b/

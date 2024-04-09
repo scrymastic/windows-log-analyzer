@@ -79,3 +79,6 @@ detection:
     - ProcessName|endswith: \procmon.exe
   - AccessList|contains: '%%4484'
 id: 4a1b6da0-d94f-4fc3-98fc-2d9cb9e5ee76
+logsource:
+  product: windows
+  service: security

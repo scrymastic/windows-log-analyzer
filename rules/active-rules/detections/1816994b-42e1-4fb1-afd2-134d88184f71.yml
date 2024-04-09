@@ -43,3 +43,6 @@ detection:
     - CommandLine|contains: dpbjMyX0xvZ2dlZE9uVXNlc
     - CommandLine|contains: XaW4zMl9Mb2dnZWRPblVzZX
 id: 1816994b-42e1-4fb1-afd2-134d88184f71
+logsource:
+  category: process_creation
+  product: windows

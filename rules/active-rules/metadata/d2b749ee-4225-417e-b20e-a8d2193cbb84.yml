@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_pua_advancedrun.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://twitter.com/splinter_code/status/1483815103279603714

@@ -17,3 +17,6 @@ detection:
     - CommandLine|contains: .vbs
     - CommandLine|contains: .wsf
 id: cea72823-df4d-4567-950c-0b579eaf0846
+logsource:
+  category: process_creation
+  product: windows

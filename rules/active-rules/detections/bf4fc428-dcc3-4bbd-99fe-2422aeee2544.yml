@@ -11,3 +11,6 @@ detection:
       - Details|==: 0
       - Details|==: DWORD (0x00000000)
 id: bf4fc428-dcc3-4bbd-99fe-2422aeee2544
+logsource:
+  category: registry_set
+  product: windows

@@ -11,3 +11,6 @@ detection:
   - or:
     - Image|!==: C:\Windows\system32\wevtutil.exe
 id: f37b4bce-49d0-4087-9f5b-58bffda77316
+logsource:
+  category: registry_set
+  product: windows

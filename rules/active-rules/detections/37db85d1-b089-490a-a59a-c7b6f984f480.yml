@@ -9,3 +9,6 @@ detection:
       - OriginalFileName|==: FINDSTR.EXE
   - CommandLine|contains: ' 385201'
 id: 37db85d1-b089-490a-a59a-c7b6f984f480
+logsource:
+  category: process_creation
+  product: windows

@@ -7,3 +7,6 @@ detection:
   - or:
     - CommandLine|not contains: .dll
 id: ba4cfc11-d0fa-4d94-bf20-7c332c412e76
+logsource:
+  category: process_creation
+  product: windows

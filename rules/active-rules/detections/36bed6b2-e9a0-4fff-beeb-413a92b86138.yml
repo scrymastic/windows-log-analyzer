@@ -6,3 +6,7 @@ detection:
     - ScriptBlockText|contains: '-LDAPFilter '
     - ScriptBlockText|contains: '-Properties '
 id: 36bed6b2-e9a0-4fff-beeb-413a92b86138
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

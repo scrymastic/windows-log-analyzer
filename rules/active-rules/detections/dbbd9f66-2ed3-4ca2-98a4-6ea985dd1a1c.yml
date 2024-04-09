@@ -25,3 +25,6 @@ detection:
     - TargetFilename|contains: \Local\slack\app-
     - TargetFilename|contains: \Local\Programs\Microsoft VS Code\
 id: dbbd9f66-2ed3-4ca2-98a4-6ea985dd1a1c
+logsource:
+  category: file_event
+  product: windows

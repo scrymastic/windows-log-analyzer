@@ -7,9 +7,6 @@ falsepositives:
   spaces
 filename: net_connection_win_winlogon_net_connections.yml
 level: medium
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/03/12
 references:
 - https://www.microsoft.com/en-us/security/blog/2023/04/11/guidance-for-investigating-attacks-using-cve-2022-21894-the-blacklotus-campaign/

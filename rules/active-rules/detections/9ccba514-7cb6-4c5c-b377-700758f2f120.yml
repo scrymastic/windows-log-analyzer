@@ -14,3 +14,6 @@ detection:
       - Image|contains: :\Windows\System32\Tasks\
       - Image|contains: :\Windows\Tasks\
 id: 9ccba514-7cb6-4c5c-b377-700758f2f120
+logsource:
+  category: process_creation
+  product: windows

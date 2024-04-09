@@ -11,9 +11,6 @@ falsepositives:
 - Unknown
 filename: proc_access_win_lsass_memdump.yml
 level: medium
-logsource:
-  category: process_access
-  product: windows
 modified: 2024/03/02
 references:
 - https://blog.menasec.net/2019/02/threat-hunting-21-procdump-or-taskmgr.html

@@ -5,9 +5,6 @@ falsepositives:
 - Administrative scripts.
 filename: proc_creation_win_sysinternals_psexec_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/28
 references:
 - https://www.fireeye.com/blog/threat-research/2020/10/kegtap-and-singlemalt-with-a-ransomware-chaser.html

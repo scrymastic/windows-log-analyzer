@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: DeveloperUnlock
     - CommandLine|contains: EnableSideloading
 id: a383dec4-deec-4e6e-913b-ed9249670848
+logsource:
+  category: process_creation
+  product: windows

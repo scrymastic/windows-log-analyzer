@@ -2,3 +2,6 @@ detection:
 - and:
   - Image|==: C:\Windows\System32\wpbbin.exe
 id: 4abc0ec4-db5a-412f-9632-26659cddf145
+logsource:
+  category: process_creation
+  product: windows

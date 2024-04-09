@@ -4,3 +4,6 @@ detection:
   - CommandLine|contains: ' /uninstall'
   - CommandLine|contains: ' /quiet'
 id: f0f7be61-9cf5-43be-9836-99d6ef448a18
+logsource:
+  category: process_creation
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_hktl_secutyxploded.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/04
 references:
 - https://securityxploded.com/

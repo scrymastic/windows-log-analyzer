@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: \\\*.exe
     - CommandLine|contains: \\\*.js
 id: 204b17ae-4007-471b-917b-b917b315c5db
+logsource:
+  category: process_creation
+  product: windows

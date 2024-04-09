@@ -13,9 +13,6 @@ falsepositives:
 - Unknown
 filename: posh_pc_susp_zip_compress.yml
 level: medium
-logsource:
-  product: windows
-  service: powershell-classic
 modified: 2023/12/18
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1074.001/T1074.001.md

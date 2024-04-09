@@ -31,3 +31,6 @@ detection:
     - CommandLine|contains: ' -p '
     - CommandLine|contains: ' --local-auth'
 id: 42a993dd-bb3e-48c8-b372-4d6684c4106c
+logsource:
+  category: process_creation
+  product: windows

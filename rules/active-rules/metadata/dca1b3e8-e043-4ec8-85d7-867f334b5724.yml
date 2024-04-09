@@ -6,9 +6,6 @@ falsepositives:
 - System administrators managing certificates.
 filename: file_event_win_susp_pfx_file_creation.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/07/07
 references:
 - https://github.com/OTRF/detection-hackathon-apt29/issues/14

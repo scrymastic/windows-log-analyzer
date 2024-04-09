@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: '}'''
     - CommandLine|contains: '} '
 id: ff2fff64-4cd6-4a2b-ba7d-e28a30bbe66b
+logsource:
+  category: process_creation
+  product: windows

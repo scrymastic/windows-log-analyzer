@@ -15,3 +15,6 @@ detection:
       - ParentImage|contains: \Users\Public\
       - ParentImage|contains: \Windows\Temp\
 id: 9fc3072c-dc8f-4bf7-b231-18950000fadd
+logsource:
+  category: process_creation
+  product: windows

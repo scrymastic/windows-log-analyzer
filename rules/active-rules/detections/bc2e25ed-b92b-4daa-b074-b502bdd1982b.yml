@@ -6,3 +6,6 @@ detection:
   - param2|==: 2147943140
   - param3|==: '{054AAE20-4BEA-4347-8A35-64A533254A9D}'
 id: bc2e25ed-b92b-4daa-b074-b502bdd1982b
+logsource:
+  product: windows
+  service: system

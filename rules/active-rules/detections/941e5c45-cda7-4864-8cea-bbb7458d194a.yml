@@ -11,3 +11,6 @@ detection:
     - ProcessName|endswith: \net1.exe
     - ProcessName|endswith: \reg.exe
 id: 941e5c45-cda7-4864-8cea-bbb7458d194a
+logsource:
+  product: windows
+  service: security

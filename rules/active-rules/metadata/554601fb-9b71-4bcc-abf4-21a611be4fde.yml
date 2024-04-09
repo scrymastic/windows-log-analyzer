@@ -7,9 +7,6 @@ falsepositives:
 - Administrative activity
 filename: proc_creation_win_takeown_recursive_own.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/11/21
 references:
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/takeown

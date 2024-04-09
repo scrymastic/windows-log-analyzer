@@ -9,3 +9,8 @@ detection:
     - Path|contains: \Users\Public\
     - Path|contains: C:\Temp\
 id: 424273ea-7cf8-43a6-b712-375f925e481f
+logsource:
+  definition: 'Requirements: The "Microsoft-Windows-TaskScheduler/Operational" is
+    disabled by default and needs to be enabled in order for this detection to trigger'
+  product: windows
+  service: taskscheduler

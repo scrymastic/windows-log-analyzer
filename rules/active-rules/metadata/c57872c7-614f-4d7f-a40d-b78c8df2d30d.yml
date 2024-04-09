@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_cl_loadassembly.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/08/17
 references:
 - https://bohops.com/2018/01/07/executing-commands-and-bypassing-applocker-with-powershell-diagnostic-scripts/

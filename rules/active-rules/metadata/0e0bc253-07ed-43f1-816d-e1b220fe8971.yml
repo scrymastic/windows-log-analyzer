@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: image_load_side_load_rjvplatform_non_default_location.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://twitter.com/0gtweet/status/1666716511988330499

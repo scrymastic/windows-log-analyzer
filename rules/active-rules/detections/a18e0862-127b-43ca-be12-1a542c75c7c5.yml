@@ -5,3 +5,6 @@ detection:
   - AppName|==: lsass.exe
   - ExceptionCode|==: c0000001
 id: a18e0862-127b-43ca-be12-1a542c75c7c5
+logsource:
+  product: windows
+  service: application

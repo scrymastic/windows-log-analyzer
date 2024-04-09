@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate administrative script
 filename: proc_creation_win_powershell_x509enrollment.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=42

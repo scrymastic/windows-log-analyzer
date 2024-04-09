@@ -11,3 +11,6 @@ detection:
   - or:
     - Details|!==: (Empty)
 id: 152f3630-77c1-4284-bcc0-4cc68ab2f6e7
+logsource:
+  category: registry_event
+  product: windows

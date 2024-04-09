@@ -7,9 +7,6 @@ falsepositives:
 - File located in the AppData folder with trusted signature
 filename: proc_creation_win_office_onenote_susp_child_processes.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/10
 references:
 - https://github.com/elastic/protections-artifacts/commit/746086721fd385d9f5c6647cada1788db4aea95f#diff-e34e43eb5666427602ddf488b2bf3b545bd9aae81af3e6f6c7949f9652abdf18

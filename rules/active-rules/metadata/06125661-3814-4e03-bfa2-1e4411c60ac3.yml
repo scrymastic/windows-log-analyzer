@@ -7,9 +7,6 @@ falsepositives:
 - Legitime usage
 filename: file_delete_win_delete_backup_file.yml
 level: medium
-logsource:
-  category: file_delete
-  product: windows
 modified: 2023/02/15
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1490/T1490.md#atomic-test-6---windows---delete-backup-files

@@ -5,3 +5,6 @@ detection:
     - Image|endswith: \sc.exe
   - CommandLine|contains: ' stop '
 id: 81bcb81b-5b1f-474b-b373-52c871aaa7b1
+logsource:
+  category: process_creation
+  product: windows

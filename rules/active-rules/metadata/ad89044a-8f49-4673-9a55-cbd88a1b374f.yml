@@ -5,9 +5,6 @@ description: Detects .NET Framework CLR and .NET Core CLR "cor_enable_profiling"
 falsepositives: []
 filename: registry_set_enabling_cor_profiler_env_variables.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/11/24
 references:
 - https://twitter.com/jamieantisocial/status/1304520651248668673

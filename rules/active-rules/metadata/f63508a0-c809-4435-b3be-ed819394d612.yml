@@ -23,9 +23,6 @@ falsepositives:
   load drivers.
 filename: win_security_user_driver_loaded.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2023/01/20
 references:
 - https://blog.dylan.codes/evading-sysmon-and-windows-event-logging/

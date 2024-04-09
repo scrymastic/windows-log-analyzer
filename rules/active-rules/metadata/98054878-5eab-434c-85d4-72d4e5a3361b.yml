@@ -9,10 +9,6 @@ falsepositives:
 - Unknown
 filename: win_security_hktl_edr_silencer.yml
 level: high
-logsource:
-  definition: 'Requirements: Audit Filtering Platform Policy Change needs to be enabled'
-  product: windows
-  service: security
 modified: 2024/01/30
 references:
 - https://github.com/netero1010/EDRSilencer

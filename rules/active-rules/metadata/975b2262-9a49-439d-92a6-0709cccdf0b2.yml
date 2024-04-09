@@ -6,10 +6,6 @@ falsepositives:
 - Installation of unsigned packages for testing purposes
 filename: posh_ps_install_unsigned_appx_packages.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: Script Block Logging must be enable
-  product: windows
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/msix/package/unsigned-package

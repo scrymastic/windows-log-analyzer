@@ -15,9 +15,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_susp_bad_opsec_sacrificial_processes.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/02
 references:
 - https://blog.malwarebytes.com/malwarebytes-news/2020/10/kraken-attack-abuses-wer-service/

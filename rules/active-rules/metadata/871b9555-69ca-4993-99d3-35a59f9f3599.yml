@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_ultravnc_susp_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/03/09
 references:
 - https://web.archive.org/web/20220224045756/https://www.ria.ee/sites/default/files/content-editors/kuberturve/tale_of_gamaredon_infection.pdf

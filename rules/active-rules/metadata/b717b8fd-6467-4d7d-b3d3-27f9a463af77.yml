@@ -7,9 +7,6 @@ falsepositives:
   in some environment.
 filename: proc_creation_win_7zip_password_extraction.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://blog.cyble.com/2022/06/07/bumblebee-loader-on-the-rise/

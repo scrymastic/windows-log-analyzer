@@ -7,9 +7,6 @@ falsepositives:
   filters as needed.
 filename: image_load_side_load_7za.yml
 level: low
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://www.gov.pl/attachment/ee91f24d-3e67-436d-aa50-7fa56acf789d

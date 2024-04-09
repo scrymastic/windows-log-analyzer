@@ -17,3 +17,6 @@ detection:
     - Details|contains: :\Users\
     - Details|contains: \Contacts\
 id: 9d8f9bb8-01af-4e15-a3a2-349071530530
+logsource:
+  category: registry_set
+  product: windows

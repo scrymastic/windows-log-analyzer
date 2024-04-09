@@ -9,3 +9,6 @@ detection:
     - Image|endswith: \w32tm.exe
     - CommandLine|contains: tz
 id: b243b280-65fe-48df-ba07-6ddea7646427
+logsource:
+  category: process_creation
+  product: windows

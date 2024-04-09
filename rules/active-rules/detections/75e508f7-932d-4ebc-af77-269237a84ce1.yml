@@ -11,3 +11,6 @@ detection:
     - ImageLoaded|endswith: .dll
     - ImageLoaded|endswith: .ocx
 id: 75e508f7-932d-4ebc-af77-269237a84ce1
+logsource:
+  category: image_load
+  product: windows

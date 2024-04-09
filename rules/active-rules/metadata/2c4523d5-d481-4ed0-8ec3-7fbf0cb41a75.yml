@@ -5,9 +5,6 @@ falsepositives:
 - There is a relevant set of false positives depending on applications in the environment
 filename: driver_load_win_susp_temp_use.yml
 level: high
-logsource:
-  category: driver_load
-  product: windows
 modified: 2021/11/27
 references:
 - Internal Research

@@ -9,3 +9,6 @@ detection:
   - Description|not contains: Failed to open service configuration with error 19
   - Description|not contains: Failed to open service configuration with error 93
 id: 815cd91b-7dbc-4247-841a-d7dd1392b0a8
+logsource:
+  category: sysmon_error
+  product: windows

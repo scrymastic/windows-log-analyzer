@@ -13,3 +13,6 @@ detection:
     - ScriptBlockText|contains: Remove-CimInstance
     - ScriptBlockText|contains: rcim
 id: c1337eb8-921a-4b59-855b-4ba188ddcc42
+logsource:
+  category: ps_script
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: registry_set_office_vba_warnings_tamper.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2024/03/19
 references:
 - https://twitter.com/inversecos/status/1494174785621819397

@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: win_defender_threat.yml
 level: high
-logsource:
-  product: windows
-  service: windefend
 modified: ''
 references:
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus

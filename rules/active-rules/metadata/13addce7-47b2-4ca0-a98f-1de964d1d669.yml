@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_security_scm_database_handle_failure.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2022/07/11
 references:
 - https://threathunterplaybook.com/hunts/windows/190826-RemoteSCMHandle/notebook.html

@@ -9,9 +9,6 @@ falsepositives:
   might be required to make this logic usable in production.
 filename: file_event_win_powershell_module_susp_creation.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - Internal Research

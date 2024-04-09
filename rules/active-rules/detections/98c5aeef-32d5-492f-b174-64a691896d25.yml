@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: sc.exe
   - CommandLine|contains: sdset
 id: 98c5aeef-32d5-492f-b174-64a691896d25
+logsource:
+  category: process_creation
+  product: windows

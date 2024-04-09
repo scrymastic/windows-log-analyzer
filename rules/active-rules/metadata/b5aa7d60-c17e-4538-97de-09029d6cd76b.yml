@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_appxpackaging_om_sups_appx_signature.yml
 level: medium
-logsource:
-  product: windows
-  service: appxpackaging-om
 modified: ''
 references:
 - Internal Research

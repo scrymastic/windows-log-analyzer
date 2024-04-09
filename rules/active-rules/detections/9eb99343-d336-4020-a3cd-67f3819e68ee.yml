@@ -11,3 +11,6 @@ detection:
     - Status|==: '0xC000018C'
     - Status|==: '0xC000015B'
 id: 9eb99343-d336-4020-a3cd-67f3819e68ee
+logsource:
+  product: windows
+  service: security

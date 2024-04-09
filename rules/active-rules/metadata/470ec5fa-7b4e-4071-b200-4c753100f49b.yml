@@ -8,9 +8,6 @@ falsepositives:
 - Disk device errors
 filename: win_security_codeintegrity_check_failure.yml
 level: informational
-logsource:
-  product: windows
-  service: security
 modified: 2023/12/13
 references:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5038

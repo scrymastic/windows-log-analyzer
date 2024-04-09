@@ -11,9 +11,6 @@ falsepositives:
   Exclude hosts that are known to be allowed to use this tool.
 filename: net_connection_win_domain_mega_nz.yml
 level: medium
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/02/01
 references:
 - https://megatools.megous.com/

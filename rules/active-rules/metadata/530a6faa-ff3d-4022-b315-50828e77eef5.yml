@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate usage of the anydesk tool
 filename: win_system_service_install_anydesk.yml
 level: medium
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/

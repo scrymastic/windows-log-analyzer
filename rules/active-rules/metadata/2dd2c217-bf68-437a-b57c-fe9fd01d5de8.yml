@@ -6,9 +6,6 @@ falsepositives:
 - FQDNs that start with a number such as "7-Zip"
 filename: proc_creation_win_regsvr32_http_ip_pattern.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/24
 references:
 - https://twitter.com/mrd0x/status/1461041276514623491

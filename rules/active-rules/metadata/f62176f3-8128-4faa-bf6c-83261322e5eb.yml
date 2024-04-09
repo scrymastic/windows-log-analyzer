@@ -6,10 +6,6 @@ falsepositives:
   environment
 filename: posh_ps_malicious_keywords.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2023/06/20
 references:
 - https://adsecurity.org/?p=2921

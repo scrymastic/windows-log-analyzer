@@ -5,9 +5,6 @@ falsepositives:
 - Other tools that incidentally use the same command line parameters
 filename: proc_creation_win_hktl_empire_powershell_launch.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://github.com/EmpireProject/Empire/blob/c2ba61ca8d2031dad0cfc1d5770ba723e8b710db/lib/common/helpers.py#L165

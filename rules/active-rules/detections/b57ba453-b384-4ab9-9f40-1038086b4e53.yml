@@ -5,3 +5,6 @@ detection:
   - CommandLine|contains: TOP
   - CommandLine|contains: '[VeeamBackup].[dbo].[Credentials]'
 id: b57ba453-b384-4ab9-9f40-1038086b4e53
+logsource:
+  category: process_creation
+  product: windows

@@ -14,3 +14,6 @@ detection:
   - CommandLine|contains: shadow
   - CommandLine|contains: create
 id: b17ea6f7-6e90-447e-a799-e6c0a493d6ce
+logsource:
+  category: process_creation
+  product: windows

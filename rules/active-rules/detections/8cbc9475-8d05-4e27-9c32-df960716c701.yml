@@ -15,3 +15,6 @@ detection:
   - CommandLine|contains: /v WallpaperStyle
   - CommandLine|contains: /d 2
 id: 8cbc9475-8d05-4e27-9c32-df960716c701
+logsource:
+  category: process_creation
+  product: windows

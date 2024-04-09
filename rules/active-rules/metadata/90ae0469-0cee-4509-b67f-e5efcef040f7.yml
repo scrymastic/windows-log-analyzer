@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: image_load_side_load_aruba_networks_virtual_intranet_access.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/03/15
 references:
 - https://twitter.com/wdormann/status/1616581559892545537?t=XLCBO9BziGzD7Bmbt8oMEQ&s=09

@@ -18,3 +18,6 @@ detection:
   - CommandLine|not contains: /VERIFY /VERYSILENT /NOSTART /NODOTNET /NORESTART" /RL
       HIGHEST
 id: 89ca78fd-b37c-4310-b3d3-81a023f83936
+logsource:
+  category: process_creation
+  product: windows

@@ -34,3 +34,8 @@ detection:
     - TargetFilename|not contains: :\ProgramData\Anaconda3\
     - TargetFilename|not endswith: .c~
 id: e3f673b3-65d1-4d80-9146-466f8b63fa99
+logsource:
+  category: file_rename
+  definition: 'Requirements: Microsoft-Windows-Kernel-File Provider with at least
+    the KERNEL_FILE_KEYWORD_RENAME_SETLINK_PATH keyword'
+  product: windows

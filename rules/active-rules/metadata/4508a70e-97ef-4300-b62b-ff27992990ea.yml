@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: image_load_susp_script_dotnet_clr_dll_load.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/02/23
 references:
 - https://github.com/tyranid/DotNetToJScript

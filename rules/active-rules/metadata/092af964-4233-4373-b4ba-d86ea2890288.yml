@@ -7,9 +7,6 @@ falsepositives:
   machines
 filename: registry_set_aedebug_persistence.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://persistence-info.github.io/Data/aedebug.html

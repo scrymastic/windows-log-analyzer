@@ -5,3 +5,9 @@ detection:
   - EventID|==: 4899
   - NewTemplateContent|contains: CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT
 id: 5ee3a654-372f-11ec-8d3d-0242ac130003
+logsource:
+  definition: Certificate services loaded a template would trigger event ID 4898 and
+    certificate Services template was updated would trigger event ID 4899. A risk
+    permission seems to be coming if template contain specific flag.
+  product: windows
+  service: security

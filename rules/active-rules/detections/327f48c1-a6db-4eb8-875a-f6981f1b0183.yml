@@ -1,5 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \ssh.exe
-  - CommandLine|None: ' -R '
-id: 327f48c1-a6db-4eb8-875a-f6981f1b0183

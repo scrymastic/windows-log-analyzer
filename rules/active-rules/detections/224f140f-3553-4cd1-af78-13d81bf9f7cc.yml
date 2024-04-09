@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: tscon.exe
   - IntegrityLevel|==: SYSTEM
 id: 224f140f-3553-4cd1-af78-13d81bf9f7cc
+logsource:
+  category: process_creation
+  product: windows

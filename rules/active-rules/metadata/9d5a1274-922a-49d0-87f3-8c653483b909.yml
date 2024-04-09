@@ -15,9 +15,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmic_recon_system_info_uncommon.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/19
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/a2ccd19c37d0278b4ffa8583add3cf52060a5418/atomics/T1082/T1082.md#atomic-test-25---system-information-discovery-with-wmic

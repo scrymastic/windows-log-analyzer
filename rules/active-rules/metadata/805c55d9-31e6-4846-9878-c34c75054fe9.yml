@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_mal_octopus_scanner.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2021/11/27
 references:
 - https://securitylab.github.com/research/octopus-scanner-malware-open-source-supply-chain

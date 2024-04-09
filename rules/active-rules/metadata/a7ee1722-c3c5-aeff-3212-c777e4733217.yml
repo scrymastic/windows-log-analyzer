@@ -7,9 +7,6 @@ falsepositives:
   is not considered a good security practice.
 filename: proc_creation_win_powershell_disable_defender_av_security_monitoring.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/11/18
 references:
 - https://research.nccgroup.com/2020/06/23/wastedlocker-a-new-ransomware-variant-developed-by-the-evil-corp-group/

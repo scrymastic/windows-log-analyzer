@@ -7,3 +7,7 @@ detection:
     - ScriptBlockText|contains: MSAcpi_ThermalZoneTemperature
     - ScriptBlockText|contains: Win32_ComputerSystem
 id: d93129cd-1ee0-479f-bc03-ca6f129882e3
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

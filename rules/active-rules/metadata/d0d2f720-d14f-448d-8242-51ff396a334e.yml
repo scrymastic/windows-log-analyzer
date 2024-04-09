@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_access_win_hktl_generic_access.yml
 level: high
-logsource:
-  category: process_access
-  product: windows
 modified: ''
 references:
 - https://jsecurity101.medium.com/bypassing-access-mask-auditing-strategies-480fb641c158

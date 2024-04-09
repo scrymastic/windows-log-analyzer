@@ -14,3 +14,6 @@ detection:
     - CommandLine|not contains: ' /s '
     - CommandLine|not contains: igfxCPL.cpl
 id: 0ba863e6-def5-4e50-9cea-4dd8c7dc46a4
+logsource:
+  category: process_creation
+  product: windows

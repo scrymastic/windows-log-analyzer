@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_pc_wsman_com_provider_no_powershell.yml
 level: medium
-logsource:
-  product: windows
-  service: powershell-classic
 modified: 2023/10/27
 references:
 - https://twitter.com/chadtilbury/status/1275851297770610688

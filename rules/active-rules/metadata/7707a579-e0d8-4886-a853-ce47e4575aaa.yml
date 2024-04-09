@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: image_load_wmiprvse_wbemcomn_dll_hijack.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2022/10/09
 references:
 - https://threathunterplaybook.com/hunts/windows/201009-RemoteWMIWbemcomnDLLHijack/notebook.html

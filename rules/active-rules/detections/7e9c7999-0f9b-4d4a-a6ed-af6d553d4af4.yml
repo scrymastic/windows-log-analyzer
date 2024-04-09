@@ -5,3 +5,6 @@ detection:
   - ImagePath|contains: mshta
   - ImagePath|contains: vbscript:createobject
 id: 7e9c7999-0f9b-4d4a-a6ed-af6d553d4af4
+logsource:
+  product: windows
+  service: system

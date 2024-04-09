@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_cobaltstrike_bloopers_cmd.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/30
 references:
 - https://hstechdocs.helpsystems.com/manuals/cobaltstrike/current/userguide/content/cobalt-4-5-user-guide.pdf

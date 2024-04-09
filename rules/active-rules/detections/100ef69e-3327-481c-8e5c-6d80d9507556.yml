@@ -10,3 +10,6 @@ detection:
     - Channel|==: System
     - Channel|==: Windows PowerShell
 id: 100ef69e-3327-481c-8e5c-6d80d9507556
+logsource:
+  product: windows
+  service: system

@@ -18,3 +18,7 @@ detection:
     - Image|not endswith: \rundll32.exe
     - CommandLine|not contains: DavSetCookie
 id: 590a5f4c-6c8c-4f10-8307-89afe9453a9d
+logsource:
+  category: process_creation
+  definition: 'Requirements: ParentUser field needs sysmon >= 13.30'
+  product: windows

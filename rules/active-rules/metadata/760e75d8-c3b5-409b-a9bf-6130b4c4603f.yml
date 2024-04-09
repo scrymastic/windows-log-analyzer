@@ -14,9 +14,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_sed_file_creation.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://strontic.github.io/xcyclopedia/library/iexpress.exe-D594B2A33EFAFD0EABF09E3FDC05FCEA.html

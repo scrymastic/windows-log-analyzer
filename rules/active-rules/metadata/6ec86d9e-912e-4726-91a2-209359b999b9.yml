@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: image_load_dll_amsi_suspicious_process.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: 2023/09/20
 references:
 - Internal Research

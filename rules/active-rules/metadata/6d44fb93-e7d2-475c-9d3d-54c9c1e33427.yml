@@ -8,9 +8,6 @@ falsepositives:
   to apply additional filters for software and scripts that leverage the BITS service
 filename: win_bits_client_new_transfer_via_uncommon_tld.yml
 level: medium
-logsource:
-  product: windows
-  service: bits-client
 modified: 2023/03/27
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1197/T1197.md

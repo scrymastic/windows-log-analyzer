@@ -113,3 +113,6 @@ detection:
     - Image|startswith: C:\Program Files\Avant Browser\
   - Image|endswith: \avant.exe
 id: 4d07b1f4-cb00-4470-b9f8-b0191d48ff52
+logsource:
+  category: dns_query
+  product: windows

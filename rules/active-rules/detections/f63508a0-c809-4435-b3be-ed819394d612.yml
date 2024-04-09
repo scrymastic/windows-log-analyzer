@@ -22,3 +22,6 @@ detection:
   - or:
     - ProcessName|not startswith: C:\Program Files\WindowsApps\Microsoft
 id: f63508a0-c809-4435-b3be-ed819394d612
+logsource:
+  product: windows
+  service: security

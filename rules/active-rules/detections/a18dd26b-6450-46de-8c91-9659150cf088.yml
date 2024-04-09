@@ -78,3 +78,6 @@ detection:
   - or:
     - SourceImage|not contains: \SteamLibrary\steamapps\
 id: a18dd26b-6450-46de-8c91-9659150cf088
+logsource:
+  category: process_access
+  product: windows

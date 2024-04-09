@@ -25,3 +25,6 @@ detection:
     - CommandLine|contains: shadow auto
     - CommandLine|contains: shadow list
 id: 6938366d-8954-4ddc-baff-c830b3ba8fcd
+logsource:
+  category: process_creation
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
   or the menu option
 filename: proc_creation_win_rundll32_user32_dll.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/09
 references:
 - https://app.any.run/tasks/2aef9c63-f944-4763-b3ef-81eee209d128/

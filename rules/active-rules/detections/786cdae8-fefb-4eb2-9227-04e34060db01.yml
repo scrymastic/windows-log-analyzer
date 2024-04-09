@@ -11,3 +11,6 @@ detection:
   - DestinationPort|!==: 993
   - DestinationPort|!==: 995
 id: 786cdae8-fefb-4eb2-9227-04e34060db01
+logsource:
+  category: network_connection
+  product: windows

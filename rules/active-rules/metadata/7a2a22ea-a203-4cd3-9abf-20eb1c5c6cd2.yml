@@ -11,10 +11,6 @@ falsepositives:
 - Unknown
 filename: file_access_win_susp_cred_hist_access.yml
 level: medium
-logsource:
-  category: file_access
-  definition: 'Requirements: Microsoft-Windows-Kernel-File ETW provider'
-  product: windows
 modified: 2023/12/18
 references:
 - https://tools.thehacker.recipes/mimikatz/modules/dpapi/credhist

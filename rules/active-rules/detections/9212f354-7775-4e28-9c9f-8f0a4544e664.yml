@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: AdExp
   - CommandLine|contains: snapshot
 id: 9212f354-7775-4e28-9c9f-8f0a4544e664
+logsource:
+  category: process_creation
+  product: windows

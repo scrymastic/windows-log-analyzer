@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: 'REGSVR '
   - CommandLine|contains: .dll
 id: 9f0a8bf3-a65b-440a-8c1e-5cb1547c8e70
+logsource:
+  category: process_creation
+  product: windows

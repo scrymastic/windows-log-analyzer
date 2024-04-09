@@ -6,9 +6,6 @@ falsepositives:
 - False positives depend on custom use of vsls-agent.exe
 filename: proc_creation_win_vslsagent_agentextensionpath_load.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/bohops/status/1583916360404729857

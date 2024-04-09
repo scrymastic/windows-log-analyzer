@@ -5,3 +5,6 @@ detection:
     - CommandLine|contains: ' -e '
     - CommandLine|contains: ' --eval '
 id: 6640f31c-01ad-49b5-beb5-83498a5cd8bd
+logsource:
+  category: process_creation
+  product: windows

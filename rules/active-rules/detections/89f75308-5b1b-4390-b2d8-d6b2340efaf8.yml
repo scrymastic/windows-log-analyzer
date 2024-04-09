@@ -7,3 +7,6 @@ detection:
   - CommandLine|contains: 'systemstatebackup '
   - CommandLine|contains: -keepVersions:0
 id: 89f75308-5b1b-4390-b2d8-d6b2340efaf8
+logsource:
+  category: process_creation
+  product: windows

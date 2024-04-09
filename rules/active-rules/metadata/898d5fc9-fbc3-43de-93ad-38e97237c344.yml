@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate AppX packages not signed by MS used part of an enterprise
 filename: win_appxdeployment_server_susp_appx_package_installation.yml
 level: medium
-logsource:
-  product: windows
-  service: appxdeployment-server
 modified: ''
 references:
 - Internal Research

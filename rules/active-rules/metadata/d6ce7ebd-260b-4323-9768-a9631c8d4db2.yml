@@ -14,9 +14,6 @@ falsepositives:
 - Unknown
 filename: registry_set_lsa_disablerestrictedadmin.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/12/15
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/a8e3cf63e97b973a25903d3df9fd55da6252e564/atomics/T1112/T1112.md

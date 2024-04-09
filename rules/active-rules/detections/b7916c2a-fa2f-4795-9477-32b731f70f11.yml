@@ -10,3 +10,6 @@ detection:
     - Details|contains: :\Windows\Temp\
     - Details|contains: \AppData\Local\Temp\
 id: b7916c2a-fa2f-4795-9477-32b731f70f11
+logsource:
+  category: registry_set
+  product: windows

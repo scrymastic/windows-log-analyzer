@@ -8,9 +8,6 @@ falsepositives:
 - Maintenance activity
 filename: proc_creation_win_susp_eventlog_clear.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/07/13
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1070.001/T1070.001.md

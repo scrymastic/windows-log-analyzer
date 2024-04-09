@@ -7,3 +7,8 @@ detection:
     - TargetFilename|not startswith: C:\ProgramData\Microsoft\Windows\Containers\BaseImages\
     - TargetFilename|not endswith: \Windows\System32\winevt\Logs\
 id: 65236ec7-ace0-4f0c-82fd-737b04fd4dcb
+logsource:
+  category: file_event
+  definition: 'Requirements: The ".evtx" extension should be monitored via a Sysmon
+    configuration. Example: <TargetFilename condition="end with">.evtx<TargetFilename>'
+  product: windows

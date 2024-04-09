@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_uac_bypass_computerdefaults.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://github.com/hfiref0x/UACME

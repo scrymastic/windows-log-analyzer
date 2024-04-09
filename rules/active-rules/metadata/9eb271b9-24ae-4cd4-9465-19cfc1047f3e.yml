@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate explorer.exe run from cmd.exe
 filename: proc_creation_win_explorer_lolbin_execution.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://twitter.com/CyberRaiju/status/1273597319322058752

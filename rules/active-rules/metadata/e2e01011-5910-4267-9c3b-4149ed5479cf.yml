@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: image_load_side_load_wwlib.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://twitter.com/WhichbufferArda/status/1658829954182774784

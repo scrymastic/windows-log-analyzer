@@ -13,9 +13,6 @@ falsepositives:
 - Unknown
 filename: registry_event_disable_wdigest_credential_guard.yml
 level: high
-logsource:
-  category: registry_event
-  product: windows
 modified: 2021/11/27
 references:
 - https://teamhydra.blog/2020/08/25/bypassing-credential-guard/

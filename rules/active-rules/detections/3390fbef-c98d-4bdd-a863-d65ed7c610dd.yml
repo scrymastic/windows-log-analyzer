@@ -14,3 +14,6 @@ detection:
     - Details|not startswith: C:\Progra
     - Details|not endswith: \ACEODBC.DLL
 id: 3390fbef-c98d-4bdd-a863-d65ed7c610dd
+logsource:
+  category: registry_set
+  product: windows

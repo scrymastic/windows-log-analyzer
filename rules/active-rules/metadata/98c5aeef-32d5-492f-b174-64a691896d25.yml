@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_sc_sdset_modification.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://blog.talosintelligence.com/2021/10/threat-hunting-in-large-datasets-by.html

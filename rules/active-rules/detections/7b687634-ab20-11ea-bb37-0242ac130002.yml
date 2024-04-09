@@ -12,3 +12,8 @@ detection:
     - ServiceFileName|contains: USBPcap
     - ServiceFileName|contains: pktmon
 id: 7b687634-ab20-11ea-bb37-0242ac130002
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security

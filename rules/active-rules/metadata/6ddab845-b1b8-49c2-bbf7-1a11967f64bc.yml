@@ -6,9 +6,6 @@ falsepositives:
 - Legitime usage of SDelete
 filename: file_delete_win_sysinternals_sdelete_file_deletion.yml
 level: medium
-logsource:
-  category: file_delete
-  product: windows
 modified: 2023/02/15
 references:
 - https://github.com/OTRF/detection-hackathon-apt29/issues/9

@@ -2,3 +2,6 @@ detection:
 - and:
   - TargetObject|contains: \Services\PortProxy\v4tov4\tcp\
 id: a54f842a-3713-4b45-8c84-5f136fdebd3c
+logsource:
+  category: registry_event
+  product: windows

@@ -2,3 +2,6 @@ detection:
 - and:
   - Image|endswith: \msbuild.exe
 id: 50e54b8d-ad73-43f8-96a1-5191685b17a4
+logsource:
+  category: network_connection
+  product: windows

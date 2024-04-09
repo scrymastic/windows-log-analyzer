@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_imagingdevices_unusual_parents.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/12/29
 references:
 - https://thedfirreport.com/2022/09/26/bumblebee-round-two/

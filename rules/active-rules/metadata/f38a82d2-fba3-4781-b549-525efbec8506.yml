@@ -5,9 +5,6 @@ falsepositives:
 - Administrative activity
 filename: proc_creation_win_pua_3proxy_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://github.com/3proxy/3proxy

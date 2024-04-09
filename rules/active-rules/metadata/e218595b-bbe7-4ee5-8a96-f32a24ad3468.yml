@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_curl_susp_download.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/21
 references:
 - https://twitter.com/max_mal_/status/1542461200797163522

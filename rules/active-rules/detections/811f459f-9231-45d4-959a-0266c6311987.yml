@@ -21,3 +21,6 @@ detection:
       - Image|contains: :\Windows\Temp\
       - Image|contains: :\PerfLogs\
 id: 811f459f-9231-45d4-959a-0266c6311987
+logsource:
+  category: process_creation
+  product: windows

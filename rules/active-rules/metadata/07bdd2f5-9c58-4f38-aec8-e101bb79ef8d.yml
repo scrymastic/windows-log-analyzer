@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_delete_mstsc_history_cleared.yml
 level: high
-logsource:
-  category: registry_delete
-  product: windows
 modified: 2023/02/08
 references:
 - https://docs.microsoft.com/en-us/troubleshoot/windows-server/remote/remove-entries-from-remote-desktop-connection-computer

@@ -29,3 +29,6 @@ detection:
     - CommandLine|contains: '%comspec%'
     - CommandLine|contains: '%localappdata%'
 id: 3c89a1e8-0fba-449e-8f1b-8409d6267ec8
+logsource:
+  category: process_creation
+  product: windows

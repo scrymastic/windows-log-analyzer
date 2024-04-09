@@ -13,3 +13,6 @@ detection:
     - Image|endswith: \whoami.exe
     - Image|endswith: \bitsadmin.exe
 id: 5cc2cda8-f261-4d88-a2de-e9e193c86716
+logsource:
+  category: process_creation
+  product: windows

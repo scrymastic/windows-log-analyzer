@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: New-Service
     - CommandLine|contains: -BinaryPathName
 id: 17a1be64-8d88-40bf-b5ff-a4f7a50ebcc8
+logsource:
+  category: process_creation
+  product: windows

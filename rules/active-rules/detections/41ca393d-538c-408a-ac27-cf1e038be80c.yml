@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: /s
     - CommandLine|contains: /q
 id: 41ca393d-538c-408a-ac27-cf1e038be80c
+logsource:
+  category: process_creation
+  product: windows

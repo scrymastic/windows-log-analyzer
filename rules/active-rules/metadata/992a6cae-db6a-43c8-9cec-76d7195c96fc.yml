@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate scripts
 filename: net_connection_win_script_wan.yml
 level: high
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/03/13
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/28d190330fe44de6ff4767fc400cc10fa7cd6540/atomics/T1105/T1105.md

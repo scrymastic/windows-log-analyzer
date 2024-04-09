@@ -10,9 +10,6 @@ falsepositives:
   may occur.
 filename: registry_set_internet_explorer_disable_first_run_customize.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://www.ncsc.gov.uk/static-assets/documents/malware-analysis-reports/devil-bait/NCSC-MAR-Devil-Bait.pdf

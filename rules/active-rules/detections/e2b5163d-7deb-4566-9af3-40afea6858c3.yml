@@ -2,3 +2,7 @@ detection:
 - and:
   - EventID|==: 70
 id: e2b5163d-7deb-4566-9af3-40afea6858c3
+logsource:
+  definition: 'Requirements: The CAPI2 Operational log needs to be enabled'
+  product: windows
+  service: capi2

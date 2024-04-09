@@ -39,3 +39,6 @@ detection:
       - OriginalFileName|==: PowerShell.EXE
       - OriginalFileName|==: pwsh.dll
 id: 754ed792-634f-40ae-b3bc-e0448d33f695
+logsource:
+  category: process_creation
+  product: windows

@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate usage for debugging purposes
 filename: proc_creation_win_susp_electron_execution_proxy.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/09
 references:
 - https://positive.security/blog/ms-officecmd-rce

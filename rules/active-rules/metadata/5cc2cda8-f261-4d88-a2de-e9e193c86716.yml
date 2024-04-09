@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate WinRM usage
 filename: proc_creation_win_winrm_susp_child_process.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/07/14
 references:
 - Internal Research

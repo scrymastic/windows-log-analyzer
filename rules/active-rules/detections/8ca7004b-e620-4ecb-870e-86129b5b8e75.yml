@@ -9,3 +9,6 @@ detection:
     - ImagePath|contains: /c
     - ImagePath|contains: /r
 id: 8ca7004b-e620-4ecb-870e-86129b5b8e75
+logsource:
+  product: windows
+  service: system

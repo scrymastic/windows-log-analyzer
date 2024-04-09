@@ -8,3 +8,6 @@ detection:
     - TargetObject|endswith: DisableSR
   - Details|==: DWORD (0x00000001)
 id: 5de03871-5d46-4539-a82d-3aa992a69a83
+logsource:
+  category: registry_set
+  product: windows

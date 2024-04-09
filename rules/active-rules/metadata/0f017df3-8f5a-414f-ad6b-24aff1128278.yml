@@ -7,10 +7,6 @@ falsepositives:
   cleaner scripts. The script should be investigated to determine if it's legitimate
 filename: posh_ps_susp_clear_eventlog.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://twitter.com/oroneequalsone/status/1568432028361830402

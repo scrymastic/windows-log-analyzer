@@ -24,3 +24,6 @@ detection:
     - TargetObject|contains: \services\TermService\Parameters\ServiceDll
     - TargetObject|contains: \Windows NT\Terminal Services\InitialProgram
 id: 3f6b7b62-61aa-45db-96bd-9c31b36b653c
+logsource:
+  category: registry_set
+  product: windows

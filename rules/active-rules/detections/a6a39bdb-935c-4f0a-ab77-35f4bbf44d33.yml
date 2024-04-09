@@ -15,3 +15,6 @@ detection:
     - CommandLine|contains: '%TMP%'
     - CommandLine|contains: '%LocalAppData%\Temp'
 id: a6a39bdb-935c-4f0a-ab77-35f4bbf44d33
+logsource:
+  category: process_creation
+  product: windows

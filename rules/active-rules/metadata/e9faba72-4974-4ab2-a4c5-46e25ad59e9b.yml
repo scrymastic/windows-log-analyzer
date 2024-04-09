@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of VSSVC. Maybe backup operations. It would usually be done by C:\Windows\System32\VSSVC.exe.
 filename: win_security_vssaudit_secevent_source_registration.yml
 level: informational
-logsource:
-  product: windows
-  service: security
 modified: 2022/04/28
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1003.002/T1003.002.md#atomic-test-3---esentutlexe-sam-copy

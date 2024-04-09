@@ -20,3 +20,6 @@ detection:
     - CommandLine|contains: .xls
     - CommandLine|contains: .xml
 id: 99b7460d-c9f1-40d7-a316-1f36f61d52ee
+logsource:
+  category: process_creation
+  product: windows

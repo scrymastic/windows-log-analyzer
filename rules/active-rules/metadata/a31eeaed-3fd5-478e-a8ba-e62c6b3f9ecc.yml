@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate deinstallation by administrative staff
 filename: proc_creation_win_susp_disable_raccine.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/10/09
 references:
 - https://github.com/Neo23x0/Raccine

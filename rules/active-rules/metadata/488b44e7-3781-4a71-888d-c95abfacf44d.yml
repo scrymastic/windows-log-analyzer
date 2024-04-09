@@ -6,10 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_windows_firewall_profile_disabled.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2022/12/30
 references:
 - https://docs.microsoft.com/en-us/powershell/module/netsecurity/set-netfirewallprofile?view=windowsserver2019-ps

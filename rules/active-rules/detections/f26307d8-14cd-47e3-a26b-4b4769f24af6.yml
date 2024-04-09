@@ -22,3 +22,6 @@ detection:
     - CommandLine|contains: tasklist /v /fo csv
     - CommandLine|contains: findstr /i "lsass"
 id: f26307d8-14cd-47e3-a26b-4b4769f24af6
+logsource:
+  category: process_creation
+  product: windows

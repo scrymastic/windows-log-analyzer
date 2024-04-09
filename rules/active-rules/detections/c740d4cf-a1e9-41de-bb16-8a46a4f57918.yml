@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: Client-ProjFS
     - CommandLine|contains: Microsoft-Windows-Subsystem-Linux
 id: c740d4cf-a1e9-41de-bb16-8a46a4f57918
+logsource:
+  category: process_creation
+  product: windows

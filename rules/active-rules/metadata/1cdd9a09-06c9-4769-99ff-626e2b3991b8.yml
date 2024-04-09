@@ -8,9 +8,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_susp_double_extension.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/28
 references:
 - https://blu3-team.blogspot.com/2019/06/misleading-extensions-xlsexe-docexe.html

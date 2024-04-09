@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_dns_server_susp_server_level_plugin_dll.yml
 level: high
-logsource:
-  product: windows
-  service: dns-server
 modified: 2023/02/05
 references:
 - https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83

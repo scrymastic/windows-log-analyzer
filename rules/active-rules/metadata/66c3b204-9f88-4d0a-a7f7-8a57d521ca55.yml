@@ -6,9 +6,6 @@ falsepositives:
 - Some build frameworks
 filename: proc_creation_win_susp_crypto_mining_monero.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/13
 references:
 - https://www.poolwatch.io/coin/monero

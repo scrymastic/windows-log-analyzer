@@ -6,3 +6,6 @@ detection:
   - or:
     - Image|not endswith: \Microsoft\Teams\current\Teams.exe
 id: d2eb17db-1d39-41dc-b57f-301f6512fa75
+logsource:
+  category: process_creation
+  product: windows

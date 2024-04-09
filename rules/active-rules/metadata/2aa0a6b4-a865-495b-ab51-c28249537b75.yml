@@ -7,9 +7,6 @@ falsepositives:
   folder should always be inspected to make sure that all the files in there are legitimate
 filename: file_event_win_startup_folder_file_write.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/10/07
 references:
 - https://github.com/OTRF/detection-hackathon-apt29/issues/12

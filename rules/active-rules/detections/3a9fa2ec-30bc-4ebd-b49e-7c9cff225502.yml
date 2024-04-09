@@ -2,3 +2,6 @@ detection:
 - and:
   - TargetFilename|endswith: \Microsoft.VSCode_profile.ps1
 id: 3a9fa2ec-30bc-4ebd-b49e-7c9cff225502
+logsource:
+  category: file_event
+  product: windows

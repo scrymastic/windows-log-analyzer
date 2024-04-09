@@ -7,9 +7,6 @@ falsepositives:
   positives. In that case Investigate the parent and child process.
 filename: proc_creation_win_susp_ntfs_short_name_use_cli.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/09/21
 references:
 - https://www.acunetix.com/blog/articles/windows-short-8-3-filenames-web-security-problem/

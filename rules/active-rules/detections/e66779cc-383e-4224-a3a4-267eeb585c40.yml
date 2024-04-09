@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: /ni
     - CommandLine|contains: -ni
 id: e66779cc-383e-4224-a3a4-267eeb585c40
+logsource:
+  category: process_creation
+  product: windows

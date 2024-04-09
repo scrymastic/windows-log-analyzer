@@ -17,3 +17,6 @@ detection:
     - CommandLine|not contains: ' -d '
     - CommandLine|not contains: ' -e kill '
 id: dec44ca7-61ad-493c-bfd7-8819c5faa09b
+logsource:
+  category: process_creation
+  product: windows

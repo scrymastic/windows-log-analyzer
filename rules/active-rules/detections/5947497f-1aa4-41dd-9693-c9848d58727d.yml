@@ -3,3 +3,7 @@ detection:
   - ScriptBlockText|contains: 'Unblock-File '
   - ScriptBlockText|contains: '-Path '
 id: 5947497f-1aa4-41dd-9693-c9848d58727d
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

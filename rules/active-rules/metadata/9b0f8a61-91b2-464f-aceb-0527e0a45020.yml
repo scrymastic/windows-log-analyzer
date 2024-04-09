@@ -5,9 +5,6 @@ falsepositives:
 - Maybe some system utilities in rare cases use linking keys for backward compatibility
 filename: registry_add_persistence_com_key_linking.yml
 level: medium
-logsource:
-  category: registry_add
-  product: windows
 modified: 2023/02/07
 references:
 - https://bohops.com/2018/08/18/abusing-the-com-registry-structure-part-2-loading-techniques-for-evasion-and-persistence/

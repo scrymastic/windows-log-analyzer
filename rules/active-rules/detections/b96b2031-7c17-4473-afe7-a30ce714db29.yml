@@ -6,3 +6,6 @@ detection:
     - Image|endswith: \fsi.exe
     - OriginalFileName|==: fsi.exe
 id: b96b2031-7c17-4473-afe7-a30ce714db29
+logsource:
+  category: process_creation
+  product: windows

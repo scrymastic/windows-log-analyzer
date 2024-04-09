@@ -4,3 +4,6 @@ detection:
   - TargetFilename|not endswith: .dll
   - TargetFilename|not endswith: .exe
 id: 409f8a98-4496-4aaa-818a-c931c0a8b832
+logsource:
+  category: file_event
+  product: windows

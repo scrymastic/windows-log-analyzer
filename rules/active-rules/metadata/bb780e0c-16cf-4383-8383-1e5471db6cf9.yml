@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_xor_commandline.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/30
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=65

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: image_load_iexplore_dcom_iertutil_dll_hijack.yml
 level: critical
-logsource:
-  category: image_load
-  product: windows
 modified: 2022/12/18
 references:
 - https://threathunterplaybook.com/hunts/windows/201009-RemoteDCOMIErtUtilDLLHijack/notebook.html

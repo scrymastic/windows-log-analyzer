@@ -6,10 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_susp_keylogger_activity.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://twitter.com/ScumBots/status/1610626724257046529

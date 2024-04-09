@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: image_load_side_load_abused_dlls_susp_paths.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://www.trendmicro.com/en_us/research/23/f/behind-the-scenes-unveiling-the-hidden-workings-of-earth-preta.html

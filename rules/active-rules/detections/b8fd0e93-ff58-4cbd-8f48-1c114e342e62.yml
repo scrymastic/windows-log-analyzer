@@ -36,3 +36,6 @@ detection:
   - TargetFilename|contains: \AppData\Local\Temp\__PSScriptPolicyTest_
   - TargetFilename|endswith: .ps1
 id: b8fd0e93-ff58-4cbd-8f48-1c114e342e62
+logsource:
+  category: file_event
+  product: windows

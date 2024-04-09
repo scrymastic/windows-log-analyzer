@@ -11,3 +11,6 @@ detection:
   - CommandLine|contains: '>'
   - CommandLine|contains: \\\\.\\pipe\\
 id: 9bd04a79-dabe-4f1f-a5ff-92430265c96b
+logsource:
+  category: process_creation
+  product: windows

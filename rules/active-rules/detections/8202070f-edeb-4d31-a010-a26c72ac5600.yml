@@ -64,3 +64,6 @@ detection:
   - CommandLine|contains: sc query
   - CommandLine|contains: ADManager Plus
 id: 8202070f-edeb-4d31-a010-a26c72ac5600
+logsource:
+  category: process_creation
+  product: windows

@@ -6,11 +6,6 @@ falsepositives:
 - Unknown
 filename: win_defender_asr_psexec_wmi.yml
 level: high
-logsource:
-  definition: 'Requirements:Enabled Block process creations originating from PSExec
-    and WMI commands from Attack Surface Reduction (GUID: d1e49aac-8f56-4280-b9ba-993a6d77406c)'
-  product: windows
-  service: windefend
 modified: 2022/12/25
 references:
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=twitter#block-process-creations-originating-from-psexec-and-wmi-commands

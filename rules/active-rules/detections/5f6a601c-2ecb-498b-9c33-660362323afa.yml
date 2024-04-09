@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: \Perflogs\
     - CommandLine|contains: :\Users\Public\
 id: 5f6a601c-2ecb-498b-9c33-660362323afa
+logsource:
+  category: process_creation
+  product: windows

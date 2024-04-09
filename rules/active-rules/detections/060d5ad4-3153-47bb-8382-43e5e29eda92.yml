@@ -5,3 +5,6 @@ detection:
     - Signed|==: 'false'
     - SignatureStatus|==: Expired
 id: 060d5ad4-3153-47bb-8382-43e5e29eda92
+logsource:
+  category: image_load
+  product: windows

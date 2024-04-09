@@ -10,3 +10,6 @@ detection:
   - CommandLine|contains: SmtpAddress
   - CommandLine|contains: -hidetableheaders
 id: 312d0384-401c-4b8b-abdf-685ffba9a332
+logsource:
+  category: process_creation
+  product: windows

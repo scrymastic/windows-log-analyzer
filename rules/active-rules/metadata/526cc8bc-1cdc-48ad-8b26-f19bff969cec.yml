@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: registry_delete_schtasks_hide_task_via_index_value_removal.yml
 level: medium
-logsource:
-  category: registry_delete
-  product: windows
 modified: 2023/02/08
 references:
 - https://blog.qualys.com/vulnerabilities-threat-research/2022/06/20/defending-against-scheduled-task-attacks-in-windows-environments

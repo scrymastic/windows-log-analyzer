@@ -15,3 +15,6 @@ detection:
   - CommandLine|contains: listena
   - CommandLine|contains: c=
 id: 322ed9ec-fcab-4f67-9a34-e7c6aef43614
+logsource:
+  category: process_creation
+  product: windows

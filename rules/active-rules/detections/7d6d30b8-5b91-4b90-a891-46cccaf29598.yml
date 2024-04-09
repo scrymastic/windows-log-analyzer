@@ -7,3 +7,6 @@ detection:
     - CommandLine|contains: PermitLocalCommand
     - CommandLine|contains: LocalCommand
 id: 7d6d30b8-5b91-4b90-a891-46cccaf29598
+logsource:
+  category: process_creation
+  product: windows

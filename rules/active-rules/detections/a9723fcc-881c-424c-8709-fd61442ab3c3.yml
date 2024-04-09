@@ -6,3 +6,7 @@ detection:
     - ScriptBlockText|contains: 'Get-Process '
   - ScriptBlockText|contains: '> $env:TEMP\'
 id: a9723fcc-881c-424c-8709-fd61442ab3c3
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

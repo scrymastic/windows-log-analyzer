@@ -2,3 +2,6 @@ detection:
 - and:
   - TargetObject|endswith: \Control Panel\Desktop\SCRNSAVE.EXE
 id: 67a6c006-3fbe-46a7-9074-2ba3b82c3000
+logsource:
+  category: registry_event
+  product: windows

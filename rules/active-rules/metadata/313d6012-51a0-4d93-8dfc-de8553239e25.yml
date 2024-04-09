@@ -14,9 +14,6 @@ falsepositives:
   to install and test their custom applications
 filename: proc_creation_win_winget_local_install_via_manifest.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/17
 references:
 - https://docs.microsoft.com/en-us/windows/package-manager/winget/install#local-install

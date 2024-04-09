@@ -2,3 +2,7 @@ detection:
 - and:
   - ScriptBlockText|contains: 'Enable-PSRemoting '
 id: 991a9744-f2f0-44f2-bd33-9092eba17dc3
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

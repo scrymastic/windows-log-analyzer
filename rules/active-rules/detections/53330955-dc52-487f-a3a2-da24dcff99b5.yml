@@ -3,3 +3,6 @@ detection:
   - EventType|==: SetValue
   - TargetObject|endswith: \Software\Winternals\BGInfo\Database
 id: 53330955-dc52-487f-a3a2-da24dcff99b5
+logsource:
+  category: registry_set
+  product: windows

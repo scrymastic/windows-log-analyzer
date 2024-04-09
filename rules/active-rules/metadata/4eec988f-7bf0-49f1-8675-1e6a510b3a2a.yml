@@ -7,9 +7,6 @@ falsepositives:
 - Installers and updaters may set currently in use files for rename after a reboot.
 filename: registry_set_susp_pendingfilerenameoperations.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: ''
 references:
 - https://any.run/report/3ecd4763ffc944fdc67a9027e459cd4f448b1a8d1b36147977afaf86bbf2a261/64b0ba45-e7ce-423b-9a1d-5b4ea59521e6

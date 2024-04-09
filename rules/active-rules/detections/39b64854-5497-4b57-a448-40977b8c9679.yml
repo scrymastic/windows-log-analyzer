@@ -70,3 +70,6 @@ detection:
     - ImageLoaded|endswith: \ef0e1725aaf0c6c972593f860531a2ea.sys
     - ImageLoaded|endswith: \5a4fe297c7d42539303137b6d75b150d.sys
 id: 39b64854-5497-4b57-a448-40977b8c9679
+logsource:
+  category: driver_load
+  product: windows

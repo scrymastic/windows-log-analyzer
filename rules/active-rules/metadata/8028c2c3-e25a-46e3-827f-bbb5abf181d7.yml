@@ -5,10 +5,6 @@ falsepositives:
 - Administrative scripts that use the same keywords.
 filename: posh_ps_wmimplant.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2022/12/25
 references:
 - https://github.com/FortyNorthSecurity/WMImplant

@@ -5,9 +5,6 @@ description: Detects the execution of "gpg.exe" from uncommon location. Often us
 falsepositives: []
 filename: proc_creation_win_gpg4win_portable_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/10
 references:
 - https://www.trendmicro.com/vinfo/vn/threat-encyclopedia/malware/ransom.bat.zarlock.a

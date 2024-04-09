@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: 'type '
   - CommandLine|contains: ' -raw'
 id: ee218c12-627a-4d27-9e30-d6fb2fe22ed2
+logsource:
+  category: process_creation
+  product: windows

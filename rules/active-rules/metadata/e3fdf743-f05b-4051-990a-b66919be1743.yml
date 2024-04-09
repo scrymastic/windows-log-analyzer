@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_set_fax_change_service_user.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2022/12/30
 references:
 - https://twitter.com/dottor_morte/status/1544652325570191361

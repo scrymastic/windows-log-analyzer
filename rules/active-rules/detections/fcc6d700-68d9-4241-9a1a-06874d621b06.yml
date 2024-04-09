@@ -21,3 +21,6 @@ detection:
     - TargetFilename|endswith: .vbs
     - TargetFilename|endswith: .wsf
 id: fcc6d700-68d9-4241-9a1a-06874d621b06
+logsource:
+  category: file_event
+  product: windows

@@ -16,9 +16,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_remote_access_tools_anydesk_revoked_cert.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://www.bleepingcomputer.com/news/security/anydesk-says-hackers-breached-its-production-servers-reset-passwords/

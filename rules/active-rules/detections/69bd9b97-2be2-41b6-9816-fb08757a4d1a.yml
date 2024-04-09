@@ -15,3 +15,6 @@ detection:
     - CommandLine|contains: certutil
     - CommandLine|contains: mshta.exe
 id: 69bd9b97-2be2-41b6-9816-fb08757a4d1a
+logsource:
+  category: process_creation
+  product: windows

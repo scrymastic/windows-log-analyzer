@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: https://
     - CommandLine|contains: \\\\
 id: f57c58b3-ee69-4ef5-9041-455bf39aaa89
+logsource:
+  category: process_creation
+  product: windows

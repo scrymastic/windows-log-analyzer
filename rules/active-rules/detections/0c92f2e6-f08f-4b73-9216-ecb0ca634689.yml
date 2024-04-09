@@ -15,3 +15,6 @@ detection:
     - CommandLine|contains: ProductVersion
     - CommandLine|contains: LegalCopyright
 id: 0c92f2e6-f08f-4b73-9216-ecb0ca634689
+logsource:
+  category: process_creation
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_tscon_rdp_redirect.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/16
 references:
 - http://www.korznikov.com/2017/03/0-day-or-feature-privilege-escalation.html

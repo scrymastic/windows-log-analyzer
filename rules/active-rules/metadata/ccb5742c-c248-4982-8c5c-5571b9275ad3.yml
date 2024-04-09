@@ -10,9 +10,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_findstr_recon_pipe_output.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/11
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/02cb591f75064ffe1e0df9ac3ed5972a2e491c97/atomics/T1057/T1057.md#atomic-test-6---discover-specific-process---tasklist

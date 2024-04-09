@@ -6,9 +6,6 @@ falsepositives:
   investigate if the action was legitimate
 filename: registry_set_sophos_av_tamper.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://redacted.com/blog/bianlian-ransomware-gang-gives-it-a-go/

@@ -7,3 +7,7 @@ detection:
   - ScriptBlockText|contains: ' -ErrorAction SilentlyContinue'
   - ScriptBlockText|contains: ' -Force'
 id: e0565f5d-d420-4e02-8a68-ac00d864f9cf
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -5,3 +5,7 @@ detection:
   - ScriptBlockText|contains: MsXml2.
   - ScriptBlockText|contains: XmlHttp
 id: 78aa1347-1517-4454-9982-b338d6df8343
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

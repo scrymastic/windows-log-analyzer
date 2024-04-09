@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_registry_cimprovider_dll_load.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://twitter.com/PhilipTsukerman/status/992021361106268161

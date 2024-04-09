@@ -26,3 +26,6 @@ detection:
     - Image|endswith: \wmic.exe
     - Image|endswith: \wscript.exe
 id: 0d34ed8b-1c12-4ff2-828c-16fc860b766d
+logsource:
+  category: process_creation
+  product: windows

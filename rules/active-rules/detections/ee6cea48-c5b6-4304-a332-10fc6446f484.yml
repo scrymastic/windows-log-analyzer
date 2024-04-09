@@ -4,3 +4,6 @@ detection:
   - Image|!==: C:\Windows\SysWOW64\appverif.exe
   - Image|!==: C:\Windows\System32\appverif.exe
 id: ee6cea48-c5b6-4304-a332-10fc6446f484
+logsource:
+  category: image_load
+  product: windows

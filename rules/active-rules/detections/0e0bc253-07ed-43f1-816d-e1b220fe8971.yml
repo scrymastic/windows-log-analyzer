@@ -5,3 +5,6 @@ detection:
   - or:
     - Image|not startswith: C:\Windows\System32\SystemResetPlatform\
 id: 0e0bc253-07ed-43f1-816d-e1b220fe8971
+logsource:
+  category: image_load
+  product: windows

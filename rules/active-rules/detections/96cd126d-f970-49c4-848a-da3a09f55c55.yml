@@ -4,3 +4,7 @@ detection:
     - ScriptBlockText|contains: 'Set-Alias '
     - ScriptBlockText|contains: 'New-Alias '
 id: 96cd126d-f970-49c4-848a-da3a09f55c55
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

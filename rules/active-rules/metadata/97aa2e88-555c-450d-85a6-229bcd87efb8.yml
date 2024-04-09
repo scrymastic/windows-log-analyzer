@@ -11,9 +11,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_creation_scr_binary_file.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: 2022/11/08
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.002/T1546.002.md

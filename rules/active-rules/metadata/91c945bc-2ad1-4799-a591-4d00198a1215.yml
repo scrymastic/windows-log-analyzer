@@ -6,9 +6,6 @@ falsepositives:
 - Users working with these data types or exchanging message files
 filename: win_security_susp_raccess_sensitive_fext.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2022/10/09
 references:
 - Internal Research

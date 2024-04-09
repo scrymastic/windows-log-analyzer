@@ -11,3 +11,6 @@ detection:
   - CommandLine|contains: add
   - CommandLine|contains: expires:never
 id: b9f0e6f5-09b4-4358-bae4-08408705bd5c
+logsource:
+  category: process_creation
+  product: windows

@@ -3,3 +3,7 @@ detection:
   - ScriptBlockText|contains: New-PSSession
   - ScriptBlockText|contains: '-ComputerName '
 id: a0edd39f-a0c6-4c17-8141-261f958e8d8f
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

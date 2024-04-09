@@ -1,8 +1,0 @@
-detection:
-- and:
-  - Image|endswith: \reg.exe
-  - CommandLine|contains: 'add '
-  - CommandLine|contains: SYSTEM\CurrentControlSet\Services\
-  - CommandLine|contains: ' ImagePath '
-  - CommandLine|None: ' -d '
-id: 9b0b7ac3-6223-47aa-a3fd-e8f211e637db

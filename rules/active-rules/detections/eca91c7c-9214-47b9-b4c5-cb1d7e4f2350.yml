@@ -11,3 +11,6 @@ detection:
   - or:
     - Application|not endswith: \tomcat\bin\tomcat8.exe
 id: eca91c7c-9214-47b9-b4c5-cb1d7e4f2350
+logsource:
+  product: windows
+  service: security

@@ -33,3 +33,6 @@ detection:
     - CommandLine|not contains: gfw-httpget-
     - CommandLine|not contains: AppData
 id: e218595b-bbe7-4ee5-8a96-f32a24ad3468
+logsource:
+  category: process_creation
+  product: windows

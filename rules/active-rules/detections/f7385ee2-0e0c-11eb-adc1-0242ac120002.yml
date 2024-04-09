@@ -6,3 +6,6 @@ detection:
   - ImagePath|contains: '&&'
   - ImagePath|contains: 'clipboard]::'
 id: f7385ee2-0e0c-11eb-adc1-0242ac120002
+logsource:
+  product: windows
+  service: system

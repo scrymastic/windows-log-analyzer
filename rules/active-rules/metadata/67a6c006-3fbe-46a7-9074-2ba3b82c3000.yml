@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate modification of screensaver
 filename: registry_event_modify_screensaver_binary_path.yml
 level: medium
-logsource:
-  category: registry_event
-  product: windows
 modified: 2021/11/27
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.002/T1546.002.md

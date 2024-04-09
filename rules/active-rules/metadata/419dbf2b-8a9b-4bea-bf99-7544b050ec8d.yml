@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate MWC use (unlikely in modern enterprise environments)
 filename: proc_creation_win_lolbin_workflow_compiler.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/03
 references:
 - https://posts.specterops.io/arbitrary-unsigned-code-execution-vector-in-microsoft-workflow-compiler-exe-3d9294bc5efb

@@ -9,10 +9,6 @@ falsepositives:
   contain the keyword as a reference or simply use it for detection.
 filename: posh_ps_hktl_winpwn.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - https://github.com/S3cur3Th1sSh1t/WinPwn

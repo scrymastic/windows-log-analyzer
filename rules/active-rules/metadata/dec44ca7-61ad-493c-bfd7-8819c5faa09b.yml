@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate use by Windows to kill processes opened via WSL (example VsCode WSL server)
 filename: proc_creation_win_wsl_lolbin_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/12
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Wsl/

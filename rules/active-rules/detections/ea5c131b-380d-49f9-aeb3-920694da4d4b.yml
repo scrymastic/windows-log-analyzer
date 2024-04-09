@@ -11,3 +11,6 @@ detection:
     - SignatureStatus|!==: valid
     - Signature|!==: Nextron Systems GmbH
 id: ea5c131b-380d-49f9-aeb3-920694da4d4b
+logsource:
+  category: image_load
+  product: windows

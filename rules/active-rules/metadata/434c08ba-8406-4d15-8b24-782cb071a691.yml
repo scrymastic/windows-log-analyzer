@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_powershell_decrypt_pattern.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/05
 references:
 - https://research.checkpoint.com/2023/chinese-threat-actors-targeting-europe-in-smugx-campaign/

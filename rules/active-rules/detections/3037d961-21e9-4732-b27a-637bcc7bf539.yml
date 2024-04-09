@@ -5,3 +5,6 @@ detection:
   - CommandLine|contains: '0xffffffff'
   - CommandLine|contains: -ForceV1
 id: 3037d961-21e9-4732-b27a-637bcc7bf539
+logsource:
+  category: process_creation
+  product: windows

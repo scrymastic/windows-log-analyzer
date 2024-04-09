@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_findstr_lsass.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/11
 references:
 - https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html?m=1

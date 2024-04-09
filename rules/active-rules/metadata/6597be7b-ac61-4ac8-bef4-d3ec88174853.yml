@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: registry_set_uac_bypass_winsat.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://github.com/hfiref0x/UACME

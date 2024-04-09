@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hh_html_help_susp_child_process.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/04/12
 references:
 - https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/chm-badness-delivers-a-banking-trojan/

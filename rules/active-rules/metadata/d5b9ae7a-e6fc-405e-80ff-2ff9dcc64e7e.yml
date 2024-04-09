@@ -7,9 +7,6 @@ falsepositives:
   environment
 filename: proc_creation_win_sysprep_appdata.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://www.symantec.com/blogs/threat-intelligence/thrip-hits-satellite-telecoms-defense-targets

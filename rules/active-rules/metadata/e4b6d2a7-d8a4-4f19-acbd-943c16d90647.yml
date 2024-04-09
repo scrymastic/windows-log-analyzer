@@ -7,9 +7,6 @@ falsepositives:
   for those scripts when needed.
 filename: proc_creation_win_powershell_susp_child_processes.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/30
 references:
 - https://twitter.com/ankit_anubhav/status/1518835408502620162

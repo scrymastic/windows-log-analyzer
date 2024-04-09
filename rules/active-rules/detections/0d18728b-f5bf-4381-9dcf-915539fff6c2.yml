@@ -6,3 +6,8 @@ detection:
     - QueryName|startswith: post.1
   - QueryName|contains: .stage.123456.
 id: 0d18728b-f5bf-4381-9dcf-915539fff6c2
+logsource:
+  definition: 'Requirements: Microsoft-Windows-DNS Client Events/Operational Event
+    Log must be enabled/collected in order to receive the events.'
+  product: windows
+  service: dns-client

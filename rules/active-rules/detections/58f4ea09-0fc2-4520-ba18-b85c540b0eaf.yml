@@ -18,3 +18,6 @@ detection:
     - Image|endswith: \forfiles.exe
     - Image|endswith: \scriptrunner.exe
 id: 58f4ea09-0fc2-4520-ba18-b85c540b0eaf
+logsource:
+  category: process_creation
+  product: windows

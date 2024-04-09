@@ -20,3 +20,7 @@ detection:
     - ScriptBlockText|contains: ' vacant_system '
     - ScriptBlockText|contains: ' logon_events '
 id: 8028c2c3-e25a-46e3-827f-bbb5abf181d7
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -6,3 +6,6 @@ detection:
   - or:
     - ImageLoaded|not contains: \AppData\local\Google\Chrome\Application\
 id: 72ca7c75-bf85-45cd-aca7-255d360e423c
+logsource:
+  category: image_load
+  product: windows

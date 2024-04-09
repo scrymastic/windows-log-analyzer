@@ -17,3 +17,6 @@ detection:
     - ParentCommandLine|endswith: /C whoami
     - CommandLine|endswith: conhost.exe 0xffffffff -ForceV1
 id: f35c5d71-b489-4e22-a115-f003df287317
+logsource:
+  category: process_creation
+  product: windows

@@ -7,3 +7,6 @@ detection:
   - CommandLine|contains: user32.dll,
   - CommandLine|contains: LockWorkStation
 id: 3b5b0213-0460-4e3f-8937-3abf98ff7dcc
+logsource:
+  category: process_creation
+  product: windows

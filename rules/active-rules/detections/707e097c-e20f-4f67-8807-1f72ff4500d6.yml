@@ -24,3 +24,6 @@ detection:
     - Details|contains: .dll
     - Details|contains: .ps1
 id: 707e097c-e20f-4f67-8807-1f72ff4500d6
+logsource:
+  category: registry_set
+  product: windows

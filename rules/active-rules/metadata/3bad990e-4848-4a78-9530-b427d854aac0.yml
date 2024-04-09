@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use of the utilities by legitimate user for legitimate reason
 filename: proc_creation_win_dsquery_domain_trust_discovery.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/02
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1482/T1482.md

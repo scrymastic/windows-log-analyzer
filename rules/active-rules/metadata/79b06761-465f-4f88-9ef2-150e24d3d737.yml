@@ -7,9 +7,6 @@ falsepositives:
   directory without any renaming
 filename: proc_creation_win_sysinternals_procdump_evasion.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/09
 references:
 - https://twitter.com/mrd0x/status/1480785527901204481

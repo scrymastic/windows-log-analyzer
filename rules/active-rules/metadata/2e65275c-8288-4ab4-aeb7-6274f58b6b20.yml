@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use of procdump by a developer or administrator
 filename: proc_creation_win_sysinternals_procdump.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/28
 references:
 - https://learn.microsoft.com/en-us/sysinternals/downloads/procdump

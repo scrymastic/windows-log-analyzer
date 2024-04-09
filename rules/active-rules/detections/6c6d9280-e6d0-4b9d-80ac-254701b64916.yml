@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: ' -syncwithWU '
   - CommandLine|contains: ' \\\\'
 id: 6c6d9280-e6d0-4b9d-80ac-254701b64916
+logsource:
+  category: process_creation
+  product: windows

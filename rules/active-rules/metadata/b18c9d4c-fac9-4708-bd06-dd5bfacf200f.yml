@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_hktl_c3_rundll32_pattern.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/05
 references:
 - https://github.com/FSecureLABS/C3/blob/11a081fd3be2aaf2a879f6b6e9a96ecdd24966ef/Src/NodeRelayDll/NodeRelayDll.cpp#L12

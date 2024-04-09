@@ -6,3 +6,6 @@ detection:
     - CommandLine|contains: ' -P '
     - CommandLine|contains: ' -R '
 id: 1c12727d-02bf-45ff-a9f3-d49806a3cf43
+logsource:
+  category: process_creation
+  product: windows

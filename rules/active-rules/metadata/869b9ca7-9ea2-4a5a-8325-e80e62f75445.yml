@@ -5,9 +5,6 @@ description: Detects suspicious child processes of the SQLServer process. This c
 falsepositives: []
 filename: proc_creation_win_mssql_susp_child_process.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/05/04
 references:
 - Internal Research

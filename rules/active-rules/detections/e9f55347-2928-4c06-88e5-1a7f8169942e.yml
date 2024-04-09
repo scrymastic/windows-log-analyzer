@@ -12,3 +12,6 @@ detection:
     - CommandLine|contains: '{4}'
     - CommandLine|contains: '{5}'
 id: e9f55347-2928-4c06-88e5-1a7f8169942e
+logsource:
+  category: process_creation
+  product: windows

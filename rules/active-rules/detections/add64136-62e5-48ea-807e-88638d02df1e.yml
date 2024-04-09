@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: createjournal
     - CommandLine|contains: setZeroData
 id: add64136-62e5-48ea-807e-88638d02df1e
+logsource:
+  category: process_creation
+  product: windows

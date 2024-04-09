@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_hktl_remote_cred_dump.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/01/05
 references:
 - https://github.com/Porchetta-Industries/CrackMapExec

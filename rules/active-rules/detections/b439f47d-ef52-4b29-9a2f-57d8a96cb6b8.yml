@@ -7,3 +7,6 @@ detection:
     - ImageLoaded|endswith: \wshom.ocx
     - ImageLoaded|endswith: \scrrun.dll
 id: b439f47d-ef52-4b29-9a2f-57d8a96cb6b8
+logsource:
+  category: image_load
+  product: windows

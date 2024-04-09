@@ -7,9 +7,6 @@ falsepositives:
 - Citrix
 filename: proc_creation_win_susp_commandline_path_traversal_evasion.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/29
 references:
 - https://twitter.com/hexacorn/status/1448037865435320323

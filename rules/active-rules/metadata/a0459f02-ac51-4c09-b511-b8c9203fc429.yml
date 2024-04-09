@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_cl_invocation.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/08/17
 references:
 - https://lolbas-project.github.io/lolbas/Scripts/Cl_invocation/

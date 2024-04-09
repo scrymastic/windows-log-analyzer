@@ -42,3 +42,6 @@ detection:
     - CommandLine|contains: (New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1
     - CommandLine|contains: Write-ChocolateyWarning
 id: 536e2947-3729-478c-9903-745aaffe60d2
+logsource:
+  category: process_creation
+  product: windows

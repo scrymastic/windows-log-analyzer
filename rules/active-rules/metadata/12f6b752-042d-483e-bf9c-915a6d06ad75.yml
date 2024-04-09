@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_powershell_disable_firewall.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/13
 references:
 - https://www.elastic.co/guide/en/security/current/windows-firewall-disabled-via-powershell.html

@@ -17,9 +17,6 @@ falsepositives:
   you might use.
 filename: dns_query_win_remote_access_software_domains_non_browsers.yml
 level: medium
-logsource:
-  category: dns_query
-  product: windows
 modified: 2023/09/12
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1219/T1219.md#atomic-test-4---gotoassist-files-detected-test-on-windows

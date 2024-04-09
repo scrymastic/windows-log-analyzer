@@ -16,3 +16,7 @@ detection:
     - Payload|contains: -HistorySaveStyle
     - Payload|contains: SaveNothing
 id: f99276ad-d122-4989-a09a-d00904a5f9d2
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows

@@ -8,3 +8,6 @@ detection:
   - ImageLoaded|not contains: \AppData\Local\
   - ImageLoaded|not contains: \ProgramData\
 id: db77ce78-7e28-4188-9337-cf30e2b3ba9f
+logsource:
+  category: image_load
+  product: windows

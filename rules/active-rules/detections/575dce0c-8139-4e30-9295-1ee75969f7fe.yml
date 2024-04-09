@@ -9,3 +9,6 @@ detection:
       - OriginalFileName|==: wscript.exe
   - CommandLine|contains: gatherNetworkInfo.vbs
 id: 575dce0c-8139-4e30-9295-1ee75969f7fe
+logsource:
+  category: process_creation
+  product: windows

@@ -12,3 +12,6 @@ detection:
     - Image|endswith: \schtasks.exe
     - Image|endswith: \whoami.exe
 id: 744a188b-0415-4792-896f-11ddb0588dbc
+logsource:
+  category: process_creation
+  product: windows

@@ -4,3 +4,6 @@ detection:
   - CommandLine|contains: ' -f'
   - CommandLine|contains: .zip
 id: cafeeba3-01da-4ab4-b6c4-a31b1d9730c7
+logsource:
+  category: process_creation
+  product: windows

@@ -9,3 +9,6 @@ detection:
       - CommandLine|contains: '.exe -tran '
       - CommandLine|contains: '.exe -slave '
 id: f5e3b62f-e577-4e59-931e-0a15b2b94e1e
+logsource:
+  category: process_creation
+  product: windows

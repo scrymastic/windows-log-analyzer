@@ -34,3 +34,6 @@ detection:
     - CommandLine|not contains: \autorun.hta
     - CommandLine|not contains: '{1E460BD7-F1C3-4B2E-88BF-4E770A288AF5}'
 id: 3a6586ad-127a-4d3b-a677-1e6eacdf8fde
+logsource:
+  category: process_creation
+  product: windows

@@ -9,9 +9,6 @@ falsepositives:
 - Unknown
 filename: dns_query_win_appinstaller.yml
 level: medium
-logsource:
-  category: dns_query
-  product: windows
 modified: 2023/11/09
 references:
 - https://twitter.com/notwhickey/status/1333900137232523264

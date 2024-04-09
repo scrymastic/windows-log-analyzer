@@ -7,9 +7,6 @@ falsepositives:
   value
 filename: registry_set_susp_printer_driver.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://twitter.com/SBousseaden/status/1410545674773467140

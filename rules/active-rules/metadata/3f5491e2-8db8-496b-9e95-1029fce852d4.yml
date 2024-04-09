@@ -7,9 +7,6 @@ falsepositives:
   Investigate the path of the DLL and its contents to determine if the action is authorized.
 filename: proc_creation_win_odbcconf_driver_install.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Odbcconf/

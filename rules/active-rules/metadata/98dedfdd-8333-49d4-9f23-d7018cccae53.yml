@@ -11,9 +11,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_reg_nolmhash.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/22
 references:
 - https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a

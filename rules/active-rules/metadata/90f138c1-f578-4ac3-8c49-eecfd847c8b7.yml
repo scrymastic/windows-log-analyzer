@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: win_bits_client_new_transfer_via_ip_address.yml
 level: high
-logsource:
-  product: windows
-  service: bits-client
 modified: 2023/03/27
 references:
 - https://blog.netspi.com/15-ways-to-download-a-file/#bitsadmin

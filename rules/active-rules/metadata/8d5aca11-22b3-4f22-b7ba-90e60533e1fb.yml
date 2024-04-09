@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: file_event_win_wmiexec_default_filename.yml
 level: critical
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/03/08
 references:
 - https://www.crowdstrike.com/blog/how-to-detect-and-prevent-impackets-wmiexec/

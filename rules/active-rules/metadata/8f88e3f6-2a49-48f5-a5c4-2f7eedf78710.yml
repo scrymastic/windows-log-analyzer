@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_java_remote_debugging.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/01
 references:
 - https://dzone.com/articles/remote-debugging-java-applications-with-jdwp

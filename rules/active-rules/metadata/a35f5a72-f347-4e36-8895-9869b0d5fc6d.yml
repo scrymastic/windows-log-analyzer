@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_netsh_fw_allow_program_in_susp_location.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/11
 references:
 - https://www.virusradar.com/en/Win32_Kasidet.AD/description

@@ -11,9 +11,6 @@ falsepositives:
   Caret, Discord, GitHub Desktop, etc.)
 filename: proc_creation_win_squirrel_download.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/09
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Squirrel/

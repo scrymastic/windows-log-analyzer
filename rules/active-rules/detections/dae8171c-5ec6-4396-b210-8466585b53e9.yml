@@ -5,3 +5,6 @@ detection:
   - ObjectName|==: servicesactive
   - PrivilegeList|==: SeTakeOwnershipPrivilege
 id: dae8171c-5ec6-4396-b210-8466585b53e9
+logsource:
+  product: windows
+  service: security

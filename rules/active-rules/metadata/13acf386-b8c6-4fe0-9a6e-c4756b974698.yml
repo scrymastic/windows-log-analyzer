@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate use of remote PowerShell execution
 filename: win_security_remote_powershell_session.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2022/10/09
 references:
 - https://threathunterplaybook.com/hunts/windows/190511-RemotePwshExecution/notebook.html

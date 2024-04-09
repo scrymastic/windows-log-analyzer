@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_system_kdcsvc_rc4_downgrade.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - https://support.microsoft.com/en-us/topic/kb5021131-how-to-manage-the-kerberos-protocol-changes-related-to-cve-2022-37966-fd837ac3-cdec-4e76-a6ec-86e67501407d

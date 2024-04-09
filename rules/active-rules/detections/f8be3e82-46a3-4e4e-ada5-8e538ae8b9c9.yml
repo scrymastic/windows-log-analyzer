@@ -9,3 +9,6 @@ detection:
     - CallTrace|contains: python3*.dll+
   - GrantedAccess|==: '0x1FFFFF'
 id: f8be3e82-46a3-4e4e-ada5-8e538ae8b9c9
+logsource:
+  category: process_access
+  product: windows

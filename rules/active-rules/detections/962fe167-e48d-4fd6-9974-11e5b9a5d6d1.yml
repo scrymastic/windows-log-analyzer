@@ -33,3 +33,6 @@ detection:
   - or:
     - ProcessName|not contains: \SteamLibrary\steamapps\
 id: 962fe167-e48d-4fd6-9974-11e5b9a5d6d1
+logsource:
+  product: windows
+  service: security

@@ -7,3 +7,8 @@ detection:
     - RelativeTargetName|endswith: -stdout
     - RelativeTargetName|endswith: -stderr
 id: c462f537-a1e3-41a6-b5fc-b2c2cef9bf82
+logsource:
+  definition: The advanced audit policy setting "Object Access > Audit Detailed File
+    Share" must be configured for Success/Failure
+  product: windows
+  service: security

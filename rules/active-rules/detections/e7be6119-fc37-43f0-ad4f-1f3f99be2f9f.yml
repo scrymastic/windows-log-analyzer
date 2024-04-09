@@ -19,3 +19,6 @@ detection:
     - CommandLine|contains: \config\RegBack\system
     - CommandLine|contains: \config\RegBack\security
 id: e7be6119-fc37-43f0-ad4f-1f3f99be2f9f
+logsource:
+  category: process_creation
+  product: windows

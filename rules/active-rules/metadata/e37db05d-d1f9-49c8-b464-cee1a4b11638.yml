@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_pua_rclone_execution.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/05
 references:
 - https://research.nccgroup.com/2021/05/27/detecting-rclone-an-effective-tool-for-exfiltration/

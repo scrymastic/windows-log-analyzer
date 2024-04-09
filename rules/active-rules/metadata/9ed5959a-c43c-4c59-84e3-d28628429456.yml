@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: image_load_uac_bypass_iscsicpl.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2022/07/25
 references:
 - https://github.com/hackerhouse-opensource/iscsicpl_bypassUAC

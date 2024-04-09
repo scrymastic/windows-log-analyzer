@@ -4,3 +4,6 @@ detection:
   - CommandLine|contains: NoLMHash
   - CommandLine|contains: ' 0'
 id: 98dedfdd-8333-49d4-9f23-d7018cccae53
+logsource:
+  category: process_creation
+  product: windows

@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_hktl_gmer.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/13
 references:
 - http://www.gmer.net/

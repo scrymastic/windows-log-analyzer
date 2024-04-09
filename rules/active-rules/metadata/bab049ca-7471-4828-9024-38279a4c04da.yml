@@ -8,9 +8,6 @@ falsepositives:
   for operations
 filename: proc_creation_win_virtualbox_execution.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/07/14
 references:
 - https://news.sophos.com/en-us/2020/05/21/ragnar-locker-ransomware-deploys-virtual-machine-to-dodge-security/

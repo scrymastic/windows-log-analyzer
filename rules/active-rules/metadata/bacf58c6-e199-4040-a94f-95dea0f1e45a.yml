@@ -11,10 +11,6 @@ falsepositives:
 - Unlikely
 filename: win_security_wfp_endpoint_agent_blocked.yml
 level: high
-logsource:
-  definition: 'Requirements: Audit Filtering Platform Connection needs to be enabled'
-  product: windows
-  service: security
 modified: ''
 references:
 - https://github.com/netero1010/EDRSilencer

@@ -10,9 +10,6 @@ falsepositives:
   then they should filtered out or allowed.
 filename: proc_creation_win_remote_access_tools_screenconnect_remote_execution_susp.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/02/28
 references:
 - https://www.mandiant.com/resources/telegram-malware-iranian-espionage

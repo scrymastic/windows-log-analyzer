@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate usage of Cloudflared.
 filename: proc_creation_win_cloudflared_tunnel_cleanup.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/21
 references:
 - https://github.com/cloudflare/cloudflared

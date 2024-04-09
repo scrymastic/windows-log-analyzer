@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_netsh_wifi_credential_harvesting.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/13
 references:
 - https://blog.malwarebytes.com/threat-analysis/2020/04/new-agenttesla-variant-steals-wifi-credentials/

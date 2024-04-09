@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: file_event_win_office_outlook_susp_macro_creation.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://www.mdsec.co.uk/2020/11/a-fresh-outlook-on-mail-based-persistence/

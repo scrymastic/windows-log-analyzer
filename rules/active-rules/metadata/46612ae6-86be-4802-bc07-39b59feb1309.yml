@@ -11,10 +11,6 @@ falsepositives:
 - Unknown
 filename: file_access_win_dpapi_master_key_access.yml
 level: medium
-logsource:
-  category: file_access
-  definition: 'Requirements: Microsoft-Windows-Kernel-File ETW provider'
-  product: windows
 modified: 2023/12/18
 references:
 - http://blog.harmj0y.net/redteaming/operational-guidance-for-offensive-user-dpapi-abuse/

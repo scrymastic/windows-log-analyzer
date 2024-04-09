@@ -7,9 +7,6 @@ falsepositives:
   Add additional filters or reduce level depending on the level of noise
 filename: file_event_win_bloodhound_collection.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/03/29
 references:
 - https://academy.hackthebox.com/course/preview/active-directory-bloodhound/bloodhound--data-collection

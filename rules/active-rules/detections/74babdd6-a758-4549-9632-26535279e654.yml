@@ -10,3 +10,6 @@ detection:
       - TargetFilename|endswith: .bat.exe
       - TargetFilename|endswith: .sys.exe
 id: 74babdd6-a758-4549-9632-26535279e654
+logsource:
+  category: file_event
+  product: windows

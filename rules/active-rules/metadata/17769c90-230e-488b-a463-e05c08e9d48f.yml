@@ -7,9 +7,6 @@ falsepositives:
 - Other Cmdlets that may use the same parameters
 filename: proc_creation_win_powershell_defender_exclusion.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/05/12
 references:
 - https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/configure-process-opened-file-exclusions-microsoft-defender-antivirus

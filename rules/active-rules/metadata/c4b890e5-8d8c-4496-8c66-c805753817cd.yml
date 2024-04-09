@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_tampering_susp_process_hollowing.yml
 level: medium
-logsource:
-  category: process_tampering
-  product: windows
 modified: 2023/11/28
 references:
 - https://twitter.com/SecurePeacock/status/1486054048390332423?s=20

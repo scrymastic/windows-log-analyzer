@@ -13,3 +13,6 @@ detection:
   - ImageLoaded|not endswith: \Epic Games\Launcher\Engine\Binaries\ThirdParty\DbgHelp\dbghelp.dll
   - ImageLoaded|not endswith: \Epic Games\MagicLegends\x86\dbghelp.dll
 id: 6414b5cd-b19d-447e-bb5e-9f03940b5784
+logsource:
+  category: image_load
+  product: windows

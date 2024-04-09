@@ -13,9 +13,6 @@ falsepositives:
   and don't rely on it.
 filename: registry_set_susp_service_installed.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://web.archive.org/web/20200419024230/https://blog.dylan.codes/evading-sysmon-and-windows-event-logging/

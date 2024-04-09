@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_uac_bypass_icmluautil.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2022/09/27
 references:
 - https://www.elastic.co/guide/en/security/current/uac-bypass-via-icmluautil-elevated-com-interface.html

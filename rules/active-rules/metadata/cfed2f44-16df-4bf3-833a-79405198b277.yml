@@ -13,9 +13,6 @@ falsepositives:
   spaces
 filename: net_connection_win_dllhost_non_local_ip.yml
 level: medium
-logsource:
-  category: network_connection
-  product: windows
 modified: 2024/03/12
 references:
 - https://redcanary.com/blog/child-processes/

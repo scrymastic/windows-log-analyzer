@@ -8,3 +8,7 @@ detection:
     - ScriptBlockText|contains: ' -doh '
     - ScriptBlockText|contains: ' -t '
 id: d59d7842-9a21-4bc6-ba98-64bfe0091355
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

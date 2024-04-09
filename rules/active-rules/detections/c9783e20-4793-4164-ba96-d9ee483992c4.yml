@@ -5,3 +5,6 @@ detection:
     - OriginalFileName|==: ksetup.exe
   - CommandLine|contains: ' /ChangePassword '
 id: c9783e20-4793-4164-ba96-d9ee483992c4
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_susp_recycle_bin_fake_exec.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/12/11
 references:
 - https://www.mandiant.com/resources/blog/infected-usb-steal-secrets

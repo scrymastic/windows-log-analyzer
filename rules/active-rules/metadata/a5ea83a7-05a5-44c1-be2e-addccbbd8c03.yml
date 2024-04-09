@@ -5,9 +5,6 @@ falsepositives:
 - Actions of a legitimate telnet client
 filename: image_load_uac_bypass_via_dism.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2022/12/25
 references:
 - https://steemit.com/utopian-io/@ah101/uac-bypassing-utility

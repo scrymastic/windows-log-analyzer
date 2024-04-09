@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: -GetCACAPS
   - CommandLine|contains: http
 id: 70ad0861-d1fe-491c-a45f-fa48148a300d
+logsource:
+  category: process_creation
+  product: windows

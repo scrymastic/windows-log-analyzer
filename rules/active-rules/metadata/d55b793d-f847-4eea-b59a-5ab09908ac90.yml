@@ -5,9 +5,6 @@ description: Detects suspicious child processes of the Veeam service process. Th
 falsepositives: []
 filename: proc_creation_win_mssql_veaam_susp_child_processes.yml
 level: critical
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://labs.withsecure.com/publications/fin7-target-veeam-servers

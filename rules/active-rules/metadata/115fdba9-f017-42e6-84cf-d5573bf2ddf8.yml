@@ -5,10 +5,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_etw_trace_evasion.yml
 level: high
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2022/11/25
 references:
 - https://medium.com/palantir/tampering-with-windows-event-tracing-background-offense-and-defense-4be7ac62ac63

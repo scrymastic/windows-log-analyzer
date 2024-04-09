@@ -12,3 +12,7 @@ detection:
     - Path|not endswith: \bin\servicecontrol.ps1
     - ScriptBlockText|not contains: '`r`n'
 id: f3a98ce4-6164-4dd4-867c-4d83de7eca51
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

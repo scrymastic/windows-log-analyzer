@@ -2,3 +2,7 @@ detection:
 - and:
   - ScriptBlockText|contains: New-LocalUser
 id: 243de76f-4725-4f2e-8225-a8a69b15ad61
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

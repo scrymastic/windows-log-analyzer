@@ -14,3 +14,6 @@ detection:
     - CommandLine|contains: ' a '
     - CommandLine|contains: ' u '
 id: 9fbf5927-5261-4284-a71d-f681029ea574
+logsource:
+  category: process_creation
+  product: windows

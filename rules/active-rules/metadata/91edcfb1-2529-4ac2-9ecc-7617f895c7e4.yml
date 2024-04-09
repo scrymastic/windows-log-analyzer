@@ -12,9 +12,6 @@ falsepositives:
 - Other currently unknown false positives
 filename: proc_creation_win_susp_weak_or_abused_passwords.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2024/02/23
 references:
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/espionage-asia-governments

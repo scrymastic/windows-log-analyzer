@@ -18,9 +18,6 @@ falsepositives:
   it is a machine name
 filename: win_system_kdcsvc_cert_use_no_strong_mapping.yml
 level: medium
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16

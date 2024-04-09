@@ -9,9 +9,6 @@ falsepositives:
 - Legitimate use of Devtunnels will also trigger this.
 filename: net_connection_win_susp_devtunnel_connection.yml
 level: medium
-logsource:
-  category: network_connection
-  product: windows
 modified: ''
 references:
 - https://blueteamops.medium.com/detecting-dev-tunnels-16f0994dc3e2

@@ -12,9 +12,6 @@ falsepositives:
 - Unknown
 filename: win_audit_cve.yml
 level: critical
-logsource:
-  product: windows
-  service: application
 modified: 2022/10/22
 references:
 - https://twitter.com/VM_vivisector/status/1217190929330655232

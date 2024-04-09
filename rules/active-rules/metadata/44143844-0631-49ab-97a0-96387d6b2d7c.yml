@@ -6,9 +6,6 @@ falsepositives:
 - Other parent processes other than notepad++ using GUP that are not currently identified
 filename: proc_creation_win_gup_download.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/03/02
 references:
 - https://twitter.com/nas_bench/status/1535322182863179776

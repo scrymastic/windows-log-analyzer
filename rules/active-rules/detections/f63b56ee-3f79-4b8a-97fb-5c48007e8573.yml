@@ -4,3 +4,6 @@ detection:
   - CommandLine|contains: /config
   - CommandLine|contains: /serverlevelplugindll
 id: f63b56ee-3f79-4b8a-97fb-5c48007e8573
+logsource:
+  category: process_creation
+  product: windows

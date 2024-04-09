@@ -18,3 +18,6 @@ detection:
     - CommandLine|contains: nanodump
     - CommandLine|contains: .dmp
 id: ffa6861c-4461-4f59-8a41-578c39f3f23e
+logsource:
+  category: process_creation
+  product: windows

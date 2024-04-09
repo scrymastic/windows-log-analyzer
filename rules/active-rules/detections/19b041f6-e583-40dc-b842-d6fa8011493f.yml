@@ -208,3 +208,7 @@ detection:
       - Hash|contains: IMPHASH=40445337761D80CF465136FAFB1F63E6
       - Hash|contains: IMPHASH=8A790F401B29FA87BC1E56F7272B3AA6
 id: 19b041f6-e583-40dc-b842-d6fa8011493f
+logsource:
+  category: create_stream_hash
+  definition: 'Requirements: Sysmon config with Imphash logging activated'
+  product: windows

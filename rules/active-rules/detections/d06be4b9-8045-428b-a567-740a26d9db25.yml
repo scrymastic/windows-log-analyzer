@@ -6,3 +6,6 @@ detection:
   - CommandLine|contains: /S
   - CommandLine|contains: /C
 id: d06be4b9-8045-428b-a567-740a26d9db25
+logsource:
+  category: process_creation
+  product: windows

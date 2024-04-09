@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_susp_default_gpo_dir_write.yml
 level: medium
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://redcanary.com/blog/intelligence-insights-november-2021/

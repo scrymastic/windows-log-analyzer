@@ -7,9 +7,6 @@ falsepositives:
 - Legitimate use of SysInternals tools. Filter the legitimate paths used in your environment
 filename: registry_add_pua_sysinternals_susp_execution_via_eula.yml
 level: medium
-logsource:
-  category: registry_add
-  product: windows
 modified: 2023/02/07
 references:
 - https://twitter.com/Moti_B/status/1008587936735035392

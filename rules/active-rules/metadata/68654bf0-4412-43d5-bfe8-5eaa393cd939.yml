@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: image_load_side_load_jsschhlp.yml
 level: medium
-logsource:
-  category: image_load
-  product: windows
 modified: ''
 references:
 - https://www.welivesecurity.com/2022/12/14/unmasking-mirrorface-operation-liberalface-targeting-japanese-political-entities/

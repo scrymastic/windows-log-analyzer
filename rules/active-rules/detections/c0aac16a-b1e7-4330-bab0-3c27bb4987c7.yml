@@ -9,3 +9,6 @@ detection:
     - SourceImage|contains: :\Windows\Temp\
     - SourceImage|contains: \AppData\Local\Temp\
 id: c0aac16a-b1e7-4330-bab0-3c27bb4987c7
+logsource:
+  category: create_remote_thread
+  product: windows

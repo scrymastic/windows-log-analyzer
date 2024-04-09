@@ -8,3 +8,6 @@ detection:
     - TargetFilename|endswith: \Windows\System32\WindowsPowerShell\v1.0\profile.ps1
     - TargetFilename|endswith: \WindowsPowerShell\profile.ps1
 id: b5b78988-486d-4a80-b991-930eff3ff8bf
+logsource:
+  category: file_event
+  product: windows

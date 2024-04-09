@@ -6,9 +6,6 @@ falsepositives:
 - Access to badly maintained internal or development systems
 filename: proc_creation_win_curl_insecure_porxy_or_doh.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://curl.se/docs/manpage.html

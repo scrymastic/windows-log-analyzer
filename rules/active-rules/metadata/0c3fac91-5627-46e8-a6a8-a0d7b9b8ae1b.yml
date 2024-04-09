@@ -13,9 +13,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_susp_get_variable.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: ''
 references:
 - https://blog.malwarebytes.com/threat-intelligence/2022/04/colibri-loader-combines-task-scheduler-and-powershell-in-clever-persistence-technique/

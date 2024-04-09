@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate use of process hacker or system informer by developers or system administrators
 filename: driver_load_win_pua_process_hacker.yml
 level: high
-logsource:
-  category: driver_load
-  product: windows
 modified: 2023/05/08
 references:
 - https://processhacker.sourceforge.io/

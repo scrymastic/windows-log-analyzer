@@ -8,9 +8,6 @@ falsepositives:
 - Legit usage of scripts
 filename: proc_creation_win_lolbin_pcwrun.yml
 level: low
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://twitter.com/pabraeken/status/991335019833708544

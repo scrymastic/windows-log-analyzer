@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: win_system_lpe_indicators_tabtip.yml
 level: high
-logsource:
-  product: windows
-  service: system
 modified: 2023/04/14
 references:
 - https://github.com/antonioCoco/JuicyPotatoNG

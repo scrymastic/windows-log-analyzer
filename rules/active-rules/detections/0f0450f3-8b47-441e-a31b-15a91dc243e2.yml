@@ -7,3 +7,6 @@ detection:
   - CommandLine|contains: OutFile
   - CommandLine|contains: .dll
 id: 0f0450f3-8b47-441e-a31b-15a91dc243e2
+logsource:
+  category: process_creation
+  product: windows

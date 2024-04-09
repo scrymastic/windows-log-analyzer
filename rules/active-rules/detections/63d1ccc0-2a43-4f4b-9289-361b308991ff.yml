@@ -13,3 +13,6 @@ detection:
       - ParentImage|endswith: \wab.exe
       - ParentImage|endswith: \wabmig.exe
 id: 63d1ccc0-2a43-4f4b-9289-361b308991ff
+logsource:
+  category: process_creation
+  product: windows

@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administration
 filename: proc_creation_win_wmic_uninstall_security_products.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/14
 references:
 - https://twitter.com/cglyer/status/1355171195654709249

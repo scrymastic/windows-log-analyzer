@@ -6,10 +6,6 @@ falsepositives:
 - Unknown
 filename: posh_ps_susp_alias_obfscuation.yml
 level: low
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: ''
 references:
 - Internal Research

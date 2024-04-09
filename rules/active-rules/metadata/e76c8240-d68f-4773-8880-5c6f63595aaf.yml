@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate usage by software developers/testers
 filename: image_load_dll_tttracer_module_load.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2022/12/02
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Tttracer/

@@ -5,9 +5,6 @@ falsepositives:
 - Unlikely
 filename: proc_creation_win_powershell_base64_reflection_assembly_load.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/01/30
 references:
 - https://github.com/Neo23x0/Raccine/blob/20a569fa21625086433dcce8bb2765d0ea08dcb6/yara/mal_revil.yar

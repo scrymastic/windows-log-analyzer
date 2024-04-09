@@ -11,3 +11,6 @@ detection:
     - CommandLine|contains: "Utilisateurs du Bureau \xE0 distance"
     - CommandLine|contains: Usuarios de escritorio remoto
 id: c8a180d6-47a3-4345-a609-53f9c3d834fc
+logsource:
+  category: process_creation
+  product: windows

@@ -9,3 +9,6 @@ detection:
       - CommandLine|contains: xyz123456.exe
       - CommandLine|contains: PurpleSharp
 id: ff23ffbc-3378-435e-992f-0624dcf93ab4
+logsource:
+  category: process_creation
+  product: windows

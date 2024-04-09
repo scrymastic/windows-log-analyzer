@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_lolbin_dctask64_proc_inject.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2021/11/27
 references:
 - https://twitter.com/gN3mes1s/status/1222088214581825540

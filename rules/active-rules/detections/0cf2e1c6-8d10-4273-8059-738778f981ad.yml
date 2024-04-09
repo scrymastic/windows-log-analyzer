@@ -3,3 +3,6 @@ detection:
   - EventType|==: SetValue
   - TargetObject|endswith: \Microsoft\Windows\Windows Error Reporting\Hangs\ReflectDebugger
 id: 0cf2e1c6-8d10-4273-8059-738778f981ad
+logsource:
+  category: registry_set
+  product: windows

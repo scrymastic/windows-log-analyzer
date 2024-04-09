@@ -6,10 +6,6 @@ falsepositives:
 - Use of Get-Command and Get-Help modules to reference Invoke-WebRequest and Start-BitsTransfer.
 filename: posh_ps_web_request_cmd_and_cmdlets.yml
 level: medium
-logsource:
-  category: ps_script
-  definition: 'Requirements: Script Block Logging must be enabled'
-  product: windows
 modified: 2023/01/10
 references:
 - https://4sysops.com/archives/use-powershell-to-download-a-file-with-http-https-and-ftp/

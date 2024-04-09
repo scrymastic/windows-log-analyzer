@@ -5,9 +5,6 @@ falsepositives:
 - Legitimate administration
 filename: proc_creation_win_reg_volsnap_disable.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/12/15
 references:
 - https://twitter.com/0gtweet/status/1354766164166115331

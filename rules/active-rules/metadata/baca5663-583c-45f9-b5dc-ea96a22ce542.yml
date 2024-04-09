@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: registry_event_stickykey_like_backdoor.yml
 level: critical
-logsource:
-  category: registry_event
-  product: windows
 modified: 2022/11/26
 references:
 - https://blogs.technet.microsoft.com/jonathantrull/2016/10/03/detecting-sticky-key-backdoors/

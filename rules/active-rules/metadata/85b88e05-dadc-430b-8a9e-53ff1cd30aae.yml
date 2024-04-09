@@ -12,9 +12,6 @@ falsepositives:
   image.
 filename: registry_set_desktop_background_change.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: ''
 references:
 - https://www.attackiq.com/2023/09/20/emulating-rhysida/

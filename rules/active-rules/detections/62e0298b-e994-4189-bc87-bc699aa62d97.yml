@@ -13,3 +13,6 @@ detection:
     - CommandLine|contains: C:\Windows\Temp\
     - CommandLine|contains: C:\ProgramData\
 id: 62e0298b-e994-4189-bc87-bc699aa62d97
+logsource:
+  category: process_creation
+  product: windows

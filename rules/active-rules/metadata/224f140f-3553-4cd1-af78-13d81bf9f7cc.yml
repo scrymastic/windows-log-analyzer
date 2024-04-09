@@ -5,9 +5,6 @@ falsepositives:
 - Administrative activity
 filename: proc_creation_win_tscon_rdp_session_hijacking.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/Moti_B/status/909449115477659651

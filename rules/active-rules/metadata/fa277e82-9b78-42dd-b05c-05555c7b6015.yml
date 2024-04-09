@@ -8,9 +8,6 @@ falsepositives:
   custom private packages
 filename: registry_set_winget_enable_local_manifest.yml
 level: medium
-logsource:
-  category: registry_set
-  product: windows
 modified: 2023/08/17
 references:
 - https://github.com/nasbench/Misc-Research/tree/b9596e8109dcdb16ec353f316678927e507a5b8d/LOLBINs/Winget

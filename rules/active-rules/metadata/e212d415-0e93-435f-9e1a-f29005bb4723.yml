@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_office_outlook_susp_child_processes_remote.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/09
 references:
 - https://github.com/sensepost/ruler

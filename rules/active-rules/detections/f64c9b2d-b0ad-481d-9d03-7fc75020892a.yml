@@ -6,3 +6,6 @@ detection:
   - Image|not startswith: ' C:\Program Files (x86)\Siber Systems\AI RoboForm\'
   - Image|not startswith: ' C:\Program Files\Siber Systems\AI RoboForm\'
 id: f64c9b2d-b0ad-481d-9d03-7fc75020892a
+logsource:
+  category: image_load
+  product: windows

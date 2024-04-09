@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_agentexecutor_susp_usage.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://twitter.com/lefterispan/status/1286259016436514816

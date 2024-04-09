@@ -4,3 +4,6 @@ detection:
   - CommandLine|contains: .dll
   - CommandLine|contains: StartNodeRelay
 id: b18c9d4c-fac9-4708-bd06-dd5bfacf200f
+logsource:
+  category: process_creation
+  product: windows

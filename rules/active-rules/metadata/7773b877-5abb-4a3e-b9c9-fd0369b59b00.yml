@@ -5,9 +5,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_wmic_remote_execution.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/

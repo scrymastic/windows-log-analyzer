@@ -54,3 +54,7 @@ detection:
     - ScriptBlockText|contains: Request-SPNTicket
     - ScriptBlockText|contains: Resolve-IPAddress
 id: dcd74b95-3f36-4ed9-9598-0490951643aa
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -4,3 +4,6 @@ detection:
   - EventType|==: SetValue
   - Details|contains: Microsoft.HybridConnectionManager.Listener.exe
 id: ac8866c7-ce44-46fd-8c17-b24acff96ca8
+logsource:
+  category: registry_event
+  product: windows

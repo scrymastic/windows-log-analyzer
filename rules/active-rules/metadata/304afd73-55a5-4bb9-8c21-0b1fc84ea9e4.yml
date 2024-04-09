@@ -7,9 +7,6 @@ falsepositives:
 - Unlikely
 filename: file_event_win_sysinternals_psexec_service_key.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/02/23
 references:
 - https://aboutdfir.com/the-key-to-identify-psexec/

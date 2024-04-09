@@ -5,9 +5,6 @@ description: Detects when a all the rules have been deleted from the Windows Def
 falsepositives: []
 filename: win_firewall_as_delete_all_rules.yml
 level: high
-logsource:
-  product: windows
-  service: firewall-as
 modified: 2024/01/22
 references:
 - https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd364427(v=ws.10)

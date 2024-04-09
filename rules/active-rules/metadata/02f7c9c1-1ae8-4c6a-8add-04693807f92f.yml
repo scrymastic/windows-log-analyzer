@@ -7,9 +7,6 @@ falsepositives:
 - Anti-Virus
 filename: win_security_access_token_abuse.yml
 level: medium
-logsource:
-  product: windows
-  service: security
 modified: 2023/04/26
 references:
 - https://www.elastic.co/fr/blog/how-attackers-abuse-access-token-manipulation

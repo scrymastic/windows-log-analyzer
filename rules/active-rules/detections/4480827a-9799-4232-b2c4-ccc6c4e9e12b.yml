@@ -8,3 +8,6 @@ detection:
   - CommandLine|contains: ' http'
   - CommandLine|contains: ' C:\windows\win.ini '
 id: 4480827a-9799-4232-b2c4-ccc6c4e9e12b
+logsource:
+  category: process_creation
+  product: windows

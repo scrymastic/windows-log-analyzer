@@ -11,3 +11,8 @@ detection:
     - ServiceFileName|contains: comspec
     - ServiceFileName|contains: iex
 id: cd0f7229-d16f-42de-8fe3-fba365fbcb3a
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security

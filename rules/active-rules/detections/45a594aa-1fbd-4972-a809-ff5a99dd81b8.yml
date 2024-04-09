@@ -9,3 +9,6 @@ detection:
   - CommandLine|contains: Get-Content
   - CommandLine|contains: -Stream
 id: 45a594aa-1fbd-4972-a809-ff5a99dd81b8
+logsource:
+  category: process_creation
+  product: windows

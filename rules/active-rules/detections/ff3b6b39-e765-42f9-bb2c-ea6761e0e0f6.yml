@@ -17,3 +17,6 @@ detection:
     - Image|endswith: \mstsc.exe
     - OriginalFileName|==: mstsc.exe
 id: ff3b6b39-e765-42f9-bb2c-ea6761e0e0f6
+logsource:
+  category: process_creation
+  product: windows

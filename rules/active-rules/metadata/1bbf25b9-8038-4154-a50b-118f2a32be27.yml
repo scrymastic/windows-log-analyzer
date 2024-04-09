@@ -7,9 +7,6 @@ falsepositives:
 - Unknown
 filename: win_security_susp_local_anon_logon_created.yml
 level: high
-logsource:
-  product: windows
-  service: security
 modified: 2022/10/09
 references:
 - https://twitter.com/SBousseaden/status/1189469425482829824

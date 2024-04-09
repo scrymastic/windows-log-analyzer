@@ -15,3 +15,6 @@ detection:
     - CommandLine|contains: .png
     - CommandLine|contains: .txt
 id: e9f8f8cc-07cc-4e81-b724-f387db9175e4
+logsource:
+  category: process_creation
+  product: windows

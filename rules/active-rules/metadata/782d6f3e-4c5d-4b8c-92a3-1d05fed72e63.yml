@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate administration activity
 filename: proc_creation_win_netsh_port_forwarding_3389.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/02/13
 references:
 - https://www.fireeye.com/blog/threat-research/2019/01/bypassing-network-restrictions-through-rdp-tunneling.html

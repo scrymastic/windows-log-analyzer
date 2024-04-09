@@ -19,3 +19,6 @@ detection:
     - CommandLine|contains: .tif
     - CommandLine|contains: .tiff
 id: 4aa6040b-3f28-44e3-a769-9208e5feb5ec
+logsource:
+  category: process_creation
+  product: windows

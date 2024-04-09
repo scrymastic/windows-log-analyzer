@@ -9,3 +9,7 @@ detection:
     - ScriptBlockText|contains: EnableSmartScreen
     - ScriptBlockText|contains: ShellSmartScreenLevel
 id: b7216a7d-687e-4c8d-82b1-3080b2ad961f
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

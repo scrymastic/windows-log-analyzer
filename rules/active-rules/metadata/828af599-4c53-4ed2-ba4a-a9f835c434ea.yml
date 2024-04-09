@@ -6,9 +6,6 @@ falsepositives:
 - Unlikely
 filename: image_load_side_load_ualapi.yml
 level: high
-logsource:
-  category: image_load
-  product: windows
 modified: 2022/06/02
 references:
 - https://windows-internals.com/faxing-your-way-to-system/

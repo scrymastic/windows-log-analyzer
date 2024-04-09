@@ -7,9 +7,6 @@ falsepositives:
   a legtimate application
 filename: win_appxdeployment_server_mal_appx_names.yml
 level: medium
-logsource:
-  product: windows
-  service: appxdeployment-server
 modified: 2023/01/12
 references:
 - https://www.sentinelone.com/labs/inside-malicious-windows-apps-for-malware-deployment/

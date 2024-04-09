@@ -6,3 +6,6 @@ detection:
     - CommandLine|contains: ^USER^
     - CommandLine|contains: ^PASS^
 id: aaafa146-074c-11eb-adc1-0242ac120002
+logsource:
+  category: process_creation
+  product: windows

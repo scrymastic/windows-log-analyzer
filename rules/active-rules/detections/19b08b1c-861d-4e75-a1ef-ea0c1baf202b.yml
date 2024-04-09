@@ -8,3 +8,6 @@ detection:
     - CommandLine|contains: 'verifyctl '
   - CommandLine|contains: http
 id: 19b08b1c-861d-4e75-a1ef-ea0c1baf202b
+logsource:
+  category: process_creation
+  product: windows

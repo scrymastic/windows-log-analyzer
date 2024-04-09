@@ -17,9 +17,6 @@ falsepositives:
   on a standard keyboard, such as Chinese, Japanese, and Korean.
 filename: registry_set_ime_non_default_extension.yml
 level: high
-logsource:
-  category: registry_set
-  product: windows
 modified: ''
 references:
 - https://www.linkedin.com/pulse/guntior-story-advanced-bootkit-doesnt-rely-windows-disk-baranov-wue8e/

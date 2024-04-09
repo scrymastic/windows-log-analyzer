@@ -6,9 +6,6 @@ falsepositives:
 - Legitimate Atera agent installation
 filename: win_software_atera_rmm_agent_install.yml
 level: high
-logsource:
-  product: windows
-  service: application
 modified: 2022/12/25
 references:
 - https://www.advintel.io/post/secret-backdoor-behind-conti-ransomware-operation-introducing-atera-agent

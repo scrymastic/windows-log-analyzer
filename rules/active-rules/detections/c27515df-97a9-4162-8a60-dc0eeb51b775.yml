@@ -98,3 +98,6 @@ detection:
     - Image|not endswith: \FileCoAuth.exe
     - CommandLine|not endswith: -Embedding
 id: c27515df-97a9-4162-8a60-dc0eeb51b775
+logsource:
+  category: process_creation
+  product: windows

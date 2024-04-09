@@ -9,9 +9,6 @@ falsepositives:
 - Legitimate ".xbap" being executed via "PresentationHost"
 filename: proc_creation_win_presentationhost_uncommon_location_exec.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: 2023/11/09
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Presentationhost/

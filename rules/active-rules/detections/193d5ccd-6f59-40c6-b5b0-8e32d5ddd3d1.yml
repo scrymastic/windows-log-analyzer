@@ -2,3 +2,6 @@ detection:
 - and:
   - Image|endswith: \xwizard.exe
 id: 193d5ccd-6f59-40c6-b5b0-8e32d5ddd3d1
+logsource:
+  category: process_creation
+  product: windows

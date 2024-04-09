@@ -5,10 +5,6 @@ falsepositives:
 - PowerShell scripts that download content from the Internet
 filename: posh_pm_susp_download.yml
 level: medium
-logsource:
-  category: ps_module
-  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
-  product: windows
 modified: 2023/01/20
 references:
 - https://learn.microsoft.com/en-us/dotnet/api/system.net.webclient.downloadfile?view=net-8.0

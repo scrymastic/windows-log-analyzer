@@ -154,3 +154,6 @@ detection:
     - CommandLine|contains: 4ARQBUAC4AVwBFAEIA
     - CommandLine|contains: uAEUAVAAuAFcARQBCA
 id: c86133ad-4725-4bd0-8170-210788e0a7ba
+logsource:
+  category: process_creation
+  product: windows

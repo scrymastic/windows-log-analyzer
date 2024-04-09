@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: file_event_win_shell_write_susp_directory.yml
 level: high
-logsource:
-  category: file_event
-  product: windows
 modified: 2023/03/29
 references:
 - Internal Research

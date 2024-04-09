@@ -5,3 +5,6 @@ detection:
     - GrantedAccess|==: '0x1028'
     - GrantedAccess|==: '0x1fffff'
 id: 09706624-b7f6-455d-9d02-adee024cee1d
+logsource:
+  category: process_access
+  product: windows

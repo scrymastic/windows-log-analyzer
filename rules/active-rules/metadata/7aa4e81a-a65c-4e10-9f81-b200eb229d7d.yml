@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_vmware_toolbox_cmd_persistence.yml
 level: medium
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://bohops.com/2021/10/08/analyzing-and-detecting-a-vmtools-persistence-technique/

@@ -10,9 +10,6 @@ falsepositives:
 - Unknown
 filename: win_system_adcs_enrollment_request_denied.yml
 level: low
-logsource:
-  product: windows
-  service: system
 modified: ''
 references:
 - https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd299871(v=ws.10)

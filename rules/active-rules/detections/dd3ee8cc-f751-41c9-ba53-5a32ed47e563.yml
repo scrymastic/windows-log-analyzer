@@ -17,3 +17,6 @@ detection:
     - CommandLine|contains: delete
     - CommandLine|contains: hkcu\software\classes\ms-settings
 id: dd3ee8cc-f751-41c9-ba53-5a32ed47e563
+logsource:
+  category: process_creation
+  product: windows

@@ -7,3 +7,6 @@ detection:
     - CommandLine|contains: volume
     - CommandLine|contains: path win32_logicaldisk
 id: c79da740-5030-45ec-a2e0-479e824a562c
+logsource:
+  category: process_creation
+  product: windows

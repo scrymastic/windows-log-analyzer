@@ -15,3 +15,6 @@ detection:
   - CommandLine|contains: once
   - CommandLine|contains: 00:00
 id: 970823b7-273b-460a-8afc-3a6811998529
+logsource:
+  category: process_creation
+  product: windows

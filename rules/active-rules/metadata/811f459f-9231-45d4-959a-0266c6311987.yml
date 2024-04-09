@@ -6,9 +6,6 @@ falsepositives:
 - Unknown
 filename: proc_creation_win_bginfo_suspicious_child_process.yml
 level: high
-logsource:
-  category: process_creation
-  product: windows
 modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Bginfo/
