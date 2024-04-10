@@ -1,0 +1,21 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - EventID|==: 4656
+      - EventID|==: 4663
+    - ObjectType|==: Key
+    - ObjectName|==: \REGISTRY\MACHINE\SOFTWARE\Microsoft\Microsoft Online\Reporting\MonitoringAgent
+- filter:
+  - and:
+    - or:
+      - ProcessName|contains: Microsoft.Identity.Health.Adfs.DiagnosticsAgent.exe
+      - ProcessName|contains: Microsoft.Identity.Health.Adfs.InsightsService.exe
+      - ProcessName|contains: Microsoft.Identity.Health.Adfs.MonitoringAgent.Startup.exe
+      - ProcessName|contains: Microsoft.Identity.Health.Adfs.PshSurrogate.exe
+      - ProcessName|contains: Microsoft.Identity.Health.Common.Clients.ResourceMonitor.exe
+- condition: selection and not filter
+id: ff151c33-45fa-475d-af4f-c2f93571f4fe
+logsource:
+  product: windows
+  service: security

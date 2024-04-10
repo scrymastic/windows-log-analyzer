@@ -1,0 +1,27 @@
+author: Micah Babinski, @micahbabinski
+date: 2023/05/07
+description: 'Detects the presence of unicode characters which are homoglyphs, or
+  identical in appearance, to ASCII letter characters.
+
+  This is used as an obfuscation and masquerading techniques. Only "perfect" homoglyphs
+  are included; these are characters that
+
+  are indistinguishable from ASCII characters and thus may make excellent candidates
+  for homoglyph attack characters.
+
+  '
+falsepositives:
+- Commandlines with legitimate Cyrillic text; will likely require tuning (or not be
+  usable) in countries where these alphabets are in use.
+filename: proc_creation_win_susp_homoglyph_cyrillic_lookalikes.yml
+level: medium
+modified: ''
+references:
+- https://redcanary.com/threat-detection-report/threats/socgholish/#threat-socgholish
+- http://www.irongeek.com/homoglyph-attack-generator.php
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036
+- attack.t1036.003

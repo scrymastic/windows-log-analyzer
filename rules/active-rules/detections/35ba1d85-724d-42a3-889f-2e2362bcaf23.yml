@@ -1,0 +1,30 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4661
+    - or:
+      - ObjectType|==: SAM_USER
+      - ObjectType|==: SAM_GROUP
+- selection_object:
+  - and:
+    - or:
+      - or:
+        - ObjectName|endswith: '-512'
+        - ObjectName|endswith: '-502'
+        - ObjectName|endswith: '-500'
+        - ObjectName|endswith: '-505'
+        - ObjectName|endswith: '-519'
+        - ObjectName|endswith: '-520'
+        - ObjectName|endswith: '-544'
+        - ObjectName|endswith: '-551'
+        - ObjectName|endswith: '-555'
+      - ObjectName|contains: admin
+- filter:
+  - and:
+    - SubjectUserName|endswith: $
+- condition: selection and selection_object and not filter
+id: 35ba1d85-724d-42a3-889f-2e2362bcaf23
+logsource:
+  definition: 'Requirements: enable Object Access SAM on your Domain Controllers'
+  product: windows
+  service: security

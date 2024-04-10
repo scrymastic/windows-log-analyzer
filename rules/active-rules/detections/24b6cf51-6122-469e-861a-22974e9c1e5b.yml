@@ -1,0 +1,21 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - ImageLoaded|endswith: \SmadHook32c.dll
+      - ImageLoaded|endswith: \SmadHook64c.dll
+- filter_main_legit_path:
+  - and:
+    - or:
+      - Image|==: C:\Program Files (x86)\SMADAV\SmadavProtect32.exe
+      - Image|==: C:\Program Files (x86)\SMADAV\SmadavProtect64.exe
+      - Image|==: C:\Program Files\SMADAV\SmadavProtect32.exe
+      - Image|==: C:\Program Files\SMADAV\SmadavProtect64.exe
+    - or:
+      - ImageLoaded|startswith: C:\Program Files (x86)\SMADAV\
+      - ImageLoaded|startswith: C:\Program Files\SMADAV\
+- condition: selection and not 1 of filter_main_*
+id: 24b6cf51-6122-469e-861a-22974e9c1e5b
+logsource:
+  category: image_load
+  product: windows

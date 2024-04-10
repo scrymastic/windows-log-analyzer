@@ -1,0 +1,22 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Description|contains: 7-Zip
+      - or:
+        - Image|endswith: \7z.exe
+        - Image|endswith: \7zr.exe
+        - Image|endswith: \7za.exe
+      - or:
+        - OriginalFileName|==: 7z.exe
+        - OriginalFileName|==: 7za.exe
+- selection_password:
+  - and:
+    - CommandLine|contains: ' -p'
+    - CommandLine|contains: ' x '
+    - CommandLine|contains: ' -o'
+- condition: all of selection_*
+id: b717b8fd-6467-4d7d-b3d3-27f9a463af77
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,44 @@
+title: Legitimate Application Dropped Script
+id: 7d604714-e071-49ff-8726-edeb95a70679
+status: experimental
+description: Detects programs on a Windows system that should not write scripts to
+  disk
+references:
+- https://github.com/Neo23x0/sysmon-config/blob/3f808d9c022c507aae21a9346afba4a59dd533b9/sysmonconfig-export-block.xml#L1326
+author: frack113, Florian Roth (Nextron Systems)
+date: 2022/08/21
+modified: 2023/06/22
+tags:
+- attack.defense_evasion
+- attack.t1218
+logsource:
+  product: windows
+  category: file_event
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \eqnedt32.exe
+      - Image|endswith: \wordpad.exe
+      - Image|endswith: \wordview.exe
+      - Image|endswith: \certutil.exe
+      - Image|endswith: \certoc.exe
+      - Image|endswith: \CertReq.exe
+      - Image|endswith: \Desktopimgdownldr.exe
+      - Image|endswith: \esentutl.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \AcroRd32.exe
+      - Image|endswith: \RdrCEF.exe
+      - Image|endswith: \hh.exe
+      - Image|endswith: \finger.exe
+    - or:
+      - TargetFilename|endswith: .ps1
+      - TargetFilename|endswith: .bat
+      - TargetFilename|endswith: .vbs
+      - TargetFilename|endswith: .scf
+      - TargetFilename|endswith: .wsf
+      - TargetFilename|endswith: .wsh
+- condition: selection
+falsepositives:
+- Unknown
+level: high

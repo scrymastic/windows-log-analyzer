@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - Data|contains: HostName=ConsoleHost
+- filter_main_ps:
+  - and:
+    - or:
+      - Data|contains: HostApplication=powershell
+      - Data|contains: HostApplication=C:\Windows\System32\WindowsPowerShell\v1.0\powershell
+      - Data|contains: HostApplication=C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell
+      - Data|contains: HostApplication=C:/Windows/System32/WindowsPowerShell/v1.0/powershell
+      - Data|contains: HostApplication=C:/Windows/SysWOW64/WindowsPowerShell/v1.0/powershell
+- condition: selection and not 1 of filter_main_*
+id: 30a8cb77-8eb3-4cfb-8e79-ad457c5a4592
+logsource:
+  category: ps_classic_start
+  product: windows

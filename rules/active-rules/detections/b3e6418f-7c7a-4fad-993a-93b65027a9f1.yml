@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - QueryName|endswith: .tunnels.api.visualstudio.com
+- condition: selection
+id: b3e6418f-7c7a-4fad-993a-93b65027a9f1
+logsource:
+  category: dns_query
+  product: windows

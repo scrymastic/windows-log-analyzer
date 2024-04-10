@@ -1,0 +1,17 @@
+detection:
+- selection_1:
+  - and:
+    - or:
+      - TargetObject|contains: \Software\Microsoft\Office\
+      - TargetObject|contains: \Outlook\WebView\
+    - TargetObject|endswith: \URL
+- selection_2:
+  - and:
+    - or:
+      - TargetObject|contains: \Calendar\
+      - TargetObject|contains: \Inbox\
+- condition: all of selection_*
+id: ddd171b5-2cc6-4975-9e78-f0eccd08cc76
+logsource:
+  category: registry_set
+  product: windows

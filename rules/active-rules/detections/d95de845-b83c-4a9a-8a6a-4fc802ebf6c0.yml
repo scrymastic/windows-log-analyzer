@@ -1,0 +1,42 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \net.exe
+        - Image|endswith: \net1.exe
+      - or:
+        - OriginalFileName|==: net.exe
+        - OriginalFileName|==: net1.exe
+- selection_group_root:
+  - and:
+    - or:
+      - CommandLine|contains: ' group '
+      - CommandLine|contains: ' localgroup '
+- selection_group_flags:
+  - and:
+    - or:
+      - CommandLine|contains: domain admins
+      - CommandLine|contains: ' administrator'
+      - CommandLine|contains: ' administrateur'
+      - CommandLine|contains: enterprise admins
+      - CommandLine|contains: Exchange Trusted Subsystem
+      - CommandLine|contains: Remote Desktop Users
+      - CommandLine|contains: "Utilisateurs du Bureau \xE0 distance"
+      - CommandLine|contains: Usuarios de escritorio remoto
+      - CommandLine|contains: ' /do'
+- filter_group_add:
+  - and:
+    - CommandLine|contains: ' /add'
+- selection_accounts_root:
+  - and:
+    - CommandLine|contains: ' accounts '
+- selection_accounts_flags:
+  - and:
+    - CommandLine|contains: ' /do'
+- condition: selection_img and ((all of selection_group_* and not filter_group_add)
+    or all of selection_accounts_*)
+id: d95de845-b83c-4a9a-8a6a-4fc802ebf6c0
+logsource:
+  category: process_creation
+  product: windows

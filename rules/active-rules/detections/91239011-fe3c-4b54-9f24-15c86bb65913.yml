@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|endswith: \Security\VBAWarnings
+    - Details|==: DWORD (0x00000001)
+- condition: selection
+id: 91239011-fe3c-4b54-9f24-15c86bb65913
+logsource:
+  category: registry_set
+  product: windows

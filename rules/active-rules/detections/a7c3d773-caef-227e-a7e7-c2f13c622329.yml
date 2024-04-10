@@ -1,0 +1,38 @@
+detection:
+- selection_werfault:
+  - and:
+    - Image|endswith: \WerFault.exe
+    - CommandLine|endswith: WerFault.exe
+- selection_rundll32:
+  - and:
+    - Image|endswith: \rundll32.exe
+    - CommandLine|endswith: rundll32.exe
+- selection_regsvcs:
+  - and:
+    - Image|endswith: \regsvcs.exe
+    - CommandLine|endswith: regsvcs.exe
+- selection_regasm:
+  - and:
+    - Image|endswith: \regasm.exe
+    - CommandLine|endswith: regasm.exe
+- selection_regsvr32:
+  - and:
+    - Image|endswith: \regsvr32.exe
+    - CommandLine|endswith: regsvr32.exe
+- filter_main_edge_update:
+  - and:
+    - ParentImage|contains: :\Users\
+    - ParentImage|contains: \AppData\Local\Microsoft\EdgeUpdate\Install\{
+- filter_optional_chrome_installer:
+  - and:
+    - ParentImage|contains: :\Users\
+    - ParentImage|contains: \AppData\Local\Google\Chrome\Application\
+    - ParentImage|endswith: \Installer\setup.exe
+    - ParentCommandLine|contains: --uninstall --channel=stable
+    - Image|endswith: \rundll32.exe
+    - CommandLine|endswith: rundll32.exe
+- condition: 1 of selection_* and not 1 of filter_main_* and not 1 of filter_optional_*
+id: a7c3d773-caef-227e-a7e7-c2f13c622329
+logsource:
+  category: process_creation
+  product: windows

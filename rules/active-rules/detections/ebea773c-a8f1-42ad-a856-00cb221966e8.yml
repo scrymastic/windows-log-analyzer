@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \VMwareXferlogs.exe
+- filter:
+  - and:
+    - Image|startswith: C:\Program Files\VMware\
+- condition: selection and not filter
+id: ebea773c-a8f1-42ad-a856-00cb221966e8
+logsource:
+  category: process_creation
+  product: windows

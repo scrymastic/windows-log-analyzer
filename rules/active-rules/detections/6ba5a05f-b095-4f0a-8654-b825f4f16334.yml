@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: noconsentprompt
+    - CommandLine|contains: 'shadow:'
+- condition: selection
+id: 6ba5a05f-b095-4f0a-8654-b825f4f16334
+logsource:
+  category: process_creation
+  product: windows

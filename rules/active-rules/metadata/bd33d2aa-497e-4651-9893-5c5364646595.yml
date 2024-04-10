@@ -1,0 +1,16 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/08
+description: Detects powershell scripts that creates sockets/listeners which could
+  be indicative of tunneling activity
+falsepositives:
+- Unknown
+filename: posh_ps_susp_proxy_scripts.yml
+level: medium
+modified: ''
+references:
+- https://github.com/Arno0x/PowerShellScripts/blob/a6b7d5490fbf0b20f91195838f3a11156724b4f7/proxyTunnel.ps1
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1090

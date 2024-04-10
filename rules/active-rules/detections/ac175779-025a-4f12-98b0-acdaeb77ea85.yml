@@ -1,0 +1,20 @@
+detection:
+- selection1:
+  - and:
+    - or:
+      - CommandLine|contains: powershell.exe
+      - CommandLine|contains: \powershell
+      - CommandLine|contains: \pwsh
+      - CommandLine|contains: pwsh.exe
+- selection2:
+  - and:
+    - CommandLine|contains: '/c '
+    - CommandLine|contains: \AppData\
+    - or:
+      - CommandLine|contains: Local\
+      - CommandLine|contains: Roaming\
+- condition: all of selection*
+id: ac175779-025a-4f12-98b0-acdaeb77ea85
+logsource:
+  category: process_creation
+  product: windows

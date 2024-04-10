@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \dism.exe
+    - ImageLoaded|endswith: \dismcore.dll
+- filter:
+  - and:
+    - ImageLoaded|==: C:\Windows\System32\Dism\dismcore.dll
+- condition: selection and not filter
+id: a5ea83a7-05a5-44c1-be2e-addccbbd8c03
+logsource:
+  category: image_load
+  product: windows

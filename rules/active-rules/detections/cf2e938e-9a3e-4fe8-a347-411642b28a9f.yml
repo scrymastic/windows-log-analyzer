@@ -1,0 +1,17 @@
+detection:
+- selection_path:
+  - and:
+    - or:
+      - CommandLine|contains: \ShellIds\Microsoft.PowerShell\ExecutionPolicy
+      - CommandLine|contains: \Policies\Microsoft\Windows\PowerShell\ExecutionPolicy
+- selection_values:
+  - and:
+    - or:
+      - CommandLine|contains: Bypass
+      - CommandLine|contains: RemoteSigned
+      - CommandLine|contains: Unrestricted
+- condition: all of selection_*
+id: cf2e938e-9a3e-4fe8-a347-411642b28a9f
+logsource:
+  category: process_creation
+  product: windows

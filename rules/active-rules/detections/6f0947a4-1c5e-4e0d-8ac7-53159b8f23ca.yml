@@ -1,0 +1,28 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \regsvr32.exe
+    - or:
+      - Image|endswith: \calc.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \explorer.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+      - Image|endswith: \nltest.exe
+      - Image|endswith: \notepad.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \reg.exe
+      - Image|endswith: \schtasks.exe
+      - Image|endswith: \werfault.exe
+      - Image|endswith: \wscript.exe
+- filter_main_werfault:
+  - and:
+    - Image|endswith: \werfault.exe
+    - CommandLine|contains: ' -u -p '
+- condition: selection and not 1 of filter_main_*
+id: 6f0947a4-1c5e-4e0d-8ac7-53159b8f23ca
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,24 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \reg.exe
+      - OriginalFileName|==: reg.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' import '
+- selection_paths:
+  - and:
+    - or:
+      - CommandLine|contains: C:\Users\
+      - CommandLine|contains: '%temp%'
+      - CommandLine|contains: '%tmp%'
+      - CommandLine|contains: '%appdata%'
+      - CommandLine|contains: \AppData\Local\Temp\
+      - CommandLine|contains: C:\Windows\Temp\
+      - CommandLine|contains: C:\ProgramData\
+- condition: all of selection_*
+id: 62e0298b-e994-4189-bc87-bc699aa62d97
+logsource:
+  category: process_creation
+  product: windows

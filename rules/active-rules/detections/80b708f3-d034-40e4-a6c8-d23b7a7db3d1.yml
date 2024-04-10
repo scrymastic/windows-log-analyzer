@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4697
+    - ServiceFileName|contains: set
+    - ServiceFileName|contains: '&&'
+    - or:
+      - ServiceFileName|contains: environment
+      - ServiceFileName|contains: invoke
+      - ServiceFileName|contains: ${input)
+- condition: selection
+id: 80b708f3-d034-40e4-a6c8-d23b7a7db3d1
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security

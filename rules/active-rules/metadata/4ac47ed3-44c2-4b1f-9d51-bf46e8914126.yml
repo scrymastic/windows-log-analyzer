@@ -1,0 +1,17 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/08/27
+description: Detects indicators of a UAC bypass method by mocking directories
+falsepositives:
+- Unknown
+filename: proc_creation_win_uac_bypass_trustedpath.yml
+level: critical
+modified: ''
+references:
+- https://medium.com/tenable-techblog/uac-bypass-by-mocking-trusted-directories-24a96675f6e
+- https://www.wietzebeukema.nl/blog/hijacking-dlls-in-windows
+- https://github.com/netero1010/TrustedPath-UACBypass-BOF
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1548.002

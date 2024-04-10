@@ -1,0 +1,17 @@
+detection:
+- selection_metadata:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \gpg.exe
+        - Image|endswith: \gpg2.exe
+      - Description|==: "GnuPG\u2019s OpenPGP tool"
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' -c '
+    - CommandLine|contains: passphrase
+- condition: all of selection_*
+id: 550bbb84-ce5d-4e61-84ad-e590f0024dcd
+logsource:
+  category: process_creation
+  product: windows

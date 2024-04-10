@@ -1,0 +1,53 @@
+detection:
+- selection_binary:
+  - and:
+    - Image|endswith: \crackmapexec.exe
+- selection_special:
+  - and:
+    - CommandLine|contains: ' -M pe_inject '
+- selection_execute:
+  - and:
+    - CommandLine|contains: ' --local-auth'
+    - CommandLine|contains: ' -u '
+    - CommandLine|contains: ' -x '
+- selection_hash:
+  - and:
+    - CommandLine|contains: ' --local-auth'
+    - CommandLine|contains: ' -u '
+    - CommandLine|contains: ' -p '
+    - CommandLine|contains: ' -H ''NTHASH'''
+- selection_module_mssql:
+  - and:
+    - CommandLine|contains: ' mssql '
+    - CommandLine|contains: ' -u '
+    - CommandLine|contains: ' -p '
+    - CommandLine|contains: ' -M '
+    - CommandLine|contains: ' -d '
+- selection_module_smb1:
+  - and:
+    - CommandLine|contains: ' smb '
+    - CommandLine|contains: ' -u '
+    - CommandLine|contains: ' -H '
+    - CommandLine|contains: ' -M '
+    - CommandLine|contains: ' -o '
+- selection_module_smb2:
+  - and:
+    - CommandLine|contains: ' smb '
+    - CommandLine|contains: ' -u '
+    - CommandLine|contains: ' -p '
+    - CommandLine|contains: ' --local-auth'
+- part_localauth_1:
+  - and:
+    - CommandLine|contains: ' --local-auth'
+    - CommandLine|contains: ' -u '
+    - CommandLine|contains: ' -p '
+- part_localauth_2:
+  - and:
+    - CommandLine|contains: ' 10.'
+    - CommandLine|contains: ' 192.168.'
+    - CommandLine|contains: '/24 '
+- condition: 1 of selection_* or all of part_localauth*
+id: 42a993dd-bb3e-48c8-b372-4d6684c4106c
+logsource:
+  category: process_creation
+  product: windows

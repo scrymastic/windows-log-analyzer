@@ -1,0 +1,23 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/09/28
+description: 'Detects AnyDesk writing binary files to disk other than "gcapi.dll".
+
+  According to RedCanary research it is highly abnormal for AnyDesk to write executable
+  files to disk besides gcapi.dll,
+
+  which is a legitimate DLL that is part of the Google Chrome web browser used to
+  interact with the Google Cloud API. (See reference section for more details)
+
+  '
+falsepositives:
+- Unknown
+filename: file_event_win_anydesk_writing_susp_binaries.yml
+level: high
+modified: ''
+references:
+- https://redcanary.com/blog/misbehaving-rats/
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1219

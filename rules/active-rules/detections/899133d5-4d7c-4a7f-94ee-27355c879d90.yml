@@ -1,0 +1,25 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - OriginalFileName|==: python.exe
+      - or:
+        - Image|endswith: python.exe
+        - Image|endswith: python3.exe
+        - Image|endswith: python2.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' -c'
+- filter_python:
+  - and:
+    - ParentImage|startswith: C:\Program Files\Python
+    - ParentImage|endswith: \python.exe
+    - ParentCommandLine|contains: -E -s -m ensurepip -U --default-pip
+- filter_vscode:
+  - and:
+    - ParentImage|endswith: \AppData\Local\Programs\Microsoft VS Code\Code.exe
+- condition: all of selection_* and not 1 of filter_*
+id: 899133d5-4d7c-4a7f-94ee-27355c879d90
+logsource:
+  category: process_creation
+  product: windows

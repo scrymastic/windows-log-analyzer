@@ -1,0 +1,45 @@
+title: Windows Firewall Disabled via PowerShell
+id: 12f6b752-042d-483e-bf9c-915a6d06ad75
+related:
+- id: 488b44e7-3781-4a71-888d-c95abfacf44d
+  type: similar
+status: test
+description: Detects attempts to disable the Windows Firewall using PowerShell
+references:
+- https://www.elastic.co/guide/en/security/current/windows-firewall-disabled-via-powershell.html
+author: Tim Rauch, Elastic (idea)
+date: 2022/09/14
+modified: 2023/02/13
+tags:
+- attack.defense_evasion
+- attack.t1562
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection_name:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+        - Image|endswith: \powershell_ise.exe
+      - or:
+        - OriginalFileName|==: PowerShell.EXE
+        - OriginalFileName|==: pwsh.dll
+- selection_args:
+  - and:
+    - CommandLine|contains: 'Set-NetFirewallProfile '
+    - CommandLine|contains: ' -Enabled '
+    - CommandLine|contains: ' False'
+- selection_opt:
+  - and:
+    - or:
+      - CommandLine|contains: ' -All '
+      - CommandLine|contains: Public
+      - CommandLine|contains: Domain
+      - CommandLine|contains: Private
+- condition: all of selection_*
+falsepositives:
+- Unknown
+level: medium

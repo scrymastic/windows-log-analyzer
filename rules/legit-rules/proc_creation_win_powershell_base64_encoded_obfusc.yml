@@ -1,0 +1,47 @@
+title: Suspicious Obfuscated PowerShell Code
+id: 8d01b53f-456f-48ee-90f6-bc28e67d4e35
+status: test
+description: Detects suspicious UTF16 and base64 encoded and often obfuscated PowerShell
+  code often used in command lines
+references:
+- https://app.any.run/tasks/fcadca91-3580-4ede-aff4-4d2bf809bf99/
+author: Florian Roth (Nextron Systems)
+date: 2022/07/11
+modified: 2023/02/14
+tags:
+- attack.defense_evasion
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: IAAtAGIAeABvAHIAIAAwAHgA
+      - CommandLine|contains: AALQBiAHgAbwByACAAMAB4A
+      - CommandLine|contains: gAC0AYgB4AG8AcgAgADAAeA
+      - CommandLine|contains: AC4ASQBuAHYAbwBrAGUAKAApACAAfAAg
+      - CommandLine|contains: AuAEkAbgB2AG8AawBlACgAKQAgAHwAI
+      - CommandLine|contains: ALgBJAG4AdgBvAGsAZQAoACkAIAB8AC
+      - CommandLine|contains: AHsAMQB9AHsAMAB9ACIAIAAtAGYAI
+      - CommandLine|contains: B7ADEAfQB7ADAAfQAiACAALQBmAC
+      - CommandLine|contains: AewAxAH0AewAwAH0AIgAgAC0AZgAg
+      - CommandLine|contains: AHsAMAB9AHsAMwB9ACIAIAAtAGYAI
+      - CommandLine|contains: B7ADAAfQB7ADMAfQAiACAALQBmAC
+      - CommandLine|contains: AewAwAH0AewAzAH0AIgAgAC0AZgAg
+      - CommandLine|contains: AHsAMgB9AHsAMAB9ACIAIAAtAGYAI
+      - CommandLine|contains: B7ADIAfQB7ADAAfQAiACAALQBmAC
+      - CommandLine|contains: AewAyAH0AewAwAH0AIgAgAC0AZgAg
+      - CommandLine|contains: AHsAMQB9AHsAMAB9ACcAIAAtAGYAI
+      - CommandLine|contains: B7ADEAfQB7ADAAfQAnACAALQBmAC
+      - CommandLine|contains: AewAxAH0AewAwAH0AJwAgAC0AZgAg
+      - CommandLine|contains: AHsAMAB9AHsAMwB9ACcAIAAtAGYAI
+      - CommandLine|contains: B7ADAAfQB7ADMAfQAnACAALQBmAC
+      - CommandLine|contains: AewAwAH0AewAzAH0AJwAgAC0AZgAg
+      - CommandLine|contains: AHsAMgB9AHsAMAB9ACcAIAAtAGYAI
+      - CommandLine|contains: B7ADIAfQB7ADAAfQAnACAALQBmAC
+      - CommandLine|contains: AewAyAH0AewAwAH0AJwAgAC0AZgAg
+- condition: selection
+falsepositives:
+- Unknown
+level: high

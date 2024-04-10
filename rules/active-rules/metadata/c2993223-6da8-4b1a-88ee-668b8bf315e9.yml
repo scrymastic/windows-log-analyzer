@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/11/17
+description: Detects usage of the Get-ADUser cmdlet to collect user information and
+  output it to a file
+falsepositives:
+- Legitimate admin scripts may use the same technique, it's better to exclude specific
+  computers or users who execute these commands or scripts often
+filename: posh_ps_user_discovery_get_aduser.yml
+level: medium
+modified: ''
+references:
+- http://blog.talosintelligence.com/2022/09/lazarus-three-rats.html
+- https://www.microsoft.com/en-us/security/blog/2022/10/18/defenders-beware-a-case-for-post-ransomware-investigations/
+related:
+- id: 1114e048-b69c-4f41-bc20-657245ae6e3f
+  type: similar
+status: test
+tags:
+- attack.discovery
+- attack.t1033

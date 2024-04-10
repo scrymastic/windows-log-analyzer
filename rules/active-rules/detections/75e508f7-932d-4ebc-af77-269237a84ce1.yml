@@ -1,0 +1,18 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \cmstp.exe
+    - or:
+      - ImageLoaded|contains: \PerfLogs\
+      - ImageLoaded|contains: \ProgramData\
+      - ImageLoaded|contains: \Users\
+      - ImageLoaded|contains: \Windows\Temp\
+      - ImageLoaded|contains: C:\Temp\
+    - or:
+      - ImageLoaded|endswith: .dll
+      - ImageLoaded|endswith: .ocx
+- condition: selection
+id: 75e508f7-932d-4ebc-af77-269237a84ce1
+logsource:
+  category: image_load
+  product: windows

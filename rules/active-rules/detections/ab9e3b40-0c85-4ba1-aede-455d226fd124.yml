@@ -1,0 +1,14 @@
+detection:
+- selection_redirect:
+  - and:
+    - CommandLine|contains: '>'
+- selection_share:
+  - and:
+    - or:
+      - CommandLine|contains: \\\\127.0.0.1\\admin$\\
+      - CommandLine|contains: \\\\localhost\\admin$\\
+- condition: all of selection_*
+id: ab9e3b40-0c85-4ba1-aede-455d226fd124
+logsource:
+  category: process_creation
+  product: windows

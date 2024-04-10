@@ -1,0 +1,52 @@
+detection:
+- selection_cmd:
+  - and:
+    - or:
+      - or:
+        - CommandLine|contains: copy-item
+        - CommandLine|contains: 'copy '
+        - CommandLine|contains: 'cpi '
+        - CommandLine|contains: ' cp '
+        - CommandLine|contains: 'move '
+        - CommandLine|contains: move-item
+        - CommandLine|contains: ' mi '
+        - CommandLine|contains: ' mv '
+      - or:
+        - Image|endswith: \xcopy.exe
+        - Image|endswith: \robocopy.exe
+      - or:
+        - OriginalFileName|==: XCOPY.EXE
+        - OriginalFileName|==: robocopy.exe
+- selection_path:
+  - and:
+    - or:
+      - CommandLine|contains: \Amigo\User Data
+      - CommandLine|contains: \BraveSoftware\Brave-Browser\User Data
+      - CommandLine|contains: \CentBrowser\User Data
+      - CommandLine|contains: \Chromium\User Data
+      - CommandLine|contains: \CocCoc\Browser\User Data
+      - CommandLine|contains: \Comodo\Dragon\User Data
+      - CommandLine|contains: \Elements Browser\User Data
+      - CommandLine|contains: \Epic Privacy Browser\User Data
+      - CommandLine|contains: \Google\Chrome Beta\User Data
+      - CommandLine|contains: \Google\Chrome SxS\User Data
+      - CommandLine|contains: \Google\Chrome\User Data\
+      - CommandLine|contains: \Kometa\User Data
+      - CommandLine|contains: \Maxthon5\Users
+      - CommandLine|contains: \Microsoft\Edge\User Data
+      - CommandLine|contains: \Mozilla\Firefox\Profiles
+      - CommandLine|contains: \Nichrome\User Data
+      - CommandLine|contains: \Opera Software\Opera GX Stable\
+      - CommandLine|contains: \Opera Software\Opera Neon\User Data
+      - CommandLine|contains: \Opera Software\Opera Stable\
+      - CommandLine|contains: \Orbitum\User Data
+      - CommandLine|contains: \QIP Surf\User Data
+      - CommandLine|contains: \Sputnik\User Data
+      - CommandLine|contains: \Torch\User Data
+      - CommandLine|contains: \uCozMedia\Uran\User Data
+      - CommandLine|contains: \Vivaldi\User Data
+- condition: all of selection_*
+id: 47147b5b-9e17-4d76-b8d2-7bac24c5ce1b
+logsource:
+  category: process_creation
+  product: windows

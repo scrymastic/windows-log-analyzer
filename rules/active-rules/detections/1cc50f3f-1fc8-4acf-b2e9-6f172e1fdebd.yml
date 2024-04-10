@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: rundll32.exe
+    - CommandLine|contains: Execute
+    - CommandLine|contains: RegRead
+    - CommandLine|contains: window.close
+- condition: selection
+id: 1cc50f3f-1fc8-4acf-b2e9-6f172e1fdebd
+logsource:
+  category: process_creation
+  product: windows

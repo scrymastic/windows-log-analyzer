@@ -1,0 +1,32 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|startswith: C:\Users\
+    - TargetFilename|contains: \AppData\
+    - or:
+      - TargetFilename|endswith: .bat
+      - TargetFilename|endswith: .cmd
+      - TargetFilename|endswith: .cpl
+      - TargetFilename|endswith: .dll
+      - TargetFilename|endswith: .exe
+      - TargetFilename|endswith: .hta
+      - TargetFilename|endswith: .iso
+      - TargetFilename|endswith: .lnk
+      - TargetFilename|endswith: .msi
+      - TargetFilename|endswith: .ps1
+      - TargetFilename|endswith: .psm1
+      - TargetFilename|endswith: .scr
+      - TargetFilename|endswith: .vbe
+      - TargetFilename|endswith: .vbs
+- filter_main:
+  - and:
+    - TargetFilename|startswith: C:\Users\
+    - or:
+      - TargetFilename|contains: \AppData\Local\
+      - TargetFilename|contains: \AppData\LocalLow\
+      - TargetFilename|contains: \AppData\Roaming\
+- condition: selection and not filter_main
+id: d7b50671-d1ad-4871-aa60-5aa5b331fe04
+logsource:
+  category: file_event
+  product: windows

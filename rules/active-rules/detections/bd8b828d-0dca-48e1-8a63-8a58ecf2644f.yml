@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \whoami.exe
+      - OriginalFileName|==: whoami.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: ' /groups'
+      - CommandLine|contains: ' -groups'
+- condition: all of selection_*
+id: bd8b828d-0dca-48e1-8a63-8a58ecf2644f
+logsource:
+  category: process_creation
+  product: windows

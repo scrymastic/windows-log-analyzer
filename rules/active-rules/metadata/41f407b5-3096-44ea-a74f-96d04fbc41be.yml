@@ -1,0 +1,27 @@
+author: Sai Prashanth Pulisetti, Nasreddine Bencherchali (Nextron Systems)
+date: 2024/02/08
+description: 'Detects the execution of an AnyDesk binary with a version prior to 8.0.8.
+
+  Prior to version 8.0.8, the Anydesk application used a signing certificate that
+  got compromised by threat actors.
+
+  Use this rule to detect instances of older versions of Anydesk using the compromised
+  certificate
+
+  This is recommended in order to avoid attackers leveraging the certificate and signing
+  their binaries to bypass detections.
+
+  '
+falsepositives:
+- Unlikely
+filename: proc_creation_win_remote_access_tools_anydesk_revoked_cert.yml
+level: medium
+modified: ''
+references:
+- https://www.bleepingcomputer.com/news/security/anydesk-says-hackers-breached-its-production-servers-reset-passwords/
+- https://anydesk.com/en/changelog/windows
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.initial_access

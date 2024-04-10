@@ -1,0 +1,16 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/05
+description: Detects applications being added to the "allowed applications" list of
+  exploit guard in order to bypass controlled folder settings
+falsepositives:
+- Unlikely
+filename: registry_set_exploit_guard_susp_allowed_apps.yml
+level: high
+modified: 2023/08/17
+references:
+- https://www.microsoft.com/security/blog/2017/10/23/windows-defender-exploit-guard-reduce-the-attack-surface-against-next-generation-malware/
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1562.001

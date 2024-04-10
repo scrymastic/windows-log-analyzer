@@ -1,0 +1,19 @@
+author: frack113
+date: 2022/01/22
+description: Detects modification of the registry settings used for Internet Explorer
+  and other Windows components that use these settings. An attacker can abuse this
+  registry key to add a domain to the trusted sites Zone or insert javascript for
+  persistence
+falsepositives:
+- Unknown
+filename: registry_set_persistence_ie.yml
+level: low
+modified: 2023/08/17
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1112/T1112.md#atomic-test-4---add-domain-to-trusted-sites-zone
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1112/T1112.md#atomic-test-5---javascript-in-registry
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1112

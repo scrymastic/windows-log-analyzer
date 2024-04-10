@@ -1,0 +1,20 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \sdbinst.exe
+      - OriginalFileName|==: sdbinst.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: .sdb
+- filter_optional_iis:
+  - and:
+    - ParentImage|endswith: \msiexec.exe
+    - or:
+      - CommandLine|contains: :\Program Files (x86)\IIS Express\iisexpressshim.sdb
+      - CommandLine|contains: :\Program Files\IIS Express\iisexpressshim.sdb
+- condition: all of selection_* and not 1 of filter_optional_*
+id: 517490a7-115a-48c6-8862-1a481504d5a8
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,30 @@
+detection:
+- selection_lsass_dump1:
+  - and:
+    - CommandLine|contains: 'tasklist /fi '
+    - CommandLine|contains: Imagename eq lsass.exe
+    - or:
+      - CommandLine|contains: 'cmd.exe /c '
+      - CommandLine|contains: 'cmd.exe /r '
+      - CommandLine|contains: 'cmd.exe /k '
+      - CommandLine|contains: 'cmd /c '
+      - CommandLine|contains: 'cmd /r '
+      - CommandLine|contains: 'cmd /k '
+    - or:
+      - User|contains: AUTHORI
+      - User|contains: AUTORI
+- selection_lsass_dump2:
+  - and:
+    - CommandLine|contains: do rundll32.exe C:\windows\System32\comsvcs.dll, MiniDump
+    - CommandLine|contains: \Windows\Temp\
+    - CommandLine|contains: ' full'
+    - CommandLine|contains: '%%B'
+- selection_procdump:
+  - and:
+    - CommandLine|contains: tasklist /v /fo csv
+    - CommandLine|contains: findstr /i "lsass"
+- condition: 1 of selection*
+id: f26307d8-14cd-47e3-a26b-4b4769f24af6
+logsource:
+  category: process_creation
+  product: windows

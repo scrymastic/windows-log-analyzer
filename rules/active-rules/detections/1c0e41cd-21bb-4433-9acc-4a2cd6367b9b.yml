@@ -1,0 +1,53 @@
+detection:
+- selection_schtasks:
+  - and:
+    - Image|endswith: \schtasks.exe
+    - CommandLine|contains: ' /Change '
+    - CommandLine|contains: ' /TN '
+- selection_susp_locations:
+  - and:
+    - or:
+      - CommandLine|contains: \AppData\Local\Temp
+      - CommandLine|contains: \AppData\Roaming\
+      - CommandLine|contains: \Users\Public\
+      - CommandLine|contains: \WINDOWS\Temp\
+      - CommandLine|contains: \Desktop\
+      - CommandLine|contains: \Downloads\
+      - CommandLine|contains: \Temporary Internet
+      - CommandLine|contains: C:\ProgramData\
+      - CommandLine|contains: C:\Perflogs\
+      - CommandLine|contains: '%ProgramData%'
+      - CommandLine|contains: '%appdata%'
+      - CommandLine|contains: '%comspec%'
+      - CommandLine|contains: '%localappdata%'
+- selection_susp_images:
+  - and:
+    - or:
+      - CommandLine|contains: regsvr32
+      - CommandLine|contains: rundll32
+      - CommandLine|contains: 'cmd /c '
+      - CommandLine|contains: 'cmd /k '
+      - CommandLine|contains: 'cmd /r '
+      - CommandLine|contains: 'cmd.exe /c '
+      - CommandLine|contains: 'cmd.exe /k '
+      - CommandLine|contains: 'cmd.exe /r '
+      - CommandLine|contains: powershell
+      - CommandLine|contains: mshta
+      - CommandLine|contains: wscript
+      - CommandLine|contains: cscript
+      - CommandLine|contains: certutil
+      - CommandLine|contains: bitsadmin
+      - CommandLine|contains: bash.exe
+      - CommandLine|contains: 'bash '
+      - CommandLine|contains: scrcons
+      - CommandLine|contains: 'wmic '
+      - CommandLine|contains: wmic.exe
+      - CommandLine|contains: forfiles
+      - CommandLine|contains: scriptrunner
+      - CommandLine|contains: hh.exe
+      - CommandLine|contains: 'hh '
+- condition: all of selection_*
+id: 1c0e41cd-21bb-4433-9acc-4a2cd6367b9b
+logsource:
+  category: process_creation
+  product: windows

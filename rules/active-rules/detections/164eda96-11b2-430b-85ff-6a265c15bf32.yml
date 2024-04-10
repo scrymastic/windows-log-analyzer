@@ -1,0 +1,14 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \wmic.exe
+      - OriginalFileName|==: wmic.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' group'
+- condition: all of selection*
+id: 164eda96-11b2-430b-85ff-6a265c15bf32
+logsource:
+  category: process_creation
+  product: windows

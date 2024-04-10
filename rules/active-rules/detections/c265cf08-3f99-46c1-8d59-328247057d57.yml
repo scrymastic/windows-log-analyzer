@@ -1,0 +1,17 @@
+detection:
+- selection_eid:
+  - and:
+    - EventID|==: 4732
+- selection_group:
+  - and:
+    - or:
+      - TargetUserName|startswith: Administr
+      - TargetSid|==: S-1-5-32-544
+- filter_main_computer_accounts:
+  - and:
+    - SubjectUserName|endswith: $
+- condition: all of selection_* and not 1 of filter_*
+id: c265cf08-3f99-46c1-8d59-328247057d57
+logsource:
+  product: windows
+  service: security

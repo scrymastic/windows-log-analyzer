@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|endswith: dumpert.dmp
+- condition: selection
+id: 93d94efc-d7ad-4161-ad7d-1638c4f908d8
+logsource:
+  category: file_event
+  product: windows

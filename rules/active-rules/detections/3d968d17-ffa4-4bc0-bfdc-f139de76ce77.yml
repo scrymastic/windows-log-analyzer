@@ -1,0 +1,23 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \CLSID\
+    - or:
+      - TargetObject|endswith: \InprocServer32\(Default)
+      - TargetObject|endswith: \LocalServer32\(Default)
+    - or:
+      - Details|contains: \AppData\Local\Temp\
+      - Details|contains: \Desktop\
+      - Details|contains: \Downloads\
+      - Details|contains: \Microsoft\Windows\Start Menu\Programs\Startup\
+      - Details|contains: \System32\spool\drivers\color\
+      - Details|contains: \Users\Public\
+      - Details|contains: \Windows\Temp\
+      - Details|contains: '%appdata%'
+      - Details|contains: '%temp%'
+      - Details|contains: '%tmp%'
+- condition: selection
+id: 3d968d17-ffa4-4bc0-bfdc-f139de76ce77
+logsource:
+  category: registry_set
+  product: windows

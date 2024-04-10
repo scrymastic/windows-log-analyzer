@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/12/02
+description: Detects usage of wsudo (Windows Sudo Utility). Which is a tool that let
+  the user execute programs with different permissions (System, Trusted Installer,
+  Administrator...etc)
+falsepositives:
+- Unknown
+filename: proc_creation_win_pua_wsudo_susp_execution.yml
+level: high
+modified: 2023/02/14
+references:
+- https://github.com/M2Team/Privexec/
+related: []
+status: test
+tags:
+- attack.execution
+- attack.privilege_escalation
+- attack.t1059

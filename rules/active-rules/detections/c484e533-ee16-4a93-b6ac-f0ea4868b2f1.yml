@@ -1,0 +1,19 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \SharpUp.exe
+      - Description|==: SharpUp
+      - or:
+        - CommandLine|contains: HijackablePaths
+        - CommandLine|contains: UnquotedServicePath
+        - CommandLine|contains: ProcessDLLHijack
+        - CommandLine|contains: ModifiableServiceBinaries
+        - CommandLine|contains: ModifiableScheduledTask
+        - CommandLine|contains: DomainGPPPassword
+        - CommandLine|contains: CachedGPPPassword
+- condition: selection
+id: c484e533-ee16-4a93-b6ac-f0ea4868b2f1
+logsource:
+  category: process_creation
+  product: windows

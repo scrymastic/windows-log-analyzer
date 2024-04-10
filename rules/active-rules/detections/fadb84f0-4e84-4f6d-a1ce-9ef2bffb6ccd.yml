@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \cloudflared.exe
+- filter_main_admin_location:
+  - and:
+    - or:
+      - Image|contains: :\Program Files (x86)\cloudflared\
+      - Image|contains: :\Program Files\cloudflared\
+- condition: selection and not 1 of filter_main_*
+id: fadb84f0-4e84-4f6d-a1ce-9ef2bffb6ccd
+logsource:
+  category: process_creation
+  product: windows

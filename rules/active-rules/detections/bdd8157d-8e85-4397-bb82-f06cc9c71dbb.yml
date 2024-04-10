@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - Image|==: C:\Program Files\Internet Explorer\IEInstal.exe
+    - TargetFilename|startswith: C:\Users\
+    - TargetFilename|contains: \AppData\Local\Temp\
+    - TargetFilename|endswith: consent.exe
+- condition: selection
+id: bdd8157d-8e85-4397-bb82-f06cc9c71dbb
+logsource:
+  category: file_event
+  product: windows

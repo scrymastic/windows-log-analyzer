@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: ' /INJECTRUNNING '
+- filter:
+  - and:
+    - ParentImage|==: C:\Windows\System32\AppVClient.exe
+- condition: selection and not filter
+id: 4f73421b-5a0b-4bbf-a892-5a7fb99bea66
+logsource:
+  category: process_creation
+  product: windows

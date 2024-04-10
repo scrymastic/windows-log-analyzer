@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: 'SyncInvoke '
+- condition: selection
+id: a0459f02-ac51-4c09-b511-b8c9203fc429
+logsource:
+  category: process_creation
+  product: windows

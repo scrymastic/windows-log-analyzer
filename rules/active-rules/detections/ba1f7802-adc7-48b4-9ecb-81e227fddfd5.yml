@@ -1,0 +1,13 @@
+detection:
+- selection_tshark:
+  - and:
+    - Image|endswith: \tshark.exe
+    - CommandLine|contains: -i
+- selection_windump:
+  - and:
+    - Image|endswith: \windump.exe
+- condition: 1 of selection_*
+id: ba1f7802-adc7-48b4-9ecb-81e227fddfd5
+logsource:
+  category: process_creation
+  product: windows

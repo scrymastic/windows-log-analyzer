@@ -1,0 +1,19 @@
+author: oscd.community, Natalia Shornikova
+date: 2020/10/06
+description: Detects remote thread creation by PowerShell processes into "lsass.exe"
+falsepositives:
+- Unknown
+filename: create_remote_thread_win_powershell_lsass.yml
+level: high
+modified: 2022/12/18
+references:
+- https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse
+related:
+- id: 3f07b9d1-2082-4c56-9277-613a621983cc
+  type: obsoletes
+- id: 0f920ebe-7aea-4c54-b202-9aa0c609cfe5
+  type: similar
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.001

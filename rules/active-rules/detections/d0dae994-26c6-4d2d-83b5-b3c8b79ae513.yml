@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Description|==: Web Browser Password Viewer
+      - Image|endswith: \WebBrowserPassView.exe
+- condition: selection
+id: d0dae994-26c6-4d2d-83b5-b3c8b79ae513
+logsource:
+  category: process_creation
+  product: windows

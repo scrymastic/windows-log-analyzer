@@ -1,0 +1,44 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|contains: ~1.bat
+      - Image|contains: ~1.dll
+      - Image|contains: ~1.exe
+      - Image|contains: ~1.hta
+      - Image|contains: ~1.js
+      - Image|contains: ~1.msi
+      - Image|contains: ~1.ps1
+      - Image|contains: ~1.tmp
+      - Image|contains: ~1.vbe
+      - Image|contains: ~1.vbs
+      - Image|contains: ~2.bat
+      - Image|contains: ~2.dll
+      - Image|contains: ~2.exe
+      - Image|contains: ~2.hta
+      - Image|contains: ~2.js
+      - Image|contains: ~2.msi
+      - Image|contains: ~2.ps1
+      - Image|contains: ~2.tmp
+      - Image|contains: ~2.vbe
+      - Image|contains: ~2.vbs
+- filter_main_generic_parent:
+  - and:
+    - ParentImage|==: C:\Windows\explorer.exe
+- filter_optional_webex:
+  - and:
+    - ParentImage|endswith: \WebEx\WebexHost.exe
+- filter_optional_thor:
+  - and:
+    - ParentImage|endswith: \thor\thor64.exe
+- filter_optional_winzip:
+  - and:
+    - Image|==: C:\PROGRA~1\WinZip\WZPREL~1.EXE
+- filter_optional_vcred:
+  - and:
+    - Image|endswith: \VCREDI~1.EXE
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: 3ef5605c-9eb9-47b0-9a71-b727e6aa5c3b
+logsource:
+  category: process_creation
+  product: windows

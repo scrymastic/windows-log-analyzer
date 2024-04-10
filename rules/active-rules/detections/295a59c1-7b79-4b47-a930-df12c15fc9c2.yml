@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \Security\Trusted Documents\TrustRecords
+- condition: selection
+id: 295a59c1-7b79-4b47-a930-df12c15fc9c2
+logsource:
+  category: registry_event
+  product: windows

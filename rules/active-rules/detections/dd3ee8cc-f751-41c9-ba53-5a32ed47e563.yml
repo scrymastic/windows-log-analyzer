@@ -1,0 +1,25 @@
+detection:
+- selection_1:
+  - and:
+    - CommandLine|contains: reg
+    - CommandLine|contains: add
+    - CommandLine|contains: hkcu\software\classes\ms-settings\shell\open\command
+    - CommandLine|contains: '/ve '
+    - CommandLine|contains: /d
+- selection_2:
+  - and:
+    - CommandLine|contains: reg
+    - CommandLine|contains: add
+    - CommandLine|contains: hkcu\software\classes\ms-settings\shell\open\command
+    - CommandLine|contains: /v
+    - CommandLine|contains: DelegateExecute
+- selection_3:
+  - and:
+    - CommandLine|contains: reg
+    - CommandLine|contains: delete
+    - CommandLine|contains: hkcu\software\classes\ms-settings
+- condition: 1 of selection_*
+id: dd3ee8cc-f751-41c9-ba53-5a32ed47e563
+logsource:
+  category: process_creation
+  product: windows

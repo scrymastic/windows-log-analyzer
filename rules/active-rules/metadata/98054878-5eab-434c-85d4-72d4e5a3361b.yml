@@ -1,0 +1,19 @@
+author: Thodoris Polyzos (@SmoothDeploy)
+date: 2024/01/29
+description: 'Detects execution of EDRSilencer, a tool that abuses the Windows Filtering
+  Platform (WFP) to block the outbound traffic of running EDR agents based on specific
+  hardcoded filter names.
+
+  '
+falsepositives:
+- Unknown
+filename: win_security_hktl_edr_silencer.yml
+level: high
+modified: 2024/01/30
+references:
+- https://github.com/netero1010/EDRSilencer
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1562

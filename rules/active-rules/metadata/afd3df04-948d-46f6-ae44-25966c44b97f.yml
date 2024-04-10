@@ -1,0 +1,16 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/04
+description: Detects the use of PSAsyncShell an Asynchronous TCP Reverse Shell written
+  in powershell
+falsepositives:
+- Unlikely
+filename: posh_ps_psasyncshell.yml
+level: high
+modified: ''
+references:
+- https://github.com/JoelGMSec/PSAsyncShell
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

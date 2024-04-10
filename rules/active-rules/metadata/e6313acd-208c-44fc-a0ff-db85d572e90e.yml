@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/02/07
+description: Detects a set of suspicious network related commands often used in recon
+  stages
+falsepositives:
+- False positives depend on scripts and administrative tools used in the monitored
+  environment
+filename: proc_creation_win_nslookup_domain_discovery.yml
+level: high
+modified: ''
+references:
+- https://thedfirreport.com/2022/02/07/qbot-likes-to-move-it-move-it/
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.t1087
+- attack.t1082
+- car.2016-03-001

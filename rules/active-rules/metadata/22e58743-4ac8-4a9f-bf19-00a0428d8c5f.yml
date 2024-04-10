@@ -1,0 +1,14 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/12
+description: Detects encoded base64 MZ header in the commandline
+falsepositives:
+- Unlikely
+filename: proc_creation_win_susp_inline_base64_mz_header.yml
+level: high
+modified: ''
+references:
+- https://thedfirreport.com/2022/07/11/select-xmrig-from-sqlserver/
+related: []
+status: test
+tags:
+- attack.execution

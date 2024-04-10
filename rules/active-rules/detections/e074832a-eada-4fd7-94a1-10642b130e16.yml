@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|endswith: \Temp\debug.bin
+- condition: selection
+id: e074832a-eada-4fd7-94a1-10642b130e16
+logsource:
+  category: file_event
+  product: windows

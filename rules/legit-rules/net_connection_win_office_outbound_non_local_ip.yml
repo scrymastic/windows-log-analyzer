@@ -1,0 +1,62 @@
+title: Office Application Initiated Network Connection To Non-Local IP
+id: 75e33ce3-ae32-4dcc-9aa8-a2a3029d6f84
+status: test
+description: 'Detects an office application (Word, Excel, PowerPoint)  that initiate
+  a network connection to a non-private IP addresses.
+
+  This rule aims to detect traffic similar to one seen exploited in CVE-2021-42292.
+
+  This rule will require an initial baseline and tuning that is specific to your organization.
+
+  '
+references:
+- https://corelight.com/blog/detecting-cve-2021-42292
+author: Christopher Peacock '@securepeacock', SCYTHE '@scythe_io', Florian Roth (Nextron
+  Systems), Tim Shelton
+date: 2021/11/10
+modified: 2024/03/13
+tags:
+- attack.execution
+- attack.t1203
+logsource:
+  category: network_connection
+  product: windows
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \excel.exe
+      - Image|endswith: \powerpnt.exe
+      - Image|endswith: \winword.exe
+      - Image|endswith: \wordview.exe
+    - Initiated|==: 'true'
+- filter_main_local_ranges:
+  - and:
+    - or:
+      - DestinationIp|cidr: 127.0.0.0/8
+      - DestinationIp|cidr: 10.0.0.0/8
+      - DestinationIp|cidr: 172.16.0.0/12
+      - DestinationIp|cidr: 192.168.0.0/16
+      - DestinationIp|cidr: 169.254.0.0/16
+      - DestinationIp|cidr: ::1/128
+      - DestinationIp|cidr: fe80::/10
+      - DestinationIp|cidr: fc00::/7
+- filter_main_msrange:
+  - and:
+    - or:
+      - DestinationIp|cidr: 20.184.0.0/13
+      - DestinationIp|cidr: 20.192.0.0/10
+      - DestinationIp|cidr: 23.72.0.0/13
+      - DestinationIp|cidr: 51.10.0.0/15
+      - DestinationIp|cidr: 51.103.0.0/16
+      - DestinationIp|cidr: 51.104.0.0/15
+      - DestinationIp|cidr: 204.79.197.0/24
+- condition: selection and not 1 of filter_main_*
+falsepositives:
+- You may have to tune certain domains out that Excel may call out to, such as microsoft
+  or other business use case domains.
+- Office documents commonly have templates that refer to external addresses, like
+  "sharepoint.ourcompany.com" may have to be tuned.
+- It is highly recommended to baseline your activity and tune out common business
+  use cases.
+level: medium

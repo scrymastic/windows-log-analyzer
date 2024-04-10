@@ -1,0 +1,21 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \net.exe
+        - Image|endswith: \net1.exe
+      - or:
+        - OriginalFileName|==: net.exe
+        - OriginalFileName|==: net1.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: view
+- filter:
+  - and:
+    - CommandLine|contains: \\\\
+- condition: all of selection_* and not filter
+id: 62510e69-616b-4078-b371-847da438cc03
+logsource:
+  category: process_creation
+  product: windows

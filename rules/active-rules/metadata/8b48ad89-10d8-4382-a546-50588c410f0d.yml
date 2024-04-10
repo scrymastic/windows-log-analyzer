@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/11
+description: Detects an appx package added the pipeline of the "to be processed" packages
+  which is downloaded from a suspicious domain
+falsepositives:
+- Unknown
+filename: win_appxdeployment_server_susp_domains.yml
+level: high
+modified: 2024/02/09
+references:
+- Internal Research
+- https://www.sentinelone.com/labs/inside-malicious-windows-apps-for-malware-deployment/
+- https://learn.microsoft.com/en-us/windows/win32/appxpkg/troubleshooting
+- https://news.sophos.com/en-us/2021/11/11/bazarloader-call-me-back-attack-abuses-windows-10-apps-mechanism/
+related: []
+status: experimental
+tags:
+- attack.defense_evasion

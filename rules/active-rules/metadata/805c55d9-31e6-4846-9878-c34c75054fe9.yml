@@ -1,0 +1,15 @@
+author: NVISO
+date: 2020/06/09
+description: Detects Octopus Scanner Malware.
+falsepositives:
+- Unknown
+filename: file_event_win_mal_octopus_scanner.yml
+level: high
+modified: 2021/11/27
+references:
+- https://securitylab.github.com/research/octopus-scanner-malware-open-source-supply-chain
+related: []
+status: test
+tags:
+- attack.t1195
+- attack.t1195.001

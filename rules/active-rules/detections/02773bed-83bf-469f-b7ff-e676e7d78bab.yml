@@ -1,0 +1,22 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetFilename|endswith: BloodHound.zip
+      - TargetFilename|endswith: _computers.json
+      - TargetFilename|endswith: _containers.json
+      - TargetFilename|endswith: _domains.json
+      - TargetFilename|endswith: _gpos.json
+      - TargetFilename|endswith: _groups.json
+      - TargetFilename|endswith: _ous.json
+      - TargetFilename|endswith: _users.json
+- filter_optional_ms_winapps:
+  - and:
+    - Image|endswith: \svchost.exe
+    - TargetFilename|startswith: C:\Program Files\WindowsApps\Microsoft.
+    - TargetFilename|endswith: \pocket_containers.json
+- condition: selection and not 1 of filter_optional_*
+id: 02773bed-83bf-469f-b7ff-e676e7d78bab
+logsource:
+  category: file_event
+  product: windows

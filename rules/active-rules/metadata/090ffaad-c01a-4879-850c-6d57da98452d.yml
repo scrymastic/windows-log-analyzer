@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/16
+description: Detects DNS queries to "ufile.io", which was seen abused by malware and
+  threat actors as a method for data exfiltration
+falsepositives:
+- DNS queries for "ufile" are not malicious by nature necessarily. Investigate the
+  source to determine the necessary actions to take
+filename: win_dns_client_ufile_io.yml
+level: low
+modified: 2023/09/18
+references:
+- https://thedfirreport.com/2021/12/13/diavol-ransomware/
+related:
+- id: 1cbbeaaf-3c8c-4e4c-9d72-49485b6a176b
+  type: similar
+status: experimental
+tags:
+- attack.exfiltration
+- attack.t1567.002

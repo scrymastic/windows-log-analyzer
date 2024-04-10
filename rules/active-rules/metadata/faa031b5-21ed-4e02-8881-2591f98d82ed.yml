@@ -1,0 +1,19 @@
+author: '@neu5ron'
+date: 2019/02/05
+description: Detect scenarios where a potentially unauthorized application or user
+  is modifying the system time.
+falsepositives:
+- HyperV or other virtualization technologies with binary not listed in filter portion
+  of detection
+filename: win_security_susp_time_modification.yml
+level: low
+modified: 2022/08/03
+references:
+- Private Cuckoo Sandbox (from many years ago, no longer have hash, NDA as well)
+- Live environment caused by malware
+- https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4616
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1070.006

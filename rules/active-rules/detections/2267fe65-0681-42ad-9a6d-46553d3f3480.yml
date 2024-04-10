@@ -1,0 +1,32 @@
+detection:
+- selection_parent:
+  - and:
+    - or:
+      - ParentImage|endswith: \wsl.exe
+      - ParentImage|endswith: \wslhost.exe
+- selection_children_images:
+  - and:
+    - or:
+      - Image|endswith: \calc.exe
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \wscript.exe
+- selection_children_paths:
+  - and:
+    - or:
+      - Image|contains: \AppData\Local\Temp\
+      - Image|contains: C:\Users\Public\
+      - Image|contains: C:\Windows\Temp\
+      - Image|contains: C:\Temp\
+      - Image|contains: \Downloads\
+      - Image|contains: \Desktop\
+- condition: selection_parent and 1 of selection_children_*
+id: 2267fe65-0681-42ad-9a6d-46553d3f3480
+logsource:
+  category: process_creation
+  product: windows

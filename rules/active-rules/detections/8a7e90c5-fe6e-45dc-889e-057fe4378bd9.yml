@@ -1,0 +1,18 @@
+detection:
+- selection_img:
+  - and:
+    - Image|endswith: \SysmonEOP.exe
+- selection_hash:
+  - and:
+    - or:
+      - or:
+        - Hashes|==: IMPHASH=22F4089EB8ABA31E1BB162C6D9BF72E5
+        - Hashes|==: IMPHASH=5123FA4C4384D431CD0D893EEB49BBEC
+      - or:
+        - Imphash|==: 22f4089eb8aba31e1bb162c6d9bf72e5
+        - Imphash|==: 5123fa4c4384d431cd0d893eeb49bbec
+- condition: 1 of selection_*
+id: 8a7e90c5-fe6e-45dc-889e-057fe4378bd9
+logsource:
+  category: process_creation
+  product: windows

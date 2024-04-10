@@ -1,0 +1,56 @@
+title: PUA - Seatbelt Execution
+id: 38646daa-e78f-4ace-9de0-55547b2d30da
+status: test
+description: Detects the execution of the PUA/Recon tool Seatbelt via PE information
+  of command line parameters
+references:
+- https://github.com/GhostPack/Seatbelt
+- https://www.bluetangle.dev/2022/08/fastening-seatbelt-on-threat-hunting.html
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/18
+modified: 2023/02/04
+tags:
+- attack.discovery
+- attack.t1526
+- attack.t1087
+- attack.t1083
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \Seatbelt.exe
+      - OriginalFileName|==: Seatbelt.exe
+      - Description|==: Seatbelt
+      - or:
+        - CommandLine|contains: ' DpapiMasterKeys'
+        - CommandLine|contains: ' InterestingProcesses'
+        - CommandLine|contains: ' InterestingFiles'
+        - CommandLine|contains: ' CertificateThumbprints'
+        - CommandLine|contains: ' ChromiumBookmarks'
+        - CommandLine|contains: ' ChromiumHistory'
+        - CommandLine|contains: ' ChromiumPresence'
+        - CommandLine|contains: ' CloudCredentials'
+        - CommandLine|contains: ' CredEnum'
+        - CommandLine|contains: ' CredGuard'
+        - CommandLine|contains: ' FirefoxHistory'
+        - CommandLine|contains: ' ProcessCreationEvents'
+- selection_group_list:
+  - and:
+    - or:
+      - CommandLine|contains: ' -group=misc'
+      - CommandLine|contains: ' -group=remote'
+      - CommandLine|contains: ' -group=chromium'
+      - CommandLine|contains: ' -group=slack'
+      - CommandLine|contains: ' -group=system'
+      - CommandLine|contains: ' -group=user'
+      - CommandLine|contains: ' -group=all'
+- selection_group_output:
+  - and:
+    - CommandLine|contains: ' -outputfile='
+- condition: selection_img or all of selection_group_*
+falsepositives:
+- Unlikely
+level: high

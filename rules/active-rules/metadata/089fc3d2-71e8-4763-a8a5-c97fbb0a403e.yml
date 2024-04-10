@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems), frack113
+date: 2021/11/29
+description: Detects the execution of REGSVR32.exe with DLL files masquerading as
+  other files
+falsepositives:
+- Unlikely
+filename: proc_creation_win_regsvr32_susp_extensions.yml
+level: high
+modified: 2023/05/24
+references:
+- https://thedfirreport.com/2021/11/29/continuing-the-bazar-ransomware-story/
+- https://blog.talosintelligence.com/2021/10/threat-hunting-in-large-datasets-by.html
+- https://guides.lib.umich.edu/c.php?g=282942&p=1885348
+related:
+- id: 8e2b24c9-4add-46a0-b4bb-0057b4e6187d
+  type: obsoletes
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218.010

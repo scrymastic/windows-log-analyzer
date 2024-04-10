@@ -1,0 +1,26 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \wermgr.exe
+    - or:
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \ipconfig.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+      - Image|endswith: \netstat.exe
+      - Image|endswith: \nslookup.exe
+      - Image|endswith: \powershell_ise.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \systeminfo.exe
+      - Image|endswith: \whoami.exe
+      - Image|endswith: \wscript.exe
+- condition: selection
+id: 396f6630-f3ac-44e3-bfc8-1b161bc00c4e
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,18 @@
+detection:
+- selection_create:
+  - and:
+    - EventID|==: 4720
+    - SamAccountName|contains: $
+- selection_rename:
+  - and:
+    - EventID|==: 4781
+    - NewTargetUserName|contains: $
+- filter_main_homegroup:
+  - and:
+    - EventID|==: 4720
+    - TargetUserName|==: HomeGroupUser$
+- condition: 1 of selection_* and not 1 of filter_main_*
+id: cfeed607-6aa4-4bbd-9627-b637deb723c8
+logsource:
+  product: windows
+  service: security

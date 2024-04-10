@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/19
+description: 'Detects use of .NET InstallUtil.exe in order to download arbitrary files.
+  The files will be written to "%LOCALAPPDATA%\Microsoft\Windows\INetCache\IE\"
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_installutil_download.yml
+level: medium
+modified: 2023/11/09
+references:
+- https://github.com/LOLBAS-Project/LOLBAS/pull/239
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

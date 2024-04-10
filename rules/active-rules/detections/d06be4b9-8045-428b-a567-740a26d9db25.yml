@@ -1,0 +1,15 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \verclsid.exe
+      - OriginalFileName|==: verclsid.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: /S
+    - CommandLine|contains: /C
+- condition: all of selection_*
+id: d06be4b9-8045-428b-a567-740a26d9db25
+logsource:
+  category: process_creation
+  product: windows

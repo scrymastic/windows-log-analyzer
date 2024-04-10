@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/02/11
+description: Detects the execution of "logman" utility in order to disable or delete
+  Windows trace sessions
+falsepositives:
+- Legitimate deactivation by administrative staff
+- Installer tools that disable services, e.g. before log collection agent installation
+filename: proc_creation_win_logman_disable_eventlog.yml
+level: high
+modified: 2023/02/21
+references:
+- https://twitter.com/0gtweet/status/1359039665232306183?s=21
+- https://ss64.com/nt/logman.html
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.001
+- attack.t1070.001

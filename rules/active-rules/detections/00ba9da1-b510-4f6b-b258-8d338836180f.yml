@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5379
+    - TargetName|contains: Microsoft_Windows_Shell_ZipFolder:filename
+- filter:
+  - and:
+    - TargetName|contains: \Temporary Internet Files\Content.Outlook
+- condition: selection and not filter
+id: 00ba9da1-b510-4f6b-b258-8d338836180f
+logsource:
+  product: windows
+  service: security

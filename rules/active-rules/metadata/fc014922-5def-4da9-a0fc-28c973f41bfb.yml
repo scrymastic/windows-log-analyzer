@@ -1,0 +1,18 @@
+author: oscd.community, Natalia Shornikova
+date: 2020/10/13
+description: This rule detects that the path to the DLL written in the registry is
+  different from the default one. Launched WAB.exe tries to load the DLL from Registry.
+falsepositives:
+- Unknown
+filename: registry_set_wab_dllpath_reg_change.yml
+level: high
+modified: 2023/08/17
+references:
+- https://github.com/LOLBAS-Project/LOLBAS/blob/8283d8d91552213ded165fd36deb6cb9534cb443/yml/OSBinaries/Wab.yml
+- https://twitter.com/Hexacorn/status/991447379864932352
+- http://www.hexacorn.com/blog/2018/05/01/wab-exe-as-a-lolbin/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 524
+    - Provider_Name|==: Microsoft-Windows-Backup
+- condition: selection
+id: 9703792d-fd9a-456d-a672-ff92efe4806a
+logsource:
+  product: windows
+  service: application

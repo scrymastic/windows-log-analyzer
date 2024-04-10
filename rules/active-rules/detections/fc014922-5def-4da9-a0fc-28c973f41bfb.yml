@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|endswith: \Software\Microsoft\WAB\DLLPath
+- filter:
+  - and:
+    - Details|==: '%CommonProgramFiles%\System\wab32.dll'
+- condition: selection and not filter
+id: fc014922-5def-4da9-a0fc-28c973f41bfb
+logsource:
+  category: registry_set
+  product: windows

@@ -1,0 +1,15 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: reg.exe
+      - OriginalFileName|==: reg.exe
+- selection_delete:
+  - and:
+    - CommandLine|contains: ' delete '
+    - CommandLine|contains: \SYSTEM\CurrentControlSet\Control\SafeBoot
+- condition: all of selection_*
+id: fc0e89b5-adb0-43c1-b749-c12a10ec37de
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,16 @@
+author: frack113
+date: 2023/01/07
+description: Detects potential NT API stub patching as seen used by the project PatchingAPI
+falsepositives:
+- Unknown
+filename: proc_access_win_susp_invoke_patchingapi.yml
+level: medium
+modified: 2023/11/27
+references:
+- https://github.com/D1rkMtr/UnhookingPatch
+- https://twitter.com/D1rkMtr/status/1611471891193298944?s=20
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1562.002

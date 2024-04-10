@@ -1,0 +1,23 @@
+detection:
+- selection_cmdlet:
+  - and:
+    - or:
+      - ScriptBlockText|contains: New-ScheduledTaskAction
+      - ScriptBlockText|contains: New-ScheduledTaskTrigger
+      - ScriptBlockText|contains: New-ScheduledTaskPrincipal
+      - ScriptBlockText|contains: New-ScheduledTaskSettingsSet
+      - ScriptBlockText|contains: New-ScheduledTask
+      - ScriptBlockText|contains: Register-ScheduledTask
+- selection_cimmethod:
+  - and:
+    - ScriptBlockText|contains: Invoke-CimMethod
+    - ScriptBlockText|contains: -ClassName
+    - ScriptBlockText|contains: PS_ScheduledTask
+    - ScriptBlockText|contains: -NameSpace
+    - ScriptBlockText|contains: Root\Microsoft\Windows\TaskScheduler
+- condition: 1 of selection_*
+id: 363eccc0-279a-4ccf-a3ab-24c2e63b11fb
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

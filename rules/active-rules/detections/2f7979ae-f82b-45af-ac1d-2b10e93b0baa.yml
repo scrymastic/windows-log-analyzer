@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Image|==: System
+    - TargetFilename|endswith: \Internet Explorer\iertutil.dll
+- condition: selection
+id: 2f7979ae-f82b-45af-ac1d-2b10e93b0baa
+logsource:
+  category: file_event
+  product: windows

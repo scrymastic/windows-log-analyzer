@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - ParentImage|endswith: \wscript.exe
+      - ParentImage|endswith: \cscript.exe
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+- filter_health_service:
+  - and:
+    - CurrentDirectory|contains: \Health Service State\
+- condition: selection and not 1 of filter_*
+id: 95eadcb2-92e4-4ed1-9031-92547773a6db
+logsource:
+  category: process_creation
+  product: windows

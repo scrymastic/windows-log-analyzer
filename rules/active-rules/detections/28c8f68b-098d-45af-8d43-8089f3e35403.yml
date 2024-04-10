@@ -1,0 +1,18 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \cscript.exe
+        - Image|endswith: \wscript.exe
+      - or:
+        - OriginalFileName|==: cscript.exe
+        - OriginalFileName|==: wscript.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: '.vbs -register '
+- condition: all of selection*
+id: 28c8f68b-098d-45af-8d43-8089f3e35403
+logsource:
+  category: process_creation
+  product: windows

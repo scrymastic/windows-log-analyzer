@@ -1,0 +1,22 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \netsh.exe
+      - OriginalFileName|==: netsh.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' firewall '
+    - CommandLine|contains: ' add '
+- filter_optional_dropbox:
+  - and:
+    - or:
+      - CommandLine|contains: advfirewall firewall add rule name=Dropbox dir=in action=allow
+          "program=?:\Program Files (x86)\Dropbox\Client\Dropbox.exe" enable=yes profile=Any
+      - CommandLine|contains: advfirewall firewall add rule name=Dropbox dir=in action=allow
+          "program=?:\Program Files\Dropbox\Client\Dropbox.exe" enable=yes profile=Any
+- condition: all of selection_* and not 1 of filter_optional_*
+id: cd5cfd80-aa5f-44c0-9c20-108c4ae12e3c
+logsource:
+  category: process_creation
+  product: windows

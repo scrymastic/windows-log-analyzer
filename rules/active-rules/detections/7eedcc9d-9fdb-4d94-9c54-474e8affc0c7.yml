@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: new-object
+    - CommandLine|contains: text.encoding]::ascii
+    - or:
+      - CommandLine|contains: system.io.compression.deflatestream
+      - CommandLine|contains: system.io.streamreader
+      - CommandLine|contains: readtoend(
+- condition: selection
+id: 7eedcc9d-9fdb-4d94-9c54-474e8affc0c7
+logsource:
+  category: process_creation
+  product: windows

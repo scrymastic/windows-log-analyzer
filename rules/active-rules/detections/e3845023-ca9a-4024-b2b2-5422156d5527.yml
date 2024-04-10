@@ -1,0 +1,22 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetFilename|contains: \WindowsPowerShell\Modules\
+      - TargetFilename|contains: \PowerShell\7\Modules\
+- filter_main_pwsh:
+  - and:
+    - or:
+      - Image|endswith: :\Program Files\PowerShell\7-preview\pwsh.exe
+      - Image|endswith: :\Program Files\PowerShell\7\pwsh.exe
+      - Image|endswith: :\Windows\System32\poqexec.exe
+      - Image|endswith: :\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe
+      - Image|endswith: :\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+      - Image|endswith: :\Windows\SysWOW64\poqexec.exe
+      - Image|endswith: :\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell_ise.exe
+      - Image|endswith: :\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
+- condition: selection and not 1 of filter_main_*
+id: e3845023-ca9a-4024-b2b2-5422156d5527
+logsource:
+  category: file_event
+  product: windows

@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\
+    - TargetObject|contains: Index
+    - Details|==: DWORD (0x00000000)
+- condition: selection
+id: 5b16df71-8615-4f7f-ac9b-6c43c0509e61
+logsource:
+  category: registry_set
+  product: windows

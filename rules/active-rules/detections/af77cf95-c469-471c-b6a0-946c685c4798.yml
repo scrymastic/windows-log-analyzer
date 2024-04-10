@@ -1,0 +1,31 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \wuauclt.exe
+      - OriginalFileName|==: wuauclt.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: UpdateDeploymentProvider
+    - CommandLine|contains: RunHandlerComServer
+- filter_main_generic:
+  - and:
+    - CommandLine|contains: ' /UpdateDeploymentProvider UpdateDeploymentProvider.dll '
+- filter_main_wuaueng:
+  - and:
+    - CommandLine|contains: ' wuaueng.dll '
+- filter_main_uus:
+  - and:
+    - or:
+      - CommandLine|contains: :\Windows\UUS\Packages\Preview\amd64\updatedeploy.dll
+          /ClassId
+      - CommandLine|contains: :\Windows\UUS\amd64\UpdateDeploy.dll /ClassId
+- filter_main_winsxs:
+  - and:
+    - CommandLine|contains: :\Windows\WinSxS\
+    - CommandLine|contains: '\UpdateDeploy.dll /ClassId '
+- condition: all of selection_* and not 1 of filter_main_*
+id: af77cf95-c469-471c-b6a0-946c685c4798
+logsource:
+  category: process_creation
+  product: windows

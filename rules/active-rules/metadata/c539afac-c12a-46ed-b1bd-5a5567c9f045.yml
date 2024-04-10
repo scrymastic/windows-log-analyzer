@@ -1,0 +1,23 @@
+author: Roberto Rodriguez @Cyb3rWard0g
+date: 2019/09/12
+description: 'Detects a process that initiated a network connection over ports 5985
+  or 5986 from a non-network service account.
+
+  This could potentially indicates a remote PowerShell connection.
+
+  '
+falsepositives:
+- Legitimate usage of remote PowerShell, e.g. remote administration and monitoring.
+- Network Service user name of a not-covered localization
+filename: net_connection_win_susp_remote_powershell_session.yml
+level: high
+modified: 2024/02/02
+references:
+- https://threathunterplaybook.com/hunts/windows/190511-RemotePwshExecution/notebook.html
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001
+- attack.lateral_movement
+- attack.t1021.006

@@ -1,0 +1,15 @@
+author: frack113
+date: 2021/11/26
+description: Extract data from cab file and hide it in an alternate data stream
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_extrac32_ads.yml
+level: medium
+modified: 2022/12/30
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Extrac32/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1564.004

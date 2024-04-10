@@ -1,0 +1,29 @@
+author: Florian Roth (Nextron Systems), Markus Neis, Tim Shelton (HAWK.IO), Nasreddine
+  Bencherchali (Nextron Systems)
+date: 2020/07/03
+description: 'Detects a suspicious copy operation that tries to copy a program from
+  system (System32, SysWOW64, WinSxS) directories to another on disk.
+
+  Often used to move LOLBINs such as ''certutil'' or ''desktopimgdownldr'' to a different
+  location with a different name in order to bypass detections based on locations.
+
+  '
+falsepositives:
+- Depend on scripts and administrative tools used in the monitored environment (For
+  example an admin scripts like https://www.itexperience.net/sccm-batch-files-and-32-bits-processes-on-64-bits-os/)
+- When cmd.exe and xcopy.exe are called directly
+- When the command contains the keywords but not in the correct order
+filename: proc_creation_win_susp_copy_system_dir.yml
+level: medium
+modified: 2023/08/29
+references:
+- https://www.hybrid-analysis.com/sample/8da5b75b6380a41eee3a399c43dfe0d99eeefaa1fd21027a07b1ecaa4cd96fdd?environmentId=120
+- https://web.archive.org/web/20180331144337/https://www.fireeye.com/blog/threat-research/2018/03/sanny-malware-delivery-method-updated-in-recently-observed-attacks.html
+- https://thedfirreport.com/2023/08/28/html-smuggling-leads-to-domain-wide-ransomware/
+related:
+- id: 855bc8b5-2ae8-402e-a9ed-b889e6df1900
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036.003

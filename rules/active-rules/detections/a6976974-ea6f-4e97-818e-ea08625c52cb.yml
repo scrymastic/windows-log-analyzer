@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|contains: \Microsoft\Windows\Start Menu\Programs\Startup
+    - TargetFilename|contains: .lnk.{0AFACED1-E828-11D1-9187-B532F1E9575D}
+    - Image|endswith: \explorer.exe
+- condition: selection
+id: a6976974-ea6f-4e97-818e-ea08625c52cb
+logsource:
+  category: file_event
+  product: windows

@@ -1,0 +1,20 @@
+detection:
+- selection_main:
+  - and:
+    - or:
+      - and:
+        - CommandLine|contains: 'localgroup '
+        - CommandLine|contains: ' /add'
+      - and:
+        - CommandLine|contains: 'Add-LocalGroupMember '
+        - CommandLine|contains: ' -Group '
+- selection_group:
+  - and:
+    - or:
+      - CommandLine|contains: ' administrators '
+      - CommandLine|contains: ' administrateur'
+- condition: all of selection_*
+id: ad720b90-25ad-43ff-9b5e-5c841facc8e5
+logsource:
+  category: process_creation
+  product: windows

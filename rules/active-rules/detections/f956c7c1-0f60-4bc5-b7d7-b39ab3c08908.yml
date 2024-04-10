@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \pktmon.exe
+      - OriginalFileName|==: PktMon.exe
+- condition: selection
+id: f956c7c1-0f60-4bc5-b7d7-b39ab3c08908
+logsource:
+  category: process_creation
+  product: windows

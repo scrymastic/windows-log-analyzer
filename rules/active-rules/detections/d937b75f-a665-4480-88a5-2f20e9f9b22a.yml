@@ -1,0 +1,18 @@
+detection:
+- scbynonadmin:
+  - and:
+    - Image|endswith: \sc.exe
+    - IntegrityLevel|==: Medium
+- selection_binpath:
+  - and:
+    - CommandLine|contains: config
+    - CommandLine|contains: binPath
+- selection_failure:
+  - and:
+    - CommandLine|contains: failure
+    - CommandLine|contains: command
+- condition: scbynonadmin and 1 of selection_*
+id: d937b75f-a665-4480-88a5-2f20e9f9b22a
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,14 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \regini.exe
+      - OriginalFileName|==: REGINI.EXE
+- selection_re:
+  - and:
+    - CommandLine|matches: :[^ \\]
+- condition: all of selection_*
+id: 77946e79-97f1-45a2-84b4-f37b5c0d8682
+logsource:
+  category: process_creation
+  product: windows

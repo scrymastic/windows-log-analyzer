@@ -1,0 +1,29 @@
+author: Nasreddine Bencherchali (Nextron Systems), frack113
+date: 2022/09/01
+description: Detects the usage of binaries such as 'net', 'sc' or 'powershell' in
+  order to stop, pause or delete critical or important Windows services such as AV,
+  Backup, etc. As seen being used in some ransomware scripts
+falsepositives:
+- Administrators or tools shutting down the services due to upgrade or removal purposes.
+  If you experience some false positive, please consider adding filters to the parent
+  process launching this command and not removing the entry
+filename: proc_creation_win_susp_service_tamper.yml
+level: high
+modified: 2023/08/07
+references:
+- https://www.trendmicro.com/content/dam/trendmicro/global/en/research/22/h/ransomware-actor-abuses-genshin-impact-anti-cheat-driver-to-kill-antivirus/Genshin%20Impact%20Figure%2010.jpg
+- https://www.trellix.com/en-sg/about/newsroom/stories/threat-labs/lockergoga-ransomware-family-used-in-targeted-attacks.html
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1562.001/T1562.001.md
+- https://research.nccgroup.com/2022/08/19/back-in-black-unlocking-a-lockbit-3-0-ransomware-attack/
+- https://www.virustotal.com/gui/file/38283b775552da8981452941ea74191aa0d203edd3f61fb2dee7b0aea3514955
+related:
+- id: eb87818d-db5d-49cc-a987-d5da331fbd90
+  type: derived
+- id: 6783aa9e-0dc3-49d4-a94a-8b39c5fd700b
+  type: obsoletes
+- id: 7fd4bb39-12d0-45ab-bb36-cebabc73dc7b
+  type: obsoletes
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1489

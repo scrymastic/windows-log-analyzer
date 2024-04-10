@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - OriginalFileName|==: msdt.exe
+- filter:
+  - and:
+    - Image|endswith: \msdt.exe
+- condition: selection and not filter
+id: bd1c6866-65fc-44b2-be51-5588fcff82b9
+logsource:
+  category: process_creation
+  product: windows

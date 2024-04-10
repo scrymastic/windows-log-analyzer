@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\InstalledSDB\
+    - TargetObject|contains: \DatabasePath
+- filter_main_known_locations:
+  - and:
+    - Details|contains: :\Windows\AppPatch\Custom
+- condition: selection and not 1 of filter_main_*
+id: 6b6976a3-b0e6-4723-ac24-ae38a737af41
+logsource:
+  category: registry_set
+  product: windows

@@ -1,0 +1,35 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \winword.exe
+      - Image|endswith: \excel.exe
+      - Image|endswith: \powerpnt.exe
+      - Image|endswith: \msaccess.exe
+      - Image|endswith: \mspub.exe
+      - Image|endswith: \eqnedt32.exe
+      - Image|endswith: \visio.exe
+      - Image|endswith: \wordpad.exe
+      - Image|endswith: \wordview.exe
+      - Image|endswith: \certutil.exe
+      - Image|endswith: \certoc.exe
+      - Image|endswith: \CertReq.exe
+      - Image|endswith: \Desktopimgdownldr.exe
+      - Image|endswith: \esentutl.exe
+      - Image|endswith: \finger.exe
+      - Image|endswith: \notepad.exe
+      - Image|endswith: \AcroRd32.exe
+      - Image|endswith: \RdrCEF.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \hh.exe
+    - or:
+      - TargetFilename|endswith: .zip
+      - TargetFilename|endswith: .rar
+      - TargetFilename|endswith: .7z
+      - TargetFilename|endswith: .diagcab
+      - TargetFilename|endswith: .appx
+- condition: selection
+id: 654fcc6d-840d-4844-9b07-2c3300e54a26
+logsource:
+  category: file_event
+  product: windows

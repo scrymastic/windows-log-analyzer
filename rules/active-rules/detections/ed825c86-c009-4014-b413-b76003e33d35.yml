@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Image|matches: '[a-zA-Z]:\\'
+    - CurrentDirectory|contains: \\\\wsl.localhost
+- condition: selection
+id: ed825c86-c009-4014-b413-b76003e33d35
+logsource:
+  category: process_creation
+  product: windows

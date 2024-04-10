@@ -1,0 +1,32 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|contains: ~1\
+      - Image|contains: ~2\
+- filter1:
+  - and:
+    - or:
+      - or:
+        - ParentImage|==: C:\Windows\System32\Dism.exe
+        - ParentImage|==: C:\Windows\System32\cleanmgr.exe
+      - or:
+        - ParentImage|endswith: \WebEx\WebexHost.exe
+        - ParentImage|endswith: \thor\thor64.exe
+      - Product|==: InstallShield (R)
+      - Description|==: InstallShield (R) Setup Engine
+      - Company|==: InstallShield Software Corporation
+- filter_installers:
+  - and:
+    - or:
+      - and:
+        - Image|contains: \AppData\
+        - Image|contains: \Temp\
+      - or:
+        - Image|endswith: ~1\unzip.exe
+        - Image|endswith: ~1\7zG.exe
+- condition: selection and not 1 of filter*
+id: a96970af-f126-420d-90e1-d37bf25e50e1
+logsource:
+  category: process_creation
+  product: windows

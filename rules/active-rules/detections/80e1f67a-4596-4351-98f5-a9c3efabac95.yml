@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|contains: \Windows\System32\Tasks
+    - or:
+      - Image|contains: \AppData\
+      - Image|contains: C:\PerfLogs
+      - Image|contains: \Windows\System32\config\systemprofile
+- condition: selection
+id: 80e1f67a-4596-4351-98f5-a9c3efabac95
+logsource:
+  category: file_event
+  product: windows

@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \Software\Microsoft\Windows\CurrentVersion\Run\ntkd
+- condition: selection
+id: 70d43542-cd2d-483c-8f30-f16b436fd7db
+logsource:
+  category: registry_event
+  product: windows

@@ -1,0 +1,15 @@
+author: Austin Songer @austinsonger
+date: 2021/08/04
+description: Detects disabling Windows Defender Tamper Protection
+falsepositives:
+- Unknown
+filename: registry_set_disabled_tamper_protection_on_microsoft_defender.yml
+level: medium
+modified: 2023/08/17
+references:
+- https://www.tenforums.com/tutorials/123792-turn-off-tamper-protection-microsoft-defender-antivirus.html
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1562.001

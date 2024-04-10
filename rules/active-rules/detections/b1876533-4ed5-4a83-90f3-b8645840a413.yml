@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \SafetyKatz.exe
+      - OriginalFileName|==: SafetyKatz.exe
+      - Description|==: SafetyKatz
+- condition: selection
+id: b1876533-4ed5-4a83-90f3-b8645840a413
+logsource:
+  category: process_creation
+  product: windows

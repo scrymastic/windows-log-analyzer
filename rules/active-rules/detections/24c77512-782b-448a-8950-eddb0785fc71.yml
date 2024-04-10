@@ -1,0 +1,27 @@
+detection:
+- selection_sql:
+  - and:
+    - or:
+      - Product|==: SQLite
+      - or:
+        - Image|endswith: \sqlite.exe
+        - Image|endswith: \sqlite3.exe
+- selection_chromium:
+  - and:
+    - or:
+      - CommandLine|contains: \User Data\
+      - CommandLine|contains: \Opera Software\
+      - CommandLine|contains: \ChromiumViewer\
+- selection_data:
+  - and:
+    - or:
+      - CommandLine|contains: Login Data
+      - CommandLine|contains: Cookies
+      - CommandLine|contains: Web Data
+      - CommandLine|contains: History
+      - CommandLine|contains: Bookmarks
+- condition: all of selection_*
+id: 24c77512-782b-448a-8950-eddb0785fc71
+logsource:
+  category: process_creation
+  product: windows

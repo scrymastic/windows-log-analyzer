@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: :\Windows\system32\taskmgr.exe
+      - Image|endswith: :\Windows\SysWOW64\taskmgr.exe
+    - TargetFilename|contains: \AppData\Local\Temp\
+    - TargetFilename|contains: \lsass
+    - TargetFilename|contains: .DMP
+- condition: selection
+id: 69ca12af-119d-44ed-b50f-a47af0ebc364
+logsource:
+  category: file_event
+  product: windows

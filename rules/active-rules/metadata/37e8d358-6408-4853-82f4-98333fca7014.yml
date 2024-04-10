@@ -1,0 +1,15 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/09/19
+description: Detects execution of client32.exe (NetSupport RAT) from an unusual location
+  (outside of 'C:\Program Files')
+falsepositives:
+- Unknown
+filename: proc_creation_win_remote_access_tools_netsupport_susp_exec.yml
+level: medium
+modified: 2023/03/05
+references:
+- https://redcanary.com/blog/misbehaving-rats/
+related: []
+status: test
+tags:
+- attack.defense_evasion

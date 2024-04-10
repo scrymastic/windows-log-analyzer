@@ -1,0 +1,21 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - FileName|contains: \AppData\Local\Microsoft\Credentials\
+      - FileName|contains: \AppData\Roaming\Microsoft\Credentials\
+      - FileName|contains: \AppData\Local\Microsoft\Vault\
+      - FileName|contains: \ProgramData\Microsoft\Vault\
+- filter_system_folders:
+  - and:
+    - or:
+      - Image|contains: :\Program Files\
+      - Image|contains: :\Program Files (x86)\
+      - Image|contains: :\Windows\system32\
+      - Image|contains: :\Windows\SysWOW64\
+- condition: selection and not 1 of filter_*
+id: 407aecb1-e762-4acf-8c7b-d087bcff3bb6
+logsource:
+  category: file_access
+  definition: 'Requirements: Microsoft-Windows-Kernel-File ETW provider'
+  product: windows

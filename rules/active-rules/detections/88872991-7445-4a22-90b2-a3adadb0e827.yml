@@ -1,0 +1,18 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - OriginalFileName|==: net.exe
+        - OriginalFileName|==: net1.exe
+      - or:
+        - Image|endswith: \net.exe
+        - Image|endswith: \net1.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' stop '
+- condition: all of selection_*
+id: 88872991-7445-4a22-90b2-a3adadb0e827
+logsource:
+  category: process_creation
+  product: windows

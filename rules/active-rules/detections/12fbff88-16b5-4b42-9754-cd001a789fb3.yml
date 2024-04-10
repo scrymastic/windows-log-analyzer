@@ -1,0 +1,19 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \mode.com
+      - OriginalFileName|==: MODE.COM
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' con '
+    - CommandLine|contains: ' cp '
+    - CommandLine|contains: ' select='
+    - or:
+      - CommandLine|endswith: =1251
+      - CommandLine|endswith: =866
+- condition: all of selection_*
+id: 12fbff88-16b5-4b42-9754-cd001a789fb3
+logsource:
+  category: process_creation
+  product: windows

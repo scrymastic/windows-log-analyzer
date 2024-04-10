@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \sdiagnhost.exe
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \wscript.exe
+      - Image|endswith: \taskkill.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \calc.exe
+- condition: selection
+id: f3d39c45-de1a-4486-a687-ab126124f744
+logsource:
+  category: process_creation
+  product: windows

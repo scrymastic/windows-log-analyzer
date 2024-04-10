@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \changepk.exe
+    - ParentImage|endswith: \slui.exe
+    - or:
+      - IntegrityLevel|==: High
+      - IntegrityLevel|==: System
+- condition: selection
+id: 503d581c-7df0-4bbe-b9be-5840c0ecc1fc
+logsource:
+  category: process_creation
+  product: windows

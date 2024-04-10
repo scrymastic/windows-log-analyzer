@@ -1,0 +1,19 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \VSDiagnostics.exe
+      - OriginalFileName|==: VSDiagnostics.exe
+- selection_cli_start:
+  - and:
+    - CommandLine|contains: start
+- selection_cli_launch:
+  - and:
+    - or:
+      - CommandLine|contains: ' /launch:'
+      - CommandLine|contains: ' -launch:'
+- condition: all of selection_*
+id: ac1c92b4-ac81-405a-9978-4604d78cc47e
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/06/28
+description: Detects suspicious command line reg.exe tool adding key to RUN key in
+  Registry
+falsepositives:
+- Legitimate software automatically (mostly, during installation) sets up autorun
+  keys for legitimate reasons.
+- Legitimate administrator sets up autorun keys for legitimate reasons.
+- Discord
+filename: proc_creation_win_reg_add_run_key.yml
+level: medium
+modified: 2023/01/30
+references:
+- https://app.any.run/tasks/9c0f37bc-867a-4314-b685-e101566766d7/
+- https://docs.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.t1547.001

@@ -1,0 +1,16 @@
+author: frack113
+date: 2022/04/04
+description: Detects the modification of the registry to disable a system restore
+  on the computer
+falsepositives:
+- Unknown
+filename: registry_set_disable_system_restore.yml
+level: high
+modified: 2023/08/17
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1490/T1490.md#atomic-test-9---disable-system-restore-through-registry
+related: []
+status: experimental
+tags:
+- attack.impact
+- attack.t1490

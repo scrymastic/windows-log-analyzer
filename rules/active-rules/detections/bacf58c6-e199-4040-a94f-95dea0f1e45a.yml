@@ -1,0 +1,80 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5157
+    - or:
+      - Application|endswith: \AmSvc.exe
+      - Application|endswith: \cb.exe
+      - Application|endswith: \CETASvc.exe
+      - Application|endswith: \CNTAoSMgr.exe
+      - Application|endswith: \CrAmTray.exe
+      - Application|endswith: \CrsSvc.exe
+      - Application|endswith: \CSFalconContainer.exe
+      - Application|endswith: \CSFalconService.exe
+      - Application|endswith: \CybereasonAV.exe
+      - Application|endswith: \CylanceSvc.exe
+      - Application|endswith: \cyserver.exe
+      - Application|endswith: \CyveraService.exe
+      - Application|endswith: \CyvrFsFlt.exe
+      - Application|endswith: \EIConnector.exe
+      - Application|endswith: \elastic-agent.exe
+      - Application|endswith: \elastic-endpoint.exe
+      - Application|endswith: \EndpointBasecamp.exe
+      - Application|endswith: \ExecutionPreventionSvc.exe
+      - Application|endswith: \filebeat.exe
+      - Application|endswith: \fortiedr.exe
+      - Application|endswith: \hmpalert.exe
+      - Application|endswith: \hurukai.exe
+      - Application|endswith: \LogProcessorService.exe
+      - Application|endswith: \mcsagent.exe
+      - Application|endswith: \mcsclient.exe
+      - Application|endswith: \MsMpEng.exe
+      - Application|endswith: \MsSense.exe
+      - Application|endswith: \Ntrtscan.exe
+      - Application|endswith: \PccNTMon.exe
+      - Application|endswith: \QualysAgent.exe
+      - Application|endswith: \RepMgr.exe
+      - Application|endswith: \RepUtils.exe
+      - Application|endswith: \RepUx.exe
+      - Application|endswith: \RepWAV.exe
+      - Application|endswith: \RepWSC.exe
+      - Application|endswith: \sedservice.exe
+      - Application|endswith: \SenseCncProxy.exe
+      - Application|endswith: \SenseIR.exe
+      - Application|endswith: \SenseNdr.exe
+      - Application|endswith: \SenseSampleUploader.exe
+      - Application|endswith: \SentinelAgent.exe
+      - Application|endswith: \SentinelAgentWorker.exe
+      - Application|endswith: \SentinelBrowserNativeHost.exe
+      - Application|endswith: \SentinelHelperService.exe
+      - Application|endswith: \SentinelServiceHost.exe
+      - Application|endswith: \SentinelStaticEngine.exe
+      - Application|endswith: \SentinelStaticEngineScanner.exe
+      - Application|endswith: \sfc.exe
+      - Application|endswith: \sophos ui.exe
+      - Application|endswith: \sophosfilescanner.exe
+      - Application|endswith: \sophosfs.exe
+      - Application|endswith: \sophoshealth.exe
+      - Application|endswith: \sophosips.exe
+      - Application|endswith: \sophosLivequeryservice.exe
+      - Application|endswith: \sophosnetfilter.exe
+      - Application|endswith: \sophosntpservice.exe
+      - Application|endswith: \sophososquery.exe
+      - Application|endswith: \sspservice.exe
+      - Application|endswith: \TaniumClient.exe
+      - Application|endswith: \TaniumCX.exe
+      - Application|endswith: \TaniumDetectEngine.exe
+      - Application|endswith: \TMBMSRV.exe
+      - Application|endswith: \TmCCSF.exe
+      - Application|endswith: \TmListen.exe
+      - Application|endswith: \TmWSCSvc.exe
+      - Application|endswith: \Traps.exe
+      - Application|endswith: \winlogbeat.exe
+      - Application|endswith: \WSCommunicator.exe
+      - Application|endswith: \xagt.exe
+- condition: selection
+id: bacf58c6-e199-4040-a94f-95dea0f1e45a
+logsource:
+  definition: 'Requirements: Audit Filtering Platform Connection needs to be enabled'
+  product: windows
+  service: security

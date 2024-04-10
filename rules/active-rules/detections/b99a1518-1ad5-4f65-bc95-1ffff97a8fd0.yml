@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \Inveigh.exe
+      - or:
+        - OriginalFileName|==: \Inveigh.exe
+        - OriginalFileName|==: \Inveigh.dll
+      - Description|==: Inveigh
+      - or:
+        - CommandLine|contains: ' -SpooferIP'
+        - CommandLine|contains: ' -ReplyToIPs '
+        - CommandLine|contains: ' -ReplyToDomains '
+        - CommandLine|contains: ' -ReplyToMACs '
+        - CommandLine|contains: ' -SnifferIP'
+- condition: selection
+id: b99a1518-1ad5-4f65-bc95-1ffff97a8fd0
+logsource:
+  category: process_creation
+  product: windows

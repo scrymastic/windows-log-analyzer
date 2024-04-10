@@ -1,0 +1,19 @@
+author: Christopher Peacock @securepeacock, SCYTHE @scythe_io
+date: 2023/04/28
+description: Detects a "winlogon.exe" process that initiate network communications
+  with public IP addresses
+falsepositives:
+- Communication to other corporate systems that use IP addresses from public address
+  spaces
+filename: net_connection_win_winlogon_net_connections.yml
+level: medium
+modified: 2024/03/12
+references:
+- https://www.microsoft.com/en-us/security/blog/2023/04/11/guidance-for-investigating-attacks-using-cve-2022-21894-the-blacklotus-campaign/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.execution
+- attack.command_and_control
+- attack.t1218.011

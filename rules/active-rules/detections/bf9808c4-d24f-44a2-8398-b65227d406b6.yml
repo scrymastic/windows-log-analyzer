@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \libvlc.dll
+- filter_main_vlc:
+  - and:
+    - or:
+      - ImageLoaded|startswith: C:\Program Files (x86)\VideoLAN\VLC\
+      - ImageLoaded|startswith: C:\Program Files\VideoLAN\VLC\
+- condition: selection and not 1 of filter_main_*
+id: bf9808c4-d24f-44a2-8398-b65227d406b6
+logsource:
+  category: image_load
+  product: windows

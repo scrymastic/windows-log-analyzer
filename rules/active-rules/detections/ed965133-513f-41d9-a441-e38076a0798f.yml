@@ -1,0 +1,25 @@
+detection:
+- selection_encoded:
+  - and:
+    - or:
+      - ScriptBlockText|contains: ' -enc '
+      - ScriptBlockText|contains: ' -EncodedCommand '
+      - ScriptBlockText|contains: ' -ec '
+- selection_hidden:
+  - and:
+    - or:
+      - ScriptBlockText|contains: ' -w hidden '
+      - ScriptBlockText|contains: ' -window hidden '
+      - ScriptBlockText|contains: ' -windowstyle hidden '
+      - ScriptBlockText|contains: ' -w 1 '
+- selection_noninteractive:
+  - and:
+    - or:
+      - ScriptBlockText|contains: ' -noni '
+      - ScriptBlockText|contains: ' -noninteractive '
+- condition: all of selection*
+id: ed965133-513f-41d9-a441-e38076a0798f
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

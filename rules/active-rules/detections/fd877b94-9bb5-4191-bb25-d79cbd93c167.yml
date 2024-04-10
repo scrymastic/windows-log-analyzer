@@ -1,0 +1,38 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \reg.exe
+      - OriginalFileName|==: reg.exe
+- selection_cli_flag:
+  - and:
+    - or:
+      - CommandLine|contains: ' save '
+      - CommandLine|contains: ' export '
+      - CommandLine|contains: " \u02E2ave "
+      - CommandLine|contains: " e\u02E3port "
+- selection_cli_hklm:
+  - and:
+    - or:
+      - CommandLine|contains: hklm
+      - CommandLine|contains: "hk\u02EAm"
+      - CommandLine|contains: hkey_local_machine
+      - CommandLine|contains: "hkey_\u02EAocal_machine"
+      - CommandLine|contains: "hkey_loca\u02EA_machine"
+      - CommandLine|contains: "hkey_\u02EAoca\u02EA_machine"
+- selection_cli_hive:
+  - and:
+    - or:
+      - CommandLine|contains: \system
+      - CommandLine|contains: \sam
+      - CommandLine|contains: \security
+      - CommandLine|contains: "\\\u02E2ystem"
+      - CommandLine|contains: "\\sy\u02E2tem"
+      - CommandLine|contains: "\\\u02E2y\u02E2tem"
+      - CommandLine|contains: "\\\u02E2am"
+      - CommandLine|contains: "\\\u02E2ecurity"
+- condition: all of selection_*
+id: fd877b94-9bb5-4191-bb25-d79cbd93c167
+logsource:
+  category: process_creation
+  product: windows

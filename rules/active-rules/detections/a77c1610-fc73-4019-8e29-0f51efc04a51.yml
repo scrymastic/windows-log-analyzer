@@ -1,0 +1,24 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: ^^
+      - CommandLine|contains: ^|^
+      - CommandLine|contains: ',;,'
+      - CommandLine|contains: ;;;;
+      - CommandLine|contains: ;; ;;
+      - CommandLine|contains: (,(,
+      - CommandLine|contains: '%COMSPEC:~'
+      - CommandLine|contains: ' c^m^d'
+      - CommandLine|contains: ^c^m^d
+      - CommandLine|contains: ' c^md'
+      - CommandLine|contains: ' cm^d'
+      - CommandLine|contains: ^cm^d
+      - CommandLine|contains: ' s^et '
+      - CommandLine|contains: ' s^e^t '
+      - CommandLine|contains: ' se^t '
+- condition: selection
+id: a77c1610-fc73-4019-8e29-0f51efc04a51
+logsource:
+  category: process_creation
+  product: windows

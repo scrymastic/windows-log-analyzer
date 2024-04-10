@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \CustomShellHost.exe
+- filter:
+  - and:
+    - Image|==: C:\Windows\explorer.exe
+- condition: selection and not filter
+id: 84b14121-9d14-416e-800b-f3b829c5a14d
+logsource:
+  category: process_creation
+  product: windows

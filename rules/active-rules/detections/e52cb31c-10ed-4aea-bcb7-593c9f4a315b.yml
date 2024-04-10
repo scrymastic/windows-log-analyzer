@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \mmc.exe
+    - ParentCommandLine|contains: WF.msc
+- filter:
+  - and:
+    - Image|endswith: \WerFault.exe
+- condition: selection and not filter
+id: e52cb31c-10ed-4aea-bcb7-593c9f4a315b
+logsource:
+  category: process_creation
+  product: windows

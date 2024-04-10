@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetObject|==: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LocalAccountTokenFilterPolicy
+      - TargetObject|==: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLinkedConnections
+      - TargetObject|==: HKLM\SYSTEM\CurrentControlSet\Control\FileSystem\LongPathsEnabled
+    - Details|==: DWORD (0x00000001)
+- condition: selection
+id: 83314318-052a-4c90-a1ad-660ece38d276
+logsource:
+  category: registry_set
+  product: windows

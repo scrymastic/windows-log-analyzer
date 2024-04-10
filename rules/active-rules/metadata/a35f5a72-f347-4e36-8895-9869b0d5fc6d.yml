@@ -1,0 +1,17 @@
+author: Sander Wiebing, Jonhnathan Ribeiro, Daniil Yugoslavskiy, oscd.community
+date: 2020/05/25
+description: Detects Netsh command execution that whitelists a program located in
+  a suspicious location in the Windows Firewall
+falsepositives:
+- Unknown
+filename: proc_creation_win_netsh_fw_allow_program_in_susp_location.yml
+level: high
+modified: 2023/12/11
+references:
+- https://www.virusradar.com/en/Win32_Kasidet.AD/description
+- https://www.hybrid-analysis.com/sample/07e789f4f2f3259e7559fdccb36e96814c2dbff872a21e1fa03de9ee377d581f?environmentId=100
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.004

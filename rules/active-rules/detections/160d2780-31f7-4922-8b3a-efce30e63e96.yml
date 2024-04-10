@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|endswith: \CLSID\{fdb00e52-a214-4aa1-8fba-4357bb0072ec}\InProcServer32\(Default)
+- filter:
+  - and:
+    - Details|==: '%windir%\system32\amsi.dll'
+- condition: selection and not filter
+id: 160d2780-31f7-4922-8b3a-efce30e63e96
+logsource:
+  category: registry_set
+  product: windows

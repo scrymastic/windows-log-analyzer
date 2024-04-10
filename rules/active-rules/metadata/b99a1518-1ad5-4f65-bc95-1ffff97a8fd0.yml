@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/24
+description: Detects the use of Inveigh a cross-platform .NET IPv4/IPv6 machine-in-the-middle
+  tool
+falsepositives:
+- Very unlikely
+filename: proc_creation_win_hktl_inveigh.yml
+level: critical
+modified: 2023/02/04
+references:
+- https://github.com/Kevin-Robertson/Inveigh
+- https://thedfirreport.com/2020/11/23/pysa-mespinoza-ransomware/
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.001

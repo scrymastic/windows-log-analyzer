@@ -1,0 +1,19 @@
+author: iwillkeepwatch
+date: 2019/01/18
+description: 'Detects the addition of a SSP to the registry. Upon a reboot or API
+  call, SSP DLLs gain access to encrypted and plaintext passwords stored in Windows.
+
+  '
+falsepositives:
+- Unknown
+filename: registry_event_ssp_added_lsa_config.yml
+level: high
+modified: 2022/08/09
+references:
+- https://powersploit.readthedocs.io/en/latest/Persistence/Install-SSP/
+- https://github.com/EmpireProject/Empire/blob/08cbd274bef78243d7a8ed6443b8364acd1fc48b/data/module_source/persistence/Install-SSP.ps1#L157
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.t1547.005

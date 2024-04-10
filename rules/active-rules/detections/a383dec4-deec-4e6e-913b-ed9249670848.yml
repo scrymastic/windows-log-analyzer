@@ -1,0 +1,19 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \SystemSettingsAdminFlows.exe
+      - OriginalFileName|==: SystemSettingsAdminFlows.EXE
+- selection_flag:
+  - and:
+    - CommandLine|contains: TurnOnDeveloperFeatures
+- selection_options:
+  - and:
+    - or:
+      - CommandLine|contains: DeveloperUnlock
+      - CommandLine|contains: EnableSideloading
+- condition: all of selection_*
+id: a383dec4-deec-4e6e-913b-ed9249670848
+logsource:
+  category: process_creation
+  product: windows

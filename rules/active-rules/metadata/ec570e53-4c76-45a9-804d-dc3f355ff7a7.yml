@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/09/27
+description: Detects execution of 7z in order to compress a file with a ".dmp"/".dump"
+  extension, which could be a step in a process of dump file exfiltration.
+falsepositives:
+- Legitimate use of 7z with a command line in which ".dmp" or ".dump" appears accidentally
+- Legitimate use of 7z to compress WER ".dmp" files for troubleshooting
+filename: proc_creation_win_7zip_exfil_dmp_files.yml
+level: medium
+modified: 2023/09/12
+references:
+- https://thedfirreport.com/2022/09/26/bumblebee-round-two/
+related:
+- id: 1ac14d38-3dfc-4635-92c7-e3fd1c5f5bfc
+  type: derived
+status: experimental
+tags:
+- attack.collection
+- attack.t1560.001

@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/12
+description: Detects Windows executables that write files with suspicious extensions
+falsepositives:
+- Unknown
+filename: file_event_win_shell_write_susp_files_extensions.yml
+level: high
+modified: 2024/04/04
+references:
+- Internal Research
+related:
+- id: 1277f594-a7d1-4f28-a2d3-73af5cbeab43
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036

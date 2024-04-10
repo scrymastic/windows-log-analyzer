@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \gup.exe
+    - ImageLoaded|endswith: \libcurl.dll
+- filter_main_notepad_plusplus:
+  - and:
+    - Image|endswith: \Notepad++\updater\GUP.exe
+- condition: selection and not 1 of filter_main_*
+id: e49b5745-1064-4ac1-9a2e-f687bc2dd37e
+logsource:
+  category: image_load
+  product: windows

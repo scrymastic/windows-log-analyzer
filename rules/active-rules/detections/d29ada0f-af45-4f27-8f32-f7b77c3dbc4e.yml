@@ -1,0 +1,26 @@
+detection:
+- selection_sysmon:
+  - and:
+    - or:
+      - TargetImage|contains: :\Windows\Sysmon.exe
+      - TargetImage|contains: :\Windows\Sysmon64.exe
+    - GrantedAccess|==: '0x1400'
+- selection_calltrace:
+  - and:
+    - CallTrace|==: Ente
+- filter_main_generic:
+  - and:
+    - or:
+      - SourceImage|contains: :\Program Files (x86)\
+      - SourceImage|contains: :\Program Files\
+      - SourceImage|contains: :\Windows\System32\
+      - SourceImage|contains: :\Windows\SysWOW64\
+- filter_main_msdefender:
+  - and:
+    - SourceImage|contains: :\ProgramData\Microsoft\Windows Defender\Platform\
+    - SourceImage|endswith: \MsMpEng.exe
+- condition: ( selection_sysmon and not 1 of filter_main_* ) or selection_calltrace
+id: d29ada0f-af45-4f27-8f32-f7b77c3dbc4e
+logsource:
+  category: process_access
+  product: windows

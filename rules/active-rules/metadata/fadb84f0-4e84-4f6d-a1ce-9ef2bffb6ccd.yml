@@ -1,0 +1,22 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/12/20
+description: 'Detects the execution of the "cloudflared" binary from a non standard
+  location.
+
+  '
+falsepositives:
+- Legitimate usage of Cloudflared portable versions
+filename: proc_creation_win_cloudflared_portable_execution.yml
+level: medium
+modified: ''
+references:
+- https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/
+- https://github.com/cloudflare/cloudflared
+- https://www.intrinsec.com/akira_ransomware/
+- https://www.guidepointsecurity.com/blog/tunnel-vision-cloudflared-abused-in-the-wild/
+- https://github.com/cloudflare/cloudflared/releases
+related: []
+status: experimental
+tags:
+- attack.command_and_control
+- attack.t1090.001

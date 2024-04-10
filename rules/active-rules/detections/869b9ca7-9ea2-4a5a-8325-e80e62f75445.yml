@@ -1,0 +1,30 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \sqlservr.exe
+    - or:
+      - Image|endswith: \bash.exe
+      - Image|endswith: \bitsadmin.exe
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \netstat.exe
+      - Image|endswith: \nltest.exe
+      - Image|endswith: \ping.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \sh.exe
+      - Image|endswith: \systeminfo.exe
+      - Image|endswith: \tasklist.exe
+      - Image|endswith: \wsl.exe
+- filter_optional_datev:
+  - and:
+    - ParentImage|startswith: C:\Program Files\Microsoft SQL Server\
+    - ParentImage|endswith: DATEV_DBENGINE\MSSQL\Binn\sqlservr.exe
+    - Image|==: C:\Windows\System32\cmd.exe
+    - CommandLine|startswith: '"C:\Windows\system32\cmd.exe" '
+- condition: selection and not 1 of filter_optional_*
+id: 869b9ca7-9ea2-4a5a-8325-e80e62f75445
+logsource:
+  category: process_creation
+  product: windows

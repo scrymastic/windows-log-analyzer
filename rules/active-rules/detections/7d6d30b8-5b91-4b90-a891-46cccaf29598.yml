@@ -1,0 +1,19 @@
+detection:
+- selection_parent:
+  - and:
+    - ParentImage|==: C:\Windows\System32\OpenSSH\sshd.exe
+- selection_cli_img:
+  - and:
+    - Image|endswith: \ssh.exe
+- selection_cli_flags:
+  - and:
+    - or:
+      - CommandLine|contains: ProxyCommand=
+      - and:
+        - CommandLine|contains: PermitLocalCommand
+        - CommandLine|contains: LocalCommand
+- condition: selection_parent or all of selection_cli_*
+id: 7d6d30b8-5b91-4b90-a891-46cccaf29598
+logsource:
+  category: process_creation
+  product: windows

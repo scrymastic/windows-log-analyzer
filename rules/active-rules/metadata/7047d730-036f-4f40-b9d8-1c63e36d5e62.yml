@@ -1,0 +1,15 @@
+author: frack113, Nasreddine Bencherchali (Nextron Systems)
+date: 2023/03/17
+description: Detects PowerShell creating a binary executable or a script file.
+falsepositives:
+- False positives will differ depending on the environment and scripts used. Apply
+  additional filters accordingly.
+filename: file_event_win_powershell_drop_binary_or_script.yml
+level: medium
+modified: 2023/05/09
+references:
+- https://www.zscaler.com/blogs/security-research/onenote-growing-threat-malware-distribution
+related: []
+status: test
+tags:
+- attack.persistence

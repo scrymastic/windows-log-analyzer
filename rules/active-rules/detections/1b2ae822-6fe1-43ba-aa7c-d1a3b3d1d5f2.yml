@@ -1,0 +1,15 @@
+detection:
+- selection_eid:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+- selection_img_paths:
+  - and:
+    - or:
+      - ImagePath|matches: ^[Cc]:\\[Pp]rogram[Dd]ata\\.{1,9}\.exe
+      - ImagePath|matches: ^[Cc]:\\.{1,9}\.exe
+- condition: all of selection_*
+id: 1b2ae822-6fe1-43ba-aa7c-d1a3b3d1d5f2
+logsource:
+  product: windows
+  service: system

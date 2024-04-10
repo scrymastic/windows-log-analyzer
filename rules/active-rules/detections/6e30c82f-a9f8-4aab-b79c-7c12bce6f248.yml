@@ -1,0 +1,25 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \bitsadmin.exe
+      - OriginalFileName|==: bitsadmin.exe
+- selection_flags:
+  - and:
+    - or:
+      - CommandLine|contains: ' /transfer '
+      - CommandLine|contains: ' /create '
+      - CommandLine|contains: ' /addfile '
+- selection_folder:
+  - and:
+    - or:
+      - CommandLine|contains: '%AppData%'
+      - CommandLine|contains: '%temp%'
+      - CommandLine|contains: '%tmp%'
+      - CommandLine|contains: \AppData\Local\
+      - CommandLine|contains: C:\Windows\Temp\
+- condition: all of selection_*
+id: 6e30c82f-a9f8-4aab-b79c-7c12bce6f248
+logsource:
+  category: process_creation
+  product: windows

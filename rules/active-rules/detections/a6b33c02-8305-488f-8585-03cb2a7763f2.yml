@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: Services\WCESERVICE\Start
+- condition: selection
+id: a6b33c02-8305-488f-8585-03cb2a7763f2
+logsource:
+  category: registry_event
+  product: windows

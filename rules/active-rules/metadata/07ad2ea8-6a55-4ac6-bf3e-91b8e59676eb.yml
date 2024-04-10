@@ -1,0 +1,19 @@
+author: Nikita Nazarov, oscd.community
+date: 2020/10/08
+description: Detects Obfuscated Powershell via use MSHTA in Scripts
+falsepositives:
+- Unknown
+filename: posh_pm_invoke_obfuscation_via_use_mhsta.yml
+level: high
+modified: 2023/01/04
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+related:
+- id: e55a5195-4724-480e-a77e-3ebe64bd3759
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

@@ -1,0 +1,16 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/06/27
+description: Detects WerFault creating a dump file with a name that indicates that
+  the dump file could be an LSASS process memory, which contains user credentials
+falsepositives:
+- Unknown
+filename: file_event_win_lsass_werfault_dump.yml
+level: high
+modified: ''
+references:
+- https://github.com/helpsystems/nanodump
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.001

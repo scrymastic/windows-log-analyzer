@@ -1,0 +1,22 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/02/21
+description: Detects Schtask creations that point to a suspicious folder or an environment
+  variable often used by malware
+falsepositives:
+- Benign scheduled tasks creations or executions that happen often during software
+  installations
+- Software that uses the AppData folder and scheduled tasks to update the software
+  in the AppData folders
+filename: proc_creation_win_schtasks_env_folder.yml
+level: medium
+modified: 2023/11/30
+references:
+- https://www.welivesecurity.com/2022/01/18/donot-go-do-not-respawn/
+- https://www.joesandbox.com/analysis/514608/0/html#324415FF7D8324231381BAD48A052F85DF04
+related:
+- id: 43f487f0-755f-4c2a-bce7-d6d2eec2fcf8
+  type: derived
+status: experimental
+tags:
+- attack.execution
+- attack.t1053.005

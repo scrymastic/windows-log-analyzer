@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \at.exe
+    - CommandLine|contains: interactive
+- condition: selection
+id: 60fc936d-2eb0-4543-8a13-911c750a1dfc
+logsource:
+  category: process_creation
+  product: windows

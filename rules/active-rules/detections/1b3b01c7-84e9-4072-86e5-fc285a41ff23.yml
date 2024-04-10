@@ -1,0 +1,19 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|contains: \nslookup.exe
+      - OriginalFileName|==: \nslookup.exe
+- selection_cmd:
+  - and:
+    - or:
+      - ParentImage|endswith: \powershell.exe
+      - ParentImage|endswith: \pwsh.exe
+    - or:
+      - CommandLine|contains: ' -q=txt '
+      - CommandLine|contains: ' -querytype=txt '
+- condition: all of selection_*
+id: 1b3b01c7-84e9-4072-86e5-fc285a41ff23
+logsource:
+  category: process_creation
+  product: windows

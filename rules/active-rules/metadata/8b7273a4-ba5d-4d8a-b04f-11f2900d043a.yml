@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems), Anish Bogati
+date: 2023/03/14
+description: Detects changes to the HypervisorEnforcedCodeIntegrity registry key and
+  the "Enabled" value being set to 0 in order to disable the Hypervisor Enforced Code
+  Integrity feature. This allows an attacker to load unsigned and untrusted code to
+  be run in the kernel
+falsepositives:
+- Unknown
+filename: registry_set_deviceguard_hypervisorenforcedcodeintegrity_disabled.yml
+level: high
+modified: 2024/01/10
+references:
+- https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+- https://github.com/redcanaryco/atomic-red-team/blob/04e487c1828d76df3e834621f4f893ea756d5232/atomics/T1562.001/T1562.001.md#atomic-test-43---disable-hypervisor-enforced-code-integrity-hvci
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1562.001

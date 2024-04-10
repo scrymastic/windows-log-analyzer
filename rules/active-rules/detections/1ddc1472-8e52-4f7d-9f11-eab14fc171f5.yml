@@ -1,0 +1,10 @@
+detection:
+- selection_4103:
+  - and:
+    - Payload|contains: Expand-Archive
+- condition: selection_4103
+id: 1ddc1472-8e52-4f7d-9f11-eab14fc171f5
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows

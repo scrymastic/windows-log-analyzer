@@ -1,0 +1,18 @@
+detection:
+- selection1:
+  - and:
+    - or:
+      - CommandLine|contains: 'Add-MpPreference '
+      - CommandLine|contains: 'Set-MpPreference '
+- selection2:
+  - and:
+    - or:
+      - CommandLine|contains: ' -ExclusionPath '
+      - CommandLine|contains: ' -ExclusionExtension '
+      - CommandLine|contains: ' -ExclusionProcess '
+      - CommandLine|contains: ' -ExclusionIpAddress '
+- condition: all of selection*
+id: 17769c90-230e-488b-a463-e05c08e9d48f
+logsource:
+  category: process_creation
+  product: windows

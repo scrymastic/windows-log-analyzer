@@ -1,0 +1,23 @@
+detection:
+- selection_password:
+  - and:
+    - or:
+      - CommandLine|contains: lockoutduration
+      - CommandLine|contains: lockoutthreshold
+      - CommandLine|contains: lockoutobservationwindow
+      - CommandLine|contains: maxpwdage
+      - CommandLine|contains: minpwdage
+      - CommandLine|contains: minpwdlength
+      - CommandLine|contains: pwdhistorylength
+      - CommandLine|contains: pwdproperties
+- selection_enum_ad:
+  - and:
+    - CommandLine|contains: -sc admincountdmp
+- selection_enum_exchange:
+  - and:
+    - CommandLine|contains: -sc exchaddresses
+- condition: 1 of selection_*
+id: 455b9d50-15a1-4b99-853f-8d37655a4c1b
+logsource:
+  category: process_creation
+  product: windows

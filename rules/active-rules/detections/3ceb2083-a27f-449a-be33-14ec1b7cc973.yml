@@ -1,0 +1,23 @@
+detection:
+- empire:
+  - and:
+    - ScriptBlockText|contains: System.Diagnostics.Process
+    - ScriptBlockText|contains: Stop-Computer
+    - ScriptBlockText|contains: Restart-Computer
+    - ScriptBlockText|contains: Exception in execution
+    - ScriptBlockText|contains: $cmdargs
+    - ScriptBlockText|contains: Close-Dnscat2Tunnel
+- dnscat:
+  - and:
+    - ScriptBlockText|contains: set type=$LookupType`nserver
+    - ScriptBlockText|contains: $Command | nslookup 2>&1 | Out-String
+    - ScriptBlockText|contains: New-RandomDNSField
+    - ScriptBlockText|contains: '[Convert]::ToString($SYNOptions, 16)'
+    - ScriptBlockText|contains: $Session.Dead = $True
+    - ScriptBlockText|contains: $Session["Driver"] -eq
+- condition: empire and dnscat
+id: 3ceb2083-a27f-449a-be33-14ec1b7cc973
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -1,0 +1,18 @@
+author: Dimitrios Slamaris, @atc_project (fix)
+date: 2017/05/15
+description: This rule detects a DHCP server error in which a specified Callout DLL
+  (in registry) could not be loaded
+falsepositives:
+- Unknown
+filename: win_system_susp_dhcp_config_failed.yml
+level: high
+modified: 2022/12/25
+references:
+- https://blog.3or.de/mimilib-dhcp-server-callout-dll-injection.html
+- https://technet.microsoft.com/en-us/library/cc726884(v=ws.10).aspx
+- https://msdn.microsoft.com/de-de/library/windows/desktop/aa363389(v=vs.85).aspx
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1574.002

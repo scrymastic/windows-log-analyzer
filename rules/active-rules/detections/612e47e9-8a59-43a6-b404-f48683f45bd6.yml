@@ -1,0 +1,27 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \System\
+    - TargetObject|contains: ControlSet
+    - TargetObject|contains: \Services\
+    - TargetObject|endswith: \Parameters\ServiceDll
+- filter_main_printextensionmanger:
+  - and:
+    - Details|==: C:\Windows\system32\spool\drivers\x64\3\PrintConfig.dll
+- filter_main_domain_controller:
+  - and:
+    - Image|==: C:\Windows\system32\lsass.exe
+    - TargetObject|endswith: \Services\NTDS\Parameters\ServiceDll
+    - Details|==: '%%systemroot%%\system32\ntdsa.dll'
+- filter_main_poqexec:
+  - and:
+    - Image|==: C:\Windows\System32\poqexec.exe
+- filter_optional_safetica\:
+  - and:
+    - Image|endswith: \regsvr32.exe
+    - Details|==: C:\Windows\System32\STAgent.dll
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: 612e47e9-8a59-43a6-b404-f48683f45bd6
+logsource:
+  category: registry_set
+  product: windows

@@ -1,0 +1,38 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \mshta.exe
+      - OriginalFileName|==: MSHTA.EXE
+- selection_susp:
+  - and:
+    - or:
+      - ParentImage|endswith: \cmd.exe
+      - ParentImage|endswith: \cscript.exe
+      - ParentImage|endswith: \powershell.exe
+      - ParentImage|endswith: \pwsh.exe
+      - ParentImage|endswith: \regsvr32.exe
+      - ParentImage|endswith: \rundll32.exe
+      - ParentImage|endswith: \wscript.exe
+    - or:
+      - CommandLine|contains: \AppData\Local\
+      - CommandLine|contains: C:\ProgramData\
+      - CommandLine|contains: C:\Users\Public\
+      - CommandLine|contains: C:\Windows\Temp\
+- filter_img:
+  - and:
+    - or:
+      - or:
+        - Image|startswith: C:\Windows\System32\
+        - Image|startswith: C:\Windows\SysWOW64\
+      - or:
+        - CommandLine|contains: .htm
+        - CommandLine|contains: .hta
+      - or:
+        - CommandLine|endswith: mshta.exe
+        - CommandLine|endswith: mshta
+- condition: all of selection_* or (selection_img and not filter_img)
+id: e32f92d1-523e-49c3-9374-bdb13b46a3ba
+logsource:
+  category: process_creation
+  product: windows

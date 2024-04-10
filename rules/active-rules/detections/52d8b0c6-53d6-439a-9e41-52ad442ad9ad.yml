@@ -1,0 +1,35 @@
+detection:
+- selection1:
+  - and:
+    - EventID|==: 5145
+    - ShareName|==: \\\\\*\\IPC$
+- false_positives:
+  - and:
+    - or:
+      - RelativeTargetName|==: atsvc
+      - RelativeTargetName|==: samr
+      - RelativeTargetName|==: lsarpc
+      - RelativeTargetName|==: lsass
+      - RelativeTargetName|==: winreg
+      - RelativeTargetName|==: netlogon
+      - RelativeTargetName|==: srvsvc
+      - RelativeTargetName|==: protected_storage
+      - RelativeTargetName|==: wkssvc
+      - RelativeTargetName|==: browser
+      - RelativeTargetName|==: netdfs
+      - RelativeTargetName|==: svcctl
+      - RelativeTargetName|==: spoolss
+      - RelativeTargetName|==: ntsvcs
+      - RelativeTargetName|==: LSM_API_service
+      - RelativeTargetName|==: HydraLsPipe
+      - RelativeTargetName|==: TermSrv_API_service
+      - RelativeTargetName|==: MsFteWds
+      - RelativeTargetName|==: sql\query
+      - RelativeTargetName|==: eventlog
+- condition: selection1 and not false_positives
+id: 52d8b0c6-53d6-439a-9e41-52ad442ad9ad
+logsource:
+  definition: The advanced audit policy setting "Object Access > Audit Detailed File
+    Share" must be configured for Success/Failure
+  product: windows
+  service: security

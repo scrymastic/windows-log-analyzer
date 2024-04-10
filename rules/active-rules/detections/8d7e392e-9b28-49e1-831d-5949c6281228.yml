@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Initiated|==: 'true'
+    - Image|endswith: \IMEWDBLD.exe
+- condition: selection
+id: 8d7e392e-9b28-49e1-831d-5949c6281228
+logsource:
+  category: network_connection
+  product: windows

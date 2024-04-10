@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \wmic.exe
+      - OriginalFileName|==: wmic.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: AntiVirusProduct
+      - CommandLine|contains: FirewallProduct
+- condition: all of selection_*
+id: e568650b-5dcd-4658-8f34-ded0b1e13992
+logsource:
+  category: process_creation
+  product: windows

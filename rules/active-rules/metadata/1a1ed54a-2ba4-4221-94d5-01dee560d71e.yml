@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/09/20
+description: Detects uses of a renamed legitimate createdump.exe LOLOBIN utility to
+  dump process memory
+falsepositives:
+- Command lines that use the same flags
+filename: proc_creation_win_renamed_createdump.yml
+level: high
+modified: 2023/02/14
+references:
+- https://www.crowdstrike.com/blog/overwatch-exposes-aquatic-panda-in-possession-of-log-4-shell-exploit-tools/
+- https://twitter.com/bopin2020/status/1366400799199272960
+related:
+- id: 515c8be5-e5df-4c5e-8f6d-a4a2f05e4b48
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036
+- attack.t1003.001

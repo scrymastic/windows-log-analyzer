@@ -1,0 +1,30 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \AnyDesk.exe
+      - Description|==: AnyDesk
+      - Product|==: AnyDesk
+      - Company|==: AnyDesk Software GmbH
+- selection_version:
+  - and:
+    - or:
+      - FileVersion|startswith: 7.0.
+      - FileVersion|startswith: 7.1.
+      - FileVersion|startswith: 8.0.1
+      - FileVersion|startswith: 8.0.2
+      - FileVersion|startswith: 8.0.3
+      - FileVersion|startswith: 8.0.4
+      - FileVersion|startswith: 8.0.5
+      - FileVersion|startswith: 8.0.6
+      - FileVersion|startswith: 8.0.7
+- filter_main_uninstall:
+  - and:
+    - or:
+      - CommandLine|contains: ' --remove'
+      - CommandLine|contains: ' --uninstall'
+- condition: all of selection_* and not 1 of filter_main_*
+id: 41f407b5-3096-44ea-a74f-96d04fbc41be
+logsource:
+  category: process_creation
+  product: windows

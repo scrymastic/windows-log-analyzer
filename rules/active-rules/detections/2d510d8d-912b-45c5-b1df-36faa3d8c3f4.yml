@@ -1,0 +1,15 @@
+detection:
+- selection_root:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+- selection_service:
+  - and:
+    - or:
+      - ImagePath|contains: \NetSupport Manager\client32.exe
+      - ServiceName|==: Client32
+- condition: all of selection_*
+id: 2d510d8d-912b-45c5-b1df-36faa3d8c3f4
+logsource:
+  product: windows
+  service: system

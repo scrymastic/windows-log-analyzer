@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/03/16
+description: Detects uncommon target processes for remote thread creation
+falsepositives:
+- Unknown
+filename: create_remote_thread_win_susp_uncommon_target_image.yml
+level: medium
+modified: 2024/03/06
+references:
+- https://blog.redbluepurple.io/offensive-research/bypassing-injection-detection
+related:
+- id: f016c716-754a-467f-a39e-63c06f773987
+  type: obsoletes
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.privilege_escalation
+- attack.t1055.003

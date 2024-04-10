@@ -1,6 +1,13 @@
 
 import regex
 
+
+def ANY(*args):
+    return any(args)
+
+def ALL(*args):
+    return all(args)
+
 class FilterEngine:
     def __init__(self, rules):
         self.rules = rules
@@ -13,19 +20,86 @@ class FilterEngine:
             return False
         if not self.match_event_id(logsource, event):
             return False
+        
         # detection
         detection = rule.get('detection', None)
-
-        if len(detection) != 1:
+        # condition block and at least one condition
+        if len(detection) < 2:
             print(f"Invalid rule '{rule}'")
             return False
-        # Extract the rule from the detection, which is an 'and' block
-        detection = detection[0]
+        
+        # Convert to the new format, list of dictionaries -> dictionary
+        detection = {key: value for block in detection for key, value in block.items()}
 
-        # Check if all conditions in the 'and' list are satisfied
-        if not self.matches_and_block(detection['and'], event):
+        
+        # Extract the condition block and conditions
+        condition = detection.get('condition', None)
+        if not condition:
+            print(f"Condition not found in rule {rule}")
             return False
-        return True
+        
+        
+        block_keys = [word for word in regex.split(r'\s+|\(|\)', condition) \
+                      if word not in ['1', 'not', 'and', 'all', 'or', '(' , ')', 'of', '']]       
+        # Dictionary to store the matched keys
+        matched_keys = {}
+        # Initialize the matched_keys dictionary
+        for block_key in block_keys:
+            matched_keys[block_key] = []
+
+        for key, value in detection.items():
+            matched_key = self.check_block_key(block_keys, key)
+            if matched_key:
+                matched_keys[matched_key].append(key)
+            else:
+                if key != 'condition':
+                    print(f"Invalid key '{key}' in rule {rule}")
+                    print(f"Block keys: {block_keys}")
+                    print(f"Matched keys: {matched_keys}")
+                    return False
+        
+        # Construct the condition query
+        matched_keys = dict(sorted(matched_keys.items(), key=lambda item: -len(item[0])))
+        for key, values in matched_keys.items():
+            # process escaped characters
+            values = [value.replace('\\', '') for value in values]
+            query = ', '.join([f"self.matches_and_block(detection['{value}'][0]['and'], event)" for value in values])
+            if condition.startswith(f"{key} "):
+                condition = condition.replace(f"{key} ", f"({query}) ")
+            elif condition.endswith(f" {key}"):
+                condition = condition.replace(f" {key}", f" ({query})")
+            elif condition.find(f" {key} ") != -1:
+                condition = condition.replace(f" {key} ", f" ({query}) ")
+            elif condition.find(f" {key})") != -1:
+                condition = condition.replace(f" {key}", f" ({query})")
+            elif condition.find(f"({key} ") != -1:
+                condition = condition.replace(f"{key} ", f"({query}) ")
+            elif condition == key:
+                condition = f"({query})"
+            else:
+                print(f"Unexpected condition: {condition}")
+                return False
+
+        condition = condition.replace('all of ', 'ALL').replace('1 of ', 'ANY')
+
+        try:
+            return eval(condition)
+        except Exception as e:
+            print(f"Error evaluating condition: {e}")
+            return False
+
+
+    def check_block_key(self, block_keys: list, key: str) -> str:
+        # Check if the key is covered by the fields
+        # For example, if the fields are ['selection', 'selection_*', 'filter', 'filter_*']
+        for block_key in block_keys:
+            target = block_key.split('*')
+            if len(target) == 2:
+                if key.startswith(target[0]):
+                    return block_key
+            elif key == block_key:
+                return block_key
+        return None
 
 
     def matches_and_block(self, block, event) -> bool:
@@ -69,7 +143,7 @@ class FilterEngine:
             return False
         # Perform the comparison based on the operator
         if operator == '==':
-            return field_value == value
+            return field_value == value 
         elif operator == '!==':
             return field_value != value
         elif operator == 'contains':
@@ -106,9 +180,13 @@ class FilterEngine:
     def get_field_value(self, event, field):
         # Extract the field value from the event data
         if field == 'EventID':
-            return event.get('System', {}).get(field, None)
+            if not event['System']:
+                return None
+            return event['System']['EventID']
         else:
-            return event.get('EventData', {}).get(field, None)
+            if not event['EventData']:
+                return None
+            return event['EventData'].get(field, None)
         
     
     def match_event_id(self, logsource, event) -> bool:

@@ -1,0 +1,19 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \rar.exe
+        - Image|endswith: \winrar.exe
+      - Description|==: Command line RAR
+- selection_extension:
+  - and:
+    - or:
+      - CommandLine|contains: .dmp
+      - CommandLine|contains: .dump
+      - CommandLine|contains: .hdmp
+- condition: all of selection_*
+id: 1ac14d38-3dfc-4635-92c7-e3fd1c5f5bfc
+logsource:
+  category: process_creation
+  product: windows

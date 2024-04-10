@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - EventType|==: SetValue
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList
+    - Details|==: DWORD (0x00000000)
+- condition: selection
+id: f8aebc67-a56d-4ec9-9fbe-7b0e8b7b4efd
+logsource:
+  category: registry_set
+  product: windows

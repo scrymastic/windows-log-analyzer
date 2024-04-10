@@ -1,0 +1,18 @@
+author: Tim Rauch (Nextron Systems), Elastic (idea)
+date: 2022/09/15
+description: Detects a service installed by a client which has PID 0 or whose parent
+  has PID 0
+falsepositives:
+- Unknown
+filename: win_system_service_install_sups_unusal_client.yml
+level: high
+modified: 2023/01/04
+references:
+- https://www.elastic.co/guide/en/security/current/windows-service-installed-via-an-unusual-client.html
+related:
+- id: c4e92a97-a9ff-4392-9d2d-7a4c642768ca
+  type: similar
+status: test
+tags:
+- attack.privilege_escalation
+- attack.t1543

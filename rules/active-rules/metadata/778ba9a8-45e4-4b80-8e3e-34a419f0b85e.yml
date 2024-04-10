@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/01/30
+description: Detects DNS queries to a TeamViewer domain only resolved by a TeamViewer
+  client by an image that isn't named TeamViewer (sometimes used by threat actors
+  for obfuscation)
+falsepositives:
+- Unknown binary names of TeamViewer
+- Depending on the environment the rule might require some initial tuning before usage
+  to avoid FP with third party applications
+filename: dns_query_win_teamviewer_domain_query_by_uncommon_app.yml
+level: medium
+modified: 2023/09/18
+references:
+- https://www.teamviewer.com/en-us/
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1219

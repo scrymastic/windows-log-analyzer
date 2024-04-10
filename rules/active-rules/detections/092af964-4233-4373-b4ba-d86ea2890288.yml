@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger
+    - Details|endswith: .dll
+- filter:
+  - and:
+    - Details|==: '"C:\WINDOWS\system32\vsjitdebugger.exe" -p %ld -e %ld -j 0x%p'
+- condition: selection and not filter
+id: 092af964-4233-4373-b4ba-d86ea2890288
+logsource:
+  category: registry_set
+  product: windows

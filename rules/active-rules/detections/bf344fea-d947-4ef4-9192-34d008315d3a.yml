@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Custom\
+    - or:
+      - TargetObject|endswith: \csrss.exe
+      - TargetObject|endswith: \dllhost.exe
+      - TargetObject|endswith: \explorer.exe
+      - TargetObject|endswith: \RuntimeBroker.exe
+      - TargetObject|endswith: \services.exe
+      - TargetObject|endswith: \sihost.exe
+      - TargetObject|endswith: \svchost.exe
+      - TargetObject|endswith: \taskhostw.exe
+      - TargetObject|endswith: \winlogon.exe
+      - TargetObject|endswith: \WmiPrvSe.exe
+- condition: selection
+id: bf344fea-d947-4ef4-9192-34d008315d3a
+logsource:
+  category: registry_set
+  product: windows

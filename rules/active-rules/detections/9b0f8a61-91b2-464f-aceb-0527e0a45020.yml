@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - EventType|==: CreateKey
+    - TargetObject|contains: HKU\
+    - TargetObject|contains: Classes\CLSID\
+    - TargetObject|contains: \TreatAs
+- filter_svchost:
+  - and:
+    - Image|==: C:\WINDOWS\system32\svchost.exe
+- condition: selection and not 1 of filter_*
+id: 9b0f8a61-91b2-464f-aceb-0527e0a45020
+logsource:
+  category: registry_add
+  product: windows

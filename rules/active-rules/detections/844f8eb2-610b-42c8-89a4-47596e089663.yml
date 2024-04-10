@@ -1,0 +1,16 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \ShellDispatch.dll
+- filter_main_legit_path:
+  - and:
+    - or:
+      - and:
+        - ImageLoaded|contains: :\Users\
+        - ImageLoaded|contains: \AppData\Local\Temp\
+      - ImageLoaded|contains: :\Windows\Temp\
+- condition: selection and not 1 of filter_main_*
+id: 844f8eb2-610b-42c8-89a4-47596e089663
+logsource:
+  category: image_load
+  product: windows

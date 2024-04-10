@@ -1,0 +1,48 @@
+title: Suspicious Invoke-WebRequest Execution With DirectIP
+id: 1edff897-9146-48d2-9066-52e8d8f80a2f
+status: test
+description: Detects calls to PowerShell with Invoke-WebRequest cmdlet using direct
+  IP access
+references:
+- https://www.huntress.com/blog/critical-vulnerabilities-in-papercut-print-management-software
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/04/21
+tags:
+- attack.command_and_control
+- attack.t1105
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+      - or:
+        - OriginalFileName|==: PowerShell.EXE
+        - OriginalFileName|==: pwsh.dll
+- selection_commands:
+  - and:
+    - or:
+      - CommandLine|contains: 'curl '
+      - CommandLine|contains: Invoke-WebRequest
+      - CommandLine|contains: 'iwr '
+      - CommandLine|contains: 'wget '
+- selection_ip:
+  - and:
+    - or:
+      - CommandLine|contains: ://1
+      - CommandLine|contains: ://2
+      - CommandLine|contains: ://3
+      - CommandLine|contains: ://4
+      - CommandLine|contains: ://5
+      - CommandLine|contains: ://6
+      - CommandLine|contains: ://7
+      - CommandLine|contains: ://8
+      - CommandLine|contains: ://9
+- condition: all of selection_*
+falsepositives:
+- Unknown
+level: medium

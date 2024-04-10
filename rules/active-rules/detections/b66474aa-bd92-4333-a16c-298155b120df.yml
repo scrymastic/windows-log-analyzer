@@ -1,0 +1,16 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|==: C:\WINDOWS\System32\svchost.exe
+    - ParentCommandLine|contains: -k netsvcs
+    - ParentCommandLine|contains: -s Schedule
+    - or:
+      - CommandLine|endswith: ' -windowstyle hidden'
+      - CommandLine|endswith: ' -w hidden'
+      - CommandLine|endswith: ' -ep bypass'
+      - CommandLine|endswith: ' -noni'
+- condition: selection
+id: b66474aa-bd92-4333-a16c-298155b120df
+logsource:
+  category: process_creation
+  product: windows

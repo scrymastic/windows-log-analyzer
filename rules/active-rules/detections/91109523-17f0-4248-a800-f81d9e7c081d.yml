@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: 'Invoke-CimMethod '
+    - ScriptBlockText|contains: '-ClassName '
+    - ScriptBlockText|contains: 'Win32_Product '
+    - ScriptBlockText|contains: '-MethodName '
+    - ScriptBlockText|contains: .msi
+- condition: selection
+id: 91109523-17f0-4248-a800-f81d9e7c081d
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

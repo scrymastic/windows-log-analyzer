@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \sysprep.exe
+    - CommandLine|contains: \AppData\
+- condition: selection
+id: d5b9ae7a-e6fc-405e-80ff-2ff9dcc64e7e
+logsource:
+  category: process_creation
+  product: windows

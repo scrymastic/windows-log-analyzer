@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetFilename|contains: \Microsoft\Teams\Cookies
+      - TargetFilename|contains: \Microsoft\Teams\Local Storage\leveldb
+- filter:
+  - and:
+    - Image|contains: \Microsoft\Teams\current\Teams.exe
+- condition: selection and not filter
+id: 6902955a-01b7-432c-b32a-6f5f81d8f624
+logsource:
+  category: file_event
+  product: windows

@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems), Anish Bogati
+date: 2024/01/05
+description: 'Detects the execution of "forfiles" from a non-default location, in
+  order to potentially spawn a custom "cmd.exe" from the current working directory.
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_forfiles_child_process_masquerading.yml
+level: high
+modified: ''
+references:
+- https://www.hexacorn.com/blog/2023/12/31/1-little-known-secret-of-forfiles-exe/
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1036

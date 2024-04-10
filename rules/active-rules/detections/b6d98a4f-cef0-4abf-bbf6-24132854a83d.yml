@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Description|==: GoTo Opener
+      - Product|==: GoTo Opener
+      - Company|==: LogMeIn, Inc.
+- condition: selection
+id: b6d98a4f-cef0-4abf-bbf6-24132854a83d
+logsource:
+  category: process_creation
+  product: windows

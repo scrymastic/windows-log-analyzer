@@ -1,0 +1,15 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/26
+description: Detects PAExec service installation
+falsepositives:
+- Unknown
+filename: win_system_service_install_paexec.yml
+level: medium
+modified: ''
+references:
+- https://www.poweradmin.com/paexec/
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1569.002

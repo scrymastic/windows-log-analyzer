@@ -1,0 +1,34 @@
+detection:
+- selection:
+  - and:
+    - Provider_Name|==: MSSQLSERVER
+    - EventID|==: 18456
+- filter_main_local_ips:
+  - and:
+    - or:
+      - Data|contains: 'CLIENT: 10.'
+      - Data|contains: 'CLIENT: 172.16.'
+      - Data|contains: 'CLIENT: 172.17.'
+      - Data|contains: 'CLIENT: 172.18.'
+      - Data|contains: 'CLIENT: 172.19.'
+      - Data|contains: 'CLIENT: 172.20.'
+      - Data|contains: 'CLIENT: 172.21.'
+      - Data|contains: 'CLIENT: 172.22.'
+      - Data|contains: 'CLIENT: 172.23.'
+      - Data|contains: 'CLIENT: 172.24.'
+      - Data|contains: 'CLIENT: 172.25.'
+      - Data|contains: 'CLIENT: 172.26.'
+      - Data|contains: 'CLIENT: 172.27.'
+      - Data|contains: 'CLIENT: 172.28.'
+      - Data|contains: 'CLIENT: 172.29.'
+      - Data|contains: 'CLIENT: 172.30.'
+      - Data|contains: 'CLIENT: 172.31.'
+      - Data|contains: 'CLIENT: 192.168.'
+      - Data|contains: 'CLIENT: 127.'
+      - Data|contains: 'CLIENT: 169.254.'
+- condition: selection and not 1 of filter_main_*
+id: ebfe73c2-5bc9-4ed9-aaa8-8b54b2b4777d
+logsource:
+  definition: 'Requirements: Must enable MSSQL authentication.'
+  product: windows
+  service: application

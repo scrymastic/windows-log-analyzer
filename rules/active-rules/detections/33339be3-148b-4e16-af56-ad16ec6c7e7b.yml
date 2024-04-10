@@ -1,0 +1,21 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \find.exe
+        - Image|endswith: \findstr.exe
+      - or:
+        - OriginalFileName|==: FIND.EXE
+        - OriginalFileName|==: FINDSTR.EXE
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|endswith: .lnk
+      - CommandLine|endswith: .lnk"
+      - CommandLine|endswith: .lnk'
+- condition: all of selection_*
+id: 33339be3-148b-4e16-af56-ad16ec6c7e7b
+logsource:
+  category: process_creation
+  product: windows

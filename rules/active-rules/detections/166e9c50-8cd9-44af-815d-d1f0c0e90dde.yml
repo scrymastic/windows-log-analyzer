@@ -1,0 +1,18 @@
+detection:
+- selection:
+  - and:
+    - TargetImage|endswith: :\Windows\System32\svchost.exe
+    - GrantedAccess|==: '0x1F3FFF'
+    - CallTrace|contains: UNKNOWN
+- filter_main_msbuild:
+  - and:
+    - SourceImage|contains: :\Program Files\Microsoft Visual Studio\
+    - SourceImage|endswith: \MSBuild\Current\Bin\MSBuild.exe
+    - or:
+      - CallTrace|contains: Microsoft.Build.ni.dll
+      - CallTrace|contains: System.ni.dll
+- condition: selection and not 1 of filter_main_*
+id: 166e9c50-8cd9-44af-815d-d1f0c0e90dde
+logsource:
+  category: process_access
+  product: windows

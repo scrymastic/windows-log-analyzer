@@ -1,0 +1,20 @@
+author: frack113
+date: 2022/01/01
+description: 'This tool enables enumeration and exporting of all DNS records in the
+  zone for recon purposes of internal networks Python 3 and python.exe must be installed,
+
+  Usee to Query/modify DNS records for Active Directory integrated DNS via LDAP
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_python_adidnsdump.yml
+level: low
+modified: 2023/02/21
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1018/T1018.md#atomic-test-9---remote-system-discovery---adidnsdump
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.t1018

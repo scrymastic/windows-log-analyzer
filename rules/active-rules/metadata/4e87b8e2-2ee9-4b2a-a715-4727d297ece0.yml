@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/02/11
+description: Detects the creation of files that look like exports of the local SAM
+  (Security Account Manager)
+falsepositives:
+- Rare cases of administrative activity
+filename: file_event_win_sam_dump.yml
+level: high
+modified: 2023/01/05
+references:
+- https://github.com/search?q=CVE-2021-36934
+- https://github.com/cube0x0/CVE-2021-36934
+- https://www.google.com/search?q=%22reg.exe+save%22+sam
+- https://github.com/HuskyHacks/ShadowSteal
+- https://github.com/FireFart/hivenightmare
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.002

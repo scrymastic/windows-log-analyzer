@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: UserInitMprLogonScript
+- condition: selection
+id: 21d856f9-9281-4ded-9377-51a1a6e2a432
+logsource:
+  category: process_creation
+  product: windows

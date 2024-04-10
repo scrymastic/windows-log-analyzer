@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \fsutil.exe
+      - OriginalFileName|==: fsutil.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: 'behavior '
+    - CommandLine|contains: 'set '
+    - CommandLine|contains: SymlinkEvaluation
+- condition: all of selection_*
+id: c0b2768a-dd06-4671-8339-b16ca8d1f27f
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,67 @@
+title: Suspicious Program Location Whitelisted In Firewall Via Netsh.EXE
+id: a35f5a72-f347-4e36-8895-9869b0d5fc6d
+status: test
+description: Detects Netsh command execution that whitelists a program located in
+  a suspicious location in the Windows Firewall
+references:
+- https://www.virusradar.com/en/Win32_Kasidet.AD/description
+- https://www.hybrid-analysis.com/sample/07e789f4f2f3259e7559fdccb36e96814c2dbff872a21e1fa03de9ee377d581f?environmentId=100
+author: Sander Wiebing, Jonhnathan Ribeiro, Daniil Yugoslavskiy, oscd.community
+date: 2020/05/25
+modified: 2023/12/11
+tags:
+- attack.defense_evasion
+- attack.t1562.004
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \netsh.exe
+      - OriginalFileName|==: netsh.exe
+- selection_cli:
+  - and:
+    - or:
+      - and:
+        - CommandLine|contains: firewall
+        - CommandLine|contains: add
+        - CommandLine|contains: allowedprogram
+      - and:
+        - CommandLine|contains: advfirewall
+        - CommandLine|contains: firewall
+        - CommandLine|contains: add
+        - CommandLine|contains: rule
+        - CommandLine|contains: action=allow
+        - CommandLine|contains: program=
+- selection_paths:
+  - and:
+    - or:
+      - CommandLine|contains: :\$Recycle.bin\
+      - CommandLine|contains: :\RECYCLER.BIN\
+      - CommandLine|contains: :\RECYCLERS.BIN\
+      - CommandLine|contains: :\SystemVolumeInformation\
+      - CommandLine|contains: :\Temp\
+      - CommandLine|contains: :\Users\Default\
+      - CommandLine|contains: :\Users\Desktop\
+      - CommandLine|contains: :\Users\Public\
+      - CommandLine|contains: :\Windows\addins\
+      - CommandLine|contains: :\Windows\cursors\
+      - CommandLine|contains: :\Windows\debug\
+      - CommandLine|contains: :\Windows\drivers\
+      - CommandLine|contains: :\Windows\fonts\
+      - CommandLine|contains: :\Windows\help\
+      - CommandLine|contains: :\Windows\system32\tasks\
+      - CommandLine|contains: :\Windows\Tasks\
+      - CommandLine|contains: :\Windows\Temp\
+      - CommandLine|contains: \Downloads\
+      - CommandLine|contains: \Local Settings\Temporary Internet Files\
+      - CommandLine|contains: \Temporary Internet Files\Content.Outlook\
+      - CommandLine|contains: '%Public%\'
+      - CommandLine|contains: '%TEMP%'
+      - CommandLine|contains: '%TMP%'
+- condition: all of selection_*
+falsepositives:
+- Unknown
+level: high

@@ -1,0 +1,45 @@
+detection:
+- selection:
+  - and:
+    - EventType|==: CreateKey
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\
+- filter:
+  - and:
+    - or:
+      - TargetObject|endswith: \Active Setup Temp Folders
+      - TargetObject|endswith: \BranchCache
+      - TargetObject|endswith: \Content Indexer Cleaner
+      - TargetObject|endswith: \D3D Shader Cache
+      - TargetObject|endswith: \Delivery Optimization Files
+      - TargetObject|endswith: \Device Driver Packages
+      - TargetObject|endswith: \Diagnostic Data Viewer database files
+      - TargetObject|endswith: \Downloaded Program Files
+      - TargetObject|endswith: \DownloadsFolder
+      - TargetObject|endswith: \Feedback Hub Archive log files
+      - TargetObject|endswith: \Internet Cache Files
+      - TargetObject|endswith: \Language Pack
+      - TargetObject|endswith: \Microsoft Office Temp Files
+      - TargetObject|endswith: \Offline Pages Files
+      - TargetObject|endswith: \Old ChkDsk Files
+      - TargetObject|endswith: \Previous Installations
+      - TargetObject|endswith: \Recycle Bin
+      - TargetObject|endswith: \RetailDemo Offline Content
+      - TargetObject|endswith: \Setup Log Files
+      - TargetObject|endswith: \System error memory dump files
+      - TargetObject|endswith: \System error minidump files
+      - TargetObject|endswith: \Temporary Files
+      - TargetObject|endswith: \Temporary Setup Files
+      - TargetObject|endswith: \Temporary Sync Files
+      - TargetObject|endswith: \Thumbnail Cache
+      - TargetObject|endswith: \Update Cleanup
+      - TargetObject|endswith: \Upgrade Discarded Files
+      - TargetObject|endswith: \User file versions
+      - TargetObject|endswith: \Windows Defender
+      - TargetObject|endswith: \Windows Error Reporting Files
+      - TargetObject|endswith: \Windows ESD installation files
+      - TargetObject|endswith: \Windows Upgrade Log Files
+- condition: selection and not filter
+id: d4f4e0be-cf12-439f-9e25-4e2cdcf7df5a
+logsource:
+  category: registry_add
+  product: windows

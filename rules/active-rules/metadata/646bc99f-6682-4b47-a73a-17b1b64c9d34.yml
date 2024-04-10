@@ -1,0 +1,17 @@
+author: Beyu Denis, oscd.community
+date: 2020/10/18
+description: Detects file execution using the msdeploy.exe lolbin
+falsepositives:
+- System administrator Usage
+filename: proc_creation_win_lolbin_msdeploy.yml
+level: medium
+modified: 2021/11/27
+references:
+- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Msdeploy/
+- https://twitter.com/pabraeken/status/995837734379032576
+- https://twitter.com/pabraeken/status/999090532839313408
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

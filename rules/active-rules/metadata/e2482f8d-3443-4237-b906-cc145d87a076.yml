@@ -1,0 +1,20 @@
+author: frack113, Nasreddine Bencherchali (Nextron Systems), CrimpSec
+date: 2022/03/18
+description: Detects registry modifications that change features of internal Windows
+  tools (malware like Agent Tesla uses this technique)
+falsepositives:
+- Legitimate admin script
+filename: registry_set_disable_function_user.yml
+level: medium
+modified: 2023/11/20
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1112/T1112.md
+- https://www.mandiant.com/resources/unc2165-shifts-to-evade-sanctions
+- https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html
+- https://www.malwarebytes.com/blog/detections/pum-optional-nodispbackgroundpage
+- https://www.malwarebytes.com/blog/detections/pum-optional-nodispcpl
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1112

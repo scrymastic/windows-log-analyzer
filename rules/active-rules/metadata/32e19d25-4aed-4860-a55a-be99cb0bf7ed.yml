@@ -1,0 +1,19 @@
+author: Ilyas Ochkov, oscd.community, Chakib Gzenayi (@Chak092), Hosni Mribah
+date: 2019/10/25
+description: Detects DCShadow via create new SPN
+falsepositives:
+- Valid on domain controllers; exclude known DCs
+filename: win_security_possible_dc_shadow.yml
+level: medium
+modified: 2022/10/17
+references:
+- https://twitter.com/gentilkiwi/status/1003236624925413376
+- https://gist.github.com/gentilkiwi/dcc132457408cf11ad2061340dcb53c2
+- https://blog.alsid.eu/dcshadow-explained-4510f52fc19d
+related:
+- id: 611eab06-a145-4dfa-a295-3ccc5c20f59a
+  type: derived
+status: test
+tags:
+- attack.credential_access
+- attack.t1207

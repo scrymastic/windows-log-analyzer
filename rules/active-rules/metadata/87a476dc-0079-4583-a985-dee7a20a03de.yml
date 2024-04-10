@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/06/20
+description: Detects processes that query known 3rd party registry keys that holds
+  credentials via commandline
+falsepositives:
+- Unknown
+filename: proc_creation_win_registry_enumeration_for_credentials_cli.yml
+level: medium
+modified: ''
+references:
+- https://isc.sans.edu/diary/More+Data+Exfiltration/25698
+- https://github.com/synacktiv/Radmin3-Password-Cracker/blob/acfc87393e4b7c06353973a14a6c7126a51f36ac/regkey.txt
+- https://github.com/HyperSine/how-does-MobaXterm-encrypt-password
+- https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation#inside-the-registry
+related:
+- id: e0b0c2ab-3d52-46d9-8cb7-049dc775fbd1
+  type: derived
+status: test
+tags:
+- attack.credential_access
+- attack.t1552.002

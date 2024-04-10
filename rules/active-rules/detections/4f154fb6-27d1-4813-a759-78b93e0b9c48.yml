@@ -1,0 +1,21 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - OriginalFileName|==: Cmd.Exe
+      - Image|endswith: \cmd.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: Invoke-UserHunter
+      - CommandLine|contains: Invoke-ShareFinder
+      - CommandLine|contains: Invoke-Kerberoast
+      - CommandLine|contains: Invoke-SMBAutoBrute
+      - CommandLine|contains: Invoke-Nightmare
+      - CommandLine|contains: zerologon
+      - CommandLine|contains: av_query
+- condition: all of selection_*
+id: 4f154fb6-27d1-4813-a759-78b93e0b9c48
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,30 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Product|contains: AutoHotkey
+      - Description|contains: AutoHotkey
+      - or:
+        - OriginalFileName|==: AutoHotkey.exe
+        - OriginalFileName|==: AutoHotkey.rc
+- filter:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \AutoHotkey.exe
+        - Image|endswith: \AutoHotkey32.exe
+        - Image|endswith: \AutoHotkey32_UIA.exe
+        - Image|endswith: \AutoHotkey64.exe
+        - Image|endswith: \AutoHotkey64_UIA.exe
+        - Image|endswith: \AutoHotkeyA32.exe
+        - Image|endswith: \AutoHotkeyA32_UIA.exe
+        - Image|endswith: \AutoHotkeyU32.exe
+        - Image|endswith: \AutoHotkeyU32_UIA.exe
+        - Image|endswith: \AutoHotkeyU64.exe
+        - Image|endswith: \AutoHotkeyU64_UIA.exe
+      - Image|contains: \AutoHotkey
+- condition: selection and not filter
+id: 0f16d9cf-0616-45c8-8fad-becc11b5a41c
+logsource:
+  category: process_creation
+  product: windows

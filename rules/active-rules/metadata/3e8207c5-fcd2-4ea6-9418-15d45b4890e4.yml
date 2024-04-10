@@ -1,0 +1,22 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/12/23
+description: Detects chromium based browsers starting in headless and debugging mode
+  and pointing to a user profile. This could be a sign of data stealing or remote
+  control
+falsepositives:
+- Unknown
+filename: proc_creation_win_browsers_chromium_headless_debugging.yml
+level: high
+modified: ''
+references:
+- https://github.com/defaultnamehere/cookie_crimes/
+- https://mango.pdf.zone/stealing-chrome-cookies-without-a-password
+- https://embracethered.com/blog/posts/2020/cookie-crimes-on-mirosoft-edge/
+- https://embracethered.com/blog/posts/2020/chrome-spy-remote-control/
+related:
+- id: b3d34dc5-2efd-4ae3-845f-8ec14921f449
+  type: derived
+status: test
+tags:
+- attack.credential_access
+- attack.t1185

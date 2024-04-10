@@ -1,0 +1,15 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/09/01
+description: Detects possible NTLM coercion via certutil using the 'syncwithWU' flag
+falsepositives:
+- Unknown
+filename: proc_creation_win_certutil_ntlm_coercion.yml
+level: high
+modified: 2023/02/14
+references:
+- https://github.com/LOLBAS-Project/LOLBAS/issues/243
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

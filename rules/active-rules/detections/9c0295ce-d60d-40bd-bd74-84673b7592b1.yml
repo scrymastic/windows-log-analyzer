@@ -1,0 +1,27 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: OgA6ACgAIgBMACIAKwAiAG8AYQBkACIAKQ
+      - CommandLine|contains: oAOgAoACIATAAiACsAIgBvAGEAZAAiACkA
+      - CommandLine|contains: 6ADoAKAAiAEwAIgArACIAbwBhAGQAIgApA
+      - CommandLine|contains: OgA6ACgAIgBMAG8AIgArACIAYQBkACIAKQ
+      - CommandLine|contains: oAOgAoACIATABvACIAKwAiAGEAZAAiACkA
+      - CommandLine|contains: 6ADoAKAAiAEwAbwAiACsAIgBhAGQAIgApA
+      - CommandLine|contains: OgA6ACgAIgBMAG8AYQAiACsAIgBkACIAKQ
+      - CommandLine|contains: oAOgAoACIATABvAGEAIgArACIAZAAiACkA
+      - CommandLine|contains: 6ADoAKAAiAEwAbwBhACIAKwAiAGQAIgApA
+      - CommandLine|contains: OgA6ACgAJwBMACcAKwAnAG8AYQBkACcAKQ
+      - CommandLine|contains: oAOgAoACcATAAnACsAJwBvAGEAZAAnACkA
+      - CommandLine|contains: 6ADoAKAAnAEwAJwArACcAbwBhAGQAJwApA
+      - CommandLine|contains: OgA6ACgAJwBMAG8AJwArACcAYQBkACcAKQ
+      - CommandLine|contains: oAOgAoACcATABvACcAKwAnAGEAZAAnACkA
+      - CommandLine|contains: 6ADoAKAAnAEwAbwAnACsAJwBhAGQAJwApA
+      - CommandLine|contains: OgA6ACgAJwBMAG8AYQAnACsAJwBkACcAKQ
+      - CommandLine|contains: oAOgAoACcATABvAGEAJwArACcAZAAnACkA
+      - CommandLine|contains: 6ADoAKAAnAEwAbwBhACcAKwAnAGQAJwApA
+- condition: selection
+id: 9c0295ce-d60d-40bd-bd74-84673b7592b1
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,18 @@
+detection:
+- selection_w32tm:
+  - and:
+    - or:
+      - Image|endswith: \w32tm.exe
+      - OriginalFileName|==: w32time.dll
+- selection_cmd:
+  - and:
+    - CommandLine|contains: /stripchart
+    - CommandLine|contains: '/computer:'
+    - CommandLine|contains: '/period:'
+    - CommandLine|contains: /dataonly
+    - CommandLine|contains: '/samples:'
+- condition: all of selection_*
+id: 6da2c9f5-7c53-401b-aacb-92c040ce1215
+logsource:
+  category: process_creation
+  product: windows

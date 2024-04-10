@@ -1,0 +1,20 @@
+detection:
+- selection_set_1:
+  - and:
+    - or:
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoLogOff
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoDesktop
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoRun
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoFind
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoControlPanel
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoFileMenu
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoClose
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoSetTaskbar
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoPropertiesMyDocuments
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoTrayContextMenu
+    - Details|==: DWORD (0x00000001)
+- condition: selection_set_1
+id: 1c3121ed-041b-4d97-a075-07f54f20fb4a
+logsource:
+  category: registry_set
+  product: windows

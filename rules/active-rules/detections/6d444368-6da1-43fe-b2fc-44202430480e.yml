@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 6004
+- condition: selection
+id: 6d444368-6da1-43fe-b2fc-44202430480e
+logsource:
+  product: windows
+  service: dns-server

@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems)
+date: 2019/04/20
+description: Detects suspicious powershell command line parameters used in Empire
+falsepositives:
+- Other tools that incidentally use the same command line parameters
+filename: proc_creation_win_hktl_empire_powershell_launch.yml
+level: high
+modified: 2023/02/21
+references:
+- https://github.com/EmpireProject/Empire/blob/c2ba61ca8d2031dad0cfc1d5770ba723e8b710db/lib/common/helpers.py#L165
+- https://github.com/EmpireProject/Empire/blob/e37fb2eef8ff8f5a0a689f1589f424906fe13055/lib/modules/powershell/persistence/powerbreach/deaduser.py#L191
+- https://github.com/EmpireProject/Empire/blob/e37fb2eef8ff8f5a0a689f1589f424906fe13055/lib/modules/powershell/persistence/powerbreach/resolver.py#L178
+- https://github.com/EmpireProject/Empire/blob/e37fb2eef8ff8f5a0a689f1589f424906fe13055/data/module_source/privesc/Invoke-EventVwrBypass.ps1#L64
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

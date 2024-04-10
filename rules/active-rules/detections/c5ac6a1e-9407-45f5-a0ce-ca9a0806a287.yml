@@ -1,0 +1,16 @@
+detection:
+- selection_1:
+  - and:
+    - ScriptBlockText|contains: Get-ItemProperty
+    - ScriptBlockText|contains: 'Registry::'
+    - ScriptBlockText|contains: HKEY_CURRENT_USER\Control Panel\Desktop\
+    - ScriptBlockText|contains: WallPaper
+- selection_2:
+  - and:
+    - ScriptBlockText|contains: SystemParametersInfo(20,0,*,3)
+- condition: 1 of selection_*
+id: c5ac6a1e-9407-45f5-a0ce-ca9a0806a287
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

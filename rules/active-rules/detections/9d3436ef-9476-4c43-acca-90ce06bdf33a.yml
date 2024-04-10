@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetObject|endswith: \Services\DHCPServer\Parameters\CalloutDlls
+      - TargetObject|endswith: \Services\DHCPServer\Parameters\CalloutEnabled
+- condition: selection
+id: 9d3436ef-9476-4c43-acca-90ce06bdf33a
+logsource:
+  category: registry_set
+  product: windows

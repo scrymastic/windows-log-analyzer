@@ -1,0 +1,18 @@
+detection:
+- selection_etw_enabled:
+  - and:
+    - TargetObject|endswith: SOFTWARE\Microsoft\.NETFramework\ETWEnabled
+    - Details|==: DWORD (0x00000000)
+- selection_complus:
+  - and:
+    - or:
+      - TargetObject|endswith: \COMPlus_ETWEnabled
+      - TargetObject|endswith: \COMPlus_ETWFlags
+    - or:
+      - Details|==: 0
+      - Details|==: DWORD (0x00000000)
+- condition: 1 of selection_*
+id: bf4fc428-dcc3-4bbd-99fe-2422aeee2544
+logsource:
+  category: registry_set
+  product: windows

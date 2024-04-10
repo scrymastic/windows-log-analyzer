@@ -1,0 +1,56 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 16403
+    - or:
+      - RemoteName|contains: http://1
+      - RemoteName|contains: http://2
+      - RemoteName|contains: http://3
+      - RemoteName|contains: http://4
+      - RemoteName|contains: http://5
+      - RemoteName|contains: http://6
+      - RemoteName|contains: http://7
+      - RemoteName|contains: http://8
+      - RemoteName|contains: http://9
+      - RemoteName|contains: https://1
+      - RemoteName|contains: https://2
+      - RemoteName|contains: https://3
+      - RemoteName|contains: https://4
+      - RemoteName|contains: https://5
+      - RemoteName|contains: https://6
+      - RemoteName|contains: https://7
+      - RemoteName|contains: https://8
+      - RemoteName|contains: https://9
+- filter_optional_local_networks:
+  - and:
+    - or:
+      - RemoteName|contains: ://10.
+      - RemoteName|contains: ://192.168.
+      - RemoteName|contains: ://172.16.
+      - RemoteName|contains: ://172.17.
+      - RemoteName|contains: ://172.18.
+      - RemoteName|contains: ://172.19.
+      - RemoteName|contains: ://172.20.
+      - RemoteName|contains: ://172.21.
+      - RemoteName|contains: ://172.22.
+      - RemoteName|contains: ://172.23.
+      - RemoteName|contains: ://172.24.
+      - RemoteName|contains: ://172.25.
+      - RemoteName|contains: ://172.26.
+      - RemoteName|contains: ://172.27.
+      - RemoteName|contains: ://172.28.
+      - RemoteName|contains: ://172.29.
+      - RemoteName|contains: ://172.30.
+      - RemoteName|contains: ://172.31.
+      - RemoteName|contains: ://127.
+      - RemoteName|contains: ://169.254.
+- filter_optional_seven_zip:
+  - and:
+    - or:
+      - RemoteName|contains: https://7-
+      - RemoteName|contains: http://7-
+- condition: selection and not 1 of filter_optional_*
+id: 90f138c1-f578-4ac3-8c49-eecfd847c8b7
+logsource:
+  product: windows
+  service: bits-client

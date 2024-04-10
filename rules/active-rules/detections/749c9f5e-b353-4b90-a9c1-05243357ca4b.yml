@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4624
+    - LogonType|==: 3
+    - AuthenticationPackageName|==: Kerberos
+    - IpAddress|==: 127.0.0.1
+    - TargetUserSid|startswith: S-1-5-21-
+    - TargetUserSid|endswith: '-500'
+- condition: selection
+id: 749c9f5e-b353-4b90-a9c1-05243357ca4b
+logsource:
+  product: windows
+  service: security

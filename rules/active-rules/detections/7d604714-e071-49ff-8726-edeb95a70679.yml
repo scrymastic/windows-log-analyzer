@@ -1,0 +1,29 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \eqnedt32.exe
+      - Image|endswith: \wordpad.exe
+      - Image|endswith: \wordview.exe
+      - Image|endswith: \certutil.exe
+      - Image|endswith: \certoc.exe
+      - Image|endswith: \CertReq.exe
+      - Image|endswith: \Desktopimgdownldr.exe
+      - Image|endswith: \esentutl.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \AcroRd32.exe
+      - Image|endswith: \RdrCEF.exe
+      - Image|endswith: \hh.exe
+      - Image|endswith: \finger.exe
+    - or:
+      - TargetFilename|endswith: .ps1
+      - TargetFilename|endswith: .bat
+      - TargetFilename|endswith: .vbs
+      - TargetFilename|endswith: .scf
+      - TargetFilename|endswith: .wsf
+      - TargetFilename|endswith: .wsh
+- condition: selection
+id: 7d604714-e071-49ff-8726-edeb95a70679
+logsource:
+  category: file_event
+  product: windows

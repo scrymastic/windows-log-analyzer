@@ -1,0 +1,16 @@
+author: Christian Burkard (Nextron Systems)
+date: 2021/08/30
+description: Detects the pattern of UAC Bypass using a msconfig GUI hack (UACMe 55)
+falsepositives:
+- Unknown
+filename: file_event_win_uac_bypass_msconfig_gui.yml
+level: high
+modified: 2022/10/09
+references:
+- https://github.com/hfiref0x/UACME
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.privilege_escalation
+- attack.t1548.002

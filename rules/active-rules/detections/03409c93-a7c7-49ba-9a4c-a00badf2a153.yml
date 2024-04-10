@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: Invoke-TroubleshootingPack
+    - ScriptBlockText|contains: C:\Windows\Diagnostics\System\PCW
+    - ScriptBlockText|contains: -AnswerFile
+    - ScriptBlockText|contains: -Unattended
+- condition: selection
+id: 03409c93-a7c7-49ba-9a4c-a00badf2a153
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

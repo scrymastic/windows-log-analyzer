@@ -1,0 +1,35 @@
+detection:
+- selection_parent:
+  - and:
+    - or:
+      - ParentImage|endswith: \winlogon.exe
+      - ParentImage|endswith: \services.exe
+      - ParentImage|endswith: \lsass.exe
+      - ParentImage|endswith: \csrss.exe
+      - ParentImage|endswith: \smss.exe
+      - ParentImage|endswith: \wininit.exe
+      - ParentImage|endswith: \spoolsv.exe
+      - ParentImage|endswith: \searchindexer.exe
+    - or:
+      - User|contains: AUTHORI
+      - User|contains: AUTORI
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+        - Image|endswith: \cmd.exe
+      - or:
+        - OriginalFileName|==: PowerShell.EXE
+        - OriginalFileName|==: pwsh.dll
+        - OriginalFileName|==: Cmd.Exe
+- filter:
+  - and:
+    - CommandLine|contains: ' route '
+    - CommandLine|contains: ' ADD '
+- condition: all of selection_* and not filter
+id: d522eca2-2973-4391-a3e0-ef0374321dae
+logsource:
+  category: process_creation
+  product: windows

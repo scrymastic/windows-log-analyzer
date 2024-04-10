@@ -1,0 +1,21 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - EventID|==: 4625
+      - EventID|==: 4776
+    - or:
+      - Status|==: '0xC0000072'
+      - Status|==: '0xC000006F'
+      - Status|==: '0xC0000070'
+      - Status|==: '0xC0000413'
+      - Status|==: '0xC000018C'
+      - Status|==: '0xC000015B'
+- filter:
+  - and:
+    - SubjectUserSid|==: S-1-0-0
+- condition: selection and not filter
+id: 9eb99343-d336-4020-a3cd-67f3819e68ee
+logsource:
+  product: windows
+  service: security

@@ -1,0 +1,37 @@
+detection:
+- selection_wwwroot_path:
+  - and:
+    - TargetFilename|contains: \inetpub\wwwroot\
+- selection_wwwroot_ext:
+  - and:
+    - or:
+      - TargetFilename|contains: .ashx
+      - TargetFilename|contains: .asp
+      - TargetFilename|contains: .ph
+      - TargetFilename|contains: .soap
+- selection_htdocs_path:
+  - and:
+    - or:
+      - TargetFilename|contains: \www\
+      - TargetFilename|contains: \htdocs\
+      - TargetFilename|contains: \html\
+- selection_htdocs_ext:
+  - and:
+    - TargetFilename|contains: .ph
+- filter_main_temp:
+  - and:
+    - or:
+      - TargetFilename|contains: \AppData\Local\Temp\
+      - TargetFilename|contains: \Windows\Temp\
+- filter_main_system:
+  - and:
+    - Image|==: System
+- filter_main_legitimate:
+  - and:
+    - TargetFilename|contains: \xampp
+- condition: (all of selection_wwwroot_* or all of selection_htdocs_*) and not 1 of
+    filter_main_*
+id: 39f1f9f2-9636-45de-98f6-a4046aa8e4b9
+logsource:
+  category: file_event
+  product: windows

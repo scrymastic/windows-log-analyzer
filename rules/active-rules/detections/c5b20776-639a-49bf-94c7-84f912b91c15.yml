@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Data|contains: 'powercat '
+      - Data|contains: powercat.ps1
+- condition: selection
+id: c5b20776-639a-49bf-94c7-84f912b91c15
+logsource:
+  category: ps_classic_start
+  product: windows

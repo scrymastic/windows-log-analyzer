@@ -1,0 +1,19 @@
+author: Roberto Rodriguez @Cyb3rWard0g
+date: 2019/08/10
+description: Detects remote PowerShell sessions
+falsepositives:
+- Legitimate use remote PowerShell sessions
+filename: posh_pc_remote_powershell_session.yml
+level: low
+modified: 2024/01/03
+references:
+- https://threathunterplaybook.com/hunts/windows/190511-RemotePwshExecution/notebook.html
+related:
+- id: 96b9f619-aa91-478f-bacb-c3e50f8df575
+  type: derived
+status: test
+tags:
+- attack.execution
+- attack.t1059.001
+- attack.lateral_movement
+- attack.t1021.006

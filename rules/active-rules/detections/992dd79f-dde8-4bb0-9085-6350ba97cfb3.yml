@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - EventType|==: SetValue
+    - TargetObject|contains: \Software\Winternals\BGInfo\UserFields\
+    - Details|startswith: '4'
+- condition: selection
+id: 992dd79f-dde8-4bb0-9085-6350ba97cfb3
+logsource:
+  category: registry_set
+  product: windows

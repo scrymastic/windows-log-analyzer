@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \ntdsutil.exe
+- condition: selection
+id: 2afafd61-6aae-4df4-baed-139fa1f4c345
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \Services\
+    - TargetObject|endswith: \ImagePath
+    - or:
+      - Details|contains: powershell
+      - Details|contains: pwsh
+- condition: selection
+id: 4a5f5a5e-ac01-474b-9b4e-d61298c9df1d
+logsource:
+  category: registry_set
+  product: windows

@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \Services\
+    - TargetObject|endswith: \Instances\Sysmon Instance\Altitude
+- condition: selection
+id: 4916a35e-bfc4-47d0-8e25-a003d7067061
+logsource:
+  category: registry_set
+  product: windows

@@ -1,0 +1,22 @@
+detection:
+- selection_action:
+  - and:
+    - or:
+      - ScriptBlockText|contains: ls
+      - ScriptBlockText|contains: get-childitem
+      - ScriptBlockText|contains: gci
+- selection_recurse:
+  - and:
+    - ScriptBlockText|contains: -recurse
+- selection_file:
+  - and:
+    - or:
+      - ScriptBlockText|contains: .pass
+      - ScriptBlockText|contains: .kdbx
+      - ScriptBlockText|contains: .kdb
+- condition: all of selection_*
+id: 7d416556-6502-45b2-9bad-9d2f05f38997
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

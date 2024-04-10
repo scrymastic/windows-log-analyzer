@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|startswith: HKCR\
+    - Details|startswith: 'URL:'
+- filter_main_ms_trusted:
+  - and:
+    - Details|startswith: URL:ms-
+- filter_main_generic_locations:
+  - and:
+    - or:
+      - Image|startswith: C:\Program Files (x86)
+      - Image|startswith: C:\Program Files\
+      - Image|startswith: C:\Windows\System32\
+      - Image|startswith: C:\Windows\SysWOW64\
+- condition: selection and not 1 of filter_main_*
+id: fdbf0b9d-0182-4c43-893b-a1eaab92d085
+logsource:
+  category: registry_set
+  product: windows

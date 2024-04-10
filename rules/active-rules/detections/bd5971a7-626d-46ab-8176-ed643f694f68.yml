@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: ls
+    - ScriptBlockText|contains: ' -R'
+    - ScriptBlockText|contains: 'select-string '
+    - ScriptBlockText|contains: '-Pattern '
+- condition: selection
+id: bd5971a7-626d-46ab-8176-ed643f694f68
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

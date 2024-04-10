@@ -1,0 +1,24 @@
+author: Anish Bogati
+date: 2023/11/28
+description: 'Detects changes to the Netsh registry key to add a new DLL value. This
+  change might be an indication of a potential persistence attempt by adding a malicious
+  Netsh helper
+
+  '
+falsepositives:
+- Legitimate helper added by different programs and the OS
+filename: registry_set_netsh_helper_dll_potential_persistence.yml
+level: medium
+modified: ''
+references:
+- https://www.ired.team/offensive-security/persistence/t1128-netsh-helper-dll
+- https://pentestlab.blog/2019/10/29/persistence-netsh-helper-dll/
+related:
+- id: 56321594-9087-49d9-bf10-524fe8479452
+  type: similar
+- id: e7b18879-676e-4a0e-ae18-27039185a8e7
+  type: similar
+status: experimental
+tags:
+- attack.persistence
+- attack.t1546.007

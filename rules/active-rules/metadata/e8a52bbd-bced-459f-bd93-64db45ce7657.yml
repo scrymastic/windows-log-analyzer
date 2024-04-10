@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/09
+description: Detects the creation of a new PowerShell module in the first folder of
+  the module directory structure "\WindowsPowerShell\Modules\malware\malware.psm1".
+  This is somewhat an uncommon practice as legitimate modules often includes a version
+  folder.
+falsepositives:
+- False positive rate will vary depending on the environments. Additional filters
+  might be required to make this logic usable in production.
+filename: file_event_win_powershell_module_susp_creation.yml
+level: medium
+modified: ''
+references:
+- Internal Research
+- https://learn.microsoft.com/en-us/powershell/scripting/developer/module/understanding-a-windows-powershell-module?view=powershell-7.3
+related: []
+status: test
+tags:
+- attack.persistence

@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \curl.exe
+      - OriginalFileName|==: curl.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: --doh-insecure
+      - CommandLine|contains: --proxy-insecure
+- condition: all of selection_*
+id: 2c1486f5-02e8-4f86-9099-b97f2da4ed77
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 412
+- condition: selection
+id: 6ae53108-c3a0-4bee-8f45-c7591a2c337f
+logsource:
+  product: windows
+  service: appxdeployment-server

@@ -1,0 +1,16 @@
+detection:
+- selection_dismhost:
+  - and:
+    - Image|endswith: \DismHost.exe
+    - ParentCommandLine|contains: /Online
+    - ParentCommandLine|contains: /Disable-Feature
+- selection_dism:
+  - and:
+    - Image|endswith: \Dism.exe
+    - CommandLine|contains: /Online
+    - CommandLine|contains: /Disable-Feature
+- condition: 1 of selection_*
+id: 43e32da2-fdd0-4156-90de-50dfd62636f9
+logsource:
+  category: process_creation
+  product: windows

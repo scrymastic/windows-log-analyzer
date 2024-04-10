@@ -1,0 +1,24 @@
+detection:
+- selection:
+  - and:
+    - Provider_Name|==: MsiInstaller
+    - or:
+      - EventID|==: 1040
+      - EventID|==: 1042
+    - or:
+      - Data|contains: :\Windows\TEMP\
+      - Data|contains: \\\\
+      - Data|contains: \Desktop\
+      - Data|contains: \PerfLogs\
+      - Data|contains: \Users\Public\
+- filter_winget:
+  - and:
+    - Data|contains: \AppData\Local\Temp\WinGet\
+- filter_updhealthtools:
+  - and:
+    - Data|contains: C:\Windows\TEMP\UpdHealthTools.msi
+- condition: selection and not 1 of filter_*
+id: c7c8aa1c-5aff-408e-828b-998e3620b341
+logsource:
+  product: windows
+  service: application

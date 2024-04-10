@@ -1,0 +1,23 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \DumpMinitool.exe
+        - Image|endswith: \DumpMinitool.x86.exe
+        - Image|endswith: \DumpMinitool.arm64.exe
+      - or:
+        - OriginalFileName|==: DumpMinitool.exe
+        - OriginalFileName|==: DumpMinitool.x86.exe
+        - OriginalFileName|==: DumpMinitool.arm64.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: ' Full'
+      - CommandLine|contains: ' Mini'
+      - CommandLine|contains: ' WithHeap'
+- condition: all of selection_*
+id: dee0a7a3-f200-4112-a99b-952196d81e42
+logsource:
+  category: process_creation
+  product: windows

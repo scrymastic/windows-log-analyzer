@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetObject|contains: \Policies\Microsoft\Windows NT\SystemRestore
+      - TargetObject|contains: \Microsoft\Windows NT\CurrentVersion\SystemRestore
+    - or:
+      - TargetObject|endswith: DisableConfig
+      - TargetObject|endswith: DisableSR
+    - Details|==: DWORD (0x00000001)
+- condition: selection
+id: 5de03871-5d46-4539-a82d-3aa992a69a83
+logsource:
+  category: registry_set
+  product: windows

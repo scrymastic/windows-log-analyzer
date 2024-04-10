@@ -1,0 +1,57 @@
+detection:
+- selection_word_paths:
+  - and:
+    - or:
+      - TargetFilename|contains: \Microsoft\Word\STARTUP
+      - and:
+        - TargetFilename|contains: \Office
+        - TargetFilename|contains: \Program Files
+        - TargetFilename|contains: \STARTUP
+- filter_exclude_word_ext:
+  - and:
+    - or:
+      - TargetFilename|endswith: .docb
+      - TargetFilename|endswith: .docm
+      - TargetFilename|endswith: .docx
+      - TargetFilename|endswith: .dotm
+      - TargetFilename|endswith: .mdb
+      - TargetFilename|endswith: .mdw
+      - TargetFilename|endswith: .pdf
+      - TargetFilename|endswith: .wll
+      - TargetFilename|endswith: .wwl
+- selection_excel_paths:
+  - and:
+    - or:
+      - TargetFilename|contains: \Microsoft\Excel\XLSTART
+      - and:
+        - TargetFilename|contains: \Office
+        - TargetFilename|contains: \Program Files
+        - TargetFilename|contains: \XLSTART
+- filter_exclude_excel_ext:
+  - and:
+    - or:
+      - TargetFilename|endswith: .xll
+      - TargetFilename|endswith: .xls
+      - TargetFilename|endswith: .xlsm
+      - TargetFilename|endswith: .xlsx
+      - TargetFilename|endswith: .xlt
+      - TargetFilename|endswith: .xltm
+      - TargetFilename|endswith: .xlw
+- filter_main_office_click_to_run:
+  - and:
+    - Image|contains: :\Program Files\Common Files\Microsoft Shared\ClickToRun\
+    - Image|endswith: \OfficeClickToRun.exe
+- filter_main_office_apps:
+  - and:
+    - or:
+      - Image|contains: :\Program Files\Microsoft Office\
+      - Image|contains: :\Program Files (x86)\Microsoft Office\
+    - or:
+      - Image|endswith: \winword.exe
+      - Image|endswith: \excel.exe
+- condition: ((selection_word_paths and not filter_exclude_word_ext) or (selection_excel_paths
+    and not filter_exclude_excel_ext)) and not 1 of filter_main_*
+id: a10a2c40-2c4d-49f8-b557-1a946bc55d9d
+logsource:
+  category: file_event
+  product: windows

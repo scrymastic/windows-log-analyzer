@@ -1,0 +1,18 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \net.exe
+        - Image|endswith: \net1.exe
+      - or:
+        - OriginalFileName|==: net.exe
+        - OriginalFileName|==: net1.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' start '
+- condition: all of selection_*
+id: 2a072a96-a086-49fa-bcb5-15cc5a619093
+logsource:
+  category: process_creation
+  product: windows

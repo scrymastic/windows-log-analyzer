@@ -1,0 +1,16 @@
+author: frack113
+date: 2022/05/16
+description: Detects the executiob of TTDInject.exe, which is used by Windows 10 v1809
+  and newer to debug time travel (underlying call of tttracer.exe)
+falsepositives:
+- Legitimate use
+filename: proc_creation_win_lolbin_ttdinject.yml
+level: medium
+modified: ''
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Ttdinject/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1127

@@ -1,0 +1,31 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\TelemetryController\
+    - TargetObject|endswith: \Command
+    - or:
+      - Details|contains: .bat
+      - Details|contains: .bin
+      - Details|contains: .cmd
+      - Details|contains: .dat
+      - Details|contains: .dll
+      - Details|contains: .exe
+      - Details|contains: .hta
+      - Details|contains: .jar
+      - Details|contains: .js
+      - Details|contains: .msi
+      - Details|contains: .ps
+      - Details|contains: .sh
+      - Details|contains: .vb
+- filter_main_generic:
+  - and:
+    - or:
+      - Details|contains: \system32\CompatTelRunner.exe
+      - Details|contains: \system32\DeviceCensus.exe
+- condition: selection and not 1 of filter_main_*
+id: 73a883d0-0348-4be4-a8d8-51031c2564f8
+logsource:
+  category: registry_set
+  definition: 'Requirements: Sysmon config that monitors \SOFTWARE\Microsoft\Windows
+    NT\CurrentVersion\AppCompatFlags\TelemetryController subkey of the HKLM hives'
+  product: windows

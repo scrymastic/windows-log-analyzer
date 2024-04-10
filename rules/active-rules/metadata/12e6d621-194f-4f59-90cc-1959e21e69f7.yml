@@ -1,0 +1,16 @@
+author: Roberto Rodriguez (source), Ilyas Ochkov (rule), oscd.community
+date: 2019/10/24
+description: Detects potential use of Rubeus via registered new trusted logon process
+falsepositives:
+- Unknown
+filename: win_security_register_new_logon_process_by_rubeus.yml
+level: high
+modified: 2022/10/09
+references:
+- https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
+related: []
+status: test
+tags:
+- attack.lateral_movement
+- attack.privilege_escalation
+- attack.t1558.003

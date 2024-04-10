@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/31
+description: Detects usage of the "Add-AppxPackage" or it's alias "Add-AppPackage"
+  to install unsigned AppX packages
+falsepositives:
+- Installation of unsigned packages for testing purposes
+filename: proc_creation_win_powershell_install_unsigned_appx_packages.yml
+level: medium
+modified: ''
+references:
+- https://learn.microsoft.com/en-us/windows/msix/package/unsigned-package
+- https://twitter.com/WindowsDocs/status/1620078135080325122
+related:
+- id: 975b2262-9a49-439d-92a6-0709cccdf0b2
+  type: similar
+status: test
+tags:
+- attack.persistence
+- attack.defense_evasion

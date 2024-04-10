@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: Get-Process
+- condition: selection
+id: af4c87ce-bdda-4215-b998-15220772e993
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

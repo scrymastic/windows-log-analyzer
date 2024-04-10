@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\InstalledSDB\
+      - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Custom\
+- filter_main_empty:
+  - and:
+    - Details|==: ''
+- condition: selection and not 1 of filter_main_*
+id: dfb5b4e8-91d0-4291-b40a-e3b0d3942c45
+logsource:
+  category: registry_set
+  product: windows

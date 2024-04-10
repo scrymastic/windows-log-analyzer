@@ -1,0 +1,78 @@
+title: Suspicious PowerShell Invocations - Specific
+id: ae7fbf8e-f3cb-49fd-8db4-5f3bed522c71
+related:
+- id: fce5f582-cc00-41e1-941a-c6fabf0fdb8c
+  type: obsoletes
+- id: 8ff28fdd-e2fa-4dfa-aeda-ef3d61c62090
+  type: similar
+- id: 536e2947-3729-478c-9903-745aaffe60d2
+  type: similar
+status: test
+description: Detects suspicious PowerShell invocation command parameters
+references:
+- Internal Research
+author: Florian Roth (Nextron Systems), Jonhnathan Ribeiro
+date: 2017/03/05
+modified: 2023/01/05
+tags:
+- attack.execution
+- attack.t1059.001
+logsource:
+  product: windows
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+detection:
+- selection_convert_b64:
+  - and:
+    - ScriptBlockText|contains: -nop
+    - ScriptBlockText|contains: ' -w '
+    - ScriptBlockText|contains: hidden
+    - ScriptBlockText|contains: ' -c '
+    - ScriptBlockText|contains: '[Convert]::FromBase64String'
+- selection_iex_selection:
+  - and:
+    - ScriptBlockText|contains: ' -w '
+    - ScriptBlockText|contains: hidden
+    - ScriptBlockText|contains: -noni
+    - ScriptBlockText|contains: -nop
+    - ScriptBlockText|contains: ' -c '
+    - ScriptBlockText|contains: iex
+    - ScriptBlockText|contains: New-Object
+- selection_enc_selection:
+  - and:
+    - ScriptBlockText|contains: ' -w '
+    - ScriptBlockText|contains: hidden
+    - ScriptBlockText|contains: -ep
+    - ScriptBlockText|contains: bypass
+    - ScriptBlockText|contains: -Enc
+- selection_reg_selection:
+  - and:
+    - ScriptBlockText|contains: powershell
+    - ScriptBlockText|contains: reg
+    - ScriptBlockText|contains: add
+    - ScriptBlockText|contains: HKCU\software\microsoft\windows\currentversion\run
+- selection_webclient_selection:
+  - and:
+    - ScriptBlockText|contains: bypass
+    - ScriptBlockText|contains: -noprofile
+    - ScriptBlockText|contains: -windowstyle
+    - ScriptBlockText|contains: hidden
+    - ScriptBlockText|contains: new-object
+    - ScriptBlockText|contains: system.net.webclient
+    - ScriptBlockText|contains: .download
+- selection_iex_webclient:
+  - and:
+    - ScriptBlockText|contains: iex
+    - ScriptBlockText|contains: New-Object
+    - ScriptBlockText|contains: Net.WebClient
+    - ScriptBlockText|contains: .Download
+- filter_chocolatey:
+  - and:
+    - or:
+      - ScriptBlockText|contains: (New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1
+      - ScriptBlockText|contains: (New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')
+      - ScriptBlockText|contains: Write-ChocolateyWarning
+- condition: 1 of selection_* and not 1 of filter_*
+falsepositives:
+- Unknown
+level: high

@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|contains: \procmon
+    - TargetFilename|endswith: .sys
+- filter_main_process_explorer:
+  - and:
+    - or:
+      - Image|endswith: \procmon.exe
+      - Image|endswith: \procmon64.exe
+- condition: selection and not 1 of filter_main_*
+id: a05baa88-e922-4001-bc4d-8738135f27de
+logsource:
+  category: file_event
+  product: windows

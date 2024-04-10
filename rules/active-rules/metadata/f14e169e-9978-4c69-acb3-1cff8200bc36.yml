@@ -1,0 +1,16 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/05/19
+description: Detects the suspicious execution of a utility to convert Windows 3.x
+  .grp files or for persistence purposes by malicious software or actors
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_susp_grpconv.yml
+level: high
+modified: ''
+references:
+- https://twitter.com/0gtweet/status/1526833181831200770
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.t1547

@@ -1,0 +1,29 @@
+detection:
+- selection_ext:
+  - and:
+    - or:
+      - CommandLine|contains: .doc
+      - CommandLine|contains: .docx
+      - CommandLine|contains: .xls
+      - CommandLine|contains: .xlsx
+      - CommandLine|contains: .ppt
+      - CommandLine|contains: .pptx
+      - CommandLine|contains: .rtf
+      - CommandLine|contains: .pdf
+      - CommandLine|contains: .txt
+- selection_other_dir:
+  - and:
+    - CommandLine|contains: 'dir '
+    - CommandLine|contains: ' /b '
+    - CommandLine|contains: ' /s '
+- selection_other_findstr:
+  - and:
+    - OriginalFileName|==: FINDSTR.EXE
+    - or:
+      - CommandLine|contains: ' /e '
+      - CommandLine|contains: ' /si '
+- condition: selection_ext and 1 of selection_other_*
+id: f576a613-2392-4067-9d1a-9345fb58d8d1
+logsource:
+  category: process_creation
+  product: windows

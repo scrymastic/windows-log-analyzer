@@ -1,0 +1,14 @@
+detection:
+- selection_create:
+  - and:
+    - EventType|==: RenameKey
+    - NewName|contains: \CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shell\open
+- selection_set:
+  - and:
+    - EventType|==: SetValue
+    - TargetObject|contains: \CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shell\open\command\(Default)
+- condition: 1 of selection_*
+id: 277efb8f-60be-4f10-b4d3-037802f37167
+logsource:
+  category: registry_event
+  product: windows

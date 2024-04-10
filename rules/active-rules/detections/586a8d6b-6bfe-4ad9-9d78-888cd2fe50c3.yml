@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5145
+    - ShareName|==: \\\\\*\\IPC$
+    - RelativeTargetName|==: svcctl
+    - Accesses|contains: WriteData
+- condition: selection
+id: 586a8d6b-6bfe-4ad9-9d78-888cd2fe50c3
+logsource:
+  definition: The advanced audit policy setting "Object Access > Audit Detailed File
+    Share" must be configured for Success/Failure
+  product: windows
+  service: security

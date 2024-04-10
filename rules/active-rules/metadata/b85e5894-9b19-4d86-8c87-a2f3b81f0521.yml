@@ -1,0 +1,18 @@
+author: frack113
+date: 2022/03/01
+description: Detects new BITS transfer job saving local files with potential suspicious
+  extensions
+falsepositives:
+- While the file extensions in question can be suspicious at times. It's best to add
+  filters according to your environment to avoid large amount false positives
+filename: win_bits_client_new_transfer_saving_susp_extensions.yml
+level: medium
+modified: 2023/03/27
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1197/T1197.md
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.persistence
+- attack.t1197

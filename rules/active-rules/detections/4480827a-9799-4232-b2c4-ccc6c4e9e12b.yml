@@ -1,0 +1,17 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \certreq.exe
+      - OriginalFileName|==: CertReq.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' -Post '
+    - CommandLine|contains: ' -config '
+    - CommandLine|contains: ' http'
+    - CommandLine|contains: ' C:\windows\win.ini '
+- condition: all of selection*
+id: 4480827a-9799-4232-b2c4-ccc6c4e9e12b
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,18 @@
+author: '@pbssubhash'
+date: 2022/12/08
+description: Detects the presence of an LSASS dump file in the "CrashDumps" folder.
+  This could be a sign of LSASS credential dumping. Techniques such as the LSASS Shtinkering
+  have been seen abusing the Windows Error Reporting to dump said process.
+falsepositives:
+- Rare legitimate dump of the process by the operating system due to a crash of lsass
+filename: file_event_win_lsass_shtinkering.yml
+level: high
+modified: ''
+references:
+- https://github.com/deepinstinct/Lsass-Shtinkering
+- https://media.defcon.org/DEF%20CON%2030/DEF%20CON%2030%20presentations/Asaf%20Gilboa%20-%20LSASS%20Shtinkering%20Abusing%20Windows%20Error%20Reporting%20to%20Dump%20LSASS.pdf
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.001

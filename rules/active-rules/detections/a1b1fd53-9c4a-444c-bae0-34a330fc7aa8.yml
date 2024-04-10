@@ -1,0 +1,16 @@
+detection:
+- selection_root:
+  - and:
+    - TargetObject|contains: \SYSTEM\CurrentControlSet\Control\ContentIndex\Language\
+- selection_values:
+  - and:
+    - or:
+      - TargetObject|contains: \StemmerDLLPathOverride
+      - TargetObject|contains: \WBDLLPathOverride
+      - TargetObject|contains: \StemmerClass
+      - TargetObject|contains: \WBreakerClass
+- condition: all of selection_*
+id: a1b1fd53-9c4a-444c-bae0-34a330fc7aa8
+logsource:
+  category: registry_set
+  product: windows

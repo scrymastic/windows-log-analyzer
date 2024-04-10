@@ -1,0 +1,15 @@
+author: Nasreddine Bencherchali (Nextron Systems), frack113
+date: 2023/08/09
+description: Detects the execution of a renamed "gpg.exe". Often used by ransomware
+  and loaders to decrypt/encrypt data.
+falsepositives: []
+filename: proc_creation_win_renamed_gpg4win.yml
+level: high
+modified: ''
+references:
+- https://securelist.com/locked-out/68960/
+related: []
+status: experimental
+tags:
+- attack.impact
+- attack.t1486

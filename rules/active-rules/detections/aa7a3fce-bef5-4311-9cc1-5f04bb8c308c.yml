@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - ScriptBlockText|contains: Export-PfxCertificate
+      - ScriptBlockText|contains: Export-Certificate
+- filter_optional_module_export:
+  - and:
+    - ScriptBlockText|contains: CmdletsToExport = @(
+- condition: selection and not 1 of filter_optional_*
+id: aa7a3fce-bef5-4311-9cc1-5f04bb8c308c
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

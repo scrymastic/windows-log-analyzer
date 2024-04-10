@@ -1,0 +1,10 @@
+detection:
+- selection_4104:
+  - and:
+    - ScriptBlockText|matches: (?i).*(set).*&&\s?set.*(environment|invoke|\$\{?input).*&&.*"
+- condition: selection_4104
+id: 86b896ba-ffa1-4fea-83e3-ee28a4c915c7
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

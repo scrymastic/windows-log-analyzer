@@ -1,0 +1,28 @@
+detection:
+- selection:
+  - and:
+    - Initiated|==: 'true'
+    - or:
+      - DestinationPort|==: 8080
+      - DestinationPort|==: 8888
+- filter_main_local_ranges:
+  - and:
+    - or:
+      - DestinationIp|cidr: 127.0.0.0/8
+      - DestinationIp|cidr: 10.0.0.0/8
+      - DestinationIp|cidr: 172.16.0.0/12
+      - DestinationIp|cidr: 192.168.0.0/16
+      - DestinationIp|cidr: 169.254.0.0/16
+      - DestinationIp|cidr: ::1/128
+      - DestinationIp|cidr: fe80::/10
+      - DestinationIp|cidr: fc00::/7
+- filter_optional_sys_directories:
+  - and:
+    - or:
+      - Image|startswith: C:\Program Files\
+      - Image|startswith: C:\Program Files (x86)\
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: 6d8c3d20-a5e1-494f-8412-4571d716cf5c
+logsource:
+  category: network_connection
+  product: windows

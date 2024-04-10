@@ -1,0 +1,20 @@
+author: '@ScoubiMtl'
+date: 2021/04/05
+description: Detects the creation of a macro file for Outlook.
+falsepositives:
+- User genuinely creates a VB Macro for their email
+filename: file_event_win_office_outlook_macro_creation.yml
+level: medium
+modified: 2023/02/08
+references:
+- https://www.mdsec.co.uk/2020/11/a-fresh-outlook-on-mail-based-persistence/
+related:
+- id: 117d3d3a-755c-4a61-b23e-9171146d094c
+  type: derived
+status: test
+tags:
+- attack.persistence
+- attack.command_and_control
+- attack.t1137
+- attack.t1008
+- attack.t1546

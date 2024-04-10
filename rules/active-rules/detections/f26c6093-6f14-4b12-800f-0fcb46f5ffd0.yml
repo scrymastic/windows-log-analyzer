@@ -1,0 +1,69 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+      - or:
+        - OriginalFileName|==: PowerShell.EXE
+        - OriginalFileName|==: pwsh.dll
+- selection_hidden:
+  - and:
+    - CommandLine|contains: ' hidden '
+- selection_encoded:
+  - and:
+    - or:
+      - CommandLine|contains: AGkAdABzAGEAZABtAGkAbgAgAC8AdAByAGEAbgBzAGYAZQByA
+      - CommandLine|contains: aXRzYWRtaW4gL3RyYW5zZmVy
+      - CommandLine|contains: IAaQB0AHMAYQBkAG0AaQBuACAALwB0AHIAYQBuAHMAZgBlAHIA
+      - CommandLine|contains: JpdHNhZG1pbiAvdHJhbnNmZX
+      - CommandLine|contains: YgBpAHQAcwBhAGQAbQBpAG4AIAAvAHQAcgBhAG4AcwBmAGUAcg
+      - CommandLine|contains: Yml0c2FkbWluIC90cmFuc2Zlc
+      - CommandLine|contains: AGMAaAB1AG4AawBfAHMAaQB6AGUA
+      - CommandLine|contains: JABjAGgAdQBuAGsAXwBzAGkAegBlA
+      - CommandLine|contains: JGNodW5rX3Npem
+      - CommandLine|contains: QAYwBoAHUAbgBrAF8AcwBpAHoAZQ
+      - CommandLine|contains: RjaHVua19zaXpl
+      - CommandLine|contains: Y2h1bmtfc2l6Z
+      - CommandLine|contains: AE8ALgBDAG8AbQBwAHIAZQBzAHMAaQBvAG4A
+      - CommandLine|contains: kATwAuAEMAbwBtAHAAcgBlAHMAcwBpAG8Abg
+      - CommandLine|contains: lPLkNvbXByZXNzaW9u
+      - CommandLine|contains: SQBPAC4AQwBvAG0AcAByAGUAcwBzAGkAbwBuA
+      - CommandLine|contains: SU8uQ29tcHJlc3Npb2
+      - CommandLine|contains: Ty5Db21wcmVzc2lvb
+      - CommandLine|contains: AE8ALgBNAGUAbQBvAHIAeQBTAHQAcgBlAGEAbQ
+      - CommandLine|contains: kATwAuAE0AZQBtAG8AcgB5AFMAdAByAGUAYQBtA
+      - CommandLine|contains: lPLk1lbW9yeVN0cmVhb
+      - CommandLine|contains: SQBPAC4ATQBlAG0AbwByAHkAUwB0AHIAZQBhAG0A
+      - CommandLine|contains: SU8uTWVtb3J5U3RyZWFt
+      - CommandLine|contains: Ty5NZW1vcnlTdHJlYW
+      - CommandLine|contains: 4ARwBlAHQAQwBoAHUAbgBrA
+      - CommandLine|contains: 5HZXRDaHVua
+      - CommandLine|contains: AEcAZQB0AEMAaAB1AG4Aaw
+      - CommandLine|contains: LgBHAGUAdABDAGgAdQBuAGsA
+      - CommandLine|contains: LkdldENodW5r
+      - CommandLine|contains: R2V0Q2h1bm
+      - CommandLine|contains: AEgAUgBFAEEARABfAEkATgBGAE8ANgA0A
+      - CommandLine|contains: QASABSAEUAQQBEAF8ASQBOAEYATwA2ADQA
+      - CommandLine|contains: RIUkVBRF9JTkZPNj
+      - CommandLine|contains: SFJFQURfSU5GTzY0
+      - CommandLine|contains: VABIAFIARQBBAEQAXwBJAE4ARgBPADYANA
+      - CommandLine|contains: VEhSRUFEX0lORk82N
+      - CommandLine|contains: AHIAZQBhAHQAZQBSAGUAbQBvAHQAZQBUAGgAcgBlAGEAZA
+      - CommandLine|contains: cmVhdGVSZW1vdGVUaHJlYW
+      - CommandLine|contains: MAcgBlAGEAdABlAFIAZQBtAG8AdABlAFQAaAByAGUAYQBkA
+      - CommandLine|contains: NyZWF0ZVJlbW90ZVRocmVhZ
+      - CommandLine|contains: Q3JlYXRlUmVtb3RlVGhyZWFk
+      - CommandLine|contains: QwByAGUAYQB0AGUAUgBlAG0AbwB0AGUAVABoAHIAZQBhAGQA
+      - CommandLine|contains: 0AZQBtAG0AbwB2AGUA
+      - CommandLine|contains: 1lbW1vdm
+      - CommandLine|contains: AGUAbQBtAG8AdgBlA
+      - CommandLine|contains: bQBlAG0AbQBvAHYAZQ
+      - CommandLine|contains: bWVtbW92Z
+      - CommandLine|contains: ZW1tb3Zl
+- condition: all of selection_*
+id: f26c6093-6f14-4b12-800f-0fcb46f5ffd0
+logsource:
+  category: process_creation
+  product: windows

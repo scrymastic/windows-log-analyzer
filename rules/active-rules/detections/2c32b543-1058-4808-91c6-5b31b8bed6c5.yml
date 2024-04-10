@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \Crassus.exe
+      - OriginalFileName|==: Crassus.exe
+      - Description|contains: Crassus
+- condition: selection
+id: 2c32b543-1058-4808-91c6-5b31b8bed6c5
+logsource:
+  category: process_creation
+  product: windows

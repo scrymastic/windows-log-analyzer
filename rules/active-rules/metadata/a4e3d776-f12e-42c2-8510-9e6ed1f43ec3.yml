@@ -1,0 +1,17 @@
+author: Tim Rauch, Elastic (idea)
+date: 2022/09/27
+description: Detects an unexpected process spawning from dns.exe which may indicate
+  activity related to remote code execution or other forms of exploitation as seen
+  in CVE-2020-1350 (SigRed)
+falsepositives:
+- Unknown
+filename: proc_creation_win_dns_susp_child_process.yml
+level: high
+modified: 2023/02/05
+references:
+- https://www.elastic.co/guide/en/security/current/unusual-child-process-of-dns-exe.html
+related: []
+status: test
+tags:
+- attack.initial_access
+- attack.t1133

@@ -1,0 +1,18 @@
+author: Bartlomiej Czyz @bczyz1, oscd.community
+date: 2020/10/11
+description: Detects value modification of registry key containing path to binary
+  used as screensaver.
+falsepositives:
+- Legitimate modification of screensaver
+filename: registry_event_modify_screensaver_binary_path.yml
+level: medium
+modified: 2021/11/27
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.002/T1546.002.md
+- https://www.welivesecurity.com/wp-content/uploads/2017/08/eset-gazer.pdf
+related: []
+status: test
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1546.002

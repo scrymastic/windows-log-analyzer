@@ -1,0 +1,19 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \thor.exe
+      - Image|endswith: \thor64.exe
+    - or:
+      - ImageLoaded|endswith: \thor.exe
+      - ImageLoaded|endswith: \thor64.exe
+- filter_main:
+  - and:
+    - Signed|==: 'true'
+    - SignatureStatus|==: valid
+    - Signature|==: Nextron Systems GmbH
+- condition: selection and not filter_main
+id: ea5c131b-380d-49f9-aeb3-920694da4d4b
+logsource:
+  category: image_load
+  product: windows

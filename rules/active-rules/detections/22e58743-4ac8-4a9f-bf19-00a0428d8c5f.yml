@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: TVqQAAMAAAAEAAAA
+      - CommandLine|contains: TVpQAAIAAAAEAA8A
+      - CommandLine|contains: TVqAAAEAAAAEABAA
+      - CommandLine|contains: TVoAAAAAAAAAAAAA
+      - CommandLine|contains: TVpTAQEAAAAEAAAA
+- condition: selection
+id: 22e58743-4ac8-4a9f-bf19-00a0428d8c5f
+logsource:
+  category: process_creation
+  product: windows

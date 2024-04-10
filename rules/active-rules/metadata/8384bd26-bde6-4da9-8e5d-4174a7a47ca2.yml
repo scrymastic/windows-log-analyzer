@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/02/20
+description: Detects DNS resolution of an .onion address related to Tor routing networks
+falsepositives:
+- Unlikely
+filename: win_dns_client_tor_onion.yml
+level: high
+modified: ''
+references:
+- https://www.logpoint.com/en/blog/detecting-tor-use-with-logpoint/
+related:
+- id: b55ca2a3-7cff-4dda-8bdd-c7bfa63bf544
+  type: similar
+status: test
+tags:
+- attack.command_and_control
+- attack.t1090.003

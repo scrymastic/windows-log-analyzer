@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+    - ServiceName|==: RTCore64
+- condition: selection
+id: 91c49341-e2ef-40c0-ac45-49ec5c3fe26c
+logsource:
+  product: windows
+  service: system

@@ -1,0 +1,15 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/08/07
+description: Detects CSExec service installation and execution events
+falsepositives:
+- Unknown
+filename: win_system_service_install_csexecsvc.yml
+level: medium
+modified: ''
+references:
+- https://github.com/malcomvetter/CSExec
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.t1569.002

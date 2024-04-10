@@ -1,0 +1,22 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|endswith: \desktop.ini
+- filter_generic:
+  - and:
+    - or:
+      - Image|startswith: C:\Windows\
+      - Image|startswith: C:\Program Files\
+      - Image|startswith: C:\Program Files (x86)\
+- filter_jetbrains:
+  - and:
+    - Image|endswith: \AppData\Local\JetBrains\Toolbox\bin\7z.exe
+    - TargetFilename|contains: \JetBrains\apps\
+- filter_upgrade:
+  - and:
+    - TargetFilename|startswith: C:\$WINDOWS.~BT\NewOS\
+- condition: selection and not 1 of filter_*
+id: 81315b50-6b60-4d8f-9928-3466e1022515
+logsource:
+  category: file_event
+  product: windows

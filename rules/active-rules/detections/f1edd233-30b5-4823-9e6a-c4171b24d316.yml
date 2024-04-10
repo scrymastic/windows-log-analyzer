@@ -1,0 +1,18 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \rundll32.exe
+      - OriginalFileName|==: RUNDLL32.EXE
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: '-sta '
+      - CommandLine|contains: '-localserver '
+    - CommandLine|contains: '{'
+    - CommandLine|contains: '}'
+- condition: all of selection_*
+id: f1edd233-30b5-4823-9e6a-c4171b24d316
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \mpclient.dll
+    - or:
+      - Image|endswith: \MpCmdRun.exe
+      - Image|endswith: \NisSrv.exe
+- filter_main_known_locations:
+  - and:
+    - or:
+      - Image|startswith: C:\Program Files (x86)\Windows Defender\
+      - Image|startswith: C:\Program Files\Microsoft Security Client\
+      - Image|startswith: C:\Program Files\Windows Defender\
+      - Image|startswith: C:\ProgramData\Microsoft\Windows Defender\Platform\
+      - Image|startswith: C:\Windows\WinSxS\
+- condition: selection and not 1 of filter_main_*
+id: 418dc89a-9808-4b87-b1d7-e5ae0cb6effc
+logsource:
+  category: image_load
+  product: windows

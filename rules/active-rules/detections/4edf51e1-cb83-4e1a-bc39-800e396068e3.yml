@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4697
+    - ServiceFileName|contains: cmd
+    - ServiceFileName|contains: '&&'
+    - ServiceFileName|contains: 'clipboard]::'
+- condition: selection
+id: 4edf51e1-cb83-4e1a-bc39-800e396068e3
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security

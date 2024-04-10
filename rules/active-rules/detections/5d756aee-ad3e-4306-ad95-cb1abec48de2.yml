@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|contains: \AppData\Local\Temp\LogMeInInc\GoToAssist Remote Support
+        Expert\
+- condition: selection
+id: 5d756aee-ad3e-4306-ad95-cb1abec48de2
+logsource:
+  category: file_event
+  product: windows

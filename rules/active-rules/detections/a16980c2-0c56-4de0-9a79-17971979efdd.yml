@@ -1,0 +1,55 @@
+detection:
+- selection1:
+  - and:
+    - or:
+      - CommandLine|contains: cmd.exe/c
+      - CommandLine|contains: \cmd/c
+      - CommandLine|contains: '"cmd/c'
+      - CommandLine|contains: cmd.exe/k
+      - CommandLine|contains: \cmd/k
+      - CommandLine|contains: '"cmd/k'
+      - CommandLine|contains: cmd.exe/r
+      - CommandLine|contains: \cmd/r
+      - CommandLine|contains: '"cmd/r'
+- selection2:
+  - and:
+    - or:
+      - CommandLine|contains: /cwhoami
+      - CommandLine|contains: /cpowershell
+      - CommandLine|contains: /cschtasks
+      - CommandLine|contains: /cbitsadmin
+      - CommandLine|contains: /ccertutil
+      - CommandLine|contains: /kwhoami
+      - CommandLine|contains: /kpowershell
+      - CommandLine|contains: /kschtasks
+      - CommandLine|contains: /kbitsadmin
+      - CommandLine|contains: /kcertutil
+- selection3:
+  - and:
+    - or:
+      - CommandLine|contains: cmd.exe /c
+      - CommandLine|contains: cmd /c
+      - CommandLine|contains: cmd.exe /k
+      - CommandLine|contains: cmd /k
+      - CommandLine|contains: cmd.exe /r
+      - CommandLine|contains: cmd /r
+- filter_generic:
+  - and:
+    - or:
+      - CommandLine|contains: 'cmd.exe /c '
+      - CommandLine|contains: 'cmd /c '
+      - CommandLine|contains: 'cmd.exe /k '
+      - CommandLine|contains: 'cmd /k '
+      - CommandLine|contains: 'cmd.exe /r '
+      - CommandLine|contains: 'cmd /r '
+- filter_fp:
+  - and:
+    - or:
+      - CommandLine|contains: AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules
+      - CommandLine|endswith: cmd.exe/c .
+      - CommandLine|==: cmd.exe /c
+- condition: 1 of selection* and not 1 of filter_*
+id: a16980c2-0c56-4de0-9a79-17971979efdd
+logsource:
+  category: process_creation
+  product: windows

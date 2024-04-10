@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/21
+description: Detects when an attacker adds a new "DLLPathOverride" value to the "Natural
+  Language" key in order to achieve persistence which will get invoked by "SearchIndexer.exe"
+  process
+falsepositives:
+- Unknown
+filename: registry_set_persistence_natural_language.yml
+level: high
+modified: 2023/08/17
+references:
+- https://persistence-info.github.io/Data/naturallanguage6.html
+- https://www.hexacorn.com/blog/2018/12/30/beyond-good-ol-run-key-part-98/
+related: []
+status: experimental
+tags:
+- attack.persistence

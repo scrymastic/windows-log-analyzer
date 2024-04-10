@@ -1,0 +1,21 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \ADExplorer.exe
+      - OriginalFileName|==: AdExp
+- selection_flag:
+  - and:
+    - CommandLine|contains: snapshot
+- selection_paths:
+  - and:
+    - or:
+      - CommandLine|contains: \Downloads\
+      - CommandLine|contains: \Users\Public\
+      - CommandLine|contains: \AppData\
+      - CommandLine|contains: \Windows\Temp\
+- condition: all of selection_*
+id: ef61af62-bc74-4f58-b49b-626448227652
+logsource:
+  category: process_creation
+  product: windows

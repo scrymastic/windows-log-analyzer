@@ -1,0 +1,18 @@
+author: Trent Liffick
+date: 2020/05/01
+description: Detects usage of findstr to identify and execute a lnk file as seen within
+  the HHS redirect attack
+falsepositives:
+- Unknown
+filename: proc_creation_win_findstr_lnk.yml
+level: medium
+modified: 2024/01/15
+references:
+- https://www.bleepingcomputer.com/news/security/hhsgov-open-redirect-used-by-coronavirus-phishing-to-spread-malware/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036
+- attack.t1202
+- attack.t1027.003

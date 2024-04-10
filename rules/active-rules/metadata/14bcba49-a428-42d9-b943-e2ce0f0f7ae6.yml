@@ -1,0 +1,17 @@
+author: Timur Zinniatullin, oscd.community
+date: 2020/10/13
+description: Detects Obfuscated Powershell via VAR++ LAUNCHER
+falsepositives:
+- Unknown
+filename: win_system_invoke_obfuscation_via_var_services.yml
+level: high
+modified: 2022/11/29
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

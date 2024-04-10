@@ -1,0 +1,19 @@
+author: Sreeman
+date: 2020/04/21
+description: Monitors for the hiding possible malicious files in the C:\Windows\Fonts\
+  location. This folder doesn't require admin privillege to be written and executed
+  from.
+falsepositives:
+- Unknown
+filename: proc_creation_win_susp_hiding_malware_in_fonts_folder.yml
+level: medium
+modified: 2022/03/08
+references:
+- https://thedfirreport.com/2020/04/20/sqlserver-or-the-miner-in-the-basement/
+related: []
+status: test
+tags:
+- attack.t1211
+- attack.t1059
+- attack.defense_evasion
+- attack.persistence

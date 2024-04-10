@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: 'tunnel '
+    - CommandLine|contains: service
+    - CommandLine|contains: internal-run
+    - CommandLine|contains: tunnel-service.log
+- condition: selection
+id: 30bf1789-379d-4fdc-900f-55cd0a90a801
+logsource:
+  category: process_creation
+  product: windows

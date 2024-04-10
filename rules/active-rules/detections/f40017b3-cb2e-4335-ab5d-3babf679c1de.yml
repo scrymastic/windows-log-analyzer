@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \rundll32.exe
+    - ImageLoaded|startswith: \\\\
+- condition: selection
+id: f40017b3-cb2e-4335-ab5d-3babf679c1de
+logsource:
+  category: image_load
+  product: windows

@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \dns.exe
+- filter:
+  - and:
+    - Image|endswith: \conhost.exe
+- condition: selection and not filter
+id: a4e3d776-f12e-42c2-8510-9e6ed1f43ec3
+logsource:
+  category: process_creation
+  product: windows

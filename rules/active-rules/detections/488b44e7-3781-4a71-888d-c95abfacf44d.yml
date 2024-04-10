@@ -1,0 +1,19 @@
+detection:
+- selection_args:
+  - and:
+    - ScriptBlockText|contains: 'Set-NetFirewallProfile '
+    - ScriptBlockText|contains: ' -Enabled '
+    - ScriptBlockText|contains: ' False'
+- selection_opt:
+  - and:
+    - or:
+      - ScriptBlockText|contains: ' -All '
+      - ScriptBlockText|contains: Public
+      - ScriptBlockText|contains: Domain
+      - ScriptBlockText|contains: Private
+- condition: all of selection*
+id: 488b44e7-3781-4a71-888d-c95abfacf44d
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

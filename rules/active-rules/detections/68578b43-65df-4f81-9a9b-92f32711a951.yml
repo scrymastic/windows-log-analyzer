@@ -1,0 +1,14 @@
+detection:
+- selection1:
+  - and:
+    - TargetFilename|startswith: C:\Users\
+    - TargetFilename|endswith: \AppData\Local\Temp\OskSupport.dll
+- selection2:
+  - and:
+    - Image|==: C:\Windows\system32\DllHost.exe
+    - TargetFilename|==: C:\Program Files\Windows Media Player\osk.exe
+- condition: 1 of selection*
+id: 68578b43-65df-4f81-9a9b-92f32711a951
+logsource:
+  category: file_event
+  product: windows

@@ -1,0 +1,28 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \vssapi.dll
+- filter_windows:
+  - and:
+    - or:
+      - or:
+        - Image|==: C:\Windows\explorer.exe
+        - Image|==: C:\Windows\ImmersiveControlPanel\SystemSettings.exe
+      - or:
+        - Image|startswith: C:\Windows\System32\
+        - Image|startswith: C:\Windows\SysWOW64\
+        - Image|startswith: C:\Windows\Temp\{
+        - Image|startswith: C:\Windows\WinSxS\
+- filter_program_files:
+  - and:
+    - or:
+      - Image|startswith: C:\Program Files\
+      - Image|startswith: C:\Program Files (x86)\
+- filter_programdata_packagecache:
+  - and:
+    - Image|startswith: C:\ProgramData\Package Cache\
+- condition: selection and not 1 of filter_*
+id: 37774c23-25a1-4adb-bb6d-8bb9fd59c0f8
+logsource:
+  category: image_load
+  product: windows

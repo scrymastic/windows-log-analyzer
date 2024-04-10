@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - Company|==: Cube0x0
+- condition: selection
+id: 37c1333a-a0db-48be-b64b-7393b2386e3b
+logsource:
+  category: process_creation
+  product: windows

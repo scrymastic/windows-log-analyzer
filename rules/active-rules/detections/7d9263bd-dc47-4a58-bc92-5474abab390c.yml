@@ -1,0 +1,21 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \Microsoft\Windows\CurrentVersion\WINEVT\Channels\
+    - TargetObject|endswith: \ChannelAccess
+    - or:
+      - Details|contains: (A;;0x1;;;LA)
+      - Details|contains: (A;;0x1;;;SY)
+      - Details|contains: (A;;0x5;;;BA)
+- filter_main_trustedinstaller:
+  - and:
+    - Image|==: C:\Windows\servicing\TrustedInstaller.exe
+- filter_main_tiworker:
+  - and:
+    - Image|startswith: C:\Windows\WinSxS\
+    - Image|endswith: \TiWorker.exe
+- condition: selection and not 1 of filter_main_*
+id: 7d9263bd-dc47-4a58-bc92-5474abab390c
+logsource:
+  category: registry_set
+  product: windows

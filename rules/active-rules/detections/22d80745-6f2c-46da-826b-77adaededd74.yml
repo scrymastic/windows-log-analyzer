@@ -1,0 +1,22 @@
+detection:
+- selection_sddl_flag:
+  - and:
+    - or:
+      - ScriptBlockText|contains: '-SecurityDescriptorSddl '
+      - ScriptBlockText|contains: '-sd '
+- selection_set_service:
+  - and:
+    - ScriptBlockText|contains: 'Set-Service '
+    - ScriptBlockText|contains: D;;
+    - or:
+      - ScriptBlockText|contains: ;;;IU
+      - ScriptBlockText|contains: ;;;SU
+      - ScriptBlockText|contains: ;;;BA
+      - ScriptBlockText|contains: ;;;SY
+      - ScriptBlockText|contains: ;;;WD
+- condition: all of selection_*
+id: 22d80745-6f2c-46da-826b-77adaededd74
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

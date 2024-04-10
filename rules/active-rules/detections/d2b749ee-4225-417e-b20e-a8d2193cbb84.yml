@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - OriginalFileName|==: AdvancedRun.exe
+      - and:
+        - CommandLine|contains: ' /EXEFilename '
+        - CommandLine|contains: ' /Run'
+      - and:
+        - CommandLine|contains: ' /WindowState 0'
+        - CommandLine|contains: ' /RunAs '
+        - CommandLine|contains: ' /CommandLine '
+- condition: selection
+id: d2b749ee-4225-417e-b20e-a8d2193cbb84
+logsource:
+  category: process_creation
+  product: windows

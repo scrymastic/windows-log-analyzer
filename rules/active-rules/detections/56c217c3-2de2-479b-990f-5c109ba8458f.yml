@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - ParentImage|endswith: \powershell.exe
+      - ParentImage|endswith: \pwsh.exe
+    - Image|endswith: \schtasks.exe
+    - CommandLine|contains: /Create
+    - CommandLine|contains: powershell.exe -NonI
+    - CommandLine|contains: /TN Updater /TR
+    - or:
+      - CommandLine|contains: /SC ONLOGON
+      - CommandLine|contains: /SC DAILY /ST
+      - CommandLine|contains: /SC ONIDLE
+      - CommandLine|contains: /SC HOURLY
+- condition: selection
+id: 56c217c3-2de2-479b-990f-5c109ba8458f
+logsource:
+  category: process_creation
+  product: windows

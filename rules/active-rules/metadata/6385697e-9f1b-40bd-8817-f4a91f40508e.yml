@@ -1,0 +1,19 @@
+author: pH-T (Nextron Systems), Harjot Singh, @cyb3rjy0t
+date: 2022/05/20
+description: Detects UTF-8 and UTF-16 Base64 encoded powershell 'Invoke-' calls
+falsepositives:
+- Unknown
+filename: proc_creation_win_powershell_base64_invoke.yml
+level: high
+modified: 2023/04/06
+references:
+- https://thedfirreport.com/2022/05/09/seo-poisoning-a-gootloader-story/
+related:
+- id: fd6e2919-3936-40c9-99db-0aa922c356f7
+  type: obsoletes
+status: test
+tags:
+- attack.execution
+- attack.t1059.001
+- attack.defense_evasion
+- attack.t1027

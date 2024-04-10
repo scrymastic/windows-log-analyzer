@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \dns.exe
+- filter:
+  - and:
+    - TargetFilename|endswith: \dns.log
+- condition: selection and not filter
+id: 8f0b1fb1-9bd4-4e74-8cdf-a8de4d2adfd0
+logsource:
+  category: file_delete
+  product: windows

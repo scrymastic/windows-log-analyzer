@@ -1,0 +1,15 @@
+detection:
+- selection_4104:
+  - and:
+    - ScriptBlockText|contains: new-object
+    - ScriptBlockText|contains: text.encoding]::ascii
+    - or:
+      - ScriptBlockText|contains: system.io.compression.deflatestream
+      - ScriptBlockText|contains: system.io.streamreader
+    - ScriptBlockText|endswith: readtoend
+- condition: selection_4104
+id: 20e5497e-331c-4cd5-8d36-935f6e2a9a07
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -1,0 +1,32 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - ParentImage|endswith: \powershell_ise.exe
+      - ParentImage|endswith: \powershell.exe
+      - ParentImage|endswith: \pwsh.exe
+    - or:
+      - Image|endswith: \bash.exe
+      - Image|endswith: \bitsadmin.exe
+      - Image|endswith: \certutil.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \forfiles.exe
+      - Image|endswith: \hh.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \schtasks.exe
+      - Image|endswith: \scrcons.exe
+      - Image|endswith: \scriptrunner.exe
+      - Image|endswith: \sh.exe
+      - Image|endswith: \wmic.exe
+      - Image|endswith: \wscript.exe
+- filter_optional_amazon:
+  - and:
+    - ParentCommandLine|contains: \Program Files\Amazon\WorkspacesConfig\Scripts\
+    - CommandLine|contains: \Program Files\Amazon\WorkspacesConfig\Scripts\
+- condition: selection and not 1 of filter_optional_*
+id: e4b6d2a7-d8a4-4f19-acbd-943c16d90647
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,37 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+      - or:
+        - OriginalFileName|==: PowerShell.Exe
+        - OriginalFileName|==: pwsh.dll
+- selection_flags:
+  - and:
+    - or:
+      - CommandLine|contains: ' -e '
+      - CommandLine|contains: ' -en '
+      - CommandLine|contains: ' -enc '
+      - CommandLine|contains: ' -enco'
+- selection_encoded:
+  - and:
+    - or:
+      - CommandLine|contains: ' JAB'
+      - CommandLine|contains: ' SUVYI'
+      - CommandLine|contains: ' SQBFAFgA'
+      - CommandLine|contains: ' aWV4I'
+      - CommandLine|contains: ' IAB'
+      - CommandLine|contains: ' PAA'
+      - CommandLine|contains: ' aQBlAHgA'
+- filter_gcworker:
+  - and:
+    - or:
+      - ParentImage|contains: C:\Packages\Plugins\Microsoft.GuestConfiguration.ConfigurationforWindows\
+      - ParentImage|contains: \gc_worker.exe
+- condition: all of selection_* and not 1 of filter_*
+id: b9d9cc83-380b-4ba3-8d8f-60c0e7e2930c
+logsource:
+  category: process_creation
+  product: windows

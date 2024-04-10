@@ -1,0 +1,15 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - OriginalFileName|==: wmic.exe
+      - Image|endswith: \WMIC.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' service get '
+    - CommandLine|contains: name,displayname,pathname,startmode
+- condition: all of selection*
+id: 68bcd73b-37ef-49cb-95fc-edc809730be6
+logsource:
+  category: process_creation
+  product: windows

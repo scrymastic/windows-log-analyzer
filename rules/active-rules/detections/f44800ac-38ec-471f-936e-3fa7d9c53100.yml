@@ -1,0 +1,22 @@
+detection:
+- selection1:
+  - and:
+    - Image|endswith: \SepRemovalToolNative_x64.exe
+- selection2:
+  - and:
+    - Image|endswith: \CATClean.exe
+    - CommandLine|contains: --uninstall
+- selection3:
+  - and:
+    - Image|endswith: \NetInstaller.exe
+    - CommandLine|contains: -r
+- selection4:
+  - and:
+    - Image|endswith: \WFPUnins.exe
+    - CommandLine|contains: /uninstall
+    - CommandLine|contains: /enterprise
+- condition: 1 of selection*
+id: f44800ac-38ec-471f-936e-3fa7d9c53100
+logsource:
+  category: process_creation
+  product: windows

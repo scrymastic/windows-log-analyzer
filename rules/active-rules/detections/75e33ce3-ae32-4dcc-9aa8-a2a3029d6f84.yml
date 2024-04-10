@@ -1,0 +1,35 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \excel.exe
+      - Image|endswith: \powerpnt.exe
+      - Image|endswith: \winword.exe
+      - Image|endswith: \wordview.exe
+    - Initiated|==: 'true'
+- filter_main_local_ranges:
+  - and:
+    - or:
+      - DestinationIp|cidr: 127.0.0.0/8
+      - DestinationIp|cidr: 10.0.0.0/8
+      - DestinationIp|cidr: 172.16.0.0/12
+      - DestinationIp|cidr: 192.168.0.0/16
+      - DestinationIp|cidr: 169.254.0.0/16
+      - DestinationIp|cidr: ::1/128
+      - DestinationIp|cidr: fe80::/10
+      - DestinationIp|cidr: fc00::/7
+- filter_main_msrange:
+  - and:
+    - or:
+      - DestinationIp|cidr: 20.184.0.0/13
+      - DestinationIp|cidr: 20.192.0.0/10
+      - DestinationIp|cidr: 23.72.0.0/13
+      - DestinationIp|cidr: 51.10.0.0/15
+      - DestinationIp|cidr: 51.103.0.0/16
+      - DestinationIp|cidr: 51.104.0.0/15
+      - DestinationIp|cidr: 204.79.197.0/24
+- condition: selection and not 1 of filter_main_*
+id: 75e33ce3-ae32-4dcc-9aa8-a2a3029d6f84
+logsource:
+  category: network_connection
+  product: windows

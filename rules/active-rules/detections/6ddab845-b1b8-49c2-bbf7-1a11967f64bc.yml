@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetFilename|endswith: .AAA
+      - TargetFilename|endswith: .ZZZ
+- filter_wireshark:
+  - and:
+    - TargetFilename|endswith: \Wireshark\radius\dictionary.alcatel-lucent.aaa
+- condition: selection and not 1 of filter_*
+id: 6ddab845-b1b8-49c2-bbf7-1a11967f64bc
+logsource:
+  category: file_delete
+  product: windows

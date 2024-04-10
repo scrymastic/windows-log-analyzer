@@ -1,0 +1,35 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \DumpMinitool.exe
+        - Image|endswith: \DumpMinitool.x86.exe
+        - Image|endswith: \DumpMinitool.arm64.exe
+      - or:
+        - OriginalFileName|==: DumpMinitool.exe
+        - OriginalFileName|==: DumpMinitool.x86.exe
+        - OriginalFileName|==: DumpMinitool.arm64.exe
+- filter_folder:
+  - and:
+    - or:
+      - Image|contains: \Microsoft Visual Studio\
+      - Image|contains: \Extensions\
+- susp_flags:
+  - and:
+    - CommandLine|contains: .txt
+- cmd_has_flags:
+  - and:
+    - or:
+      - CommandLine|contains: ' Full'
+      - CommandLine|contains: ' Mini'
+      - CommandLine|contains: ' WithHeap'
+- filter_cmd_misses_flags:
+  - and:
+    - CommandLine|contains: --dumpType
+- condition: selection and ( ( not filter_folder ) or susp_flags or ( cmd_has_flags
+    and not filter_cmd_misses_flags ) )
+id: eb1c4225-1c23-4241-8dd4-051389fde4ce
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/03/14
+description: Detects the execution of "dotnet-dump" with the "collect" flag. The execution
+  could indicate potential process dumping of critical processes such as LSASS
+falsepositives:
+- Process dumping is the expected behavior of the tool. So false positives are expected
+  in legitimate usage. The PID/Process Name of the process being dumped needs to be
+  investigated
+filename: proc_creation_win_lolbin_dotnet_dump.yml
+level: medium
+modified: ''
+references:
+- https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-dump#dotnet-dump-collect
+- https://twitter.com/bohops/status/1635288066909966338
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

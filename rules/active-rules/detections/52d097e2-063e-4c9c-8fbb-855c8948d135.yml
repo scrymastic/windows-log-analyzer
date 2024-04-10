@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \Wuauclt.exe
+      - OriginalFileName|==: Wuauclt.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|endswith: Wuauclt
+      - CommandLine|endswith: Wuauclt.exe
+- condition: all of selection*
+id: 52d097e2-063e-4c9c-8fbb-855c8948d135
+logsource:
+  category: process_creation
+  product: windows

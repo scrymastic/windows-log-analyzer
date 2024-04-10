@@ -1,0 +1,55 @@
+detection:
+- selection_convert_b64:
+  - and:
+    - CommandLine|contains: -nop
+    - CommandLine|contains: ' -w '
+    - CommandLine|contains: hidden
+    - CommandLine|contains: ' -c '
+    - CommandLine|contains: '[Convert]::FromBase64String'
+- selection_iex:
+  - and:
+    - CommandLine|contains: ' -w '
+    - CommandLine|contains: hidden
+    - CommandLine|contains: -noni
+    - CommandLine|contains: -nop
+    - CommandLine|contains: ' -c '
+    - CommandLine|contains: iex
+    - CommandLine|contains: New-Object
+- selection_enc:
+  - and:
+    - CommandLine|contains: ' -w '
+    - CommandLine|contains: hidden
+    - CommandLine|contains: -ep
+    - CommandLine|contains: bypass
+    - CommandLine|contains: -Enc
+- selection_reg:
+  - and:
+    - CommandLine|contains: powershell
+    - CommandLine|contains: reg
+    - CommandLine|contains: add
+    - CommandLine|contains: \software\
+- selection_webclient:
+  - and:
+    - CommandLine|contains: bypass
+    - CommandLine|contains: -noprofile
+    - CommandLine|contains: -windowstyle
+    - CommandLine|contains: hidden
+    - CommandLine|contains: new-object
+    - CommandLine|contains: system.net.webclient
+    - CommandLine|contains: .download
+- selection_iex_webclient:
+  - and:
+    - CommandLine|contains: iex
+    - CommandLine|contains: New-Object
+    - CommandLine|contains: Net.WebClient
+    - CommandLine|contains: .Download
+- filter_chocolatey:
+  - and:
+    - or:
+      - CommandLine|contains: (New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1
+      - CommandLine|contains: Write-ChocolateyWarning
+- condition: 1 of selection_* and not 1 of filter_*
+id: 536e2947-3729-478c-9903-745aaffe60d2
+logsource:
+  category: process_creation
+  product: windows

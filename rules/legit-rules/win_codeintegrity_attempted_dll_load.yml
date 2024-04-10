@@ -1,0 +1,114 @@
+title: CodeIntegrity - Unmet Signing Level Requirements By File Under Validation
+id: f8931561-97f5-4c46-907f-0a4a592e47a7
+status: experimental
+description: 'Detects attempted file load events that did not meet the signing level
+  requirements. It often means the file''s signature is revoked or a signature with
+  the Lifetime Signing EKU has expired.
+
+  This event is best correlated with EID 3089 to determine the error of the validation.
+
+  '
+references:
+- https://twitter.com/SBousseaden/status/1483810148602814466
+- https://github.com/MicrosoftDocs/windows-itpro-docs/blob/40fe118976734578f83e5e839b9c63ae7a4af82d/windows/security/threat-protection/windows-defender-application-control/event-id-explanations.md#windows-codeintegrity-operational-log
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/event-tag-explanations
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/event-id-explanations
+author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
+date: 2022/01/20
+modified: 2023/11/15
+tags:
+- attack.execution
+logsource:
+  product: windows
+  service: codeintegrity-operational
+detection:
+- selection:
+  - and:
+    - or:
+      - EventID|==: 3033
+      - EventID|==: 3034
+- filter_optional_dtrace:
+  - and:
+    - FileNameBuffer|endswith: \Program Files\DTrace\dtrace.dll
+    - ProcessNameBuffer|endswith: \Windows\System32\svchost.exe
+    - RequestedPolicy|==: 12
+- filter_optional_av_generic:
+  - and:
+    - FileNameBuffer|contains: \Windows\System32\DriverStore\FileRepository\
+    - FileNameBuffer|endswith: \igd10iumd64.dll
+    - RequestedPolicy|==: 7
+- filter_optional_electron_based_app:
+  - and:
+    - FileNameBuffer|endswith: \Windows\System32\nvspcap64.dll
+    - or:
+      - ProcessNameBuffer|endswith: \AppData\Local\Keybase\Gui\Keybase.exe
+      - ProcessNameBuffer|endswith: \Microsoft\Teams\stage\Teams.exe
+    - RequestedPolicy|==: 8
+- filter_optional_bonjour:
+  - and:
+    - FileNameBuffer|endswith: \Program Files\Bonjour\mdnsNSP.dll
+    - or:
+      - ProcessNameBuffer|endswith: \Windows\System32\svchost.exe
+      - ProcessNameBuffer|endswith: \Windows\System32\SIHClient.exe
+    - or:
+      - RequestedPolicy|==: 8
+      - RequestedPolicy|==: 12
+- filter_optional_msoffice:
+  - and:
+    - FileNameBuffer|contains: \Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft
+        Shared\OFFICE
+    - FileNameBuffer|endswith: \MSOXMLMF.DLL
+    - RequestedPolicy|==: 7
+- filter_optional_slack:
+  - and:
+    - FileNameBuffer|endswith: \Windows\System32\nvspcap64.dll
+    - ProcessNameBuffer|contains: \AppData\Local\slack\app-
+    - ProcessNameBuffer|endswith: \slack.exe
+    - RequestedPolicy|==: 8
+- filter_optional_firefox:
+  - and:
+    - or:
+      - FileNameBuffer|endswith: \Mozilla Firefox\mozavcodec.dll
+      - FileNameBuffer|endswith: \Mozilla Firefox\mozavutil.dll
+    - ProcessNameBuffer|endswith: \Mozilla Firefox\firefox.exe
+    - RequestedPolicy|==: 8
+- filter_optional_avast:
+  - and:
+    - or:
+      - FileNameBuffer|endswith: \Program Files\Avast Software\Avast\aswAMSI.dll
+      - FileNameBuffer|endswith: \Program Files (x86)\Avast Software\Avast\aswAMSI.dll
+    - or:
+      - RequestedPolicy|==: 8
+      - RequestedPolicy|==: 12
+- filter_main_gac:
+  - and:
+    - FileNameBuffer|contains: \Windows\assembly\GAC\
+    - ProcessNameBuffer|endswith: \mscorsvw.exe
+    - ProcessNameBuffer|contains: \Windows\Microsoft.NET\
+    - RequestedPolicy|==: 8
+- filter_optional_google_drive:
+  - and:
+    - FileNameBuffer|contains: \Program Files\Google\Drive File Stream\
+    - FileNameBuffer|endswith: \crashpad_handler.exe
+    - ProcessNameBuffer|endswith: \Windows\ImmersiveControlPanel\SystemSettings.exe
+    - RequestedPolicy|==: 8
+- filter_optional_trend_micro:
+  - and:
+    - FileNameBuffer|endswith: \Trend Micro\Client Server Security Agent\perficrcperfmonmgr.dll
+    - RequestedPolicy|==: 8
+- filter_optional_mdns_responder:
+  - and:
+    - FileNameBuffer|endswith: '\Program Files\National Instruments\Shared\mDNS Responder\nimdnsNSP.dll '
+- filter_optional_mcafee:
+  - and:
+    - or:
+      - FileNameBuffer|endswith: \Program Files\McAfee\Endpoint Security\Threat Prevention\MfeAmsiProvider.dll
+      - FileNameBuffer|endswith: \Program Files\McAfee\MfeAV\AMSIExt.dll
+- filter_optional_eset:
+  - and:
+    - FileNameBuffer|endswith: \Program Files\ESET\ESET Security\eamsi.dll
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+falsepositives:
+- Antivirus and other third party products are known to trigger this rule quite a
+  lot. Initial filters and tuning is required before using this rule.
+level: low

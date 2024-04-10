@@ -1,0 +1,12 @@
+detection:
+- selection_original:
+  - and:
+    - OriginalFileName|==: ftp.exe
+- filter_img:
+  - and:
+    - Image|endswith: \ftp.exe
+- condition: selection_original and not filter_img
+id: 277a4393-446c-449a-b0ed-7fdc7795244c
+logsource:
+  category: process_creation
+  product: windows

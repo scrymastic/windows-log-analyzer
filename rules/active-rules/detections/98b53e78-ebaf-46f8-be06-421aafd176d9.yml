@@ -1,0 +1,36 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - OriginalFileName|==: winPEAS.exe
+      - or:
+        - Image|endswith: \winPEASany_ofs.exe
+        - Image|endswith: \winPEASany.exe
+        - Image|endswith: \winPEASx64_ofs.exe
+        - Image|endswith: \winPEASx64.exe
+        - Image|endswith: \winPEASx86_ofs.exe
+        - Image|endswith: \winPEASx86.exe
+- selection_cli_option:
+  - and:
+    - or:
+      - CommandLine|contains: ' applicationsinfo'
+      - CommandLine|contains: ' browserinfo'
+      - CommandLine|contains: ' eventsinfo'
+      - CommandLine|contains: ' fileanalysis'
+      - CommandLine|contains: ' filesinfo'
+      - CommandLine|contains: ' processinfo'
+      - CommandLine|contains: ' servicesinfo'
+      - CommandLine|contains: ' windowscreds'
+- selection_cli_dl:
+  - and:
+    - CommandLine|contains: https://github.com/carlospolop/PEASS-ng/releases/latest/download/
+- selection_cli_specific:
+  - and:
+    - or:
+      - ParentCommandLine|endswith: ' -linpeas'
+      - CommandLine|endswith: ' -linpeas'
+- condition: 1 of selection_*
+id: 98b53e78-ebaf-46f8-be06-421aafd176d9
+logsource:
+  category: process_creation
+  product: windows

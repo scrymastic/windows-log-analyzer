@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - EventID|==: 5441
+      - EventID|==: 5447
+    - FilterName|contains: Custom Outbound Filter
+- condition: selection
+id: 98054878-5eab-434c-85d4-72d4e5a3361b
+logsource:
+  definition: 'Requirements: Audit Filtering Platform Policy Change needs to be enabled'
+  product: windows
+  service: security

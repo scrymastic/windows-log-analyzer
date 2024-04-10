@@ -1,0 +1,29 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: Software\Microsoft\Windows\CurrentVersion
+    - or:
+      - Details|contains: 'vbscript:'
+      - Details|contains: 'jscript:'
+      - Details|contains: mshtml,
+      - Details|contains: RunHTMLApplication
+      - Details|contains: Execute(
+      - Details|contains: CreateObject
+      - Details|contains: window.close
+- filter:
+  - and:
+    - TargetObject|contains: Software\Microsoft\Windows\CurrentVersion\Run
+- filter_dotnet:
+  - and:
+    - Image|endswith: \msiexec.exe
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\
+    - or:
+      - Details|contains: \Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll
+      - Details|contains: <\Microsoft.mshtml,fileVersion=
+      - Details|contains: _mshtml_dll_
+      - Details|contains: <\Microsoft.mshtml,culture=
+- condition: selection and not 1 of filter*
+id: 46490193-1b22-4c29-bdd6-5bf63907216f
+logsource:
+  category: registry_set
+  product: windows

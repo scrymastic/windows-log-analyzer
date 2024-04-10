@@ -1,0 +1,30 @@
+title: Restricted Software Access By SRP
+id: b4c8da4a-1c12-46b0-8a2b-0a8521d03442
+status: test
+description: Detects restricted access to applications by the Software Restriction
+  Policies (SRP) policy
+references:
+- https://learn.microsoft.com/en-us/windows-server/identity/software-restriction-policies/software-restriction-policies
+- https://github.com/nasbench/EVTX-ETW-Resources/blob/7a806a148b3d9d381193d4a80356016e6e8b1ee8/ETWEventsList/CSV/Windows11/22H2/W11_22H2_Pro_20220920_22621.382/Providers/Microsoft-Windows-AppXDeployment-Server.csv
+author: frack113
+date: 2023/01/12
+tags:
+- attack.defense_evasion
+- attack.t1072
+logsource:
+  product: windows
+  service: application
+detection:
+- selection:
+  - and:
+    - Provider_Name|==: Microsoft-Windows-SoftwareRestrictionPolicies
+    - or:
+      - EventID|==: 865
+      - EventID|==: 866
+      - EventID|==: 867
+      - EventID|==: 868
+      - EventID|==: 882
+- condition: selection
+falsepositives:
+- Unknown
+level: high

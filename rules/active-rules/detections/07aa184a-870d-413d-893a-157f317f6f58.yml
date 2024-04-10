@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: gatherNetworkInfo.vbs
+- filter:
+  - and:
+    - or:
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \wscript.exe
+- condition: selection and not filter
+id: 07aa184a-870d-413d-893a-157f317f6f58
+logsource:
+  category: process_creation
+  product: windows

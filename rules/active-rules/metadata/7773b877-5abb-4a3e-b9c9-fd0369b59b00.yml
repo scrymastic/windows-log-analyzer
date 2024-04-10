@@ -1,0 +1,20 @@
+author: frack113, Nasreddine Bencherchali (Nextron Systems)
+date: 2023/02/14
+description: Detects the execution of WMIC to query information on a remote system
+falsepositives:
+- Unknown
+filename: proc_creation_win_wmic_remote_execution.yml
+level: medium
+modified: ''
+references:
+- https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
+- https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wmic
+related:
+- id: e42af9df-d90b-4306-b7fb-05c863847ebd
+  type: obsoletes
+- id: 09af397b-c5eb-4811-b2bb-08b3de464ebf
+  type: obsoletes
+status: test
+tags:
+- attack.execution
+- attack.t1047

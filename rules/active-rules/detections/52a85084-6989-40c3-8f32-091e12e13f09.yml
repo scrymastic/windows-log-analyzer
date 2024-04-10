@@ -1,0 +1,18 @@
+detection:
+- selection_eid:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+- selection_service_name:
+  - and:
+    - ServiceName|==: BTOBTO
+- selection_service_image:
+  - and:
+    - or:
+      - ImagePath|contains: '.bat & del '
+      - ImagePath|contains: __output 2^>^&1 >
+- condition: selection_eid and 1 of selection_service_*
+id: 52a85084-6989-40c3-8f32-091e12e13f09
+logsource:
+  product: windows
+  service: system

@@ -1,0 +1,39 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - or:
+        - OriginalFileName|==: Excel.exe
+        - OriginalFileName|==: MSACCESS.EXE
+        - OriginalFileName|==: MSPUB.EXE
+        - OriginalFileName|==: OneNote.exe
+        - OriginalFileName|==: OneNoteM.exe
+        - OriginalFileName|==: OUTLOOK.EXE
+        - OriginalFileName|==: POWERPNT.EXE
+        - OriginalFileName|==: WinWord.exe
+      - or:
+        - Description|==: Microsoft Access
+        - Description|==: Microsoft Excel
+        - Description|==: Microsoft OneNote
+        - Description|==: Microsoft Outlook
+        - Description|==: Microsoft PowerPoint
+        - Description|==: Microsoft Publisher
+        - Description|==: Microsoft Word
+        - Description|==: Sent to OneNote Tool
+- filter_main_legit_names:
+  - and:
+    - or:
+      - Image|endswith: \EXCEL.exe
+      - Image|endswith: \excelcnv.exe
+      - Image|endswith: \MSACCESS.exe
+      - Image|endswith: \MSPUB.EXE
+      - Image|endswith: \ONENOTE.EXE
+      - Image|endswith: \ONENOTEM.EXE
+      - Image|endswith: \OUTLOOK.EXE
+      - Image|endswith: \POWERPNT.EXE
+      - Image|endswith: \WINWORD.exe
+- condition: selection and not 1 of filter_main_*
+id: 0b0cd537-fc77-4e6e-a973-e53495c1083d
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,33 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \rundll32.exe
+      - OriginalFileName|==: RUNDLL32.EXE
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: ',#'
+      - CommandLine|contains: ', #'
+      - CommandLine|contains: '.dll #'
+      - CommandLine|contains: '.ocx #'
+- filter_edge:
+  - and:
+    - CommandLine|contains: EDGEHTML.dll
+    - CommandLine|contains: '#141'
+- filter_vsbuild_dll:
+  - and:
+    - or:
+      - ParentImage|contains: \Msbuild\Current\Bin\
+      - ParentImage|contains: \VC\Tools\MSVC\
+      - ParentImage|contains: \Tracker.exe
+    - or:
+      - CommandLine|contains: \FileTracker32.dll,#1
+      - CommandLine|contains: \FileTracker32.dll",#1
+      - CommandLine|contains: \FileTracker64.dll,#1
+      - CommandLine|contains: \FileTracker64.dll",#1
+- condition: all of selection_* and not 1 of filter_*
+id: e79a9e79-eb72-4e78-a628-0e7e8f59e89c
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,20 @@
+detection:
+- selection_error:
+  - and:
+    - or:
+      - Description|contains: Failed to open service configuration with error
+      - Description|contains: Failed to connect to the driver to update configuration
+- filter_generic_english:
+  - and:
+    - Description|contains: Failed to open service configuration with error
+    - Description|contains: 'Last error: The media is write protected.'
+- filter_by_errorcode:
+  - and:
+    - or:
+      - Description|contains: Failed to open service configuration with error 19
+      - Description|contains: Failed to open service configuration with error 93
+- condition: selection_error and not 1 of filter*
+id: 815cd91b-7dbc-4247-841a-d7dd1392b0a8
+logsource:
+  category: sysmon_error
+  product: windows

@@ -1,0 +1,35 @@
+title: Registry Explorer Policy Modification
+id: 1c3121ed-041b-4d97-a075-07f54f20fb4a
+status: test
+description: Detects registry modifications that disable internal tools or functions
+  in explorer (malware like Agent Tesla uses this technique)
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1112/T1112.md
+author: frack113
+date: 2022/03/18
+modified: 2023/08/17
+tags:
+- attack.defense_evasion
+- attack.t1112
+logsource:
+  category: registry_set
+  product: windows
+detection:
+- selection_set_1:
+  - and:
+    - or:
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoLogOff
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoDesktop
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoRun
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoFind
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoControlPanel
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoFileMenu
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoClose
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoSetTaskbar
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoPropertiesMyDocuments
+      - TargetObject|endswith: SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoTrayContextMenu
+    - Details|==: DWORD (0x00000001)
+- condition: selection_set_1
+falsepositives:
+- Legitimate admin script
+level: medium

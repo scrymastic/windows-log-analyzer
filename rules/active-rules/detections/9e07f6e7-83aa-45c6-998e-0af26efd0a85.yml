@@ -1,0 +1,20 @@
+detection:
+- selection_ioc:
+  - and:
+    - or:
+      - and:
+        - ScriptBlockText|contains: 'New-CimInstance '
+        - ScriptBlockText|contains: '-Namespace root/subscription '
+        - ScriptBlockText|contains: '-ClassName __EventFilter '
+        - ScriptBlockText|contains: '-Property '
+      - and:
+        - ScriptBlockText|contains: 'New-CimInstance '
+        - ScriptBlockText|contains: '-Namespace root/subscription '
+        - ScriptBlockText|contains: '-ClassName CommandLineEventConsumer '
+        - ScriptBlockText|contains: '-Property '
+- condition: selection_ioc
+id: 9e07f6e7-83aa-45c6-998e-0af26efd0a85
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

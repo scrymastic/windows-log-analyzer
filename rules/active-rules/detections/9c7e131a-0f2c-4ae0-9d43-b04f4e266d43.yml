@@ -1,0 +1,27 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \appvlp.exe
+- filter_main_generic:
+  - and:
+    - or:
+      - Image|endswith: :\Windows\SysWOW64\rundll32.exe
+      - Image|endswith: :\Windows\System32\rundll32.exe
+- filter_optional_office_msoasb:
+  - and:
+    - Image|contains: :\Program Files\Microsoft Office
+    - Image|endswith: \msoasb.exe
+- filter_optional_office_skype:
+  - and:
+    - Image|contains: :\Program Files\Microsoft Office
+    - Image|contains: \SkypeSrv\
+    - Image|endswith: \SKYPESERVER.EXE
+- filter_optional_office_msouc:
+  - and:
+    - Image|contains: :\Program Files\Microsoft Office
+    - Image|endswith: \MSOUC.EXE
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: 9c7e131a-0f2c-4ae0-9d43-b04f4e266d43
+logsource:
+  category: process_creation
+  product: windows

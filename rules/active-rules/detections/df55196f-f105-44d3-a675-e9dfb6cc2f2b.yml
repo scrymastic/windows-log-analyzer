@@ -1,0 +1,43 @@
+detection:
+- selection_1:
+  - and:
+    - or:
+      - CommandLine|contains: domainlist
+      - CommandLine|contains: trustdmp
+      - CommandLine|contains: dcmodes
+      - CommandLine|contains: adinfo
+      - CommandLine|contains: ' dclist '
+      - CommandLine|contains: computer_pwdnotreqd
+      - CommandLine|contains: objectcategory=
+      - CommandLine|contains: -subnets -f
+      - CommandLine|contains: name="Domain Admins"
+      - CommandLine|contains: '-sc u:'
+      - CommandLine|contains: domainncs
+      - CommandLine|contains: dompol
+      - CommandLine|contains: ' oudmp '
+      - CommandLine|contains: subnetdmp
+      - CommandLine|contains: gpodmp
+      - CommandLine|contains: fspdmp
+      - CommandLine|contains: users_noexpire
+      - CommandLine|contains: computers_active
+      - CommandLine|contains: computers_pwdnotreqd
+- selection_2:
+  - and:
+    - or:
+      - or:
+        - Imphash|==: bca5675746d13a1f246e2da3c2217492
+        - Imphash|==: 53e117a96057eaf19c41380d0e87f1c2
+      - or:
+        - Hashes|contains: IMPHASH=BCA5675746D13A1F246E2DA3C2217492
+        - Hashes|contains: IMPHASH=53E117A96057EAF19C41380D0E87F1C2
+- selection_3:
+  - and:
+    - OriginalFileName|==: AdFind.exe
+- filter:
+  - and:
+    - Image|endswith: \AdFind.exe
+- condition: 1 of selection* and not filter
+id: df55196f-f105-44d3-a675-e9dfb6cc2f2b
+logsource:
+  category: process_creation
+  product: windows

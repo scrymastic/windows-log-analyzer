@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|contains: \Notepad++\plugins\
+    - TargetFilename|endswith: .dll
+- filter_gup:
+  - and:
+    - Image|endswith: \Notepad++\updater\gup.exe
+- filter_install:
+  - and:
+    - Image|startswith: C:\Users\
+    - Image|contains: \AppData\Local\Temp\
+    - or:
+      - Image|endswith: \target.exe
+      - Image|endswith: Installer.x64.exe
+- condition: selection and not 1 of filter_*
+id: 54127bd4-f541-4ac3-afdb-ea073f63f692
+logsource:
+  category: file_event
+  product: windows

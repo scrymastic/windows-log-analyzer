@@ -1,0 +1,16 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \outllib.dll
+- filter:
+  - and:
+    - or:
+      - ImageLoaded|startswith: C:\Program Files\Microsoft Office\OFFICE
+      - ImageLoaded|startswith: C:\Program Files (x86)\Microsoft Office\OFFICE
+      - ImageLoaded|startswith: C:\Program Files\Microsoft Office\Root\OFFICE
+      - ImageLoaded|startswith: C:\Program Files (x86)\Microsoft Office\Root\OFFICE
+- condition: selection and not filter
+id: 829a3bdf-34da-4051-9cf4-8ed221a8ae4f
+logsource:
+  category: image_load
+  product: windows

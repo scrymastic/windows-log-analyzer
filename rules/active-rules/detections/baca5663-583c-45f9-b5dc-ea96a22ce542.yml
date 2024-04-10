@@ -1,0 +1,25 @@
+detection:
+- selection_registry:
+  - and:
+    - or:
+      - TargetObject|endswith: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
+          File Execution Options\sethc.exe\Debugger
+      - TargetObject|endswith: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
+          File Execution Options\utilman.exe\Debugger
+      - TargetObject|endswith: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
+          File Execution Options\osk.exe\Debugger
+      - TargetObject|endswith: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
+          File Execution Options\Magnify.exe\Debugger
+      - TargetObject|endswith: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
+          File Execution Options\Narrator.exe\Debugger
+      - TargetObject|endswith: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
+          File Execution Options\DisplaySwitch.exe\Debugger
+      - TargetObject|endswith: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
+          File Execution Options\atbroker.exe\Debugger
+      - TargetObject|endswith: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
+          File Execution Options\HelpPane.exe\Debugger
+- condition: selection_registry
+id: baca5663-583c-45f9-b5dc-ea96a22ce542
+logsource:
+  category: registry_event
+  product: windows

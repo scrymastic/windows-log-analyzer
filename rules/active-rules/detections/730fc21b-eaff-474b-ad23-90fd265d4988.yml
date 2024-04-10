@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \psexec.exe
+      - OriginalFileName|==: psexec.c
+- condition: selection
+id: 730fc21b-eaff-474b-ad23-90fd265d4988
+logsource:
+  category: process_creation
+  product: windows

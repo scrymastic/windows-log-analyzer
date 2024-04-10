@@ -1,0 +1,16 @@
+author: Florian Roth (Nextron Systems), Markus Neis, Jonhnathan Ribeiro, Daniil Yugoslavskiy,
+  Anton Kutepov, oscd.community
+date: 2018/09/03
+description: Detects suspicious powershell process starts with base64 encoded commands
+  (e.g. Emotet)
+falsepositives: []
+filename: proc_creation_win_powershell_base64_encoded_cmd.yml
+level: high
+modified: 2023/04/06
+references:
+- https://app.any.run/tasks/6217d77d-3189-4db2-a957-8ab239f3e01e
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

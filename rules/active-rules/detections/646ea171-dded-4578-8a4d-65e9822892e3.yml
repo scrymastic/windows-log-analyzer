@@ -1,0 +1,31 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \rundll32.exe
+      - OriginalFileName|==: RUNDLL32.EXE
+      - CommandLine|contains: rundll32
+- selection_cli_1:
+  - and:
+    - CommandLine|contains: comsvcs
+    - CommandLine|contains: full
+    - or:
+      - CommandLine|contains: '#-'
+      - CommandLine|contains: '#+'
+      - CommandLine|contains: '#24'
+      - CommandLine|contains: '24 '
+      - CommandLine|contains: MiniDump
+- selection_generic:
+  - and:
+    - CommandLine|contains: '24'
+    - CommandLine|contains: comsvcs
+    - CommandLine|contains: full
+    - or:
+      - CommandLine|contains: ' #'
+      - CommandLine|contains: ',#'
+      - CommandLine|contains: ', #'
+- condition: (selection_img and 1 of selection_cli_*) or selection_generic
+id: 646ea171-dded-4578-8a4d-65e9822892e3
+logsource:
+  category: process_creation
+  product: windows

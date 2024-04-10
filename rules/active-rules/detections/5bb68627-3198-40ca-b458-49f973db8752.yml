@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|==: rundll32.exe
+      - CommandLine|==: rundll32
+- condition: selection
+id: 5bb68627-3198-40ca-b458-49f973db8752
+logsource:
+  category: process_creation
+  product: windows

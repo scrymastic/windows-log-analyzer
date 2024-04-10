@@ -1,0 +1,21 @@
+detection:
+- wow_nt_current_version_base:
+  - and:
+    - TargetObject|contains: \SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion
+- wow_nt_current_version:
+  - and:
+    - or:
+      - TargetObject|contains: \Windows\Appinit_Dlls
+      - TargetObject|contains: \Image File Execution Options
+      - TargetObject|contains: \Drivers32
+- filter:
+  - and:
+    - or:
+      - Details|==: (Empty)
+      - Details|==: \REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
+          File Execution Options
+- condition: wow_nt_current_version_base and wow_nt_current_version and not filter
+id: 480421f9-417f-4d3b-9552-fd2728443ec8
+logsource:
+  category: registry_set
+  product: windows

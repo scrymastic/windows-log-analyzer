@@ -1,0 +1,21 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/22
+description: Detects execution of "odbcconf" with the "REGSVR" action where the DLL
+  in question doesn't contain a ".dll" extension. Which is often used as a method
+  to evade defenses.
+falsepositives:
+- Unlikely
+filename: proc_creation_win_odbcconf_register_dll_regsvr_susp.yml
+level: high
+modified: ''
+references:
+- https://learn.microsoft.com/en-us/sql/odbc/odbcconf-exe?view=sql-server-ver16
+- https://lolbas-project.github.io/lolbas/Binaries/Odbcconf/
+- https://www.trendmicro.com/en_us/research/17/h/backdoor-carrying-emails-set-sights-on-russian-speaking-businesses.html
+related:
+- id: 9f0a8bf3-a65b-440a-8c1e-5cb1547c8e70
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218.008

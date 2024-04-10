@@ -1,0 +1,34 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetObject|contains: \Software\Microsoft\Office\Outlook\Addins\
+      - TargetObject|contains: \Software\Microsoft\Office\Word\Addins\
+      - TargetObject|contains: \Software\Microsoft\Office\Excel\Addins\
+      - TargetObject|contains: \Software\Microsoft\Office\Powerpoint\Addins\
+      - TargetObject|contains: \Software\Microsoft\VSTO\Security\Inclusion\
+- filter_image:
+  - and:
+    - or:
+      - Image|endswith: \msiexec.exe
+      - Image|endswith: \regsvr32.exe
+- filter_office:
+  - and:
+    - or:
+      - Image|endswith: \excel.exe
+      - Image|endswith: \integrator.exe
+      - Image|endswith: \OfficeClickToRun.exe
+      - Image|endswith: \winword.exe
+      - Image|endswith: \visio.exe
+- filter_teams:
+  - and:
+    - Image|endswith: \Teams.exe
+- filter_avg:
+  - and:
+    - Image|==: C:\Program Files\AVG\Antivirus\RegSvr.exe
+    - TargetObject|contains: \Microsoft\Office\Outlook\Addins\Antivirus.AsOutExt\
+- condition: selection and not 1 of filter_*
+id: 9d15044a-7cfe-4d23-8085-6ebc11df7685
+logsource:
+  category: registry_set
+  product: windows

@@ -1,0 +1,20 @@
+detection:
+- selection1:
+  - and:
+    - CommandLine|contains: \CurrentVersion\Image File Execution Options\
+- selection2:
+  - and:
+    - or:
+      - CommandLine|contains: sethc.exe
+      - CommandLine|contains: utilman.exe
+      - CommandLine|contains: osk.exe
+      - CommandLine|contains: magnify.exe
+      - CommandLine|contains: narrator.exe
+      - CommandLine|contains: displayswitch.exe
+      - CommandLine|contains: atbroker.exe
+      - CommandLine|contains: HelpPane.exe
+- condition: all of selection*
+id: ae215552-081e-44c7-805f-be16f975c8a2
+logsource:
+  category: process_creation
+  product: windows

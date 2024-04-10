@@ -1,0 +1,14 @@
+detection:
+- selection_eid:
+  - and:
+    - EventID|==: 6416
+- selection_field:
+  - and:
+    - or:
+      - ClassName|==: DiskDrive
+      - DeviceDescription|==: USB Mass Storage Device
+- condition: all of selection_*
+id: f69a87ea-955e-4fb4-adb2-bb9fd6685632
+logsource:
+  product: windows
+  service: security

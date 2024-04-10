@@ -1,0 +1,35 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5156
+    - DestPort|==: 88
+- filter_main_lsass:
+  - and:
+    - or:
+      - Application|startswith: \device\harddiskvolume
+      - Application|startswith: 'C:'
+    - Application|endswith: \Windows\System32\lsass.exe
+- filter_optional_chrome:
+  - and:
+    - or:
+      - Application|startswith: \device\harddiskvolume
+      - Application|startswith: 'C:'
+    - or:
+      - Application|endswith: \Program Files (x86)\Google\Chrome\Application\chrome.exe
+      - Application|endswith: \Program Files\Google\Chrome\Application\chrome.exe
+- filter_optional_firefox:
+  - and:
+    - or:
+      - Application|startswith: \device\harddiskvolume
+      - Application|startswith: 'C:'
+    - or:
+      - Application|endswith: \Program Files (x86)\Mozilla Firefox\firefox.exe
+      - Application|endswith: \Program Files\Mozilla Firefox\firefox.exe
+- filter_optional_tomcat:
+  - and:
+    - Application|endswith: \tomcat\bin\tomcat8.exe
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: eca91c7c-9214-47b9-b4c5-cb1d7e4f2350
+logsource:
+  product: windows
+  service: security

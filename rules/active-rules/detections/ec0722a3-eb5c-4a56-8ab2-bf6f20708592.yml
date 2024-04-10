@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - OriginalFileName|==: gpg.exe
+- filter_main_img:
+  - and:
+    - or:
+      - Image|endswith: \gpg.exe
+      - Image|endswith: \gpg2.exe
+- condition: selection and not 1 of filter_main_*
+id: ec0722a3-eb5c-4a56-8ab2-bf6f20708592
+logsource:
+  category: process_creation
+  product: windows

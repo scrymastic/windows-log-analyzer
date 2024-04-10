@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/21
+description: Detects when an attacker registers a new AMSI provider in order to achieve
+  persistence
+falsepositives:
+- Legitimate security products adding their own AMSI providers. Filter these according
+  to your environment
+filename: registry_add_persistence_amsi_providers.yml
+level: high
+modified: 2023/02/07
+references:
+- https://persistence-info.github.io/Data/amsi.html
+- https://github.com/gtworek/PSBits/blob/8d767892f3b17eefa4d0668f5d2df78e844f01d8/FakeAMSI/FakeAMSI.c
+related: []
+status: test
+tags:
+- attack.persistence

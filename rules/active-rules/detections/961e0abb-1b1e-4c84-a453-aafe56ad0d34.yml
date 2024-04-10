@@ -1,0 +1,18 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \stordiag.exe
+    - or:
+      - Image|endswith: \schtasks.exe
+      - Image|endswith: \systeminfo.exe
+      - Image|endswith: \fltmc.exe
+- filter:
+  - and:
+    - or:
+      - ParentImage|startswith: c:\windows\system32\
+      - ParentImage|startswith: c:\windows\syswow64\
+- condition: selection and not filter
+id: 961e0abb-1b1e-4c84-a453-aafe56ad0d34
+logsource:
+  category: process_creation
+  product: windows

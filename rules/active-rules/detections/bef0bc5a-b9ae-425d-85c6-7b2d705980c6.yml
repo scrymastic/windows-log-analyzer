@@ -1,0 +1,26 @@
+detection:
+- selection:
+  - and:
+    - Initiated|==: 'true'
+    - Image|contains: python
+- filter_optional_conda:
+  - and:
+    - ParentImage|==: C:\ProgramData\Anaconda3\Scripts\conda.exe
+    - CommandLine|contains: :\ProgramData\Anaconda3\Scripts\conda-script.py
+    - CommandLine|contains: update
+- filter_optional_conda_jupyter_notebook:
+  - and:
+    - ParentImage|==: C:\ProgramData\Anaconda3\python.exe
+    - CommandLine|contains: C:\ProgramData\Anaconda3\Scripts\jupyter-notebook-script.py
+- filter_main_local_communication:
+  - and:
+    - DestinationIp|==: 127.0.0.1
+    - SourceIp|==: 127.0.0.1
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: bef0bc5a-b9ae-425d-85c6-7b2d705980c6
+logsource:
+  category: network_connection
+  definition: 'Requirements: Field enrichment is required for the filters to work.
+    As field such as CommandLine and ParentImage are not available by default on this
+    event type'
+  product: windows

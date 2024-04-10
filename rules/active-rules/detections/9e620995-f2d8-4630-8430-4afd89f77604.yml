@@ -1,0 +1,14 @@
+detection:
+- selection_generic:
+  - and:
+    - ScriptBlockText|contains: 'Import-Module '
+    - ScriptBlockText|contains: Microsoft.ActiveDirectory.Management.dll
+- selection_specific:
+  - and:
+    - ScriptBlockText|contains: ipmo Microsoft.ActiveDirectory.Management.dll
+- condition: 1 of selection_*
+id: 9e620995-f2d8-4630-8430-4afd89f77604
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enable'
+  product: windows

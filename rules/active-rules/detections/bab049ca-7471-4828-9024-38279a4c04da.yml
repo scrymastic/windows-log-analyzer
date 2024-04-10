@@ -1,0 +1,17 @@
+detection:
+- selection_1:
+  - and:
+    - or:
+      - CommandLine|contains: VBoxRT.dll,RTR3Init
+      - CommandLine|contains: VBoxC.dll
+      - CommandLine|contains: VBoxDrv.sys
+- selection_2:
+  - and:
+    - or:
+      - CommandLine|contains: startvm
+      - CommandLine|contains: controlvm
+- condition: 1 of selection_*
+id: bab049ca-7471-4828-9024-38279a4c04da
+logsource:
+  category: process_creation
+  product: windows

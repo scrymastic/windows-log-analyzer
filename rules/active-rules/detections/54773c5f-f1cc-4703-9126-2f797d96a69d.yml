@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|contains: \advanced_port_scanner
+      - OriginalFileName|contains: advanced_port_scanner
+      - Description|contains: Advanced Port Scanner
+- selection_cli:
+  - and:
+    - CommandLine|contains: /portable
+    - CommandLine|contains: /lng
+- condition: 1 of selection_*
+id: 54773c5f-f1cc-4703-9126-2f797d96a69d
+logsource:
+  category: process_creation
+  product: windows

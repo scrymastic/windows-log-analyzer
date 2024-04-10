@@ -1,0 +1,15 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \odbcconf.exe
+      - OriginalFileName|==: odbcconf.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: 'REGSVR '
+    - CommandLine|contains: .dll
+- condition: all of selection_*
+id: 9f0a8bf3-a65b-440a-8c1e-5cb1547c8e70
+logsource:
+  category: process_creation
+  product: windows

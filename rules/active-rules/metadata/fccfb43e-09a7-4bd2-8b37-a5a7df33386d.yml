@@ -1,0 +1,15 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/04/18
+description: Detects Rclone config file being created
+falsepositives:
+- Unknown
+filename: file_event_win_rdp_file_susp_creation.yml
+level: high
+modified: ''
+references:
+- https://www.blackhillsinfosec.com/rogue-rdp-revisiting-initial-access-methods/
+- https://blog.thickmints.dev/mintsights/detecting-rogue-rdp/
+related: []
+status: test
+tags:
+- attack.defense_evasion

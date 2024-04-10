@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Data|contains: Compress-Archive -Path*-DestinationPath $env:TEMP
+      - Data|contains: Compress-Archive -Path*-DestinationPath*\AppData\Local\Temp\
+      - Data|contains: Compress-Archive -Path*-DestinationPath*:\Windows\Temp\
+- condition: selection
+id: 71ff406e-b633-4989-96ec-bc49d825a412
+logsource:
+  product: windows
+  service: powershell-classic

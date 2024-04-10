@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - Image|contains: \servers\Stable-
+    - Image|endswith: \server\node.exe
+    - TargetFilename|contains: \.vscode-server\data\User\History\
+- condition: selection
+id: 56e05d41-ce99-4ecd-912d-93f019ee0b71
+logsource:
+  category: file_event
+  product: windows

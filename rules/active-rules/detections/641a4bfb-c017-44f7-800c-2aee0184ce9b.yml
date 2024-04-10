@@ -1,0 +1,19 @@
+detection:
+- selection:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+    - ImagePath|contains: '&&'
+    - ImagePath|contains: rundll32
+    - ImagePath|contains: shell32.dll
+    - ImagePath|contains: shellexec_rundll
+    - or:
+      - ImagePath|contains: value
+      - ImagePath|contains: invoke
+      - ImagePath|contains: comspec
+      - ImagePath|contains: iex
+- condition: selection
+id: 641a4bfb-c017-44f7-800c-2aee0184ce9b
+logsource:
+  product: windows
+  service: system

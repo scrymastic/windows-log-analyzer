@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/04/27
+description: Detects the execution of different Windows based hacktools via PE metadata
+  (company, product, etc.) even if the files have been renamed
+falsepositives:
+- Unlikely
+filename: proc_creation_win_hktl_execution_via_pe_metadata.yml
+level: high
+modified: 2024/01/15
+references:
+- https://github.com/cube0x0
+- https://www.virustotal.com/gui/search/metadata%253ACube0x0/files
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1588.002
+- attack.t1003

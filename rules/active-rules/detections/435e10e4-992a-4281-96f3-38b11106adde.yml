@@ -1,0 +1,25 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+      - or:
+        - OriginalFileName|==: PowerShell.EXE
+        - OriginalFileName|==: pwsh.dll
+- selection_cli:
+  - and:
+    - CommandLine|contains: 'Get-ADComputer '
+    - CommandLine|contains: ' -Filter \*'
+    - or:
+      - CommandLine|contains: ' > '
+      - CommandLine|contains: ' | Select '
+      - CommandLine|contains: Out-File
+      - CommandLine|contains: Set-Content
+      - CommandLine|contains: Add-Content
+- condition: all of selection_*
+id: 435e10e4-992a-4281-96f3-38b11106adde
+logsource:
+  category: process_creation
+  product: windows

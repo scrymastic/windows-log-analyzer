@@ -1,0 +1,19 @@
+author: Markus Neis, @Kostastsale
+date: 2018/08/17
+description: Detects Request to "amsiInitFailed" that can be used to disable AMSI
+  Scanning
+falsepositives:
+- Unlikely
+filename: proc_creation_win_powershell_amsi_init_failed_bypass.yml
+level: high
+modified: 2023/02/03
+references:
+- https://s3cur3th1ssh1t.github.io/Bypass_AMSI_by_manual_modification/
+- https://www.mdsec.co.uk/2018/06/exploring-powershell-amsi-and-logging-evasion/
+related:
+- id: 4f927692-68b5-4267-871b-073c45f4f6fe
+  type: obsoletes
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.001

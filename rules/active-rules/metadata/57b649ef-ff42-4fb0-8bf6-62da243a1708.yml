@@ -1,0 +1,15 @@
+author: "J\xE1n Tren\u010Dansk\xFD"
+date: 2020/07/28
+description: Detects actions taken by Windows Defender malware detection engines
+falsepositives:
+- Unlikely
+filename: win_defender_threat.yml
+level: high
+modified: ''
+references:
+- https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus
+related: []
+status: stable
+tags:
+- attack.execution
+- attack.t1059

@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \MSExchangeMailboxReplication.exe
+    - or:
+      - TargetFilename|endswith: .aspx
+      - TargetFilename|endswith: .asp
+- condition: selection
+id: 7280c9f3-a5af-45d0-916a-bc01cb4151c9
+logsource:
+  category: file_event
+  product: windows

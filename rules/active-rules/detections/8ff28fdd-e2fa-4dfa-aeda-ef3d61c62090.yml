@@ -1,0 +1,56 @@
+detection:
+- selection_convert_b64:
+  - and:
+    - ContextInfo|contains: -nop
+    - ContextInfo|contains: ' -w '
+    - ContextInfo|contains: hidden
+    - ContextInfo|contains: ' -c '
+    - ContextInfo|contains: '[Convert]::FromBase64String'
+- selection_iex:
+  - and:
+    - ContextInfo|contains: ' -w '
+    - ContextInfo|contains: hidden
+    - ContextInfo|contains: -noni
+    - ContextInfo|contains: -nop
+    - ContextInfo|contains: ' -c '
+    - ContextInfo|contains: iex
+    - ContextInfo|contains: New-Object
+- selection_enc:
+  - and:
+    - ContextInfo|contains: ' -w '
+    - ContextInfo|contains: hidden
+    - ContextInfo|contains: -ep
+    - ContextInfo|contains: bypass
+    - ContextInfo|contains: -Enc
+- selection_reg:
+  - and:
+    - ContextInfo|contains: powershell
+    - ContextInfo|contains: reg
+    - ContextInfo|contains: add
+    - ContextInfo|contains: HKCU\software\microsoft\windows\currentversion\run
+- selection_webclient:
+  - and:
+    - ContextInfo|contains: bypass
+    - ContextInfo|contains: -noprofile
+    - ContextInfo|contains: -windowstyle
+    - ContextInfo|contains: hidden
+    - ContextInfo|contains: new-object
+    - ContextInfo|contains: system.net.webclient
+    - ContextInfo|contains: .download
+- selection_iex_webclient:
+  - and:
+    - ContextInfo|contains: iex
+    - ContextInfo|contains: New-Object
+    - ContextInfo|contains: Net.WebClient
+    - ContextInfo|contains: .Download
+- filter_chocolatey:
+  - and:
+    - or:
+      - ContextInfo|contains: (New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1
+      - ContextInfo|contains: Write-ChocolateyWarning
+- condition: 1 of selection_* and not 1 of filter_*
+id: 8ff28fdd-e2fa-4dfa-aeda-ef3d61c62090
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows

@@ -1,0 +1,59 @@
+title: Suspicious Download From Direct IP Via Bitsadmin
+id: 99c840f2-2012-46fd-9141-c761987550ef
+related:
+- id: 90f138c1-f578-4ac3-8c49-eecfd847c8b7
+  type: similar
+status: test
+description: Detects usage of bitsadmin downloading a file using an URL that contains
+  an IP
+references:
+- https://blog.netspi.com/15-ways-to-download-a-file/#bitsadmin
+- https://isc.sans.edu/diary/22264
+- https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/
+- https://blog.talosintelligence.com/breaking-the-silence-recent-truebot-activity/
+author: Florian Roth (Nextron Systems)
+date: 2022/06/28
+modified: 2023/02/15
+tags:
+- attack.defense_evasion
+- attack.persistence
+- attack.t1197
+- attack.s0190
+- attack.t1036.003
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \bitsadmin.exe
+      - OriginalFileName|==: bitsadmin.exe
+- selection_flags:
+  - and:
+    - or:
+      - CommandLine|contains: ' /transfer '
+      - CommandLine|contains: ' /create '
+      - CommandLine|contains: ' /addfile '
+- selection_extension:
+  - and:
+    - or:
+      - CommandLine|contains: ://1
+      - CommandLine|contains: ://2
+      - CommandLine|contains: ://3
+      - CommandLine|contains: ://4
+      - CommandLine|contains: ://5
+      - CommandLine|contains: ://6
+      - CommandLine|contains: ://7
+      - CommandLine|contains: ://8
+      - CommandLine|contains: ://9
+- filter_seven_zip:
+  - and:
+    - CommandLine|contains: ://7-
+- condition: all of selection_* and not 1 of filter_*
+fields:
+- CommandLine
+- ParentCommandLine
+falsepositives:
+- Unknown
+level: high

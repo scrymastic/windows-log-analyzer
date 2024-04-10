@@ -1,0 +1,18 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \AVKkid.dll
+- filter_main_legit_path:
+  - and:
+    - or:
+      - Image|contains: C:\Program Files (x86)\G DATA\
+      - Image|contains: C:\Program Files\G DATA\
+    - Image|endswith: \AVKKid.exe
+    - or:
+      - ImageLoaded|startswith: C:\Program Files (x86)\G DATA\
+      - ImageLoaded|startswith: C:\Program Files\G DATA\
+- condition: selection and not 1 of filter_main_*
+id: 952ed57c-8f99-453d-aee0-53a49c22f95d
+logsource:
+  category: image_load
+  product: windows

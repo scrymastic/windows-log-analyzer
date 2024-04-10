@@ -1,0 +1,34 @@
+detection:
+- selection_1:
+  - and:
+    - or:
+      - TargetFilename|endswith: \lsass.dmp
+      - TargetFilename|endswith: \lsass.zip
+      - TargetFilename|endswith: \lsass.rar
+      - TargetFilename|endswith: \Andrew.dmp
+      - TargetFilename|endswith: \Coredump.dmp
+      - TargetFilename|endswith: \NotLSASS.zip
+      - TargetFilename|endswith: \PPLBlade.dmp
+- selection_2:
+  - and:
+    - or:
+      - TargetFilename|contains: \lsass_2
+      - TargetFilename|contains: \lsassdump
+      - TargetFilename|contains: \lsassdmp
+- selection_3:
+  - and:
+    - TargetFilename|contains: \lsass
+    - TargetFilename|contains: .dmp
+- selection_4:
+  - and:
+    - TargetFilename|contains: SQLDmpr
+    - TargetFilename|endswith: .mdmp
+- selection_5:
+  - and:
+    - TargetFilename|startswith: nanodump
+    - TargetFilename|endswith: .dmp
+- condition: 1 of selection_*
+id: a5a2d357-1ab8-4675-a967-ef9990a59391
+logsource:
+  category: file_event
+  product: windows

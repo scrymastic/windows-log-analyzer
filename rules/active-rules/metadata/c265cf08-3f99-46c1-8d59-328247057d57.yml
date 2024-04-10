@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2017/03/14
+description: Detects the addition of a new member to the local administrator group,
+  which could be legitimate activity or a sign of privilege escalation activity
+falsepositives:
+- Legitimate administrative activity
+filename: win_security_user_added_to_local_administrators.yml
+level: medium
+modified: 2021/01/17
+references:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4732
+- https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers
+related: []
+status: stable
+tags:
+- attack.privilege_escalation
+- attack.t1078
+- attack.persistence
+- attack.t1098

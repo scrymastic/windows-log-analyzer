@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5140
+    - ShareName|==: Admin$
+- filter_main_computer_account:
+  - and:
+    - SubjectUserName|endswith: $
+- condition: selection and not 1 of filter_*
+id: 098d7118-55bc-4912-a836-dc6483a8d150
+logsource:
+  definition: 'Requirements: The advanced audit policy setting "Object Access > Audit
+    File Share" must be configured for Success/Failure'
+  product: windows
+  service: security

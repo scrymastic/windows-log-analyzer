@@ -1,0 +1,16 @@
+author: Teymur Kheirkhabarov (idea), Ryan Plas (rule), oscd.community
+date: 2020/10/05
+description: Search for usage of reg or Powershell by non-privileged users to modify
+  service configuration in registry
+falsepositives:
+- Unknown
+filename: proc_creation_win_susp_non_priv_reg_or_ps.yml
+level: high
+modified: 2022/07/07
+references:
+- https://image.slidesharecdn.com/kheirkhabarovoffzonefinal-181117201458/95/hunting-for-privilege-escalation-in-windows-environment-20-638.jpg
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1112

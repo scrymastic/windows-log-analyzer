@@ -1,0 +1,17 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/05/27
+description: Detects suspicious start of rundll32.exe without any parameters as found
+  in CobaltStrike beacon activity
+falsepositives:
+- Possible but rare
+filename: proc_creation_win_rundll32_no_params.yml
+level: high
+modified: 2023/08/31
+references:
+- https://www.cobaltstrike.com/help-opsec
+- https://twitter.com/ber_m1ng/status/1397948048135778309
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1202

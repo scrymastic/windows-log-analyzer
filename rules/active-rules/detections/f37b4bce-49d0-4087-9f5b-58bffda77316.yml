@@ -1,0 +1,21 @@
+detection:
+- selection_main:
+  - and:
+    - TargetObject|contains: \System\CurrentControlSet\Control\WMI\Autologger\
+- selection_values:
+  - and:
+    - or:
+      - TargetObject|contains: \EventLog-
+      - TargetObject|contains: \Defender
+    - or:
+      - TargetObject|endswith: \Enable
+      - TargetObject|endswith: \Start
+    - Details|==: DWORD (0x00000000)
+- filter_wevtutil:
+  - and:
+    - Image|==: C:\Windows\system32\wevtutil.exe
+- condition: all of selection_* and not 1 of filter_*
+id: f37b4bce-49d0-4087-9f5b-58bffda77316
+logsource:
+  category: registry_set
+  product: windows

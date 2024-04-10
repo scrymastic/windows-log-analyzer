@@ -1,0 +1,66 @@
+title: Potential PowerShell Obfuscation Via Reversed Commands
+id: b6b49cd1-34d6-4ead-b1bf-176e9edba9a4
+status: test
+description: Detects the presence of reversed PowerShell commands in the CommandLine.
+  This is often used as a method of obfuscation by attackers
+references:
+- https://2019.offzone.moscow/ru/report/hunting-for-powershell-abuses/
+- https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=66
+author: Teymur Kheirkhabarov (idea), Vasiliy Burov (rule), oscd.community, Tim Shelton
+date: 2020/10/11
+modified: 2023/05/31
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+      - or:
+        - OriginalFileName|==: PowerShell.EXE
+        - OriginalFileName|==: pwsh.dll
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: hctac
+      - CommandLine|contains: kaerb
+      - CommandLine|contains: dnammoc
+      - CommandLine|contains: ekovn
+      - CommandLine|contains: eliFd
+      - CommandLine|contains: rahc
+      - CommandLine|contains: etirw
+      - CommandLine|contains: golon
+      - CommandLine|contains: tninon
+      - CommandLine|contains: eddih
+      - CommandLine|contains: tpircS
+      - CommandLine|contains: ssecorp
+      - CommandLine|contains: llehsrewop
+      - CommandLine|contains: esnopser
+      - CommandLine|contains: daolnwod
+      - CommandLine|contains: tneilCbeW
+      - CommandLine|contains: tneilc
+      - CommandLine|contains: ptth
+      - CommandLine|contains: elifotevas
+      - CommandLine|contains: 46esab
+      - CommandLine|contains: htaPpmeTteG
+      - CommandLine|contains: tcejbO
+      - CommandLine|contains: maerts
+      - CommandLine|contains: hcaerof
+      - CommandLine|contains: retupmoc
+- filter_main_encoded_keyword:
+  - and:
+    - or:
+      - CommandLine|contains: ' -EncodedCommand '
+      - CommandLine|contains: ' -enc '
+- condition: all of selection_* and not 1 of filter_main_*
+falsepositives:
+- Unlikely
+level: high

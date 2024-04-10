@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: System\CurrentControlSet\Services\VSS
+    - Image|endswith: esentutl.exe
+- filter:
+  - and:
+    - TargetObject|contains: System\CurrentControlSet\Services\VSS\Start
+- condition: selection and not filter
+id: 5aad0995-46ab-41bd-a9ff-724f41114971
+logsource:
+  category: registry_event
+  product: windows

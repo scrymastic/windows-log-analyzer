@@ -1,0 +1,18 @@
+author: Roberto Rodriguez @Cyb3rWard0g
+date: 2019/07/26
+description: Detects potential abuse of Active Directory Replication Service (ADRS)
+  from a non machine account to request credentials.
+falsepositives:
+- Unknown
+filename: win_security_ad_replication_non_machine_account.yml
+level: critical
+modified: 2021/11/27
+references:
+- https://threathunterplaybook.com/hunts/windows/180815-ADObjectAccessReplication/notebook.html
+- https://threathunterplaybook.com/library/windows/active_directory_replication.html
+- https://threathunterplaybook.com/hunts/windows/190101-ADModDirectoryReplication/notebook.html
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.006

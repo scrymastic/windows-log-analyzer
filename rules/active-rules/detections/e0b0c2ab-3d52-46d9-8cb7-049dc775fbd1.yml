@@ -1,0 +1,23 @@
+detection:
+- reg:
+  - and:
+    - Image|endswith: \reg.exe
+    - CommandLine|contains: ' query '
+    - CommandLine|contains: '/t '
+    - CommandLine|contains: REG_SZ
+    - CommandLine|contains: /s
+- hive:
+  - and:
+    - or:
+      - and:
+        - CommandLine|contains: '/f '
+        - CommandLine|contains: HKLM
+      - and:
+        - CommandLine|contains: '/f '
+        - CommandLine|contains: HKCU
+      - CommandLine|contains: HKCU\Software\SimonTatham\PuTTY\Sessions
+- condition: reg and hive
+id: e0b0c2ab-3d52-46d9-8cb7-049dc775fbd1
+logsource:
+  category: process_creation
+  product: windows

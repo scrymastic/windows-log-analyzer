@@ -1,0 +1,16 @@
+author: Christian Burkard (Nextron Systems)
+date: 2021/11/24
+description: Detects shell32.dll executing a DLL in a suspicious directory
+falsepositives:
+- Unknown
+filename: proc_creation_win_rundll32_shell32_susp_execution.yml
+level: high
+modified: 2023/02/09
+references:
+- https://www.group-ib.com/resources/threat-research/red-curl-2.html
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.execution
+- attack.t1218.011

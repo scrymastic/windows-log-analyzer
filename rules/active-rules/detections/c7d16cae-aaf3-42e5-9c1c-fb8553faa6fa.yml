@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 6
+    - Data|contains: Install-TransportAgent
+- condition: selection
+id: c7d16cae-aaf3-42e5-9c1c-fb8553faa6fa
+logsource:
+  product: windows
+  service: msexchange-management

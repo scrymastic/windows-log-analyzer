@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - ContextInfo|contains: ' = ServerRemoteHost '
+    - ContextInfo|contains: wsmprovhost.exe
+- filter_pwsh_archive:
+  - and:
+    - ContextInfo|contains: \Windows\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Archive\Microsoft.PowerShell.Archive.psm1
+- condition: selection and not 1 of filter_*
+id: 96b9f619-aa91-478f-bacb-c3e50f8df575
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows

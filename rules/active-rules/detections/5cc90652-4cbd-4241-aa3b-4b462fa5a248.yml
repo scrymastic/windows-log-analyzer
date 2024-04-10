@@ -1,0 +1,26 @@
+detection:
+- selection_nltest:
+  - and:
+    - or:
+      - Image|endswith: \nltest.exe
+      - OriginalFileName|==: nltestrk.exe
+- selection_recon:
+  - and:
+    - or:
+      - and:
+        - CommandLine|contains: server
+        - CommandLine|contains: query
+      - or:
+        - CommandLine|contains: /user
+        - CommandLine|contains: all_trusts
+        - CommandLine|contains: 'dclist:'
+        - CommandLine|contains: 'dnsgetdc:'
+        - CommandLine|contains: domain_trusts
+        - CommandLine|contains: 'dsgetdc:'
+        - CommandLine|contains: parentdomain
+        - CommandLine|contains: trusted_domains
+- condition: all of selection_*
+id: 5cc90652-4cbd-4241-aa3b-4b462fa5a248
+logsource:
+  category: process_creation
+  product: windows

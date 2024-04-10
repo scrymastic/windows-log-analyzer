@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|contains: \Windows\Start Menu\Programs\Startup\
+    - or:
+      - TargetFilename|endswith: .vbs
+      - TargetFilename|endswith: .vbe
+      - TargetFilename|endswith: .bat
+      - TargetFilename|endswith: .ps1
+      - TargetFilename|endswith: .hta
+      - TargetFilename|endswith: .dll
+      - TargetFilename|endswith: .jar
+      - TargetFilename|endswith: .msi
+      - TargetFilename|endswith: .scr
+      - TargetFilename|endswith: .cmd
+- condition: selection
+id: 28208707-fe31-437f-9a7f-4b1108b94d2e
+logsource:
+  category: file_event
+  product: windows

@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: 'Invoke-WebRequest '
+      - CommandLine|contains: 'IWR '
+    - CommandLine|contains: http
+    - CommandLine|contains: OutFile
+    - CommandLine|contains: .dll
+- condition: selection
+id: 0f0450f3-8b47-441e-a31b-15a91dc243e2
+logsource:
+  category: process_creation
+  product: windows

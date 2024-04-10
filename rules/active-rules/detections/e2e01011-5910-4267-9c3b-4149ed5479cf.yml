@@ -1,0 +1,18 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \wwlib.dll
+- filter_main_path:
+  - and:
+    - or:
+      - Image|startswith: C:\Program Files (x86)\Microsoft Office\
+      - Image|startswith: C:\Program Files\Microsoft Office\
+    - Image|endswith: \winword.exe
+    - or:
+      - ImageLoaded|startswith: C:\Program Files (x86)\Microsoft Office\
+      - ImageLoaded|startswith: C:\Program Files\Microsoft Office\
+- condition: selection and not 1 of filter_main_*
+id: e2e01011-5910-4267-9c3b-4149ed5479cf
+logsource:
+  category: image_load
+  product: windows

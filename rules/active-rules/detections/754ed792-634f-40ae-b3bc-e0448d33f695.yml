@@ -1,0 +1,48 @@
+detection:
+- selection_parent:
+  - and:
+    - or:
+      - ParentImage|contains: tomcat
+      - or:
+        - ParentImage|endswith: \amigo.exe
+        - ParentImage|endswith: \browser.exe
+        - ParentImage|endswith: \chrome.exe
+        - ParentImage|endswith: \firefox.exe
+        - ParentImage|endswith: \httpd.exe
+        - ParentImage|endswith: \iexplore.exe
+        - ParentImage|endswith: \jbosssvc.exe
+        - ParentImage|endswith: \microsoftedge.exe
+        - ParentImage|endswith: \microsoftedgecp.exe
+        - ParentImage|endswith: \MicrosoftEdgeSH.exe
+        - ParentImage|endswith: \mshta.exe
+        - ParentImage|endswith: \nginx.exe
+        - ParentImage|endswith: \outlook.exe
+        - ParentImage|endswith: \php-cgi.exe
+        - ParentImage|endswith: \regsvr32.exe
+        - ParentImage|endswith: \rundll32.exe
+        - ParentImage|endswith: \safari.exe
+        - ParentImage|endswith: \services.exe
+        - ParentImage|endswith: \sqlagent.exe
+        - ParentImage|endswith: \sqlserver.exe
+        - ParentImage|endswith: \sqlservr.exe
+        - ParentImage|endswith: \vivaldi.exe
+        - ParentImage|endswith: \w3wp.exe
+- selection_powershell:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+      - or:
+        - CommandLine|contains: /c powershell
+        - CommandLine|contains: /c pwsh
+      - Description|==: Windows PowerShell
+      - Product|==: PowerShell Core 6
+      - or:
+        - OriginalFileName|==: PowerShell.EXE
+        - OriginalFileName|==: pwsh.dll
+- condition: all of selection_*
+id: 754ed792-634f-40ae-b3bc-e0448d33f695
+logsource:
+  category: process_creation
+  product: windows

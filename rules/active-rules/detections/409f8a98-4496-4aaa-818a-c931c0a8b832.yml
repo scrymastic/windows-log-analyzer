@@ -1,0 +1,14 @@
+detection:
+- selection_mobsync:
+  - and:
+    - Image|endswith: \mobsync.exe
+- filter_created_file:
+  - and:
+    - or:
+      - TargetFilename|endswith: .dll
+      - TargetFilename|endswith: .exe
+- condition: selection_mobsync and filter_created_file
+id: 409f8a98-4496-4aaa-818a-c931c0a8b832
+logsource:
+  category: file_event
+  product: windows

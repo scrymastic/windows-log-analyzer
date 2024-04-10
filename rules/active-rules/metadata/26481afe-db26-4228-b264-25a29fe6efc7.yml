@@ -1,0 +1,25 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/03/18
+description: 'Detects uncommon service installation commands by looking at suspicious
+  or uncommon image path values containing references to encoded powershell commands,
+  temporary paths, etc.
+
+  '
+falsepositives:
+- Unknown
+filename: win_system_service_install_uncommon.yml
+level: medium
+modified: 2024/02/09
+references:
+- Internal Research
+related:
+- id: ca83e9f3-657a-45d0-88d6-c1ac280caf53
+  type: obsoletes
+- id: 1d61f71d-59d2-479e-9562-4ff5f4ead16b
+  type: derived
+status: test
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- car.2013-09-005
+- attack.t1543.003

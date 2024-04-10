@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+    - ImagePath|contains: tap0901
+- condition: selection
+id: 8e4cf0e5-aa5d-4dc3-beff-dc26917744a9
+logsource:
+  product: windows
+  service: system

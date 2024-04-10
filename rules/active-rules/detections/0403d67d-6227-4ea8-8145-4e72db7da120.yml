@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: UtilityFunctions.ps1
+      - CommandLine|contains: 'RegSnapin '
+- condition: selection
+id: 0403d67d-6227-4ea8-8145-4e72db7da120
+logsource:
+  category: process_creation
+  product: windows

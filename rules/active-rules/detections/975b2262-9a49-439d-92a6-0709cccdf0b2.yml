@@ -1,0 +1,15 @@
+detection:
+- selection_cmdlet:
+  - and:
+    - or:
+      - ScriptBlockText|contains: 'Add-AppPackage '
+      - ScriptBlockText|contains: 'Add-AppxPackage '
+- selection_flag:
+  - and:
+    - ScriptBlockText|contains: ' -AllowUnsigned'
+- condition: all of selection_*
+id: 975b2262-9a49-439d-92a6-0709cccdf0b2
+logsource:
+  category: ps_script
+  definition: Script Block Logging must be enable
+  product: windows

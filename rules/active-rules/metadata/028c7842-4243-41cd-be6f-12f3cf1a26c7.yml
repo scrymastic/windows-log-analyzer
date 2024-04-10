@@ -1,0 +1,17 @@
+author: Roberto Rodriguez @Cyb3rWard0g
+date: 2019/09/12
+description: Detects WRITE_DAC access to a domain object
+falsepositives:
+- Unknown
+filename: win_security_ad_object_writedac_access.yml
+level: critical
+modified: 2021/11/27
+references:
+- https://threathunterplaybook.com/hunts/windows/180815-ADObjectAccessReplication/notebook.html
+- https://threathunterplaybook.com/library/windows/active_directory_replication.html
+- https://threathunterplaybook.com/hunts/windows/190101-ADModDirectoryReplication/notebook.html
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1222.001

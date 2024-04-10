@@ -1,0 +1,29 @@
+detection:
+- root:
+  - and:
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\
+- selection_autorun:
+  - and:
+    - TargetObject|contains: \Autorun
+    - Details|==: DWORD (0x00000001)
+- selection_pre_after:
+  - and:
+    - or:
+      - TargetObject|contains: \CleanupString
+      - TargetObject|contains: \PreCleanupString
+    - or:
+      - Details|contains: cmd
+      - Details|contains: powershell
+      - Details|contains: rundll32
+      - Details|contains: mshta
+      - Details|contains: cscript
+      - Details|contains: wscript
+      - Details|contains: wsl
+      - Details|contains: \Users\Public\
+      - Details|contains: \Windows\TEMP\
+      - Details|contains: \Microsoft\Windows\Start Menu\Programs\Startup\
+- condition: root and 1 of selection_*
+id: d4e2745c-f0c6-4bde-a3ab-b553b3f693cc
+logsource:
+  category: registry_set
+  product: windows

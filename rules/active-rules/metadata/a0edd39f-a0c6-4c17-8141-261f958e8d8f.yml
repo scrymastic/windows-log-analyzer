@@ -1,0 +1,21 @@
+author: frack113
+date: 2022/01/06
+description: 'Adversaries may abuse PowerShell commands and scripts for execution.
+
+  PowerShell is a powerful interactive command-line interface and scripting environment
+  included in the Windows operating system
+
+  '
+falsepositives:
+- Legitimate administrative script
+filename: posh_ps_remote_session_creation.yml
+level: medium
+modified: 2023/01/02
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1059.001/T1059.001.md#atomic-test-10---powershell-invoke-downloadcradle
+- https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-pssession?view=powershell-7.2
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

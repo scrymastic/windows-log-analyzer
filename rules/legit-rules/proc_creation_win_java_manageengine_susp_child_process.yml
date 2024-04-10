@@ -1,0 +1,58 @@
+title: Suspicious Child Process Of Manage Engine ServiceDesk
+id: cea2b7ea-792b-405f-95a1-b903ea06458f
+status: experimental
+description: Detects suspicious child processes of the "Manage Engine ServiceDesk
+  Plus" Java web service
+references:
+- https://www.horizon3.ai/manageengine-cve-2022-47966-technical-deep-dive/
+- https://github.com/horizon3ai/CVE-2022-47966/blob/3a51c6b72ebbd87392babd955a8fbeaee2090b35/CVE-2022-47966.py
+- https://blog.viettelcybersecurity.com/saml-show-stopper/
+author: Florian Roth (Nextron Systems)
+date: 2023/01/18
+modified: 2023/08/29
+tags:
+- attack.command_and_control
+- attack.t1102
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection:
+  - and:
+    - ParentImage|contains: \ManageEngine\ServiceDesk\
+    - ParentImage|contains: \java.exe
+    - or:
+      - Image|endswith: \AppVLP.exe
+      - Image|endswith: \bash.exe
+      - Image|endswith: \bitsadmin.exe
+      - Image|endswith: \calc.exe
+      - Image|endswith: \certutil.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \curl.exe
+      - Image|endswith: \forfiles.exe
+      - Image|endswith: \mftrace.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+      - Image|endswith: \notepad.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \query.exe
+      - Image|endswith: \reg.exe
+      - Image|endswith: \schtasks.exe
+      - Image|endswith: \scrcons.exe
+      - Image|endswith: \sh.exe
+      - Image|endswith: \systeminfo.exe
+      - Image|endswith: \whoami.exe
+      - Image|endswith: \wmic.exe
+      - Image|endswith: \wscript.exe
+- filter_main_net:
+  - and:
+    - or:
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+    - CommandLine|contains: ' stop'
+- condition: selection and not 1 of filter_main_*
+falsepositives:
+- Legitimate sub processes started by Manage Engine ServiceDesk Pro
+level: high

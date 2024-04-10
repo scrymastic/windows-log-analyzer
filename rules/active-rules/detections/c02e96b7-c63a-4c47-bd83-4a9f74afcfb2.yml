@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: New-Service
+    - CommandLine|contains: -BinaryPathName
+- condition: selection
+id: c02e96b7-c63a-4c47-bd83-4a9f74afcfb2
+logsource:
+  category: process_creation
+  product: windows

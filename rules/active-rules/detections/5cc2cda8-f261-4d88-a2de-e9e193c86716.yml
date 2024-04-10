@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \wsmprovhost.exe
+    - or:
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \sh.exe
+      - Image|endswith: \bash.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \wsl.exe
+      - Image|endswith: \schtasks.exe
+      - Image|endswith: \certutil.exe
+      - Image|endswith: \whoami.exe
+      - Image|endswith: \bitsadmin.exe
+- condition: selection
+id: 5cc2cda8-f261-4d88-a2de-e9e193c86716
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,16 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/05/09
+description: Detects the extraction of password protected ZIP archives. See the filename
+  variable for more details on which file has been opened.
+falsepositives:
+- Legitimate used of encrypted ZIP files
+filename: win_security_susp_opened_encrypted_zip.yml
+level: medium
+modified: ''
+references:
+- https://twitter.com/sbousseaden/status/1523383197513379841
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027

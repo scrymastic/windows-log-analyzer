@@ -1,0 +1,23 @@
+detection:
+- selection_wscript_img:
+  - and:
+    - or:
+      - Image|endswith: \wscript.exe
+      - OriginalFileName|==: wscript.exe
+- selection_wscript_cli:
+  - and:
+    - CommandLine|contains: manage-bde.wsf
+- selection_parent:
+  - and:
+    - or:
+      - ParentImage|endswith: \cscript.exe
+      - ParentImage|endswith: \wscript.exe
+    - ParentCommandLine|contains: manage-bde.wsf
+- selection_filter_cmd:
+  - and:
+    - Image|endswith: \cmd.exe
+- condition: all of selection_wscript_* or (selection_parent and not selection_filter_cmd)
+id: c363385c-f75d-4753-a108-c1a8e28bdbda
+logsource:
+  category: process_creation
+  product: windows

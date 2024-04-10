@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: '-u '
+    - CommandLine|contains: '-p '
+    - or:
+      - CommandLine|contains: ^USER^
+      - CommandLine|contains: ^PASS^
+- condition: selection
+id: aaafa146-074c-11eb-adc1-0242ac120002
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - OriginalFileName|==: finger.exe
+      - Image|endswith: \finger.exe
+- condition: selection
+id: af491bca-e752-4b44-9c86-df5680533dbc
+logsource:
+  category: process_creation
+  product: windows

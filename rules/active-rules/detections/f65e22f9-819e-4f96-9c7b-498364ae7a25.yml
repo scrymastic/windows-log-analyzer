@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Data|contains: ModuleContents=function Get-VMRemoteFXPhysicalVideoAdapter {
+- condition: selection
+id: f65e22f9-819e-4f96-9c7b-498364ae7a25
+logsource:
+  definition: fields have to be extract from event
+  product: windows
+  service: powershell-classic

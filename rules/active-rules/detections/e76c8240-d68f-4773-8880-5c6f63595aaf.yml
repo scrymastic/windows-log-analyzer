@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - ImageLoaded|endswith: \ttdrecord.dll
+      - ImageLoaded|endswith: \ttdwriter.dll
+      - ImageLoaded|endswith: \ttdloader.dll
+- condition: selection
+id: e76c8240-d68f-4773-8880-5c6f63595aaf
+logsource:
+  category: image_load
+  product: windows

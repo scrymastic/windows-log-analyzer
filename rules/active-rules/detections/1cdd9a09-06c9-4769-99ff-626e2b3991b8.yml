@@ -1,0 +1,50 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: .doc.exe
+      - Image|endswith: .docx.exe
+      - Image|endswith: .xls.exe
+      - Image|endswith: .xlsx.exe
+      - Image|endswith: .ppt.exe
+      - Image|endswith: .pptx.exe
+      - Image|endswith: .rtf.exe
+      - Image|endswith: .pdf.exe
+      - Image|endswith: .txt.exe
+      - Image|endswith: '      .exe'
+      - Image|endswith: ______.exe
+      - Image|endswith: .doc.js
+      - Image|endswith: .docx.js
+      - Image|endswith: .xls.js
+      - Image|endswith: .xlsx.js
+      - Image|endswith: .ppt.js
+      - Image|endswith: .pptx.js
+      - Image|endswith: .rtf.js
+      - Image|endswith: .pdf.js
+      - Image|endswith: .txt.js
+    - or:
+      - CommandLine|contains: .doc.exe
+      - CommandLine|contains: .docx.exe
+      - CommandLine|contains: .xls.exe
+      - CommandLine|contains: .xlsx.exe
+      - CommandLine|contains: .ppt.exe
+      - CommandLine|contains: .pptx.exe
+      - CommandLine|contains: .rtf.exe
+      - CommandLine|contains: .pdf.exe
+      - CommandLine|contains: .txt.exe
+      - CommandLine|contains: '      .exe'
+      - CommandLine|contains: ______.exe
+      - CommandLine|contains: .doc.js
+      - CommandLine|contains: .docx.js
+      - CommandLine|contains: .xls.js
+      - CommandLine|contains: .xlsx.js
+      - CommandLine|contains: .ppt.js
+      - CommandLine|contains: .pptx.js
+      - CommandLine|contains: .rtf.js
+      - CommandLine|contains: .pdf.js
+      - CommandLine|contains: .txt.js
+- condition: selection
+id: 1cdd9a09-06c9-4769-99ff-626e2b3991b8
+logsource:
+  category: process_creation
+  product: windows

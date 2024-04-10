@@ -1,0 +1,16 @@
+detection:
+- selection_time:
+  - and:
+    - or:
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+    - CommandLine|contains: time
+- selection_w32tm:
+  - and:
+    - Image|endswith: \w32tm.exe
+    - CommandLine|contains: tz
+- condition: 1 of selection_*
+id: b243b280-65fe-48df-ba07-6ddea7646427
+logsource:
+  category: process_creation
+  product: windows

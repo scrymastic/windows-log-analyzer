@@ -1,0 +1,20 @@
+detection:
+- selection_1:
+  - and:
+    - Image|endswith: \reg.exe
+    - CommandLine|contains: add
+- selection_2:
+  - and:
+    - or:
+      - CommandLine|contains: \software\Microsoft\Windows\CurrentVersion\Run
+      - CommandLine|contains: \software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit
+      - CommandLine|contains: \software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell
+      - CommandLine|contains: \software\Microsoft\Windows NT\CurrentVersion\Windows
+      - CommandLine|contains: \software\Microsoft\Windows\CurrentVersion\Explorer\User
+          Shell Folders
+      - CommandLine|contains: \system\CurrentControlSet\Control\SafeBoot\AlternateShell
+- condition: all of selection_*
+id: 24357373-078f-44ed-9ac4-6d334a668a11
+logsource:
+  category: process_creation
+  product: windows

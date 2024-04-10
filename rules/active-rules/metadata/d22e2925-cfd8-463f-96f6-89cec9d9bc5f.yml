@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/01
+description: 'Detects the execution of ".xbap" (Browser Applications) files via PresentationHost.EXE
+  from an uncommon location. These files can be abused to run malicious ".xbap" files
+  any bypass AWL
+
+  '
+falsepositives:
+- Legitimate ".xbap" being executed via "PresentationHost"
+filename: proc_creation_win_presentationhost_uncommon_location_exec.yml
+level: medium
+modified: 2023/11/09
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Presentationhost/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.execution
+- attack.t1218

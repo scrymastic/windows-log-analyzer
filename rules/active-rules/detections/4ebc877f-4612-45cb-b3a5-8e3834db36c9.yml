@@ -1,0 +1,77 @@
+detection:
+- selection_webserver_image:
+  - and:
+    - or:
+      - ParentImage|endswith: \caddy.exe
+      - ParentImage|endswith: \httpd.exe
+      - ParentImage|endswith: \nginx.exe
+      - ParentImage|endswith: \php-cgi.exe
+      - ParentImage|endswith: \w3wp.exe
+      - ParentImage|endswith: \ws_tomcatservice.exe
+- selection_webserver_characteristics_tomcat1:
+  - and:
+    - or:
+      - ParentImage|endswith: \java.exe
+      - ParentImage|endswith: \javaw.exe
+    - or:
+      - ParentImage|contains: -tomcat-
+      - ParentImage|contains: \tomcat
+- selection_webserver_characteristics_tomcat2:
+  - and:
+    - or:
+      - ParentImage|endswith: \java.exe
+      - ParentImage|endswith: \javaw.exe
+    - or:
+      - CommandLine|contains: catalina.jar
+      - CommandLine|contains: CATALINA_HOME
+- selection_child_1:
+  - and:
+    - CommandLine|contains: rundll32
+    - CommandLine|contains: comsvcs
+- selection_child_2:
+  - and:
+    - CommandLine|contains: ' -hp'
+    - CommandLine|contains: ' a '
+    - CommandLine|contains: ' -m'
+- selection_child_3:
+  - and:
+    - CommandLine|contains: net
+    - CommandLine|contains: ' user '
+    - CommandLine|contains: ' /add'
+- selection_child_4:
+  - and:
+    - CommandLine|contains: net
+    - CommandLine|contains: ' localgroup '
+    - CommandLine|contains: ' administrators '
+    - CommandLine|contains: /add
+- selection_child_5:
+  - and:
+    - or:
+      - Image|endswith: \ntdsutil.exe
+      - Image|endswith: \ldifde.exe
+      - Image|endswith: \adfind.exe
+      - Image|endswith: \procdump.exe
+      - Image|endswith: \Nanodump.exe
+      - Image|endswith: \vssadmin.exe
+      - Image|endswith: \fsutil.exe
+- selection_child_6:
+  - and:
+    - or:
+      - CommandLine|contains: ' -decode '
+      - CommandLine|contains: ' -NoP '
+      - CommandLine|contains: ' -W Hidden '
+      - CommandLine|contains: ' /decode '
+      - CommandLine|contains: ' /ticket:'
+      - CommandLine|contains: ' sekurlsa'
+      - CommandLine|contains: .dmp full
+      - CommandLine|contains: .downloadfile(
+      - CommandLine|contains: .downloadstring(
+      - CommandLine|contains: FromBase64String
+      - CommandLine|contains: process call create
+      - CommandLine|contains: 'reg save '
+      - CommandLine|contains: whoami /priv
+- condition: 1 of selection_webserver_* and 1 of selection_child_*
+id: 4ebc877f-4612-45cb-b3a5-8e3834db36c9
+logsource:
+  category: process_creation
+  product: windows

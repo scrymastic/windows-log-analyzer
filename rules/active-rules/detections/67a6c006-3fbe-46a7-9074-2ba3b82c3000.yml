@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|endswith: \Control Panel\Desktop\SCRNSAVE.EXE
+- filter:
+  - and:
+    - or:
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \explorer.exe
+- condition: selection and not filter
+id: 67a6c006-3fbe-46a7-9074-2ba3b82c3000
+logsource:
+  category: registry_event
+  product: windows

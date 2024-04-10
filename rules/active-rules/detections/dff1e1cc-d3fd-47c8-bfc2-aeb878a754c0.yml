@@ -1,0 +1,18 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \java.exe
+    - or:
+      - Image|endswith: \bash.exe
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+- filter_main_build:
+  - and:
+    - ParentImage|contains: build
+    - CommandLine|contains: build
+- condition: selection and not 1 of filter_main_*
+id: dff1e1cc-d3fd-47c8-bfc2-aeb878a754c0
+logsource:
+  category: process_creation
+  product: windows

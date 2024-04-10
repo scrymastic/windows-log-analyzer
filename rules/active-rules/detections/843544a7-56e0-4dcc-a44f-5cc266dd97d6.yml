@@ -1,0 +1,26 @@
+detection:
+- selection_id:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+- selection_cli_cmd:
+  - and:
+    - ImagePath|contains: /c
+    - ImagePath|contains: echo
+    - ImagePath|contains: \pipe\
+    - or:
+      - ImagePath|contains: cmd
+      - ImagePath|contains: '%COMSPEC%'
+- selection_cli_rundll:
+  - and:
+    - ImagePath|contains: rundll32
+    - ImagePath|contains: .dll,a
+    - ImagePath|contains: '/p:'
+- selection_cli_share:
+  - and:
+    - ImagePath|startswith: \\\\127.0.0.1\\ADMIN$\
+- condition: selection_id and 1 of selection_cli_*
+id: 843544a7-56e0-4dcc-a44f-5cc266dd97d6
+logsource:
+  product: windows
+  service: system

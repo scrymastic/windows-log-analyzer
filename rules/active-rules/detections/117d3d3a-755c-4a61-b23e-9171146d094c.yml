@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|endswith: \Microsoft\Outlook\VbaProject.OTM
+- filter:
+  - and:
+    - Image|endswith: \outlook.exe
+- condition: selection and not filter
+id: 117d3d3a-755c-4a61-b23e-9171146d094c
+logsource:
+  category: file_event
+  product: windows

@@ -1,0 +1,29 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5156
+- sourceRDP:
+  - and:
+    - SourcePort|==: 3389
+    - or:
+      - DestAddress|==: 127.*
+      - DestAddress|==: ::1
+- destinationRDP:
+  - and:
+    - DestPort|==: 3389
+    - or:
+      - SourceAddress|==: 127.*
+      - SourceAddress|==: ::1
+- filter_app_container:
+  - and:
+    - FilterOrigin|==: AppContainer Loopback
+- filter_thor:
+  - and:
+    - or:
+      - Application|endswith: \thor.exe
+      - Application|endswith: \thor64.exe
+- condition: selection and ( sourceRDP or destinationRDP ) and not 1 of filter*
+id: 5bed80b6-b3e8-428e-a3ae-d3c757589e41
+logsource:
+  product: windows
+  service: security

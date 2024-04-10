@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 1511
+    - Provider_Name|==: Microsoft-Windows-User Profiles Service
+- condition: selection
+id: 52a85084-6989-40c3-8f32-091e12e17692
+logsource:
+  product: windows
+  service: application

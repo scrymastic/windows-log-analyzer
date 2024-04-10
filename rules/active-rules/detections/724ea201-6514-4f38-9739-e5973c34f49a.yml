@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|endswith: \Environment\windir
+- filter_main_default:
+  - and:
+    - Details|==: '%SystemRoot%'
+- condition: selection and not 1 of filter_main_*
+id: 724ea201-6514-4f38-9739-e5973c34f49a
+logsource:
+  category: registry_set
+  product: windows

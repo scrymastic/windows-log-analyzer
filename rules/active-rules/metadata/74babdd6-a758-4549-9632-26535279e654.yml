@@ -1,0 +1,18 @@
+author: frack113
+date: 2022/09/05
+description: Detect creation of suspicious executable file name. Some strings look
+  for suspicious file extensions, others look for filenames that exploit unquoted
+  service paths.
+falsepositives:
+- Unknown
+filename: file_event_win_susp_executable_creation.yml
+level: high
+modified: 2023/12/11
+references:
+- https://medium.com/@SumitVerma101/windows-privilege-escalation-part-1-unquoted-service-path-c7a011a8d8ae
+- https://app.any.run/tasks/76c69e2d-01e8-49d9-9aea-fb7cc0c4d3ad/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1564

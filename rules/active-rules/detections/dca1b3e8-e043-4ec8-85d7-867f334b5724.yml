@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|endswith: .pfx
+- filter_main_windows_tmp_key:
+  - and:
+    - TargetFilename|contains: \Templates\Windows\Windows_TemporaryKey.pfx
+    - TargetFilename|contains: \CMake\
+- condition: selection and not 1 of filter_main_*
+id: dca1b3e8-e043-4ec8-85d7-867f334b5724
+logsource:
+  category: file_event
+  product: windows

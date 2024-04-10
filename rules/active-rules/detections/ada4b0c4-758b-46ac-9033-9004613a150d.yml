@@ -1,0 +1,23 @@
+detection:
+- selection_reg:
+  - and:
+    - or:
+      - Image|endswith: \reg.exe
+      - OriginalFileName|==: reg.exe
+- selection_path:
+  - and:
+    - CommandLine|contains: \SOFTWARE\Policies\Microsoft\Windows\System
+- selection_key:
+  - and:
+    - or:
+      - CommandLine|contains: GroupPolicyRefreshTimeDC
+      - CommandLine|contains: GroupPolicyRefreshTimeOffsetDC
+      - CommandLine|contains: GroupPolicyRefreshTime
+      - CommandLine|contains: GroupPolicyRefreshTimeOffset
+      - CommandLine|contains: EnableSmartScreen
+      - CommandLine|contains: ShellSmartScreenLevel
+- condition: all of selection_*
+id: ada4b0c4-758b-46ac-9033-9004613a150d
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,19 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \w3wp.exe
+    - CommandLine|contains: MSExchange
+    - or:
+      - TargetFilename|contains: FrontEnd\HttpProxy\
+      - TargetFilename|contains: \inetpub\wwwroot\aspnet_client\
+- selection_types:
+  - and:
+    - or:
+      - TargetFilename|endswith: .aspx
+      - TargetFilename|endswith: .asp
+      - TargetFilename|endswith: .ashx
+- condition: all of selection*
+id: bd1212e5-78da-431e-95fa-c58e3237a8e6
+logsource:
+  category: file_event
+  product: windows

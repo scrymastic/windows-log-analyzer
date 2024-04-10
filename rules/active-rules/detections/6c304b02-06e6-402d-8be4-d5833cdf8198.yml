@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \shell\SentinelOneScan\command\
+- filter_main_sentinelone_default_scan_binary:
+  - and:
+    - or:
+      - Details|startswith: C:\Program Files\SentinelOne\Sentinel Agent
+      - Details|startswith: C:\Program Files (x86)\SentinelOne\Sentinel Agent
+    - Details|contains: \SentinelScanFromContextMenu.exe
+- filter_main_sentinelone_binary:
+  - and:
+    - or:
+      - Image|endswith: C:\Program Files\SentinelOne\
+      - Image|endswith: C:\Program Files (x86)\SentinelOne\
+- condition: selection and not 1 of filter_main_*
+id: 6c304b02-06e6-402d-8be4-d5833cdf8198
+logsource:
+  category: registry_set
+  product: windows

@@ -1,0 +1,22 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \Control\Print\Environments\Windows x64\Drivers
+    - TargetObject|contains: \Manufacturer
+    - Details|==: (Empty)
+- filter_cutepdf:
+  - and:
+    - TargetObject|contains: \CutePDF Writer v4.0\
+- filter_vnc:
+  - and:
+    - or:
+      - TargetObject|contains: \VNC Printer (PS)\
+      - TargetObject|contains: \VNC Printer (UD)\
+- filter_pdf24:
+  - and:
+    - TargetObject|contains: \Version-3\PDF24\
+- condition: selection and not 1 of filter_*
+id: e0813366-0407-449a-9869-a2db1119dc41
+logsource:
+  category: registry_set
+  product: windows

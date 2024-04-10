@@ -1,0 +1,16 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \link.exe
+    - CommandLine|contains: LINK /
+- filter_visual_studio:
+  - and:
+    - or:
+      - ParentImage|startswith: C:\Program Files\Microsoft Visual Studio\
+      - ParentImage|startswith: C:\Program Files (x86)\Microsoft Visual Studio\
+    - ParentImage|contains: \VC\Tools\MSVC\
+- condition: selection and not 1 of filter_*
+id: 6e968eb1-5f05-4dac-94e9-fd0c5cb49fd6
+logsource:
+  category: process_creation
+  product: windows

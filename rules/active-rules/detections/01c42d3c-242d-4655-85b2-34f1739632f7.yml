@@ -1,0 +1,23 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \dsacls.exe
+      - OriginalFileName|==: DSACLS.EXE
+- selection_flag:
+  - and:
+    - CommandLine|contains: ' /G '
+- selection_permissions:
+  - and:
+    - or:
+      - CommandLine|contains: GR
+      - CommandLine|contains: GE
+      - CommandLine|contains: GW
+      - CommandLine|contains: GA
+      - CommandLine|contains: WP
+      - CommandLine|contains: WD
+- condition: all of selection_*
+id: 01c42d3c-242d-4655-85b2-34f1739632f7
+logsource:
+  category: process_creation
+  product: windows

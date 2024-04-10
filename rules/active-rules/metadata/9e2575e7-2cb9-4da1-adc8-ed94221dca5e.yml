@@ -1,0 +1,19 @@
+author: frack113
+date: 2023/02/26
+description: Detects the addition of a new rule to the Windows Firewall exception
+  list for an application located in a potentially suspicious location.
+falsepositives:
+- Unknown
+filename: win_firewall_as_add_rule_susp_folder.yml
+level: high
+modified: 2024/01/22
+references:
+- https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd364427(v=ws.10)
+- https://app.any.run/tasks/7123e948-c91e-49e0-a813-00e8d72ab393/#
+related:
+- id: cde0a575-7d3d-4a49-9817-b8004a7bf105
+  type: derived
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1562.004

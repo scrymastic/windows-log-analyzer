@@ -1,0 +1,23 @@
+detection:
+- selection_image:
+  - and:
+    - ImageLoaded|endswith: \kprocesshacker.sys
+- selection_processhack_sysmon:
+  - and:
+    - or:
+      - Hashes|contains: IMPHASH=821D74031D3F625BCBD0DF08B70F1E77
+      - Hashes|contains: IMPHASH=F86759BB4DE4320918615DC06E998A39
+      - Hashes|contains: IMPHASH=0A64EEB85419257D0CE32BD5D55C3A18
+      - Hashes|contains: IMPHASH=6E7B34DFC017700B1517B230DF6FF0D0
+- selection_processhack_hashes:
+  - and:
+    - or:
+      - Imphash|==: 821D74031D3F625BCBD0DF08B70F1E77
+      - Imphash|==: F86759BB4DE4320918615DC06E998A39
+      - Imphash|==: 0A64EEB85419257D0CE32BD5D55C3A18
+      - Imphash|==: 6E7B34DFC017700B1517B230DF6FF0D0
+- condition: 1 of selection_*
+id: 67add051-9ee7-4ad3-93ba-42935615ae8d
+logsource:
+  category: driver_load
+  product: windows

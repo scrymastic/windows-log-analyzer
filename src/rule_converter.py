@@ -72,12 +72,6 @@ class RuleConverter:
                 print(f"{RED}[ERROR] Cannot convert rule '{rule_file.name}'{RESET}")
                 return False
             
-            # if len(converted_detection) is 1 and is a 'and' block, don't include 'and' key
-            if len(converted_detection) == 1 and converted_detection[0].keys() == {'and'}:
-                pass
-            else:
-                converted_detection = [{'and': converted_detection}]
-            
             # try to dump to file
             converted_rule = rule.copy()
             converted_rule['detection'] = converted_detection
@@ -92,15 +86,10 @@ class RuleConverter:
 
 
     def convert_detection_block(self, detection): 
-        conditions = detection.get('condition', '')
-        
-        can_convert = self.handle_condition(conditions)
-        if can_convert == 0:
-            raise ValueError(f'Unsupported condition: {conditions}')
-            
         converted_detection = []
         for key, value in detection.items():
             if key == 'condition':
+                converted_detection.extend([{key: value}])
                 continue
             if isinstance(value, dict):
                 converted_block = self.convert_and_block(value)
@@ -108,39 +97,16 @@ class RuleConverter:
                 converted_block = self.convert_or_block(value)
             else:
                 raise ValueError('Unexpected value type:', value)
-            
-            if can_convert == 1:
-                if 'selection' in key or 'registry' in key:
-                    converted_detection.extend(converted_block)
-                elif 'filter' in key:
-                    converted_detection.extend(self.invert_conditions(converted_block))
+                        
+            if len(converted_block) == 1 and converted_block[0].keys() == {'and'}:
+                pass
+            else:
+                converted_block = [{'and': converted_block}]
 
-            elif can_convert == 2:
-                if 'selection' in key:
-                    # if 'or' block is already present, append to it
-                    if len(converted_detection) > 0 and 'or' in converted_detection[0]:
-                        converted_detection[0]['or'].extend(converted_block)
-                    else:
-                        converted_detection.extend([{'or': converted_block}])
-                elif 'filter' in key:
-                    converted_detection.extend(converted_block)
+            converted_detection.extend([{key: converted_block}])
 
         return converted_detection
     
-
-    def handle_condition(self, condition):
-        if regex.match(r'^(?:all of )?selection(?:_[^\s]*)?(?: (?:and not 1 of filter_[^\s]+))*$', condition) or \
-            regex.match(r'^not 1 of filter_[^\s]+(?: (?:and not 1 of filter_[^\s]+))*$', condition) or \
-            regex.match(r'^(?:all of )?selection(?:_[^\s]*)? and not filter(?:_[^\s]*)?$', condition) or \
-            regex.match(r'^selection(?:_[^\s]*)? and registry(?:_[^\s]*)?(?: and not filter(?:_[^\s]*)?)*$', condition) or \
-            regex.match(r'^registry(?:_[^\s]*)?(?: and not filter(?:_[^\s]*)?)*$', condition):
-            return 1
-        elif regex.match(r'^1 of selection(?:_[^\s]*)?(?: (?:and not 1 of filter_[^\s]+))*$', condition) or \
-            regex.match(r'^1 of selection(?:_[^\s]*)? and not filter(?:_[^\s]*)?$', condition):
-            return 2
-        else:
-            return 0
-        
 
     def convert_expression(self, expression):
         if '|' in expression:
@@ -160,7 +126,7 @@ class RuleConverter:
             field, operator = expression.split('|', 1)
             operator = mapping.get(operator, None)
             if operator is None:
-                raise ValueError(f'Unsupported operator: {operator}')
+                raise ValueError(f'Unsupported operator in expression: {expression}')
         else:
             field = expression
             operator = '=='
@@ -214,39 +180,8 @@ class RuleConverter:
         return [{'or': converted_block}]
     
 
-    def invert_conditions(self, conditions: list) -> list:
-        inverted_conditions = []
-        
-        is_or = False
-        block_conditions = conditions[0].get('or', [])
-        if block_conditions:
-            is_or = True
-        else:
-            block_conditions = conditions
-        for condition in block_conditions:
-            for key, value in condition.items():
-                try:
-                    field, operator = key.split('|', 1)
-                except ValueError:
-                    raise ValueError(f'Invalid condition to invert: {key}')
-                if operator == '==':
-                    operator = '!=='
-                elif operator == '!=':
-                    operator = '=='
-                else:
-                    if 'not' not in operator:
-                        operator = f'not {operator}'
-                    else:
-                        operator = operator.replace('not ', '')
-                inverted_conditions.append({f'{field}|{operator}': value})
-        
-        if is_or:
-            return inverted_conditions
-        else:
-            return [{'or': inverted_conditions}]
-    
 
 if __name__ == '__main__':
-    sigma_rule_folder = Path(ROOT, "rules", "sigma-rules")
+    sigma_rule = Path(ROOT, "rules", "sigma-rules")#, "registry", "registry_add") #, "registry_add_persistence_disk_cleanup_handler_entry.yml")
     rule_converter = RuleConverter()
-    rule_converter.convert_folder(sigma_rule_folder)
+    rule_converter.convert_folder(sigma_rule)
