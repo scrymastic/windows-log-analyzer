@@ -1,0 +1,35 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \SOFTWARE\ODBC\ODBCINST.INI\
+    - or:
+      - TargetObject|endswith: \Driver
+      - TargetObject|endswith: \Setup
+    - or:
+      - Details|contains: :\PerfLogs\
+      - Details|contains: :\ProgramData\
+      - Details|contains: :\Temp\
+      - Details|contains: :\Users\Public\
+      - Details|contains: :\Windows\Registration\CRMLog
+      - Details|contains: :\Windows\System32\com\dmp\
+      - Details|contains: :\Windows\System32\FxsTmp\
+      - Details|contains: :\Windows\System32\Microsoft\Crypto\RSA\MachineKeys\
+      - Details|contains: :\Windows\System32\spool\drivers\color\
+      - Details|contains: :\Windows\System32\spool\PRINTERS\
+      - Details|contains: :\Windows\System32\spool\SERVERS\
+      - Details|contains: :\Windows\System32\Tasks_Migrated\
+      - Details|contains: :\Windows\System32\Tasks\Microsoft\Windows\SyncCenter\
+      - Details|contains: :\Windows\SysWOW64\com\dmp\
+      - Details|contains: :\Windows\SysWOW64\FxsTmp\
+      - Details|contains: :\Windows\SysWOW64\Tasks\Microsoft\Windows\PLA\System\
+      - Details|contains: :\Windows\SysWOW64\Tasks\Microsoft\Windows\SyncCenter\
+      - Details|contains: :\Windows\Tasks\
+      - Details|contains: :\Windows\Temp\
+      - Details|contains: :\Windows\Tracing\
+      - Details|contains: \AppData\Local\Temp\
+      - Details|contains: \AppData\Roaming\
+- condition: selection
+id: e4d22291-f3d5-4b78-9a0c-a1fbaf32a6a4
+logsource:
+  category: registry_set
+  product: windows

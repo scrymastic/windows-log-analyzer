@@ -1,0 +1,21 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+      - or:
+        - OriginalFileName|==: PowerShell.EXE
+        - OriginalFileName|==: pwsh.dll
+- selection_cmdlet:
+  - and:
+    - CommandLine|contains: Add-WindowsCapability
+- selection_capa:
+  - and:
+    - CommandLine|contains: OpenSSH.
+- condition: all of selection_*
+id: b36d01a3-ddaf-4804-be18-18a6247adfcd
+logsource:
+  category: process_creation
+  product: windows

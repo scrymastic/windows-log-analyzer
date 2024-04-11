@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|contains: C:\Debuggers\dbghelp.dll
+    - or:
+      - Image|endswith: \vmmap.exe
+      - Image|endswith: \vmmap64.exe
+- filter_main_signed:
+  - and:
+    - Signed|==: 'true'
+- condition: selection and not 1 of filter_main_*
+id: 273a8dd8-3742-4302-bcc7-7df5a80fe425
+logsource:
+  category: image_load
+  product: windows

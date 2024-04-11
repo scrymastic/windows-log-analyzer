@@ -1,0 +1,48 @@
+detection:
+- selection_proc_image:
+  - and:
+    - or:
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \wscript.exe
+- selection_proc_flags:
+  - and:
+    - or:
+      - CommandLine|contains: ' -ep bypass '
+      - CommandLine|contains: ' -ExecutionPolicy bypass '
+      - CommandLine|contains: ' -w hidden '
+      - CommandLine|contains: '/e:javascript '
+      - CommandLine|contains: '/e:Jscript '
+      - CommandLine|contains: '/e:vbscript '
+- selection_proc_original:
+  - and:
+    - or:
+      - OriginalFileName|==: cscript.exe
+      - OriginalFileName|==: mshta.exe
+      - OriginalFileName|==: wscript.exe
+- selection_folders_1:
+  - and:
+    - or:
+      - CommandLine|contains: :\Perflogs\
+      - CommandLine|contains: :\Users\Public\
+      - CommandLine|contains: \AppData\Local\Temp
+      - CommandLine|contains: \AppData\Roaming\Temp
+      - CommandLine|contains: \Temporary Internet
+      - CommandLine|contains: \Windows\Temp
+- selection_folders_2:
+  - and:
+    - or:
+      - and:
+        - CommandLine|contains: :\Users\
+        - CommandLine|contains: \Favorites\
+      - and:
+        - CommandLine|contains: :\Users\
+        - CommandLine|contains: \Favourites\
+      - and:
+        - CommandLine|contains: :\Users\
+        - CommandLine|contains: \Contacts\
+- condition: 1 of selection_proc_* and 1 of selection_folders_*
+id: 1228c958-e64e-4e71-92ad-7d429f4138ba
+logsource:
+  category: process_creation
+  product: windows

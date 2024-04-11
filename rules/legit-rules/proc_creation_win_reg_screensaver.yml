@@ -1,0 +1,58 @@
+title: Suspicious ScreenSave Change by Reg.exe
+id: 0fc35fc3-efe6-4898-8a37-0b233339524f
+status: test
+description: 'Adversaries may establish persistence by executing malicious content
+  triggered by user inactivity.
+
+  Screensavers are programs that execute after a configurable time of user inactivity
+  and consist of Portable Executable (PE) files with a .scr file extension
+
+  '
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.002/T1546.002.md
+- https://www.welivesecurity.com/wp-content/uploads/2017/08/eset-gazer.pdf
+author: frack113
+date: 2021/08/19
+modified: 2022/06/02
+tags:
+- attack.privilege_escalation
+- attack.t1546.002
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection_reg:
+  - and:
+    - Image|endswith: \reg.exe
+    - or:
+      - CommandLine|contains: HKEY_CURRENT_USER\Control Panel\Desktop
+      - CommandLine|contains: HKCU\Control Panel\Desktop
+- selection_option_1:
+  - and:
+    - CommandLine|contains: /v ScreenSaveActive
+    - CommandLine|contains: /t REG_SZ
+    - CommandLine|contains: /d 1
+    - CommandLine|contains: /f
+- selection_option_2:
+  - and:
+    - CommandLine|contains: /v ScreenSaveTimeout
+    - CommandLine|contains: /t REG_SZ
+    - CommandLine|contains: '/d '
+    - CommandLine|contains: /f
+- selection_option_3:
+  - and:
+    - CommandLine|contains: /v ScreenSaverIsSecure
+    - CommandLine|contains: /t REG_SZ
+    - CommandLine|contains: /d 0
+    - CommandLine|contains: /f
+- selection_option_4:
+  - and:
+    - CommandLine|contains: /v SCRNSAVE.EXE
+    - CommandLine|contains: /t REG_SZ
+    - CommandLine|contains: '/d '
+    - CommandLine|contains: .scr
+    - CommandLine|contains: /f
+- condition: selection_reg and 1 of selection_option_*
+falsepositives:
+- GPO
+level: medium

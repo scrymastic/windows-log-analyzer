@@ -1,0 +1,32 @@
+detection:
+- selection1:
+  - and:
+    - or:
+      - CommandLine|contains: ' tcp 139'
+      - CommandLine|contains: ' tcp 445'
+      - CommandLine|contains: ' tcp 3389'
+      - CommandLine|contains: ' tcp 5985'
+      - CommandLine|contains: ' tcp 5986'
+- selection2:
+  - and:
+    - CommandLine|contains: ' start '
+    - CommandLine|contains: --all
+    - CommandLine|contains: --config
+    - CommandLine|contains: .yml
+- selection3:
+  - and:
+    - Image|endswith: ngrok.exe
+    - or:
+      - CommandLine|contains: ' tcp '
+      - CommandLine|contains: ' http '
+      - CommandLine|contains: ' authtoken '
+- selection4:
+  - and:
+    - or:
+      - CommandLine|contains: '.exe authtoken '
+      - CommandLine|contains: .exe start --all
+- condition: 1 of selection*
+id: ee37eb7c-a4e7-4cd5-8fa4-efa27f1c3f31
+logsource:
+  category: process_creation
+  product: windows

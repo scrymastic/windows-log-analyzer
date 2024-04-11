@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/12/05
+description: Detects suspicious scheduled task creation events. Based on attributes
+  such as paths, commands line flags, etc.
+falsepositives:
+- Unknown
+filename: win_security_susp_scheduled_task_creation.yml
+level: high
+modified: 2022/12/07
+references:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4698
+related: []
+status: test
+tags:
+- attack.execution
+- attack.privilege_escalation
+- attack.persistence
+- attack.t1053.005

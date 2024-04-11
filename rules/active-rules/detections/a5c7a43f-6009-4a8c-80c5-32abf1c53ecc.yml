@@ -1,0 +1,24 @@
+detection:
+- selection_path:
+  - and:
+    - TargetObject|contains: \SOFTWARE\Microsoft\Office\
+    - TargetObject|contains: \Security\ProtectedView\
+- selection_values_1:
+  - and:
+    - Details|==: DWORD (0x00000001)
+    - or:
+      - TargetObject|endswith: \DisableAttachementsInPV
+      - TargetObject|endswith: \DisableInternetFilesInPV
+      - TargetObject|endswith: \DisableIntranetCheck
+      - TargetObject|endswith: \DisableUnsafeLocationsInPV
+- selection_values_0:
+  - and:
+    - Details|==: DWORD (0x00000000)
+    - or:
+      - TargetObject|endswith: \enabledatabasefileprotectedview
+      - TargetObject|endswith: \enableforeigntextfileprotectedview
+- condition: selection_path and 1 of selection_values_*
+id: a5c7a43f-6009-4a8c-80c5-32abf1c53ecc
+logsource:
+  category: registry_set
+  product: windows

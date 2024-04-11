@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: Remove-Module
+    - ScriptBlockText|contains: psreadline
+- condition: selection
+id: 602f5669-6927-4688-84db-0d4b7afb2150
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

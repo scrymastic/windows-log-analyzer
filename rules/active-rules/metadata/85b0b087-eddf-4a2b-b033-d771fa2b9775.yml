@@ -1,0 +1,16 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/03/24
+description: Detects PowerShell download and execution cradles.
+falsepositives:
+- Some PowerShell installers were seen using similar combinations. Apply filters accordingly
+filename: proc_creation_win_powershell_download_iex.yml
+level: high
+modified: 2023/05/04
+references:
+- https://github.com/VirtualAlllocEx/Payload-Download-Cradles/blob/88e8eca34464a547c90d9140d70e9866dcbc6a12/Download-Cradles.cmd
+- https://labs.withsecure.com/publications/fin7-target-veeam-servers
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059

@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \SYSTEM\CurrentControlSet\Services\EventLog\
+    - TargetObject|endswith: \File
+- filter:
+  - and:
+    - Details|contains: \System32\Winevt\Logs\
+- condition: selection and not filter
+id: 0cb8d736-995d-4ce7-a31e-1e8d452a1459
+logsource:
+  category: registry_set
+  product: windows

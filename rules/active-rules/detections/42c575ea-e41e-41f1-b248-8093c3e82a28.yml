@@ -1,0 +1,15 @@
+detection:
+- selection_eid:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+- selection_service:
+  - and:
+    - or:
+      - ServiceName|==: PSEXESVC
+      - ImagePath|endswith: \PSEXESVC.exe
+- condition: all of selection_*
+id: 42c575ea-e41e-41f1-b248-8093c3e82a28
+logsource:
+  product: windows
+  service: system

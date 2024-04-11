@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: sdclt.exe
+    - IntegrityLevel|==: High
+- condition: selection
+id: 40f9af16-589d-4984-b78d-8c2aec023197
+logsource:
+  category: process_creation
+  product: windows

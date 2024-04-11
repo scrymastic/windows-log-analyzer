@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Description|==: VNCViewer
+      - Product|==: UltraVNC VNCViewer
+      - Company|==: UltraVNC
+      - OriginalFileName|==: VNCViewer.exe
+- condition: selection
+id: 145322e4-0fd3-486b-81ca-9addc75736d8
+logsource:
+  category: process_creation
+  product: windows

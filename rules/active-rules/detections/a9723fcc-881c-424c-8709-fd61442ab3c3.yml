@@ -1,0 +1,16 @@
+detection:
+- selection_action:
+  - and:
+    - or:
+      - ScriptBlockText|contains: 'Get-Service '
+      - ScriptBlockText|contains: 'Get-ChildItem '
+      - ScriptBlockText|contains: 'Get-Process '
+- selection_redirect:
+  - and:
+    - ScriptBlockText|contains: '> $env:TEMP\'
+- condition: all of selection*
+id: a9723fcc-881c-424c-8709-fd61442ab3c3
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

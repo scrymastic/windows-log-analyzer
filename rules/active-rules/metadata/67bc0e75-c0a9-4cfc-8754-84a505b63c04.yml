@@ -1,0 +1,16 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/06/12
+description: Detects potentially suspicious child processes of a ClickOnce deployment
+  application
+falsepositives:
+- Unknown
+filename: proc_creation_win_dfsvc_suspicious_child_processes.yml
+level: medium
+modified: ''
+references:
+- https://posts.specterops.io/less-smartscreen-more-caffeine-ab-using-clickonce-for-trusted-code-execution-1446ea8051c5
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.defense_evasion

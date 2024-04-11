@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 31017
+    - UserName|==: ''
+    - ServerName|startswith: \1
+- condition: selection
+id: 71886b70-d7b4-4dbf-acce-87d2ca135262
+logsource:
+  product: windows
+  service: smbclient-security

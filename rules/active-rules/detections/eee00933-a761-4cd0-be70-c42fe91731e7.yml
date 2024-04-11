@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \GfxDownloadWrapper.exe
+    - or:
+      - CommandLine|contains: http://
+      - CommandLine|contains: https://
+- filter_main_known_urls:
+  - and:
+    - CommandLine|contains: https://gameplayapi.intel.com/
+- condition: selection and not 1 of filter_main_*
+id: eee00933-a761-4cd0-be70-c42fe91731e7
+logsource:
+  category: process_creation
+  product: windows

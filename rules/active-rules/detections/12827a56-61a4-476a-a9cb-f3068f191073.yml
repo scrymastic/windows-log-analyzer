@@ -1,0 +1,26 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \KrbRelayUp.exe
+      - OriginalFileName|==: KrbRelayUp.exe
+- selection_cli_1:
+  - and:
+    - CommandLine|contains: ' relay '
+    - CommandLine|contains: ' -Domain '
+    - CommandLine|contains: ' -ComputerName '
+- selection_cli_2:
+  - and:
+    - CommandLine|contains: ' krbscm '
+    - CommandLine|contains: ' -sc '
+- selection_cli_3:
+  - and:
+    - CommandLine|contains: ' spawn '
+    - CommandLine|contains: ' -d '
+    - CommandLine|contains: ' -cn '
+    - CommandLine|contains: ' -cp '
+- condition: 1 of selection_*
+id: 12827a56-61a4-476a-a9cb-f3068f191073
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,28 @@
+author: Teymur Kheirkhabarov, Endgame, JHasenbusch, Daniil Yugoslavskiy, oscd.community,
+  frack113
+date: 2019/10/22
+description: Detects the usage of "reg.exe" in order to dump sensitive registry hives.
+  This includes SAM, SYSTEM and SECURITY hives.
+falsepositives:
+- Dumping hives for legitimate purpouse i.e. backup or forensic investigation
+filename: proc_creation_win_reg_dumping_sensitive_hives.yml
+level: high
+modified: 2023/12/13
+references:
+- https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment
+- https://eqllib.readthedocs.io/en/latest/analytics/aed95fc6-5e3f-49dc-8b35-06508613f979.html
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1003/T1003.md
+- https://www.wietzebeukema.nl/blog/windows-command-line-obfuscation
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1003.002/T1003.002.md#atomic-test-1---registry-dump-of-sam-creds-and-secrets
+related:
+- id: 038cd51c-3ad8-41c5-ba8f-5d1c92f3cc1e
+  type: obsoletes
+- id: 4d6c9da1-318b-4edf-bcea-b6c93fa98fd0
+  type: obsoletes
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.002
+- attack.t1003.004
+- attack.t1003.005
+- car.2013-07-001

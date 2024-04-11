@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems), Nikita Nazarov, oscd.community
+date: 2020/10/06
+description: Detects use of WinAPI functions in PowerShell scripts
+falsepositives:
+- Unknown
+filename: posh_ps_win_api_susp_access.yml
+level: high
+modified: 2023/06/20
+references:
+- https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse
+related:
+- id: ba3f5c1b-6272-4119-9dbd-0bc8d21c2702
+  type: similar
+status: experimental
+tags:
+- attack.execution
+- attack.t1059.001
+- attack.t1106

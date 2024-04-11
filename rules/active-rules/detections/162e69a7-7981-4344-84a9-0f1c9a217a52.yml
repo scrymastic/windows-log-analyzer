@@ -1,0 +1,16 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: foreach
+    - ScriptBlockText|contains: Get-ChildItem
+    - ScriptBlockText|contains: '-Path '
+    - ScriptBlockText|contains: '-ErrorAction '
+    - ScriptBlockText|contains: SilentlyContinue
+    - ScriptBlockText|contains: 'Out-File '
+    - ScriptBlockText|contains: -append
+- condition: selection
+id: 162e69a7-7981-4344-84a9-0f1c9a217a52
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

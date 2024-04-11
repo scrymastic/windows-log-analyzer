@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|endswith: \Microsoft\.NETFramework\DbgManagedDebugger
+- filter:
+  - and:
+    - Details|==: '"C:\Windows\system32\vsjitdebugger.exe" PID %d APPDOM %d EXTEXT
+        "%s" EVTHDL %d'
+- condition: selection and not filter
+id: 9827ae57-3802-418f-994b-d5ecf5cd974b
+logsource:
+  category: registry_set
+  product: windows

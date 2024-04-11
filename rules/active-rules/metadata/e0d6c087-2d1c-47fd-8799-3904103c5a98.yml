@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/11/09
+description: Detects code fragments found in small and obfuscated AMSI bypass PowerShell
+  scripts
+falsepositives:
+- Unknown
+filename: posh_ps_amsi_bypass_pattern_nov22.yml
+level: high
+modified: ''
+references:
+- https://www.mdsec.co.uk/2018/06/exploring-powershell-amsi-and-logging-evasion/
+- https://twitter.com/cyb3rops/status/1588574518057979905?s=20&t=A7hh93ONM7ni1Rj1jO5OaA
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.001
+- attack.execution

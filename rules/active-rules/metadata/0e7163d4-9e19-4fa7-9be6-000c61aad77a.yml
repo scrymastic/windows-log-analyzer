@@ -1,0 +1,22 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/07/30
+description: Detects the creation of a named pipe matching a pattern used by CobaltStrike
+  Malleable C2 profiles
+falsepositives:
+- Unknown
+filename: pipe_created_hktl_cobaltstrike_re.yml
+level: critical
+modified: 2022/12/31
+references:
+- https://svch0st.medium.com/guide-to-named-pipes-and-hunting-for-cobalt-strike-pipes-dc46b2c5f575
+- https://gist.github.com/MHaggis/6c600e524045a6d49c35291a21e10752
+related:
+- id: 85adeb13-4fc9-4e68-8a4a-c7cb2c336eb7
+  type: similar
+- id: d5601f8c-b26f-4ab0-9035-69e11a8d4ad2
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.privilege_escalation
+- attack.t1055

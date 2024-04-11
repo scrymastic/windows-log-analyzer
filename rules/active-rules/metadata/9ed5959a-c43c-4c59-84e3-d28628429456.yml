@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/17
+description: Detects the "iscsicpl.exe" UAC bypass technique that leverages a DLL
+  Search Order hijacking technique to load a custom DLL's from temp or a any user
+  controlled location in the users %PATH%
+falsepositives:
+- Unknown
+filename: image_load_uac_bypass_iscsicpl.yml
+level: high
+modified: 2022/07/25
+references:
+- https://github.com/hackerhouse-opensource/iscsicpl_bypassUAC
+- https://twitter.com/wdormann/status/1547583317410607110
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.privilege_escalation
+- attack.t1548.002

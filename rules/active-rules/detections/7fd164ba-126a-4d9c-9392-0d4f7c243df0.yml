@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetFilename|contains: \AppData\Local\Temp\
+      - TargetFilename|contains: \Users\Public\
+      - TargetFilename|contains: \Windows\Temp\
+      - TargetFilename|contains: :\Temp\
+    - or:
+      - TargetFilename|endswith: .one
+      - TargetFilename|endswith: .onepkg
+- filter_main_onenote:
+  - and:
+    - Image|contains: :\Program Files\Microsoft Office\
+    - Image|endswith: \ONENOTE.EXE
+- condition: selection and not 1 of filter_main_*
+id: 7fd164ba-126a-4d9c-9392-0d4f7c243df0
+logsource:
+  category: file_event
+  product: windows

@@ -1,0 +1,14 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \unregmp2.exe
+      - OriginalFileName|==: unregmp2.exe
+- selection_cmd:
+  - and:
+    - CommandLine|contains: ' /HideWMP'
+- condition: all of selection_*
+id: 727454c0-d851-48b0-8b89-385611ab0704
+logsource:
+  category: process_creation
+  product: windows

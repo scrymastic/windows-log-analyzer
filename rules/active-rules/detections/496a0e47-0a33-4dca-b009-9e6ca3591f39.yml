@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4769
+    - TicketOptions|==: '0x40810000'
+    - TicketEncryptionType|==: '0x17'
+- reduction:
+  - and:
+    - ServiceName|endswith: $
+- condition: selection and not reduction
+id: 496a0e47-0a33-4dca-b009-9e6ca3591f39
+logsource:
+  product: windows
+  service: security

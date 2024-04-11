@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/06/06
+description: Detects blocked load attempts of revoked drivers
+falsepositives:
+- Unknown
+filename: win_codeintegrity_revoked_driver_blocked.yml
+level: high
+modified: ''
+references:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/event-id-explanations
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/event-tag-explanations
+- Internal Research
+related: []
+status: test
+tags:
+- attack.privilege_escalation
+- attack.t1543

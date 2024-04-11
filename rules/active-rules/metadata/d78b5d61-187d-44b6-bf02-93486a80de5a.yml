@@ -1,0 +1,16 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/12/07
+description: Detects the use of the Dinject PowerShell cradle based on the specific
+  flags
+falsepositives:
+- Unlikely
+filename: proc_creation_win_hktl_dinjector.yml
+level: critical
+modified: 2023/02/04
+references:
+- https://github.com/snovvcrash/DInjector
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1055

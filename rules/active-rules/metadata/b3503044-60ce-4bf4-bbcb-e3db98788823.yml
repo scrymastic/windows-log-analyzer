@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems)
+date: 2019/10/16
+description: Detects a method to load DLL via LSASS process using an undocumented
+  Registry key
+falsepositives:
+- Unknown
+filename: registry_event_susp_lsass_dll_load.yml
+level: high
+modified: 2022/04/21
+references:
+- https://blog.xpnsec.com/exploring-mimikatz-part-1/
+- https://twitter.com/SBousseaden/status/1183745981189427200
+related: []
+status: test
+tags:
+- attack.execution
+- attack.persistence
+- attack.t1547.008

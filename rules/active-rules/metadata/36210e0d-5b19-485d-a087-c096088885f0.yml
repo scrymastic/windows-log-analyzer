@@ -1,0 +1,16 @@
+author: Florian Roth (Nextron Systems), Daniel Bohannon (idea), Roberto Rodriguez
+  (Fix)
+date: 2019/01/16
+description: Detects suspicious PowerShell invocation with a parameter substring
+falsepositives:
+- Unknown
+filename: proc_creation_win_powershell_susp_parameter_variation.yml
+level: high
+modified: 2022/07/14
+references:
+- http://www.danielbohannon.com/blog-1/2017/3/12/powershell-execution-argument-obfuscation-how-it-can-make-detection-easier
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

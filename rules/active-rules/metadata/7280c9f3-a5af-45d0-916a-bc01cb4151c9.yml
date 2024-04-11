@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/02/25
+description: Detects suspicious activity in which the MSExchangeMailboxReplication
+  process writes .asp and .apsx files to disk, which could be a sign of ProxyShell
+  exploitation
+falsepositives:
+- Unknown
+filename: file_event_win_susp_exchange_aspx_write.yml
+level: high
+modified: ''
+references:
+- https://redcanary.com/blog/blackbyte-ransomware/
+related: []
+status: test
+tags:
+- attack.initial_access
+- attack.t1190
+- attack.persistence
+- attack.t1505.003

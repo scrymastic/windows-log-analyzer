@@ -1,0 +1,19 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetObject|contains: \Control\SafeBoot\Minimal\
+      - TargetObject|contains: \Control\SafeBoot\Network\
+    - TargetObject|endswith: \(Default)
+    - Details|==: Service
+- filter_optional_sophos:
+  - and:
+    - Image|==: C:\WINDOWS\system32\msiexec.exe
+    - or:
+      - TargetObject|endswith: \Control\SafeBoot\Minimal\SAVService\(Default)
+      - TargetObject|endswith: \Control\SafeBoot\Network\SAVService\(Default)
+- condition: selection and not 1 of filter_optional_*
+id: 1547e27c-3974-43e2-a7d7-7f484fb928ec
+logsource:
+  category: registry_set
+  product: windows

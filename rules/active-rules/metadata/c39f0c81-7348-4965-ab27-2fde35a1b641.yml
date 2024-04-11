@@ -1,0 +1,18 @@
+author: Roberto Rodriguez @Cyb3rWard0g, Open Threat Research (OTR)
+date: 2020/10/12
+description: Detects a threat actor creating a file named `iertutil.dll` in the `C:\Program
+  Files\Internet Explorer\` directory over the network for a DCOM InternetExplorer
+  DLL Hijack scenario.
+falsepositives:
+- Unknown
+filename: win_security_dcom_iertutil_dll_hijack.yml
+level: high
+modified: 2022/11/26
+references:
+- https://threathunterplaybook.com/hunts/windows/201009-RemoteDCOMIErtUtilDLLHijack/notebook.html
+related: []
+status: test
+tags:
+- attack.lateral_movement
+- attack.t1021.002
+- attack.t1021.003

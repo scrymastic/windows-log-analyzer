@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: PSAsyncShell
+- condition: selection
+id: afd3df04-948d-46f6-ae44-25966c44b97f
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

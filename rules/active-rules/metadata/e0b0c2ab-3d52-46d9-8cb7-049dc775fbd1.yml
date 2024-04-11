@@ -1,0 +1,24 @@
+author: frack113
+date: 2021/12/20
+description: 'Adversaries may search the Registry on compromised systems for insecurely
+  stored credentials.
+
+  The Windows Registry stores configuration information that can be used by the system
+  or other programs.
+
+  Adversaries may query the Registry looking for credentials and passwords that have
+  been stored for use by other programs or services
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_reg_enumeration_for_credentials_in_registry.yml
+level: medium
+modified: 2022/12/25
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1552.002/T1552.002.md
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1552.002

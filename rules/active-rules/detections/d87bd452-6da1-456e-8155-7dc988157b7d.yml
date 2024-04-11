@@ -1,0 +1,21 @@
+detection:
+- selection_openasrundll:
+  - and:
+    - CommandLine|contains: ShellExec_RunDLL
+- selection_suspcli:
+  - and:
+    - or:
+      - CommandLine|contains: regsvr32
+      - CommandLine|contains: msiexec
+      - CommandLine|contains: \Users\Public\
+      - CommandLine|contains: odbcconf
+      - CommandLine|contains: \Desktop\
+      - CommandLine|contains: \Temp\
+      - CommandLine|contains: Invoke-
+      - CommandLine|contains: iex
+      - CommandLine|contains: comspec
+- condition: all of selection_*
+id: d87bd452-6da1-456e-8155-7dc988157b7d
+logsource:
+  category: process_creation
+  product: windows

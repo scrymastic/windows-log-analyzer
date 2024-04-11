@@ -1,0 +1,19 @@
+detection:
+- selection_pe:
+  - and:
+    - or:
+      - Image|endswith: \setspn.exe
+      - OriginalFileName|==: setspn.exe
+      - and:
+        - Description|contains: Query or reset the computer
+        - Description|contains: SPN attribute
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: ' -q '
+      - CommandLine|contains: ' /q '
+- condition: all of selection_*
+id: 1eeed653-dbc8-4187-ad0c-eeebb20e6599
+logsource:
+  category: process_creation
+  product: windows

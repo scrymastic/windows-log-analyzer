@@ -1,0 +1,30 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - OriginalFileName|==: Cmd.Exe
+      - OriginalFileName|==: CONHOST.EXE
+      - OriginalFileName|==: 7z.exe
+      - OriginalFileName|==: WinRAR.exe
+      - OriginalFileName|==: wevtutil.exe
+      - OriginalFileName|==: net.exe
+      - OriginalFileName|==: net1.exe
+      - OriginalFileName|==: netsh.exe
+      - OriginalFileName|==: InstallUtil.exe
+- filter:
+  - and:
+    - or:
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \conhost.exe
+      - Image|endswith: \7z.exe
+      - Image|endswith: \WinRAR.exe
+      - Image|endswith: \wevtutil.exe
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+      - Image|endswith: \netsh.exe
+      - Image|endswith: \InstallUtil.exe
+- condition: selection and not filter
+id: 36480ae1-a1cb-4eaa-a0d6-29801d7e9142
+logsource:
+  category: process_creation
+  product: windows

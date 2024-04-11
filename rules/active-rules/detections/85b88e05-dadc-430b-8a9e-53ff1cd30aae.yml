@@ -1,0 +1,26 @@
+detection:
+- selection_keys:
+  - and:
+    - or:
+      - TargetObject|contains: Control Panel\Desktop
+      - TargetObject|contains: CurrentVersion\Policies\ActiveDesktop
+      - TargetObject|contains: CurrentVersion\Policies\System
+- selection_values_1:
+  - and:
+    - TargetObject|endswith: NoChangingWallpaper
+    - Details|==: DWORD (0x00000001)
+- selection_values_2:
+  - and:
+    - TargetObject|endswith: \Wallpaper
+- selection_values_3:
+  - and:
+    - TargetObject|endswith: \WallpaperStyle
+    - Details|==: '2'
+- filter_main_svchost:
+  - and:
+    - Image|endswith: \svchost.exe
+- condition: selection_keys and 1 of selection_values_* and not 1 of filter_main_*
+id: 85b88e05-dadc-430b-8a9e-53ff1cd30aae
+logsource:
+  category: registry_set
+  product: windows

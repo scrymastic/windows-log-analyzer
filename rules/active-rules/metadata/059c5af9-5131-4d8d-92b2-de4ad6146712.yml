@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/05/16
+description: Detects the creation of the LiveKD driver by a process image other than
+  "livekd.exe".
+falsepositives:
+- Administrators might rename LiveKD before its usage which could trigger this. Add
+  additional names you use to the filter
+filename: file_event_win_sysinternals_livekd_driver_susp_creation.yml
+level: high
+modified: ''
+references:
+- Internal Research
+related:
+- id: 16fe46bb-4f64-46aa-817d-ff7bec4a2352
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.privilege_escalation

@@ -1,0 +1,26 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \KrbRelay.exe
+      - OriginalFileName|==: KrbRelay.exe
+- selection_cli_1:
+  - and:
+    - CommandLine|contains: ' -spn '
+    - CommandLine|contains: ' -clsid '
+    - CommandLine|contains: ' -rbcd '
+- selection_cli_2:
+  - and:
+    - CommandLine|contains: shadowcred
+    - CommandLine|contains: clsid
+    - CommandLine|contains: spn
+- selection_cli_3:
+  - and:
+    - CommandLine|contains: 'spn '
+    - CommandLine|contains: 'session '
+    - CommandLine|contains: 'clsid '
+- condition: 1 of selection_*
+id: e96253b8-6b3b-4f90-9e59-3b24b99cf9b4
+logsource:
+  category: process_creation
+  product: windows

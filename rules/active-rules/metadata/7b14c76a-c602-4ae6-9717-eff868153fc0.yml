@@ -1,0 +1,22 @@
+author: Stamatis Chatzimangou (st0pp3r)
+date: 2024/01/05
+description: 'Detects execution of NoFilter, a tool for abusing the Windows Filtering
+  Platform for privilege escalation via hardcoded policy name indicators
+
+  '
+falsepositives:
+- Unknown
+filename: win_security_hktl_nofilter.yml
+level: high
+modified: ''
+references:
+- https://github.com/deepinstinct/NoFilter/blob/121d215ab130c5e8e3ad45a7e7fcd56f4de97b4d/NoFilter/Consts.cpp
+- https://github.com/deepinstinct/NoFilter
+- https://www.deepinstinct.com/blog/nofilter-abusing-windows-filtering-platform-for-privilege-escalation
+- https://x.com/_st0pp3r_/status/1742203752361128162?s=20
+related: []
+status: experimental
+tags:
+- attack.privilege_escalation
+- attack.t1134
+- attack.t1134.001

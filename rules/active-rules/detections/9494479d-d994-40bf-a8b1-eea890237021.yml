@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \schtasks.exe
+    - CommandLine|contains: '/Create '
+    - or:
+      - ParentImage|contains: \AppData\Local\
+      - ParentImage|contains: \AppData\Roaming\
+      - ParentImage|contains: \Temporary Internet
+      - ParentImage|contains: \Users\Public\
+- filter:
+  - and:
+    - or:
+      - CommandLine|contains: update_task.xml
+      - CommandLine|contains: unattended.ini
+- condition: selection and not 1 of filter*
+id: 9494479d-d994-40bf-a8b1-eea890237021
+logsource:
+  category: process_creation
+  product: windows

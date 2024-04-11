@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \CCleanerDU.dll
+- filter_main_path:
+  - and:
+    - or:
+      - Image|startswith: C:\Program Files\CCleaner\
+      - Image|startswith: C:\Program Files (x86)\CCleaner\
+    - or:
+      - Image|endswith: \CCleaner.exe
+      - Image|endswith: \CCleaner64.exe
+- condition: selection and not 1 of filter_main_*
+id: 1fbc0671-5596-4e17-8682-f020a0b995dc
+logsource:
+  category: image_load
+  product: windows

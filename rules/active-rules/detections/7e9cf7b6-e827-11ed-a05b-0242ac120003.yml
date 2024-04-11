@@ -1,0 +1,78 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - DestinationHostname|contains: drive.googleapis.com
+      - DestinationHostname|contains: oauth2.googleapis.com
+      - DestinationHostname|contains: sheets.googleapis.com
+      - DestinationHostname|contains: www.googleapis.com
+- filter_optional_brave:
+  - and:
+    - Image|endswith: \brave.exe
+- filter_optional_chrome:
+  - and:
+    - or:
+      - Image|endswith: :\Program Files\Google\Chrome\Application\chrome.exe
+      - Image|endswith: :\Program Files (x86)\Google\Chrome\Application\chrome.exe
+- filter_optional_google_drive:
+  - and:
+    - Image|contains: :\Program Files\Google\Drive File Stream\
+    - Image|endswith: \GoogleDriveFS.exe
+- filter_optional_firefox:
+  - and:
+    - or:
+      - Image|endswith: :\Program Files\Mozilla Firefox\firefox.exe
+      - Image|endswith: :\Program Files (x86)\Mozilla Firefox\firefox.exe
+- filter_optional_ie:
+  - and:
+    - or:
+      - Image|endswith: :\Program Files (x86)\Internet Explorer\iexplore.exe
+      - Image|endswith: :\Program Files\Internet Explorer\iexplore.exe
+- filter_optional_maxthon:
+  - and:
+    - Image|endswith: \maxthon.exe
+- filter_optional_edge_1:
+  - and:
+    - or:
+      - Image|contains: :\Program Files (x86)\Microsoft\EdgeWebView\Application\
+      - or:
+        - Image|endswith: :\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+        - Image|endswith: :\Program Files\Microsoft\Edge\Application\msedge.exe
+        - Image|endswith: \WindowsApps\MicrosoftEdge.exe
+- filter_optional_edge_2:
+  - and:
+    - or:
+      - Image|contains: :\Program Files (x86)\Microsoft\EdgeCore\
+      - Image|contains: :\Program Files\Microsoft\EdgeCore\
+    - or:
+      - Image|endswith: \msedge.exe
+      - Image|endswith: \msedgewebview2.exe
+- filter_optional_opera:
+  - and:
+    - Image|endswith: \opera.exe
+- filter_optional_safari:
+  - and:
+    - Image|endswith: \safari.exe
+- filter_optional_seamonkey:
+  - and:
+    - Image|endswith: \seamonkey.exe
+- filter_optional_vivaldi:
+  - and:
+    - Image|endswith: \vivaldi.exe
+- filter_optional_whale:
+  - and:
+    - Image|endswith: \whale.exe
+- filter_optional_googleupdate:
+  - and:
+    - Image|endswith: \GoogleUpdate.exe
+- filter_optional_outlook.exe:
+  - and:
+    - Image|endswith: \outlook.exe
+- filter_optional_teams:
+  - and:
+    - Image|endswith: \teams.exe
+- condition: selection and not 1 of filter_optional_*
+id: 7e9cf7b6-e827-11ed-a05b-0242ac120003
+logsource:
+  category: network_connection
+  product: windows

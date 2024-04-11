@@ -1,0 +1,16 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \wscript.exe
+    - TargetFilename|endswith: \AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+- condition: selection
+id: 9b64de98-9db3-4033-bd7a-f51430105f00
+logsource:
+  category: file_event
+  product: windows

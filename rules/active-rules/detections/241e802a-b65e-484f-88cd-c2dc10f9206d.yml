@@ -1,0 +1,14 @@
+detection:
+- selection_cmd:
+  - and:
+    - or:
+      - OriginalFileName|==: Cmd.Exe
+      - Image|endswith: \cmd.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: <
+- condition: all of selection_*
+id: 241e802a-b65e-484f-88cd-c2dc10f9206d
+logsource:
+  category: process_creation
+  product: windows

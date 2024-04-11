@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5001
+- condition: selection
+id: b28e58e4-2a72-4fae-bdee-0fbe904db642
+logsource:
+  product: windows
+  service: windefend

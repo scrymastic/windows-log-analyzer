@@ -1,0 +1,46 @@
+detection:
+- selection_tools_cmd:
+  - and:
+    - Image|endswith: \cmd.exe
+    - CommandLine|contains: 'copy '
+- selection_tools_pwsh:
+  - and:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - CommandLine|contains: copy-item
+      - CommandLine|contains: ' copy '
+      - CommandLine|contains: 'cpi '
+      - CommandLine|contains: ' cp '
+- selection_tools_other:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \robocopy.exe
+        - Image|endswith: \xcopy.exe
+      - or:
+        - OriginalFileName|==: robocopy.exe
+        - OriginalFileName|==: XCOPY.EXE
+- selection_target_path:
+  - and:
+    - or:
+      - CommandLine|contains: \System32
+      - CommandLine|contains: \SysWOW64
+      - CommandLine|contains: \WinSxS
+- selection_target_lolbin:
+  - and:
+    - or:
+      - CommandLine|contains: \bitsadmin.exe
+      - CommandLine|contains: \calc.exe
+      - CommandLine|contains: \certutil.exe
+      - CommandLine|contains: \cmdl32.exe
+      - CommandLine|contains: \cscript.exe
+      - CommandLine|contains: \mshta.exe
+      - CommandLine|contains: \rundll32.exe
+      - CommandLine|contains: \wscript.exe
+- condition: 1 of selection_tools_* and all of selection_target_*
+id: f5d19838-41b5-476c-98d8-ba8af4929ee2
+logsource:
+  category: process_creation
+  product: windows

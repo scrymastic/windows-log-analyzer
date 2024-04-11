@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \vivaldi_elf.dll
+- filter_main_legit_path:
+  - and:
+    - Image|endswith: \Vivaldi\Application\vivaldi.exe
+    - ImageLoaded|contains: \Vivaldi\Application\
+- condition: selection and not 1 of filter_main_*
+id: 2092cacb-d77b-4f98-ab0d-32b32f99a054
+logsource:
+  category: image_load
+  product: windows

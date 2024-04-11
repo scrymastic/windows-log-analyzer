@@ -1,0 +1,35 @@
+detection:
+- selection_cmd:
+  - and:
+    - Image|endswith: \cmd.exe
+    - CommandLine|contains: 'copy '
+- selection_pwsh:
+  - and:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - CommandLine|contains: copy-item
+      - CommandLine|contains: ' copy '
+      - CommandLine|contains: 'cpi '
+      - CommandLine|contains: ' cp '
+- selection_other:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \robocopy.exe
+        - Image|endswith: \xcopy.exe
+      - or:
+        - OriginalFileName|==: robocopy.exe
+        - OriginalFileName|==: XCOPY.EXE
+- target:
+  - and:
+    - or:
+      - CommandLine|contains: \System32
+      - CommandLine|contains: \SysWOW64
+      - CommandLine|contains: \WinSxS
+- condition: 1 of selection_* and target
+id: fff9d2b7-e11c-4a69-93d3-40ef66189767
+logsource:
+  category: process_creation
+  product: windows

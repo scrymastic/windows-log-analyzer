@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|endswith: SOFTWARE\Policies\Microsoft\Windows Defender\UX Configuration\Notification_Suppress
+    - Details|==: DWORD (0x00000001)
+- condition: selection
+id: 0c93308a-3f1b-40a9-b649-57ea1a1c1d63
+logsource:
+  category: registry_set
+  product: windows

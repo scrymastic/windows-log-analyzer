@@ -1,0 +1,14 @@
+detection:
+- selection_HideFileExt:
+  - and:
+    - TargetObject|endswith: \SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\HideFileExt
+    - Details|==: DWORD (0x00000001)
+- selection_Hidden:
+  - and:
+    - TargetObject|endswith: \SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Hidden
+    - Details|==: DWORD (0x00000002)
+- condition: 1 of selection_*
+id: 5df86130-4e95-4a54-90f7-26541b40aec2
+logsource:
+  category: registry_set
+  product: windows

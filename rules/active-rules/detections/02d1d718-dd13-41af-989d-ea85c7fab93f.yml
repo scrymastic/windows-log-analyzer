@@ -1,0 +1,49 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - SourceImage|endswith: \bash.exe
+      - SourceImage|endswith: \cscript.exe
+      - SourceImage|endswith: \cvtres.exe
+      - SourceImage|endswith: \defrag.exe
+      - SourceImage|endswith: \dnx.exe
+      - SourceImage|endswith: \esentutl.exe
+      - SourceImage|endswith: \excel.exe
+      - SourceImage|endswith: \expand.exe
+      - SourceImage|endswith: \find.exe
+      - SourceImage|endswith: \findstr.exe
+      - SourceImage|endswith: \forfiles.exe
+      - SourceImage|endswith: \gpupdate.exe
+      - SourceImage|endswith: \hh.exe
+      - SourceImage|endswith: \installutil.exe
+      - SourceImage|endswith: \lync.exe
+      - SourceImage|endswith: \makecab.exe
+      - SourceImage|endswith: \mDNSResponder.exe
+      - SourceImage|endswith: \monitoringhost.exe
+      - SourceImage|endswith: \msbuild.exe
+      - SourceImage|endswith: \mshta.exe
+      - SourceImage|endswith: \mspaint.exe
+      - SourceImage|endswith: \outlook.exe
+      - SourceImage|endswith: \ping.exe
+      - SourceImage|endswith: \provtool.exe
+      - SourceImage|endswith: \python.exe
+      - SourceImage|endswith: \regsvr32.exe
+      - SourceImage|endswith: \robocopy.exe
+      - SourceImage|endswith: \runonce.exe
+      - SourceImage|endswith: \sapcimc.exe
+      - SourceImage|endswith: \smartscreen.exe
+      - SourceImage|endswith: \spoolsv.exe
+      - SourceImage|endswith: \tstheme.exe
+      - SourceImage|endswith: \userinit.exe
+      - SourceImage|endswith: \vssadmin.exe
+      - SourceImage|endswith: \vssvc.exe
+      - SourceImage|endswith: \w3wp.exe
+      - SourceImage|endswith: \winscp.exe
+      - SourceImage|endswith: \winword.exe
+      - SourceImage|endswith: \wmic.exe
+      - SourceImage|endswith: \wscript.exe
+- condition: selection
+id: 02d1d718-dd13-41af-989d-ea85c7fab93f
+logsource:
+  category: create_remote_thread
+  product: windows

@@ -1,0 +1,16 @@
+author: frack113
+date: 2022/07/27
+description: Detects potential persistence using Appx DebugPath
+falsepositives:
+- Unknown
+filename: registry_set_persistence_appx_debugger.yml
+level: medium
+modified: 2023/08/17
+references:
+- https://oddvar.moe/2018/09/06/persistence-using-universal-windows-platform-apps-appx/
+- https://github.com/rootm0s/WinPwnage
+related: []
+status: experimental
+tags:
+- attack.persistence
+- attack.t1546.015

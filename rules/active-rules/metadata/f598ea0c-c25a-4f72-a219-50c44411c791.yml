@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems), Elastic (idea)
+date: 2022/10/17
+description: Detects possible addition of shadow credentials to an active directory
+  object.
+falsepositives:
+- Modifications in the msDS-KeyCredentialLink attribute can be done legitimately by
+  the Azure AD Connect synchronization account or the ADFS service account. These
+  accounts can be added as Exceptions. (From elastic FP section)
+filename: win_security_susp_possible_shadow_credentials_added.yml
+level: high
+modified: ''
+references:
+- https://www.elastic.co/guide/en/security/8.4/potential-shadow-credentials-added-to-ad-object.html
+- https://cyberstoph.org/posts/2022/03/detecting-shadow-credentials/
+- https://twitter.com/SBousseaden/status/1581300963650187264?
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1556

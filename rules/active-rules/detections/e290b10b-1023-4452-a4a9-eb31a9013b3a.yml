@@ -1,0 +1,17 @@
+detection:
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: '/in:'
+      - CommandLine|contains: '/out:'
+      - CommandLine|contains: '/uri:'
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \DataSvcUtil.exe
+      - OriginalFileName|==: DataSvcUtil.exe
+- condition: all of selection*
+id: e290b10b-1023-4452-a4a9-eb31a9013b3a
+logsource:
+  category: process_creation
+  product: windows

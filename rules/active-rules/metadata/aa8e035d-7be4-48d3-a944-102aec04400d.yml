@@ -1,0 +1,15 @@
+author: frack113
+date: 2021/11/26
+description: Download or Copy file with Extrac32
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_extrac32.yml
+level: medium
+modified: 2022/08/13
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Extrac32/
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1105

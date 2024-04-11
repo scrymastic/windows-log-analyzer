@@ -1,0 +1,17 @@
+author: Timur Zinniatullin, oscd.community
+date: 2020/10/18
+description: Detects Obfuscated Powershell via COMPRESS OBFUSCATION
+falsepositives:
+- Unknown
+filename: proc_creation_win_hktl_invoke_obfuscation_via_compress.yml
+level: medium
+modified: 2022/12/29
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

@@ -1,0 +1,19 @@
+detection:
+- schtasks_exe:
+  - and:
+    - Image|endswith: \schtasks.exe
+    - CommandLine|contains: /delete
+    - CommandLine|contains: /tn
+    - or:
+      - CommandLine|contains: \Windows\SystemRestore\SR
+      - CommandLine|contains: \Windows\Windows Defender\
+      - CommandLine|contains: \Windows\BitLocker
+      - CommandLine|contains: \Windows\WindowsBackup\
+      - CommandLine|contains: \Windows\WindowsUpdate\
+      - CommandLine|contains: \Windows\UpdateOrchestrator\
+      - CommandLine|contains: \Windows\ExploitGuard
+- condition: all of schtasks_*
+id: dbc1f800-0fe0-4bc0-9c66-292c2abe3f78
+logsource:
+  category: process_creation
+  product: windows

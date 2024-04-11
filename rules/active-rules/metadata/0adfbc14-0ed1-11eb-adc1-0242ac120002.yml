@@ -1,0 +1,17 @@
+author: Jonathan Cheong, oscd.community
+date: 2020/10/15
+description: Detects Obfuscated use of Environment Variables to execute PowerShell
+falsepositives:
+- Unknown
+filename: posh_ps_invoke_obfuscation_var.yml
+level: high
+modified: 2022/12/02
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

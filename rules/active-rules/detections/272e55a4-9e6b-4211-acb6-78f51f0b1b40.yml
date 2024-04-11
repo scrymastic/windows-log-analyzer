@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - EventType|==: DeleteValue
+    - TargetObject|contains: SOFTWARE\Microsoft\Windows Defender\Windows Defender
+        Exploit Guard\Controlled Folder Access\ProtectedFolders
+- condition: selection
+id: 272e55a4-9e6b-4211-acb6-78f51f0b1b40
+logsource:
+  category: registry_delete
+  product: windows

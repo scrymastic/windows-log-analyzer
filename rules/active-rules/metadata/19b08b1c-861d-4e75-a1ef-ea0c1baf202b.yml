@@ -1,0 +1,23 @@
+author: Florian Roth (Nextron Systems), Jonhnathan Ribeiro, oscd.community, Nasreddine
+  Bencherchali (Nextron Systems)
+date: 2023/02/15
+description: Detects the execution of certutil with certain flags that allow the utility
+  to download files.
+falsepositives:
+- Unknown
+filename: proc_creation_win_certutil_download.yml
+level: medium
+modified: ''
+references:
+- https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certutil
+- https://forensicitguy.github.io/agenttesla-vba-certutil-download/
+- https://news.sophos.com/en-us/2021/04/13/compromised-exchange-server-hosting-cryptojacker-targeting-other-exchange-servers/
+- https://twitter.com/egre55/status/1087685529016193025
+- https://lolbas-project.github.io/lolbas/Binaries/Certutil/
+related:
+- id: 13e6fe51-d478-4c7e-b0f2-6da9b400a829
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027

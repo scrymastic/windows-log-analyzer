@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5012
+- condition: selection
+id: 686c0b4b-9dd3-4847-9077-d6c1bbe36fcb
+logsource:
+  product: windows
+  service: windefend

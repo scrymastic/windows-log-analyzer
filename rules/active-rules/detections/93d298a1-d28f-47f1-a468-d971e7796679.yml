@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \Microsoft\Windows Defender\Features\TamperProtection
+    - Details|==: DWORD (0x00000000)
+- filter_msmpeng_client:
+  - and:
+    - Image|startswith: C:\ProgramData\Microsoft\Windows Defender\Platform\
+    - Image|endswith: \MsMpEng.exe
+- filter_msmpeng_domain_controller:
+  - and:
+    - Image|==: C:\Program Files\Windows Defender\MsMpEng.exe
+- condition: selection and not 1 of filter_*
+id: 93d298a1-d28f-47f1-a468-d971e7796679
+logsource:
+  category: registry_set
+  product: windows

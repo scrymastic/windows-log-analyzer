@@ -1,0 +1,22 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \rundll32.exe
+      - OriginalFileName|==: RUNDLL32.EXE
+      - CommandLine|contains: rundll32
+- selection_cli_dll:
+  - and:
+    - CommandLine|contains: advpack
+- selection_cli_ordinal:
+  - and:
+    - or:
+      - and:
+        - CommandLine|contains: '#+'
+        - CommandLine|contains: '12'
+      - CommandLine|contains: '#-'
+- condition: all of selection_*
+id: a1473adb-5338-4a20-b4c3-126763e2d3d3
+logsource:
+  category: process_creation
+  product: windows

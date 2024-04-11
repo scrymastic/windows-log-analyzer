@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - Provider_Name|==: Application Error
+    - EventID|==: 1000
+    - Data|contains: MsMpEng.exe
+    - Data|contains: mpengine.dll
+- condition: selection
+id: 545a5da6-f103-4919-a519-e9aec1026ee4
+logsource:
+  product: windows
+  service: application

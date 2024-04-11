@@ -1,0 +1,21 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \gpg.exe
+        - Image|endswith: \gpg2.exe
+      - OriginalFileName|==: gpg.exe
+      - Description|==: "GnuPG\u2019s OpenPGP tool"
+- filter_main_legit_location:
+  - and:
+    - or:
+      - Image|contains: :\Program Files (x86)\GNU\GnuPG\bin\
+      - Image|contains: :\Program Files (x86)\GnuPG VS-Desktop\
+      - Image|contains: :\Program Files (x86)\GnuPG\bin\
+      - Image|contains: :\Program Files (x86)\Gpg4win\bin\
+- condition: selection and not 1 of filter_main_*
+id: 77df53a5-1d78-4f32-bc5a-0e7465bd8f41
+logsource:
+  category: process_creation
+  product: windows

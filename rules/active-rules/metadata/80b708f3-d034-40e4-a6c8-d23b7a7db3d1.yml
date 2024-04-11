@@ -1,0 +1,19 @@
+author: Nikita Nazarov, oscd.community
+date: 2020/10/12
+description: Detects Obfuscated Powershell via Stdin in Scripts
+falsepositives:
+- Unknown
+filename: win_security_invoke_obfuscation_via_stdin_services_security.yml
+level: high
+modified: 2022/11/29
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+related:
+- id: 487c7524-f892-4054-b263-8a0ace63fc25
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

@@ -1,0 +1,22 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \Microsoft\Active Setup\Installed Components
+    - TargetObject|endswith: \StubPath
+- filter_optional_chrome:
+  - and:
+    - Details|contains: C:\Program Files\Google\Chrome\Application\
+    - Details|contains: \Installer\chrmstp.exe" --configure-user-settings --verbose-logging
+        --system-level
+- filter_optional_edge:
+  - and:
+    - or:
+      - Details|contains: C:\Program Files (x86)\Microsoft\Edge\Application\
+      - Details|contains: C:\Program Files\Microsoft\Edge\Application\
+    - Details|endswith: \Installer\setup.exe" --configure-user-settings --verbose-logging
+        --system-level --msedge --channel=stable
+- condition: selection and not 1 of filter_optional_*
+id: c74d7efc-8826-45d9-b8bb-f04fac9e4eff
+logsource:
+  category: registry_event
+  product: windows

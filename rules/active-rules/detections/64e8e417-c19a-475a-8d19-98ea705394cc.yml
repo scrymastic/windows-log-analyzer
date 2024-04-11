@@ -1,0 +1,35 @@
+detection:
+- selection:
+  - and:
+    - ContextInfo|contains: '*'
+- filter_powershell:
+  - and:
+    - or:
+      - ContextInfo|contains: = powershell
+      - ContextInfo|contains: = C:\Windows\System32\WindowsPowerShell\v1.0\powershell
+      - ContextInfo|contains: = C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell
+      - ContextInfo|contains: = C:/Windows/System32/WindowsPowerShell/v1.0/powershell
+      - ContextInfo|contains: = C:/Windows/SysWOW64/WindowsPowerShell/v1.0/powershell
+- filter_sdiagnhost:
+  - and:
+    - ContextInfo|contains: = C:\WINDOWS\System32\sdiagnhost.exe -Embedding
+- filter_citrix:
+  - and:
+    - ContextInfo|contains: ConfigSyncRun.exe
+- filter_adace:
+  - and:
+    - ContextInfo|contains: C:\Windows\system32\dsac.exe
+- filter_winrm:
+  - and:
+    - ContextInfo|contains: C:\Windows\system32\wsmprovhost.exe -Embedding
+- filter_help_update:
+  - and:
+    - or:
+      - Payload|contains: Update-Help
+      - Payload|contains: Failed to update Help for the module
+- condition: selection and not 1 of filter_*
+id: 64e8e417-c19a-475a-8d19-98ea705394cc
+logsource:
+  category: ps_module
+  definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+  product: windows

@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems), Beyu Denis, oscd.community
+date: 2022/05/17
+description: Detects potential arbitrary file download using a Microsoft Office application
+falsepositives:
+- Unknown
+filename: proc_creation_win_office_arbitrary_cli_download.yml
+level: high
+modified: 2023/06/22
+references:
+- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Winword/
+- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Powerpnt/
+- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Excel/
+- https://medium.com/@reegun/unsanitized-file-validation-leads-to-malicious-payload-download-via-office-binaries-202d02db7191
+related:
+- id: 0c79148b-118e-472b-bdb7-9b57b444cc19
+  type: obsoletes
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1202

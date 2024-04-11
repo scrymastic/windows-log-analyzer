@@ -1,0 +1,35 @@
+detection:
+- selection_specific_options:
+  - and:
+    - CommandLine|contains: '--config '
+    - CommandLine|contains: '--no-check-certificate '
+    - CommandLine|contains: ' copy '
+- selection_rclone_img:
+  - and:
+    - or:
+      - Image|endswith: \rclone.exe
+      - Description|==: Rsync for cloud storage
+- selection_rclone_cli:
+  - and:
+    - or:
+      - CommandLine|contains: pass
+      - CommandLine|contains: user
+      - CommandLine|contains: copy
+      - CommandLine|contains: sync
+      - CommandLine|contains: config
+      - CommandLine|contains: lsd
+      - CommandLine|contains: remote
+      - CommandLine|contains: ls
+      - CommandLine|contains: mega
+      - CommandLine|contains: pcloud
+      - CommandLine|contains: ftp
+      - CommandLine|contains: ignore-existing
+      - CommandLine|contains: auto-confirm
+      - CommandLine|contains: transfers
+      - CommandLine|contains: multi-thread-streams
+      - CommandLine|contains: 'no-check-certificate '
+- condition: selection_specific_options or all of selection_rclone_*
+id: e37db05d-d1f9-49c8-b464-cee1a4b11638
+logsource:
+  category: process_creation
+  product: windows

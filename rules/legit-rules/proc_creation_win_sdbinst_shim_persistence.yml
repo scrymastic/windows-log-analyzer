@@ -1,0 +1,43 @@
+title: Potential Shim Database Persistence via Sdbinst.EXE
+id: 517490a7-115a-48c6-8862-1a481504d5a8
+related:
+- id: 18ee686c-38a3-4f65-9f44-48a077141f42
+  type: similar
+status: test
+description: 'Detects installation of a new shim using sdbinst.exe.
+
+  Adversaries may establish persistence and/or elevate privileges by executing malicious
+  content triggered by application shims
+
+  '
+references:
+- https://www.mandiant.com/resources/blog/fin7-shim-databases-persistence
+author: Markus Neis
+date: 2019/01/16
+modified: 2023/12/06
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1546.011
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \sdbinst.exe
+      - OriginalFileName|==: sdbinst.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: .sdb
+- filter_optional_iis:
+  - and:
+    - ParentImage|endswith: \msiexec.exe
+    - or:
+      - CommandLine|contains: :\Program Files (x86)\IIS Express\iisexpressshim.sdb
+      - CommandLine|contains: :\Program Files\IIS Express\iisexpressshim.sdb
+- condition: all of selection_* and not 1 of filter_optional_*
+falsepositives:
+- Unknown
+level: medium

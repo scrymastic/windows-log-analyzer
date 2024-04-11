@@ -1,0 +1,16 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/08/03
+description: Detects execution of "VSDiagnostics.exe" with the "start" command in
+  order to launch and proxy arbitrary binaries.
+falsepositives:
+- Legitimate usage for tracing and diagnostics purposes
+filename: proc_creation_win_vsdiagnostics_execution_proxy.yml
+level: medium
+modified: ''
+references:
+- https://twitter.com/0xBoku/status/1679200664013135872
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1218

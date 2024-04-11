@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/08/12
+description: Detects usage of findstr with the "EVERYONE" or "BUILTIN" keywords. This
+  is seen being used in combination with "icacls" to look for misconfigured files
+  or folders permissions
+falsepositives:
+- Unknown
+filename: proc_creation_win_findstr_recon_everyone.yml
+level: medium
+modified: 2023/11/11
+references:
+- https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/
+related: []
+status: experimental
+tags:
+- attack.credential_access
+- attack.t1552.006

@@ -1,0 +1,17 @@
+author: frack113
+date: 2021/07/12
+description: Adversaries may disable security tools to avoid possible detection of
+  their tools and activities by uninstalling Crowdstrike Falcon
+falsepositives:
+- Administrator might leverage the same command line for debugging or other purposes.
+  However this action must be always investigated
+filename: proc_creation_win_uninstall_crowdstrike_falcon.yml
+level: high
+modified: 2023/03/09
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1562.001/T1562.001.md
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.001

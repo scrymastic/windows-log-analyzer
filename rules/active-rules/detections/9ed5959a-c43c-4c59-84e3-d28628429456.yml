@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - Image|==: C:\Windows\SysWOW64\iscsicpl.exe
+    - ImageLoaded|endswith: \iscsiexe.dll
+- filter:
+  - and:
+    - ImageLoaded|contains: C:\Windows\
+    - ImageLoaded|contains: iscsiexe.dll
+- condition: selection and not filter
+id: 9ed5959a-c43c-4c59-84e3-d28628429456
+logsource:
+  category: image_load
+  product: windows

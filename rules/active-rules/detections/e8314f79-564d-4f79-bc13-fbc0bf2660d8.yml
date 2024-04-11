@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: -Alias
+    - ScriptBlockText|contains: ' -Value (-join('
+- condition: selection
+id: e8314f79-564d-4f79-bc13-fbc0bf2660d8
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

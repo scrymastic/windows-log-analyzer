@@ -1,0 +1,22 @@
+author: frack113
+date: 2022/02/21
+description: 'The Reset-ComputerMachinePassword cmdlet changes the computer account
+  password that the computers use to authenticate to the domain controllers in the
+  domain.
+
+  You can use it to reset the password of the local computer.
+
+  '
+falsepositives:
+- Administrator PowerShell scripts
+filename: posh_pm_susp_reset_computermachinepassword.yml
+level: medium
+modified: ''
+references:
+- https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/reset-computermachinepassword?view=powershell-5.1
+- https://thedfirreport.com/2022/02/21/qbot-and-zerologon-lead-to-full-domain-compromise/
+related: []
+status: test
+tags:
+- attack.initial_access
+- attack.t1078

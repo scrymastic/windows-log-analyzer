@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: 'Mount-DiskImage '
+    - ScriptBlockText|contains: '-ImagePath '
+- condition: selection
+id: 29e1c216-6408-489d-8a06-ee9d151ef819
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

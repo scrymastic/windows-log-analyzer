@@ -1,0 +1,37 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 854
+    - or:
+      - Path|contains: .githubusercontent.com
+      - Path|contains: anonfiles.com
+      - Path|contains: cdn.discordapp.com
+      - Path|contains: cdn.discordapp.com/attachments/
+      - Path|contains: ddns.net
+      - Path|contains: dl.dropboxusercontent.com
+      - Path|contains: ghostbin.co
+      - Path|contains: glitch.me
+      - Path|contains: gofile.io
+      - Path|contains: hastebin.com
+      - Path|contains: mediafire.com
+      - Path|contains: mega.nz
+      - Path|contains: onrender.com
+      - Path|contains: paste.ee
+      - Path|contains: pastebin.com
+      - Path|contains: pastebin.pl
+      - Path|contains: pastetext.net
+      - Path|contains: privatlab.com
+      - Path|contains: privatlab.net
+      - Path|contains: send.exploit.in
+      - Path|contains: sendspace.com
+      - Path|contains: storage.googleapis.com
+      - Path|contains: storjshare.io
+      - Path|contains: supabase.co
+      - Path|contains: temp.sh
+      - Path|contains: transfer.sh
+      - Path|contains: ufile.io
+- condition: selection
+id: 8b48ad89-10d8-4382-a546-50588c410f0d
+logsource:
+  product: windows
+  service: appxdeployment-server

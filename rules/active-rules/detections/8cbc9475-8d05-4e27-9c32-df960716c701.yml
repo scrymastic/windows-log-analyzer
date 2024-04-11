@@ -1,0 +1,32 @@
+detection:
+- selection_reg_img:
+  - and:
+    - or:
+      - Image|endswith: \reg.exe
+      - OriginalFileName|==: reg.exe
+- selection_reg_flag:
+  - and:
+    - CommandLine|contains: add
+- selection_keys:
+  - and:
+    - or:
+      - CommandLine|contains: Control Panel\Desktop
+      - CommandLine|contains: CurrentVersion\Policies\ActiveDesktop
+      - CommandLine|contains: CurrentVersion\Policies\System
+- selection_cli_reg_1:
+  - and:
+    - CommandLine|contains: /v NoChangingWallpaper
+    - CommandLine|contains: /d 1
+- selection_cli_reg_2:
+  - and:
+    - CommandLine|contains: /v Wallpaper
+    - CommandLine|contains: /t REG_SZ
+- selection_cli_reg_3:
+  - and:
+    - CommandLine|contains: /v WallpaperStyle
+    - CommandLine|contains: /d 2
+- condition: all of selection_reg_* and selection_keys and 1 of selection_cli_reg_*
+id: 8cbc9475-8d05-4e27-9c32-df960716c701
+logsource:
+  category: process_creation
+  product: windows

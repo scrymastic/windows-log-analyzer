@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
+date: 2020/10/12
+description: Detects WMIC executing "process call create" with suspicious calls to
+  processes such as "rundll32", "regsrv32", etc.
+falsepositives:
+- Unknown
+filename: proc_creation_win_wmic_susp_process_creation.yml
+level: high
+modified: 2023/02/14
+references:
+- https://thedfirreport.com/2020/10/08/ryuks-return/
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/ransomware-hive-conti-avoslocker
+related:
+- id: 526be59f-a573-4eea-b5f7-f0973207634d
+  type: derived
+status: test
+tags:
+- attack.execution
+- attack.t1047

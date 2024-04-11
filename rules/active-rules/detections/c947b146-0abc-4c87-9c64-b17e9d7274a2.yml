@@ -1,0 +1,47 @@
+detection:
+- selection1_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+        - Image|endswith: \wmic.exe
+        - Image|endswith: \vssadmin.exe
+        - Image|endswith: \diskshadow.exe
+      - or:
+        - OriginalFileName|==: PowerShell.EXE
+        - OriginalFileName|==: pwsh.dll
+        - OriginalFileName|==: wmic.exe
+        - OriginalFileName|==: VSSADMIN.EXE
+        - OriginalFileName|==: diskshadow.exe
+- selection1_cli:
+  - and:
+    - CommandLine|contains: shadow
+    - CommandLine|contains: delete
+- selection2_img:
+  - and:
+    - or:
+      - Image|endswith: \wbadmin.exe
+      - OriginalFileName|==: WBADMIN.EXE
+- selection2_cli:
+  - and:
+    - CommandLine|contains: delete
+    - CommandLine|contains: catalog
+    - CommandLine|contains: quiet
+- selection3_img:
+  - and:
+    - or:
+      - Image|endswith: \vssadmin.exe
+      - OriginalFileName|==: VSSADMIN.EXE
+- selection3_cli:
+  - and:
+    - CommandLine|contains: resize
+    - CommandLine|contains: shadowstorage
+    - or:
+      - CommandLine|contains: unbounded
+      - CommandLine|contains: /MaxSize=
+- condition: (all of selection1*) or (all of selection2*) or (all of selection3*)
+id: c947b146-0abc-4c87-9c64-b17e9d7274a2
+logsource:
+  category: process_creation
+  product: windows

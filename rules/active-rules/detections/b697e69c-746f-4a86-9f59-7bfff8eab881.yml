@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|endswith: '"\system32\cleanmgr.exe /autoclean /d C:'
+    - ParentCommandLine|==: C:\Windows\system32\svchost.exe -k netsvcs -p -s Schedule
+    - or:
+      - IntegrityLevel|==: High
+      - IntegrityLevel|==: System
+- condition: selection
+id: b697e69c-746f-4a86-9f59-7bfff8eab881
+logsource:
+  category: process_creation
+  product: windows

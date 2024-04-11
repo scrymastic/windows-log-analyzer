@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \excel.exe
+    - or:
+      - ImageLoaded|contains: \Desktop\
+      - ImageLoaded|contains: \Downloads\
+      - ImageLoaded|contains: \Perflogs\
+      - ImageLoaded|contains: \Temp\
+      - ImageLoaded|contains: \Users\Public\
+      - ImageLoaded|contains: \Windows\Tasks\
+    - ImageLoaded|endswith: .xll
+- condition: selection
+id: af4c4609-5755-42fe-8075-4effb49f5d44
+logsource:
+  category: image_load
+  product: windows

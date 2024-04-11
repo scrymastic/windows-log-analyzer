@@ -1,0 +1,37 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \addinutil.exe
+      - OriginalFileName|==: AddInUtil.exe
+- selection_susp_1_flags:
+  - and:
+    - or:
+      - CommandLine|contains: '-AddInRoot:'
+      - CommandLine|contains: '-PipelineRoot:'
+- selection_susp_1_paths:
+  - and:
+    - or:
+      - CommandLine|contains: \AppData\Local\Temp\
+      - CommandLine|contains: \Desktop\
+      - CommandLine|contains: \Downloads\
+      - CommandLine|contains: \Users\Public\
+      - CommandLine|contains: \Windows\Temp\
+- selection_susp_2:
+  - and:
+    - or:
+      - CommandLine|contains: -AddInRoot:.
+      - CommandLine|contains: -AddInRoot:"."
+      - CommandLine|contains: -PipelineRoot:.
+      - CommandLine|contains: -PipelineRoot:"."
+    - or:
+      - CurrentDirectory|contains: \AppData\Local\Temp\
+      - CurrentDirectory|contains: \Desktop\
+      - CurrentDirectory|contains: \Downloads\
+      - CurrentDirectory|contains: \Users\Public\
+      - CurrentDirectory|contains: \Windows\Temp\
+- condition: selection_img and (all of selection_susp_1_* or selection_susp_2)
+id: 631b22a4-70f4-4e2f-9ea8-42f84d9df6d8
+logsource:
+  category: process_creation
+  product: windows

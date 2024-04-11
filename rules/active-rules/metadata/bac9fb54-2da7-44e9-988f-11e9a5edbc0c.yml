@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/06/20
+description: Detects possible password spraying attempts using Dsacls
+falsepositives:
+- Legitimate use of dsacls to bind to an LDAP session
+filename: proc_creation_win_dsacls_password_spray.yml
+level: medium
+modified: 2023/02/04
+references:
+- https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/using-dsacls-to-check-ad-object-permissions#password-spraying-anyone
+- https://ss64.com/nt/dsacls.html
+- https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771151(v=ws.11)
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

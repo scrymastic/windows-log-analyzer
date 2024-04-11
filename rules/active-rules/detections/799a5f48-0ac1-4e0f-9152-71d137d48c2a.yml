@@ -1,0 +1,36 @@
+detection:
+- selection_dll:
+  - and:
+    - or:
+      - ImageLoaded|endswith: \coreclr.dll
+      - ImageLoaded|endswith: \facesdk.dll
+      - ImageLoaded|endswith: \HPCustPartUI.dll
+      - ImageLoaded|endswith: \libcef.dll
+      - ImageLoaded|endswith: \ZIPDLL.dll
+- selection_folders_1:
+  - and:
+    - or:
+      - ImageLoaded|contains: :\Perflogs\
+      - ImageLoaded|contains: :\Users\Public\
+      - ImageLoaded|contains: \Temporary Internet
+      - ImageLoaded|contains: \Windows\Temp\
+- selection_folders_2:
+  - and:
+    - or:
+      - and:
+        - ImageLoaded|contains: :\Users\
+        - ImageLoaded|contains: \Favorites\
+      - and:
+        - ImageLoaded|contains: :\Users\
+        - ImageLoaded|contains: \Favourites\
+      - and:
+        - ImageLoaded|contains: :\Users\
+        - ImageLoaded|contains: \Contacts\
+      - and:
+        - ImageLoaded|contains: :\Users\
+        - ImageLoaded|contains: \Pictures\
+- condition: selection_dll and 1 of selection_folders_*
+id: 799a5f48-0ac1-4e0f-9152-71d137d48c2a
+logsource:
+  category: image_load
+  product: windows

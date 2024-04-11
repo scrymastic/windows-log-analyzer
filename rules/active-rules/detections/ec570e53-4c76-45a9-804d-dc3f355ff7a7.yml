@@ -1,0 +1,23 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Description|contains: 7-Zip
+      - or:
+        - Image|endswith: \7z.exe
+        - Image|endswith: \7zr.exe
+        - Image|endswith: \7za.exe
+      - or:
+        - OriginalFileName|==: 7z.exe
+        - OriginalFileName|==: 7za.exe
+- selection_extension:
+  - and:
+    - or:
+      - CommandLine|contains: .dmp
+      - CommandLine|contains: .dump
+      - CommandLine|contains: .hdmp
+- condition: all of selection_*
+id: ec570e53-4c76-45a9-804d-dc3f355ff7a7
+logsource:
+  category: process_creation
+  product: windows

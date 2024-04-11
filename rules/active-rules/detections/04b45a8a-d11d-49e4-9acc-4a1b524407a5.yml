@@ -1,0 +1,18 @@
+detection:
+- selection_edge:
+  - and:
+    - TargetObject|endswith: \SOFTWARE\Policies\Microsoft\Edge\BuiltInDnsClientEnabled
+    - Details|==: DWORD (0x00000001)
+- selection_chrome:
+  - and:
+    - TargetObject|endswith: \SOFTWARE\Google\Chrome\DnsOverHttpsMode
+    - Details|==: secure
+- selection_firefox:
+  - and:
+    - TargetObject|endswith: \SOFTWARE\Policies\Mozilla\Firefox\DNSOverHTTPS\Enabled
+    - Details|==: DWORD (0x00000001)
+- condition: 1 of selection_*
+id: 04b45a8a-d11d-49e4-9acc-4a1b524407a5
+logsource:
+  category: registry_set
+  product: windows

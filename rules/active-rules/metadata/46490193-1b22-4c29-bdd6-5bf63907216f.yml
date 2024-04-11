@@ -1,0 +1,16 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/03/05
+description: Detects VBScript content stored into registry keys as seen being used
+  by UNC2452 group
+falsepositives:
+- Unknown
+filename: registry_set_vbs_payload_stored.yml
+level: high
+modified: 2023/08/17
+references:
+- https://www.microsoft.com/security/blog/2021/03/04/goldmax-goldfinder-sibot-analyzing-nobelium-malware/
+related: []
+status: experimental
+tags:
+- attack.persistence
+- attack.t1547.001

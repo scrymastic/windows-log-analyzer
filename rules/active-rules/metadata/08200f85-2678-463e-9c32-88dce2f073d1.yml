@@ -1,0 +1,15 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/13
+description: Detects when an attacker tries to backdoor the MSSQL server by adding
+  a backdoor account to the sysadmin fixed server role
+falsepositives:
+- Rare legitimate administrative activity
+filename: win_mssql_add_sysadmin_account.yml
+level: high
+modified: ''
+references:
+- https://www.netspi.com/blog/technical/network-penetration-testing/sql-server-persistence-part-1-startup-stored-procedures/
+related: []
+status: test
+tags:
+- attack.persistence

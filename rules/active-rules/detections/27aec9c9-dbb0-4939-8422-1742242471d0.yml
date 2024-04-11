@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: cmd
+    - CommandLine|contains: '"set'
+    - CommandLine|contains: -f
+    - or:
+      - CommandLine|contains: /c
+      - CommandLine|contains: /r
+- condition: selection
+id: 27aec9c9-dbb0-4939-8422-1742242471d0
+logsource:
+  category: process_creation
+  product: windows

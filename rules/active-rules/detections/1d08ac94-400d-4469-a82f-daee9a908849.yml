@@ -1,0 +1,16 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - DestinationHostname|contains: tunnel.us.ngrok.com
+      - DestinationHostname|contains: tunnel.eu.ngrok.com
+      - DestinationHostname|contains: tunnel.ap.ngrok.com
+      - DestinationHostname|contains: tunnel.au.ngrok.com
+      - DestinationHostname|contains: tunnel.sa.ngrok.com
+      - DestinationHostname|contains: tunnel.jp.ngrok.com
+      - DestinationHostname|contains: tunnel.in.ngrok.com
+- condition: selection
+id: 1d08ac94-400d-4469-a82f-daee9a908849
+logsource:
+  category: network_connection
+  product: windows

@@ -1,0 +1,17 @@
+detection:
+- selection_root:
+  - and:
+    - Image|endswith: \wusa.exe
+    - CommandLine|contains: '/extract:'
+- selection_paths:
+  - and:
+    - or:
+      - CommandLine|contains: :\PerfLogs\
+      - CommandLine|contains: :\Users\Public\
+      - CommandLine|contains: :\Windows\Temp\
+      - CommandLine|contains: \Appdata\Local\Temp\
+- condition: all of selection_*
+id: c74c0390-3e20-41fd-a69a-128f0275a5ea
+logsource:
+  category: process_creation
+  product: windows

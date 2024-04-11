@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \dump64.exe
+- procdump_flags:
+  - and:
+    - or:
+      - CommandLine|contains: ' -ma '
+      - CommandLine|contains: accepteula
+- filter:
+  - and:
+    - Image|contains: \Installer\Feedback\dump64.exe
+- condition: ( selection and not filter ) or ( selection and procdump_flags )
+id: 129966c9-de17-4334-a123-8b58172e664d
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 1033
+    - Provider_Name|==: Microsoft-Windows-DHCP-Server
+- condition: selection
+id: 13fc89a9-971e-4ca6-b9dc-aa53a445bf40
+logsource:
+  product: windows
+  service: system

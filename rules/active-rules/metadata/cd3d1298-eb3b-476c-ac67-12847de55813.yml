@@ -1,0 +1,18 @@
+author: Julia Fomina, oscd.community
+date: 2020/10/09
+description: Detects using Rasautou.exe for loading arbitrary .DLL specified in -d
+  option and executes the export specified in -p.
+falsepositives:
+- Unlikely
+filename: proc_creation_win_lolbin_rasautou_dll_execution.yml
+level: medium
+modified: ''
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Rasautou/
+- https://github.com/fireeye/DueDLLigence
+- https://www.fireeye.com/blog/threat-research/2019/10/staying-hidden-on-the-endpoint-evading-detection-with-shellcode.html
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1218

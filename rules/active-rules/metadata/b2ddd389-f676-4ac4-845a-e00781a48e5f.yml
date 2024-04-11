@@ -1,0 +1,16 @@
+author: Anton Kutepov, oscd.community
+date: 2020/02/05
+description: Detects using SettingSyncHost.exe to run hijacked binary
+falsepositives:
+- Unknown
+filename: proc_creation_win_lolbin_settingsynchost.yml
+level: high
+modified: 2021/11/27
+references:
+- https://www.hexacorn.com/blog/2020/02/02/settingsynchost-exe-as-a-lolbin
+related: []
+status: test
+tags:
+- attack.execution
+- attack.defense_evasion
+- attack.t1574.008

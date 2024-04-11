@@ -1,0 +1,19 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \excel.exe
+      - Image|endswith: \mspub.exe
+      - Image|endswith: \outlook.exe
+      - Image|endswith: \onenote.exe
+      - Image|endswith: \onenoteim.exe
+      - Image|endswith: \powerpnt.exe
+      - Image|endswith: \winword.exe
+    - or:
+      - ImageLoaded|contains: \System.Management.Automation.Dll
+      - ImageLoaded|contains: \System.Management.Automation.ni.Dll
+- condition: selection
+id: bb2ba6fb-95d4-4a25-89fc-30bb736c021a
+logsource:
+  category: image_load
+  product: windows

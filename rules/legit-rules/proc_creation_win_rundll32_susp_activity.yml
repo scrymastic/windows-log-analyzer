@@ -1,0 +1,115 @@
+title: Potentially Suspicious Rundll32 Activity
+id: e593cf51-88db-4ee1-b920-37e89012a3c9
+status: test
+description: Detects suspicious execution of rundll32, with specific calls to some
+  DLLs with known LOLBIN functionalities
+references:
+- http://www.hexacorn.com/blog/2017/05/01/running-programs-via-proxy-jumping-on-a-edr-bypass-trampoline/
+- https://twitter.com/Hexacorn/status/885258886428725250
+- https://gist.github.com/ryhanson/227229866af52e2d963cf941af135a52
+- https://twitter.com/nas_bench/status/1433344116071583746
+- https://twitter.com/eral4m/status/1479106975967240209
+- https://twitter.com/eral4m/status/1479080793003671557
+author: juju4, Jonhnathan Ribeiro, oscd.community, Nasreddine Bencherchali (Nextron
+  Systems)
+date: 2019/01/16
+modified: 2023/05/17
+tags:
+- attack.defense_evasion
+- attack.t1218.011
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection:
+  - and:
+    - or:
+      - and:
+        - CommandLine|contains: 'javascript:'
+        - CommandLine|contains: .RegisterXLL
+      - and:
+        - CommandLine|contains: url.dll
+        - CommandLine|contains: OpenURL
+      - and:
+        - CommandLine|contains: url.dll
+        - CommandLine|contains: OpenURLA
+      - and:
+        - CommandLine|contains: url.dll
+        - CommandLine|contains: FileProtocolHandler
+      - and:
+        - CommandLine|contains: zipfldr.dll
+        - CommandLine|contains: RouteTheCall
+      - and:
+        - CommandLine|contains: shell32.dll
+        - CommandLine|contains: Control_RunDLL
+      - and:
+        - CommandLine|contains: shell32.dll
+        - CommandLine|contains: ShellExec_RunDLL
+      - and:
+        - CommandLine|contains: mshtml.dll
+        - CommandLine|contains: PrintHTML
+      - and:
+        - CommandLine|contains: advpack.dll
+        - CommandLine|contains: LaunchINFSection
+      - and:
+        - CommandLine|contains: advpack.dll
+        - CommandLine|contains: RegisterOCX
+      - and:
+        - CommandLine|contains: ieadvpack.dll
+        - CommandLine|contains: LaunchINFSection
+      - and:
+        - CommandLine|contains: ieadvpack.dll
+        - CommandLine|contains: RegisterOCX
+      - and:
+        - CommandLine|contains: ieframe.dll
+        - CommandLine|contains: OpenURL
+      - and:
+        - CommandLine|contains: shdocvw.dll
+        - CommandLine|contains: OpenURL
+      - and:
+        - CommandLine|contains: syssetup.dll
+        - CommandLine|contains: SetupInfObjectInstallAction
+      - and:
+        - CommandLine|contains: setupapi.dll
+        - CommandLine|contains: InstallHinfSection
+      - and:
+        - CommandLine|contains: pcwutl.dll
+        - CommandLine|contains: LaunchApplication
+      - and:
+        - CommandLine|contains: dfshim.dll
+        - CommandLine|contains: ShOpenVerbApplication
+      - and:
+        - CommandLine|contains: dfshim.dll
+        - CommandLine|contains: ShOpenVerbShortcut
+      - and:
+        - CommandLine|contains: scrobj.dll
+        - CommandLine|contains: GenerateTypeLib
+        - CommandLine|contains: http
+      - and:
+        - CommandLine|contains: shimgvw.dll
+        - CommandLine|contains: ImageView_Fullscreen
+        - CommandLine|contains: http
+      - and:
+        - CommandLine|contains: comsvcs.dll
+        - CommandLine|contains: MiniDump
+- filter_main_screensaver:
+  - and:
+    - CommandLine|contains: shell32.dll,Control_RunDLL desk.cpl,screensaver,@screensaver
+- filter_main_parent_cpl:
+  - and:
+    - ParentImage|==: C:\Windows\System32\control.exe
+    - ParentCommandLine|contains: .cpl
+    - CommandLine|contains: Shell32.dll
+    - CommandLine|contains: Control_RunDLL
+    - CommandLine|contains: .cpl
+- filter_main_startmenu:
+  - and:
+    - ParentImage|==: C:\Windows\System32\control.exe
+    - CommandLine|startswith: '"C:\Windows\system32\rundll32.exe" Shell32.dll,Control_RunDLL
+        "C:\Windows\System32\'
+    - CommandLine|endswith: .cpl",
+- condition: selection and not 1 of filter_main_*
+falsepositives:
+- False positives depend on scripts and administrative tools used in the monitored
+  environment
+level: medium

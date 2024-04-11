@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 16
+    - Provider_Name|==: Microsoft-Windows-Kernel-General
+    - or:
+      - HiveName|contains: \Temp\SAM
+      - HiveName|contains: \Temp\SECURITY
+- condition: selection
+id: 39f919f3-980b-4e6f-a975-8af7e507ef2b
+logsource:
+  product: windows
+  service: system

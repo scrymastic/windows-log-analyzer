@@ -1,0 +1,42 @@
+detection:
+- selection_processes:
+  - and:
+    - or:
+      - Image|endswith: \RuntimeBroker.exe
+      - Image|endswith: \outlook.exe
+      - Image|endswith: \thunderbird.exe
+      - Image|endswith: \brave.exe
+      - Image|endswith: \chrome.exe
+      - Image|endswith: \firefox.exe
+      - Image|endswith: \iexplore.exe
+      - Image|endswith: \maxthon.exe
+      - Image|endswith: \MicrosoftEdge.exe
+      - Image|endswith: \msedge.exe
+      - Image|endswith: \msedgewebview2.exe
+      - Image|endswith: \opera.exe
+      - Image|endswith: \safari.exe
+      - Image|endswith: \seamonkey.exe
+      - Image|endswith: \vivaldi.exe
+      - Image|endswith: \whale.exe
+- selection_ext:
+  - and:
+    - or:
+      - or:
+        - TargetFilename|endswith: .docm
+        - TargetFilename|endswith: .dotm
+        - TargetFilename|endswith: .xlsm
+        - TargetFilename|endswith: .xltm
+        - TargetFilename|endswith: .potm
+        - TargetFilename|endswith: .pptm
+      - or:
+        - TargetFilename|contains: .docm:Zone
+        - TargetFilename|contains: .dotm:Zone
+        - TargetFilename|contains: .xlsm:Zone
+        - TargetFilename|contains: .xltm:Zone
+        - TargetFilename|contains: .potm:Zone
+        - TargetFilename|contains: .pptm:Zone
+- condition: all of selection_*
+id: 0e29e3a7-1ad8-40aa-b691-9f82ecd33d66
+logsource:
+  category: file_event
+  product: windows

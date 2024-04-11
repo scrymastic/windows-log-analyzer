@@ -1,0 +1,15 @@
+author: X__Junior (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
+date: 2023/06/30
+description: Detects PowerShell commands that decrypt an ".LNK" "file to drop the
+  next stage of the malware.
+falsepositives:
+- Unlikely
+filename: proc_creation_win_powershell_decrypt_pattern.yml
+level: high
+modified: 2023/12/05
+references:
+- https://research.checkpoint.com/2023/chinese-threat-actors-targeting-europe-in-smugx-campaign/
+related: []
+status: experimental
+tags:
+- attack.execution

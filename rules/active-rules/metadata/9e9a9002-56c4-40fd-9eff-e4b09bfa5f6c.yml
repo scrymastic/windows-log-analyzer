@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/17
+description: Detects when a system process (i.e. located in system32, syswow64, etc.)
+  loads a DLL from a suspicious location or a location with permissive permissions
+  such as "C:\Users\Public"
+falsepositives:
+- Unknown
+filename: image_load_susp_dll_load_system_process.yml
+level: medium
+modified: 2023/09/18
+references:
+- https://github.com/hackerhouse-opensource/iscsicpl_bypassUAC (Idea)
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1070

@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems)
+date: 2017/03/05
+description: Detects suspicious PowerShell download command
+falsepositives:
+- PowerShell scripts that download content from the Internet
+filename: posh_ps_susp_download.yml
+level: medium
+modified: 2022/12/02
+references:
+- https://learn.microsoft.com/en-us/dotnet/api/system.net.webclient.downloadstring?view=net-8.0
+- https://learn.microsoft.com/en-us/dotnet/api/system.net.webclient.downloadfile?view=net-8.0
+related:
+- id: 65531a81-a694-4e31-ae04-f8ba5bc33759
+  type: derived
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

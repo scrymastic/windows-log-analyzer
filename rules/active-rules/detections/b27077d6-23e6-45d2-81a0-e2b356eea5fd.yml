@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: ttdinject.exe
+      - OriginalFileName|==: TTDInject.EXE
+- condition: selection
+id: b27077d6-23e6-45d2-81a0-e2b356eea5fd
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,30 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: Security\Trusted Locations\Location
+    - TargetObject|endswith: \Path
+- filter_exclude_known_paths:
+  - and:
+    - or:
+      - Details|contains: '%APPDATA%\Microsoft\Templates'
+      - Details|contains: '%%APPDATA%%\Microsoft\Templates'
+      - Details|contains: '%APPDATA%\Microsoft\Word\Startup'
+      - Details|contains: '%%APPDATA%%\Microsoft\Word\Startup'
+      - Details|contains: :\Program Files (x86)\Microsoft Office\root\Templates\
+      - Details|contains: :\Program Files\Microsoft Office (x86)\Templates
+      - Details|contains: :\Program Files\Microsoft Office\root\Templates\
+      - Details|contains: :\Program Files\Microsoft Office\Templates\
+- filter_main_office_click_to_run:
+  - and:
+    - Image|contains: :\Program Files\Common Files\Microsoft Shared\ClickToRun\
+    - Image|endswith: \OfficeClickToRun.exe
+- filter_main_office_apps:
+  - and:
+    - or:
+      - Image|contains: :\Program Files\Microsoft Office\
+      - Image|contains: :\Program Files (x86)\Microsoft Office\
+- condition: selection and not 1 of filter_main_* and not 1 of filter_exclude_*
+id: f742bde7-9528-42e5-bd82-84f51a8387d2
+logsource:
+  category: registry_set
+  product: windows

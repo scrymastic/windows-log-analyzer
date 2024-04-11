@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/01/12
+description: Detects potentially suspicious child process of applications launched
+  from inside the WindowsApps directory. This could be a sign of a rogue ".appx" package
+  installation/execution
+falsepositives:
+- Legitimate packages that make use of external binaries such as Windows Terminal
+filename: proc_creation_win_susp_appx_execution.yml
+level: medium
+modified: 2023/08/31
+references:
+- https://news.sophos.com/en-us/2021/11/11/bazarloader-call-me-back-attack-abuses-windows-10-apps-mechanism/
+- https://www.sentinelone.com/labs/inside-malicious-windows-apps-for-malware-deployment/
+related: []
+status: experimental
+tags:
+- attack.defense_evasion

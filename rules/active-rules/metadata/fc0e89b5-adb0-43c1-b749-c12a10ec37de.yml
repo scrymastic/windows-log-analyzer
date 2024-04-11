@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems), Tim Shelton
+date: 2022/08/08
+description: Detects execution of "reg.exe" commands with the "delete" flag on safe
+  boot registry keys. Often used by attacker to prevent safeboot execution of security
+  products
+falsepositives:
+- Unlikely
+filename: proc_creation_win_reg_delete_safeboot.yml
+level: high
+modified: 2023/02/04
+references:
+- https://www.trendmicro.com/en_us/research/22/e/avoslocker-ransomware-variant-abuses-driver-file-to-disable-anti-Virus-scans-log4shell.html
+related:
+- id: d7662ff6-9e97-4596-a61d-9839e32dee8d
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.001

@@ -1,0 +1,22 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/02/08
+description: Detects the creation of a macro file for Outlook.
+falsepositives:
+- Unlikely
+filename: file_event_win_office_outlook_susp_macro_creation.yml
+level: high
+modified: ''
+references:
+- https://www.mdsec.co.uk/2020/11/a-fresh-outlook-on-mail-based-persistence/
+- https://speakerdeck.com/heirhabarov/hunting-for-persistence-via-microsoft-exchange-server-or-outlook?slide=53
+- https://www.linkedin.com/pulse/outlook-backdoor-using-vba-samir-b-/
+related:
+- id: 8c31f563-f9a7-450c-bfa8-35f8f32f1f61
+  type: derived
+status: test
+tags:
+- attack.persistence
+- attack.command_and_control
+- attack.t1137
+- attack.t1008
+- attack.t1546

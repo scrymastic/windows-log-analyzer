@@ -1,0 +1,17 @@
+author: John Lambert (idea), Florian Roth (Nextron Systems)
+date: 2017/04/09
+description: Detects PowerShell calling a credential prompt
+falsepositives:
+- Unknown
+filename: posh_ps_prompt_credentials.yml
+level: high
+modified: 2022/12/25
+references:
+- https://twitter.com/JohnLaTwC/status/850381440629981184
+- https://t.co/ezOTGy1a1G
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.execution
+- attack.t1059.001

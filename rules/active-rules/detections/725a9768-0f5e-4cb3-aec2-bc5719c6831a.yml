@@ -1,0 +1,25 @@
+detection:
+- where_exe:
+  - and:
+    - or:
+      - Image|endswith: \where.exe
+      - OriginalFileName|==: where.exe
+- where_opt:
+  - and:
+    - or:
+      - CommandLine|contains: places.sqlite
+      - CommandLine|contains: cookies.sqlite
+      - CommandLine|contains: formhistory.sqlite
+      - CommandLine|contains: logins.json
+      - CommandLine|contains: key4.db
+      - CommandLine|contains: key3.db
+      - CommandLine|contains: sessionstore.jsonlz4
+      - CommandLine|contains: History
+      - CommandLine|contains: Bookmarks
+      - CommandLine|contains: Cookies
+      - CommandLine|contains: Login Data
+- condition: all of where_*
+id: 725a9768-0f5e-4cb3-aec2-bc5719c6831a
+logsource:
+  category: process_creation
+  product: windows

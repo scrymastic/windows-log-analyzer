@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \Services\WinSock2\Parameters\AutodialDLL
+- condition: selection
+id: e6fe26ee-d063-4f5b-b007-39e90aaf50e3
+logsource:
+  category: registry_set
+  product: windows

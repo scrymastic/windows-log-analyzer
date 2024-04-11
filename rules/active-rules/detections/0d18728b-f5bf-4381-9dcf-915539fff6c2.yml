@@ -1,0 +1,19 @@
+detection:
+- selection_eid:
+  - and:
+    - EventID|==: 3008
+- selection_query_1:
+  - and:
+    - or:
+      - QueryName|startswith: aaa.stage.
+      - QueryName|startswith: post.1
+- selection_query_2:
+  - and:
+    - QueryName|contains: .stage.123456.
+- condition: selection_eid and 1 of selection_query_*
+id: 0d18728b-f5bf-4381-9dcf-915539fff6c2
+logsource:
+  definition: 'Requirements: Microsoft-Windows-DNS Client Events/Operational Event
+    Log must be enabled/collected in order to receive the events.'
+  product: windows
+  service: dns-client

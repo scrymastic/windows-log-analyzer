@@ -1,0 +1,14 @@
+detection:
+- selection_basic:
+  - and:
+    - ScriptBlockText|contains: Get-Keystrokes
+- selection_high:
+  - and:
+    - ScriptBlockText|contains: Get-ProcAddress user32.dll GetAsyncKeyState
+    - ScriptBlockText|contains: Get-ProcAddress user32.dll GetForegroundWindow
+- condition: 1 of selection_*
+id: 34f90d3c-c297-49e9-b26d-911b05a4866c
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -1,0 +1,22 @@
+detection:
+- selection_power:
+  - and:
+    - or:
+      - Image|endswith: \powercfg.exe
+      - OriginalFileName|==: PowerCfg.exe
+- selection_standby:
+  - and:
+    - or:
+      - and:
+        - CommandLine|contains: '/setacvalueindex '
+        - CommandLine|contains: SCHEME_CURRENT
+        - CommandLine|contains: SUB_VIDEO
+        - CommandLine|contains: VIDEOCONLOCK
+      - and:
+        - CommandLine|contains: '-change '
+        - CommandLine|contains: -standby-timeout-
+- condition: all of selection_*
+id: f8d6a15e-4bc8-4c27-8e5d-2b10f0b73e5b
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5145
+    - ShareName|startswith: \\\\
+    - ShareName|endswith: \IPC$
+    - RelativeTargetName|==: lsarpc
+    - SubjectUserName|==: ANONYMOUS LOGON
+- condition: selection
+id: 1ce8c8a3-2723-48ed-8246-906ac91061a6
+logsource:
+  definition: The advanced audit policy setting "Object Access > Detailed File Share"
+    must be configured for Success/Failure
+  product: windows
+  service: security

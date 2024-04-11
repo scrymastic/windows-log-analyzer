@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \fodhelper.exe
+- condition: selection
+id: 7f741dcf-fc22-4759-87b4-9ae8376676a2
+logsource:
+  category: process_creation
+  product: windows

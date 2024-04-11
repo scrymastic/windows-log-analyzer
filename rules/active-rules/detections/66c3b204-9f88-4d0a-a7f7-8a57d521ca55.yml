@@ -1,0 +1,31 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: ' --cpu-priority='
+      - CommandLine|contains: --donate-level=0
+      - CommandLine|contains: ' -o pool.'
+      - CommandLine|contains: ' --nicehash'
+      - CommandLine|contains: ' --algo=rx/0 '
+      - CommandLine|contains: stratum+tcp://
+      - CommandLine|contains: stratum+udp://
+      - CommandLine|contains: LS1kb25hdGUtbGV2ZWw9
+      - CommandLine|contains: 0tZG9uYXRlLWxldmVsP
+      - CommandLine|contains: tLWRvbmF0ZS1sZXZlbD
+      - CommandLine|contains: c3RyYXR1bSt0Y3A6Ly
+      - CommandLine|contains: N0cmF0dW0rdGNwOi8v
+      - CommandLine|contains: zdHJhdHVtK3RjcDovL
+      - CommandLine|contains: c3RyYXR1bSt1ZHA6Ly
+      - CommandLine|contains: N0cmF0dW0rdWRwOi8v
+      - CommandLine|contains: zdHJhdHVtK3VkcDovL
+- filter:
+  - and:
+    - or:
+      - CommandLine|contains: ' pool.c '
+      - CommandLine|contains: ' pool.o '
+      - CommandLine|contains: gcc -
+- condition: selection and not filter
+id: 66c3b204-9f88-4d0a-a7f7-8a57d521ca55
+logsource:
+  category: process_creation
+  product: windows

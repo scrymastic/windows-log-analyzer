@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \7za.dll
+- filter_main_legit_path:
+  - and:
+    - or:
+      - Image|startswith: C:\Program Files (x86)\
+      - Image|startswith: C:\Program Files\
+    - or:
+      - ImageLoaded|startswith: C:\Program Files (x86)\
+      - ImageLoaded|startswith: C:\Program Files\
+- condition: selection and not 1 of filter_main_*
+id: 4f6edb78-5c21-42ab-a558-fd2a6fc1fd57
+logsource:
+  category: image_load
+  product: windows

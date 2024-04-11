@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \winget.exe
+      - OriginalFileName|==: winget.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: 'source '
+    - CommandLine|contains: 'add '
+    - CommandLine|contains: http://
+- condition: all of selection_*
+id: 81a0ecb5-0a41-4ba1-b2ba-c944eb92bfa2
+logsource:
+  category: process_creation
+  product: windows

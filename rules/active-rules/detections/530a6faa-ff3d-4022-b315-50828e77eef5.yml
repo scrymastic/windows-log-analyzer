@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+    - ServiceName|==: AnyDesk Service
+- condition: selection
+id: 530a6faa-ff3d-4022-b315-50828e77eef5
+logsource:
+  product: windows
+  service: system

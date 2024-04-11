@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \SYSTEM\CurrentControlSet\Control\LsaExtensionConfig\LsaSrv\Extensions
+- condition: selection
+id: 41f6531d-af6e-4c6e-918f-b946f2b85a36
+logsource:
+  category: registry_set
+  product: windows

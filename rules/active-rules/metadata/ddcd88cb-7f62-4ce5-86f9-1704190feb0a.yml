@@ -1,0 +1,16 @@
+author: frack113
+date: 2022/12/25
+description: Detects usage of "Reflection.Assembly" load functions to dynamically
+  load assemblies in memory
+falsepositives:
+- Legitimate use of the library
+filename: posh_ps_dotnet_assembly_from_file.yml
+level: medium
+modified: ''
+references:
+- https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=50
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1620

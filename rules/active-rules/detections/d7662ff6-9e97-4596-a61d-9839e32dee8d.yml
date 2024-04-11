@@ -1,0 +1,19 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \reg.exe
+      - OriginalFileName|==: reg.exe
+- selection_safeboot:
+  - and:
+    - CommandLine|contains: \SYSTEM\CurrentControlSet\Control\SafeBoot
+- selection_flag:
+  - and:
+    - or:
+      - CommandLine|contains: ' copy '
+      - CommandLine|contains: ' add '
+- condition: all of selection*
+id: d7662ff6-9e97-4596-a61d-9839e32dee8d
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,15 @@
+author: Antonlovesdnb
+date: 2020/02/19
+description: Detects CLR DLL being loaded by an Office Product
+falsepositives:
+- Unknown
+filename: image_load_office_dotnet_clr_dll_load.yml
+level: medium
+modified: 2023/03/29
+references:
+- https://medium.com/threatpunter/detecting-adversary-tradecraft-with-image-load-event-logging-and-eql-8de93338c16
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1204.002

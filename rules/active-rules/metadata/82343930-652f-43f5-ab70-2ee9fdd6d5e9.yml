@@ -1,0 +1,16 @@
+author: X__Junior (Nextron Systems)
+date: 2023/06/20
+description: Detects potential "ShellDispatch.dll" functionality abuse to execute
+  arbitrary binaries via "ShellExecute"
+falsepositives:
+- Unlikely
+filename: proc_creation_win_rundll32_shelldispatch_potential_abuse.yml
+level: medium
+modified: ''
+references:
+- https://www.hexacorn.com/blog/2023/06/07/this-lolbin-doesnt-exist/
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.defense_evasion

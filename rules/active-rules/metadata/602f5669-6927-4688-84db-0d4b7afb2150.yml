@@ -1,0 +1,16 @@
+author: Ali Alwashali
+date: 2022/08/21
+description: Detects scripts or commands that disabled the Powershell command history
+  by removing psreadline module
+falsepositives:
+- Legitimate script that disables the command history
+filename: posh_ps_disable_psreadline_command_history.yml
+level: high
+modified: ''
+references:
+- https://twitter.com/DissectMalware/status/1062879286749773824
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1070.003

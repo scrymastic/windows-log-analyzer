@@ -1,0 +1,15 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/02/01
+description: Detects actions that clear the local ShimCache and remove forensic evidence
+falsepositives:
+- Unknown
+filename: proc_creation_win_rundll32_susp_shimcache_flush.yml
+level: high
+modified: ''
+references:
+- https://medium.com/@blueteamops/shimcache-flush-89daff28d15e
+related: []
+status: stable
+tags:
+- attack.defense_evasion
+- attack.t1112

@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: extrac32.exe
+    - CommandLine|contains: .cab
+    - CommandLine|matches: :[^\\]
+- condition: selection
+id: 4b13db67-0c45-40f1-aba8-66a1a7198a1e
+logsource:
+  category: process_creation
+  product: windows

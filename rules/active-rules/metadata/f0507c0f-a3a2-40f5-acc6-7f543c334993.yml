@@ -1,0 +1,18 @@
+author: pH-T (Nextron Systems)
+date: 2022/09/01
+description: Detects the execution of the "net use" command to mount a WebDAV server
+  and then immediately execute some content in it. As seen being used in malicious
+  LNK files
+falsepositives:
+- Unknown
+filename: proc_creation_win_cmd_net_use_and_exec_combo.yml
+level: high
+modified: 2023/02/21
+references:
+- https://twitter.com/ShadowChasing1/status/1552595370961944576
+- https://www.virustotal.com/gui/file/a63376ee1dba76361df73338928e528ca5b20171ea74c24581605366dcaa0104/behavior
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

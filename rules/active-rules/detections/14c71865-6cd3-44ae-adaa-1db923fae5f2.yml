@@ -1,0 +1,71 @@
+detection:
+- selection_options_disabling_preference:
+  - and:
+    - ScriptBlockText|contains: Set-MpPreference
+- selection_options_disabling_function:
+  - and:
+    - or:
+      - ScriptBlockText|contains: -dbaf $true
+      - ScriptBlockText|contains: -dbaf 1
+      - ScriptBlockText|contains: -dbm $true
+      - ScriptBlockText|contains: -dbm 1
+      - ScriptBlockText|contains: -dips $true
+      - ScriptBlockText|contains: -dips 1
+      - ScriptBlockText|contains: -DisableArchiveScanning $true
+      - ScriptBlockText|contains: -DisableArchiveScanning 1
+      - ScriptBlockText|contains: -DisableBehaviorMonitoring $true
+      - ScriptBlockText|contains: -DisableBehaviorMonitoring 1
+      - ScriptBlockText|contains: -DisableBlockAtFirstSeen $true
+      - ScriptBlockText|contains: -DisableBlockAtFirstSeen 1
+      - ScriptBlockText|contains: -DisableCatchupFullScan $true
+      - ScriptBlockText|contains: -DisableCatchupFullScan 1
+      - ScriptBlockText|contains: -DisableCatchupQuickScan $true
+      - ScriptBlockText|contains: -DisableCatchupQuickScan 1
+      - ScriptBlockText|contains: -DisableIntrusionPreventionSystem $true
+      - ScriptBlockText|contains: -DisableIntrusionPreventionSystem 1
+      - ScriptBlockText|contains: -DisableIOAVProtection $true
+      - ScriptBlockText|contains: -DisableIOAVProtection 1
+      - ScriptBlockText|contains: -DisableRealtimeMonitoring $true
+      - ScriptBlockText|contains: -DisableRealtimeMonitoring 1
+      - ScriptBlockText|contains: -DisableRemovableDriveScanning $true
+      - ScriptBlockText|contains: -DisableRemovableDriveScanning 1
+      - ScriptBlockText|contains: -DisableScanningMappedNetworkDrivesForFullScan $true
+      - ScriptBlockText|contains: -DisableScanningMappedNetworkDrivesForFullScan 1
+      - ScriptBlockText|contains: -DisableScanningNetworkFiles $true
+      - ScriptBlockText|contains: -DisableScanningNetworkFiles 1
+      - ScriptBlockText|contains: -DisableScriptScanning $true
+      - ScriptBlockText|contains: -DisableScriptScanning 1
+      - ScriptBlockText|contains: -MAPSReporting $false
+      - ScriptBlockText|contains: -MAPSReporting 0
+      - ScriptBlockText|contains: -drdsc $true
+      - ScriptBlockText|contains: -drdsc 1
+      - ScriptBlockText|contains: -drtm $true
+      - ScriptBlockText|contains: -drtm 1
+      - ScriptBlockText|contains: -dscrptsc $true
+      - ScriptBlockText|contains: -dscrptsc 1
+      - ScriptBlockText|contains: -dsmndf $true
+      - ScriptBlockText|contains: -dsmndf 1
+      - ScriptBlockText|contains: -dsnf $true
+      - ScriptBlockText|contains: -dsnf 1
+      - ScriptBlockText|contains: -dss $true
+      - ScriptBlockText|contains: -dss 1
+- selection_other_default_actions_allow:
+  - and:
+    - ScriptBlockText|contains: Set-MpPreference
+- selection_other_default_actions_func:
+  - and:
+    - or:
+      - ScriptBlockText|contains: HighThreatDefaultAction Allow
+      - ScriptBlockText|contains: htdefac Allow
+      - ScriptBlockText|contains: LowThreatDefaultAction Allow
+      - ScriptBlockText|contains: ltdefac Allow
+      - ScriptBlockText|contains: ModerateThreatDefaultAction Allow
+      - ScriptBlockText|contains: mtdefac Allow
+      - ScriptBlockText|contains: SevereThreatDefaultAction Allow
+      - ScriptBlockText|contains: stdefac Allow
+- condition: all of selection_options_disabling_* or all of selection_other_default_actions_*
+id: 14c71865-6cd3-44ae-adaa-1db923fae5f2
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

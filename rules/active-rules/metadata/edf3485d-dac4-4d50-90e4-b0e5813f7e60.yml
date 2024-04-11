@@ -1,0 +1,22 @@
+author: Janantha Marasinghe, Nasreddine Bencherchali (Nextron Systems)
+date: 2023/04/24
+description: Detects external IP address lookups by non-browser processes via services
+  such as "api.ipify.org". This could be indicative of potential post compromise internet
+  test activity.
+falsepositives:
+- Legitimate use of the external websites for troubleshooting or network monitoring
+filename: net_connection_win_susp_external_ip_lookup.yml
+level: medium
+modified: 2024/03/22
+references:
+- https://github.com/rsp/scripts/blob/c8bb272d68164a9836e4f273d8f924927f39b8c6/externalip-benchmark.md
+- https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-302a
+- https://thedfirreport.com/2022/11/28/emotet-strikes-again-lnk-file-leads-to-domain-wide-ransomware/
+- https://www.trendmicro.com/en_us/research/23/e/managed-xdr-investigation-of-ducktail-in-trend-micro-vision-one.html
+related:
+- id: ec82e2a5-81ea-4211-a1f8-37a0286df2c2
+  type: derived
+status: experimental
+tags:
+- attack.discovery
+- attack.t1016

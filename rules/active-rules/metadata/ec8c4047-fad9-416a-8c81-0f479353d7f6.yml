@@ -1,0 +1,17 @@
+author: Greg (rule)
+date: 2022/06/17
+description: Detects both of CVE-2022-30190 (Follina) and DogWalk vulnerabilities
+  exploiting msdt.exe binary to load the "sdiageng.dll" library
+falsepositives:
+- Unknown
+filename: image_load_dll_sdiageng_load_by_msdt.yml
+level: high
+modified: 2023/02/17
+references:
+- https://www.securonix.com/blog/detecting-microsoft-msdt-dogwalk/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1202
+- cve.2022.30190

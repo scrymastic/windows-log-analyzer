@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4624
+    - LogonType|==: 10
+    - or:
+      - IpAddress|==: ::1
+      - IpAddress|==: 127.0.0.1
+- condition: selection
+id: 51e33403-2a37-4d66-a574-1fda1782cc31
+logsource:
+  product: windows
+  service: security

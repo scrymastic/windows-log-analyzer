@@ -1,0 +1,19 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \certutil.exe
+      - OriginalFileName|==: CertUtil.exe
+- selection_flags:
+  - and:
+    - or:
+      - CommandLine|contains: 'urlcache '
+      - CommandLine|contains: 'verifyctl '
+- selection_http:
+  - and:
+    - CommandLine|contains: http
+- condition: all of selection_*
+id: 19b08b1c-861d-4e75-a1ef-ea0c1baf202b
+logsource:
+  category: process_creation
+  product: windows

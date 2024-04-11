@@ -1,0 +1,37 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - DestinationPort|==: 5985
+      - DestinationPort|==: 5986
+    - Initiated|==: 'true'
+    - SourceIsIpv6|==: 'false'
+- filter_main_service_users:
+  - and:
+    - or:
+      - or:
+        - User|contains: NETWORK SERVICE
+        - User|contains: NETZWERKDIENST
+        - User|contains: SERVICIO DE RED
+        - User|contains: SERVIZIO DI RETE
+      - and:
+        - User|contains: SERVICE R
+        - User|contains: SEAU
+- filter_main_localhost:
+  - and:
+    - or:
+      - SourceIp|==: ::1
+      - SourceIp|==: 127.0.0.1
+    - or:
+      - DestinationIp|==: ::1
+      - DestinationIp|==: 127.0.0.1
+- filter_optional_avast:
+  - and:
+    - or:
+      - Image|==: C:\Program Files\Avast Software\Avast\AvastSvc.exe
+      - Image|==: C:\Program Files (x86)\Avast Software\Avast\AvastSvc.exe
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: c539afac-c12a-46ed-b1bd-5a5567c9f045
+logsource:
+  category: network_connection
+  product: windows

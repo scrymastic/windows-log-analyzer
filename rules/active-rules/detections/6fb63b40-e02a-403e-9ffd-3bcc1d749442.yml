@@ -1,0 +1,18 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4697
+    - ServiceFileName|matches: ^%systemroot%\\[a-zA-Z]{8}\.exe$
+    - ServiceName|matches: (^[a-zA-Z]{4}$)|(^[a-zA-Z]{8}$)|(^[a-zA-Z]{16}$)
+    - ServiceStartType|==: 3
+    - ServiceType|==: '0x10'
+- filter:
+  - and:
+    - ServiceName|==: PSEXESVC
+- condition: selection and not filter
+id: 6fb63b40-e02a-403e-9ffd-3bcc1d749442
+logsource:
+  definition: The 'System Security Extension' audit subcategory need to be enabled
+    to log the EID 4697
+  product: windows
+  service: security

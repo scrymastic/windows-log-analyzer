@@ -1,0 +1,47 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \bitsadmin.exe
+      - OriginalFileName|==: bitsadmin.exe
+- selection_flags:
+  - and:
+    - or:
+      - CommandLine|contains: ' /transfer '
+      - CommandLine|contains: ' /create '
+      - CommandLine|contains: ' /addfile '
+- selection_domain:
+  - and:
+    - or:
+      - CommandLine|contains: .githubusercontent.com
+      - CommandLine|contains: anonfiles.com
+      - CommandLine|contains: cdn.discordapp.com
+      - CommandLine|contains: cdn.discordapp.com/attachments/
+      - CommandLine|contains: ddns.net
+      - CommandLine|contains: dl.dropboxusercontent.com
+      - CommandLine|contains: ghostbin.co
+      - CommandLine|contains: glitch.me
+      - CommandLine|contains: gofile.io
+      - CommandLine|contains: hastebin.com
+      - CommandLine|contains: mediafire.com
+      - CommandLine|contains: mega.nz
+      - CommandLine|contains: onrender.com
+      - CommandLine|contains: paste.ee
+      - CommandLine|contains: pastebin.com
+      - CommandLine|contains: pastebin.pl
+      - CommandLine|contains: pastetext.net
+      - CommandLine|contains: privatlab.com
+      - CommandLine|contains: privatlab.net
+      - CommandLine|contains: send.exploit.in
+      - CommandLine|contains: sendspace.com
+      - CommandLine|contains: storage.googleapis.com
+      - CommandLine|contains: storjshare.io
+      - CommandLine|contains: supabase.co
+      - CommandLine|contains: temp.sh
+      - CommandLine|contains: transfer.sh
+      - CommandLine|contains: ufile.io
+- condition: all of selection_*
+id: 8518ed3d-f7c9-4601-a26c-f361a4256a0c
+logsource:
+  category: process_creation
+  product: windows

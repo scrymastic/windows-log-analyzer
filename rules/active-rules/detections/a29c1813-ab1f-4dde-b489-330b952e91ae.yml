@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: ipconfig /all
+      - CommandLine|contains: netsh interface show interface
+      - CommandLine|contains: arp -a
+      - CommandLine|contains: nbtstat -n
+      - CommandLine|contains: net config
+      - CommandLine|contains: route print
+- condition: selection
+id: a29c1813-ab1f-4dde-b489-330b952e91ae
+logsource:
+  category: process_creation
+  product: windows

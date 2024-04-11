@@ -1,0 +1,23 @@
+detection:
+- selection1:
+  - and:
+    - ParentImage|endswith: \mmc.exe
+- selection2:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \cmd.exe
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+        - Image|endswith: \wscript.exe
+        - Image|endswith: \cscript.exe
+        - Image|endswith: \sh.exe
+        - Image|endswith: \bash.exe
+        - Image|endswith: \reg.exe
+        - Image|endswith: \regsvr32.exe
+      - Image|contains: \BITSADMIN
+- condition: all of selection*
+id: 05a2ab7e-ce11-4b63-86db-ab32e763e11d
+logsource:
+  category: process_creation
+  product: windows

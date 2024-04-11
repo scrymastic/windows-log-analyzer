@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - Data|contains: Get-WmiObject
+    - Data|contains: Win32_Shadowcopy
+    - or:
+      - Data|contains: Delete()
+      - Data|contains: Remove-WmiObject
+- condition: selection
+id: 87df9ee1-5416-453a-8a08-e8d4a51e9ce1
+logsource:
+  category: ps_classic_start
+  product: windows

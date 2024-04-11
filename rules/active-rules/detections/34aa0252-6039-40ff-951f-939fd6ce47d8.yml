@@ -1,0 +1,17 @@
+detection:
+- selection_registry:
+  - and:
+    - or:
+      - TargetObject|contains: \Keyboard Layout\Preload\
+      - TargetObject|contains: \Keyboard Layout\Substitutes\
+    - or:
+      - Details|contains: 00000429
+      - Details|contains: 00050429
+      - Details|contains: 0000042a
+- condition: selection_registry
+id: 34aa0252-6039-40ff-951f-939fd6ce47d8
+logsource:
+  category: registry_set
+  definition: 'Requirements: Sysmon config that monitors \Keyboard Layout\Preload
+    subkey of the HKLU hives - see https://github.com/SwiftOnSecurity/sysmon-config/pull/92/files'
+  product: windows

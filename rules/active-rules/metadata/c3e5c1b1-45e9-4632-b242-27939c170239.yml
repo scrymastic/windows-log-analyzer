@@ -1,0 +1,15 @@
+author: frack113
+date: 2023/07/20
+description: Triggers on any Sysmon "FileBlockShredding" event, which indicates a
+  violation of the configured shredding policy.
+falsepositives:
+- Unlikely
+filename: sysmon_file_block_shredding.yml
+level: high
+modified: ''
+references:
+- https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+related: []
+status: experimental
+tags:
+- attack.defense_evasion

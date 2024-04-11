@@ -1,0 +1,15 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \WINWORD.exe
+      - OriginalFileName|==: WinWord.exe
+- selection_dll:
+  - and:
+    - CommandLine|contains: '/l '
+    - CommandLine|contains: .dll
+- condition: all of selection_*
+id: f7375e28-5c14-432f-b8d1-1db26c832df3
+logsource:
+  category: process_creation
+  product: windows

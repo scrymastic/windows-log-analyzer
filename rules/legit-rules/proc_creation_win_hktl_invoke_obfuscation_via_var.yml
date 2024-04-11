@@ -1,0 +1,35 @@
+title: Invoke-Obfuscation VAR++ LAUNCHER OBFUSCATION
+id: e9f55347-2928-4c06-88e5-1a7f8169942e
+status: test
+description: Detects Obfuscated Powershell via VAR++ LAUNCHER
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+author: Timur Zinniatullin, oscd.community
+date: 2020/10/13
+modified: 2022/11/16
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: '&&set'
+    - CommandLine|contains: cmd
+    - CommandLine|contains: /c
+    - CommandLine|contains: -f
+    - or:
+      - CommandLine|contains: '{0}'
+      - CommandLine|contains: '{1}'
+      - CommandLine|contains: '{2}'
+      - CommandLine|contains: '{3}'
+      - CommandLine|contains: '{4}'
+      - CommandLine|contains: '{5}'
+- condition: selection
+falsepositives:
+- Unknown
+level: high

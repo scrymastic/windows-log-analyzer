@@ -1,0 +1,58 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: AddSecurityPackage
+      - CommandLine|contains: AdjustTokenPrivileges
+      - CommandLine|contains: Advapi32
+      - CommandLine|contains: CloseHandle
+      - CommandLine|contains: CreateProcessWithToken
+      - CommandLine|contains: CreatePseudoConsole
+      - CommandLine|contains: CreateRemoteThread
+      - CommandLine|contains: CreateThread
+      - CommandLine|contains: CreateUserThread
+      - CommandLine|contains: DangerousGetHandle
+      - CommandLine|contains: DuplicateTokenEx
+      - CommandLine|contains: EnumerateSecurityPackages
+      - CommandLine|contains: FreeHGlobal
+      - CommandLine|contains: FreeLibrary
+      - CommandLine|contains: GetDelegateForFunctionPointer
+      - CommandLine|contains: GetLogonSessionData
+      - CommandLine|contains: GetModuleHandle
+      - CommandLine|contains: GetProcAddress
+      - CommandLine|contains: GetProcessHandle
+      - CommandLine|contains: GetTokenInformation
+      - CommandLine|contains: ImpersonateLoggedOnUser
+      - CommandLine|contains: kernel32
+      - CommandLine|contains: LoadLibrary
+      - CommandLine|contains: memcpy
+      - CommandLine|contains: MiniDumpWriteDump
+      - CommandLine|contains: ntdll
+      - CommandLine|contains: OpenDesktop
+      - CommandLine|contains: OpenProcess
+      - CommandLine|contains: OpenProcessToken
+      - CommandLine|contains: OpenThreadToken
+      - CommandLine|contains: OpenWindowStation
+      - CommandLine|contains: PtrToString
+      - CommandLine|contains: QueueUserApc
+      - CommandLine|contains: ReadProcessMemory
+      - CommandLine|contains: RevertToSelf
+      - CommandLine|contains: RtlCreateUserThread
+      - CommandLine|contains: secur32
+      - CommandLine|contains: SetThreadToken
+      - CommandLine|contains: VirtualAlloc
+      - CommandLine|contains: VirtualFree
+      - CommandLine|contains: VirtualProtect
+      - CommandLine|contains: WaitForSingleObject
+      - CommandLine|contains: WriteInt32
+      - CommandLine|contains: WriteProcessMemory
+      - CommandLine|contains: ZeroFreeGlobalAllocUnicode
+- filter_optional_mpcmdrun:
+  - and:
+    - Image|endswith: \MpCmdRun.exe
+    - CommandLine|contains: GetLoadLibraryWAddress32
+- condition: selection and not 1 of filter_optional_*
+id: ba3f5c1b-6272-4119-9dbd-0bc8d21c2702
+logsource:
+  category: process_creation
+  product: windows

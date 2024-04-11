@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \addinutil.exe
+- filter_main_werfault:
+  - and:
+    - or:
+      - Image|endswith: :\Windows\System32\conhost.exe
+      - Image|endswith: :\Windows\System32\werfault.exe
+      - Image|endswith: :\Windows\SysWOW64\werfault.exe
+- condition: selection and not 1 of filter_main_*
+id: b5746143-59d6-4603-8d06-acbd60e166ee
+logsource:
+  category: process_creation
+  product: windows

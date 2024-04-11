@@ -1,0 +1,14 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \rundll32.exe
+      - OriginalFileName|==: RUNDLL32.EXE
+- selection_cli:
+  - and:
+    - CommandLine|matches: '[Rr][Uu][Nn][Dd][Ll][Ll]32(\.[Ee][Xx][Ee])? \S+?\w:\S+?:'
+- condition: all of selection_*
+id: 9248c7e1-2bf3-4661-a22c-600a8040b446
+logsource:
+  category: process_creation
+  product: windows

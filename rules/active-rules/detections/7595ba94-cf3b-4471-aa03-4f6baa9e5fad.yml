@@ -1,0 +1,27 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - EventID|==: 4699
+      - EventID|==: 4701
+    - or:
+      - TaskName|contains: \Windows\SystemRestore\SR
+      - TaskName|contains: \Windows\Windows Defender\
+      - TaskName|contains: \Windows\BitLocker
+      - TaskName|contains: \Windows\WindowsBackup\
+      - TaskName|contains: \Windows\WindowsUpdate\
+      - TaskName|contains: \Windows\UpdateOrchestrator\Schedule
+      - TaskName|contains: \Windows\ExploitGuard
+- filter_sys_username:
+  - and:
+    - EventID|==: 4699
+    - SubjectUserName|endswith: $
+    - TaskName|contains: \Windows\Windows Defender\
+- condition: selection and not 1 of filter_*
+id: 7595ba94-cf3b-4471-aa03-4f6baa9e5fad
+logsource:
+  definition: The Advanced Audit Policy setting Object Access > Audit Other Object
+    Access Events has to be configured to allow this detection. We also recommend
+    extracting the Command field from the embedded XML in the event data.
+  product: windows
+  service: security

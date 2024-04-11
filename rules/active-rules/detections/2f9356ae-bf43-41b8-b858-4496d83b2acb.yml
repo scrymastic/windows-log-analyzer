@@ -1,0 +1,15 @@
+detection:
+- selection_1:
+  - and:
+    - TargetFilename|contains: \AppData\Local\Temp\
+    - TargetFilename|contains: .zip\
+    - TargetFilename|endswith: .iso
+- selection_2:
+  - and:
+    - TargetFilename|contains: \AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\
+    - TargetFilename|endswith: .iso
+- condition: 1 of selection*
+id: 2f9356ae-bf43-41b8-b858-4496d83b2acb
+logsource:
+  category: file_event
+  product: windows

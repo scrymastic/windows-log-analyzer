@@ -1,0 +1,43 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - or:
+        - OriginalFileName|==: PingCastleReporting.exe
+        - OriginalFileName|==: PingCastleCloud.exe
+        - OriginalFileName|==: PingCastle.exe
+      - or:
+        - CommandLine|contains: --scanner aclcheck
+        - CommandLine|contains: --scanner antivirus
+        - CommandLine|contains: --scanner computerversion
+        - CommandLine|contains: --scanner foreignusers
+        - CommandLine|contains: --scanner laps_bitlocker
+        - CommandLine|contains: --scanner localadmin
+        - CommandLine|contains: --scanner nullsession
+        - CommandLine|contains: --scanner nullsession-trust
+        - CommandLine|contains: --scanner oxidbindings
+        - CommandLine|contains: --scanner remote
+        - CommandLine|contains: --scanner share
+        - CommandLine|contains: --scanner smb
+        - CommandLine|contains: --scanner smb3querynetwork
+        - CommandLine|contains: --scanner spooler
+        - CommandLine|contains: --scanner startup
+        - CommandLine|contains: --scanner zerologon
+      - CommandLine|contains: --no-enum-limit
+      - and:
+        - CommandLine|contains: --healthcheck
+        - CommandLine|contains: --level Full
+      - and:
+        - CommandLine|contains: --healthcheck
+        - CommandLine|contains: '--server '
+- filter_main_img:
+  - and:
+    - or:
+      - Image|endswith: \PingCastleReporting.exe
+      - Image|endswith: \PingCastleCloud.exe
+      - Image|endswith: \PingCastle.exe
+- condition: selection and not 1 of filter_main_*
+id: 2433a154-bb3d-42e4-86c3-a26bdac91c45
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,95 @@
+title: System File Execution Location Anomaly
+id: e4a6b256-3e47-40fc-89d2-7a477edd6915
+status: experimental
+description: Detects a Windows program executable started from a suspicious folder
+references:
+- https://twitter.com/GelosSnake/status/934900723426439170
+- https://asec.ahnlab.com/en/39828/
+author: Florian Roth (Nextron Systems), Patrick Bareiss, Anton Kutepov, oscd.community,
+  Nasreddine Bencherchali
+date: 2017/11/27
+modified: 2023/10/18
+tags:
+- attack.defense_evasion
+- attack.t1036
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \svchost.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \services.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \powershell_ise.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \spoolsv.exe
+      - Image|endswith: \lsass.exe
+      - Image|endswith: \smss.exe
+      - Image|endswith: \csrss.exe
+      - Image|endswith: \conhost.exe
+      - Image|endswith: \wininit.exe
+      - Image|endswith: \lsm.exe
+      - Image|endswith: \winlogon.exe
+      - Image|endswith: \explorer.exe
+      - Image|endswith: \taskhost.exe
+      - Image|endswith: \Taskmgr.exe
+      - Image|endswith: \sihost.exe
+      - Image|endswith: \RuntimeBroker.exe
+      - Image|endswith: \smartscreen.exe
+      - Image|endswith: \dllhost.exe
+      - Image|endswith: \audiodg.exe
+      - Image|endswith: \wlanext.exe
+      - Image|endswith: \dashost.exe
+      - Image|endswith: \schtasks.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \wscript.exe
+      - Image|endswith: \wsl.exe
+      - Image|endswith: \bitsadmin.exe
+      - Image|endswith: \atbroker.exe
+      - Image|endswith: \bcdedit.exe
+      - Image|endswith: \certutil.exe
+      - Image|endswith: \certreq.exe
+      - Image|endswith: \cmstp.exe
+      - Image|endswith: \consent.exe
+      - Image|endswith: \defrag.exe
+      - Image|endswith: \dism.exe
+      - Image|endswith: \dllhst3g.exe
+      - Image|endswith: \eventvwr.exe
+      - Image|endswith: \msiexec.exe
+      - Image|endswith: \runonce.exe
+      - Image|endswith: \winver.exe
+      - Image|endswith: \logonui.exe
+      - Image|endswith: \userinit.exe
+      - Image|endswith: \dwm.exe
+      - Image|endswith: \LsaIso.exe
+      - Image|endswith: \ntoskrnl.exe
+      - Image|endswith: \wsmprovhost.exe
+      - Image|endswith: \dfrgui.exe
+- filter_generic:
+  - and:
+    - or:
+      - or:
+        - Image|startswith: C:\Windows\System32\
+        - Image|startswith: C:\Windows\SysWOW64\
+        - Image|startswith: C:\Windows\WinSxS\
+      - Image|contains: \SystemRoot\System32\
+      - or:
+        - Image|==: C:\Windows\explorer.exe
+        - Image|==: C:\Program Files\PowerShell\7\pwsh.exe
+        - Image|==: C:\Program Files\PowerShell\7-preview\pwsh.exe
+- filter_wsl_windowsapps:
+  - and:
+    - Image|startswith: C:\Program Files\WindowsApps\MicrosoftCorporationII.WindowsSubsystemForLinux
+    - Image|endswith: \wsl.exe
+- condition: selection and not 1 of filter_*
+fields:
+- ComputerName
+- User
+- Image
+falsepositives:
+- Exotic software
+level: high

@@ -1,0 +1,19 @@
+detection:
+- selection_main_img:
+  - and:
+    - or:
+      - Image|endswith: \whoami.exe
+      - OriginalFileName|==: whoami.exe
+- selection_main_cli:
+  - and:
+    - or:
+      - CommandLine|contains: ' /FO CSV'
+      - CommandLine|contains: ' -FO CSV'
+- selection_special:
+  - and:
+    - CommandLine|contains: whoami*>
+- condition: all of selection_main_* or selection_special
+id: c30fb093-1109-4dc8-88a8-b30d11c95a5d
+logsource:
+  category: process_creation
+  product: windows

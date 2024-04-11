@@ -1,0 +1,20 @@
+detection:
+- selection_main:
+  - and:
+    - EventType|==: SetValue
+    - TargetObject|contains: \CurrentControlSet\Control\Session Manager\PendingFileRenameOperations
+- selection_susp_paths:
+  - and:
+    - or:
+      - Image|contains: \AppData\Local\Temp\
+      - Image|contains: \Users\Public\
+- selection_susp_images:
+  - and:
+    - or:
+      - Image|endswith: \reg.exe
+      - Image|endswith: \regedit.exe
+- condition: selection_main and 1 of selection_susp_*
+id: 4eec988f-7bf0-49f1-8675-1e6a510b3a2a
+logsource:
+  category: registry_set
+  product: windows

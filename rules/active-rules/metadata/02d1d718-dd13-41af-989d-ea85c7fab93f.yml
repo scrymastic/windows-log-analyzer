@@ -1,0 +1,20 @@
+author: Perez Diego (@darkquassar), oscd.community
+date: 2019/10/27
+description: Detects uncommon processes creating remote threads.
+falsepositives:
+- This rule is best put in testing first in order to create a baseline that reflects
+  the data in your environment.
+filename: create_remote_thread_win_susp_relevant_source_image.yml
+level: high
+modified: 2024/01/17
+references:
+- Personal research, statistical analysis
+- https://lolbas-project.github.io
+related:
+- id: 66d31e5f-52d6-40a4-9615-002d3789a119
+  type: derived
+status: experimental
+tags:
+- attack.privilege_escalation
+- attack.defense_evasion
+- attack.t1055

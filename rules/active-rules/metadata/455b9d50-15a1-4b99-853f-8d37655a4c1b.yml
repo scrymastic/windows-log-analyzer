@@ -1,0 +1,20 @@
+author: frack113
+date: 2021/12/13
+description: Detects active directory enumeration activity using known AdFind CLI
+  flags
+falsepositives:
+- Authorized administrative activity
+filename: proc_creation_win_pua_adfind_enumeration.yml
+level: high
+modified: 2023/03/05
+references:
+- https://www.joeware.net/freetools/tools/adfind/
+- https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1087.002/T1087.002.md
+related:
+- id: 9a132afa-654e-11eb-ae93-0242ac130002
+  type: similar
+status: test
+tags:
+- attack.discovery
+- attack.t1087.002

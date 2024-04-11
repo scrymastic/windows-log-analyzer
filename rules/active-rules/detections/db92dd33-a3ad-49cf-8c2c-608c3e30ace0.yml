@@ -1,0 +1,10 @@
+detection:
+- selection_4104:
+  - and:
+    - ScriptBlockText|matches: (?i).*?echo.*clip.*&&.*(Clipboard|i`?n`?v`?o`?k`?e`?).*
+- condition: selection_4104
+id: db92dd33-a3ad-49cf-8c2c-608c3e30ace0
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

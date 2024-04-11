@@ -1,0 +1,22 @@
+author: Thomas Patzke
+date: 2017/06/14
+description: Detects renaming of file while deletion with SDelete tool.
+falsepositives:
+- Legitimate usage of SDelete
+filename: win_security_susp_sdelete.yml
+level: medium
+modified: 2021/11/27
+references:
+- https://jpcertcc.github.io/ToolAnalysisResultSheet/details/sdelete.htm
+- https://www.jpcert.or.jp/english/pub/sr/ir_research.html
+- https://docs.microsoft.com/en-gb/sysinternals/downloads/sdelete
+related: []
+status: test
+tags:
+- attack.impact
+- attack.defense_evasion
+- attack.t1070.004
+- attack.t1027.005
+- attack.t1485
+- attack.t1553.002
+- attack.s0195

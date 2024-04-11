@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - and:
+        - TargetFilename|contains: \AppData\Roaming\Oracle\bin\java
+        - TargetFilename|contains: .exe
+      - and:
+        - TargetFilename|contains: \Retrive
+        - TargetFilename|contains: .vbs
+- condition: selection
+id: 0bcfabcb-7929-47f4-93d6-b33fb67d34d1
+logsource:
+  category: file_event
+  product: windows

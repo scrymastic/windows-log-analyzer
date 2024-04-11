@@ -1,0 +1,15 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \fltMC.exe
+      - OriginalFileName|==: fltMC.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: unload
+    - CommandLine|contains: sysmon
+- condition: all of selection_*
+id: 4d7cda18-1b12-4e52-b45c-d28653210df8
+logsource:
+  category: process_creation
+  product: windows

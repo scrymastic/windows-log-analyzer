@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \vsls-agent.exe
+    - CommandLine|contains: --agentExtensionPath
+- filter:
+  - and:
+    - CommandLine|contains: Microsoft.VisualStudio.LiveShare.Agent.
+- condition: selection and not filter
+id: 43103702-5886-11ed-9b6a-0242ac120002
+logsource:
+  category: process_creation
+  product: windows

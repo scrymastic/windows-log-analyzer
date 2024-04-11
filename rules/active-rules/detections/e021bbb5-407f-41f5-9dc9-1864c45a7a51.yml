@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - EventID|==: 441
+      - EventID|==: 442
+      - EventID|==: 453
+      - EventID|==: 454
+- condition: selection
+id: e021bbb5-407f-41f5-9dc9-1864c45a7a51
+logsource:
+  product: windows
+  service: appxdeployment-server

@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|==: C:\Windows\System32\drivers\LiveKdD.SYS
+- filter_main_legit_name:
+  - and:
+    - or:
+      - Image|endswith: \livekd.exe
+      - Image|endswith: \livek64.exe
+- condition: selection and not 1 of filter_main_*
+id: 059c5af9-5131-4d8d-92b2-de4ad6146712
+logsource:
+  category: file_event
+  product: windows

@@ -1,0 +1,50 @@
+title: Scheduled Task Executing Payload from Registry
+id: 86588b36-c6d3-465f-9cee-8f9093e07798
+related:
+- id: c4eeeeae-89f4-43a7-8b48-8d1bdfa66c78
+  type: derived
+status: experimental
+description: Detects the creation of a schtasks that potentially executes a payload
+  stored in the Windows Registry using PowerShell.
+references:
+- https://thedfirreport.com/2022/02/21/qbot-and-zerologon-lead-to-full-domain-compromise/
+author: X__Junior (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
+date: 2023/07/18
+tags:
+- attack.execution
+- attack.persistence
+- attack.t1053.005
+- attack.t1059.001
+logsource:
+  product: windows
+  category: process_creation
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \schtasks.exe
+      - OriginalFileName|==: schtasks.exe
+- selection_cli_create:
+  - and:
+    - CommandLine|contains: /Create
+- selection_cli_get:
+  - and:
+    - or:
+      - CommandLine|contains: Get-ItemProperty
+      - CommandLine|contains: ' gp '
+- selection_cli_hive:
+  - and:
+    - or:
+      - CommandLine|contains: 'HKCU:'
+      - CommandLine|contains: 'HKLM:'
+      - CommandLine|contains: 'registry::'
+      - CommandLine|contains: HKEY_
+- filter_main_encoding:
+  - and:
+    - or:
+      - CommandLine|contains: FromBase64String
+      - CommandLine|contains: encodedcommand
+- condition: all of selection_* and not 1 of filter_*
+falsepositives:
+- Unknown
+level: medium

@@ -1,0 +1,18 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - EventID|==: 11
+      - EventID|==: 12
+    - or:
+      - ImageName|contains: \Users\Public\
+      - ImageName|contains: \PerfLogs\
+      - ImageName|contains: \Desktop\
+      - ImageName|contains: \Downloads\
+      - ImageName|contains: \AppData\Local\Temp\
+      - ImageName|contains: C:\Windows\TEMP\
+- condition: selection
+id: 8289bf8c-4aca-4f5a-9db3-dc3d7afe5c10
+logsource:
+  product: windows
+  service: security-mitigations

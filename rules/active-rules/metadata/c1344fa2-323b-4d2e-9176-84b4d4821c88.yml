@@ -1,0 +1,20 @@
+author: Tim Rauch, Elastic (idea)
+date: 2022/09/16
+description: Detects modifications to the Windows Defender configuration settings
+  using PowerShell to add exclusions
+falsepositives:
+- Unknown
+filename: posh_ps_win_defender_exclusions_added.yml
+level: medium
+modified: 2022/11/26
+references:
+- https://www.elastic.co/guide/en/security/current/windows-defender-exclusions-added-via-powershell.html
+related:
+- id: 17769c90-230e-488b-a463-e05c08e9d48f
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562
+- attack.execution
+- attack.t1059

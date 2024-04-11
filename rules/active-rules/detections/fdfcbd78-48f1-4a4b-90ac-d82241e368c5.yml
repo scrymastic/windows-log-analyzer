@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|==: C:\Windows\PSEXESVC.exe
+      - OriginalFileName|==: psexesvc.exe
+- condition: selection
+id: fdfcbd78-48f1-4a4b-90ac-d82241e368c5
+logsource:
+  category: process_creation
+  product: windows

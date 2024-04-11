@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \sc.exe
+    - CommandLine|contains: create
+    - CommandLine|contains: binPath
+- condition: selection
+id: 85ff530b-261d-48c6-a441-facaa2e81e48
+logsource:
+  category: process_creation
+  product: windows

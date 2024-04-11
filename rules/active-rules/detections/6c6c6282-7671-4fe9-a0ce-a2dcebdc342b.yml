@@ -1,0 +1,19 @@
+detection:
+- selection_xml:
+  - and:
+    - ScriptBlockText|contains: New-Object
+    - ScriptBlockText|contains: System.Xml.XmlDocument
+    - ScriptBlockText|contains: .Load
+- selection_exec:
+  - and:
+    - or:
+      - ScriptBlockText|contains: 'IEX '
+      - ScriptBlockText|contains: 'Invoke-Expression '
+      - ScriptBlockText|contains: 'Invoke-Command '
+      - ScriptBlockText|contains: ICM -
+- condition: all of selection_*
+id: 6c6c6282-7671-4fe9-a0ce-a2dcebdc342b
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

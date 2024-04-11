@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \msedge_proxy.exe
+      - OriginalFileName|==: msedge_proxy.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: http://
+      - CommandLine|contains: https://
+- condition: all of selection_*
+id: e84d89c4-f544-41ca-a6af-4b92fd38b023
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 3
+    - processPath|endswith: \bitsadmin.exe
+- condition: selection
+id: 1ff315dc-2a3a-4b71-8dde-873818d25d39
+logsource:
+  product: windows
+  service: bits-client

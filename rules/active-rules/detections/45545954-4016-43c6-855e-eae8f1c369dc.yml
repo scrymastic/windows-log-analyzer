@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5145
+    - ShareName|contains: IPC
+    - RelativeTargetName|==: protected_storage
+- condition: selection
+id: 45545954-4016-43c6-855e-eae8f1c369dc
+logsource:
+  product: windows
+  service: security

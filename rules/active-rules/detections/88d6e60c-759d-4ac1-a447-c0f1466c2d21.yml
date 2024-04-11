@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \brave.exe
+      - Image|endswith: \chrome.exe
+      - Image|endswith: \msedge.exe
+      - Image|endswith: \opera.exe
+      - Image|endswith: \vivaldi.exe
+    - CommandLine|contains: --load-extension=
+- condition: selection
+id: 88d6e60c-759d-4ac1-a447-c0f1466c2d21
+logsource:
+  category: process_creation
+  product: windows

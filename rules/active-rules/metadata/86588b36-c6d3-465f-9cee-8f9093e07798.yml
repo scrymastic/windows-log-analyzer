@@ -1,0 +1,20 @@
+author: X__Junior (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
+date: 2023/07/18
+description: Detects the creation of a schtasks that potentially executes a payload
+  stored in the Windows Registry using PowerShell.
+falsepositives:
+- Unknown
+filename: proc_creation_win_schtasks_reg_loader.yml
+level: medium
+modified: ''
+references:
+- https://thedfirreport.com/2022/02/21/qbot-and-zerologon-lead-to-full-domain-compromise/
+related:
+- id: c4eeeeae-89f4-43a7-8b48-8d1bdfa66c78
+  type: derived
+status: experimental
+tags:
+- attack.execution
+- attack.persistence
+- attack.t1053.005
+- attack.t1059.001

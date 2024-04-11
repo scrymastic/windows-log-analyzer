@@ -1,0 +1,20 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/06/14
+description: Detects execution of the "VMwareToolBoxCmd.exe" with the "script" and
+  "set" flag to setup a specific script that's located in a potentially suspicious
+  location to run for a specific VM state
+falsepositives:
+- Unknown
+filename: proc_creation_win_vmware_toolbox_cmd_persistence_susp.yml
+level: high
+modified: ''
+references:
+- https://bohops.com/2021/10/08/analyzing-and-detecting-a-vmtools-persistence-technique/
+related:
+- id: 7aa4e81a-a65c-4e10-9f81-b200eb229d7d
+  type: derived
+status: experimental
+tags:
+- attack.execution
+- attack.persistence
+- attack.t1059

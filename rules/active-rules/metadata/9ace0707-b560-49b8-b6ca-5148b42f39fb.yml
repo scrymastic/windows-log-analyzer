@@ -1,0 +1,18 @@
+author: Tom Ueltschi (@c_APT_ure)
+date: 2019/01/12
+description: Detects creation of "UserInitMprLogonScript" registry value which can
+  be used as a persistence method by malicious actors
+falsepositives:
+- Investigate the contents of the "UserInitMprLogonScript" value to determine of the
+  added script is legitimate
+filename: registry_add_persistence_logon_scripts_userinitmprlogonscript.yml
+level: medium
+modified: 2023/06/09
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1037.001/T1037.001.md
+related: []
+status: test
+tags:
+- attack.t1037.001
+- attack.persistence
+- attack.lateral_movement

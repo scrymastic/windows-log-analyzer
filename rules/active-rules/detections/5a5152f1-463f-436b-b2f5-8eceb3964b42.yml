@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetObject|endswith: \Microsoft\Windows\CurrentVersion\Explorer\Advanced\ShowSuperHidden
+      - TargetObject|endswith: \Microsoft\Windows\CurrentVersion\Explorer\Advanced\Hidden
+    - Details|==: DWORD (0x00000000)
+- condition: selection
+id: 5a5152f1-463f-436b-b2f5-8eceb3964b42
+logsource:
+  category: registry_set
+  product: windows

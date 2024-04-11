@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/06/20
+description: Detects scenarios where system auditing for important events such as
+  "Process Creation" or "Logon" events is disabled.
+falsepositives:
+- Unlikely
+filename: win_security_disable_event_auditing_critical.yml
+level: high
+modified: 2023/11/17
+references:
+- https://docs.google.com/presentation/d/1dkrldTTlN3La-OjWtkWJBb4hVk6vfsSMBFBERs6R8zA/edit
+- https://github.com/SigmaHQ/sigma/blob/master/documentation/logsource-guides/windows/service/security.md
+related:
+- id: 69aeb277-f15f-4d2d-b32a-55e883609563
+  type: derived
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1562.002

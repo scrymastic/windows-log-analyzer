@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems)
+date: 2019/10/12
+description: Detects the keyboard preload installation with a suspicious keyboard
+  layout, e.g. Chinese, Iranian or Vietnamese layout load in user session on systems
+  maintained by US staff only
+falsepositives:
+- Administrators or users that actually use the selected keyboard layouts (heavily
+  depends on the organisation's user base)
+filename: registry_set_susp_keyboard_layout_load.yml
+level: medium
+modified: 2023/08/17
+references:
+- https://renenyffenegger.ch/notes/Windows/registry/tree/HKEY_CURRENT_USER/Keyboard-Layout/Preload/index
+- https://github.com/SwiftOnSecurity/sysmon-config/pull/92/files
+related: []
+status: test
+tags:
+- attack.resource_development
+- attack.t1588.002

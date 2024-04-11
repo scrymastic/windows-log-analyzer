@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|contains: \AppData\Local\Temp\
+    - TargetFilename|endswith: PROCEXP152.sys
+- filter:
+  - and:
+    - or:
+      - Image|contains: \procexp64.exe
+      - Image|contains: \procexp.exe
+      - Image|contains: \procmon64.exe
+      - Image|contains: \procmon.exe
+- condition: selection and not filter
+id: 3da70954-0f2c-4103-adff-b7440368f50e
+logsource:
+  category: file_event
+  product: windows

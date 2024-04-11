@@ -1,0 +1,30 @@
+detection:
+- selection:
+  - and:
+    - FileName|startswith: \\
+    - FileName|contains: \sysvol\
+    - FileName|contains: \Policies\
+    - or:
+      - FileName|endswith: audit.csv
+      - FileName|endswith: Files.xml
+      - FileName|endswith: GptTmpl.inf
+      - FileName|endswith: groups.xml
+      - FileName|endswith: Registry.pol
+      - FileName|endswith: Registry.xml
+      - FileName|endswith: scheduledtasks.xml
+      - FileName|endswith: scripts.ini
+      - FileName|endswith: services.xml
+- filter_main_generic:
+  - and:
+    - or:
+      - Image|startswith: :\Program Files (x86)\
+      - Image|startswith: :\Program Files\
+      - Image|startswith: :\Windows\explorer.exe
+      - Image|startswith: :\Windows\system32\
+      - Image|startswith: :\Windows\SysWOW64\
+- condition: selection and not 1 of filter_main_*
+id: d51694fe-484a-46ac-92d6-969e76d60d10
+logsource:
+  category: file_access
+  definition: 'Requirements: Microsoft-Windows-Kernel-File ETW provider'
+  product: windows

@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 3036
+- condition: selection
+id: 6f156c48-3894-4952-baf0-16193e9067d2
+logsource:
+  product: windows
+  service: codeintegrity-operational

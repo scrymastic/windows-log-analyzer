@@ -1,0 +1,18 @@
+author: Ecco
+date: 2019/08/30
+description: Detects some Empire PowerShell UAC bypass methods
+falsepositives:
+- Unknown
+filename: proc_creation_win_hktl_empire_powershell_uac_bypass.yml
+level: critical
+modified: 2023/02/21
+references:
+- https://github.com/EmpireProject/Empire/blob/e37fb2eef8ff8f5a0a689f1589f424906fe13055/data/module_source/privesc/Invoke-EventVwrBypass.ps1#L64
+- https://github.com/EmpireProject/Empire/blob/e37fb2eef8ff8f5a0a689f1589f424906fe13055/data/module_source/privesc/Invoke-FodHelperBypass.ps1#L64
+related: []
+status: stable
+tags:
+- attack.defense_evasion
+- attack.privilege_escalation
+- attack.t1548.002
+- car.2019-04-001

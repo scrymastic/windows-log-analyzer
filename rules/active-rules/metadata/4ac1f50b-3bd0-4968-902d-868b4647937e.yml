@@ -1,0 +1,16 @@
+author: Roberto Rodriguez @Cyb3rWard0g
+date: 2019/06/20
+description: Detects tools extracting LSA secret DPAPI domain backup key from Domain
+  Controllers
+falsepositives:
+- Unknown
+filename: win_security_dpapi_domain_backupkey_extraction.yml
+level: high
+modified: 2022/02/24
+references:
+- https://threathunterplaybook.com/hunts/windows/190620-DomainDPAPIBackupKeyExtraction/notebook.html
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.t1003.004

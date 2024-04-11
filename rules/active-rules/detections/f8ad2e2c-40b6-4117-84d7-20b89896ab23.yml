@@ -1,0 +1,16 @@
+detection:
+- selection_loop:
+  - and:
+    - or:
+      - CommandLine|contains: 'for '
+      - CommandLine|contains: 'foreach '
+- selection_tools:
+  - and:
+    - or:
+      - CommandLine|contains: nslookup
+      - CommandLine|contains: ping
+- condition: all of selection_*
+id: f8ad2e2c-40b6-4117-84d7-20b89896ab23
+logsource:
+  category: process_creation
+  product: windows

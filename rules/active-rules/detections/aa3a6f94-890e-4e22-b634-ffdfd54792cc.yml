@@ -1,0 +1,21 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - ParentImage|endswith: \WINWORD.EXE
+      - ParentImage|endswith: \EXCEL.EXE
+      - ParentImage|endswith: \POWERPNT.exe
+      - ParentImage|endswith: \MSPUB.exe
+      - ParentImage|endswith: \VISIO.exe
+      - ParentImage|endswith: \MSACCESS.exe
+      - ParentImage|endswith: \EQNEDT32.exe
+    - Image|startswith: C:\users\
+    - Image|endswith: .exe
+- filter:
+  - and:
+    - Image|endswith: \Teams.exe
+- condition: selection and not filter
+id: aa3a6f94-890e-4e22-b634-ffdfd54792cc
+logsource:
+  category: process_creation
+  product: windows

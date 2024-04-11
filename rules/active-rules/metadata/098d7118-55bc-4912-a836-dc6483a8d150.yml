@@ -1,0 +1,15 @@
+author: Florian Roth (Nextron Systems)
+date: 2017/03/04
+description: Detects access to ADMIN$ network share
+falsepositives:
+- Legitimate administrative activity
+filename: win_security_admin_share_access.yml
+level: low
+modified: 2024/01/16
+references:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5140
+related: []
+status: test
+tags:
+- attack.lateral_movement
+- attack.t1021.002

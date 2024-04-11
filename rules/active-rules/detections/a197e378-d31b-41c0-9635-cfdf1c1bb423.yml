@@ -1,0 +1,12 @@
+detection:
+- selection_mstsc:
+  - and:
+    - Image|endswith: \ruby.exe
+    - CommandLine|contains: '-i '
+    - CommandLine|contains: '-u '
+    - CommandLine|contains: '-p '
+- condition: 1 of selection_*
+id: a197e378-d31b-41c0-9635-cfdf1c1bb423
+logsource:
+  category: process_creation
+  product: windows

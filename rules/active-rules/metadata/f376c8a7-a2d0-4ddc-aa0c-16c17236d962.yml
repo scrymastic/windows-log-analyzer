@@ -1,0 +1,23 @@
+author: Florian Roth (Nextron Systems)
+date: 2019/12/20
+description: Detects command line parameters used by Bloodhound and Sharphound hack
+  tools
+falsepositives:
+- Other programs that use these command line option and accepts an 'All' parameter
+filename: proc_creation_win_hktl_bloodhound_sharphound.yml
+level: high
+modified: 2023/02/04
+references:
+- https://github.com/BloodHoundAD/BloodHound
+- https://github.com/BloodHoundAD/SharpHound
+related: []
+status: test
+tags:
+- attack.discovery
+- attack.t1087.001
+- attack.t1087.002
+- attack.t1482
+- attack.t1069.001
+- attack.t1069.002
+- attack.execution
+- attack.t1059.001

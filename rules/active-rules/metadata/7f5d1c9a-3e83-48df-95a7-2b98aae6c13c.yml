@@ -1,0 +1,23 @@
+author: Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel
+date: 2023/08/08
+description: Detects child processes of "provlaunch.exe" which might indicate potential
+  abuse to proxy execution.
+falsepositives:
+- Unknown
+filename: proc_creation_win_provlaunch_potential_abuse.yml
+level: medium
+modified: ''
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Provlaunch/
+- https://twitter.com/0gtweet/status/1674399582162153472
+related:
+- id: f9999590-1f94-4a34-a91e-951e47bedefd
+  type: similar
+- id: 2a4b3e61-9d22-4e4a-b60f-6e8f0cde6f25
+  type: similar
+- id: 7021255e-5db3-4946-a8b9-0ba7a4644a69
+  type: similar
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1218

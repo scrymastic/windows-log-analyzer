@@ -1,0 +1,70 @@
+detection:
+- selection:
+  - and:
+    - CallTrace|startswith: UNKNOWN
+- filter_main_vcredist:
+  - and:
+    - TargetImage|endswith: vcredist_x64.exe
+    - SourceImage|endswith: vcredist_x64.exe
+- filter_main_generic:
+  - and:
+    - or:
+      - SourceImage|contains: :\Program Files (x86)\
+      - SourceImage|contains: :\Program Files\
+      - SourceImage|contains: :\Windows\System32\
+      - SourceImage|contains: :\Windows\SysWOW64\
+      - SourceImage|contains: :\Windows\WinSxS\
+    - or:
+      - TargetImage|contains: :\Program Files (x86)\
+      - TargetImage|contains: :\Program Files\
+      - TargetImage|contains: :\Windows\System32\
+      - TargetImage|contains: :\Windows\SysWOW64\
+      - TargetImage|contains: :\Windows\WinSxS\
+- filter_main_kerneltrace_edge:
+  - and:
+    - Provider_Name|==: Microsoft-Windows-Kernel-Audit-API-Calls
+- filter_optional_vmware:
+  - and:
+    - TargetImage|endswith: :\Windows\system32\systeminfo.exe
+    - SourceImage|endswith: setup64.exe
+- filter_optional_cylance:
+  - and:
+    - SourceImage|endswith: :\Windows\Explorer.EXE
+    - TargetImage|endswith: :\Program Files\Cylance\Desktop\CylanceUI.exe
+- filter_optional_amazon:
+  - and:
+    - SourceImage|endswith: AmazonSSMAgentSetup.exe
+    - TargetImage|endswith: AmazonSSMAgentSetup.exe
+- filter_optional_vscode:
+  - and:
+    - SourceImage|endswith: \AppData\Local\Programs\Microsoft VS Code\Code.exe
+    - TargetImage|endswith: \AppData\Local\Programs\Microsoft VS Code\Code.exe
+- filter_optional_teams:
+  - and:
+    - TargetImage|endswith: \AppData\Local\Microsoft\Teams\current\Teams.exe
+    - SourceImage|endswith: \AppData\Local\Microsoft\Teams\current\Teams.exe
+- filter_optional_discord:
+  - and:
+    - TargetImage|contains: \AppData\Local\Discord\
+    - TargetImage|endswith: \Discord.exe
+- filter_optional_yammer:
+  - and:
+    - SourceImage|contains: \AppData\Local\yammerdesktop\app-
+    - SourceImage|endswith: \Yammer.exe
+    - TargetImage|contains: \AppData\Local\yammerdesktop\app-
+    - TargetImage|endswith: \Yammer.exe
+    - GrantedAccess|==: '0x1000'
+- filter_optional_evernote:
+  - and:
+    - TargetImage|endswith: \Evernote\Evernote.exe
+- filter_optional_adobe_acrobat:
+  - and:
+    - SourceImage|contains: :\Program Files\Adobe\Acrobat DC\Acrobat\
+    - SourceImage|endswith: \AcroCEF.exe
+    - TargetImage|contains: :\Program Files\Adobe\Acrobat DC\Acrobat\
+    - TargetImage|endswith: \AcroCEF.exe
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: 3f3f3506-1895-401b-9cc3-e86b16e630d0
+logsource:
+  category: process_access
+  product: windows

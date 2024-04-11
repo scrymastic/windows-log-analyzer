@@ -1,0 +1,16 @@
+author: Sean Metcalf (source), Florian Roth (Nextron Systems)
+date: 2017/03/05
+description: Detects keywords from well-known PowerShell exploitation frameworks
+falsepositives:
+- Depending on the scripts, this rule might require some initial tuning to fit the
+  environment
+filename: posh_ps_malicious_keywords.yml
+level: medium
+modified: 2023/06/20
+references:
+- https://adsecurity.org/?p=2921
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

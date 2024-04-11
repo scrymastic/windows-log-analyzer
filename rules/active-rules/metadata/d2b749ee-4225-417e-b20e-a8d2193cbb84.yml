@@ -1,0 +1,24 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/01/20
+description: Detects the execution of AdvancedRun utility
+falsepositives:
+- Unknown
+filename: proc_creation_win_pua_advancedrun.yml
+level: medium
+modified: 2023/02/21
+references:
+- https://twitter.com/splinter_code/status/1483815103279603714
+- https://medium.com/s2wblog/analysis-of-destructive-malware-whispergate-targeting-ukraine-9d5d158f19f3
+- https://elastic.github.io/security-research/malware/2022/01/01.operation-bleeding-bear/article/
+- https://www.winhelponline.com/blog/run-program-as-system-localsystem-account-windows/
+related:
+- id: fa00b701-44c6-4679-994d-5a18afa8a707
+  type: similar
+status: test
+tags:
+- attack.execution
+- attack.defense_evasion
+- attack.privilege_escalation
+- attack.t1564.003
+- attack.t1134.002
+- attack.t1059.003

@@ -1,0 +1,20 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/07/21
+description: Detects suspicious launch of the PSEXESVC service on this system and
+  a sub process run as LOCAL_SYSTEM (-s), which means that someone remotely started
+  a command on this system running it with highest privileges and not only the privileges
+  of the login user account (e.g. the administrator account)
+falsepositives:
+- Users that debug Microsoft Intune issues using the commands mentioned in the official
+  documentation; see https://learn.microsoft.com/en-us/mem/intune/apps/intune-management-extension
+filename: proc_creation_win_sysinternals_psexesvc_as_system.yml
+level: high
+modified: 2023/02/28
+references:
+- https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
+related:
+- id: fa91cc36-24c9-41ce-b3c8-3bbc3f2f67ba
+  type: similar
+status: test
+tags:
+- attack.execution

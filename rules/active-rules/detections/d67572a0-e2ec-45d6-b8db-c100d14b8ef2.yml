@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: SYSTEM\
+    - TargetObject|contains: ControlSet
+    - TargetObject|contains: \Control\Lsa
+    - or:
+      - TargetObject|endswith: \lmcompatibilitylevel
+      - TargetObject|endswith: \NtlmMinClientSec
+      - TargetObject|endswith: \RestrictSendingNTLMTraffic
+- condition: selection
+id: d67572a0-e2ec-45d6-b8db-c100d14b8ef2
+logsource:
+  category: registry_event
+  product: windows

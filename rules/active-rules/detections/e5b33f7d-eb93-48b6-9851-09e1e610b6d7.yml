@@ -1,0 +1,11 @@
+detection:
+- selection:
+  - and:
+    - SourceImage|endswith: \WerFault.exe
+    - TargetImage|endswith: \lsass.exe
+    - GrantedAccess|==: '0x1FFFFF'
+- condition: selection
+id: e5b33f7d-eb93-48b6-9851-09e1e610b6d7
+logsource:
+  category: process_access
+  product: windows

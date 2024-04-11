@@ -1,0 +1,20 @@
+author: omkar72, oscd.community
+date: 2020/10/14
+description: Detects .NET CLR DLLs being loaded by scripting applications such as
+  wscript or cscript. This could be an indication of potential suspicious execution.
+falsepositives:
+- Unknown
+filename: image_load_susp_script_dotnet_clr_dll_load.yml
+level: high
+modified: 2023/02/23
+references:
+- https://github.com/tyranid/DotNetToJScript
+- https://thewover.github.io/Introducing-Donut/
+- https://blog.menasec.net/2019/07/interesting-difr-traces-of-net-clr.html
+- https://web.archive.org/web/20221026202428/https://gist.github.com/code-scrap/d7f152ffcdb3e0b02f7f394f5187f008
+related: []
+status: test
+tags:
+- attack.execution
+- attack.privilege_escalation
+- attack.t1055

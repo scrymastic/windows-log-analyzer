@@ -1,0 +1,21 @@
+author: Florian Roth (Nextron Systems)
+date: 2022/08/23
+description: 'Detects Windows command lines that miss a space before or after the
+  /c flag when running a command using the cmd.exe.
+
+  This could be a sign of obfuscation of a fat finger problem (typo by the developer).
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_cmd_no_space_execution.yml
+level: high
+modified: 2023/03/06
+references:
+- https://twitter.com/cyb3rops/status/1562072617552678912
+- https://ss64.com/nt/cmd.html
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

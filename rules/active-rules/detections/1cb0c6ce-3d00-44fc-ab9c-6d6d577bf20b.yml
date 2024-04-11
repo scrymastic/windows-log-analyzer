@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - QueryName|endswith: .devtunnels.ms
+- condition: selection
+id: 1cb0c6ce-3d00-44fc-ab9c-6d6d577bf20b
+logsource:
+  category: dns_query
+  product: windows

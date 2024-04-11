@@ -1,0 +1,19 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/10/25
+description: 'Detects the creation of a file with the name "code_tunnel.json" which
+  indicate execution and usage of VsCode tunneling utility by an "Image" or "Process"
+  other than VsCode.
+
+  '
+falsepositives:
+- Unknown
+filename: file_event_win_vscode_tunnel_renamed_execution.yml
+level: high
+modified: ''
+references:
+- https://ipfyx.fr/post/visual-studio-code-tunnel/
+- https://badoption.eu/blog/2023/01/31/code_c2.html
+related: []
+status: experimental
+tags:
+- attack.command_and_control

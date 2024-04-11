@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: Get-AdDefaultDomainPasswordPolicy
+- condition: selection
+id: bbb9495b-58fc-4016-b9df-9a3a1b67ca82
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

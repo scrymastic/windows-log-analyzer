@@ -1,0 +1,58 @@
+title: Suspicious Execution Of PDQDeployRunner
+id: 12b8e9f5-96b2-41e1-9a42-8c6779a5c184
+related:
+- id: d679950c-abb7-43a6-80fb-2a480c4fc450
+  type: similar
+status: test
+description: Detects suspicious execution of "PDQDeployRunner" which is part of the
+  PDQDeploy service stack that is responsible for executing commands and packages
+  on a remote machines
+references:
+- https://twitter.com/malmoeb/status/1550483085472432128
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/22
+tags:
+- attack.execution
+logsource:
+  category: process_creation
+  product: windows
+detection:
+- selection_parent:
+  - and:
+    - ParentImage|contains: PDQDeployRunner-
+- selection_susp:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \wscript.exe
+        - Image|endswith: \cscript.exe
+        - Image|endswith: \rundll32.exe
+        - Image|endswith: \regsvr32.exe
+        - Image|endswith: \wmic.exe
+        - Image|endswith: \msiexec.exe
+        - Image|endswith: \mshta.exe
+        - Image|endswith: \csc.exe
+        - Image|endswith: \dllhost.exe
+        - Image|endswith: \certutil.exe
+        - Image|endswith: \scriptrunner.exe
+        - Image|endswith: \bash.exe
+        - Image|endswith: \wsl.exe
+      - or:
+        - Image|contains: C:\Users\Public\
+        - Image|contains: C:\ProgramData\
+        - Image|contains: C:\Windows\TEMP\
+        - Image|contains: \AppData\Local\Temp
+      - or:
+        - CommandLine|contains: 'iex '
+        - CommandLine|contains: Invoke-
+        - CommandLine|contains: DownloadString
+        - CommandLine|contains: http
+        - CommandLine|contains: ' -enc '
+        - CommandLine|contains: ' -encodedcommand '
+        - CommandLine|contains: FromBase64String
+        - CommandLine|contains: ' -decode '
+        - CommandLine|contains: ' -w hidden'
+- condition: all of selection_*
+falsepositives:
+- Legitimate use of the PDQDeploy tool to execute these commands
+level: medium

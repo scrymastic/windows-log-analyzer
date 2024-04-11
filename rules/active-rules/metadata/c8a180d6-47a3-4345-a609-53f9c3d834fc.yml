@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/10
+description: Detects suspicious reconnaissance command line activity on Windows systems
+  using the PowerShell Get-LocalGroupMember Cmdlet
+falsepositives:
+- Administrative activity
+filename: proc_creation_win_powershell_get_localgroup_member_recon.yml
+level: medium
+modified: ''
+references:
+- https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/
+related:
+- id: cef24b90-dddc-4ae1-a09a-8764872f69fc
+  type: similar
+status: test
+tags:
+- attack.discovery
+- attack.t1087.001

@@ -1,0 +1,23 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: Import-Module "$Env:Temp\
+      - CommandLine|contains: Import-Module '$Env:Temp\
+      - CommandLine|contains: Import-Module $Env:Temp\
+      - CommandLine|contains: Import-Module "$Env:Appdata\
+      - CommandLine|contains: Import-Module '$Env:Appdata\
+      - CommandLine|contains: Import-Module $Env:Appdata\
+      - CommandLine|contains: Import-Module C:\Users\Public\
+      - CommandLine|contains: ipmo "$Env:Temp\
+      - CommandLine|contains: ipmo '$Env:Temp\
+      - CommandLine|contains: ipmo $Env:Temp\
+      - CommandLine|contains: ipmo "$Env:Appdata\
+      - CommandLine|contains: ipmo '$Env:Appdata\
+      - CommandLine|contains: ipmo $Env:Appdata\
+      - CommandLine|contains: ipmo C:\Users\Public\
+- condition: selection
+id: c31364f7-8be6-4b77-8483-dd2b5a7b69a3
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,23 @@
+detection:
+- selection_logon3:
+  - and:
+    - EventID|==: 4624
+    - SubjectUserSid|==: S-1-0-0
+    - LogonType|==: 3
+    - LogonProcessName|==: NtLmSsp
+    - KeyLength|==: 0
+- selection_logon9:
+  - and:
+    - EventID|==: 4624
+    - LogonType|==: 9
+    - LogonProcessName|==: seclogo
+- filter:
+  - and:
+    - TargetUserName|==: ANONYMOUS LOGON
+- condition: 1 of selection_* and not filter
+id: 8eef149c-bd26-49f2-9e5a-9b00e3af499b
+logsource:
+  definition: The successful use of PtH for lateral movement between workstations
+    would trigger event ID 4624
+  product: windows
+  service: security

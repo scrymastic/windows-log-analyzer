@@ -1,0 +1,22 @@
+detection:
+- selection_main:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+    - ImagePath|contains: cmd
+    - ImagePath|contains: powershell
+    - or:
+      - ImagePath|contains: /c
+      - ImagePath|contains: /r
+- selection_other:
+  - and:
+    - or:
+      - ImagePath|contains: noexit
+      - and:
+        - ImagePath|contains: input
+        - ImagePath|contains: $
+- condition: all of selection_*
+id: 72862bf2-0eb1-11eb-adc1-0242ac120002
+logsource:
+  product: windows
+  service: system

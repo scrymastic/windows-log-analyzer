@@ -1,0 +1,17 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/21
+description: Detects when an attacker register a new SIP provider for persistence
+  and defense evasion
+falsepositives:
+- Might trigger if a legitimate new SIP provider is registered. But this is not a
+  common occurrence in an environment and should be investigated either way
+filename: registry_set_persistence_mpnotify.yml
+level: high
+modified: 2023/08/17
+references:
+- https://persistence-info.github.io/Data/mpnotify.html
+- https://www.youtube.com/watch?v=ggY3srD9dYs&ab_channel=GrzegorzTworek
+related: []
+status: experimental
+tags:
+- attack.persistence

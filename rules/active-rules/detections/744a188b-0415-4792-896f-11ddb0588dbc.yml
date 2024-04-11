@@ -1,0 +1,19 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \msra.exe
+    - ParentCommandLine|endswith: msra.exe
+    - or:
+      - Image|endswith: \arp.exe
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \net.exe
+      - Image|endswith: \netstat.exe
+      - Image|endswith: \nslookup.exe
+      - Image|endswith: \route.exe
+      - Image|endswith: \schtasks.exe
+      - Image|endswith: \whoami.exe
+- condition: selection
+id: 744a188b-0415-4792-896f-11ddb0588dbc
+logsource:
+  category: process_creation
+  product: windows

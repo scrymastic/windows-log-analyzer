@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5145
+    - RelativeTargetName|endswith: \wbem\wbemcomn.dll
+- filter:
+  - and:
+    - SubjectUserName|endswith: $
+- condition: selection and not filter
+id: f6c68d5f-e101-4b86-8c84-7d96851fd65c
+logsource:
+  product: windows
+  service: security

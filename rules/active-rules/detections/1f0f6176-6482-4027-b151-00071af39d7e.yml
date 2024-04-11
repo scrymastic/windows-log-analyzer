@@ -1,0 +1,18 @@
+detection:
+- lolbas:
+  - and:
+    - or:
+      - CommandLine|contains: ConfigSecurityPolicy.exe
+      - Image|endswith: \ConfigSecurityPolicy.exe
+      - OriginalFileName|==: ConfigSecurityPolicy.exe
+- remote:
+  - and:
+    - or:
+      - CommandLine|contains: https://
+      - CommandLine|contains: http://
+      - CommandLine|contains: ftp://
+- condition: lolbas and remote
+id: 1f0f6176-6482-4027-b151-00071af39d7e
+logsource:
+  category: process_creation
+  product: windows

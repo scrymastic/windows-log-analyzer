@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - OriginalFileName|==: Microsoft.NodejsTools.PressAnyKey.exe
+- filter_main_legit_name:
+  - and:
+    - Image|endswith: \Microsoft.NodejsTools.PressAnyKey.exe
+- condition: selection and not 1 of filter_main_*
+id: 65c3ca2c-525f-4ced-968e-246a713d164f
+logsource:
+  category: process_creation
+  product: windows

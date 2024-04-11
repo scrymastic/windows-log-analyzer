@@ -1,0 +1,16 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/04/21
+description: Detects calls to PowerShell with Invoke-WebRequest cmdlet using direct
+  IP access
+falsepositives:
+- Unknown
+filename: proc_creation_win_powershell_invoke_webrequest_direct_ip.yml
+level: medium
+modified: ''
+references:
+- https://www.huntress.com/blog/critical-vulnerabilities-in-papercut-print-management-software
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1105

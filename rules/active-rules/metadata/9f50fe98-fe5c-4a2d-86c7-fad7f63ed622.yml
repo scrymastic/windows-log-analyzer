@@ -1,0 +1,23 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/08/14
+description: Detects execution of "aspnet_compiler.exe" with potentially suspicious
+  paths for compilation.
+falsepositives:
+- Unknown
+filename: proc_creation_win_aspnet_compiler_susp_paths.yml
+level: high
+modified: ''
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Aspnet_Compiler/
+- https://ijustwannared.team/2020/08/01/the-curious-case-of-aspnet_compiler-exe/
+related:
+- id: 9ccba514-7cb6-4c5c-b377-700758f2f120
+  type: similar
+- id: 4c7f49ee-2638-43bb-b85b-ce676c30b260
+  type: similar
+- id: a01b8329-5953-4f73-ae2d-aa01e1f35f00
+  type: similar
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1127

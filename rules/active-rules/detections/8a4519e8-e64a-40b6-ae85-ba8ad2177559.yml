@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - OriginalFileName|==: BrowserCore.exe
+- filter_realbrowsercore:
+  - and:
+    - Image|endswith: \BrowserCore.exe
+- condition: selection and not 1 of filter_*
+id: 8a4519e8-e64a-40b6-ae85-ba8ad2177559
+logsource:
+  category: process_creation
+  product: windows

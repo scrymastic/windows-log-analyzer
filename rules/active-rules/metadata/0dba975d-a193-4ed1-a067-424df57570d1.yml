@@ -1,0 +1,19 @@
+author: frack113, Florian Roth (Nextron Systems)
+date: 2022/09/02
+description: 'Detects a network connection initiated by the certutil.exe utility.
+
+  Attackers can abuse the utility in order to download malware or additional payloads.
+
+  '
+falsepositives:
+- Unknown
+filename: net_connection_win_certutil_initiated_connection.yml
+level: high
+modified: 2022/10/04
+references:
+- https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certutil
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1105

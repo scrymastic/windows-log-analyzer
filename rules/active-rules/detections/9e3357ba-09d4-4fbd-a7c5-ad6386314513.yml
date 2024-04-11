@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \Software\Microsoft\Fax\Device Providers\
+    - TargetObject|contains: \ImageName
+- filter:
+  - and:
+    - Details|==: '%systemroot%\system32\fxst30.dll'
+- condition: selection and not filter
+id: 9e3357ba-09d4-4fbd-a7c5-ad6386314513
+logsource:
+  category: registry_set
+  product: windows

@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|contains: \PROCEXP
+    - TargetFilename|endswith: .sys
+- filter_main_process_explorer:
+  - and:
+    - or:
+      - Image|endswith: \procexp.exe
+      - Image|endswith: \procexp64.exe
+- condition: selection and not 1 of filter_main_*
+id: de46c52b-0bf8-4936-a327-aace94f94ac6
+logsource:
+  category: file_event
+  product: windows

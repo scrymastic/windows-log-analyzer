@@ -1,0 +1,23 @@
+author: Ilyas Ochkov, oscd.community
+date: 2019/10/24
+description: 'Detects uncommon outbound network activity via Kerberos default port
+  indicating possible lateral movement or first stage PrivEsc via delegation.
+
+  '
+falsepositives:
+- Web Browsers and third party application might generate similar activity. An initial
+  baseline is required.
+filename: net_connection_win_susp_outbound_kerberos_connection.yml
+level: medium
+modified: 2024/03/15
+references:
+- https://github.com/GhostPack/Rubeus
+related:
+- id: eca91c7c-9214-47b9-b4c5-cb1d7e4f2350
+  type: similar
+status: test
+tags:
+- attack.credential_access
+- attack.t1558
+- attack.lateral_movement
+- attack.t1550.003

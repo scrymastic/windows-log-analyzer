@@ -1,0 +1,15 @@
+detection:
+- selection_5447:
+  - and:
+    - EventID|==: 5447
+    - FilterName|contains: RonPolicy
+- selection_5449:
+  - and:
+    - EventID|==: 5449
+    - ProviderContextName|contains: RonPolicy
+- condition: 1 of selection_*
+id: 7b14c76a-c602-4ae6-9717-eff868153fc0
+logsource:
+  definition: 'Requirements: Audit Filtering Platform Policy Change needs to be enabled'
+  product: windows
+  service: security

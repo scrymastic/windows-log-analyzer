@@ -1,0 +1,15 @@
+detection:
+- selection_eid:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+- selection_service:
+  - and:
+    - or:
+      - ServiceName|==: csexecsvc
+      - ImagePath|endswith: \csexecsvc.exe
+- condition: all of selection_*
+id: a27e5fa9-c35e-4e3d-b7e0-1ce2af66ad12
+logsource:
+  product: windows
+  service: system

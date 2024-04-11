@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - Initiated|==: 'true'
+    - Image|endswith: \msiexec.exe
+    - or:
+      - DestinationPort|==: 80
+      - DestinationPort|==: 443
+- condition: selection
+id: 8e5e38e4-5350-4c0b-895a-e872ce0dd54f
+logsource:
+  category: network_connection
+  product: windows

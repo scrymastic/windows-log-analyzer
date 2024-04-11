@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Provider_Name|==: NetLogon
+    - EventID|==: 5829
+- condition: selection
+id: a0cb7110-edf0-47a4-9177-541a4083128a
+logsource:
+  product: windows
+  service: system

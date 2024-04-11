@@ -1,0 +1,31 @@
+detection:
+- selection_parent:
+  - and:
+    - ParentImage|endswith: \provlaunch.exe
+- selection_child:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \calc.exe
+        - Image|endswith: \cmd.exe
+        - Image|endswith: \cscript.exe
+        - Image|endswith: \mshta.exe
+        - Image|endswith: \notepad.exe
+        - Image|endswith: \powershell.exe
+        - Image|endswith: \pwsh.exe
+        - Image|endswith: \regsvr32.exe
+        - Image|endswith: \rundll32.exe
+        - Image|endswith: \wscript.exe
+      - or:
+        - Image|contains: :\PerfLogs\
+        - Image|contains: :\Temp\
+        - Image|contains: :\Users\Public\
+        - Image|contains: \AppData\Temp\
+        - Image|contains: \Windows\System32\Tasks\
+        - Image|contains: \Windows\Tasks\
+        - Image|contains: \Windows\Temp\
+- condition: all of selection_*
+id: f9999590-1f94-4a34-a91e-951e47bedefd
+logsource:
+  category: process_creation
+  product: windows

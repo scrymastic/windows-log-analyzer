@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \brave.exe
+      - Image|endswith: \chrome.exe
+      - Image|endswith: \msedge.exe
+      - Image|endswith: \opera.exe
+      - Image|endswith: \vivaldi.exe
+    - CommandLine|contains: --headless
+- condition: selection
+id: ef9dcfed-690c-4c5d-a9d1-482cd422225c
+logsource:
+  category: process_creation
+  product: windows

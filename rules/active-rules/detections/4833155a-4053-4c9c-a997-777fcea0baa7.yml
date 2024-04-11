@@ -1,0 +1,18 @@
+detection:
+- selection_sql:
+  - and:
+    - or:
+      - Product|==: SQLite
+      - or:
+        - Image|endswith: \sqlite.exe
+        - Image|endswith: \sqlite3.exe
+- selection_firefox:
+  - and:
+    - or:
+      - CommandLine|contains: cookies.sqlite
+      - CommandLine|contains: places.sqlite
+- condition: all of selection_*
+id: 4833155a-4053-4c9c-a997-777fcea0baa7
+logsource:
+  category: process_creation
+  product: windows

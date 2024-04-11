@@ -1,0 +1,28 @@
+detection:
+- selection_loader_img:
+  - and:
+    - Image|endswith: \loader.exe
+    - CommandLine|contains: '--pid:'
+- selection_loader_imphash:
+  - and:
+    - or:
+      - or:
+        - Imphash|==: 38d9e015591bbfd4929e0d0f47fa0055
+        - Imphash|==: 0e2216679ca6e1094d63322e3412d650
+      - or:
+        - Hashes|==: IMPHASH=38D9E015591BBFD4929E0D0F47FA0055
+        - Hashes|==: IMPHASH=0E2216679CA6E1094D63322E3412D650
+- selection_flags:
+  - and:
+    - CommandLine|contains: '--pid:'
+    - CommandLine|contains: '--outfile:'
+    - or:
+      - CommandLine|contains: .dmp
+      - CommandLine|contains: lsass
+      - CommandLine|contains: .obf
+      - CommandLine|contains: dump
+- condition: 1 of selection_*
+id: ca621ba5-54ab-4035-9942-d378e6fcde3c
+logsource:
+  category: process_creation
+  product: windows

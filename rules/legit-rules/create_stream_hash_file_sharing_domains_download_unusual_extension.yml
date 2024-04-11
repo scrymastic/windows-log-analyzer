@@ -1,0 +1,66 @@
+title: Unusual File Download From File Sharing Websites
+id: ae02ed70-11aa-4a22-b397-c0d0e8f6ea99
+related:
+- id: 52182dfb-afb7-41db-b4bc-5336cb29b464
+  type: similar
+status: experimental
+description: Detects the download of suspicious file type from a well-known file and
+  paste sharing domain
+references:
+- https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90015
+- https://www.cisa.gov/uscert/ncas/alerts/aa22-321a
+- https://www.microsoft.com/en-us/security/blog/2024/01/17/new-ttps-observed-in-mint-sandstorm-campaign-targeting-high-profile-individuals-at-universities-and-research-orgs/
+author: Florian Roth (Nextron Systems)
+date: 2022/08/24
+modified: 2024/02/09
+tags:
+- attack.defense_evasion
+- attack.s0139
+- attack.t1564.004
+logsource:
+  product: windows
+  category: create_stream_hash
+detection:
+- selection_domain:
+  - and:
+    - or:
+      - Contents|contains: .githubusercontent.com
+      - Contents|contains: anonfiles.com
+      - Contents|contains: cdn.discordapp.com
+      - Contents|contains: cdn.discordapp.com/attachments/
+      - Contents|contains: ddns.net
+      - Contents|contains: dl.dropboxusercontent.com
+      - Contents|contains: ghostbin.co
+      - Contents|contains: glitch.me
+      - Contents|contains: gofile.io
+      - Contents|contains: hastebin.com
+      - Contents|contains: mediafire.com
+      - Contents|contains: mega.nz
+      - Contents|contains: onrender.com
+      - Contents|contains: paste.ee
+      - Contents|contains: pastebin.com
+      - Contents|contains: pastebin.pl
+      - Contents|contains: pastetext.net
+      - Contents|contains: privatlab.com
+      - Contents|contains: privatlab.net
+      - Contents|contains: send.exploit.in
+      - Contents|contains: sendspace.com
+      - Contents|contains: storage.googleapis.com
+      - Contents|contains: storjshare.io
+      - Contents|contains: supabase.co
+      - Contents|contains: temp.sh
+      - Contents|contains: transfer.sh
+      - Contents|contains: ufile.io
+- selection_extension:
+  - and:
+    - or:
+      - TargetFilename|contains: .ps1:Zone
+      - TargetFilename|contains: .bat:Zone
+      - TargetFilename|contains: .cmd:Zone
+- condition: all of selection*
+fields:
+- TargetFilename
+- Image
+falsepositives:
+- Unknown
+level: medium

@@ -1,0 +1,40 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|endswith: .lnk
+    - or:
+      - TargetFilename|contains: .doc.
+      - TargetFilename|contains: .docx.
+      - TargetFilename|contains: .jpg.
+      - TargetFilename|contains: .pdf.
+      - TargetFilename|contains: .ppt.
+      - TargetFilename|contains: .pptx.
+      - TargetFilename|contains: .xls.
+      - TargetFilename|contains: .xlsx.
+- filter_main_recent:
+  - and:
+    - TargetFilename|contains: \AppData\Roaming\Microsoft\Windows\Recent\
+- filter_optional_office_recent:
+  - and:
+    - or:
+      - Image|endswith: \excel.exe
+      - Image|endswith: \powerpnt.exe
+      - Image|endswith: \winword.exe
+    - TargetFilename|contains: \AppData\Roaming\Microsoft\Office\Recent\
+- filter_optional_office_excel:
+  - and:
+    - Image|endswith: \excel.exe
+    - TargetFilename|contains: \AppData\Roaming\Microsoft\Excel
+- filter_optional_office_powerpoint:
+  - and:
+    - Image|endswith: \powerpnt.exe
+    - TargetFilename|contains: \AppData\Roaming\Microsoft\PowerPoint
+- filter_optional_office_word:
+  - and:
+    - Image|endswith: \winword.exe
+    - TargetFilename|contains: \AppData\Roaming\Microsoft\Word
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: 3215aa19-f060-4332-86d5-5602511f3ca8
+logsource:
+  category: file_event
+  product: windows

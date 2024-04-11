@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \vsjitdebugger.exe
+- reduction1:
+  - and:
+    - Image|endswith: \vsimmersiveactivatehelper*.exe
+- reduction2:
+  - and:
+    - Image|endswith: \devenv.exe
+- condition: selection and not (reduction1 or reduction2)
+id: 15c7904e-6ad1-4a45-9b46-5fb25df37fd2
+logsource:
+  category: process_creation
+  product: windows

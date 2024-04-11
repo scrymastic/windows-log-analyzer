@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \whoami.exe
+      - OriginalFileName|==: whoami.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: ' /priv'
+      - CommandLine|contains: ' -priv'
+- condition: all of selection_*
+id: 97a80ec7-0e2f-4d05-9ef4-65760e634f6b
+logsource:
+  category: process_creation
+  product: windows

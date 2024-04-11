@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \edputil.dll
+- filter_main_generic:
+  - and:
+    - or:
+      - ImageLoaded|startswith: C:\Windows\System32\
+      - ImageLoaded|startswith: C:\Windows\SysWOW64\
+      - ImageLoaded|startswith: C\Windows\WinSxS\
+- condition: selection and not 1 of filter_main_*
+id: e4903324-1a10-4ed3-981b-f6fe3be3a2c2
+logsource:
+  category: image_load
+  product: windows

@@ -1,0 +1,24 @@
+detection:
+- selection1a:
+  - and:
+    - CommandLine|contains: rundll32
+    - CommandLine|contains: apphelp.dll
+- selection1b:
+  - and:
+    - or:
+      - CommandLine|contains: ShimFlushCache
+      - CommandLine|contains: '#250'
+- selection2a:
+  - and:
+    - CommandLine|contains: rundll32
+    - CommandLine|contains: kernel32.dll
+- selection2b:
+  - and:
+    - or:
+      - CommandLine|contains: BaseFlushAppcompatCache
+      - CommandLine|contains: '#46'
+- condition: ( selection1a and selection1b ) or ( selection2a and selection2b )
+id: b0524451-19af-4efa-a46f-562a977f792e
+logsource:
+  category: process_creation
+  product: windows

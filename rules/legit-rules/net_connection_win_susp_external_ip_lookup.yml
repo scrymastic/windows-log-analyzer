@@ -1,0 +1,128 @@
+title: Suspicious Network Connection to IP Lookup Service APIs
+id: edf3485d-dac4-4d50-90e4-b0e5813f7e60
+related:
+- id: ec82e2a5-81ea-4211-a1f8-37a0286df2c2
+  type: derived
+status: experimental
+description: Detects external IP address lookups by non-browser processes via services
+  such as "api.ipify.org". This could be indicative of potential post compromise internet
+  test activity.
+references:
+- https://github.com/rsp/scripts/blob/c8bb272d68164a9836e4f273d8f924927f39b8c6/externalip-benchmark.md
+- https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-302a
+- https://thedfirreport.com/2022/11/28/emotet-strikes-again-lnk-file-leads-to-domain-wide-ransomware/
+- https://www.trendmicro.com/en_us/research/23/e/managed-xdr-investigation-of-ducktail-in-trend-micro-vision-one.html
+author: Janantha Marasinghe, Nasreddine Bencherchali (Nextron Systems)
+date: 2023/04/24
+modified: 2024/03/22
+tags:
+- attack.discovery
+- attack.t1016
+logsource:
+  category: network_connection
+  product: windows
+detection:
+- selection:
+  - and:
+    - or:
+      - or:
+        - DestinationHostname|==: www.ip.cn
+        - DestinationHostname|==: l2.io
+      - or:
+        - DestinationHostname|contains: api.2ip.ua
+        - DestinationHostname|contains: api.bigdatacloud.net
+        - DestinationHostname|contains: api.ipify.org
+        - DestinationHostname|contains: bot.whatismyipaddress.com
+        - DestinationHostname|contains: canireachthe.net
+        - DestinationHostname|contains: checkip.amazonaws.com
+        - DestinationHostname|contains: checkip.dyndns.org
+        - DestinationHostname|contains: curlmyip.com
+        - DestinationHostname|contains: db-ip.com
+        - DestinationHostname|contains: edns.ip-api.com
+        - DestinationHostname|contains: eth0.me
+        - DestinationHostname|contains: freegeoip.app
+        - DestinationHostname|contains: geoipy.com
+        - DestinationHostname|contains: getip.pro
+        - DestinationHostname|contains: icanhazip.com
+        - DestinationHostname|contains: ident.me
+        - DestinationHostname|contains: ifconfig.io
+        - DestinationHostname|contains: ifconfig.me
+        - DestinationHostname|contains: ip-api.com
+        - DestinationHostname|contains: ip.360.cn
+        - DestinationHostname|contains: ip.anysrc.net
+        - DestinationHostname|contains: ip.taobao.com
+        - DestinationHostname|contains: ip.tyk.nu
+        - DestinationHostname|contains: ipaddressworld.com
+        - DestinationHostname|contains: ipapi.co
+        - DestinationHostname|contains: ipconfig.io
+        - DestinationHostname|contains: ipecho.net
+        - DestinationHostname|contains: ipinfo.io
+        - DestinationHostname|contains: ipip.net
+        - DestinationHostname|contains: ipof.in
+        - DestinationHostname|contains: ipv4.icanhazip.com
+        - DestinationHostname|contains: ipv4bot.whatismyipaddress.com
+        - DestinationHostname|contains: ipv6-test.com
+        - DestinationHostname|contains: ipwho.is
+        - DestinationHostname|contains: jsonip.com
+        - DestinationHostname|contains: myexternalip.com
+        - DestinationHostname|contains: seeip.org
+        - DestinationHostname|contains: wgetip.com
+        - DestinationHostname|contains: whatismyip.akamai.com
+        - DestinationHostname|contains: whois.pconline.com.cn
+        - DestinationHostname|contains: wtfismyip.com
+- filter_optional_brave:
+  - and:
+    - Image|endswith: \brave.exe
+- filter_optional_chrome:
+  - and:
+    - or:
+      - Image|==: C:\Program Files\Google\Chrome\Application\chrome.exe
+      - Image|==: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+- filter_optional_firefox:
+  - and:
+    - or:
+      - Image|==: C:\Program Files\Mozilla Firefox\firefox.exe
+      - Image|==: C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+- filter_optional_ie:
+  - and:
+    - or:
+      - Image|==: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+      - Image|==: C:\Program Files\Internet Explorer\iexplore.exe
+- filter_optional_maxthon:
+  - and:
+    - Image|endswith: \maxthon.exe
+- filter_optional_edge_1:
+  - and:
+    - or:
+      - Image|startswith: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\
+      - Image|endswith: \WindowsApps\MicrosoftEdge.exe
+      - or:
+        - Image|==: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+        - Image|==: C:\Program Files\Microsoft\Edge\Application\msedge.exe
+- filter_optional_edge_2:
+  - and:
+    - or:
+      - Image|startswith: C:\Program Files (x86)\Microsoft\EdgeCore\
+      - Image|startswith: C:\Program Files\Microsoft\EdgeCore\
+    - or:
+      - Image|endswith: \msedge.exe
+      - Image|endswith: \msedgewebview2.exe
+- filter_optional_opera:
+  - and:
+    - Image|endswith: \opera.exe
+- filter_optional_safari:
+  - and:
+    - Image|endswith: \safari.exe
+- filter_optional_seamonkey:
+  - and:
+    - Image|endswith: \seamonkey.exe
+- filter_optional_vivaldi:
+  - and:
+    - Image|endswith: \vivaldi.exe
+- filter_optional_whale:
+  - and:
+    - Image|endswith: \whale.exe
+- condition: selection and not 1 of filter_optional_*
+falsepositives:
+- Legitimate use of the external websites for troubleshooting or network monitoring
+level: medium

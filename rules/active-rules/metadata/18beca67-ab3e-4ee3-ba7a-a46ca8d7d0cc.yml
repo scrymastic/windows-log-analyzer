@@ -1,0 +1,19 @@
+author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
+date: 2020/07/14
+description: Potential threat actor tampering with Sysmon manifest and eventually
+  disabling it
+falsepositives:
+- Unknown
+filename: win_security_sysmon_channel_reference_deletion.yml
+level: high
+modified: 2022/10/05
+references:
+- https://twitter.com/Flangvik/status/1283054508084473861
+- https://twitter.com/SecurityJosh/status/1283027365770276866
+- https://securityjosh.github.io/2020/04/23/Mute-Sysmon.html
+- https://gist.github.com/Cyb3rWard0g/cf08c38c61f7e46e8404b38201ca01c8
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1112

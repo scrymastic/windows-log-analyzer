@@ -1,0 +1,23 @@
+author: Markus Neis
+date: 2019/01/16
+description: 'Detects installation of a new shim using sdbinst.exe.
+
+  Adversaries may establish persistence and/or elevate privileges by executing malicious
+  content triggered by application shims
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_sdbinst_shim_persistence.yml
+level: medium
+modified: 2023/12/06
+references:
+- https://www.mandiant.com/resources/blog/fin7-shim-databases-persistence
+related:
+- id: 18ee686c-38a3-4f65-9f44-48a077141f42
+  type: similar
+status: test
+tags:
+- attack.persistence
+- attack.privilege_escalation
+- attack.t1546.011

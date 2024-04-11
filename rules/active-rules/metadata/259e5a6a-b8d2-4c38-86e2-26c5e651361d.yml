@@ -1,0 +1,20 @@
+author: Thomas Patzke
+date: 2017/06/12
+description: Detects default PsExec service filename which indicates PsExec service
+  installation and execution
+falsepositives:
+- Unknown
+filename: file_event_win_sysinternals_psexec_service.yml
+level: low
+modified: 2022/10/26
+references:
+- https://www.jpcert.or.jp/english/pub/sr/ir_research.html
+- https://jpcertcc.github.io/ToolAnalysisResultSheet
+related:
+- id: 42c575ea-e41e-41f1-b248-8093c3e82a28
+  type: derived
+status: test
+tags:
+- attack.execution
+- attack.t1569.002
+- attack.s0029

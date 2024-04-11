@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/09/05
+description: Detects usage of the Sharp Chisel via the commandline arguments
+falsepositives:
+- Unlikely
+filename: proc_creation_win_hktl_sharp_chisel.yml
+level: high
+modified: 2023/02/13
+references:
+- https://github.com/shantanu561993/SharpChisel
+- https://www.sentinelone.com/labs/wading-through-muddy-waters-recent-activity-of-an-iranian-state-sponsored-threat-actor/
+related:
+- id: 8b0e12da-d3c3-49db-bb4f-256703f380e5
+  type: similar
+status: test
+tags:
+- attack.command_and_control
+- attack.t1090.001

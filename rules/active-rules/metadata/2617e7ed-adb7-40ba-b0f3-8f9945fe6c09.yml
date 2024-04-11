@@ -1,0 +1,23 @@
+author: Florian Roth (Nextron Systems), David ANDRE (additional keywords)
+date: 2021/12/20
+description: Detects a suspicious process creation as SYSTEM user (suspicious program
+  or command line parameter)
+falsepositives:
+- Administrative activity
+- Scripts and administrative tools used in the monitored environment
+- Monitoring activity
+filename: proc_creation_win_susp_system_user_anomaly.yml
+level: high
+modified: 2023/12/14
+references:
+- Internal Research
+- https://tools.thehacker.recipes/mimikatz/modules
+related: []
+status: test
+tags:
+- attack.credential_access
+- attack.defense_evasion
+- attack.privilege_escalation
+- attack.t1134
+- attack.t1003
+- attack.t1027

@@ -1,0 +1,15 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \schtasks.exe
+      - OriginalFileName|==: schtasks.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: 'run '
+    - CommandLine|contains: \Application Experience\Microsoft Compatibility Appraiser
+- condition: all of selection_*
+id: f548a603-c9f2-4c89-b511-b089f7e94549
+logsource:
+  category: process_creation
+  product: windows

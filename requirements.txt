@@ -1,2 +1,2 @@
-python-dotenv
-regex
+evtx~=0.8.2
+PyYAML~=6.0.1

@@ -1,0 +1,18 @@
+author: Florian Roth (Nextron Systems), oscd.community
+date: 2019/01/29
+description: Detects the execution of netsh to configure a port forwarding of port
+  3389 (RDP) rule
+falsepositives:
+- Legitimate administration activity
+filename: proc_creation_win_netsh_port_forwarding_3389.yml
+level: high
+modified: 2023/02/13
+references:
+- https://www.fireeye.com/blog/threat-research/2019/01/bypassing-network-restrictions-through-rdp-tunneling.html
+related: []
+status: test
+tags:
+- attack.lateral_movement
+- attack.defense_evasion
+- attack.command_and_control
+- attack.t1090

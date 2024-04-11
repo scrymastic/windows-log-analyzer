@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \certutil.exe
+    - Initiated|==: 'true'
+    - or:
+      - DestinationPort|==: 80
+      - DestinationPort|==: 135
+      - DestinationPort|==: 443
+      - DestinationPort|==: 445
+- condition: selection
+id: 0dba975d-a193-4ed1-a067-424df57570d1
+logsource:
+  category: network_connection
+  product: windows

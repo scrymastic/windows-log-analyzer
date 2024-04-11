@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - ParentCommandLine|contains: conhost
+    - CommandLine|contains: /../../
+- condition: selection
+id: ee5e119b-1f75-4b34-add8-3be976961e39
+logsource:
+  category: process_creation
+  product: windows

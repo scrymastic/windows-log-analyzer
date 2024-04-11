@@ -1,0 +1,17 @@
+author: frack113
+date: 2023/09/15
+description: Detects file access requests to files ending with either the ".hive"/".reg"
+  extension, usually associated with Windows Registry backups.
+falsepositives:
+- Third party software installed in the user context might generate a lot of FPs.
+  Heavy baselining and tuning might be required.
+filename: file_access_win_reg_and_hive_access.yml
+level: low
+modified: ''
+references:
+- https://github.com/tccontre/Reg-Restore-Persistence-Mole
+related: []
+status: experimental
+tags:
+- attack.t1112
+- attack.defense_evasion

@@ -1,0 +1,22 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 5145
+    - or:
+      - RelativeTargetName|endswith: .bak
+      - RelativeTargetName|endswith: .dmp
+      - RelativeTargetName|endswith: .edb
+      - RelativeTargetName|endswith: .kirbi
+      - RelativeTargetName|endswith: .msg
+      - RelativeTargetName|endswith: .nsf
+      - RelativeTargetName|endswith: .nst
+      - RelativeTargetName|endswith: .oab
+      - RelativeTargetName|endswith: .ost
+      - RelativeTargetName|endswith: .pst
+      - RelativeTargetName|endswith: .rdp
+      - RelativeTargetName|endswith: \groups.xml
+- condition: selection
+id: 91c945bc-2ad1-4799-a591-4d00198a1215
+logsource:
+  product: windows
+  service: security

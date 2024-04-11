@@ -1,0 +1,14 @@
+detection:
+- selection_517:
+  - and:
+    - EventID|==: 517
+    - Provider_Name|==: Security
+- selection_1102:
+  - and:
+    - EventID|==: 1102
+    - Provider_Name|==: Microsoft-Windows-Eventlog
+- condition: 1 of selection_*
+id: d99b79d2-0a6f-4f46-ad8b-260b6e17f982
+logsource:
+  product: windows
+  service: security

@@ -1,0 +1,31 @@
+detection:
+- selection_registry:
+  - and:
+    - TargetObject|contains: \Control\Keyboard Layouts\
+    - TargetObject|contains: Ime File
+- selection_folders_1:
+  - and:
+    - or:
+      - Details|contains: :\Perflogs\
+      - Details|contains: :\Users\Public\
+      - Details|contains: :\Windows\Temp\
+      - Details|contains: \AppData\Local\Temp\
+      - Details|contains: \AppData\Roaming\
+      - Details|contains: \Temporary Internet
+- selection_folders_2:
+  - and:
+    - or:
+      - and:
+        - Details|contains: :\Users\
+        - Details|contains: \Favorites\
+      - and:
+        - Details|contains: :\Users\
+        - Details|contains: \Favourites\
+      - and:
+        - Details|contains: :\Users\
+        - Details|contains: \Contacts\
+- condition: selection_registry and 1 of selection_folders_*
+id: 9d8f9bb8-01af-4e15-a3a2-349071530530
+logsource:
+  category: registry_set
+  product: windows

@@ -1,0 +1,18 @@
+detection:
+- selection_pwsh:
+  - and:
+    - or:
+      - ParentImage|endswith: \powershell.exe
+      - ParentImage|endswith: \pwsh.exe
+    - Image|endswith: \powershell.exe
+    - CommandLine|contains: ' -nologo -windowstyle minimized -file '
+- selection_temp:
+  - and:
+    - or:
+      - CommandLine|contains: \AppData\Local\Temp\
+      - CommandLine|contains: \Windows\Temp\
+- condition: all of selection_*
+id: 1e0e1a81-e79b-44bc-935b-ddb9c8006b3d
+logsource:
+  category: process_creation
+  product: windows

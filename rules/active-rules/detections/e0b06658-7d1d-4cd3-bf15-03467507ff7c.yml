@@ -1,0 +1,26 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetFilename|endswith: \UsageLogs\cmstp.exe.log
+      - TargetFilename|endswith: \UsageLogs\cscript.exe.log
+      - TargetFilename|endswith: \UsageLogs\mshta.exe.log
+      - TargetFilename|endswith: \UsageLogs\msxsl.exe.log
+      - TargetFilename|endswith: \UsageLogs\regsvr32.exe.log
+      - TargetFilename|endswith: \UsageLogs\rundll32.exe.log
+      - TargetFilename|endswith: \UsageLogs\svchost.exe.log
+      - TargetFilename|endswith: \UsageLogs\wscript.exe.log
+      - TargetFilename|endswith: \UsageLogs\wmic.exe.log
+- filter_main_rundll32:
+  - and:
+    - ParentImage|endswith: \MsiExec.exe
+    - ParentCommandLine|contains: ' -Embedding'
+    - Image|endswith: \rundll32.exe
+    - CommandLine|contains: Temp
+    - CommandLine|contains: zzzzInvokeManagedCustomActionOutOfProc
+- condition: selection and not 1 of filter_main_*
+id: e0b06658-7d1d-4cd3-bf15-03467507ff7c
+logsource:
+  category: file_event
+  definition: 'Requirements: UsageLogs folder must be monitored by the sysmon configuration'
+  product: windows

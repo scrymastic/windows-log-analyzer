@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \jsc.exe
+    - CommandLine|contains: .js
+- condition: selection
+id: 52788a70-f1da-40dd-8fbd-73b5865d6568
+logsource:
+  category: process_creation
+  product: windows

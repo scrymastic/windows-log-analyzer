@@ -1,0 +1,89 @@
+title: Remote Thread Creation By Uncommon Source Image
+id: 66d31e5f-52d6-40a4-9615-002d3789a119
+related:
+- id: 02d1d718-dd13-41af-989d-ea85c7fab93f
+  type: derived
+status: experimental
+description: Detects uncommon processes creating remote threads.
+references:
+- Personal research, statistical analysis
+- https://lolbas-project.github.io
+author: Perez Diego (@darkquassar), oscd.community
+date: 2019/10/27
+modified: 2024/01/17
+tags:
+- attack.privilege_escalation
+- attack.defense_evasion
+- attack.t1055
+logsource:
+  product: windows
+  category: create_remote_thread
+detection:
+- selection:
+  - and:
+    - or:
+      - SourceImage|endswith: \explorer.exe
+      - SourceImage|endswith: \iexplore.exe
+      - SourceImage|endswith: \msiexec.exe
+      - SourceImage|endswith: \powerpnt.exe
+      - SourceImage|endswith: \schtasks.exe
+      - SourceImage|endswith: \winlogon.exe
+- filter_main_winlogon_1:
+  - and:
+    - SourceImage|endswith: :\Windows\System32\winlogon.exe
+    - or:
+      - TargetImage|endswith: :\Windows\System32\services.exe
+      - TargetImage|endswith: :\Windows\System32\wininit.exe
+      - TargetImage|endswith: :\Windows\System32\csrss.exe
+      - TargetImage|endswith: :\Windows\System32\LogonUI.exe
+- filter_main_winlogon_2:
+  - and:
+    - SourceImage|contains: :\Windows\System32\winlogon.exe
+    - TargetParentProcessId|==: 4
+- filter_main_schtasks_conhost:
+  - and:
+    - or:
+      - SourceImage|endswith: :\Windows\System32\schtasks.exe
+      - SourceImage|endswith: :\Windows\SysWOW64\schtasks.exe
+    - TargetImage|endswith: :\Windows\System32\conhost.exe
+- filter_main_explorer:
+  - and:
+    - SourceImage|endswith: :\Windows\explorer.exe
+    - or:
+      - TargetImage|endswith: :\Program Files (x86)\
+      - TargetImage|endswith: :\Program Files\
+      - TargetImage|endswith: :\Windows\System32\
+      - TargetImage|endswith: :\Windows\SysWOW64\
+- filter_main_system:
+  - and:
+    - TargetImage|==: System
+- filter_main_msiexec:
+  - and:
+    - SourceImage|endswith: \msiexec.exe
+    - or:
+      - TargetImage|contains: \AppData\Local\
+      - TargetImage|contains: :\Program Files (x86)\
+      - TargetImage|contains: :\Program Files\
+- filter_optional_aurora_smartconsole1:
+  - and:
+    - SourceImage|contains: :\Program Files\internet explorer\iexplore.exe
+    - SourceCommandLine|contains: https://
+    - SourceCommandLine|contains: .checkpoint.com/documents/
+    - SourceCommandLine|contains: SmartConsole_OLH/
+    - SourceCommandLine|contains: default.htm#cshid=
+- filter_optional_aurora_smartconsole2:
+  - and:
+    - SourceImage|contains: :\Program Files\internet explorer\iexplore.exe
+    - SourceParentImage|contains: :\Program Files
+    - SourceParentImage|contains: \CheckPoint\SmartConsole\
+    - SourceParentImage|contains: \SmartConsole.exe
+- filter_optional_powerpnt:
+  - and:
+    - SourceImage|contains: \Microsoft Office\
+    - SourceImage|endswith: \POWERPNT.EXE
+    - TargetImage|endswith: :\Windows\System32\csrss.exe
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+falsepositives:
+- This rule is best put in testing first in order to create a baseline that reflects
+  the data in your environment.
+level: medium

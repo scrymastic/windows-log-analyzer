@@ -1,0 +1,28 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \SharPersist.exe
+      - Product|==: SharPersist
+- selection_cli_1:
+  - and:
+    - or:
+      - CommandLine|contains: ' -t schtask -c '
+      - CommandLine|contains: ' -t startupfolder -c '
+- selection_cli_2:
+  - and:
+    - CommandLine|contains: ' -t reg -c '
+    - CommandLine|contains: ' -m add'
+- selection_cli_3:
+  - and:
+    - CommandLine|contains: ' -t service -c '
+    - CommandLine|contains: ' -m add'
+- selection_cli_4:
+  - and:
+    - CommandLine|contains: ' -t schtask -c '
+    - CommandLine|contains: ' -m add'
+- condition: 1 of selection_*
+id: 26488ad0-f9fd-4536-876f-52fea846a2e4
+logsource:
+  category: process_creation
+  product: windows

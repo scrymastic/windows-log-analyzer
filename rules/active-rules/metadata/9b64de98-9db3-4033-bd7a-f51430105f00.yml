@@ -1,0 +1,17 @@
+author: frack113, Nasreddine Bencherchali (Nextron Systems)
+date: 2023/07/22
+description: Detects the creation or modification of the Windows Terminal Profile
+  settings file "settings.json" by an uncommon process.
+falsepositives:
+- Some false positives may occur with admin scripts that set WT settings.
+filename: file_event_win_susp_windows_terminal_profile.yml
+level: medium
+modified: ''
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/74438b0237d141ee9c99747976447dc884cb1a39/atomics/T1547.015/T1547.015.md#atomic-test-1---persistence-by-modifying-windows-terminal-profile
+- https://twitter.com/nas_bench/status/1550836225652686848
+related: []
+status: experimental
+tags:
+- attack.persistence
+- attack.t1547.015

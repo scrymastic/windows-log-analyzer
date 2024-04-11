@@ -1,0 +1,14 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \deviceenroller.exe
+      - OriginalFileName|==: deviceenroller.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: /PhoneDeepLink
+- condition: all of selection_*
+id: e173ad47-4388-4012-ae62-bd13f71c18a8
+logsource:
+  category: process_creation
+  product: windows

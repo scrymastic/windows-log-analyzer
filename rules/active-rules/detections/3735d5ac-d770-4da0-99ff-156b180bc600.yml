@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \CCleanerReactivator.dll
+- filter_main_path:
+  - and:
+    - or:
+      - Image|startswith: C:\Program Files\CCleaner\
+      - Image|startswith: C:\Program Files (x86)\CCleaner\
+    - Image|endswith: \CCleanerReactivator.exe
+- condition: selection and not 1 of filter_main_*
+id: 3735d5ac-d770-4da0-99ff-156b180bc600
+logsource:
+  category: image_load
+  product: windows

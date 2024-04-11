@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: :3389
+- selection_opt:
+  - and:
+    - or:
+      - CommandLine|contains: ' -L '
+      - CommandLine|contains: ' -P '
+      - CommandLine|contains: ' -R '
+      - CommandLine|contains: ' -pw '
+      - CommandLine|contains: ' -ssh '
+- condition: all of selection*
+id: 8a3038e8-9c9d-46f8-b184-66234a160f6f
+logsource:
+  category: process_creation
+  product: windows

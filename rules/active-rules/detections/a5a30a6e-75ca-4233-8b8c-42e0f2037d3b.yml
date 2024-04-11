@@ -1,0 +1,18 @@
+detection:
+- selection_4104:
+  - and:
+    - ScriptBlockText|contains: '&&'
+    - ScriptBlockText|contains: rundll32
+    - ScriptBlockText|contains: shell32.dll
+    - ScriptBlockText|contains: shellexec_rundll
+    - or:
+      - ScriptBlockText|contains: value
+      - ScriptBlockText|contains: invoke
+      - ScriptBlockText|contains: comspec
+      - ScriptBlockText|contains: iex
+- condition: selection_4104
+id: a5a30a6e-75ca-4233-8b8c-42e0f2037d3b
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

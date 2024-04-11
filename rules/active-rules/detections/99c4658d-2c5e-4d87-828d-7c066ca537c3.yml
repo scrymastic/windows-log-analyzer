@@ -1,0 +1,19 @@
+detection:
+- selection_cmd:
+  - and:
+    - ScriptBlockText|contains: Disable-WindowsOptionalFeature
+    - ScriptBlockText|contains: -Online
+    - ScriptBlockText|contains: -FeatureName
+- selection_feature:
+  - and:
+    - or:
+      - ScriptBlockText|contains: Windows-Defender-Gui
+      - ScriptBlockText|contains: Windows-Defender-Features
+      - ScriptBlockText|contains: Windows-Defender
+      - ScriptBlockText|contains: Windows-Defender-ApplicationGuard
+- condition: all of selection*
+id: 99c4658d-2c5e-4d87-828d-7c066ca537c3
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

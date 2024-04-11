@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4657
+    - ObjectName|contains: \REGISTRY\MACHINE\SYSTEM
+    - ObjectName|contains: ControlSet
+    - ObjectName|contains: \Control\Lsa
+    - or:
+      - ObjectValueName|==: LmCompatibilityLevel
+      - ObjectValueName|==: NtlmMinClientSec
+      - ObjectValueName|==: RestrictSendingNTLMTraffic
+- condition: selection
+id: d3abac66-f11c-4ed0-8acb-50cc29c97eed
+logsource:
+  definition: 'Requirements: Audit Policy : Object Access > Audit Registry (Success)'
+  product: windows
+  service: security

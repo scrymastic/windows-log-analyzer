@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|contains: \SOFTWARE\
+    - TargetObject|contains: \Microsoft\Office\
+    - TargetObject|contains: \Common\Security
+    - TargetObject|endswith: \MacroRuntimeScanScope
+    - Details|==: DWORD (0x00000000)
+- condition: selection
+id: ab871450-37dc-4a3a-997f-6662aa8ae0f1
+logsource:
+  category: registry_set
+  product: windows

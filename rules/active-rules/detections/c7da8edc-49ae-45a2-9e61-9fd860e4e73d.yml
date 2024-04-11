@@ -1,0 +1,21 @@
+detection:
+- selection:
+  - and:
+    - EventType|==: CreateKey
+    - or:
+      - TargetObject|contains: \Active Directory Explorer
+      - TargetObject|contains: \Handle
+      - TargetObject|contains: \LiveKd
+      - TargetObject|contains: \Process Explorer
+      - TargetObject|contains: \ProcDump
+      - TargetObject|contains: \PsExec
+      - TargetObject|contains: \PsLoglist
+      - TargetObject|contains: \PsPasswd
+      - TargetObject|contains: \SDelete
+      - TargetObject|contains: \Sysinternals
+    - TargetObject|endswith: \EulaAccepted
+- condition: selection
+id: c7da8edc-49ae-45a2-9e61-9fd860e4e73d
+logsource:
+  category: registry_add
+  product: windows

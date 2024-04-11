@@ -1,0 +1,14 @@
+detection:
+- selection_webclient:
+  - and:
+    - Data|contains: Net.WebClient
+- selection_download:
+  - and:
+    - or:
+      - Data|contains: .DownloadFile(
+      - Data|contains: .DownloadString(
+- condition: all of selection_*
+id: 3236fcd0-b7e3-4433-b4f8-86ad61a9af2d
+logsource:
+  category: ps_classic_start
+  product: windows

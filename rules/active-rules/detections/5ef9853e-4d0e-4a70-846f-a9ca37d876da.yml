@@ -1,0 +1,34 @@
+detection:
+- selection:
+  - and:
+    - TargetImage|endswith: \lsass.exe
+    - or:
+      - GrantedAccess|contains: '0x1038'
+      - GrantedAccess|contains: '0x1438'
+      - GrantedAccess|contains: '0x143a'
+      - GrantedAccess|contains: '0x1fffff'
+    - or:
+      - CallTrace|contains: dbgcore.dll
+      - CallTrace|contains: dbghelp.dll
+      - CallTrace|contains: kernel32.dll
+      - CallTrace|contains: kernelbase.dll
+      - CallTrace|contains: ntdll.dll
+- filter_main_system_user:
+  - and:
+    - or:
+      - SourceUser|contains: AUTHORI
+      - SourceUser|contains: AUTORI
+- filter_optional_thor:
+  - and:
+    - CallTrace|contains: :\Windows\Temp\asgard2-agent\
+    - CallTrace|contains: \thor\thor64.exe+
+    - CallTrace|contains: '|UNKNOWN('
+    - GrantedAccess|==: '0x103800'
+- filter_optional_sysmon:
+  - and:
+    - SourceImage|endswith: :\Windows\Sysmon64.exe
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: 5ef9853e-4d0e-4a70-846f-a9ca37d876da
+logsource:
+  category: process_access
+  product: windows

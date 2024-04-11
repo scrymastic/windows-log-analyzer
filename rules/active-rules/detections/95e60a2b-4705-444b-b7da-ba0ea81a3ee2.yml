@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|contains: \JWrapper-Remote Access\
+      - Image|contains: \JWrapper-Remote Support\
+    - Image|endswith: \SimpleService.exe
+- condition: selection
+id: 95e60a2b-4705-444b-b7da-ba0ea81a3ee2
+logsource:
+  category: process_creation
+  product: windows

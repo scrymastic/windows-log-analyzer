@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: ActiveScriptEventConsumer
+    - CommandLine|contains: ' CREATE '
+- condition: selection
+id: ebef4391-1a81-4761-a40a-1db446c0e625
+logsource:
+  category: process_creation
+  product: windows

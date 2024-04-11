@@ -1,0 +1,15 @@
+author: Florian Roth (Nextron Systems)
+date: 2019/10/01
+description: Detects a suspicious program execution in Outlook temp folder
+falsepositives:
+- Unknown
+filename: proc_creation_win_office_outlook_execution_from_temp.yml
+level: high
+modified: 2022/10/09
+references:
+- Internal Research
+related: []
+status: test
+tags:
+- attack.initial_access
+- attack.t1566.001

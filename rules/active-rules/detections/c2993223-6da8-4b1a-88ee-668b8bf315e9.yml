@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: 'Get-ADUser '
+    - ScriptBlockText|contains: ' -Filter \*'
+    - or:
+      - ScriptBlockText|contains: ' > '
+      - ScriptBlockText|contains: ' | Select '
+      - ScriptBlockText|contains: Out-File
+      - ScriptBlockText|contains: Set-Content
+      - ScriptBlockText|contains: Add-Content
+- condition: selection
+id: c2993223-6da8-4b1a-88ee-668b8bf315e9
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

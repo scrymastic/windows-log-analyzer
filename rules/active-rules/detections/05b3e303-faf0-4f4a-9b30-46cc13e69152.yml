@@ -1,0 +1,21 @@
+detection:
+- selection_add:
+  - and:
+    - ScriptBlockText|contains: Add-Content $profile
+- selection_options:
+  - and:
+    - or:
+      - ScriptBlockText|contains: '-Value "IEX '
+      - ScriptBlockText|contains: -Value "Invoke-Expression
+      - ScriptBlockText|contains: -Value "Invoke-WebRequest
+      - ScriptBlockText|contains: -Value "Start-Process
+      - ScriptBlockText|contains: '-Value ''IEX '
+      - ScriptBlockText|contains: -Value 'Invoke-Expression
+      - ScriptBlockText|contains: -Value 'Invoke-WebRequest
+      - ScriptBlockText|contains: -Value 'Start-Process
+- condition: all of selection_*
+id: 05b3e303-faf0-4f4a-9b30-46cc13e69152
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

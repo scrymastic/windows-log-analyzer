@@ -1,0 +1,20 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \find.exe
+        - Image|endswith: \findstr.exe
+      - or:
+        - OriginalFileName|==: FIND.EXE
+        - OriginalFileName|==: FINDSTR.EXE
+- selection_cli:
+  - and:
+    - CommandLine|contains: cpassword
+    - CommandLine|contains: \sysvol\
+    - CommandLine|contains: .xml
+- condition: all of selection_*
+id: 91a2c315-9ee6-4052-a853-6f6a8238f90d
+logsource:
+  category: process_creation
+  product: windows

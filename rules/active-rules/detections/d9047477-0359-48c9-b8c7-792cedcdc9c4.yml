@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: ' runassystem '
+- condition: selection
+id: d9047477-0359-48c9-b8c7-792cedcdc9c4
+logsource:
+  category: process_creation
+  product: windows

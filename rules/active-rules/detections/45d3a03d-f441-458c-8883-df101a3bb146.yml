@@ -1,0 +1,14 @@
+detection:
+- selection_script:
+  - and:
+    - CommandLine|contains: Launch-VsDevShell.ps1
+- selection_flags:
+  - and:
+    - or:
+      - CommandLine|contains: 'VsWherePath '
+      - CommandLine|contains: 'VsInstallationPath '
+- condition: all of selection_*
+id: 45d3a03d-f441-458c-8883-df101a3bb146
+logsource:
+  category: process_creation
+  product: windows

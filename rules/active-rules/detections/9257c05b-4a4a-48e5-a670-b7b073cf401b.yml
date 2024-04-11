@@ -1,0 +1,15 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \dotnet-trace.exe
+      - OriginalFileName|==: dotnet-trace.dll
+- selection_cli:
+  - and:
+    - CommandLine|contains: '-- '
+    - CommandLine|contains: collect
+- condition: all of selection_*
+id: 9257c05b-4a4a-48e5-a670-b7b073cf401b
+logsource:
+  category: process_creation
+  product: windows

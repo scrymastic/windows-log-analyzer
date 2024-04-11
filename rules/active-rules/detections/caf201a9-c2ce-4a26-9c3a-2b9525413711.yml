@@ -1,0 +1,21 @@
+detection:
+- selection_class:
+  - and:
+    - CommandLine|contains: Win32_NTEventlogFile
+- selection_function:
+  - and:
+    - or:
+      - CommandLine|contains: .BackupEventlog(
+      - CommandLine|contains: .ChangeSecurityPermissions(
+      - CommandLine|contains: .ChangeSecurityPermissionsEx(
+      - CommandLine|contains: .ClearEventLog(
+      - CommandLine|contains: .Delete(
+      - CommandLine|contains: .DeleteEx(
+      - CommandLine|contains: .Rename(
+      - CommandLine|contains: .TakeOwnerShip(
+      - CommandLine|contains: .TakeOwnerShipEx(
+- condition: all of selection_*
+id: caf201a9-c2ce-4a26-9c3a-2b9525413711
+logsource:
+  category: process_creation
+  product: windows

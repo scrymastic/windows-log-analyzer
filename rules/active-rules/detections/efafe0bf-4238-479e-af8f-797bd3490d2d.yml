@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \cmstp.exe
+    - Initiated|==: 'true'
+- condition: selection
+id: efafe0bf-4238-479e-af8f-797bd3490d2d
+logsource:
+  category: network_connection
+  product: windows

@@ -1,0 +1,16 @@
+author: Ivan Dyachkov, Yulia Fomina, oscd.community
+date: 2020/10/07
+description: Detects using register-cimprovider.exe to execute arbitrary dll file.
+falsepositives:
+- Unknown
+filename: proc_creation_win_registry_cimprovider_dll_load.yml
+level: medium
+modified: 2021/11/27
+references:
+- https://twitter.com/PhilipTsukerman/status/992021361106268161
+- https://lolbas-project.github.io/lolbas/Binaries/Register-cimprovider/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1574

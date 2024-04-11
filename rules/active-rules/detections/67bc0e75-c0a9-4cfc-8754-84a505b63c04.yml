@@ -1,0 +1,27 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|contains: \AppData\Local\Apps\2.0\
+    - or:
+      - Image|endswith: \calc.exe
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \explorer.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \net.exe
+      - Image|endswith: \net1.exe
+      - Image|endswith: \nltest.exe
+      - Image|endswith: \notepad.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \reg.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \schtasks.exe
+      - Image|endswith: \werfault.exe
+      - Image|endswith: \wscript.exe
+- condition: selection
+id: 67bc0e75-c0a9-4cfc-8754-84a505b63c04
+logsource:
+  category: process_creation
+  product: windows

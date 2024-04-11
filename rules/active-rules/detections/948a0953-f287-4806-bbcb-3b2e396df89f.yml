@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - ImageLoaded|endswith: \mfdetours.dll
+- filter_main_legit_path:
+  - and:
+    - ImageLoaded|contains: :\Program Files (x86)\Windows Kits\10\bin\
+    - SignatureStatus|==: Valid
+- condition: selection and not 1 of filter_main_*
+id: 948a0953-f287-4806-bbcb-3b2e396df89f
+logsource:
+  category: image_load
+  product: windows

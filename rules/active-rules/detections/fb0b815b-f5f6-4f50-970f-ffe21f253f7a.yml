@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - CommandLine|contains: Extexport.exe
+      - Image|endswith: \Extexport.exe
+      - OriginalFileName|==: extexport.exe
+- condition: selection
+id: fb0b815b-f5f6-4f50-970f-ffe21f253f7a
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,19 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 104
+    - Provider_Name|==: Microsoft-Windows-Eventlog
+- filter_main_covered:
+  - and:
+    - or:
+      - Channel|==: Microsoft-Windows-PowerShell/Operational
+      - Channel|==: Microsoft-Windows-Sysmon/Operational
+      - Channel|==: PowerShellCore/Operational
+      - Channel|==: Security
+      - Channel|==: System
+      - Channel|==: Windows PowerShell
+- condition: selection and not 1 of filter_main_*
+id: a62b37e0-45d3-48d9-a517-90c1a1b0186b
+logsource:
+  product: windows
+  service: system

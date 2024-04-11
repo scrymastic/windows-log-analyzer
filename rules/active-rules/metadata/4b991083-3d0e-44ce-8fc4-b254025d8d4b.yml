@@ -1,0 +1,15 @@
+author: Tim Rauch, Elastic (idea)
+date: 2022/09/21
+description: Detects suspicious parent process for cmd.exe
+falsepositives:
+- Unknown
+filename: proc_creation_win_cmd_unusual_parent.yml
+level: medium
+modified: 2023/12/05
+references:
+- https://www.elastic.co/guide/en/security/current/unusual-parent-process-for-cmd.exe.html
+related: []
+status: experimental
+tags:
+- attack.execution
+- attack.t1059

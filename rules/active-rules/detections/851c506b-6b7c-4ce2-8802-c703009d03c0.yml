@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: CurrentVersion\Winlogon
+- selection2:
+  - and:
+    - or:
+      - ScriptBlockText|contains: Set-ItemProperty
+      - ScriptBlockText|contains: New-Item
+- condition: all of selection*
+id: 851c506b-6b7c-4ce2-8802-c703009d03c0
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

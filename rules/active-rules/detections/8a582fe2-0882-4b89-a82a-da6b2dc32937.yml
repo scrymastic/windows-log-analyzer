@@ -1,0 +1,41 @@
+detection:
+- selection_parent:
+  - and:
+    - ParentImage|endswith: \wbem\WmiPrvSE.exe
+- selection_children_1:
+  - and:
+    - or:
+      - Image|endswith: \certutil.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \msiexec.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \rundll32.exe
+      - Image|endswith: \verclsid.exe
+      - Image|endswith: \wscript.exe
+- selection_children_2:
+  - and:
+    - Image|endswith: \cmd.exe
+    - or:
+      - CommandLine|contains: cscript
+      - CommandLine|contains: mshta
+      - CommandLine|contains: powershell
+      - CommandLine|contains: pwsh
+      - CommandLine|contains: regsvr32
+      - CommandLine|contains: rundll32
+      - CommandLine|contains: wscript
+- filter_main_werfault:
+  - and:
+    - Image|endswith: \WerFault.exe
+- filter_main_wmiprvse:
+  - and:
+    - Image|endswith: \WmiPrvSE.exe
+- filter_main_msiexec:
+  - and:
+    - Image|endswith: \msiexec.exe
+    - CommandLine|contains: '/i '
+- condition: selection_parent and 1 of selection_children_* and not 1 of filter_main_*
+id: 8a582fe2-0882-4b89-a82a-da6b2dc32937
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,17 @@
+author: Christian Burkard (Nextron Systems)
+date: 2021/08/23
+description: Detects the pattern of UAC Bypass using consent.exe and comctl32.dll
+  (UACMe 22)
+falsepositives:
+- Unknown
+filename: proc_creation_win_uac_bypass_consent_comctl32.yml
+level: high
+modified: 2022/10/09
+references:
+- https://github.com/hfiref0x/UACME
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.privilege_escalation
+- attack.t1548.002

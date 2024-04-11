@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - OriginalFileName|==: whoami.exe
+- filter:
+  - and:
+    - Image|endswith: \whoami.exe
+- condition: selection and not filter
+id: f1086bf7-a0c4-4a37-9102-01e573caf4a0
+logsource:
+  category: process_creation
+  product: windows

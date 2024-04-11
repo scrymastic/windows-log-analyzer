@@ -1,0 +1,14 @@
+detection:
+- selection_upload:
+  - and:
+    - CommandLine|contains: 'type '
+    - CommandLine|contains: ' > \\\\'
+- selection_download:
+  - and:
+    - CommandLine|contains: type \\\\
+    - CommandLine|contains: ' > '
+- condition: 1 of selection_*
+id: aa0b3a82-eacc-4ec3-9150-b5a9a3e3f82f
+logsource:
+  category: process_creation
+  product: windows

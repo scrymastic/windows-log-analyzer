@@ -1,0 +1,85 @@
+title: Potential Active Directory Reconnaissance/Enumeration Via LDAP
+id: 31d68132-4038-47c7-8f8e-635a39a7c174
+status: test
+description: Detects potential Active Directory enumeration via LDAP
+references:
+- https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/hunting-for-reconnaissance-activities-using-ldap-search-filters/ba-p/824726
+- https://github.com/PowerShellMafia/PowerSploit/blob/d943001a7defb5e0d1657085a77a0e78609be58f/Recon/PowerView.ps1
+- https://github.com/BloodHoundAD/SharpHound3/blob/7d96b991b1887ff50349ce59c80980bc0d95c86a/SharpHound3/LdapBuilder.cs
+- https://medium.com/falconforce/falconfriday-detecting-active-directory-data-collection-0xff21-c22d1a57494c
+- https://github.com/fox-it/BloodHound.py/blob/d65eb614831cd30f26028ccb072f5e77ca287e0b/bloodhound/ad/domain.py#L427
+author: Adeem Mawani
+date: 2021/06/22
+modified: 2023/11/03
+tags:
+- attack.discovery
+- attack.t1069.002
+- attack.t1087.002
+- attack.t1482
+logsource:
+  product: windows
+  service: ldap
+  definition: 'Requirements: Microsoft-Windows-LDAP-Client/Debug ETW logging'
+detection:
+- generic_search:
+  - and:
+    - EventID|==: 30
+    - or:
+      - SearchFilter|contains: (groupType:1.2.840.113556.1.4.803:=2147483648)
+      - SearchFilter|contains: (groupType:1.2.840.113556.1.4.803:=2147483656)
+      - SearchFilter|contains: (groupType:1.2.840.113556.1.4.803:=2147483652)
+      - SearchFilter|contains: (groupType:1.2.840.113556.1.4.803:=2147483650)
+      - SearchFilter|contains: (sAMAccountType=805306369)
+      - SearchFilter|contains: (sAMAccountType=805306368)
+      - SearchFilter|contains: (sAMAccountType=536870913)
+      - SearchFilter|contains: (sAMAccountType=536870912)
+      - SearchFilter|contains: (sAMAccountType=268435457)
+      - SearchFilter|contains: (sAMAccountType=268435456)
+      - SearchFilter|contains: (objectCategory=groupPolicyContainer)
+      - SearchFilter|contains: (objectCategory=organizationalUnit)
+      - SearchFilter|contains: (objectCategory=Computer)
+      - SearchFilter|contains: (objectCategory=nTDSDSA)
+      - SearchFilter|contains: (objectCategory=server)
+      - SearchFilter|contains: (objectCategory=domain)
+      - SearchFilter|contains: (objectCategory=person)
+      - SearchFilter|contains: (objectCategory=group)
+      - SearchFilter|contains: (objectCategory=user)
+      - SearchFilter|contains: (objectClass=trustedDomain)
+      - SearchFilter|contains: (objectClass=computer)
+      - SearchFilter|contains: (objectClass=server)
+      - SearchFilter|contains: (objectClass=group)
+      - SearchFilter|contains: (objectClass=user)
+      - SearchFilter|contains: (primaryGroupID=521)
+      - SearchFilter|contains: (primaryGroupID=516)
+      - SearchFilter|contains: (primaryGroupID=515)
+      - SearchFilter|contains: (primaryGroupID=512)
+      - SearchFilter|contains: Domain Admins
+      - SearchFilter|contains: objectGUID=\*
+      - SearchFilter|contains: (schemaIDGUID=\*)
+- suspicious_flag:
+  - and:
+    - EventID|==: 30
+    - or:
+      - SearchFilter|contains: (userAccountControl:1.2.840.113556.1.4.803:=4194304)
+      - SearchFilter|contains: (userAccountControl:1.2.840.113556.1.4.803:=2097152)
+      - SearchFilter|contains: '!(userAccountControl:1.2.840.113556.1.4.803:=1048574)'
+      - SearchFilter|contains: (userAccountControl:1.2.840.113556.1.4.803:=524288)
+      - SearchFilter|contains: (userAccountControl:1.2.840.113556.1.4.803:=65536)
+      - SearchFilter|contains: (userAccountControl:1.2.840.113556.1.4.803:=8192)
+      - SearchFilter|contains: (userAccountControl:1.2.840.113556.1.4.803:=544)
+      - SearchFilter|contains: '!(UserAccountControl:1.2.840.113556.1.4.803:=2)'
+      - SearchFilter|contains: msDS-AllowedToActOnBehalfOfOtherIdentity
+      - SearchFilter|contains: msDS-AllowedToDelegateTo
+      - SearchFilter|contains: msDS-GroupManagedServiceAccount
+      - SearchFilter|contains: (accountExpires=9223372036854775807)
+      - SearchFilter|contains: (accountExpires=0)
+      - SearchFilter|contains: (adminCount=1)
+      - SearchFilter|contains: ms-MCS-AdmPwd
+- narrow_down_filter:
+  - and:
+    - EventID|==: 30
+    - or:
+      - SearchFilter|contains: (domainSid=*)
+      - SearchFilter|contains: (objectSid=*)
+- condition: (generic_search and not narrow_down_filter) or suspicious_flag
+level: medium

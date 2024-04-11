@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - TargetFilename|contains: \Microsoft\Windows\Start Menu\Programs\StartUp
+- filter_update:
+  - and:
+    - or:
+      - Image|==: C:\Windows\System32\wuauclt.exe
+      - TargetFilename|startswith: C:\$WINDOWS.~BT\NewOS\
+- condition: selection and not filter_update
+id: 2aa0a6b4-a865-495b-ab51-c28249537b75
+logsource:
+  category: file_event
+  product: windows

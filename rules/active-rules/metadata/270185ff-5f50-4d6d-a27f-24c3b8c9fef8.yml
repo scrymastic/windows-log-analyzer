@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/02/16
+description: Detects the deletion of tomcat WebServer logs which may indicate an attempt
+  to destroy forensic evidence
+falsepositives:
+- During uninstallation of the tomcat server
+- During log rotation
+filename: file_delete_win_delete_tomcat_logs.yml
+level: medium
+modified: ''
+references:
+- Internal Research
+- https://linuxhint.com/view-tomcat-logs-windows/
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1070

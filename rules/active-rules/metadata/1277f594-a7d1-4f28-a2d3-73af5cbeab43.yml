@@ -1,0 +1,16 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/11/20
+description: Detects Windows shells and scripting applications that write files to
+  suspicious folders
+falsepositives:
+- Unknown
+filename: file_event_win_shell_write_susp_directory.yml
+level: high
+modified: 2023/03/29
+references:
+- Internal Research
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059

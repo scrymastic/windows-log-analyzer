@@ -1,0 +1,26 @@
+detection:
+- selection1a:
+  - and:
+    - or:
+      - ScriptBlockText|contains: del
+      - ScriptBlockText|contains: Remove-Item
+      - ScriptBlockText|contains: rm
+- selection1b:
+  - and:
+    - ScriptBlockText|contains: (Get-PSReadlineOption).HistorySavePath
+- selection_2:
+  - and:
+    - ScriptBlockText|contains: Set-PSReadlineOption
+    - ScriptBlockText|contains: "\u2013HistorySaveStyle"
+    - ScriptBlockText|contains: SaveNothing
+- selection_3:
+  - and:
+    - ScriptBlockText|contains: Set-PSReadlineOption
+    - ScriptBlockText|contains: -HistorySaveStyle
+    - ScriptBlockText|contains: SaveNothing
+- condition: 1 of selection_* or all of selection1*
+id: 26b692dc-1722-49b2-b496-a8258aa6371d
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

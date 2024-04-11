@@ -1,0 +1,26 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \pwsh.exe
+      - OriginalFileName|==: pwsh.dll
+- selection_sddl_flag:
+  - and:
+    - or:
+      - CommandLine|contains: '-SecurityDescriptorSddl '
+      - CommandLine|contains: '-sd '
+- selection_set_service:
+  - and:
+    - CommandLine|contains: 'Set-Service '
+    - CommandLine|contains: D;;
+    - or:
+      - CommandLine|contains: ;;;IU
+      - CommandLine|contains: ;;;SU
+      - CommandLine|contains: ;;;BA
+      - CommandLine|contains: ;;;SY
+      - CommandLine|contains: ;;;WD
+- condition: all of selection_*
+id: a95b9b42-1308-4735-a1af-abb1c5e6f5ac
+logsource:
+  category: process_creation
+  product: windows

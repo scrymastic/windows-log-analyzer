@@ -1,0 +1,19 @@
+author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
+date: 2022/01/04
+description: Detects uses of the createdump.exe LOLOBIN utility to dump process memory
+falsepositives:
+- Command lines that use the same flags
+filename: proc_creation_win_createdump_lolbin_execution.yml
+level: high
+modified: 2022/08/19
+references:
+- https://www.crowdstrike.com/blog/overwatch-exposes-aquatic-panda-in-possession-of-log-4-shell-exploit-tools/
+- https://twitter.com/bopin2020/status/1366400799199272960
+related:
+- id: 1a1ed54a-2ba4-4221-94d5-01dee560d71e
+  type: similar
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1036
+- attack.t1003.001

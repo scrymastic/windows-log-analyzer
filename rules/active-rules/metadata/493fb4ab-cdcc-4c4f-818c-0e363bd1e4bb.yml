@@ -1,0 +1,15 @@
+author: Florian Roth (Nextron Systems)
+date: 2021/09/01
+description: Detects the WMI Event Consumer service scrcons.exe creating a named pipe
+falsepositives:
+- Unknown
+filename: pipe_created_scrcons_wmi_consumer_namedpipe.yml
+level: medium
+modified: 2023/11/30
+references:
+- https://github.com/RiccardoAncarani/LiquidSnake
+related: []
+status: test
+tags:
+- attack.t1047
+- attack.execution

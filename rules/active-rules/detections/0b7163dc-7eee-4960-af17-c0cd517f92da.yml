@@ -1,0 +1,18 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - OriginalFileName|==: wmic.exe
+      - Image|endswith: \WMIC.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' service '
+    - CommandLine|contains: ' call '
+    - or:
+      - CommandLine|contains: stopservice
+      - CommandLine|contains: startservice
+- condition: all of selection_*
+id: 0b7163dc-7eee-4960-af17-c0cd517f92da
+logsource:
+  category: process_creation
+  product: windows

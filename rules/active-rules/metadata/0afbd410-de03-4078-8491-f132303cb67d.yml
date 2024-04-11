@@ -1,0 +1,15 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/09/19
+description: Detects the execution of a renamed "client32.exe" (NetSupport RAT) via
+  Imphash, Product and OriginalFileName strings
+falsepositives:
+- Unknown
+filename: proc_creation_win_renamed_netsupport_rat.yml
+level: high
+modified: 2023/02/04
+references:
+- https://redcanary.com/blog/misbehaving-rats/
+related: []
+status: test
+tags:
+- attack.defense_evasion

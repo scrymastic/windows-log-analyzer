@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - OriginalFileName|==: NirCmd.exe
+- filter_main_img:
+  - and:
+    - or:
+      - Image|endswith: \nircmd.exe
+      - Image|endswith: \nircmdc.exe
+- condition: selection and not 1 of filter_main_*
+id: 264982dc-dbad-4dce-b707-1e0d3e0f73d9
+logsource:
+  category: process_creation
+  product: windows

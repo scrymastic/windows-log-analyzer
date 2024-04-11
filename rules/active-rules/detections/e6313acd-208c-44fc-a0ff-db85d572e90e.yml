@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: nslookup
+    - CommandLine|contains: _ldap._tcp.dc._msdcs.
+- condition: selection
+id: e6313acd-208c-44fc-a0ff-db85d572e90e
+logsource:
+  category: process_creation
+  product: windows

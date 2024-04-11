@@ -1,0 +1,31 @@
+detection:
+- selection_opt_1:
+  - and:
+    - or:
+      - Image|endswith: \rar.exe
+      - Description|==: Command line RAR
+- selection_opt_2:
+  - and:
+    - or:
+      - CommandLine|contains: '.exe a '
+      - CommandLine|contains: ' a -m'
+- selection_cli_flags:
+  - and:
+    - CommandLine|contains: ' -hp'
+    - CommandLine|contains: ' -r '
+- selection_cli_folders:
+  - and:
+    - or:
+      - CommandLine|contains: ' ?:\\\*.'
+      - CommandLine|contains: ' ?:\\\\\*.'
+      - CommandLine|contains: ' ?:\$Recycle.bin\'
+      - CommandLine|contains: ' ?:\PerfLogs\'
+      - CommandLine|contains: ' ?:\Temp'
+      - CommandLine|contains: ' ?:\Users\Public\'
+      - CommandLine|contains: ' ?:\Windows\'
+      - CommandLine|contains: ' %public%'
+- condition: 1 of selection_opt_* and all of selection_cli_*
+id: afe52666-401e-4a02-b4ff-5d128990b8cb
+logsource:
+  category: process_creation
+  product: windows

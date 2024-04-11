@@ -1,0 +1,38 @@
+detection:
+- selection_parent:
+  - and:
+    - or:
+      - ParentImage|endswith: \wscript.exe
+      - ParentImage|endswith: \cscript.exe
+- selection_cli_script_main:
+  - and:
+    - or:
+      - Image|endswith: \cmd.exe
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+- selection_cli_script_option_mshta:
+  - and:
+    - CommandLine|contains: mshta
+    - CommandLine|contains: http
+- selection_cli_script_option_other:
+  - and:
+    - or:
+      - CommandLine|contains: rundll32
+      - CommandLine|contains: regsvr32
+      - CommandLine|contains: msiexec
+- selection_cli_standalone:
+  - and:
+    - Image|endswith: \rundll32.exe
+- filter_main_rundll32_known_exports:
+  - and:
+    - Image|endswith: \rundll32.exe
+    - or:
+      - CommandLine|contains: UpdatePerUserSystemParameters
+      - CommandLine|contains: PrintUIEntry
+      - CommandLine|contains: ClearMyTracksByProcess
+- condition: selection_parent and ( selection_cli_standalone or (selection_cli_script_main
+    and 1 of selection_cli_script_option_*) ) and not 1 of filter_main_*
+id: b6676963-0353-4f88-90f5-36c20d443c6a
+logsource:
+  category: process_creation
+  product: windows

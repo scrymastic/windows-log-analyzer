@@ -1,0 +1,21 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \regsvr32.exe
+      - OriginalFileName|==: REGSVR32.EXE
+- selection_flag:
+  - and:
+    - or:
+      - CommandLine|contains: ' /i'
+      - CommandLine|contains: ' -i'
+- selection_protocol:
+  - and:
+    - or:
+      - CommandLine|contains: ftp
+      - CommandLine|contains: http
+- condition: all of selection_*
+id: 867356ee-9352-41c9-a8f2-1be690d78216
+logsource:
+  category: process_creation
+  product: windows

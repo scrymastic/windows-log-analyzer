@@ -1,0 +1,14 @@
+author: X__Junior (Nextron Systems)
+date: 2023/06/30
+description: Detects execution of "curl.exe" with the "--insecure" flag.
+falsepositives:
+- Access to badly maintained internal or development systems
+filename: proc_creation_win_curl_insecure_connection.yml
+level: medium
+modified: ''
+references:
+- https://curl.se/docs/manpage.html
+related: []
+status: experimental
+tags:
+- attack.execution

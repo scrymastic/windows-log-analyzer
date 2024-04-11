@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4692
+- condition: selection
+id: 39a94fd1-8c9a-4ff6-bf22-c058762f8014
+logsource:
+  product: windows
+  service: security

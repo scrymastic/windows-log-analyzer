@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4662
+    - ObjectType|==: SecretObject
+    - AccessMask|==: '0x2'
+    - ObjectName|contains: BCKUPKEY
+- condition: selection
+id: 4ac1f50b-3bd0-4968-902d-868b4647937e
+logsource:
+  product: windows
+  service: security

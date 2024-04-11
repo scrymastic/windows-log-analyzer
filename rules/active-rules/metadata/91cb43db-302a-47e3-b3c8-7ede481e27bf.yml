@@ -1,0 +1,26 @@
+author: frack113
+date: 2022/04/09
+description: 'Detects file access requests to browser credential stores by uncommon
+  processes.
+
+  Could indicate potential attempt of credential stealing.
+
+  Requires heavy baselining before usage
+
+  '
+falsepositives:
+- Antivirus, Anti-Spyware, Anti-Malware Software
+- Backup software
+- Legitimate software installed on partitions other than "C:\"
+- Searching software such as "everything.exe"
+filename: file_access_win_browser_credential_access.yml
+level: medium
+modified: 2023/12/18
+references:
+- https://www.zscaler.com/blogs/security-research/ffdroider-stealer-targeting-social-media-platform-users
+- https://github.com/lclevy/firepwd
+related: []
+status: experimental
+tags:
+- attack.t1003
+- attack.credential_access

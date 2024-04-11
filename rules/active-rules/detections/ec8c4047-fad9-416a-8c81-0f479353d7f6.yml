@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - Image|endswith: \msdt.exe
+    - ImageLoaded|endswith: \sdiageng.dll
+- condition: selection
+id: ec8c4047-fad9-416a-8c81-0f479353d7f6
+logsource:
+  category: image_load
+  product: windows

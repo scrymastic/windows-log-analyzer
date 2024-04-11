@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \addinutil.exe
+      - OriginalFileName|==: AddInUtil.exe
+- filter_main_legit_location:
+  - and:
+    - or:
+      - Image|contains: :\Windows\Microsoft.NET\Framework\
+      - Image|contains: :\Windows\Microsoft.NET\Framework64\
+      - Image|contains: :\Windows\WinSxS\
+- condition: selection and not 1 of filter_main_*
+id: 6120ac2a-a34b-42c0-a9bd-1fb9f459f348
+logsource:
+  category: process_creation
+  product: windows

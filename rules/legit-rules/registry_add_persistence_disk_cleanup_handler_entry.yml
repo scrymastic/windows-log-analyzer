@@ -1,0 +1,68 @@
+title: Potential Persistence Via Disk Cleanup Handler - Registry
+id: d4f4e0be-cf12-439f-9e25-4e2cdcf7df5a
+status: test
+description: "Detects when an attacker modifies values of the Disk Cleanup Handler\
+  \ in the registry to achieve persistence.\nThe disk cleanup manager is part of the\
+  \ operating system. It displays the dialog box [\u2026]\nThe user has the option\
+  \ of enabling or disabling individual handlers by selecting or clearing their check\
+  \ box in the disk cleanup manager's UI.\nAlthough Windows comes with a number of\
+  \ disk cleanup handlers, they aren't designed to handle files produced by other\
+  \ applications.\nInstead, the disk cleanup manager is designed to be flexible and\
+  \ extensible by enabling any developer to implement and register their own disk\
+  \ cleanup handler.\nAny developer can extend the available disk cleanup services\
+  \ by implementing and registering a disk cleanup handler.\n"
+references:
+- https://persistence-info.github.io/Data/diskcleanuphandler.html
+- https://www.hexacorn.com/blog/2018/09/02/beyond-good-ol-run-key-part-86/
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/07/21
+modified: 2023/02/07
+tags:
+- attack.persistence
+logsource:
+  product: windows
+  category: registry_add
+detection:
+- selection:
+  - and:
+    - EventType|==: CreateKey
+    - TargetObject|contains: \SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\
+- filter:
+  - and:
+    - or:
+      - TargetObject|endswith: \Active Setup Temp Folders
+      - TargetObject|endswith: \BranchCache
+      - TargetObject|endswith: \Content Indexer Cleaner
+      - TargetObject|endswith: \D3D Shader Cache
+      - TargetObject|endswith: \Delivery Optimization Files
+      - TargetObject|endswith: \Device Driver Packages
+      - TargetObject|endswith: \Diagnostic Data Viewer database files
+      - TargetObject|endswith: \Downloaded Program Files
+      - TargetObject|endswith: \DownloadsFolder
+      - TargetObject|endswith: \Feedback Hub Archive log files
+      - TargetObject|endswith: \Internet Cache Files
+      - TargetObject|endswith: \Language Pack
+      - TargetObject|endswith: \Microsoft Office Temp Files
+      - TargetObject|endswith: \Offline Pages Files
+      - TargetObject|endswith: \Old ChkDsk Files
+      - TargetObject|endswith: \Previous Installations
+      - TargetObject|endswith: \Recycle Bin
+      - TargetObject|endswith: \RetailDemo Offline Content
+      - TargetObject|endswith: \Setup Log Files
+      - TargetObject|endswith: \System error memory dump files
+      - TargetObject|endswith: \System error minidump files
+      - TargetObject|endswith: \Temporary Files
+      - TargetObject|endswith: \Temporary Setup Files
+      - TargetObject|endswith: \Temporary Sync Files
+      - TargetObject|endswith: \Thumbnail Cache
+      - TargetObject|endswith: \Update Cleanup
+      - TargetObject|endswith: \Upgrade Discarded Files
+      - TargetObject|endswith: \User file versions
+      - TargetObject|endswith: \Windows Defender
+      - TargetObject|endswith: \Windows Error Reporting Files
+      - TargetObject|endswith: \Windows ESD installation files
+      - TargetObject|endswith: \Windows Upgrade Log Files
+- condition: selection and not filter
+falsepositives:
+- Legitimate new entry added by windows
+level: medium

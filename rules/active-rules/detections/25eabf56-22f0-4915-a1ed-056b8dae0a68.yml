@@ -1,0 +1,15 @@
+detection:
+- selection:
+  - and:
+    - Initiated|==: 'true'
+    - or:
+      - DestinationHostname|endswith: api.dropboxapi.com
+      - DestinationHostname|endswith: content.dropboxapi.com
+- filter:
+  - and:
+    - Image|contains: \Dropbox
+- condition: selection and not filter
+id: 25eabf56-22f0-4915-a1ed-056b8dae0a68
+logsource:
+  category: network_connection
+  product: windows

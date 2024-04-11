@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: :\Windows\System32\bash.exe
+        - Image|endswith: :\Windows\SysWOW64\bash.exe
+      - OriginalFileName|==: Bash.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: ' -c '
+- condition: all of selection_*
+id: 5edc2273-c26f-406c-83f3-f4d948e740dd
+logsource:
+  category: process_creation
+  product: windows

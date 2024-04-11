@@ -1,0 +1,13 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 4624
+    - LogonType|==: 9
+    - LogonProcessName|==: Advapi
+    - AuthenticationPackageName|==: Negotiate
+    - ImpersonationLevel|==: '%%1833'
+- condition: selection
+id: 02f7c9c1-1ae8-4c6a-8add-04693807f92f
+logsource:
+  product: windows
+  service: security

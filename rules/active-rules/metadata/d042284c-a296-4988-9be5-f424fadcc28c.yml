@@ -1,0 +1,16 @@
+author: frack113
+date: 2022/01/23
+description: Uses the .NET InstallUtil.exe application in order to execute image without
+  log
+falsepositives:
+- Unknown
+filename: proc_creation_win_instalutil_no_log_execution.yml
+level: medium
+modified: 2022/02/04
+references:
+- https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
+- https://docs.microsoft.com/en-us/dotnet/framework/tools/installutil-exe-installer-tool
+related: []
+status: test
+tags:
+- attack.defense_evasion

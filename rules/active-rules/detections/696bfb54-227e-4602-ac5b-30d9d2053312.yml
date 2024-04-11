@@ -1,0 +1,21 @@
+detection:
+- selection_sql:
+  - and:
+    - Image|endswith: \sqlcmd.exe
+    - CommandLine|contains: VeeamBackup
+    - CommandLine|contains: 'From '
+- selection_db:
+  - and:
+    - or:
+      - CommandLine|contains: BackupRepositories
+      - CommandLine|contains: Backups
+      - CommandLine|contains: Credentials
+      - CommandLine|contains: HostCreds
+      - CommandLine|contains: SmbFileShares
+      - CommandLine|contains: Ssh_creds
+      - CommandLine|contains: VSphereInfo
+- condition: all of selection_*
+id: 696bfb54-227e-4602-ac5b-30d9d2053312
+logsource:
+  category: process_creation
+  product: windows

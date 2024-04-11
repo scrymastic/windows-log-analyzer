@@ -1,0 +1,12 @@
+detection:
+- selection:
+  - and:
+    - ScriptBlockText|contains: Add-DnsClientNrptRule
+    - ScriptBlockText|contains: -Namesp
+    - ScriptBlockText|contains: -NameSe
+- condition: selection
+id: 4368354e-1797-463c-bc39-a309effbe8d7
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

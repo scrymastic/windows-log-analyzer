@@ -1,0 +1,29 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - OriginalFileName|==: wscript.exe
+        - OriginalFileName|==: cscript.exe
+      - or:
+        - Image|endswith: \wscript.exe
+        - Image|endswith: \cscript.exe
+- selection_extension:
+  - and:
+    - or:
+      - CommandLine|contains: .csv
+      - CommandLine|contains: .dat
+      - CommandLine|contains: .doc
+      - CommandLine|contains: .gif
+      - CommandLine|contains: .jpeg
+      - CommandLine|contains: .jpg
+      - CommandLine|contains: .png
+      - CommandLine|contains: .ppt
+      - CommandLine|contains: .txt
+      - CommandLine|contains: .xls
+      - CommandLine|contains: .xml
+- condition: all of selection_*
+id: 99b7460d-c9f1-40d7-a316-1f36f61d52ee
+logsource:
+  category: process_creation
+  product: windows

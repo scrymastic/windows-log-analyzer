@@ -1,0 +1,34 @@
+detection:
+- selection_cmdlet:
+  - and:
+    - or:
+      - ScriptBlockText|contains: get-process | \?
+      - ScriptBlockText|contains: get-process | where
+      - ScriptBlockText|contains: gps | \?
+      - ScriptBlockText|contains: gps | where
+- selection_field:
+  - and:
+    - or:
+      - ScriptBlockText|contains: Company -like
+      - ScriptBlockText|contains: Description -like
+      - ScriptBlockText|contains: Name -like
+      - ScriptBlockText|contains: Path -like
+      - ScriptBlockText|contains: Product -like
+- selection_keywords:
+  - and:
+    - or:
+      - ScriptBlockText|contains: \*avira\*
+      - ScriptBlockText|contains: \*carbonblack\*
+      - ScriptBlockText|contains: \*cylance\*
+      - ScriptBlockText|contains: \*defender\*
+      - ScriptBlockText|contains: \*kaspersky\*
+      - ScriptBlockText|contains: \*malware\*
+      - ScriptBlockText|contains: \*sentinel\*
+      - ScriptBlockText|contains: \*symantec\*
+      - ScriptBlockText|contains: \*virus\*
+- condition: all of selection_*
+id: 904e8e61-8edf-4350-b59c-b905fc8e810c
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

@@ -1,0 +1,58 @@
+detection:
+- selection_iwr:
+  - and:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+      - Image|endswith: \cmd.exe
+    - or:
+      - CommandLine|contains: Invoke-WebRequest
+      - CommandLine|contains: 'iwr '
+      - CommandLine|contains: 'wget '
+      - CommandLine|contains: 'curl '
+    - CommandLine|contains: ' -ur'
+    - CommandLine|contains: ' -me'
+    - CommandLine|contains: ' -b'
+    - CommandLine|contains: ' POST '
+- selection_curl:
+  - and:
+    - Image|endswith: \curl.exe
+    - CommandLine|contains: --ur
+- selection_curl_data:
+  - and:
+    - or:
+      - CommandLine|contains: ' -d '
+      - CommandLine|contains: ' --data '
+- selection_wget:
+  - and:
+    - Image|endswith: \wget.exe
+    - or:
+      - CommandLine|contains: --post-data
+      - CommandLine|contains: --post-file
+- payloads:
+  - and:
+    - or:
+      - or:
+        - CommandLine|contains: Get-Content
+        - CommandLine|contains: GetBytes
+        - CommandLine|contains: hostname
+        - CommandLine|contains: ifconfig
+        - CommandLine|contains: ipconfig
+        - CommandLine|contains: net view
+        - CommandLine|contains: netstat
+        - CommandLine|contains: nltest
+        - CommandLine|contains: qprocess
+        - CommandLine|contains: sc query
+        - CommandLine|contains: systeminfo
+        - CommandLine|contains: tasklist
+        - CommandLine|contains: ToBase64String
+        - CommandLine|contains: whoami
+      - and:
+        - CommandLine|contains: 'type '
+        - CommandLine|contains: ' > '
+        - CommandLine|contains: ' C:\'
+- condition: (selection_iwr or all of selection_curl* or selection_wget) and payloads
+id: 7d1aaf3d-4304-425c-b7c3-162055e0b3ab
+logsource:
+  category: process_creation
+  product: windows

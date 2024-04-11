@@ -1,0 +1,20 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \cmstp.exe
+      - Image|endswith: \cscript.exe
+      - Image|endswith: \mshta.exe
+      - Image|endswith: \msxsl.exe
+      - Image|endswith: \regsvr32.exe
+      - Image|endswith: \wmic.exe
+      - Image|endswith: \wscript.exe
+    - or:
+      - ImageLoaded|endswith: \clr.dll
+      - ImageLoaded|endswith: \mscoree.dll
+      - ImageLoaded|endswith: \mscorlib.dll
+- condition: selection
+id: 4508a70e-97ef-4300-b62b-ff27992990ea
+logsource:
+  category: image_load
+  product: windows

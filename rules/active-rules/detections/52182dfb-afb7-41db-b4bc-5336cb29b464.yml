@@ -1,0 +1,48 @@
+detection:
+- selection_domain:
+  - and:
+    - or:
+      - Contents|contains: .githubusercontent.com
+      - Contents|contains: anonfiles.com
+      - Contents|contains: cdn.discordapp.com
+      - Contents|contains: cdn.discordapp.com/attachments/
+      - Contents|contains: ddns.net
+      - Contents|contains: dl.dropboxusercontent.com
+      - Contents|contains: ghostbin.co
+      - Contents|contains: glitch.me
+      - Contents|contains: gofile.io
+      - Contents|contains: hastebin.com
+      - Contents|contains: mediafire.com
+      - Contents|contains: mega.nz
+      - Contents|contains: onrender.com
+      - Contents|contains: paste.ee
+      - Contents|contains: pastebin.com
+      - Contents|contains: pastebin.pl
+      - Contents|contains: pastetext.net
+      - Contents|contains: privatlab.com
+      - Contents|contains: privatlab.net
+      - Contents|contains: send.exploit.in
+      - Contents|contains: sendspace.com
+      - Contents|contains: storage.googleapis.com
+      - Contents|contains: storjshare.io
+      - Contents|contains: supabase.co
+      - Contents|contains: temp.sh
+      - Contents|contains: transfer.sh
+      - Contents|contains: ufile.io
+- selection_extension:
+  - and:
+    - or:
+      - TargetFilename|contains: .exe:Zone
+      - TargetFilename|contains: .vbs:Zone
+      - TargetFilename|contains: .vbe:Zone
+      - TargetFilename|contains: .dll:Zone
+      - TargetFilename|contains: .one:Zone
+      - TargetFilename|contains: .hta:Zone
+      - TargetFilename|contains: .lnk:Zone
+      - TargetFilename|contains: .xll:Zone
+      - TargetFilename|contains: .cpl:Zone
+- condition: all of selection*
+id: 52182dfb-afb7-41db-b4bc-5336cb29b464
+logsource:
+  category: create_stream_hash
+  product: windows

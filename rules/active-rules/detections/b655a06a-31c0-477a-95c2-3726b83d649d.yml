@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - ParentImage|endswith: \userinit.exe
+- filter1:
+  - and:
+    - CommandLine|contains: \netlogon\
+- filter2:
+  - and:
+    - or:
+      - Image|endswith: \explorer.exe
+      - OriginalFileName|==: explorer.exe
+- condition: selection and not 1 of filter*
+id: b655a06a-31c0-477a-95c2-3726b83d649d
+logsource:
+  category: process_creation
+  product: windows

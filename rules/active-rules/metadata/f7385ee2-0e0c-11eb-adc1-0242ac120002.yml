@@ -1,0 +1,17 @@
+author: Jonathan Cheong, oscd.community
+date: 2020/10/13
+description: Detects Obfuscated use of Clip.exe to execute PowerShell
+falsepositives:
+- Unknown
+filename: win_system_invoke_obfuscation_clip_services.yml
+level: high
+modified: 2023/02/20
+references:
+- https://github.com/SigmaHQ/sigma/issues/1009
+related: []
+status: test
+tags:
+- attack.defense_evasion
+- attack.t1027
+- attack.execution
+- attack.t1059.001

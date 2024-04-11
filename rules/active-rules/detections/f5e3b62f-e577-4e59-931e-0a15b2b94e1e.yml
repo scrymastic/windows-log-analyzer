@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \htran.exe
+      - Image|endswith: \lcx.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: '.exe -tran '
+      - CommandLine|contains: '.exe -slave '
+- condition: 1 of selection_*
+id: f5e3b62f-e577-4e59-931e-0a15b2b94e1e
+logsource:
+  category: process_creation
+  product: windows

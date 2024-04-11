@@ -1,0 +1,20 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \pwsh.exe
+      - OriginalFileName|==: pwsh.dll
+- selection_sddl:
+  - and:
+    - CommandLine|contains: 'Set-Service '
+    - CommandLine|contains: DCLCWPDTSD
+- selection_cmdlet:
+  - and:
+    - or:
+      - CommandLine|contains: '-SecurityDescriptorSddl '
+      - CommandLine|contains: '-sd '
+- condition: all of selection_*
+id: 514e4c3a-c77d-4cde-a00f-046425e2301e
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: set
+    - CommandLine|contains: '&&'
+    - CommandLine|contains: mshta
+    - CommandLine|contains: vbscript:createobject
+    - CommandLine|contains: .run
+    - CommandLine|contains: (window.close)
+- condition: selection
+id: ac20ae82-8758-4f38-958e-b44a3140ca88
+logsource:
+  category: process_creation
+  product: windows

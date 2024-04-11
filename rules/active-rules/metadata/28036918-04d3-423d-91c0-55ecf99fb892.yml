@@ -1,0 +1,25 @@
+author: frack113
+date: 2022/11/18
+description: 'Detects changes to the NGenAssemblyUsageLog registry key.
+
+  .NET Usage Log output location can be controlled by setting the NGenAssemblyUsageLog
+  CLR configuration knob in the Registry or by configuring an environment variable
+  (as described in the next section).
+
+  By simplify specifying an arbitrary value (e.g. fake output location or junk data)
+  for the expected value, a Usage Log file for the .NET execution context will not
+  be created.
+
+  '
+falsepositives:
+- Unknown
+filename: registry_set_net_cli_ngenassemblyusagelog.yml
+level: high
+modified: 2023/08/17
+references:
+- https://bohops.com/2021/03/16/investigating-net-clr-usage-log-tampering-techniques-for-edr-evasion/
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1112

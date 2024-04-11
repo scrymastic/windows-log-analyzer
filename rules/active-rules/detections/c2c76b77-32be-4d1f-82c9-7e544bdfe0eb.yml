@@ -1,0 +1,19 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \secedit.exe
+      - OriginalFileName|==: SeCEdit
+- selection_flags_discovery:
+  - and:
+    - CommandLine|contains: /export
+    - CommandLine|contains: /cfg
+- selection_flags_configure:
+  - and:
+    - CommandLine|contains: /configure
+    - CommandLine|contains: /db
+- condition: selection_img and (1 of selection_flags_*)
+id: c2c76b77-32be-4d1f-82c9-7e544bdfe0eb
+logsource:
+  category: process_creation
+  product: windows

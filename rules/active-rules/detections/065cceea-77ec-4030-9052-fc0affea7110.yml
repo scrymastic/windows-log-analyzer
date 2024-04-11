@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - QueryName|contains: .anonfiles.com
+- condition: selection
+id: 065cceea-77ec-4030-9052-fc0affea7110
+logsource:
+  category: dns_query
+  product: windows

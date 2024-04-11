@@ -1,0 +1,16 @@
+author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
+date: 2020/10/29
+description: Detects processes loading modules related to PCRE.NET package
+falsepositives:
+- Unknown
+filename: image_load_dll_pcre_dotnet_dll_load.yml
+level: high
+modified: 2022/10/09
+references:
+- https://twitter.com/rbmaslen/status/1321859647091970051
+- https://twitter.com/tifkin_/status/1321916444557365248
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059

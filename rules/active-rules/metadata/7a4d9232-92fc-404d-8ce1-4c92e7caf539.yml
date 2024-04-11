@@ -1,0 +1,19 @@
+author: pH-T (Nextron Systems)
+date: 2023/04/17
+description: Detects Stracciatella which executes a Powershell runspace from within
+  C# (aka SharpPick technique) with AMSI, ETW and Script Block Logging disabled based
+  on PE metadata characteristics.
+falsepositives:
+- Unlikely
+filename: proc_creation_win_hktl_stracciatella_execution.yml
+level: high
+modified: ''
+references:
+- https://github.com/mgeeky/Stracciatella
+related: []
+status: test
+tags:
+- attack.execution
+- attack.defense_evasion
+- attack.t1059
+- attack.t1562.001

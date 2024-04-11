@@ -1,0 +1,17 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - TargetFilename|endswith: \WerFault.exe
+      - TargetFilename|endswith: \wer.dll
+- filter_whitelist:
+  - and:
+    - or:
+      - TargetFilename|contains: \System32\
+      - TargetFilename|contains: \SysWOW64\
+      - TargetFilename|contains: \WinSxS\
+- condition: selection and not filter_whitelist
+id: 28a452f3-786c-4fd8-b8f2-bddbe9d616d1
+logsource:
+  category: file_event
+  product: windows

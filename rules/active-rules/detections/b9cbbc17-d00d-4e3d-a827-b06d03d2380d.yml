@@ -1,0 +1,30 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \bitsadmin.exe
+      - OriginalFileName|==: bitsadmin.exe
+- selection_cli_notify_1:
+  - and:
+    - CommandLine|contains: /SetNotifyCmdLine
+- selection_cli_notify_2:
+  - and:
+    - or:
+      - CommandLine|contains: '%COMSPEC%'
+      - CommandLine|contains: cmd.exe
+      - CommandLine|contains: regsvr32.exe
+- selection_cli_add_1:
+  - and:
+    - CommandLine|contains: /Addfile
+- selection_cli_add_2:
+  - and:
+    - or:
+      - CommandLine|contains: 'http:'
+      - CommandLine|contains: 'https:'
+      - CommandLine|contains: 'ftp:'
+      - CommandLine|contains: 'ftps:'
+- condition: selection_img and (all of selection_cli_notify_* or all of selection_cli_add_*)
+id: b9cbbc17-d00d-4e3d-a827-b06d03d2380d
+logsource:
+  category: process_creation
+  product: windows

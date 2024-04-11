@@ -1,0 +1,18 @@
+detection:
+- selection_eid:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+- selection_service_1:
+  - and:
+    - ImagePath|matches: ^[a-zA-Z]:\\windows\\temp\\[a-zA-Z0-9]{10}\.exe
+- selection_service_2:
+  - and:
+    - or:
+      - ServiceName|==: Sliver
+      - ServiceName|==: Sliver implant
+- condition: selection_eid and 1 of selection_service_*
+id: 31c51af6-e7aa-4da7-84d4-8f32cc580af2
+logsource:
+  product: windows
+  service: system

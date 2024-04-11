@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|endswith: \IsCredGuardEnabled
+- condition: selection
+id: 1a2d6c47-75b0-45bd-b133-2c0be75349fd
+logsource:
+  category: registry_event
+  product: windows

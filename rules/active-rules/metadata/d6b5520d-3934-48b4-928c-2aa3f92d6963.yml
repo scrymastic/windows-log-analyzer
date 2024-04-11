@@ -1,0 +1,18 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2023/04/14
+description: Detects important or interesting Windows services that got terminated
+  for whatever reason
+falsepositives:
+- Rare false positives could occur since service termination could happen due to multiple
+  reasons
+filename: win_system_service_terminated_error_important.yml
+level: high
+modified: ''
+references:
+- https://www.microsoft.com/en-us/security/blog/2023/04/11/guidance-for-investigating-attacks-using-cve-2022-21894-the-blacklotus-campaign/
+related:
+- id: acfa2210-0d71-4eeb-b477-afab494d596c
+  type: similar
+status: test
+tags:
+- attack.defense_evasion

@@ -1,0 +1,21 @@
+author: frack113
+date: 2021/12/30
+description: 'Adversaries may use port monitors to run an attacker supplied DLL during
+  system boot for persistence or privilege escalation.
+
+  A port monitor can be set through the AddMonitor API call to set a DLL to be loaded
+  at startup.
+
+  '
+falsepositives:
+- Unknown
+filename: registry_set_add_port_monitor.yml
+level: medium
+modified: 2024/03/25
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1547.010/T1547.010.md
+related: []
+status: experimental
+tags:
+- attack.persistence
+- attack.t1547.010

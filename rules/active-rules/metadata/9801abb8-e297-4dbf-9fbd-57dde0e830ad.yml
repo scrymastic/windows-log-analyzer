@@ -1,0 +1,15 @@
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/05/16
+description: Detects execution of the IEExec utility to download and execute files
+falsepositives:
+- Unknown
+filename: proc_creation_win_ieexec_download.yml
+level: high
+modified: 2023/11/09
+references:
+- https://lolbas-project.github.io/lolbas/Binaries/Ieexec/
+related: []
+status: test
+tags:
+- attack.command_and_control
+- attack.t1105

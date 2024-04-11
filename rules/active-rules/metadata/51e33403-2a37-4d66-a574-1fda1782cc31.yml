@@ -1,0 +1,16 @@
+author: Thomas Patzke
+date: 2019/01/28
+description: RDP login with localhost source address may be a tunnelled login
+falsepositives:
+- Unknown
+filename: win_security_rdp_localhost_login.yml
+level: high
+modified: 2022/10/09
+references:
+- https://www.fireeye.com/blog/threat-research/2019/01/bypassing-network-restrictions-through-rdp-tunneling.html
+related: []
+status: test
+tags:
+- attack.lateral_movement
+- car.2013-07-002
+- attack.t1021.001

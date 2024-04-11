@@ -1,0 +1,15 @@
+author: Bhabesh Raj
+date: 2020/09/14
+description: Detects triggering of AMSI by Windows Defender.
+falsepositives:
+- Unlikely
+filename: win_defender_malware_detected_amsi_source.yml
+level: high
+modified: 2022/12/07
+references:
+- https://docs.microsoft.com/en-us/windows/win32/amsi/how-amsi-helps
+related: []
+status: stable
+tags:
+- attack.execution
+- attack.t1059

@@ -1,0 +1,15 @@
+detection:
+- selection_1:
+  - and:
+    - or:
+      - TargetObject|endswith: \COR_ENABLE_PROFILING
+      - TargetObject|endswith: \COR_PROFILER
+      - TargetObject|endswith: \CORECLR_ENABLE_PROFILING
+- selection_2:
+  - and:
+    - TargetObject|contains: \CORECLR_PROFILER_PATH
+- condition: 1 of selection_*
+id: ad89044a-8f49-4673-9a55-cbd88a1b374f
+logsource:
+  category: registry_set
+  product: windows

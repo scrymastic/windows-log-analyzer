@@ -1,0 +1,19 @@
+author: X__Junior (Nextron Systems)
+date: 2023/07/12
+description: Detects process execution from a fake recycle bin folder, often used
+  to avoid security solution.
+falsepositives:
+- Unknown
+filename: proc_creation_win_susp_recycle_bin_fake_execution.yml
+level: high
+modified: 2023/12/11
+references:
+- https://www.mandiant.com/resources/blog/infected-usb-steal-secrets
+- https://unit42.paloaltonetworks.com/cloaked-ursa-phishing/
+related:
+- id: cd8b36ac-8e4a-4c2f-a402-a29b8fbd5bca
+  type: derived
+status: experimental
+tags:
+- attack.persistence
+- attack.defense_evasion

@@ -1,0 +1,47 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - ParentImage|endswith: \mshta.exe
+      - ParentImage|endswith: \powershell.exe
+      - ParentImage|endswith: \pwsh.exe
+      - ParentImage|endswith: \rundll32.exe
+      - ParentImage|endswith: \cscript.exe
+      - ParentImage|endswith: \wscript.exe
+      - ParentImage|endswith: \wmiprvse.exe
+      - ParentImage|endswith: \regsvr32.exe
+    - or:
+      - Image|endswith: \schtasks.exe
+      - Image|endswith: \nslookup.exe
+      - Image|endswith: \certutil.exe
+      - Image|endswith: \bitsadmin.exe
+      - Image|endswith: \mshta.exe
+- filter_ccmcache:
+  - and:
+    - CurrentDirectory|contains: \ccmcache\
+- filter_amazon:
+  - and:
+    - or:
+      - ParentCommandLine|contains: \Program Files\Amazon\WorkSpacesConfig\Scripts\setup-scheduledtask.ps1
+      - ParentCommandLine|contains: \Program Files\Amazon\WorkSpacesConfig\Scripts\set-selfhealing.ps1
+      - ParentCommandLine|contains: \Program Files\Amazon\WorkSpacesConfig\Scripts\check-workspacehealth.ps1
+      - ParentCommandLine|contains: \nessus_
+- filter_nessus:
+  - and:
+    - CommandLine|contains: \nessus_
+- filter_sccm_install:
+  - and:
+    - ParentImage|endswith: \mshta.exe
+    - Image|endswith: \mshta.exe
+    - ParentCommandLine|contains: C:\MEM_Configmgr_
+    - ParentCommandLine|contains: \splash.hta
+    - ParentCommandLine|contains: '{1E460BD7-F1C3-4B2E-88BF-4E770A288AF5}'
+    - CommandLine|contains: C:\MEM_Configmgr_
+    - CommandLine|contains: \SMSSETUP\BIN\
+    - CommandLine|contains: \autorun.hta
+    - CommandLine|contains: '{1E460BD7-F1C3-4B2E-88BF-4E770A288AF5}'
+- condition: selection and not 1 of filter_*
+id: 3a6586ad-127a-4d3b-a677-1e6eacdf8fde
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,19 @@
+detection:
+- selection_parent:
+  - and:
+    - ParentImage|endswith: \ftp.exe
+- selection_ftp_img:
+  - and:
+    - or:
+      - Image|endswith: \ftp.exe
+      - OriginalFileName|==: ftp.exe
+- selection_ftp_cli:
+  - and:
+    - or:
+      - CommandLine|contains: '-s:'
+      - CommandLine|contains: '/s:'
+- condition: selection_parent or all of selection_ftp_*
+id: 06b401f4-107c-4ff9-947f-9ec1e7649f1e
+logsource:
+  category: process_creation
+  product: windows

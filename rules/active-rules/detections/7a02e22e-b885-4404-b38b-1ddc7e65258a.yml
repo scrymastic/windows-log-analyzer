@@ -1,0 +1,24 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \schtasks.exe
+      - OriginalFileName|==: schtasks.exe
+- selection_time:
+  - and:
+    - or:
+      - CommandLine|contains: ' ONLOGON '
+      - CommandLine|contains: ' ONSTART '
+      - CommandLine|contains: ' ONCE '
+      - CommandLine|contains: ' ONIDLE '
+- selection_privs:
+  - and:
+    - or:
+      - CommandLine|contains: NT AUT
+      - CommandLine|contains: ' SYSTEM'
+      - CommandLine|contains: HIGHEST
+- condition: all of selection_*
+id: 7a02e22e-b885-4404-b38b-1ddc7e65258a
+logsource:
+  category: process_creation
+  product: windows

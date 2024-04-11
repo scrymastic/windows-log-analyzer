@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - CommandLine|contains: ' --adcs '
+    - CommandLine|contains: ' --port '
+- condition: selection
+id: cd8c163e-a19b-402e-bdd5-419ff5859f12
+logsource:
+  category: process_creation
+  product: windows

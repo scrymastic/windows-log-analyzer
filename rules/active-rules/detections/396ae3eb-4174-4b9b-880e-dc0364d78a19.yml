@@ -1,0 +1,10 @@
+detection:
+- selection:
+  - and:
+    - TargetObject|endswith: \Outlook\LoadMacroProviderOnBoot
+    - Details|contains: '0x00000001'
+- condition: selection
+id: 396ae3eb-4174-4b9b-880e-dc0364d78a19
+logsource:
+  category: registry_set
+  product: windows

@@ -1,0 +1,32 @@
+detection:
+- selection_file:
+  - and:
+    - TargetFilename|endswith: \ntds.dit
+- selection_process_parent:
+  - and:
+    - or:
+      - ParentImage|endswith: \cscript.exe
+      - ParentImage|endswith: \httpd.exe
+      - ParentImage|endswith: \nginx.exe
+      - ParentImage|endswith: \php-cgi.exe
+      - ParentImage|endswith: \powershell.exe
+      - ParentImage|endswith: \pwsh.exe
+      - ParentImage|endswith: \w3wp.exe
+      - ParentImage|endswith: \wscript.exe
+- selection_process_parent_path:
+  - and:
+    - or:
+      - ParentImage|contains: \apache
+      - ParentImage|contains: \tomcat
+      - ParentImage|contains: \AppData\
+      - ParentImage|contains: \Temp\
+      - ParentImage|contains: \Public\
+      - ParentImage|contains: \PerfLogs\
+- condition: selection_file and 1 of selection_process_*
+id: 4e7050dd-e548-483f-b7d6-527ab4fa784d
+logsource:
+  category: file_event
+  definition: 'Requirements: The "ParentImage" field is not available by default on
+    EID 11 of Sysmon logs. To be able to use this rule to the full extent you need
+    to enrich the log with additional ParentImage data'
+  product: windows

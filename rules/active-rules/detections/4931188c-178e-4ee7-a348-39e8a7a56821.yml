@@ -1,0 +1,17 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \fltMC.exe
+      - OriginalFileName|==: fltMC.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: unload
+- filter_avira:
+  - and:
+    - CommandLine|endswith: unload rtp_filesystem_filter
+- condition: all of selection_* and not 1 of filter_*
+id: 4931188c-178e-4ee7-a348-39e8a7a56821
+logsource:
+  category: process_creation
+  product: windows

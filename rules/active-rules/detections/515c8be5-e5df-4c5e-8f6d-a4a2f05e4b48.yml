@@ -1,0 +1,19 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \createdump.exe
+      - OriginalFileName|==: FX_VER_INTERNALNAME_STR
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: ' -u '
+      - CommandLine|contains: ' --full '
+      - CommandLine|contains: ' -f '
+      - CommandLine|contains: ' --name '
+      - CommandLine|contains: '.dmp '
+- condition: all of selection_*
+id: 515c8be5-e5df-4c5e-8f6d-a4a2f05e4b48
+logsource:
+  category: process_creation
+  product: windows

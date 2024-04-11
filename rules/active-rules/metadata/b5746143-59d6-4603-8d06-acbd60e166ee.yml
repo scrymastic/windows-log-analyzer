@@ -1,0 +1,19 @@
+author: Michael McKinley (@McKinleyMike), Tony Latteri (@TheLatteri)
+date: 2023/09/18
+description: 'Detects uncommon child processes of the Add-In deployment cache updating
+  utility (AddInutil.exe) which could be a sign of potential abuse of the binary to
+  proxy execution via a custom Addins.Store payload.
+
+  '
+falsepositives:
+- Unknown
+filename: proc_creation_win_addinutil_uncommon_child_process.yml
+level: medium
+modified: ''
+references:
+- https://www.blue-prints.blog/content/blog/posts/lolbin/addinutil-lolbas.html
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1218

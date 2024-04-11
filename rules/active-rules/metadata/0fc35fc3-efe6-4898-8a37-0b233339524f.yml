@@ -1,0 +1,22 @@
+author: frack113
+date: 2021/08/19
+description: 'Adversaries may establish persistence by executing malicious content
+  triggered by user inactivity.
+
+  Screensavers are programs that execute after a configurable time of user inactivity
+  and consist of Portable Executable (PE) files with a .scr file extension
+
+  '
+falsepositives:
+- GPO
+filename: proc_creation_win_reg_screensaver.yml
+level: medium
+modified: 2022/06/02
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.002/T1546.002.md
+- https://www.welivesecurity.com/wp-content/uploads/2017/08/eset-gazer.pdf
+related: []
+status: test
+tags:
+- attack.privilege_escalation
+- attack.t1546.002

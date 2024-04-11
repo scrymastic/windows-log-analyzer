@@ -1,0 +1,21 @@
+author: frack113
+date: 2021/12/26
+description: 'An adversary may deface systems internal to an organization in an attempt
+  to intimidate or mislead users.
+
+  This may take the form of modifications to internal websites, or directly to user
+  systems with the replacement of the desktop wallpaper
+
+  '
+falsepositives:
+- Unknown
+filename: posh_ps_susp_wallpaper.yml
+level: low
+modified: ''
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1491.001/T1491.001.md
+related: []
+status: test
+tags:
+- attack.impact
+- attack.t1491.001

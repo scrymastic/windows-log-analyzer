@@ -1,0 +1,24 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - Image|endswith: \powershell.exe
+      - Image|endswith: \pwsh.exe
+    - or:
+      - CommandLine|contains: -f C:\Users\Public
+      - CommandLine|contains: -f "C:\Users\Public
+      - CommandLine|contains: -f %Public%
+      - CommandLine|contains: -fi C:\Users\Public
+      - CommandLine|contains: -fi "C:\Users\Public
+      - CommandLine|contains: -fi %Public%
+      - CommandLine|contains: -fil C:\Users\Public
+      - CommandLine|contains: -fil "C:\Users\Public
+      - CommandLine|contains: -fil %Public%
+      - CommandLine|contains: -file C:\Users\Public
+      - CommandLine|contains: -file "C:\Users\Public
+      - CommandLine|contains: -file %Public%
+- condition: selection
+id: fb9d3ff7-7348-46ab-af8c-b55f5fbf39b4
+logsource:
+  category: process_creation
+  product: windows

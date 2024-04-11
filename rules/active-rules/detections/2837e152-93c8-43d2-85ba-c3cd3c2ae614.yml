@@ -1,0 +1,14 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - ScriptBlockText|contains: Get-Inbox.ps1
+      - ScriptBlockText|contains: Microsoft.Office.Interop.Outlook
+      - ScriptBlockText|contains: Microsoft.Office.Interop.Outlook.olDefaultFolders
+      - ScriptBlockText|contains: -comobject outlook.application
+- condition: selection
+id: 2837e152-93c8-43d2-85ba-c3cd3c2ae614
+logsource:
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+  product: windows

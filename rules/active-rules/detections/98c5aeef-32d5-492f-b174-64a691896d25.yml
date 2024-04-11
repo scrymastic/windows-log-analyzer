@@ -1,0 +1,14 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \sc.exe
+      - OriginalFileName|==: sc.exe
+- selection_cli:
+  - and:
+    - CommandLine|contains: sdset
+- condition: all of selection_*
+id: 98c5aeef-32d5-492f-b174-64a691896d25
+logsource:
+  category: process_creation
+  product: windows

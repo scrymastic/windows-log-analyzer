@@ -1,0 +1,16 @@
+author: Alec Costello
+date: 2019/05/16
+description: Detects Commandlet names and arguments from the Nishang exploitation
+  framework
+falsepositives:
+- Unknown
+filename: posh_ps_nishang_malicious_commandlets.yml
+level: high
+modified: 2023/01/16
+references:
+- https://github.com/samratashok/nishang
+related: []
+status: test
+tags:
+- attack.execution
+- attack.t1059.001

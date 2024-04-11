@@ -1,0 +1,83 @@
+detection:
+- selection:
+  - and:
+    - IntegrityLevel|==: System
+    - or:
+      - User|contains: AUTHORI
+      - User|contains: AUTORI
+- selection_special:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \calc.exe
+        - Image|endswith: \wscript.exe
+        - Image|endswith: \cscript.exe
+        - Image|endswith: \hh.exe
+        - Image|endswith: \mshta.exe
+        - Image|endswith: \forfiles.exe
+        - Image|endswith: \ping.exe
+      - or:
+        - CommandLine|contains: ' -NoP '
+        - CommandLine|contains: ' -W Hidden '
+        - CommandLine|contains: ' -decode '
+        - CommandLine|contains: ' /decode '
+        - CommandLine|contains: ' /urlcache '
+        - CommandLine|contains: ' -urlcache '
+        - CommandLine|contains: ' -e* JAB'
+        - CommandLine|contains: ' -e* SUVYI'
+        - CommandLine|contains: ' -e* SQBFAFgA'
+        - CommandLine|contains: ' -e* aWV4I'
+        - CommandLine|contains: ' -e* IAB'
+        - CommandLine|contains: ' -e* PAA'
+        - CommandLine|contains: ' -e* aQBlAHgA'
+        - CommandLine|contains: vssadmin delete shadows
+        - CommandLine|contains: reg SAVE HKLM
+        - CommandLine|contains: ' -ma '
+        - CommandLine|contains: Microsoft\Windows\CurrentVersion\Run
+        - CommandLine|contains: .downloadstring(
+        - CommandLine|contains: .downloadfile(
+        - CommandLine|contains: ' /ticket:'
+        - CommandLine|contains: 'dpapi::'
+        - CommandLine|contains: event::clear
+        - CommandLine|contains: event::drop
+        - CommandLine|contains: id::modify
+        - CommandLine|contains: 'kerberos::'
+        - CommandLine|contains: 'lsadump::'
+        - CommandLine|contains: 'misc::'
+        - CommandLine|contains: 'privilege::'
+        - CommandLine|contains: 'rpc::'
+        - CommandLine|contains: 'sekurlsa::'
+        - CommandLine|contains: 'sid::'
+        - CommandLine|contains: 'token::'
+        - CommandLine|contains: vault::cred
+        - CommandLine|contains: vault::list
+        - CommandLine|contains: ' p::d '
+        - CommandLine|contains: ;iex(
+        - CommandLine|contains: MiniDump
+        - CommandLine|contains: 'net user '
+- filter_ping:
+  - and:
+    - CommandLine|==: ping 127.0.0.1 -n 5
+- filter_vs:
+  - and:
+    - Image|endswith: \PING.EXE
+    - ParentCommandLine|contains: \DismFoDInstall.cmd
+- filter_config_mgr:
+  - and:
+    - ParentImage|contains: :\Packages\Plugins\Microsoft.GuestConfiguration.ConfigurationforWindows\
+- filter_java:
+  - and:
+    - or:
+      - ParentImage|contains: :\Program Files (x86)\Java\
+      - ParentImage|contains: :\Program Files\Java\
+    - ParentImage|endswith: \bin\javaws.exe
+    - or:
+      - Image|contains: :\Program Files (x86)\Java\
+      - Image|contains: :\Program Files\Java\
+    - Image|endswith: \bin\jp2launcher.exe
+    - CommandLine|contains: ' -ma '
+- condition: all of selection* and not 1 of filter_*
+id: 2617e7ed-adb7-40ba-b0f3-8f9945fe6c09
+logsource:
+  category: process_creation
+  product: windows

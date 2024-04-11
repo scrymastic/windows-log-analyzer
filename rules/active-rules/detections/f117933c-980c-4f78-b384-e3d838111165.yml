@@ -1,0 +1,20 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \net.exe
+        - Image|endswith: \net1.exe
+      - or:
+        - OriginalFileName|==: net.exe
+        - OriginalFileName|==: net1.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: ' use '
+      - CommandLine|contains: ' \\\\'
+- condition: all of selection_*
+id: f117933c-980c-4f78-b384-e3d838111165
+logsource:
+  category: process_creation
+  product: windows

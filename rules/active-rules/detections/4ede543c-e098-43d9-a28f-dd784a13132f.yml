@@ -1,0 +1,24 @@
+detection:
+- selection:
+  - and:
+    - or:
+      - or:
+        - Image|endswith: \rar.exe
+        - Image|endswith: \winrar.exe
+      - Description|==: Command line RAR
+- filter_main_unrar:
+  - and:
+    - Image|endswith: \UnRAR.exe
+- filter_main_path:
+  - and:
+    - or:
+      - Image|contains: :\Program Files (x86)\WinRAR\
+      - Image|contains: :\Program Files\WinRAR\
+- filter_optional_temp:
+  - and:
+    - Image|contains: :\Windows\Temp\
+- condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+id: 4ede543c-e098-43d9-a28f-dd784a13132f
+logsource:
+  category: process_creation
+  product: windows

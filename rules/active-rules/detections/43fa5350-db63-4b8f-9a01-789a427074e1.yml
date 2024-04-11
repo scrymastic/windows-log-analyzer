@@ -1,0 +1,17 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \rundll32.exe
+      - OriginalFileName|==: RUNDLL32.EXE
+      - CommandLine|contains: rundll32
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: '#+'
+      - CommandLine|contains: '#-'
+- condition: all of selection_*
+id: 43fa5350-db63-4b8f-9a01-789a427074e1
+logsource:
+  category: process_creation
+  product: windows

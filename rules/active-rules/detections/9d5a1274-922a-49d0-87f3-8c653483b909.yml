@@ -1,0 +1,17 @@
+detection:
+- selection_wmic:
+  - and:
+    - or:
+      - Description|==: WMI Commandline Utility
+      - OriginalFileName|==: wmic.exe
+      - Image|endswith: \WMIC.exe
+- selection_commands:
+  - and:
+    - or:
+      - CommandLine|contains: LOGICALDISK get Name,Size,FreeSpace
+      - CommandLine|contains: os get Caption,OSArchitecture,Version
+- condition: all of selection_*
+id: 9d5a1274-922a-49d0-87f3-8c653483b909
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,16 @@
+detection:
+- selection_img:
+  - and:
+    - or:
+      - Image|endswith: \IEExec.exe
+      - OriginalFileName|==: IEExec.exe
+- selection_cli:
+  - and:
+    - or:
+      - CommandLine|contains: http://
+      - CommandLine|contains: https://
+- condition: all of selection_*
+id: 9801abb8-e297-4dbf-9fbd-57dde0e830ad
+logsource:
+  category: process_creation
+  product: windows

@@ -1,0 +1,9 @@
+detection:
+- selection:
+  - and:
+    - EventID|==: 29
+- condition: selection
+id: 693a44e9-7f26-4cb6-b787-214867672d3a
+logsource:
+  product: windows
+  service: sysmon

@@ -1,0 +1,32 @@
+detection:
+- selection_1:
+  - and:
+    - TargetObject|startswith: HKLM\System\CurrentControlSet\Services\
+    - TargetObject|endswith: \Start
+    - or:
+      - Image|contains: \Users\Public\
+      - Image|contains: \Perflogs\
+      - Image|contains: \ADMIN$\
+      - Image|contains: \Temp\
+    - or:
+      - Details|==: DWORD (0x00000000)
+      - Details|==: DWORD (0x00000001)
+      - Details|==: DWORD (0x00000002)
+- selection_2:
+  - and:
+    - TargetObject|startswith: HKLM\System\CurrentControlSet\Services\
+    - TargetObject|endswith: \ImagePath
+    - or:
+      - Details|contains: \Users\Public\
+      - Details|contains: \Perflogs\
+      - Details|contains: \ADMIN$\
+      - Details|contains: \Temp\
+- filter_1:
+  - and:
+    - Image|contains: \Common Files\
+    - Image|contains: \Temp\
+- condition: 1 of selection_* and not 1 of filter_*
+id: a07f0359-4c90-4dc4-a681-8ffea40b4f47
+logsource:
+  category: registry_set
+  product: windows

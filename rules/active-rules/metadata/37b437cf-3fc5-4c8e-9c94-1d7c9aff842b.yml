@@ -1,0 +1,16 @@
+author: frack113
+date: 2022/08/19
+description: Detect enable rdp feature to allow specific user to rdp connect on the
+  targeted machine
+falsepositives:
+- Legitimate use of the feature (alerts should be investigated either way)
+filename: registry_set_allow_rdp_remote_assistance_feature.yml
+level: medium
+modified: 2023/08/17
+references:
+- https://github.com/redcanaryco/atomic-red-team/blob/40b77d63808dd4f4eafb83949805636735a1fd15/atomics/T1112/T1112.md
+related: []
+status: experimental
+tags:
+- attack.defense_evasion
+- attack.t1112

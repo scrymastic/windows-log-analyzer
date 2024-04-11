@@ -1,0 +1,22 @@
+detection:
+- selection_exec:
+  - and:
+    - or:
+      - CommandLine|contains: 'iex '
+      - CommandLine|contains: 'Invoke-Expression '
+      - CommandLine|contains: 'Invoke-Command '
+      - CommandLine|contains: 'icm '
+- selection_read:
+  - and:
+    - or:
+      - CommandLine|contains: 'cat '
+      - CommandLine|contains: 'get-content '
+      - CommandLine|contains: 'type '
+- selection_raw:
+  - and:
+    - CommandLine|contains: ' -raw'
+- condition: all of selection_*
+id: ee218c12-627a-4d27-9e30-d6fb2fe22ed2
+logsource:
+  category: process_creation
+  product: windows

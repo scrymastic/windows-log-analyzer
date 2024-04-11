@@ -1,0 +1,17 @@
+detection:
+- selection_root:
+  - and:
+    - Provider_Name|==: Service Control Manager
+    - EventID|==: 7045
+- selection_service:
+  - and:
+    - or:
+      - and:
+        - ImagePath|contains: \rutserv.exe
+        - ImagePath|contains: -service
+      - ServiceName|==: Remote Utilities - Host
+- condition: all of selection_*
+id: 85cce894-dd8b-4427-a958-5cc47a4dc9b9
+logsource:
+  product: windows
+  service: system
