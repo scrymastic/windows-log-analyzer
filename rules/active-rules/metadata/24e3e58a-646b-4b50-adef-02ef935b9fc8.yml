@@ -4,14 +4,13 @@ description: Detects the execution of different Windows based hacktools via thei
   import hash (imphash) even if the files have been renamed
 falsepositives:
 - Legitimate use of one of these tools
-filename: proc_creation_win_hktl_execution_via_imphashes.yml
 level: critical
 modified: 2024/02/07
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1588.002
 - attack.t1003
+title: Hacktool Execution - Imphash

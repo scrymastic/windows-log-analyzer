@@ -8,14 +8,18 @@ falsepositives:
   in your environment.
 - Pnputil.exe being executed from unfamiliar users should be investigated. If known
   behavior is causing false positives, it can be exempted from the rule.
-filename: proc_creation_win_lolbin_susp_driver_installed_by_pnputil.yml
+fields:
+- ComputerName
+- User
+- CommandLine
+- ParentCommandLine
 level: medium
 modified: 2022/10/09
 references:
 - https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil-command-syntax
 - https://strontic.github.io/xcyclopedia/library/pnputil.exe-60EDC5E6BDBAEE441F2E3AEACD0340D2.html
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547
+title: Suspicious Driver Install by pnputil.exe

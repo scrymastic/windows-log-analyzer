@@ -4,7 +4,6 @@ description: Detects dropped files with double extensions, which is often used b
   malware as a method to abuse the fact that Windows hide default extensions by default.
 falsepositives:
 - Unlikely
-filename: file_event_win_susp_double_extension.yml
 level: high
 modified: 2022/11/07
 references:
@@ -22,3 +21,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1036.007
+title: Suspicious Double Extension Files

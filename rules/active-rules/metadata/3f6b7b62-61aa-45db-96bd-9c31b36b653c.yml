@@ -10,7 +10,6 @@ description: 'Detects tampering of RDP Terminal Service/Server sensitive setting
 falsepositives:
 - Some of the keys mentioned here could be modified by an administrator while setting
   group policy (it should be investigated either way)
-filename: registry_set_terminal_server_tampering.yml
 level: high
 modified: 2024/02/08
 references:
@@ -36,3 +35,4 @@ tags:
 - attack.defense_evasion
 - attack.persistence
 - attack.t1112
+title: RDP Sensitive Settings Changed

@@ -4,7 +4,6 @@ description: Detects creation of local users via the net.exe command with the op
   "never expire"
 falsepositives:
 - Unlikely
-filename: proc_creation_win_net_user_add_never_expire.yml
 level: high
 modified: 2023/02/21
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1136.001
+title: New User Created Via Net.EXE With Never Expire Option

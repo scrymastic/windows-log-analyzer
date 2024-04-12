@@ -7,7 +7,6 @@ description: 'Detects DNS queries made by "AppInstaller.EXE". The AppInstaller i
   '
 falsepositives:
 - Unknown
-filename: dns_query_win_appinstaller.yml
 level: medium
 modified: 2023/11/09
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: AppX Package Installation Attempts Via AppInstaller.EXE

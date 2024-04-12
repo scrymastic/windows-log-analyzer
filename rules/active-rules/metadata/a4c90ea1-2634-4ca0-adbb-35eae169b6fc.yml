@@ -3,7 +3,6 @@ date: 2020/06/05
 description: Potential adversaries stopping ETW providers recording loaded .NET assemblies.
 falsepositives:
 - Unknown
-filename: win_security_dot_net_etw_tamper.yml
 level: high
 modified: 2022/12/20
 references:
@@ -25,3 +24,4 @@ tags:
 - attack.defense_evasion
 - attack.t1112
 - attack.t1562
+title: ETW Logging Disabled In .NET Processes - Registry

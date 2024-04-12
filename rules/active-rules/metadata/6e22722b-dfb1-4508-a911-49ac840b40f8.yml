@@ -4,14 +4,12 @@ description: Detects potential RDP connection via Mstsc using a local ".rdp" fil
   located in suspicious locations.
 falsepositives:
 - Likelihood is related to how often the paths are used in the environment
-filename: proc_creation_win_mstsc_run_local_rdp_file_susp_location.yml
 level: high
-modified: ''
 references:
 - https://www.blackhillsinfosec.com/rogue-rdp-revisiting-initial-access-methods/
 - https://blog.thickmints.dev/mintsights/detecting-rogue-rdp/
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1219
+title: Suspicious Mstsc.EXE Execution With Local RDP File

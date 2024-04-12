@@ -4,7 +4,6 @@ description: Detects Mimikatz DC sync security events
 falsepositives:
 - Valid DC Sync that is not covered by the filters; please report
 - Local Domain Admin account used for Azure AD Connect
-filename: win_security_dcsync.yml
 level: high
 modified: 2022/04/26
 references:
@@ -12,9 +11,9 @@ references:
 - https://gist.github.com/gentilkiwi/dcc132457408cf11ad2061340dcb53c2
 - https://blog.blacklanternsecurity.com/p/detecting-dcsync?s=r
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4662
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.s0002
 - attack.t1003.006
+title: Mimikatz DC Sync

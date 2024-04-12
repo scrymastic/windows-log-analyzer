@@ -5,7 +5,6 @@ description: Detect use of the Windows 8.3 short name. Which could be used as a 
 falsepositives:
 - Applications could use this notation occasionally which might generate some false
   positives. In that case Investigate the parent and child process.
-filename: proc_creation_win_susp_ntfs_short_name_use_cli.yml
 level: medium
 modified: 2022/09/21
 references:
@@ -19,3 +18,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1564.004
+title: Use NTFS Short Name in Command Line

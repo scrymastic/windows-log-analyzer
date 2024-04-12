@@ -3,7 +3,6 @@ date: 2022/01/04
 description: Detects uses of the createdump.exe LOLOBIN utility to dump process memory
 falsepositives:
 - Command lines that use the same flags
-filename: proc_creation_win_createdump_lolbin_execution.yml
 level: high
 modified: 2022/08/19
 references:
@@ -17,3 +16,4 @@ tags:
 - attack.defense_evasion
 - attack.t1036
 - attack.t1003.001
+title: CreateDump Process Dump

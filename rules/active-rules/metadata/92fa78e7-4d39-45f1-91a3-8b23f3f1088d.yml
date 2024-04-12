@@ -16,14 +16,13 @@ description: 'Detects PowerShell writing startup shortcuts.
 falsepositives:
 - Depending on your environment accepted applications may leverage this at times.
   It is recommended to search for anomalies inidicative of malware.
-filename: file_event_win_powershell_startup_shortcuts.yml
 level: high
 modified: 2023/02/23
 references:
 - https://redcanary.com/blog/intelligence-insights-october-2021/
 - https://github.com/redcanaryco/atomic-red-team/blob/36d49de4c8b00bf36054294b4a1fcbab3917d7c5/atomics/T1547.001/T1547.001.md#atomic-test-7---add-executable-shortcut-link-to-user-startup-folder
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547.001
+title: Potential Startup Shortcut Persistence Via PowerShell.EXE

@@ -4,16 +4,18 @@ description: Detects an executable in the users directory started from one of th
   Microsoft Office suite applications (Word, Excel, PowerPoint, Publisher, Visio)
 falsepositives:
 - Unknown
-filename: proc_creation_win_office_spawn_exe_from_users_directory.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: high
 modified: 2023/02/04
 references:
 - https://blog.morphisec.com/fin7-not-finished-morphisec-spots-new-campaign
 - https://www.virustotal.com/gui/file/23160972c6ae07f740800fa28e421a81d7c0ca5d5cab95bc082b4a986fbac57
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1204.002
 - attack.g0046
 - car.2013-05-002
+title: Suspicious Binary In User Directory Spawned From Office Application

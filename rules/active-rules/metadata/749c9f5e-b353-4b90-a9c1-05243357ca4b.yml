@@ -4,14 +4,12 @@ description: Detects logon events that have characteristics of events generated 
   an attack with KrbRelayUp and the like
 falsepositives:
 - Unknown
-filename: win_security_susp_krbrelayup.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/sbousseaden/status/1518976397364056071?s=12&t=qKO5eKHvWhAP19a50FTZ7g
 - https://github.com/elastic/detection-rules/blob/fb6ee2c69864ffdfe347bf3b050cb931f53067a6/rules/windows/privilege_escalation_krbrelayup_suspicious_logon.toml
-related: []
 status: test
 tags:
 - attack.privilege_escalation
 - attack.credential_access
+title: KrbRelayUp Attack Pattern

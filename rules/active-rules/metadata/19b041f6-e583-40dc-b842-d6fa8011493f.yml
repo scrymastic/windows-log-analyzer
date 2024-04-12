@@ -4,7 +4,6 @@ description: Detects the creation of a named file stream with the imphash of a w
   hack tool
 falsepositives:
 - Unknown
-filename: create_stream_hash_hktl_generic_download.yml
 level: high
 modified: 2024/01/02
 references:
@@ -19,9 +18,9 @@ references:
 - https://github.com/hfiref0x/UACME
 - https://github.com/outflanknl/Dumpert
 - https://github.com/wavestone-cdt/EDRSandblast
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.s0139
 - attack.t1564.004
+title: HackTool Named File Stream Created

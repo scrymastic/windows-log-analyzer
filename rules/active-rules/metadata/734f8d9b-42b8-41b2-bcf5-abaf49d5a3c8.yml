@@ -5,14 +5,17 @@ description: Detects remote PowerShell sections by monitoring for wsmprovhost (W
   session).
 falsepositives:
 - Legitimate usage of remote Powershell, e.g. for monitoring purposes.
-filename: proc_creation_win_winrm_remote_powershell_session_process.yml
+fields:
+- ComputerName
+- User
+- CommandLine
 level: medium
 modified: 2022/10/09
 references:
 - https://threathunterplaybook.com/hunts/windows/190511-RemotePwshExecution/notebook.html
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
 - attack.t1021.006
+title: Remote PowerShell Session Host Process (WinRM)

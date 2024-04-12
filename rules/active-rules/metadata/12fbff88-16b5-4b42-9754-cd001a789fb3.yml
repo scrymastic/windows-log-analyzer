@@ -8,9 +8,7 @@ description: 'Detects a CodePage modification using the "mode.com" utility to Ru
   '
 falsepositives:
 - Russian speaking people changing the CodePage
-filename: proc_creation_win_mode_codepage_russian.yml
 level: medium
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/win32/intl/code-page-identifiers
 - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mode
@@ -23,3 +21,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1036
+title: CodePage Modification Via MODE.COM To Russian Language

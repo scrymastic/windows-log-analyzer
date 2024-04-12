@@ -3,14 +3,12 @@ date: 2022/04/04
 description: Detects the use of PowerShell to identify the current logged user.
 falsepositives:
 - Legitimate PowerShell scripts
-filename: posh_ps_susp_get_current_user.yml
 level: low
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1033/T1033.md#atomic-test-4---user-discovery-with-env-vars-powershell-script
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1033/T1033.md#atomic-test-5---getcurrent-user-with-powershell-script
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1033
+title: Suspicious PowerShell Get Current User

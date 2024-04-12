@@ -4,7 +4,6 @@ description: Detects changing the PowerShell script execution policy to a potent
   insecure level using the "Set-ExecutionPolicy" cmdlet.
 falsepositives:
 - Administrator script
-filename: posh_ps_set_policies_to_unsecure_level.yml
 level: medium
 modified: 2023/12/14
 references:
@@ -22,3 +21,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Change PowerShell Policies to an Insecure Level - PowerShell

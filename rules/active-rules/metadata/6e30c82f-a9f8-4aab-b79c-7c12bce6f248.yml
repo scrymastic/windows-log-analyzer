@@ -3,7 +3,9 @@ date: 2022/06/28
 description: Detects usage of bitsadmin downloading a file to uncommon target folder
 falsepositives:
 - Unknown
-filename: proc_creation_win_bitsadmin_download_uncommon_targetfolder.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: medium
 modified: 2023/02/15
 references:
@@ -11,7 +13,6 @@ references:
 - https://isc.sans.edu/diary/22264
 - https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/
 - https://blog.talosintelligence.com/breaking-the-silence-recent-truebot-activity/
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -19,3 +20,4 @@ tags:
 - attack.t1197
 - attack.s0190
 - attack.t1036.003
+title: File Download Via Bitsadmin To An Uncommon Target Folder

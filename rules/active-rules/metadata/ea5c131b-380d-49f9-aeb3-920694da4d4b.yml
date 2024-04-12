@@ -3,13 +3,11 @@ date: 2023/10/29
 description: Detects loading and execution of an unsigned thor scanner binary.
 falsepositives:
 - Other legitimate binaries named "thor.exe" that aren't published by Nextron Systems
-filename: image_load_thor_unsigned_execution.yml
 level: high
-modified: ''
 references:
 - Internal Research
-related: []
 status: stable
 tags:
 - attack.defense_evasion
 - attack.t1574.002
+title: Suspicious Unsigned Thor Scanner Execution

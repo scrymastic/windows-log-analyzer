@@ -4,14 +4,13 @@ description: Detects installation of new shim databases that try to patch sectio
   of known processes for potential process injection or persistence.
 falsepositives:
 - Unknown
-filename: registry_set_persistence_shim_database_susp_application.yml
 level: high
 modified: 2023/12/06
 references:
 - https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/pillowmint-fin7s-monkey-thief/
 - https://www.fireeye.com/blog/threat-research/2017/05/fin7-shim-databases-persistence.html
-related: []
 status: experimental
 tags:
 - attack.persistence
 - attack.t1546.011
+title: Suspicious Shim Database Patching Activity

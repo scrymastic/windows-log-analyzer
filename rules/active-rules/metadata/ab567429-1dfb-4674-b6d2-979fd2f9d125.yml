@@ -8,14 +8,13 @@ description: 'Detects changes to the Internet Explorer "DisableFirstRunCustomize
 falsepositives:
 - As this is controlled by group policy as well as user settings. Some false positives
   may occur.
-filename: registry_set_internet_explorer_disable_first_run_customize.yml
 level: medium
 modified: 2023/08/17
 references:
 - https://www.ncsc.gov.uk/static-assets/documents/malware-analysis-reports/devil-bait/NCSC-MAR-Devil-Bait.pdf
 - https://unit42.paloaltonetworks.com/operation-ke3chang-resurfaces-with-new-tidepool-malware/
 - https://admx.help/?Category=InternetExplorer&Policy=Microsoft.Policies.InternetExplorer::NoFirstRunCustomise
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
+title: Internet Explorer DisableFirstRunCustomize Enabled

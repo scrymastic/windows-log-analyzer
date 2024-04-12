@@ -4,13 +4,12 @@ description: Detects findstring commands that include the keyword lsass, which i
   recon actviity for the LSASS process PID
 falsepositives:
 - Unknown
-filename: proc_creation_win_findstr_lsass.yml
 level: high
 modified: 2023/11/11
 references:
 - https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html?m=1
-related: []
 status: experimental
 tags:
 - attack.credential_access
 - attack.t1552.006
+title: LSASS Process Reconnaissance Via Findstr.EXE

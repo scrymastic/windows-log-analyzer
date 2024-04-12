@@ -4,7 +4,6 @@ date: 2018/09/05
 description: Detects presence of a potentially xor encoded powershell command
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_xor_commandline.yml
 level: medium
 modified: 2023/01/30
 references:
@@ -22,3 +21,4 @@ tags:
 - attack.t1059.001
 - attack.t1140
 - attack.t1027
+title: Suspicious XOR Encoded PowerShell Command

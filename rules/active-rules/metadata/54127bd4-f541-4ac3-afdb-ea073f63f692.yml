@@ -6,12 +6,11 @@ description: Detects creation of new ".dll" files inside the plugins directory o
 falsepositives:
 - Possible FPs during first installation of Notepad++
 - Legitimate use of custom plugins by users in order to enhance notepad++ functionalities
-filename: file_event_win_notepad_plus_plus_persistence.yml
 level: medium
 modified: 2023/01/05
 references:
 - https://pentestlab.blog/2022/02/14/persistence-notepad-plugins/
-related: []
 status: test
 tags:
 - attack.persistence
+title: Potential Persistence Via Notepad++ Plugins

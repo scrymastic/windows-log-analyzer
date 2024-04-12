@@ -5,7 +5,6 @@ description: Detects when 'DllRegisterServer' is called in the commandline and t
   in order to avoid detection
 falsepositives:
 - Unlikely
-filename: proc_creation_win_renamed_rundll32_dllregisterserver.yml
 level: high
 modified: 2023/02/03
 references:
@@ -17,3 +16,4 @@ related:
 status: test
 tags:
 - attack.execution
+title: Potential Renamed Rundll32 Execution

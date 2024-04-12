@@ -12,13 +12,12 @@ description: "Detects when an attacker modifies values of the Disk Cleanup Handl
   \ by implementing and registering a disk cleanup handler.\n"
 falsepositives:
 - Legitimate new entry added by windows
-filename: registry_add_persistence_disk_cleanup_handler_entry.yml
 level: medium
 modified: 2023/02/07
 references:
 - https://persistence-info.github.io/Data/diskcleanuphandler.html
 - https://www.hexacorn.com/blog/2018/09/02/beyond-good-ol-run-key-part-86/
-related: []
 status: test
 tags:
 - attack.persistence
+title: Potential Persistence Via Disk Cleanup Handler - Registry

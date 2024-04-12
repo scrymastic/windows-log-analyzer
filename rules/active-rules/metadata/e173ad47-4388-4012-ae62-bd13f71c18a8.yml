@@ -9,7 +9,6 @@ description: 'Detects the use of the PhoneDeepLink parameter to potentially side
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_deviceenroller_dll_sideloading.yml
 level: medium
 modified: 2023/02/04
 references:
@@ -22,3 +21,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1574.002
+title: Potential DLL Sideloading Via DeviceEnroller.EXE

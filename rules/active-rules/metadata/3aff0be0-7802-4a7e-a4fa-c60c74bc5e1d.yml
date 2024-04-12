@@ -9,13 +9,12 @@ description: 'Detects setting a custom URL for OneDriveStandaloneUpdater.exe to 
   '
 falsepositives:
 - Unknown
-filename: registry_set_lolbin_onedrivestandaloneupdater.yml
 level: high
 modified: 2023/08/17
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/OneDriveStandaloneUpdater/
-related: []
 status: experimental
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Lolbas OneDriveStandaloneUpdater.exe Proxy Download

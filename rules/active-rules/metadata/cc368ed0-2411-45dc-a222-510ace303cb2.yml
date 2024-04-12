@@ -4,7 +4,6 @@ description: Detects potentially suspicious execution of the Regasm/Regsvcs util
   from a potentially suspicious location
 falsepositives:
 - Unknown
-filename: proc_creation_win_regasm_regsvcs_uncommon_location_execution.yml
 level: medium
 modified: 2023/02/13
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.009
+title: Potentially Suspicious Execution Of Regasm/Regsvcs From Uncommon Location

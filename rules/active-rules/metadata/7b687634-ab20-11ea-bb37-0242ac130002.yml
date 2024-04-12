@@ -4,14 +4,20 @@ description: Detects Windows Pcap driver installation based on a list of associa
   .sys files.
 falsepositives:
 - Unknown
-filename: win_security_pcap_drivers.yml
+fields:
+- EventID
+- ServiceFileName
+- Account_Name
+- Computer_Name
+- Originating_Computer
+- ServiceName
 level: medium
 modified: 2023/04/14
 references:
 - https://ragged-lab.blogspot.com/2020/06/capturing-pcap-driver-installations.html#more
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.credential_access
 - attack.t1040
+title: Windows Pcap Drivers

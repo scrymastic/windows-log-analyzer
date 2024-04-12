@@ -5,13 +5,12 @@ description: Detects the creation of files that indicator an interactive use of 
 falsepositives:
 - Administrative activity
 - PowerShell scripts running as SYSTEM user
-filename: file_event_win_susp_system_interactive_powershell.yml
 level: high
 modified: 2022/08/13
 references:
 - https://jpcertcc.github.io/ToolAnalysisResultSheet/details/PowerSploit_Invoke-Mimikatz.htm
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Suspicious Interactive PowerShell as SYSTEM

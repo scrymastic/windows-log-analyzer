@@ -4,7 +4,6 @@ description: Detects suspicious msiexec process starts with web addresses as par
 falsepositives:
 - False positives depend on scripts and administrative tools used in the monitored
   environment
-filename: proc_creation_win_msiexec_web_install.yml
 level: medium
 modified: 2022/01/07
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.t1218.007
 - attack.command_and_control
 - attack.t1105
+title: MsiExec Web Install

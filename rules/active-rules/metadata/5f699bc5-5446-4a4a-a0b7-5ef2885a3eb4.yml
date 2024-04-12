@@ -4,12 +4,10 @@ description: Detects svchost hosting RDP termsvcs communicating with the loopbac
   address and on TCP port 3389
 falsepositives:
 - Unknown
-filename: net_connection_win_rdp_reverse_tunnel.yml
 level: high
 modified: 2024/03/12
 references:
 - https://twitter.com/cyb3rops/status/1096842275437625346
-related: []
 status: test
 tags:
 - attack.command_and_control
@@ -17,3 +15,4 @@ tags:
 - attack.lateral_movement
 - attack.t1021.001
 - car.2013-07-002
+title: RDP Over Reverse SSH Tunnel

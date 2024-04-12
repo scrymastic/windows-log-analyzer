@@ -5,12 +5,10 @@ description: Detects execution of netsh with the "advfirewall" and the "set" opt
 falsepositives:
 - Legitimate administration activity
 - Software installations and removal
-filename: proc_creation_win_netsh_fw_set_rule.yml
 level: medium
-modified: ''
 references:
 - https://ss64.com/nt/netsh.html
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Firewall Rule Update Via Netsh.EXE

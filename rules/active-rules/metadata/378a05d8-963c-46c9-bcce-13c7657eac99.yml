@@ -5,7 +5,6 @@ description: Detects potentially suspicious CommandLine of electron apps (teams,
   binary.
 falsepositives:
 - Legitimate usage for debugging purposes
-filename: proc_creation_win_susp_electron_execution_proxy.yml
 level: medium
 modified: 2023/11/09
 references:
@@ -21,3 +20,4 @@ related:
 status: experimental
 tags:
 - attack.execution
+title: Potentially Suspicious Electron Application CommandLine

@@ -4,16 +4,15 @@ description: Detects a typical pattern of a CobaltStrike BOF which inject into o
   processes
 falsepositives:
 - Unknown
-filename: proc_access_win_hktl_cobaltstrike_bof_injection_pattern.yml
 level: high
 modified: 2023/11/28
 references:
 - https://github.com/boku7/injectAmsiBypass
 - https://github.com/boku7/spawn
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1106
 - attack.defense_evasion
 - attack.t1562.001
+title: HackTool - CobaltStrike BOF Injection Pattern

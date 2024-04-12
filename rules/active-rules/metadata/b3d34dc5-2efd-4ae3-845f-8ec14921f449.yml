@@ -4,7 +4,6 @@ description: Detects browsers starting with the remote debugging flags. Which is
   technique often used to perform browser injection attacks
 falsepositives:
 - Unknown
-filename: proc_creation_win_browsers_remote_debugging.yml
 level: medium
 modified: 2022/12/23
 references:
@@ -19,3 +18,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1185
+title: Browser Started with Remote Debugging

@@ -7,13 +7,11 @@ description: 'Detects the execution of EDRSilencer, a tool that leverages Window
   '
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_edrsilencer.yml
 level: high
-modified: ''
 references:
 - https://github.com/netero1010/EDRSilencer
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562
+title: HackTool - EDRSilencer Execution

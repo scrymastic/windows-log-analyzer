@@ -4,7 +4,6 @@ date: 2020/10/05
 description: Detects when an admin share is mounted using net.exe
 falsepositives:
 - Administrators
-filename: proc_creation_win_net_use_mount_admin_share.yml
 level: medium
 modified: 2023/02/21
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.lateral_movement
 - attack.t1021.002
+title: Windows Admin Share Mount Via Net.EXE

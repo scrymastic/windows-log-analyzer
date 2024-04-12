@@ -4,12 +4,10 @@ description: Detects the creation of suspcious binary files inside the "\windows
   as seen in the blog referenced below
 falsepositives:
 - Unknown
-filename: file_event_win_susp_spool_drivers_color_drop.yml
 level: medium
-modified: ''
 references:
 - https://www.microsoft.com/security/blog/2022/07/27/untangling-knotweed-european-private-sector-offensive-actor-using-0-day-exploits/
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Drop Binaries Into Spool Drivers Color Folder

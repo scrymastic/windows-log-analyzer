@@ -3,9 +3,7 @@ date: 2023/01/05
 description: Detects suspicious PowerShell invocation command parameters
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_invocation_specific.yml
 level: medium
-modified: ''
 references:
 - Internal Research
 related:
@@ -18,3 +16,4 @@ related:
 status: test
 tags:
 - attack.defense_evasion
+title: Suspicious PowerShell Invocations - Specific - ProcessCreation

@@ -4,7 +4,6 @@ description: Detects creation of a file named "ntds.dit" (Active Directory Datab
   by an uncommon parent process or directory
 falsepositives:
 - Unknown
-filename: file_event_win_ntds_dit_uncommon_parent_process.yml
 level: high
 modified: 2023/01/05
 references:
@@ -19,3 +18,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1003.003
+title: NTDS.DIT Creation By Uncommon Parent Process

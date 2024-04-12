@@ -3,7 +3,6 @@ date: 2023/01/06
 description: Detect execution of suspicious double extension files in ParentCommandLine
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_double_extension_parent.yml
 level: high
 modified: 2023/02/28
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1036.007
+title: Suspicious Parent Double Extension File Execution

@@ -4,7 +4,10 @@ description: Detects execution of RClone utility for exfiltration as used by var
   ransomwares strains like REvil, Conti, FiveHands, etc
 falsepositives:
 - Unknown
-filename: proc_creation_win_pua_rclone_execution.yml
+fields:
+- CommandLine
+- ParentCommandLine
+- Details
 level: high
 modified: 2023/03/05
 references:
@@ -22,3 +25,4 @@ status: test
 tags:
 - attack.exfiltration
 - attack.t1567.002
+title: PUA - Rclone Execution

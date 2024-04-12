@@ -4,7 +4,6 @@ description: Detects the execution of the hacktool Rubeus via PE information of 
   line parameters
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_rubeus.yml
 level: critical
 modified: 2023/04/20
 references:
@@ -21,3 +20,4 @@ tags:
 - attack.t1558.003
 - attack.lateral_movement
 - attack.t1550.003
+title: HackTool - Rubeus Execution

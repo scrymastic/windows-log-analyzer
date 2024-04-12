@@ -4,7 +4,6 @@ description: Adversaries may use a non-application layer protocol for communicat
   between host and C2 server or among infected hosts within a network
 falsepositives:
 - Unknown
-filename: posh_pc_powercat.yml
 level: medium
 modified: 2023/10/27
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1095
+title: Netcat The Powershell Version

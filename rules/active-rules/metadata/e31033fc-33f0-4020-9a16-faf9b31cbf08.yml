@@ -5,15 +5,14 @@ description: Detects execution of Netcat. Adversaries may use a non-application 
   a network
 falsepositives:
 - Legitimate ncat use
-filename: proc_creation_win_pua_netcat.yml
 level: high
 modified: 2023/02/08
 references:
 - https://nmap.org/ncat/
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1095/T1095.md
 - https://www.revshells.com/
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1095
+title: PUA - Netcat Suspicious Execution

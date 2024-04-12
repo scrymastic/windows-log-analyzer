@@ -4,7 +4,6 @@ description: Detects known malicious service installs that only appear in cases 
   lateral movement, credential dumping, and other suspicious activities.
 falsepositives:
 - Unknown
-filename: win_security_mal_service_installs.yml
 level: critical
 modified: 2022/10/09
 references:
@@ -22,3 +21,4 @@ tags:
 - car.2013-09-005
 - attack.t1543.003
 - attack.t1569.002
+title: Malicious Service Installations

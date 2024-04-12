@@ -6,13 +6,11 @@ falsepositives:
 - In rare occasions administrators might leverage LiveKD to perform live kernel debugging.
   This should not be allowed on production systems. Investigate and apply additional
   filters where necessary.
-filename: file_event_win_sysinternals_livekd_default_dump_name.yml
 level: high
-modified: ''
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
+title: LiveKD Kernel Memory Dump File Created

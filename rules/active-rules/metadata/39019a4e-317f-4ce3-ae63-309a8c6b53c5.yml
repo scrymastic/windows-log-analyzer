@@ -5,14 +5,16 @@ description: Detects the creation of scheduled tasks that involves a temporary f
 falsepositives:
 - Administrative activity
 - Software installation
-filename: proc_creation_win_schtasks_creation_temp_folder.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: high
 modified: 2022/10/09
 references:
 - https://discuss.elastic.co/t/detection-and-response-for-hafnium-activity/266289/3
-related: []
 status: test
 tags:
 - attack.execution
 - attack.persistence
 - attack.t1053.005
+title: Suspicious Scheduled Task Creation Involving Temp Folder

@@ -14,7 +14,6 @@ description: 'An adversary may use legitimate desktop support and remote access 
   '
 falsepositives:
 - Legitimate use of AnyDesk from a non-standard folder
-filename: proc_creation_win_remote_access_tools_anydesk_susp_exec.yml
 level: high
 modified: 2023/03/05
 references:
@@ -26,3 +25,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1219
+title: Remote Access Tool - Anydesk Execution From Suspicious Folder

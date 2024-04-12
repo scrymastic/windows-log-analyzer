@@ -9,7 +9,6 @@ description: 'Detects process access requests to the LSASS process with specific
   '
 falsepositives:
 - Unknown
-filename: proc_access_win_lsass_memdump.yml
 level: medium
 modified: 2024/03/02
 references:
@@ -17,9 +16,9 @@ references:
 - https://web.archive.org/web/20230208123920/https://cyberwardog.blogspot.com/2017/03/chronicles-of-threat-hunter-hunting-for_22.html
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1003.001/T1003.001.md
 - https://research.splunk.com/endpoint/windows_possible_credential_dumping/
-related: []
 status: experimental
 tags:
 - attack.credential_access
 - attack.t1003.001
 - attack.s0002
+title: Potential Credential Dumping Activity Via LSASS

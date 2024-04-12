@@ -4,9 +4,7 @@ description: Detects activity when a member is removed from a security-enabled g
   group
 falsepositives:
 - Unknown
-filename: win_security_member_removed_security_enabled_global_group.yml
 level: low
-modified: ''
 references:
 - https://www.cisecurity.org/controls/cis-controls-list/
 - https://www.pcisecuritystandards.org/documents/PCI_DSS_v3-2-1.pdf
@@ -20,3 +18,4 @@ status: stable
 tags:
 - attack.persistence
 - attack.t1098
+title: A Member Was Removed From a Security-Enabled Global Group

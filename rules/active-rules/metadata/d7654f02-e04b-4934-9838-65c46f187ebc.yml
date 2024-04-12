@@ -4,13 +4,12 @@ description: Detects the use of IOX - a tool for port forwarding and intranet pr
   purposes
 falsepositives:
 - Legitimate use
-filename: proc_creation_win_pua_iox.yml
 level: high
 modified: 2023/02/08
 references:
 - https://github.com/EddieIvan01/iox
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1090
+title: PUA- IOX Tunneling Tool Execution

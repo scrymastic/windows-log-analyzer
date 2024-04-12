@@ -5,9 +5,7 @@ description: Detects execution of the "VMwareToolBoxCmd.exe" with the "script" a
   location to run for a specific VM state
 falsepositives:
 - Unknown
-filename: proc_creation_win_vmware_toolbox_cmd_persistence_susp.yml
 level: high
-modified: ''
 references:
 - https://bohops.com/2021/10/08/analyzing-and-detecting-a-vmtools-persistence-technique/
 related:
@@ -18,3 +16,4 @@ tags:
 - attack.execution
 - attack.persistence
 - attack.t1059
+title: Suspicious Persistence Via VMwareToolBoxCmd.EXE VM State Change Script

@@ -4,16 +4,15 @@ description: Detection of sc.exe utility spawning by user with Medium integrity 
   to change service ImagePath or FailureCommand
 falsepositives:
 - Unknown
-filename: proc_creation_win_sc_change_sevice_image_path_by_non_admin.yml
 level: high
 modified: 2022/07/14
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-privilege-escalation-in-windows-environment
 - https://pentestlab.blog/2017/03/30/weak-service-permissions/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1574.011
+title: Possible Privilege Escalation via Weak Service Permissions

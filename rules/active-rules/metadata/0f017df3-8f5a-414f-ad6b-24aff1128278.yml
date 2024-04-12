@@ -5,9 +5,7 @@ description: Detects usage of known powershell cmdlets such as "Clear-EventLog" 
 falsepositives:
 - Rare need to clear logs before doing something. Sometimes used by installers or
   cleaner scripts. The script should be investigated to determine if it's legitimate
-filename: posh_ps_susp_clear_eventlog.yml
 level: medium
-modified: ''
 references:
 - https://twitter.com/oroneequalsone/status/1568432028361830402
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1070.001/T1070.001.md
@@ -19,3 +17,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1070.001
+title: Suspicious Eventlog Clear

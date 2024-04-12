@@ -4,7 +4,6 @@ description: Detects LSASS process access for potential credential dumping by a 
   tool such as LaZagne or Pypykatz.
 falsepositives:
 - Unknown
-filename: proc_access_win_lsass_python_based_tool.yml
 level: high
 modified: 2023/11/29
 references:
@@ -20,3 +19,4 @@ tags:
 - attack.credential_access
 - attack.t1003.001
 - attack.s0349
+title: Credential Dumping Activity By Python Based Tool

@@ -4,15 +4,14 @@ description: Rundll32 can be use by Cobalt Strike with StartW function to load D
   from the command line.
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_cobaltstrike_load_by_rundll32.yml
 level: high
 modified: 2022/09/16
 references:
 - https://www.cobaltstrike.com/help-windows-executable
 - https://redcanary.com/threat-detection-report/
 - https://thedfirreport.com/2020/10/18/ryuk-in-5-hours/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.011
+title: CobaltStrike Load by Rundll32

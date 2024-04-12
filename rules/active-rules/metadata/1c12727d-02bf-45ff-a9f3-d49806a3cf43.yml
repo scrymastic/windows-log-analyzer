@@ -3,14 +3,13 @@ date: 2022/06/06
 description: Detects the execution of a renamed version of the Plink binary
 falsepositives:
 - Unknown
-filename: proc_creation_win_renamed_plink.yml
 level: high
 modified: 2023/02/03
 references:
 - https://thedfirreport.com/2022/06/06/will-the-real-msiexec-please-stand-up-exploit-leads-to-data-exfiltration/
 - https://the.earth.li/~sgtatham/putty/0.58/htmldoc/Chapter7.html
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1036
+title: Renamed Plink Execution

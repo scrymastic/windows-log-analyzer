@@ -3,7 +3,6 @@ date: 2019/10/25
 description: Detects DCShadow via create new SPN
 falsepositives:
 - Valid on domain controllers; exclude known DCs
-filename: win_security_possible_dc_shadow.yml
 level: medium
 modified: 2022/10/17
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1207
+title: Possible DC Shadow Attack

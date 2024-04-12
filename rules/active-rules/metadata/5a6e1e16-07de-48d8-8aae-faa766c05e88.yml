@@ -4,12 +4,10 @@ description: Detects execution of "curl.exe" with the "-c" flag in order to save
   data.
 falsepositives:
 - Unknown
-filename: proc_creation_win_curl_cookie_hijacking.yml
 level: medium
-modified: ''
 references:
 - https://curl.se/docs/manpage.html
-related: []
 status: experimental
 tags:
 - attack.execution
+title: Potential Cookies Session Hijacking

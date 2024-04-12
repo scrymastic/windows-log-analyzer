@@ -6,13 +6,12 @@ falsepositives:
 - Programs using PowerShell directly without invocation of a dedicated interpreter
 - MSP Detection Searcher
 - Citrix ConfigSync.ps1
-filename: posh_pm_alternate_powershell_hosts.yml
 level: medium
 modified: 2022/12/13
 references:
 - https://threathunterplaybook.com/hunts/windows/190610-PwshAlternateHosts/notebook.html
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Alternate PowerShell Hosts - PowerShell Module

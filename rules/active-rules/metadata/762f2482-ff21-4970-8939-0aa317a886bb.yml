@@ -4,14 +4,13 @@ description: Detects Certify a tool for Active Directory certificate abuse based
   PE metadata characteristics and common command line arguments.
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_certify.yml
 level: high
 modified: 2023/04/25
 references:
 - https://github.com/GhostPack/Certify
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.credential_access
 - attack.t1649
+title: HackTool - Certify Execution

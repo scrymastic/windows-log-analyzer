@@ -10,9 +10,7 @@ description: 'Detects the execution of "reg.exe" to alter registry keys that wou
 falsepositives:
 - Administrative scripts that change the desktop background to a company logo or other
   image.
-filename: proc_creation_win_reg_desktop_background_change.yml
 level: medium
-modified: ''
 references:
 - https://www.attackiq.com/2023/09/20/emulating-rhysida/
 - https://research.checkpoint.com/2023/the-rhysida-ransomware-activity-analysis-and-ties-to-vice-society/
@@ -29,3 +27,4 @@ tags:
 - attack.impact
 - attack.t1112
 - attack.t1491.001
+title: Potentially Suspicious Desktop Background Change Using Reg.EXE

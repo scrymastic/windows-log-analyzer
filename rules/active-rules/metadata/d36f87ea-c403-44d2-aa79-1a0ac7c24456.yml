@@ -3,7 +3,6 @@ date: 2023/08/07
 description: Detects default RemCom pipe creation
 falsepositives:
 - Legitimate Administrator activity
-filename: pipe_created_pua_remcom_default_pipe.yml
 level: medium
 modified: 2023/11/30
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.t1021.002
 - attack.execution
 - attack.t1569.002
+title: PUA - RemCom Default Named Pipe

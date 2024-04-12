@@ -12,9 +12,7 @@ description: 'Adversaries may acquire credentials from web browsers by reading f
   '
 falsepositives:
 - Unknown
-filename: posh_ps_access_to_browser_login_data.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1555.003/T1555.003.md
 related:
@@ -26,3 +24,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1555.003
+title: Access to Browser Login Data

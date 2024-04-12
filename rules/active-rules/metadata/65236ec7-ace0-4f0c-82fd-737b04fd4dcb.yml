@@ -15,13 +15,12 @@ falsepositives:
 - Administrator or backup activity
 - An unknown bug seems to trigger the Windows "svchost" process to drop EVTX files
   in the "C:\Windows\Temp" directory in the form "<log_name">_<uuid>.evtx". See https://superuser.com/questions/1371229/low-disk-space-after-filling-up-c-windows-temp-with-evtx-and-txt-files
-filename: file_event_win_create_evtx_non_common_locations.yml
 level: medium
 modified: 2024/03/26
 references:
 - https://learn.microsoft.com/en-us/windows/win32/eventlog/eventlog-key
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562.002
+title: EVTX Created In Uncommon Location

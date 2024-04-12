@@ -4,12 +4,10 @@ description: Detects potentially suspicious file downloads directly from IP addr
   and stored in suspicious locations using Wget.exe
 falsepositives:
 - Unknown
-filename: proc_creation_win_wget_download_susp_locations.yml
 level: high
-modified: ''
 references:
 - https://www.gnu.org/software/wget/manual/wget.html
-related: []
 status: experimental
 tags:
 - attack.execution
+title: Suspicious File Download From IP Via Wget.EXE - Paths

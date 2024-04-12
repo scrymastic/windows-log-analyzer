@@ -6,7 +6,6 @@ description: Detects execition of commands and binaries from the context of The 
   application whitelisting.
 falsepositives:
 - Legitimate use by a via a batch script or by an administrator.
-filename: proc_creation_win_lolbin_pcalua.yml
 level: medium
 modified: 2023/01/04
 references:
@@ -19,3 +18,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059
+title: Use of Pcalua For Execution

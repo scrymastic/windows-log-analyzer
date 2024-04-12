@@ -4,7 +4,9 @@ description: Detects a file ending in jse, vbe, js, vba, vbs written by cscript.
   or wscript.exe
 falsepositives:
 - Unknown
-filename: file_event_win_cscript_wscript_dropper.yml
+fields:
+- Image
+- TargetFilename
 level: high
 modified: 2022/12/02
 references:
@@ -17,3 +19,4 @@ tags:
 - attack.execution
 - attack.t1059.005
 - attack.t1059.007
+title: WScript or CScript Dropper - File

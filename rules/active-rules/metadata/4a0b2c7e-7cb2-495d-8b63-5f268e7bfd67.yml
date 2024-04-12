@@ -5,7 +5,6 @@ description: Detects the execution of a renamed ProcDump executable often used b
 falsepositives:
 - Procdump illegaly bundled with legitimate software
 - Administrators who rename binaries (should be investigated)
-filename: proc_creation_win_renamed_sysinternals_procdump.yml
 level: high
 modified: 2022/12/08
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1036.003
+title: Renamed ProcDump Execution

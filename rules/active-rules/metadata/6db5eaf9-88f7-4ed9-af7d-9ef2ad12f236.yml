@@ -5,14 +5,13 @@ description: Detects changes to the AppInstaller (winget) admin settings. Such a
 falsepositives:
 - The event doesn't contain information about the type of change. False positives
   are expected with legitimate changes
-filename: registry_set_winget_admin_settings_tampering.yml
 level: low
 modified: 2023/08/17
 references:
 - https://github.com/nasbench/Misc-Research/tree/b9596e8109dcdb16ec353f316678927e507a5b8d/LOLBINs/Winget
 - https://github.com/microsoft/winget-cli/blob/02d2f93807c9851d73eaacb4d8811a76b64b7b01/src/AppInstallerCommonCore/Public/winget/AdminSettings.h#L13
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.persistence
+title: Winget Admin Settings Modification

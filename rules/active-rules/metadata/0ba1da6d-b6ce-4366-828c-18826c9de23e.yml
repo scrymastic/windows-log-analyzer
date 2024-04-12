@@ -7,7 +7,6 @@ falsepositives:
   this is easy to spot and add to whitelist
 - PsExec installed via Windows Store doesn't contain original filename field (False
   negative)
-filename: proc_creation_win_renamed_binary_highly_relevant.yml
 level: high
 modified: 2023/08/23
 references:
@@ -32,3 +31,4 @@ tags:
 - attack.defense_evasion
 - attack.t1036.003
 - car.2013-05-009
+title: Potential Defense Evasion Via Rename Of Highly Relevant Binaries

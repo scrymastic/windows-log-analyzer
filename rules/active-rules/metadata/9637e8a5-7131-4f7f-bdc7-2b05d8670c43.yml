@@ -4,14 +4,16 @@ description: Detects Executables in the Downloads folder without FileVersion,Des
   likely created with py2exe
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_file_characteristics.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: medium
 modified: 2022/10/09
 references:
 - https://securelist.com/muddywater/88059/
 - https://www.virustotal.com/#/file/276a765a10f98cda1a38d3a31e7483585ca3722ecad19d784441293acf1b7beb/detection
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.006
+title: Suspicious File Characteristics Due to Missing Fields

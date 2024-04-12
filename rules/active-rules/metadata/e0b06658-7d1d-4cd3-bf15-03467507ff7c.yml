@@ -6,7 +6,6 @@ description: Detects the creation of Usage Log files by the CLR (clr.dll). These
 falsepositives:
 - Rundll32.exe with zzzzInvokeManagedCustomActionOutOfProc in command line and msiexec.exe
   as parent process - https://twitter.com/SBousseaden/status/1388064061087260675
-filename: file_event_win_net_cli_artefact.yml
 level: high
 modified: 2023/02/23
 references:
@@ -23,3 +22,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Suspicious DotNET CLR Usage Log Artifact

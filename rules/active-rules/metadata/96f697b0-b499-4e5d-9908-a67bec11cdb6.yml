@@ -10,7 +10,6 @@ description: 'Detects any deletion of entries in ".*\shell\open\command" registr
 falsepositives:
 - Legitimate software (un)installations are known to cause some false positives. Please
   add them as a filter when encountered
-filename: registry_delete_removal_com_hijacking_registry_key.yml
 level: medium
 modified: 2023/01/19
 references:
@@ -19,8 +18,8 @@ references:
 - https://docs.microsoft.com/en-us/windows/win32/shell/launch
 - https://docs.microsoft.com/en-us/windows/win32/api/shobjidl_core/nn-shobjidl_core-iexecutecommand
 - https://docs.microsoft.com/en-us/windows/win32/shell/shell-and-managed-code
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: Removal of Potential COM Hijacking Registry Keys

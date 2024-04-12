@@ -3,13 +3,12 @@ date: 2021/03/09
 description: Detects a service binary running in a suspicious directory
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_service_dir.yml
 level: high
 modified: 2022/10/09
 references:
 - https://blog.truesec.com/2021/03/07/exchange-zero-day-proxylogon-and-hafnium/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1202
+title: Suspicious Service Binary Directory

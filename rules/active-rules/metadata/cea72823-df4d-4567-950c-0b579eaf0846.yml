@@ -4,7 +4,6 @@ date: 2019/01/16
 description: Detects wscript/cscript executions of scripts located in user directories
 falsepositives:
 - Some installers might generate a similar behavior. An initial baseline is required
-filename: proc_creation_win_wscript_cscript_dropper.yml
 level: medium
 modified: 2024/01/30
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.execution
 - attack.t1059.005
 - attack.t1059.007
+title: Potential Dropper Script Execution Via WScript/CScript

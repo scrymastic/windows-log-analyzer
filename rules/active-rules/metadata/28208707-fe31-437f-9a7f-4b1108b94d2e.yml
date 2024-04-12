@@ -4,7 +4,6 @@ description: Detects when a file with a suspicious extension is created in the s
   folder
 falsepositives:
 - Rare legitimate usage of some of the extensions mentioned in the rule
-filename: file_event_win_susp_startup_folder_persistence.yml
 level: high
 modified: 2023/01/06
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1547.001
+title: Suspicious Startup Folder Persistence

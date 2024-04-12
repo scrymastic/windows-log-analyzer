@@ -3,7 +3,6 @@ date: 2020/10/06
 description: Detects powershell script installed as a Service
 falsepositives:
 - Unknown
-filename: win_security_powershell_script_installed_as_service.yml
 level: high
 modified: 2022/11/29
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1569.002
+title: PowerShell Scripts Installed as Services - Security

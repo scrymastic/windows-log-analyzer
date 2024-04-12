@@ -4,13 +4,15 @@ description: Detects a suspicious certreq execution taken from the LOLBAS exampl
   which can be abused to download (small) files
 falsepositives:
 - Unlikely
-filename: proc_creation_win_lolbin_susp_certreq_download.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: high
 modified: 2022/06/13
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Certreq/
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Suspicious Certreq Command to Download

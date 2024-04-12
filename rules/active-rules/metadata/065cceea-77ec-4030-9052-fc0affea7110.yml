@@ -4,7 +4,6 @@ description: Detects DNS queries for "anonfiles.com", which is an anonymous file
   platform often used for malicious purposes
 falsepositives:
 - Rare legitimate access to anonfiles.com
-filename: dns_query_win_anonymfiles_com.yml
 level: high
 modified: 2023/01/16
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.exfiltration
 - attack.t1567.002
+title: DNS Query for Anonfiles.com Domain - Sysmon

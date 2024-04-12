@@ -10,14 +10,13 @@ falsepositives:
 - Some rare installers were seen communicating with external servers for additional
   information. While its a very rare occurrence in some environments an initial baseline
   might be required.
-filename: net_connection_win_msiexec_http.yml
 level: high
 modified: 2024/02/01
 references:
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/msiexec
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1218.007/T1218.007.md
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.007
+title: Msiexec.EXE Initiated Network Connection Over HTTP

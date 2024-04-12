@@ -6,14 +6,13 @@ description: Detects execution of a browser process with a URL argument pointing
   a minimized state.
 falsepositives:
 - Unknown
-filename: proc_creation_win_browsers_inline_file_download.yml
 level: medium
 modified: 2023/11/09
 references:
 - https://twitter.com/mrd0x/status/1478116126005641220
 - https://lolbas-project.github.io/lolbas/Binaries/Msedge/
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: File Download From Browser Process Via Inline URL

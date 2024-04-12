@@ -3,9 +3,7 @@ date: 2022/02/20
 description: Detects DNS resolution of an .onion address related to Tor routing networks
 falsepositives:
 - Unlikely
-filename: win_dns_client_tor_onion.yml
 level: high
-modified: ''
 references:
 - https://www.logpoint.com/en/blog/detecting-tor-use-with-logpoint/
 related:
@@ -15,3 +13,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1090.003
+title: Query Tor Onion Address - DNS Client

@@ -5,9 +5,7 @@ description: Detects suspicious DACL modifications via the "Set-Service" cmdlet 
   used to hide services or make them unstopable
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_service_dacl_modification_set_service.yml
 level: high
-modified: ''
 references:
 - https://www.sans.org/blog/red-team-tactics-hiding-windows-services/
 - https://docs.microsoft.com/pt-br/windows/win32/secauthz/sid-strings
@@ -18,3 +16,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1543.003
+title: Suspicious Service DACL Modification Via Set-Service Cmdlet

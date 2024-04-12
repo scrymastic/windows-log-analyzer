@@ -4,9 +4,7 @@ description: Detects when a user enable developer features such as "Developer Mo
   or "Application Sideloading". Which allows the user to install untrusted packages.
 falsepositives:
 - Unknown
-filename: proc_creation_win_systemsettingsadminflows_turn_on_dev_features.yml
 level: high
-modified: ''
 references:
 - Internal Research
 - https://www.sentinelone.com/labs/inside-malicious-windows-apps-for-malware-deployment/
@@ -16,3 +14,4 @@ related:
 status: test
 tags:
 - attack.defense_evasion
+title: Potential Signing Bypass Via Windows Developer Features

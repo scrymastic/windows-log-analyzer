@@ -3,7 +3,6 @@ date: 2022/05/06
 description: Detects Cobalt Strike module/commands accidentally entered in CMD shell
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_cobaltstrike_bloopers_modules.yml
 level: high
 modified: 2023/01/30
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.003
+title: Operator Bloopers Cobalt Strike Modules

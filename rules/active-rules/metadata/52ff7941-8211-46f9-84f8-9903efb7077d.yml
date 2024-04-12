@@ -4,7 +4,6 @@ description: Detects the use of parent process ID spoofing tools like Didier Ste
   tool SelectMyParent
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_selectmyparent.yml
 level: high
 modified: 2023/03/07
 references:
@@ -12,8 +11,8 @@ references:
 - https://www.picussecurity.com/resource/blog/how-to-detect-parent-pid-ppid-spoofing-attacks
 - https://www.ired.team/offensive-security/defense-evasion/parent-process-id-ppid-spoofing
 - https://www.virustotal.com/gui/search/filename%253A*spoof*%2520filename%253A*ppid*/files
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1134.004
+title: HackTool - PPID Spoofing SelectMyParent Tool Execution

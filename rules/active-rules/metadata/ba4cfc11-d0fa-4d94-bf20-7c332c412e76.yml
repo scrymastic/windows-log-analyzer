@@ -5,9 +5,7 @@ description: Detects execution of "odbcconf" with the "REGSVR" action where the 
   to evade defenses.
 falsepositives:
 - Unlikely
-filename: proc_creation_win_odbcconf_register_dll_regsvr_susp.yml
 level: high
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/sql/odbc/odbcconf-exe?view=sql-server-ver16
 - https://lolbas-project.github.io/lolbas/Binaries/Odbcconf/
@@ -19,3 +17,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.008
+title: Potentially Suspicious DLL Registered Via Odbcconf.EXE

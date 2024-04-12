@@ -7,9 +7,7 @@ description: 'Detects a suspicious copy operation that tries to copy a known LOL
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_copy_system_dir_lolbin.yml
 level: high
-modified: ''
 references:
 - https://www.hybrid-analysis.com/sample/8da5b75b6380a41eee3a399c43dfe0d99eeefaa1fd21027a07b1ecaa4cd96fdd?environmentId=120
 - https://web.archive.org/web/20180331144337/https://www.fireeye.com/blog/threat-research/2018/03/sanny-malware-delivery-method-updated-in-recently-observed-attacks.html
@@ -21,3 +19,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1036.003
+title: LOL-Binary Copied From System Directory

@@ -4,7 +4,6 @@ description: Detects potential abuse of the "manage-bde.wsf" script as a LOLBIN 
   proxy execution
 falsepositives:
 - Unlikely
-filename: proc_creation_win_lolbin_manage_bde.yml
 level: high
 modified: 2023/02/03
 references:
@@ -13,8 +12,8 @@ references:
 - https://twitter.com/bohops/status/980659399495741441
 - https://twitter.com/JohnLaTwC/status/1223292479270600706
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1216/T1216.md
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1216
+title: Potential Manage-bde.wsf Abuse To Proxy Execution

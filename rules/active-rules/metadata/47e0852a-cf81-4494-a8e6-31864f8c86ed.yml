@@ -3,14 +3,13 @@ date: 2017/06/01
 description: Detects Pandemic Windows Implant
 falsepositives:
 - Unknown
-filename: registry_event_apt_pandemic.yml
 level: critical
 modified: 2022/10/09
 references:
 - https://wikileaks.org/vault7/#Pandemic
 - https://twitter.com/MalwareJake/status/870349480356454401
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Pandemic Registry Key

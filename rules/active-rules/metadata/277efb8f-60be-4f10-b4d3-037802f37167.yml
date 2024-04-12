@@ -3,15 +3,14 @@ date: 2021/11/18
 description: Detects persistence registry keys for Recycle Bin
 falsepositives:
 - Unknown
-filename: registry_event_persistence_recycle_bin.yml
 level: high
 modified: 2022/12/06
 references:
 - https://github.com/vxunderground/VXUG-Papers/blob/751edb8d50f95bd7baa730adf2c6c3bb1b034276/The%20Persistence%20Series/Persistence%20via%20Recycle%20Bin/Persistence_via_Recycle_Bin.pdf
 - https://persistence-info.github.io/Data/recyclebin.html
 - https://www.hexacorn.com/blog/2018/05/28/beyond-good-ol-run-key-part-78-2/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547
+title: Registry Persistence Mechanisms in Recycle Bin

@@ -5,7 +5,6 @@ description: Detects execution of "reg.exe" commands with the "add" or "copy" fl
   in safe mode as some security products do not
 falsepositives:
 - Unlikely
-filename: proc_creation_win_reg_add_safeboot.yml
 level: high
 modified: 2024/03/19
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Add SafeBoot Keys Via Reg Utility

@@ -11,7 +11,6 @@ description: 'Detects when an attacker tries to modify an already existing sched
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_schtasks_change.yml
 level: high
 modified: 2022/11/18
 references:
@@ -24,3 +23,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1053.005
+title: Suspicious Modification Of Scheduled Tasks

@@ -3,7 +3,6 @@ date: 2021/07/23
 description: Detects files written by the different tools that exploit HiveNightmare
 falsepositives:
 - Files that accidentally contain these strings
-filename: file_event_win_hktl_hivenightmare_file_exports.yml
 level: high
 modified: 2022/10/09
 references:
@@ -11,9 +10,9 @@ references:
 - https://github.com/FireFart/hivenightmare/
 - https://github.com/WiredPulse/Invoke-HiveNightmare
 - https://twitter.com/cube0x0/status/1418920190759378944
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1552.001
 - cve.2021.36934
+title: Typical HiveNightmare SAM File Export

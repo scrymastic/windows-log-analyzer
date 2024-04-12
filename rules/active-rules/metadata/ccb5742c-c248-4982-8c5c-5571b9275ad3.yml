@@ -8,7 +8,6 @@ description: 'Detects the excution of a potential recon command where the result
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_findstr_recon_pipe_output.yml
 level: medium
 modified: 2023/11/11
 references:
@@ -22,3 +21,4 @@ status: experimental
 tags:
 - attack.discovery
 - attack.t1057
+title: Recon Command Output Piped To Findstr.EXE

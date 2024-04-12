@@ -4,15 +4,14 @@ description: Detects executable names or flags used by Htran or Htran-like tools
   NATBypass)
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_htran_or_natbypass.yml
 level: high
 modified: 2023/02/04
 references:
 - https://github.com/HiwinCN/HTran
 - https://github.com/cw1997/NATBypass
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1090
 - attack.s0040
+title: HackTool - Htran/NATBypass Execution

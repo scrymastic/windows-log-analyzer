@@ -4,7 +4,6 @@ description: Detects process execution from a fake recycle bin folder, often use
   to avoid security solution.
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_recycle_bin_fake_execution.yml
 level: high
 modified: 2023/12/11
 references:
@@ -17,3 +16,4 @@ status: experimental
 tags:
 - attack.persistence
 - attack.defense_evasion
+title: Suspicious Process Execution From Fake Recycle.Bin Folder

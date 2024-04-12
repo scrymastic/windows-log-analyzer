@@ -5,13 +5,12 @@ description: Detects suspicious powershell invocations from interpreters or unus
 falsepositives:
 - Microsoft Operations Manager (MOM)
 - Other scripts
-filename: proc_creation_win_powershell_script_engine_parent.yml
 level: medium
 modified: 2023/01/05
 references:
 - https://www.securitynewspaper.com/2017/03/20/attackers-leverage-excel-powershell-dns-latest-non-malware-attack/
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Suspicious PowerShell Invocation From Script Engines

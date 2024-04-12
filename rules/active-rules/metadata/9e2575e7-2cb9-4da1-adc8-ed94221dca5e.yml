@@ -4,7 +4,6 @@ description: Detects the addition of a new rule to the Windows Firewall exceptio
   list for an application located in a potentially suspicious location.
 falsepositives:
 - Unknown
-filename: win_firewall_as_add_rule_susp_folder.yml
 level: high
 modified: 2024/01/22
 references:
@@ -17,3 +16,5 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562.004
+title: New Firewall Rule Added In Windows Firewall Exception List For Potential Suspicious
+  Application

@@ -6,9 +6,7 @@ description: Detects potentially suspicious child processes of "Diskshadow.exe".
 falsepositives:
 - False postitve can occur in cases where admin scripts levreage the "exec" flag to
   execute applications
-filename: proc_creation_win_diskshadow_child_process_susp.yml
 level: medium
-modified: ''
 references:
 - https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/
 - https://www.ired.team/offensive-security/credential-access-and-credential-dumping/ntds.dit-enumeration
@@ -30,3 +28,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Potentially Suspicious Child Process Of DiskShadow.EXE

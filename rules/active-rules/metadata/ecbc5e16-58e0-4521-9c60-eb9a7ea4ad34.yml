@@ -4,7 +4,6 @@ description: Detects the use of getsystem Meterpreter/Cobalt Strike command by d
   a specific service installation
 falsepositives:
 - Unlikely
-filename: win_security_meterpreter_or_cobaltstrike_getsystem_service_install.yml
 level: high
 modified: 2023/11/15
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1134.001
 - attack.t1134.002
+title: Meterpreter or Cobalt Strike Getsystem Service Installation - Security

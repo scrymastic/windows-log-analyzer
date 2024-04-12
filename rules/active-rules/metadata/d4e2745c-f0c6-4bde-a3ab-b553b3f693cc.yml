@@ -12,13 +12,12 @@ description: "Detects when an attacker modifies values of the Disk Cleanup Handl
   \ by implementing and registering a disk cleanup handler.\n"
 falsepositives:
 - Unknown
-filename: registry_set_disk_cleanup_handler_autorun_persistence.yml
 level: medium
 modified: 2023/08/17
 references:
 - https://persistence-info.github.io/Data/diskcleanuphandler.html
 - https://www.hexacorn.com/blog/2018/09/02/beyond-good-ol-run-key-part-86/
-related: []
 status: experimental
 tags:
 - attack.persistence
+title: Persistence Via Disk Cleanup Handler - Autorun

@@ -3,13 +3,11 @@ date: 2019/10/24
 description: Well-known DNS Exfiltration tools execution
 falsepositives:
 - Unlikely
-filename: proc_creation_win_dns_exfiltration_tools_execution.yml
 level: high
 modified: 2021/11/27
 references:
 - https://github.com/iagox86/dnscat2
 - https://github.com/yarrick/iodine
-related: []
 status: test
 tags:
 - attack.exfiltration
@@ -17,3 +15,4 @@ tags:
 - attack.command_and_control
 - attack.t1071.004
 - attack.t1132.001
+title: DNS Exfiltration and Tunneling Tools Execution

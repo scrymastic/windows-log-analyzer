@@ -5,14 +5,12 @@ description: Detects execution of "msdt.exe" using an answer file which is simul
   tab)
 falsepositives:
 - Possible undocumented parents of "msdt" other than "pcwrun"
-filename: proc_creation_win_lolbin_msdt_answer_file.yml
 level: high
-modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Msdt/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
 - attack.execution
+title: Execute MSDT Via Answer File

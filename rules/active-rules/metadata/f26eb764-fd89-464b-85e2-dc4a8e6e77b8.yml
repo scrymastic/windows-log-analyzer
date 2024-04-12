@@ -8,7 +8,6 @@ description: 'Detects suspicious child processes of electron apps (teams, discor
   '
 falsepositives:
 - Legitimate child processes can occur in cases of debugging
-filename: proc_creation_win_susp_electron_app_children.yml
 level: medium
 modified: 2023/09/05
 references:
@@ -25,3 +24,4 @@ related:
 status: experimental
 tags:
 - attack.execution
+title: Suspicious Electron Application Child Processes

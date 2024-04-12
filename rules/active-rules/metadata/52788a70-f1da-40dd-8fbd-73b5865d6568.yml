@@ -4,13 +4,11 @@ description: Detects the execution of the LOLBIN jsc.exe used by .NET to compile
   code to .exe or .dll format
 falsepositives:
 - Unknown
-filename: proc_creation_win_lolbin_jsc.yml
 level: medium
-modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Jsc/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1127
+title: JSC Convert Javascript To Executable

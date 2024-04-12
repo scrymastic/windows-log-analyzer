@@ -6,13 +6,12 @@ description: Detects suspicious starts of explorer.exe that use the /NOUACCHECK 
 falsepositives:
 - Domain Controller User Logon
 - Unknown how many legitimate software products use that method
-filename: proc_creation_win_explorer_nouaccheck.yml
 level: high
 modified: 2022/04/21
 references:
 - https://twitter.com/ORCA6665/status/1496478087244095491
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1548.002
+title: Explorer NOUACCHECK Flag

@@ -3,9 +3,7 @@ date: 2023/02/03
 description: Detects nltest commands that can be used for information discovery
 falsepositives:
 - Legitimate administration activity
-filename: proc_creation_win_nltest_execution.yml
 level: low
-modified: ''
 references:
 - https://jpcertcc.github.io/ToolAnalysisResultSheet/details/nltest.htm
 related:
@@ -19,3 +17,4 @@ tags:
 - attack.t1016
 - attack.t1018
 - attack.t1482
+title: Nltest.EXE Execution

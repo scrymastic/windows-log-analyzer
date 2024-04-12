@@ -6,7 +6,6 @@ description: Detects the execution of a renamed binary often used by attackers o
 falsepositives:
 - Custom applications use renamed binaries adding slight change to binary name. Typically
   this is easy to spot and add to whitelist
-filename: proc_creation_win_renamed_binary.yml
 level: medium
 modified: 2023/01/18
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1036.003
+title: Potential Defense Evasion Via Binary Rename

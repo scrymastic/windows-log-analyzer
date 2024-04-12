@@ -4,7 +4,6 @@ description: Detects process injection using the signed Windows tool "Mavinject"
   the "INJECTRUNNING" flag
 falsepositives:
 - Unknown
-filename: proc_creation_win_lolbin_mavinject_process_injection.yml
 level: high
 modified: 2022/12/05
 references:
@@ -25,3 +24,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1055.001
 - attack.t1218.013
+title: Mavinject Inject DLL Into Running Process

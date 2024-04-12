@@ -4,13 +4,12 @@ description: Detects the use of HandleKatz, a tool that demonstrates the usage o
   cloned handles to Lsass in order to create an obfuscated memory dump of the same
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_handlekatz.yml
 level: high
 modified: 2023/02/04
 references:
 - https://github.com/codewhitesec/HandleKatz
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1003.001
+title: HackTool - HandleKatz LSASS Dumper Execution

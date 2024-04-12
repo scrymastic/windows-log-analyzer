@@ -4,7 +4,6 @@ description: Transferring files with well-known filenames (sensitive files with 
   data) using network shares
 falsepositives:
 - Transferring sensitive files for legitimate administration work by legitimate administrator
-filename: win_security_transf_files_with_cred_data_via_network_shares.yml
 level: medium
 modified: 2021/11/30
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.t1003.002
 - attack.t1003.001
 - attack.t1003.003
+title: Transferring Files with Credential Data via Network Shares

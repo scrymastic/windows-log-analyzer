@@ -13,13 +13,12 @@ description: 'Detects a phishing attack which expands a ZIP file containing a ma
   '
 falsepositives:
 - Unknown
-filename: file_event_win_ripzip_attack.yml
 level: high
 modified: 2023/01/05
 references:
 - https://twitter.com/jonasLyk/status/1549338335243534336?t=CrmPocBGLbDyE4p6zTX1cg&s=19
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547
+title: Potential RipZip Attack on Startup Folder

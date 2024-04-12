@@ -4,13 +4,12 @@ description: Detects scheduled task creations that have suspicious action comman
   and folder combinations
 falsepositives:
 - Unknown
-filename: proc_creation_win_schtasks_folder_combos.yml
 level: high
 modified: 2022/11/18
 references:
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/lazarus-dream-job-chemical
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1053.005
+title: Schtasks From Suspicious Folders

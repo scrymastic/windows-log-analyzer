@@ -5,15 +5,13 @@ description: Detects potential DLL sideloading of "mfdetours.dll". While using "
   "mfdetours.dll" from the current directory of execution.
 falsepositives:
 - Unlikely
-filename: image_load_side_load_mfdetours.yml
 level: medium
-modified: ''
 references:
 - Internal Research
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential Mfdetours.DLL Sideloading

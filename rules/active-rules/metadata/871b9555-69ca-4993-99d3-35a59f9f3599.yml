@@ -5,7 +5,6 @@ description: Detects suspicious UltraVNC command line flag combination that indi
   group)
 falsepositives:
 - Unknown
-filename: proc_creation_win_ultravnc_susp_execution.yml
 level: high
 modified: 2022/03/09
 references:
@@ -13,9 +12,9 @@ references:
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/shuckworm-gamaredon-espionage-ukraine
 - https://unit42.paloaltonetworks.com/unit-42-title-gamaredon-group-toolset-evolution
 - https://uvnc.com/docs/uvnc-viewer/52-ultravnc-viewer-commandline-parameters.html
-related: []
 status: test
 tags:
 - attack.lateral_movement
 - attack.g0047
 - attack.t1021.005
+title: Suspicious UltraVNC Execution

@@ -13,7 +13,6 @@ description: 'Detects when a program changes the default file association of any
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_cmd_assoc_tamper_exe_file_association.yml
 level: high
 modified: 2023/03/06
 references:
@@ -25,3 +24,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1546.001
+title: Change Default File Association To Executable Via Assoc

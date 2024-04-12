@@ -4,12 +4,9 @@ description: Detects potential DLL sideloading of "CCleanerReactivator.dll"
 falsepositives:
 - False positives could occur from other custom installation paths. Apply additional
   filters accordingly.
-filename: image_load_side_load_ccleaner_reactivator.yml
 level: medium
-modified: ''
 references:
 - https://lab52.io/blog/2344-2/
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
@@ -17,3 +14,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential CCleanerReactivator.DLL Sideloading

@@ -9,13 +9,12 @@ description: 'Adversaries may use port monitors to run an attacker supplied DLL 
   '
 falsepositives:
 - Unknown
-filename: registry_set_add_port_monitor.yml
 level: medium
 modified: 2024/03/25
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1547.010/T1547.010.md
-related: []
 status: experimental
 tags:
 - attack.persistence
 - attack.t1547.010
+title: Add Port Monitor Persistence in Registry

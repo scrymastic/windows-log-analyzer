@@ -3,13 +3,15 @@ date: 2020/10/13
 description: Detects Windows Installer service (msiexec.exe) spawning "cmd" or "powershell"
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_elavated_msi_spawned_shell.yml
+fields:
+- Image
+- ParentImage
 level: medium
 modified: 2022/10/20
 references:
 - https://image.slidesharecdn.com/kheirkhabarovoffzonefinal-181117201458/95/hunting-for-privilege-escalation-in-windows-environment-50-638.jpg
-related: []
 status: test
 tags:
 - attack.privilege_escalation
 - attack.t1548.002
+title: Always Install Elevated MSI Spawned Cmd And Powershell

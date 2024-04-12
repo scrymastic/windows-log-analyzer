@@ -12,7 +12,6 @@ description: 'Detects changes to the "DisableRestrictedAdmin" registry value in 
   '
 falsepositives:
 - Unknown
-filename: registry_set_lsa_disablerestrictedadmin.yml
 level: high
 modified: 2023/12/15
 references:
@@ -25,3 +24,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: RestrictedAdminMode Registry Value Tampering

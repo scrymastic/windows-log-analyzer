@@ -7,7 +7,6 @@ description: 'Detects the creation of files with an "LNK" as a second extension.
   '
 falsepositives:
 - Some tuning is required for other general purpose directories of third party apps
-filename: file_event_win_susp_lnk_double_extension.yml
 level: medium
 modified: 2023/10/18
 references:
@@ -23,3 +22,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1036.007
+title: Suspicious LNK Double Extension File Created

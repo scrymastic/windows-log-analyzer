@@ -18,13 +18,11 @@ description: 'Adversaries may abuse the Windows command shell for execution.
   '
 falsepositives:
 - Legitimate administration script
-filename: posh_ps_susp_execute_batch_script.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1059.003/T1059.003.md#atomic-test-1---create-and-execute-batch-script
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.003
+title: Powershell Execute Batch Script

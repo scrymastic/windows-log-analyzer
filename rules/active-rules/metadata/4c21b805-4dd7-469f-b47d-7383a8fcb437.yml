@@ -4,15 +4,13 @@ description: Detects potential DLL sideloading of "iviewers.dll" (OLE/COM Object
   Viewer)
 falsepositives:
 - Unknown
-filename: image_load_side_load_iviewers.yml
 level: high
-modified: ''
 references:
 - https://www.secureworks.com/research/shadowpad-malware-analysis
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential Iviewers.DLL Sideloading

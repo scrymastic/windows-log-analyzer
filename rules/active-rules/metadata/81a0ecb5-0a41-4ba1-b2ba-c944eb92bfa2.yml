@@ -8,9 +8,7 @@ description: 'Detects usage of winget to add a new insecure (http) download sour
   '
 falsepositives:
 - False positives might occur if the users are unaware of such control checks
-filename: proc_creation_win_winget_add_insecure_custom_source.yml
 level: high
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/package-manager/winget/source
 - https://github.com/nasbench/Misc-Research/tree/b9596e8109dcdb16ec353f316678927e507a5b8d/LOLBINs/Winget
@@ -24,3 +22,4 @@ tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1059
+title: Add Insecure Download Source To Winget

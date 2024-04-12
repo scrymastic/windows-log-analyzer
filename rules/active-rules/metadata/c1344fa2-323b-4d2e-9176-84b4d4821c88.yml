@@ -4,7 +4,6 @@ description: Detects modifications to the Windows Defender configuration setting
   using PowerShell to add exclusions
 falsepositives:
 - Unknown
-filename: posh_ps_win_defender_exclusions_added.yml
 level: medium
 modified: 2022/11/26
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.t1562
 - attack.execution
 - attack.t1059
+title: Windows Defender Exclusions Added - PowerShell

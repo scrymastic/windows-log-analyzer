@@ -9,7 +9,6 @@ description: 'Detects changes to the "NoLMHash" registry value in order to allow
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_reg_nolmhash.yml
 level: high
 modified: 2023/12/22
 references:
@@ -23,3 +22,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: Enable LM Hash Storage - ProcCreation

@@ -5,7 +5,6 @@ description: Detects service installation of different remote access tools softw
 falsepositives:
 - The rule doesn't look for anything suspicious so false positives are expected. If
   you use one of the tools mentioned, comment it out
-filename: win_security_service_install_remote_access_software.yml
 level: medium
 modified: 2023/11/15
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.persistence
 - attack.t1543.003
 - attack.t1569.002
+title: Remote Access Tool Services Have Been Installed - Security

@@ -3,7 +3,6 @@ date: 2022/06/28
 description: Detects usage of powershell cmdlets to disable or remove ETW trace sessions
 falsepositives:
 - Unknown
-filename: posh_ps_etw_trace_evasion.yml
 level: high
 modified: 2022/11/25
 references:
@@ -17,3 +16,4 @@ tags:
 - attack.t1070
 - attack.t1562.006
 - car.2016-04-002
+title: Disable of ETW Trace - Powershell

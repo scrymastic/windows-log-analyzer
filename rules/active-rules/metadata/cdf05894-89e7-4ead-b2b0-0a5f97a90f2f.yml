@@ -4,7 +4,6 @@ description: Detects specific combinations of encoding methods in PowerShell via
   commandline
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_encoding_patterns.yml
 level: low
 modified: 2023/01/26
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.t1027
 - attack.execution
 - attack.t1059.001
+title: Potential Encoded PowerShell Patterns In CommandLine

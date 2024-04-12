@@ -4,12 +4,10 @@ description: Detects various indicators of Microsoft Connection Manager Profile 
   execution
 falsepositives:
 - Legitimate CMSTP use (unlikely in modern enterprise environments)
-filename: proc_access_win_cmstp_execution_by_access.yml
 level: high
 modified: 2021/06/27
 references:
 - https://web.archive.org/web/20190720093911/http://www.endurant.io/cmstp/detecting-cmstp-enabled-code-execution-and-uac-bypass-with-sysmon/
-related: []
 status: stable
 tags:
 - attack.defense_evasion
@@ -19,3 +17,4 @@ tags:
 - attack.g0069
 - attack.g0080
 - car.2019-04-001
+title: CMSTP Execution Process Access

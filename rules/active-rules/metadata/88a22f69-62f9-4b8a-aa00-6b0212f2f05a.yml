@@ -3,7 +3,6 @@ date: 2019/10/08
 description: Detects Obfuscated Powershell via use Rundll32 in Scripts
 falsepositives:
 - Unknown
-filename: posh_pm_invoke_obfuscation_via_use_rundll32.yml
 level: high
 modified: 2022/11/29
 references:
@@ -17,3 +16,4 @@ tags:
 - attack.t1027
 - attack.execution
 - attack.t1059.001
+title: Invoke-Obfuscation Via Use Rundll32 - PowerShell Module

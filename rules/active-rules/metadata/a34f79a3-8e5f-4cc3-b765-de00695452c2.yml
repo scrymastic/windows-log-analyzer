@@ -4,7 +4,6 @@ description: Detects the execution of the tool PowerTool which has the ability t
   kill a process, delete its process file, unload drivers, and delete the driver files
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_powertool.yml
 level: high
 modified: 2023/02/04
 references:
@@ -12,8 +11,8 @@ references:
 - https://www.trendmicro.com/en_us/research/22/i/play-ransomware-s-attack-playbook-unmasks-it-as-another-hive-aff.html
 - https://twitter.com/gbti_sa/status/1249653895900602375?lang=en
 - https://www.softpedia.com/get/Antivirus/Removal-Tools/ithurricane-PowerTool.shtml
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: HackTool - PowerTool Execution

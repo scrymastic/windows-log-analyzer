@@ -4,13 +4,11 @@ description: Detects when the MSSQL "xp_cmdshell" stored procedure is used to ex
   commands
 falsepositives:
 - Unknown
-filename: win_mssql_xp_cmdshell_audit_log.yml
 level: high
-modified: ''
 references:
 - https://www.netspi.com/blog/technical/network-penetration-testing/sql-server-persistence-part-1-startup-stored-procedures/
 - https://thedfirreport.com/2022/07/11/select-xmrig-from-sqlserver/
-related: []
 status: test
 tags:
 - attack.execution
+title: MSSQL XPCmdshell Suspicious Execution

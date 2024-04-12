@@ -4,7 +4,6 @@ description: Detects the load of EvtMuteHook.dll, a key component of SharpEvtHoo
   a tool that tampers with the Windows event logs
 falsepositives:
 - Other DLLs with the same Imphash
-filename: image_load_hktl_sharpevtmute.yml
 level: high
 modified: 2023/02/17
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.002
+title: HackTool - SharpEvtMute DLL Load

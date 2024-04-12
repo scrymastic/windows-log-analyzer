@@ -3,7 +3,6 @@ date: 2022/01/28
 description: Uninstall an application with wmic
 falsepositives:
 - Unknown
-filename: proc_creation_win_wmic_uninstall_application.yml
 level: medium
 modified: 2023/02/14
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1047
+title: Application Removed Via Wmic.EXE

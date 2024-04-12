@@ -5,13 +5,12 @@ description: Detects Code Integrity (CI) engine blocking Microsoft Defender's pr
   arbitrary DLL
 falsepositives:
 - Unknown
-filename: win_security_mitigations_defender_load_unsigned_dll.yml
 level: high
 modified: 2022/09/28
 references:
 - https://www.sentinelone.com/blog/living-off-windows-defender-lockbit-ransomware-sideloads-cobalt-strike-through-microsoft-security-tool
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1574.002
+title: Microsoft Defender Blocked from Loading Unsigned DLL

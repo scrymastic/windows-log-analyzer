@@ -6,13 +6,12 @@ description: Detects unusual processes accessing desktop.ini, which can be lever
 falsepositives:
 - Operations performed through Windows SCCM or equivalent
 - Read only access list authority
-filename: file_event_win_susp_desktop_ini.yml
 level: medium
 modified: 2022/10/07
 references:
 - https://isc.sans.edu/forums/diary/Desktopini+as+a+postexploitation+tool/25912/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547.009
+title: Suspicious desktop.ini Action

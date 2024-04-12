@@ -4,14 +4,13 @@ description: Detects process creation events that use the Sysnative folder (comm
   for CobaltStrike spawns)
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_sysnative.yml
 level: medium
 modified: 2023/12/14
 references:
 - https://thedfirreport.com/2021/08/29/cobalt-strike-a-defenders-guide/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1055
+title: Process Creation Using Sysnative Folder

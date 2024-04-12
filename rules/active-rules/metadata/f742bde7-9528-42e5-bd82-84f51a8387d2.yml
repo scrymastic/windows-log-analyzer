@@ -5,7 +5,6 @@ description: Detects changes to registry keys related to "Trusted Location" of M
   trusted locations to avoid macro security restrictions.
 falsepositives:
 - Other unknown legitimate or custom paths need to be filtered to avoid false positives
-filename: registry_set_office_trusted_location_uncommon.yml
 level: high
 modified: 2023/09/29
 references:
@@ -18,3 +17,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: Uncommon Microsoft Office Trusted Location Added

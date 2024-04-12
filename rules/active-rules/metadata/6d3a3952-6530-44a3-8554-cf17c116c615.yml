@@ -5,13 +5,11 @@ description: Detects possible search for office tokens via CLI by looking for th
   token used by office and similar apps.
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_office_token_search.yml
 level: medium
-modified: ''
 references:
 - https://mrd0x.com/stealing-tokens-from-office-applications/
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1528
+title: Suspicious Office Token Search Via CLI

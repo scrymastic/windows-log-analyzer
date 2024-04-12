@@ -6,15 +6,14 @@ falsepositives:
 - Some false positives could occur with the admin or guest account. It depends on
   the scripts being used by the admins in your env. If you experience a lot of FP
   you could reduce the level to medium
-filename: proc_creation_win_net_user_default_accounts_manipulation.yml
 level: high
 modified: 2023/02/21
 references:
 - https://www.trellix.com/en-sg/about/newsroom/stories/threat-labs/lockergoga-ransomware-family-used-in-targeted-attacks.html
 - https://redacted.com/blog/bianlian-ransomware-gang-gives-it-a-go/
 - https://www.microsoft.com/security/blog/2022/09/07/profiling-dev-0270-phosphorus-ransomware-operations/
-related: []
 status: test
 tags:
 - attack.collection
 - attack.t1560.001
+title: Suspicious Manipulation Of Default Accounts Via Net.EXE

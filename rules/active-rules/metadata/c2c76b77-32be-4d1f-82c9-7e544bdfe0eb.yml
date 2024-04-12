@@ -4,13 +4,11 @@ description: Detects potential suspicious behaviour using secedit.exe. Such as e
   or modifying the security policy
 falsepositives:
 - Legitimate administrative use
-filename: proc_creation_win_secedit_execution.yml
 level: medium
 modified: 2022/12/30
 references:
 - https://blueteamops.medium.com/secedit-and-i-know-it-595056dee53d
 - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/secedit
-related: []
 status: test
 tags:
 - attack.discovery
@@ -32,3 +30,4 @@ tags:
 - attack.t1547.002
 - attack.t1557
 - attack.t1082
+title: Potential Suspicious Activity Using SeCEdit

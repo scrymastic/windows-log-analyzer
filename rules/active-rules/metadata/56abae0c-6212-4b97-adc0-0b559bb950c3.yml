@@ -5,12 +5,10 @@ description: Detects important or interesting Windows services that got terminat
 falsepositives:
 - Rare false positives could occur since service termination could happen due to multiple
   reasons
-filename: win_system_service_terminated_unexpectedly.yml
 level: high
-modified: ''
 references:
 - https://www.randori.com/blog/vulnerability-analysis-queuejumper-cve-2023-21554/
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Important Windows Service Terminated Unexpectedly

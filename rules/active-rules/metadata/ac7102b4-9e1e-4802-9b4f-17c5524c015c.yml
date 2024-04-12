@@ -4,7 +4,6 @@ description: Detects the execution of PowerShell via the creation of a named pip
   starting with PSHost
 falsepositives:
 - Likely
-filename: pipe_created_powershell_execution_pipe.yml
 level: informational
 modified: 2023/11/30
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: New PowerShell Instance Created

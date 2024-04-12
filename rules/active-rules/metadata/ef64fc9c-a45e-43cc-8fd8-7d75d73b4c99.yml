@@ -6,12 +6,10 @@ description: 'Detects execution of the "wusa.exe" (Windows Update Standalone Ins
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_wusa_susp_parent_execution.yml
 level: high
-modified: ''
 references:
 - https://www.fortinet.com/blog/threat-research/konni-campaign-distributed-via-malicious-document
-related: []
 status: experimental
 tags:
 - attack.execution
+title: Wusa.EXE Executed By Parent Process Located In Suspicious Location

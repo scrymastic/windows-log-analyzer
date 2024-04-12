@@ -4,7 +4,6 @@ description: Detects a suspicious call to Invoke-WebRequest cmdlet where the and
   is located in a suspicious location
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_invoke_webrequest_download.yml
 level: high
 modified: 2024/02/23
 references:
@@ -16,3 +15,4 @@ status: experimental
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Suspicious Invoke-WebRequest Execution

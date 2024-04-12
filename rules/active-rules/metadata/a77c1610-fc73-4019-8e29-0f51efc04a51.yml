@@ -3,14 +3,13 @@ date: 2022/02/15
 description: Detects possible payload obfuscation via the commandline
 falsepositives:
 - Unknown
-filename: proc_creation_win_cmd_dosfuscation.yml
 level: medium
 modified: 2023/03/06
 references:
 - https://www.fireeye.com/content/dam/fireeye-www/blog/pdfs/dosfuscation-report.pdf
 - https://github.com/danielbohannon/Invoke-DOSfuscation
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059
+title: Potential Dosfuscation Activity

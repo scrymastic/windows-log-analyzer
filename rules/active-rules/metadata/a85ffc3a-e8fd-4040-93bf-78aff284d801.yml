@@ -4,14 +4,12 @@ description: Detects the usage of the "sftp.exe" binary as a LOLBIN by abusing t
   "-D" flag
 falsepositives:
 - Unknown
-filename: proc_creation_win_lolbin_sftp.yml
 level: medium
-modified: ''
 references:
 - https://github.com/LOLBAS-Project/LOLBAS/pull/264
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1218
+title: Use Of The SFTP.EXE Binary As A LOLBIN

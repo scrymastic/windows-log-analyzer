@@ -5,9 +5,7 @@ description: Detects an unexpected file being modified by dns.exe which my indic
   in CVE-2020-1350 (SigRed)
 falsepositives:
 - Unknown
-filename: file_change_win_unusual_modification_by_dns_exe.yml
 level: high
-modified: ''
 references:
 - https://www.elastic.co/guide/en/security/current/unusual-file-modification-by-dns-exe.html
 related:
@@ -17,3 +15,4 @@ status: test
 tags:
 - attack.initial_access
 - attack.t1133
+title: Unusual File Modification by dns.exe

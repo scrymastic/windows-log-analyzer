@@ -3,13 +3,12 @@ date: 2022/06/11
 description: Detects the abuse of custom file open handler, executing powershell
 falsepositives:
 - Unknown
-filename: registry_set_custom_file_open_handler_powershell_execution.yml
 level: high
 modified: 2023/08/17
 references:
 - https://news.sophos.com/en-us/2022/02/01/solarmarker-campaign-used-novel-registry-changes-to-establish-persistence/?cmp=30728
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1202
+title: Custom File Open Handler Executes PowerShell

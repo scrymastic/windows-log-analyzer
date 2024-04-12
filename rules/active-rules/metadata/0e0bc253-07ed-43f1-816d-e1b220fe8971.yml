@@ -4,15 +4,13 @@ description: Detects potential DLL sideloading of "RjvPlatform.dll" by "SystemRe
   located in a non-default location.
 falsepositives:
 - Unlikely
-filename: image_load_side_load_rjvplatform_non_default_location.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/0gtweet/status/1666716511988330499
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential RjvPlatform.DLL Sideloading From Non-Default Location

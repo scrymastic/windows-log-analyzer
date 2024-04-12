@@ -8,9 +8,7 @@ description: 'Detects usage of the "ms-appinstaller" protocol handler via comman
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_ms_appinstaller_download.yml
 level: medium
-modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/AppInstaller/
 related:
@@ -21,3 +19,4 @@ tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1218
+title: Potential File Download Via MS-AppInstaller Protocol Handler

@@ -3,9 +3,7 @@ date: 2022/10/04
 description: Detects suspicious file type dropped by an Exchange component in IIS
 falsepositives:
 - Unknown
-filename: file_event_win_exchange_webshell_drop_suspicious.yml
 level: medium
-modified: ''
 references:
 - https://www.microsoft.com/security/blog/2022/09/30/analyzing-attacks-using-the-exchange-vulnerabilities-cve-2022-41040-and-cve-2022-41082/
 - https://www.gteltsc.vn/blog/canh-bao-chien-dich-tan-cong-su-dung-lo-hong-zero-day-tren-microsoft-exchange-server-12714.html
@@ -19,3 +17,4 @@ tags:
 - attack.t1190
 - attack.initial_access
 - attack.t1505.003
+title: Suspicious File Drop by Exchange

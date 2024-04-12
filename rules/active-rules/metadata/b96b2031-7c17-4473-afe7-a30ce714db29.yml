@@ -4,16 +4,14 @@ description: The FSharp Interpreters, FsiAnyCpu.exe and FSi.exe, can be used for
   bypass and is listed in Microsoft recommended block rules.
 falsepositives:
 - Legitimate use by a software developer.
-filename: proc_creation_win_lolbin_fsharp_interpreters.yml
 level: medium
-modified: ''
 references:
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules
 - https://bohops.com/2020/11/02/exploring-the-wdac-microsoft-recommended-block-rules-part-ii-wfc-fsi/
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/FsiAnyCpu/
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Fsi/
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059
+title: Use of FSharp Interpreters

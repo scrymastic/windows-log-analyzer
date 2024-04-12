@@ -4,7 +4,6 @@ description: Detects a DNS server error in which a specified plugin DLL (in regi
   could not be loaded
 falsepositives:
 - Unknown
-filename: win_dns_server_susp_server_level_plugin_dll.yml
 level: high
 modified: 2023/02/05
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1574.002
+title: DNS Server Error Failed Loading the ServerLevelPluginDLL

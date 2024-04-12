@@ -5,7 +5,6 @@ description: Detection for mshta.exe suspicious execution patterns sometimes inv
 falsepositives:
 - False positives depend on scripts and administrative tools used in the monitored
   environment
-filename: proc_creation_win_mshta_susp_execution.yml
 level: high
 modified: 2022/11/07
 references:
@@ -14,7 +13,6 @@ references:
 - https://docs.microsoft.com/en-us/dotnet/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script
 - https://medium.com/tsscyber/pentesting-and-hta-bypassing-powershell-constrained-language-mode-53a42856c997
 - https://twitter.com/mattifestation/status/1326228491302563846
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -23,3 +21,4 @@ tags:
 - attack.execution
 - attack.t1059.007
 - cve.2020.1599
+title: MSHTA Suspicious Execution 01

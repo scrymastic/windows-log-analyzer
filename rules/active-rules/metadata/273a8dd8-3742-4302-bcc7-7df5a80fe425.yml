@@ -4,7 +4,6 @@ description: Detects potential DLL sideloading of an unsigned dbghelp.dll by the
   VMMap.
 falsepositives:
 - Unknown
-filename: image_load_side_load_vmmap_dbghelp_unsigned.yml
 level: high
 modified: 2023/09/05
 references:
@@ -19,3 +18,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: VMMap Unsigned Dbghelp.DLL Potential Sideloading

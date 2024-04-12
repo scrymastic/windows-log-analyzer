@@ -7,9 +7,7 @@ description: 'Detects the creation of new DLL assembly files by "aspnet_compiler
   '
 falsepositives:
 - Legitimate assembly compilation using a build provider
-filename: file_event_win_aspnet_temp_files.yml
 level: medium
-modified: ''
 references:
 - Internal Research
 related:
@@ -22,3 +20,4 @@ related:
 status: experimental
 tags:
 - attack.execution
+title: Assembly DLL Creation Via AspNetCompiler

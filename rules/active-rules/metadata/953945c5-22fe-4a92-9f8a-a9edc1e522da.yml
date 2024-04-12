@@ -6,9 +6,7 @@ description: Detects usage of the "Set-Service" powershell cmdlet to configure a
 falsepositives:
 - Rare intended use of hidden services
 - Rare FP could occur due to the non linearity of the ScriptBlockText log
-filename: posh_ps_using_set_service_to_hide_services.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/Alh4zr3d/status/1580925761996828672
 - https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-service?view=powershell-7.2
@@ -21,3 +19,4 @@ tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1574.011
+title: Abuse of Service Permissions to Hide Services Via Set-Service - PS

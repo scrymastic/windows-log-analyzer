@@ -5,12 +5,10 @@ description: Detects the execution of a Chromium based browser process with the 
   data).
 falsepositives:
 - Unknown
-filename: proc_creation_win_browsers_chromium_mockbin_abuse.yml
 level: high
-modified: ''
 references:
 - https://www.zscaler.com/blogs/security-research/steal-it-campaign
-related: []
 status: experimental
 tags:
 - attack.execution
+title: Chromium Browser Headless Execution To Mockbin Like Site

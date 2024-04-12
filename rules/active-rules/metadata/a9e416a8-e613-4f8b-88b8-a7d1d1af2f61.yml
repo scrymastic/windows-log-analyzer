@@ -4,13 +4,12 @@ description: Detects the execution of CSharp interactive console by PowerShell
 falsepositives:
 - Possible depending on environment. Pair with other factors such as net connections,
   command-line args, etc.
-filename: proc_creation_win_csi_use_of_csharp_console.yml
 level: high
 modified: 2022/07/14
 references:
 - https://redcanary.com/blog/detecting-attacks-leveraging-the-net-framework/
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1127
+title: Suspicious Use of CSharp Interactive Console

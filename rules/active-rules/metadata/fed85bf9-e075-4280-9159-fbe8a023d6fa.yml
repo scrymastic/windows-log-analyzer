@@ -4,7 +4,6 @@ description: Detects the use of Advanced IP Scanner. Seems to be a popular tool 
   ransomware groups.
 falsepositives:
 - Legitimate administrative use
-filename: file_event_win_advanced_ip_scanner.yml
 level: medium
 modified: 2022/11/29
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.discovery
 - attack.t1046
+title: Advanced IP Scanner - File Event

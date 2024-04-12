@@ -5,14 +5,13 @@ description: Detects suspicious sysprep process start with AppData folder as tar
 falsepositives:
 - False positives depend on scripts and administrative tools used in the monitored
   environment
-filename: proc_creation_win_sysprep_appdata.yml
 level: medium
 modified: 2021/11/27
 references:
 - https://www.symantec.com/blogs/threat-intelligence/thrip-hits-satellite-telecoms-defense-targets
 - https://app.any.run/tasks/61a296bb-81ad-4fee-955f-3b399f4aaf4b
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059
+title: Sysprep on AppData Folder

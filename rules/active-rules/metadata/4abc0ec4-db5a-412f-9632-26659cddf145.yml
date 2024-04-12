@@ -5,15 +5,13 @@ description: Detects execution of the binary "wpbbin" which is used as part of t
 falsepositives:
 - Legitimate usage of the file by hardware manufacturer such as lenovo (Thanks @0gtweet
   for the tip)
-filename: proc_creation_win_wpbbin_potential_persistence.yml
 level: high
-modified: ''
 references:
 - https://grzegorztworek.medium.com/using-uefi-to-inject-executable-files-into-bitlocker-protected-drives-8ff4ca59c94c
 - https://persistence-info.github.io/Data/wpbbin.html
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.defense_evasion
 - attack.t1542.001
+title: UEFI Persistence Via Wpbbin - ProcessCreation

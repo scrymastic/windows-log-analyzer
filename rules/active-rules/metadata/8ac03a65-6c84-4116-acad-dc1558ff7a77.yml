@@ -4,12 +4,10 @@ description: Detects a Sysmon configuration change, which could be the result of
   legitimate reconfiguration or someone trying manipulate the configuration
 falsepositives:
 - Legitimate administrative action
-filename: sysmon_config_modification.yml
 level: medium
-modified: ''
 references:
 - https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Sysmon Configuration Change

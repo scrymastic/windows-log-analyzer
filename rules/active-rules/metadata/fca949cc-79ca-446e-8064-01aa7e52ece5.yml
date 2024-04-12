@@ -4,14 +4,12 @@ description: Detects suspicious use of PCHunter, a tool like Process Hacker to v
   and manipulate processes, kernel options and other low level stuff
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_pchunter.yml
 level: high
 modified: 2023/02/13
 references:
 - http://www.xuetr.com/
 - https://www.crowdstrike.com/blog/falcon-overwatch-report-finds-increase-in-ecrime/
 - https://www.hexacorn.com/blog/2018/04/20/kernel-hacking-tool-you-might-have-never-heard-of-xuetr-pchunter/
-related: []
 status: test
 tags:
 - attack.execution
@@ -21,3 +19,4 @@ tags:
 - attack.t1012
 - attack.t1083
 - attack.t1007
+title: HackTool - PCHunter Execution

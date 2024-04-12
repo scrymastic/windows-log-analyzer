@@ -4,14 +4,12 @@ description: Detects default RemCom service filename which indicates RemCom serv
   installation and execution
 falsepositives:
 - Unknown
-filename: file_event_win_remcom_service.yml
 level: medium
-modified: ''
 references:
 - https://github.com/kavika13/RemCom/
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1569.002
 - attack.s0029
+title: RemCom Service File Creation

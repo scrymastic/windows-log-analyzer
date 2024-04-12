@@ -3,7 +3,6 @@ date: 2018/12/11
 description: Detects potential commandline obfuscation using known escape characters
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_cli_obfuscation_escape_char.yml
 level: medium
 modified: 2023/03/03
 references:
@@ -12,8 +11,8 @@ references:
 - https://twitter.com/Hexacorn/status/885570278637678592
 - https://www.mandiant.com/resources/blog/obfuscation-wild-targeted-attackers-lead-way-evasion-techniques
 - https://web.archive.org/web/20190213114956/http://www.windowsinspired.com/understanding-the-command-line-string-and-arguments-received-by-a-windows-program/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1140
+title: Potential Commandline Obfuscation Using Escape Characters

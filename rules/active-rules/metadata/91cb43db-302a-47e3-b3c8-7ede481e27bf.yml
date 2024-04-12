@@ -13,14 +13,13 @@ falsepositives:
 - Backup software
 - Legitimate software installed on partitions other than "C:\"
 - Searching software such as "everything.exe"
-filename: file_access_win_browser_credential_access.yml
 level: medium
 modified: 2023/12/18
 references:
 - https://www.zscaler.com/blogs/security-research/ffdroider-stealer-targeting-social-media-platform-users
 - https://github.com/lclevy/firepwd
-related: []
 status: experimental
 tags:
 - attack.t1003
 - attack.credential_access
+title: Access To Browser Credential Files By Uncommon Application

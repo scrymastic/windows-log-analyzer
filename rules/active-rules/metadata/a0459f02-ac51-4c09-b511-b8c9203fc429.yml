@@ -4,14 +4,13 @@ description: Detects calls to "SyncInvoke" that is part of the "CL_Invocation.ps
   script to proxy execution using "System.Diagnostics.Process"
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_cl_invocation.yml
 level: medium
 modified: 2023/08/17
 references:
 - https://lolbas-project.github.io/lolbas/Scripts/Cl_invocation/
 - https://twitter.com/bohops/status/948061991012327424
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1216
+title: Potential Process Execution Proxy Via CL_Invocation.ps1

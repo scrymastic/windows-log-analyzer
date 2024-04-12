@@ -9,14 +9,13 @@ description: 'Adversaries may modify file time attributes to hide new or changes
   '
 falsepositives:
 - Legitimate admin script
-filename: posh_ps_timestomp.yml
 level: medium
 modified: 2022/12/25
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1070.006/T1070.006.md
 - https://www.offensive-security.com/metasploit-unleashed/timestomp/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1070.006
+title: Powershell Timestomp

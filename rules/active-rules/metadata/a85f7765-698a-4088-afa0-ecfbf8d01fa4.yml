@@ -3,12 +3,10 @@ date: 2023/05/15
 description: Detects execution of LiveKD based on PE metadata or image name
 falsepositives:
 - Administration and debugging activity (must be investigated)
-filename: proc_creation_win_sysinternals_livekd_execution.yml
 level: medium
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/sysinternals/downloads/livekd
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Potential Memory Dumping Activity Via LiveKD

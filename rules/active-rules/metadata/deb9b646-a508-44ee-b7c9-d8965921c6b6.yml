@@ -3,7 +3,6 @@ date: 2022/12/27
 description: Detects TOKEN OBFUSCATION technique from Invoke-Obfuscation
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_token_obfuscation.yml
 level: high
 modified: 2022/12/30
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1027.009
+title: Powershell Token Obfuscation - Process Creation

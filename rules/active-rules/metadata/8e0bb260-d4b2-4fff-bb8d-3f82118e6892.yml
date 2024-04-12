@@ -10,7 +10,6 @@ description: 'Detects inline Windows shell commands redirecting output via the "
 falsepositives:
 - Legitimate admin or third party scripts used for diagnostic collection might generate
   some false positives
-filename: proc_creation_win_cmd_redirection_susp_folder.yml
 level: medium
 modified: 2024/03/19
 references:
@@ -24,3 +23,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Potentially Suspicious CMD Shell Output Redirect

@@ -5,13 +5,11 @@ description: Detects the desktopimgdownldr utility being used to download a remo
   to certutil.
 falsepositives:
 - Unknown
-filename: proc_creation_win_desktopimgdownldr_remote_file_download.yml
 level: medium
-modified: ''
 references:
 - https://www.elastic.co/guide/en/security/current/remote-file-download-via-desktopimgdownldr-utility.html
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Remote File Download Via Desktopimgdownldr Utility

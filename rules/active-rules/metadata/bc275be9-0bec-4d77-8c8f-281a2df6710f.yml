@@ -4,7 +4,6 @@ description: Detects disabling of the Windows Defender feature of scanning for m
   and other potentially unwanted software
 falsepositives:
 - Unknown
-filename: win_defender_malware_and_pua_scan_disabled.yml
 level: high
 modified: 2023/11/22
 references:
@@ -18,3 +17,4 @@ status: stable
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Windows Defender Malware And PUA Scanning Disabled

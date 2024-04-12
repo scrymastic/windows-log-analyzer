@@ -3,7 +3,6 @@ date: 2020/03/20
 description: Detects a suspicious or uncommon parent processes of PowerShell
 falsepositives:
 - Other scripts
-filename: proc_creation_win_powershell_susp_parent_process.yml
 level: high
 modified: 2023/02/04
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Suspicious PowerShell Parent Process

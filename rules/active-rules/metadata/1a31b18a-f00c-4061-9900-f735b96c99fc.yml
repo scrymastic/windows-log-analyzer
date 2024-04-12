@@ -4,7 +4,6 @@ description: Detects service installation of different remote access tools softw
   These software are often abused by threat actors to perform
 falsepositives:
 - Unknown
-filename: win_system_service_install_remote_access_software.yml
 level: medium
 modified: 2023/06/22
 references:
@@ -17,3 +16,4 @@ tags:
 - attack.persistence
 - attack.t1543.003
 - attack.t1569.002
+title: Remote Access Tool Services Have Been Installed - System

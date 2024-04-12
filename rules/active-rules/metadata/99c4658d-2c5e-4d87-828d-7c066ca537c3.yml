@@ -9,14 +9,12 @@ description: 'Detect built in PowerShell cmdlet Disable-WindowsOptionalFeature, 
   '
 falsepositives:
 - Unknown
-filename: posh_ps_disable_windows_optional_feature.yml
 level: high
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/5b67c9b141fa3918017f8fa44f2f88f0b1ecb9e1/atomics/T1562.001/T1562.001.md
 - https://docs.microsoft.com/en-us/powershell/module/dism/disable-windowsoptionalfeature?view=windowsserver2022-ps
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Disable-WindowsOptionalFeature Command PowerShell

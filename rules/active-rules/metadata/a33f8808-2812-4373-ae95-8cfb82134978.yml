@@ -6,7 +6,6 @@ description: 'Detects when a Windows Defender exclusion has been deleted. This c
   '
 falsepositives:
 - Unknown
-filename: win_security_windows_defender_exclusions_write_deleted.yml
 level: medium
 modified: 2023/11/11
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Windows Defender Exclusion Deleted

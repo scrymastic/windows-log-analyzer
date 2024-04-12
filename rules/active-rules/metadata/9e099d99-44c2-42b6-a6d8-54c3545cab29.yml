@@ -4,7 +4,6 @@ description: Detects the creation of files created by mimikatz such as ".kirbi",
   etc.
 falsepositives:
 - Unlikely
-filename: file_event_win_hktl_mimikatz_files.yml
 level: critical
 modified: 2023/02/16
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1558
+title: Mimikatz Kirbi File Creation

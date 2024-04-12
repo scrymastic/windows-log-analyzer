@@ -4,7 +4,6 @@ description: Detects a suspicious curl process start on Windows and outputs the 
   document to a local file
 falsepositives:
 - Unknown
-filename: proc_creation_win_curl_susp_download.yml
 level: high
 modified: 2023/02/21
 references:
@@ -22,3 +21,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Suspicious Curl.EXE Download

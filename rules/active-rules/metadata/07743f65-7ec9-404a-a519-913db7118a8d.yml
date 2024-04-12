@@ -3,15 +3,14 @@ date: 2020/09/27
 description: Detects changes to 'HKCU\Software\Classes\Folder\shell\open\command\DelegateExecute'
 falsepositives:
 - Unknown
-filename: registry_set_comhijack_sdclt.yml
 level: high
 modified: 2023/09/28
 references:
 - http://blog.sevagas.com/?Yet-another-sdclt-UAC-bypass
 - https://www.exploit-db.com/exploits/47696
-related: []
 status: test
 tags:
 - attack.privilege_escalation
 - attack.t1546
 - attack.t1548
+title: COM Hijack via Sdclt

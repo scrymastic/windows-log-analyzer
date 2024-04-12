@@ -1,8 +1,6 @@
 author: Florian Roth (Nextron Systems), Tom Ueltschi, Jonhnathan Ribeiro, oscd.community
 date: 2017/11/10
 description: Detects javaw.exe in AppData folder as used by Adwind / JRAT
-falsepositives: []
-filename: file_event_win_mal_adwind.yml
 level: high
 modified: 2022/12/02
 references:
@@ -16,3 +14,4 @@ tags:
 - attack.execution
 - attack.t1059.005
 - attack.t1059.007
+title: Adwind RAT / JRAT File Artifact

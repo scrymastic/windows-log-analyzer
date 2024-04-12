@@ -4,14 +4,17 @@ date: 2017/11/27
 description: Detects a Windows program executable started from a suspicious folder
 falsepositives:
 - Exotic software
-filename: proc_creation_win_susp_system_exe_anomaly.yml
+fields:
+- ComputerName
+- User
+- Image
 level: high
 modified: 2023/10/18
 references:
 - https://twitter.com/GelosSnake/status/934900723426439170
 - https://asec.ahnlab.com/en/39828/
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1036
+title: System File Execution Location Anomaly

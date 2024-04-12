@@ -11,16 +11,15 @@ description: 'Detects suspicious reconnaissance command line activity on Windows
 falsepositives:
 - Inventory tool runs
 - Administrative activity
-filename: proc_creation_win_net_groups_and_accounts_recon.yml
 level: medium
 modified: 2023/03/02
 references:
 - https://redcanary.com/blog/how-one-hospital-thwarted-a-ryuk-ransomware-outbreak/
 - https://thedfirreport.com/2020/10/18/ryuk-in-5-hours/
 - https://research.nccgroup.com/2022/08/19/back-in-black-unlocking-a-lockbit-3-0-ransomware-attack/
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1087.001
 - attack.t1087.002
+title: Suspicious Group And Account Reconnaissance Activity Using Net.EXE

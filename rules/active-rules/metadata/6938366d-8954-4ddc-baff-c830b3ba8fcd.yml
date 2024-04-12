@@ -4,14 +4,12 @@ description: Detects Certipy a tool for Active Directory Certificate Services en
   and abuse based on PE metadata characteristics and common command line arguments.
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_certipy.yml
 level: high
-modified: ''
 references:
 - https://github.com/ly4k/Certipy
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.credential_access
 - attack.t1649
+title: HackTool - Certipy Execution

@@ -10,7 +10,6 @@ description: 'Detects a command line process that uses explorer.exe to launch ar
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_explorer_break_process_tree.yml
 level: medium
 modified: 2022/09/20
 references:
@@ -18,8 +17,8 @@ references:
 - https://twitter.com/bohops/status/1276357235954909188?s=12
 - https://twitter.com/nas_bench/status/1535322450858233858
 - https://securityboulevard.com/2019/09/deobfuscating-ostap-trickbots-34000-line-javascript-downloader/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1036
+title: Explorer Process Tree Break

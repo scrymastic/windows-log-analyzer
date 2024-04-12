@@ -3,9 +3,7 @@ date: 2023/08/14
 description: Detects potentially suspicious child processes of "aspnet_compiler.exe".
 falsepositives:
 - Unknown
-filename: proc_creation_win_aspnet_compiler_susp_child_process.yml
 level: high
-modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Aspnet_Compiler/
 - https://ijustwannared.team/2020/08/01/the-curious-case-of-aspnet_compiler-exe/
@@ -20,3 +18,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1127
+title: Suspicious Child Process of AspNetCompiler

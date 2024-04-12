@@ -10,7 +10,6 @@ description: 'Threat actors can use auditpol binary to change audit policy confi
 falsepositives:
 - Administrator or administrator scripts might leverage the flags mentioned in the
   detection section. Either way, it should always be monitored
-filename: proc_creation_win_auditpol_susp_execution.yml
 level: high
 modified: 2023/02/22
 references:
@@ -22,3 +21,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.002
+title: Audit Policy Tampering Via Auditpol

@@ -5,14 +5,13 @@ description: The 'LsaRegisterLogonProcess' function verifies that the applicatio
   privilege set. Possible Rubeus tries to get a handle to LSA.
 falsepositives:
 - Unknown
-filename: win_security_user_couldnt_call_priv_service_lsaregisterlogonprocess.yml
 level: high
 modified: 2022/12/25
 references:
 - https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
-related: []
 status: test
 tags:
 - attack.lateral_movement
 - attack.privilege_escalation
 - attack.t1558.003
+title: User Couldn't Call a Privileged Service 'LsaRegisterLogonProcess'

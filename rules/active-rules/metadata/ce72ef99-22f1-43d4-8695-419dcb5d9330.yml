@@ -7,7 +7,6 @@ falsepositives:
 - Administrators or tools shutting down the services due to upgrade or removal purposes.
   If you experience some false positive, please consider adding filters to the parent
   process launching this command and not removing the entry
-filename: proc_creation_win_susp_service_tamper.yml
 level: high
 modified: 2023/08/07
 references:
@@ -27,3 +26,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1489
+title: Suspicious Windows Service Tampering

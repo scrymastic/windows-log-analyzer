@@ -4,16 +4,15 @@ description: Detects creation/modification of Assistive Technology applications 
   persistence with usage of 'at'
 falsepositives:
 - Creation of non-default, legitimate at usage
-filename: registry_event_susp_atbroker_change.yml
 level: medium
 modified: 2023/01/19
 references:
 - http://www.hexacorn.com/blog/2016/07/22/beyond-good-ol-run-key-part-42/
 - https://lolbas-project.github.io/lolbas/Binaries/Atbroker/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
 - attack.persistence
 - attack.t1547
+title: Atbroker Registry Change

@@ -5,9 +5,7 @@ description: Detects suspicious DACL modifications to allow access to a service 
   ACLs.
 falsepositives:
 - Unknown
-filename: proc_creation_win_sc_sdset_allow_service_changes.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/0gtweet/status/1628720819537936386
 - https://itconnect.uw.edu/tools-services-support/it-systems-infrastructure/msinf/other-help/understanding-sddl-syntax/
@@ -19,3 +17,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1543.003
+title: Allow Service Access Using Security Descriptor Tampering Via Sc.EXE

@@ -9,7 +9,11 @@ description: setupapi.dll library provide InstallHinfSection function for proces
 falsepositives:
 - Scripts and administrative tools that use INF files for driver installation with
   setupapi.dll
-filename: proc_creation_win_rundll32_setupapi_installhinfsection.yml
+fields:
+- ComputerName
+- User
+- CommandLine
+- ParentCommandLine
 level: medium
 modified: 2021/11/27
 references:
@@ -17,8 +21,8 @@ references:
 - https://gist.githubusercontent.com/bohops/0cc6586f205f3691e04a1ebf1806aabd/raw/baf7b29891bb91e76198e30889fbf7d6642e8974/calc_exe.inf
 - https://raw.githubusercontent.com/huntresslabs/evading-autoruns/master/shady.inf
 - https://twitter.com/Z3Jpa29z/status/1313742350292746241?s=20
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.011
+title: Suspicious Rundll32 Setupapi.dll Activity

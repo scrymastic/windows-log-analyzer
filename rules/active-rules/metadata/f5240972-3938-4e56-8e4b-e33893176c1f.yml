@@ -3,13 +3,11 @@ date: 2022/01/01
 description: Use of reg to get MachineGuid information
 falsepositives:
 - Unknown
-filename: proc_creation_win_reg_machineguid.yml
 level: low
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1082/T1082.md#atomic-test-8---windows-machineguid-discovery
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1082
+title: Suspicious Query of MachineGUID

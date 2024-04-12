@@ -5,13 +5,12 @@ description: Detects unusual processes accessing desktop.ini remotely over netwo
   (i.e. renaming files) without changing them on disk.
 falsepositives:
 - Read only access list authority
-filename: win_security_net_share_obj_susp_desktop_ini.yml
 level: medium
 modified: 2022/01/16
 references:
 - https://isc.sans.edu/forums/diary/Desktopini+as+a+postexploitation+tool/25912/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547.009
+title: Windows Network Access Suspicious desktop.ini Action

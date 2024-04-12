@@ -7,9 +7,7 @@ description: 'Detects network connections to Devtunnels domains initiated by a p
   '
 falsepositives:
 - Legitimate use of Devtunnels will also trigger this.
-filename: net_connection_win_susp_devtunnel_connection.yml
 level: medium
-modified: ''
 references:
 - https://blueteamops.medium.com/detecting-dev-tunnels-16f0994dc3e2
 - https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/security
@@ -25,3 +23,4 @@ status: experimental
 tags:
 - attack.exfiltration
 - attack.t1567.001
+title: Network Connection Initiated To DevTunnels Domain

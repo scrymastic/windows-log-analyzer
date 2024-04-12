@@ -4,14 +4,13 @@ description: Detects the execution of the LOLBIN gpscript, which executes logon 
   startup scripts configured in Group Policy
 falsepositives:
 - Legitimate uses of logon scripts distributed via group policy
-filename: proc_creation_win_lolbin_gpscript.yml
 level: medium
 modified: 2023/06/14
 references:
 - https://oddvar.moe/2018/04/27/gpscript-exe-another-lolbin-to-the-list/
 - https://lolbas-project.github.io/lolbas/Binaries/Gpscript/
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Gpscript Execution

@@ -11,13 +11,12 @@ description: 'Adversaries may abuse PowerShell commands and scripts for executio
   '
 falsepositives:
 - Legitimate administrative script
-filename: posh_ps_xml_iex.yml
 level: medium
 modified: 2023/01/19
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1059.001/T1059.001.md#atomic-test-8---powershell-xml-requests
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Powershell XML Execute Command

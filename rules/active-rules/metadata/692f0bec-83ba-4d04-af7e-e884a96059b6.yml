@@ -6,7 +6,6 @@ falsepositives:
 - AppvClient
 - CCM
 - WinRM
-filename: proc_creation_win_wmiprvse_spawns_powershell.yml
 level: medium
 modified: 2023/03/29
 references:
@@ -21,3 +20,4 @@ tags:
 - attack.execution
 - attack.t1047
 - attack.t1059.001
+title: Potential WMI Lateral Movement WmiPrvSE Spawned PowerShell

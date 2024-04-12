@@ -3,7 +3,6 @@ date: 2021/07/06
 description: Detects the Setting of Windows Defender Exclusions
 falsepositives:
 - Administrator actions
-filename: registry_set_defender_exclusions.yml
 level: medium
 modified: 2023/08/17
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Windows Defender Exclusions Added - Registry

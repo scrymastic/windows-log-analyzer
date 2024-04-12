@@ -4,7 +4,6 @@ description: This rule detects a suspicious crash of the Microsoft Malware Prote
   Engine
 falsepositives:
 - MsMpEng might crash if the "C:\" partition is full
-filename: win_application_msmpeng_crash_error.yml
 level: high
 modified: 2023/04/14
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.defense_evasion
 - attack.t1211
 - attack.t1562.001
+title: Microsoft Malware Protection Engine Crash

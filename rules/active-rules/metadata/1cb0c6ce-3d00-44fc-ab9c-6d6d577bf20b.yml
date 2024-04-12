@@ -6,7 +6,6 @@ description: 'Detects DNS query requests to Devtunnels domains. Attackers can ab
   '
 falsepositives:
 - Legitimate use of Devtunnels will also trigger this.
-filename: dns_query_win_devtunnels_communication.yml
 level: medium
 modified: 2023/11/20
 references:
@@ -24,3 +23,4 @@ status: experimental
 tags:
 - attack.command_and_control
 - attack.t1071.001
+title: DNS Query To Devtunnels Domain

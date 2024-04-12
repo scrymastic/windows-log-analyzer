@@ -3,15 +3,14 @@ date: 2022/09/07
 description: Detects the use of SysmonEnte, a tool to attack the integrity of Sysmon
 falsepositives:
 - Unknown
-filename: proc_access_win_hktl_sysmonente.yml
 level: high
 modified: 2023/11/28
 references:
 - https://codewhitesec.blogspot.com/2022/09/attacks-on-sysmon-revisited-sysmonente.html
 - https://github.com/codewhitesec/SysmonEnte/
 - https://github.com/codewhitesec/SysmonEnte/blob/main/screens/1.png
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.002
+title: HackTool - SysmonEnte Execution

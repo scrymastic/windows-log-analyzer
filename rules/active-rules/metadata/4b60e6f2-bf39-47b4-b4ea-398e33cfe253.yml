@@ -4,7 +4,6 @@ description: Detects UAC Bypass Attempt Using Microsoft Connection Manager Profi
   Installer Autoelevate-capable COM Objects (e.g. UACMe ID of 41, 43, 58 or 65)
 falsepositives:
 - Legitimate CMSTP use (unlikely in modern enterprise environments)
-filename: proc_creation_win_uac_bypass_cmstp_com_object_access.yml
 level: high
 modified: 2022/09/21
 references:
@@ -12,7 +11,6 @@ references:
 - https://twitter.com/hFireF0X/status/897640081053364225
 - https://medium.com/falconforce/falconfriday-detecting-uac-bypasses-0xff16-86c2a9107abf
 - https://github.com/hfiref0x/UACME
-related: []
 status: stable
 tags:
 - attack.execution
@@ -22,3 +20,4 @@ tags:
 - attack.t1218.003
 - attack.g0069
 - car.2019-04-001
+title: CMSTP UAC Bypass via COM Object Access

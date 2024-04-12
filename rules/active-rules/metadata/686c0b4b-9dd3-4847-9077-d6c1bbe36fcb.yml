@@ -3,7 +3,6 @@ date: 2020/07/28
 description: Detects disabling of the Windows Defender virus scanning feature
 falsepositives:
 - Unknown
-filename: win_defender_virus_scan_disabled.yml
 level: high
 modified: 2023/11/22
 references:
@@ -17,3 +16,4 @@ status: stable
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Windows Defender Virus Scanning Feature Disabled

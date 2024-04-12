@@ -4,7 +4,6 @@ description: Detects changes to the Registry in which a monitor program gets reg
   to dump the memory of the lsass.exe process
 falsepositives:
 - Unlikely
-filename: registry_event_silentprocessexit_lsass.yml
 level: critical
 modified: 2022/12/19
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1003.001
+title: Potential Credential Dumping Via LSASS SilentProcessExit Technique

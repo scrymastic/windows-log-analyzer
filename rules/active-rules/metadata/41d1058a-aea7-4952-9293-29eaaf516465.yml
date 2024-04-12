@@ -4,14 +4,13 @@ description: Detects the deletion of AMSI provider registry key entries in HKLM\
   This technique could be used by an attacker in order to disable AMSI inspection.
 falsepositives:
 - Unlikely
-filename: registry_delete_removal_amsi_registry_key.yml
 level: high
 modified: 2023/02/08
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1562.001/T1562.001.md
 - https://seclists.org/fulldisclosure/2020/Mar/45
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Removal Of AMSI Provider Registry Keys

@@ -4,16 +4,15 @@ description: Detects code execution via Pester.bat (Pester - Powershell Modulte 
   testing)
 falsepositives:
 - Legitimate use of Pester for writing tests for Powershell scripts and modules
-filename: proc_creation_win_lolbin_pester_1.yml
 level: medium
 modified: 2023/11/09
 references:
 - https://twitter.com/Oddvarmoe/status/993383596244258816
 - https://github.com/api0cradle/LOLBAS/blob/d148d278f5f205ce67cfaf49afdfb68071c7252a/OSScripts/pester.md
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
 - attack.defense_evasion
 - attack.t1216
+title: Execute Code with Pester.bat

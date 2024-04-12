@@ -5,7 +5,6 @@ description: Detects deletion of Windows Volume Shadow Copies with PowerShell co
   Sodinokibi/REvil
 falsepositives:
 - Unknown
-filename: posh_ps_susp_win32_shadowcopy_deletion.yml
 level: high
 modified: 2022/12/02
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.impact
 - attack.t1490
+title: Deletion of Volume Shadow Copies via WMI with PowerShell - PS Script

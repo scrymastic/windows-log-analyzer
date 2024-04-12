@@ -3,14 +3,13 @@ date: 2022/03/01
 description: Detects the creation of a new bits job by PowerShell
 falsepositives:
 - Administrator PowerShell scripts
-filename: win_bits_client_new_job_via_powershell.yml
 level: low
 modified: 2023/03/27
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1197/T1197.md
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.persistence
 - attack.t1197
+title: New BITS Job Created Via PowerShell

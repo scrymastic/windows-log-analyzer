@@ -7,13 +7,12 @@ description: 'Detects execution of EDRSilencer, a tool that abuses the Windows F
   '
 falsepositives:
 - Unknown
-filename: win_security_hktl_edr_silencer.yml
 level: high
 modified: 2024/01/30
 references:
 - https://github.com/netero1010/EDRSilencer
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562
+title: HackTool - EDRSilencer Execution - Filter Added

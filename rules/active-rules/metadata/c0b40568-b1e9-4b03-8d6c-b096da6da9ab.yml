@@ -5,9 +5,7 @@ description: Detects execution of the AgentExecutor.exe binary. Which can be abu
   binary named "powershell.exe" located in the path provided by 6th positional argument
 falsepositives:
 - Unknown
-filename: proc_creation_win_agentexecutor_susp_usage.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/lefterispan/status/1286259016436514816
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Agentexecutor/
@@ -20,3 +18,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Suspicious AgentExecutor PowerShell Execution

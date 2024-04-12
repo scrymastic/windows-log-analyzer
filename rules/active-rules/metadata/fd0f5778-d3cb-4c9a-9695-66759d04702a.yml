@@ -4,7 +4,6 @@ description: Detects all variations of obfuscated powershell IEX invocation code
   by Invoke-Obfuscation framework from the code block linked in the references
 falsepositives:
 - Unknown
-filename: win_security_invoke_obfuscation_obfuscated_iex_services_security.yml
 level: high
 modified: 2022/11/27
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1027
+title: Invoke-Obfuscation Obfuscated IEX Invocation - Security

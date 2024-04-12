@@ -2,10 +2,7 @@ author: Nasreddine Bencherchali (Nextron Systems)
 date: 2023/05/04
 description: Detects suspicious child processes of the Veeam service process. This
   could indicate potential RCE or SQL Injection.
-falsepositives: []
-filename: proc_creation_win_mssql_veaam_susp_child_processes.yml
 level: critical
-modified: ''
 references:
 - https://labs.withsecure.com/publications/fin7-target-veeam-servers
 related:
@@ -16,3 +13,4 @@ tags:
 - attack.initial_access
 - attack.persistence
 - attack.privilege_escalation
+title: Suspicious Child Process Of Veeam Dabatase

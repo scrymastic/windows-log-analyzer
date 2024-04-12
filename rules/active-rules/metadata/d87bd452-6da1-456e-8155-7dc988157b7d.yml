@@ -4,7 +4,6 @@ description: Detects suspicious usage of the ShellExec_RunDLL function to launch
   commands as seen in the the raspberry-robin attack
 falsepositives:
 - Unknown
-filename: proc_creation_win_rundll32_susp_shellexec_execution.yml
 level: high
 modified: 2022/12/30
 references:
@@ -17,3 +16,4 @@ related:
 status: test
 tags:
 - attack.defense_evasion
+title: Suspicious Usage Of ShellExec_RunDLL

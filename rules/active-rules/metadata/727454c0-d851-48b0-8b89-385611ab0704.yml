@@ -4,13 +4,11 @@ description: Detect usage of the "unregmp2.exe" binary as a proxy to launch a cu
   version of "wmpnscfg.exe"
 falsepositives:
 - Unknown
-filename: proc_creation_win_lolbin_unregmp2.yml
 level: medium
-modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Unregmp2/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Lolbin Unregmp2.exe Use As Proxy

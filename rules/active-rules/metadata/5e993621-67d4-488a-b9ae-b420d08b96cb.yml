@@ -3,15 +3,14 @@ date: 2022/03/18
 description: Detects service installation in suspicious folder appdata
 falsepositives:
 - Unknown
-filename: win_system_susp_service_installation_folder.yml
 level: medium
 modified: 2024/01/18
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.privilege_escalation
 - car.2013-09-005
 - attack.t1543.003
+title: Service Installation in Suspicious Folder

@@ -4,7 +4,6 @@ description: Detects known sensitive file extensions accessed on a network share
 falsepositives:
 - Help Desk operator doing backup or re-imaging end user machine or backup software
 - Users working with these data types or exchanging message files
-filename: win_security_susp_raccess_sensitive_fext.yml
 level: medium
 modified: 2022/10/09
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.collection
 - attack.t1039
+title: Suspicious Access to Sensitive File Extensions

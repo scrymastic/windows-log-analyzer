@@ -4,13 +4,11 @@ description: Detects loading of diagcab packages from a remote path, as seen in 
   vulnerability
 falsepositives:
 - Legitimate package hosted on a known and authorized remote location
-filename: win_diagnosis_scripted_load_remote_diagcab.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/nas_bench/status/1539679555908141061
 - https://twitter.com/j00sean/status/1537750439701225472
-related: []
 status: test
 tags:
 - attack.execution
+title: Loading Diagcab Package From Remote Path

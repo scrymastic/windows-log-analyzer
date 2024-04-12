@@ -4,7 +4,6 @@ description: Detects a powershell download cradle using nslookup. This cradle us
   nslookup to extract payloads from DNS records.
 falsepositives:
 - Unknown
-filename: posh_pc_abuse_nslookup_with_dns_records.yml
 level: medium
 modified: 2023/10/27
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Nslookup PowerShell Download Cradle

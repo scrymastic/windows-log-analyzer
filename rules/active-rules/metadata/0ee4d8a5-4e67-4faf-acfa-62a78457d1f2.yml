@@ -3,13 +3,12 @@ date: 2021/04/12
 description: Rule to detect the Hybrid Connection Manager service installation.
 falsepositives:
 - Legitimate use of Hybrid Connection Manager via Azure function apps.
-filename: win_security_hybridconnectionmgr_svc_installation.yml
 level: high
 modified: 2022/10/09
 references:
 - https://twitter.com/Cyb3rWard0g/status/1381642789369286662
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1554
+title: HybridConnectionManager Service Installation

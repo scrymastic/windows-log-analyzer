@@ -4,7 +4,6 @@ description: Detects known WMI recon method to look for unquoted service paths u
   wmic. Often used by pentester and attacker enumeration scripts
 falsepositives:
 - Unknown
-filename: proc_creation_win_wmic_recon_unquoted_service_search.yml
 level: medium
 modified: 2023/09/11
 references:
@@ -20,3 +19,4 @@ status: experimental
 tags:
 - attack.execution
 - attack.t1047
+title: Potential Unquoted Service Path Reconnaissance Via Wmic.EXE

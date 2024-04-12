@@ -6,13 +6,12 @@ description: Detects the creation of suspicious files and folders inside the use
   exclude the AppData folder in fear of FPs
 falsepositives:
 - Unlikely
-filename: file_event_win_new_files_in_uncommon_appdata_folder.yml
 level: high
 modified: 2023/02/23
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.execution
+title: Suspicious File Creation In Uncommon AppData Folder

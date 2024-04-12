@@ -4,7 +4,6 @@ description: Detects execution of "reg.exe" to disable security services such as
   Defender.
 falsepositives:
 - Unlikely
-filename: proc_creation_win_reg_disable_sec_services.yml
 level: high
 modified: 2023/06/05
 references:
@@ -12,8 +11,8 @@ references:
 - https://github.com/gordonbay/Windows-On-Reins/blob/e587ac7a0407847865926d575e3c46f68cf7c68d/wor.ps1
 - https://vms.drweb.fr/virus/?i=24144899
 - https://bidouillesecurity.com/disable-windows-defender-in-powershell/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Security Service Disabled Via Reg.EXE

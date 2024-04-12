@@ -9,7 +9,6 @@ description: 'Detects when the "index" value of a scheduled task is modified fro
   '
 falsepositives:
 - Unlikely
-filename: registry_set_hide_scheduled_task_via_index_tamper.yml
 level: high
 modified: 2023/08/17
 references:
@@ -23,3 +22,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562
+title: Hide Schedule Task Via Index Value Tamper

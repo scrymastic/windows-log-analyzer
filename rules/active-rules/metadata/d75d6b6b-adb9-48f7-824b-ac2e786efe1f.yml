@@ -4,9 +4,7 @@ description: Detects attempts of decoding a base64 Gzip archive via PowerShell. 
   technique is often used as a method to load malicious content into memory afterward.
 falsepositives:
 - Legitimate administrative script
-filename: proc_creation_win_powershell_frombase64string_archive.yml
 level: medium
-modified: ''
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=43
 related:
@@ -16,3 +14,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1132.001
+title: Suspicious FromBase64String Usage On Gzip Archive - Process Creation

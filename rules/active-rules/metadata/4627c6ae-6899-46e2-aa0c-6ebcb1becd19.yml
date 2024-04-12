@@ -4,13 +4,12 @@ description: Detects the execution of different compiled Windows binaries of the
   toolset (based on names or part of their names - could lead to false positives)
 falsepositives:
 - Legitimate use of the impacket tools
-filename: proc_creation_win_hktl_impacket_tools.yml
 level: high
 modified: 2023/02/07
 references:
 - https://github.com/ropnop/impacket_static_binaries/releases/tag/0.9.21-dev-binaries
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1557.001
+title: HackTool - Impacket Tools Execution

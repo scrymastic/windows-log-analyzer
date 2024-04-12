@@ -4,14 +4,13 @@ description: Detects suspicious access to the "svchost" process such as that use
   by Invoke-Phantom to kill the thread of the Windows event logging service.
 falsepositives:
 - Unknown
-filename: proc_access_win_svchost_susp_access_request.yml
 level: high
 modified: 2023/01/30
 references:
 - https://github.com/hlldz/Invoke-Phant0m
 - https://twitter.com/timbmsft/status/900724491076214784
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.002
+title: Suspicious Svchost Process Access

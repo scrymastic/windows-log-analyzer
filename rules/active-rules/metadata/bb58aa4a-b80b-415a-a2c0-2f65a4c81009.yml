@@ -5,14 +5,16 @@ description: Detects a suspicious Microsoft desktopimgdownldr execution with par
 falsepositives:
 - False positives depend on scripts and administrative tools used in the monitored
   environment
-filename: proc_creation_win_desktopimgdownldr_susp_execution.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: high
 modified: 2021/11/27
 references:
 - https://labs.sentinelone.com/living-off-windows-land-a-new-native-file-downldr/
 - https://twitter.com/SBousseaden/status/1278977301745741825
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Suspicious Desktopimgdownldr Command

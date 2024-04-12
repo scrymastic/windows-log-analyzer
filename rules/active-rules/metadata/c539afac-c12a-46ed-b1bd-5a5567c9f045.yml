@@ -9,15 +9,14 @@ description: 'Detects a process that initiated a network connection over ports 5
 falsepositives:
 - Legitimate usage of remote PowerShell, e.g. remote administration and monitoring.
 - Network Service user name of a not-covered localization
-filename: net_connection_win_susp_remote_powershell_session.yml
 level: high
 modified: 2024/02/02
 references:
 - https://threathunterplaybook.com/hunts/windows/190511-RemotePwshExecution/notebook.html
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
 - attack.lateral_movement
 - attack.t1021.006
+title: Potential Remote PowerShell Session Initiated

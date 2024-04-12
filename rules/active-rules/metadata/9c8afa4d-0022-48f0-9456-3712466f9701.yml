@@ -6,7 +6,6 @@ description: 'Detects the installation of a well-known TAP driver service. This 
   '
 falsepositives:
 - Legitimate OpenVPN TAP installation
-filename: win_security_tap_driver_installation.yml
 level: low
 modified: 2022/11/29
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.exfiltration
 - attack.t1048
+title: Tap Driver Installation - Security

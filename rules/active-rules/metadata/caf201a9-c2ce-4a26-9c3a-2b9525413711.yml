@@ -4,9 +4,7 @@ description: Detects usage of the WMI class "Win32_NTEventlogFile" in a potentia
   suspicious way (delete, backup, change permissions, etc.) from a PowerShell script
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_nteventlogfile_usage.yml
 level: high
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/previous-versions/windows/desktop/legacy/aa394225(v=vs.85)
 related:
@@ -15,3 +13,4 @@ related:
 status: experimental
 tags:
 - attack.defense_evasion
+title: Potentially Suspicious Call To Win32_NTEventlogFile Class

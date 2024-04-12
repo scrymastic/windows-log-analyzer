@@ -5,7 +5,6 @@ description: Detects a suspicious process spawning from one of the Microsoft Off
   suite products (Word, Excel, PowerPoint, Publisher, Visio, etc.)
 falsepositives:
 - Unknown
-filename: proc_creation_win_office_susp_child_processes.yml
 level: high
 modified: 2023/04/24
 references:
@@ -38,3 +37,4 @@ tags:
 - attack.t1047
 - attack.t1204.002
 - attack.t1218.010
+title: Suspicious Microsoft Office Child Process

@@ -4,7 +4,6 @@ description: Detects suspicious Hangul Word Processor (Hanword) sub processes th
   could indicate an exploitation
 falsepositives:
 - Unknown
-filename: proc_creation_win_hwp_exploits.yml
 level: high
 modified: 2021/11/27
 references:
@@ -13,7 +12,6 @@ references:
 - https://twitter.com/cyberwar_15/status/1187287262054076416
 - https://blog.alyac.co.kr/1901
 - https://en.wikipedia.org/wiki/Hangul_(word_processor)
-related: []
 status: test
 tags:
 - attack.initial_access
@@ -22,3 +20,4 @@ tags:
 - attack.t1203
 - attack.t1059.003
 - attack.g0032
+title: Suspicious HWP Sub Processes

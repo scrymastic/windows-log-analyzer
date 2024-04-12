@@ -4,14 +4,12 @@ description: The "ScriptRunner.exe" binary can be abused to proxy execution thro
   it and bypass possible whitelisting
 falsepositives:
 - Legitimate use when App-v is deployed
-filename: proc_creation_win_lolbin_scriptrunner.yml
 level: medium
-modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Scriptrunner/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1218
+title: Use of Scriptrunner.exe

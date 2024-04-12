@@ -3,7 +3,6 @@ date: 2021/08/23
 description: Detects suspicious and uncommon child processes of WmiPrvSE
 falsepositives:
 - Unknown
-filename: proc_creation_win_wmiprvse_susp_child_processes.yml
 level: high
 modified: 2023/11/10
 references:
@@ -25,3 +24,4 @@ tags:
 - attack.t1047
 - attack.t1204.002
 - attack.t1218.010
+title: Suspicious WmiPrvSE Child Process

@@ -11,16 +11,15 @@ description: 'This rule detects execution of a PowerShell code through the sqlto
 falsepositives:
 - Direct PS command execution through SQLToolsPS.exe is uncommon, childprocess sqltoolsps.exe
   spawned by smss.exe is a legitimate action.
-filename: proc_creation_win_mssql_sqltoolsps_susp_execution.yml
 level: medium
 modified: 2022/02/25
 references:
 - https://github.com/LOLBAS-Project/LOLBAS/blob/8283d8d91552213ded165fd36deb6cb9534cb443/yml/OtherMSBinaries/Sqltoolsps.yml
 - https://twitter.com/pabraeken/status/993298228840992768
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
 - attack.defense_evasion
 - attack.t1127
+title: SQL Client Tools PowerShell Session Detection

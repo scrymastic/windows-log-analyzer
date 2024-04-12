@@ -7,9 +7,7 @@ description: 'Detects scriptblock text keywords indicative of potential usge of 
 falsepositives:
 - As the script block is a blob of text. False positive may occur with scripts that
   contain the keyword as a reference or simply use it for detection.
-filename: posh_ps_hktl_winpwn.yml
 level: high
-modified: ''
 references:
 - https://github.com/S3cur3Th1sSh1t/WinPwn
 - https://www.publicnow.com/view/EB87DB49C654D9B63995FAD4C9DE3D3CC4F6C3ED?1671634841
@@ -34,3 +32,4 @@ tags:
 - attack.t1552.001
 - attack.t1555
 - attack.t1555.003
+title: HackTool - WinPwn Execution - ScriptBlock

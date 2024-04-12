@@ -3,14 +3,13 @@ date: 2022/12/04
 description: Detects the execution of the PoC that can be used to exploit Sysmon CVE-2022-41120
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_sysmoneop.yml
 level: critical
 modified: 2023/02/04
 references:
 - https://github.com/Wh04m1001/SysmonEoP
-related: []
 status: test
 tags:
 - cve.2022.41120
 - attack.t1068
 - attack.privilege_escalation
+title: HackTool - SysmonEOP Execution

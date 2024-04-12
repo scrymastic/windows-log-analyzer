@@ -9,13 +9,12 @@ description: 'Detects applications trying to modify the registry in order to dis
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_reg_write_protect_for_storage_disabled.yml
 level: medium
 modified: 2024/01/18
 references:
 - https://www.manageengine.com/products/desktop-central/os-imaging-deployment/media-is-write-protected.html
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562
+title: Write Protect For Storage Disabled

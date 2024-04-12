@@ -6,13 +6,12 @@ description: 'Detects suspicious Windows Update Agent activity in which a wuaucl
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_wuauclt_no_cli_flags_execution.yml
 level: high
 modified: 2023/11/11
 references:
 - https://redcanary.com/blog/blackbyte-ransomware/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1036
+title: Suspicious Windows Update Agent Empty Cmdline

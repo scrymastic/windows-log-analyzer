@@ -4,7 +4,6 @@ description: Detects potential SquiblyTwo attack technique with possible renamed
   via Imphash and OriginalFileName fields
 falsepositives:
 - Unknown
-filename: proc_creation_win_wmic_squiblytwo_bypass.yml
 level: medium
 modified: 2023/02/15
 references:
@@ -12,7 +11,6 @@ references:
 - https://twitter.com/mattifestation/status/986280382042595328
 - https://atomicredteam.io/defense-evasion/T1220/
 - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -21,3 +19,4 @@ tags:
 - attack.execution
 - attack.t1059.005
 - attack.t1059.007
+title: Potential SquiblyTwo Technique Execution

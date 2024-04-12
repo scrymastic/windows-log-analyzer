@@ -4,15 +4,13 @@ description: Detects an appx package added the pipeline of the "to be processed"
   which is located in suspicious locations
 falsepositives:
 - Unknown
-filename: win_appxdeployment_server_susp_package_locations.yml
 level: high
-modified: ''
 references:
 - Internal Research
 - https://www.sentinelone.com/labs/inside-malicious-windows-apps-for-malware-deployment/
 - https://learn.microsoft.com/en-us/windows/win32/appxpkg/troubleshooting
 - https://news.sophos.com/en-us/2021/11/11/bazarloader-call-me-back-attack-abuses-windows-10-apps-mechanism/
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Suspicious AppX Package Locations

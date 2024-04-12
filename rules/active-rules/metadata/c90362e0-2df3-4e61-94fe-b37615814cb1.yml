@@ -7,9 +7,7 @@ description: 'Detects changes to the Netsh registry key to add a new DLL value. 
   '
 falsepositives:
 - Legitimate helper added by different programs and the OS
-filename: registry_set_netsh_helper_dll_potential_persistence.yml
 level: medium
-modified: ''
 references:
 - https://www.ired.team/offensive-security/persistence/t1128-netsh-helper-dll
 - https://pentestlab.blog/2019/10/29/persistence-netsh-helper-dll/
@@ -22,3 +20,4 @@ status: experimental
 tags:
 - attack.persistence
 - attack.t1546.007
+title: Potential Persistence Via Netsh Helper DLL - Registry

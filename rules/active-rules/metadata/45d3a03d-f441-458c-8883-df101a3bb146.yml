@@ -4,13 +4,11 @@ description: Detects the use of the 'Launch-VsDevShell.ps1' Microsoft signed scr
   to execute commands.
 falsepositives:
 - Legitimate usage of the script by a developer
-filename: proc_creation_win_lolbin_launch_vsdevshell.yml
 level: medium
-modified: ''
 references:
 - https://twitter.com/nas_bench/status/1535981653239255040
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1216.001
+title: Launch-VsDevShell.PS1 Proxy Execution

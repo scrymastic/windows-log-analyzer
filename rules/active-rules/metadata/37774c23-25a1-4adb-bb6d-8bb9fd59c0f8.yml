@@ -3,7 +3,6 @@ date: 2022/10/31
 description: Detects the image load of VSS DLL by uncommon executables
 falsepositives:
 - Unknown
-filename: image_load_dll_vssapi_susp_load.yml
 level: high
 modified: 2023/05/03
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.defense_evasion
 - attack.impact
 - attack.t1490
+title: Suspicious Volume Shadow Copy Vssapi.dll Load

@@ -4,7 +4,6 @@ description: Detects addition of users to the local Remote Desktop Users group v
   "Net" or "Add-LocalGroupMember".
 falsepositives:
 - Administrative activity
-filename: proc_creation_win_susp_add_user_remote_desktop_group.yml
 level: high
 modified: 2022/09/09
 references:
@@ -21,3 +20,4 @@ tags:
 - attack.t1133
 - attack.t1136.001
 - attack.t1021.001
+title: User Added to Remote Desktop Users Group

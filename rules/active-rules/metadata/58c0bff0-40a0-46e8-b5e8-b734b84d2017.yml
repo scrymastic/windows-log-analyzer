@@ -5,13 +5,11 @@ description: Detects when an application exports a certificate (and potentially 
 falsepositives:
 - Legitimate application requesting certificate exports will trigger this. Apply additional
   filters as needed
-filename: win_certificateservicesclient_lifecycle_system_cert_exported.yml
 level: medium
-modified: ''
 references:
 - https://www.splunk.com/en_us/blog/security/breaking-the-chain-defending-against-certificate-services-abuse.html
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1649
+title: Certificate Exported From Local Certificate Store

@@ -5,13 +5,11 @@ description: Detects usage of 7zip utilities (7z.exe, 7za.exe and 7zr.exe) to ex
 falsepositives:
 - Legitimate activity is expected since extracting files with a password can be common
   in some environment.
-filename: proc_creation_win_7zip_password_extraction.yml
 level: medium
-modified: ''
 references:
 - https://blog.cyble.com/2022/06/07/bumblebee-loader-on-the-rise/
-related: []
 status: test
 tags:
 - attack.collection
 - attack.t1560.001
+title: Password Protected Compressed File Extraction Via 7Zip

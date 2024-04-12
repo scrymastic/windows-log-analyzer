@@ -4,13 +4,12 @@ description: Detects ScreenConnect program starts that establish a remote access
   a system.
 falsepositives:
 - Legitimate use by administrative staff
-filename: proc_creation_win_remote_access_tools_screenconnect_installation_cli_param.yml
 level: medium
 modified: 2024/02/26
 references:
 - https://www.anomali.com/blog/probable-iranian-cyber-actors-static-kitten-conducting-cyberespionage-campaign-targeting-uae-and-kuwait-government-agencies
-related: []
 status: test
 tags:
 - attack.initial_access
 - attack.t1133
+title: Remote Access Tool - ScreenConnect Installation Execution

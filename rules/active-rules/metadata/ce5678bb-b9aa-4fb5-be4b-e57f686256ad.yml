@@ -6,13 +6,17 @@ falsepositives:
 - Host connections to valid domains, exclude these.
 - Host connections not using host FQDN.
 - Host connections to external legitimate domains.
-filename: win_susp_ntlm_rdp.yml
+fields:
+- Computer
+- UserName
+- DomainName
+- TargetName
 level: medium
 modified: 2021/11/27
 references:
 - n/a
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1219
+title: Potential Remote Desktop Connection to Non-Domain Host

@@ -3,15 +3,13 @@ date: 2023/10/11
 description: Detects the use of CoercedPotato, a tool for privilege escalation
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_coercedpotato.yml
 level: high
-modified: ''
 references:
 - https://github.com/hackvens/CoercedPotato
 - https://blog.hackvens.fr/articles/CoercedPotato.html
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1055
+title: HackTool - CoercedPotato Execution

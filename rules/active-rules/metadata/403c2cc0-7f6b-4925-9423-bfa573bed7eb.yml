@@ -3,7 +3,6 @@ date: 2017/03/05
 description: Detects suspicious PowerShell download command
 falsepositives:
 - PowerShell scripts that download content from the Internet
-filename: posh_ps_susp_download.yml
 level: medium
 modified: 2022/12/02
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Suspicious PowerShell Download - Powershell Script

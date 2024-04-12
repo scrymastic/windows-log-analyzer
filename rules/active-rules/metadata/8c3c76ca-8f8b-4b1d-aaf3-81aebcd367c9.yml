@@ -10,13 +10,11 @@ description: 'Adversaries may execute their own malicious payloads by hijacking 
   '
 falsepositives:
 - Unknown
-filename: file_event_win_creation_unquoted_service_path.yml
 level: high
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1574.009/T1574.009.md
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547.009
+title: Creation Exe for Service with Unquoted Path

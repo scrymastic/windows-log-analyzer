@@ -4,14 +4,15 @@ description: Exports the target Registry key and hides it in the specified alter
   data stream.
 falsepositives:
 - Unknown
-filename: create_stream_hash_regedit_export_to_ads.yml
+fields:
+- TargetFilename
 level: high
 modified: 2021/11/27
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Regedit/
 - https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1564.004
+title: Exports Registry Key To an Alternate Data Stream

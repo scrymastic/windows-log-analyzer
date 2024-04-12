@@ -3,7 +3,6 @@ date: 2023/01/11
 description: Detects a BITS transfer job downloading file(s) from a direct IP address.
 falsepositives:
 - Unknown
-filename: win_bits_client_new_transfer_via_ip_address.yml
 level: high
 modified: 2023/03/27
 references:
@@ -19,3 +18,4 @@ tags:
 - attack.defense_evasion
 - attack.persistence
 - attack.t1197
+title: BITS Transfer Job Download From Direct IP

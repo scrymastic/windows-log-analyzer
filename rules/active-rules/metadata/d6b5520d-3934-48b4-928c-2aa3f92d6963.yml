@@ -5,9 +5,7 @@ description: Detects important or interesting Windows services that got terminat
 falsepositives:
 - Rare false positives could occur since service termination could happen due to multiple
   reasons
-filename: win_system_service_terminated_error_important.yml
 level: high
-modified: ''
 references:
 - https://www.microsoft.com/en-us/security/blog/2023/04/11/guidance-for-investigating-attacks-using-cve-2022-21894-the-blacklotus-campaign/
 related:
@@ -16,3 +14,4 @@ related:
 status: test
 tags:
 - attack.defense_evasion
+title: Important Windows Service Terminated With Error

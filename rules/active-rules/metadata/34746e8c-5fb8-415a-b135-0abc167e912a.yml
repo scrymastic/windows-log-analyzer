@@ -3,9 +3,7 @@ date: 2023/05/11
 description: Detects the creation of binaries in the WinSxS folder by non-system processes
 falsepositives:
 - Unknown
-filename: file_event_win_susp_winsxs_binary_creation.yml
 level: medium
-modified: ''
 references:
 - https://media.defense.gov/2023/May/09/2003218554/-1/-1/0/JOINT_CSA_HUNTING_RU_INTEL_SNAKE_MALWARE_20230509.PDF
 related:
@@ -14,3 +12,4 @@ related:
 status: test
 tags:
 - attack.execution
+title: WinSxS Executable File Creation By Non-System Process

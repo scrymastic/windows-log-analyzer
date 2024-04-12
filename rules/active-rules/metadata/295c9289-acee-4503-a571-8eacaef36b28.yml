@@ -5,13 +5,12 @@ description: Detects the load of HackSys Extreme Vulnerable Driver which is an i
   their exploitation skills at Kernel level and often abused by threat actors
 falsepositives:
 - Unlikely
-filename: driver_load_win_vuln_hevd_driver.yml
 level: high
 modified: 2022/11/19
 references:
 - https://github.com/hacksysteam/HackSysExtremeVulnerableDriver
-related: []
 status: test
 tags:
 - attack.privilege_escalation
 - attack.t1543.003
+title: Vulnerable HackSys Extreme Vulnerable Driver Load

@@ -12,7 +12,6 @@ description: 'Detects events from the Kernel-General ETW indicating that the acc
   '
 falsepositives:
 - Unknown
-filename: win_system_susp_critical_hive_location_access_bits_cleared.yml
 level: high
 modified: 2024/01/18
 references:
@@ -24,3 +23,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1003.002
+title: Critical Hive In Suspicious Location Access Bits Cleared

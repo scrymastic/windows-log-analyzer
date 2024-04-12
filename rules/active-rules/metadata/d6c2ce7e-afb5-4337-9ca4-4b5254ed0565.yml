@@ -6,7 +6,11 @@ falsepositives:
 - Legitimate software automatically (mostly, during installation) sets up autorun
   keys for legitimate reason
 - Legitimate administrator sets up autorun keys for legitimate reason
-filename: registry_set_asep_reg_keys_modification_winsock2.yml
+fields:
+- SecurityID
+- ObjectName
+- OldValueType
+- NewValueType
 level: medium
 modified: 2023/08/17
 references:
@@ -20,3 +24,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1547.001
+title: WinSock2 Autorun Keys Modification

@@ -3,7 +3,6 @@ date: 2022/08/04
 description: Execution of plink to perform data exfiltration and tunneling
 falsepositives:
 - Unknown
-filename: proc_creation_win_plink_susp_tunneling.yml
 level: high
 modified: 2023/01/27
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1572
+title: Potential RDP Tunneling Via Plink

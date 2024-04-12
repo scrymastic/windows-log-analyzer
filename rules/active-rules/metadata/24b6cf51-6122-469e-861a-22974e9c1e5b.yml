@@ -4,16 +4,14 @@ description: Detects potential DLL sideloading of "SmadHook.dll", a DLL used by 
   antivirus
 falsepositives:
 - Unlikely
-filename: image_load_side_load_smadhook.yml
 level: high
-modified: ''
 references:
 - https://research.checkpoint.com/2023/malware-spotlight-camaro-dragons-tinynote-backdoor/
 - https://www.qurium.org/alerts/targeted-malware-against-crph/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential SmadHook.DLL Sideloading

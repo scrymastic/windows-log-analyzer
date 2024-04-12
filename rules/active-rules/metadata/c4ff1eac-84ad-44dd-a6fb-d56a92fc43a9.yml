@@ -4,15 +4,14 @@ description: Detects a ProcessHacker tool that elevated privileges to a very hig
   level
 falsepositives:
 - Unlikely
-filename: win_system_service_install_pua_proceshacker.yml
 level: high
 modified: 2022/12/25
 references:
 - https://twitter.com/1kwpeter/status/1397816101455765504
-related: []
 status: test
 tags:
 - attack.execution
 - attack.privilege_escalation
 - attack.t1543.003
 - attack.t1569.002
+title: ProcessHacker Privilege Elevation

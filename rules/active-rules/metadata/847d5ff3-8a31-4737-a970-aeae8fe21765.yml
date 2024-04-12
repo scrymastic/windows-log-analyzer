@@ -4,7 +4,6 @@ description: Detects uninstallation or termination of security products using th
   WMIC utility
 falsepositives:
 - Legitimate administration
-filename: proc_creation_win_wmic_uninstall_security_products.yml
 level: high
 modified: 2023/02/14
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Potential Tampering With Security Products Via WMIC

@@ -4,7 +4,6 @@ description: Detects the execution of "whoami.exe" by privileged accounts that a
   often abused by threat actors
 falsepositives:
 - Unknown
-filename: proc_creation_win_whoami_execution_from_high_priv_process.yml
 level: high
 modified: 2023/12/04
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.privilege_escalation
 - attack.discovery
 - attack.t1033
+title: Whoami.EXE Execution From Privileged Process

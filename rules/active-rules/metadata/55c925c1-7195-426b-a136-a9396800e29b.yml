@@ -9,7 +9,6 @@ description: 'Detects usage of the built-in PowerShell cmdlet "Enable-WindowsOpt
   '
 falsepositives:
 - Legitimate usage of the features listed in the rule.
-filename: posh_ps_enable_susp_windows_optional_feature.yml
 level: medium
 modified: 2022/12/29
 references:
@@ -22,3 +21,4 @@ related:
 status: test
 tags:
 - attack.defense_evasion
+title: Potential Suspicious Windows Feature Enabled

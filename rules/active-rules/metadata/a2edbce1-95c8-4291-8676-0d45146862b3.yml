@@ -3,15 +3,13 @@ date: 2023/05/07
 description: Detects potential DLL sideloading of "SolidPDFCreator.dll"
 falsepositives:
 - Unknown
-filename: image_load_side_load_solidpdfcreator.yml
 level: medium
-modified: ''
 references:
 - https://lab52.io/blog/new-mustang-pandas-campaing-against-australia/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential SolidPDFCreator.DLL Sideloading

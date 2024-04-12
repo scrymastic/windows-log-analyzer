@@ -4,7 +4,6 @@ description: Detects a process memory dump via "comsvcs.dll" using rundll32, cov
   multiple different techniques (ordinal, minidump function, etc.)
 falsepositives:
 - Unlikely
-filename: proc_creation_win_rundll32_process_dump_via_comsvcs.yml
 level: high
 modified: 2023/05/16
 references:
@@ -25,3 +24,4 @@ tags:
 - attack.t1036
 - attack.t1003.001
 - car.2013-05-009
+title: Process Memory Dump Via Comsvcs.DLL

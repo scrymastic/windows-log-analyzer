@@ -7,7 +7,6 @@ falsepositives:
   it is less embarrassing
 - When executed with the "-s" flag. PAExec will copy itself to the "C:\Windows\" directory
   with a different name. Usually like this "PAExec-[XXXXX]-[ComputerName]"
-filename: proc_creation_win_renamed_paexec.yml
 level: high
 modified: 2023/02/14
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1202
+title: Renamed PAExec Execution

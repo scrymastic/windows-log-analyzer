@@ -3,6 +3,13 @@ import json
 from pathlib import Path
 from evtx import PyEvtxParser
 from config import ROOT
+from colorama import Fore, Style
+
+RED = Fore.RED
+GREEN = Fore.GREEN
+YELLOW = Fore.YELLOW
+CYAN = Fore.CYAN
+RESET = Style.RESET_ALL
 
 
 class LogParser:
@@ -21,16 +28,14 @@ class LogParser:
             print(f"Error parsing log file: {e}")
             return []
         
-        events = []
+        events = {}
         for record in parser.records_json():
             data = json.loads(record["data"]).get("Event", {})
             # Only System and EventData fields are needed
             system_fields = data.get("System", {})
+            event_record_id = system_fields.get("EventRecordID")
             eventdata_fields = data.get("EventData", {})
-            events.append({
-                "System": system_fields,
-                "EventData": eventdata_fields
-            })
+            events.update({event_record_id: {"System": system_fields, "EventData": eventdata_fields}})
 
         return events
     
@@ -38,7 +43,6 @@ class LogParser:
 if __name__ == "__main__":
     log_folder = Path(ROOT, "sample-logs")
     log_parser = LogParser()
-    log_file_path = log_folder / "sideloading_wwlib_sysmon_7_1_11.evtx"
+    log_file_path = "D:\AtSchool\windows-log-analyzer\sample-logs\\UACME_59_Sysmon.evtx"
     events = log_parser.parse_log_file(log_file_path)
     print(events)
-        

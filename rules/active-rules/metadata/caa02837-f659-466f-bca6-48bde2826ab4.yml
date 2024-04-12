@@ -4,13 +4,10 @@ description: Detects potential DLL sideloading using ClassicExplorer32.dll from 
   Classic Shell software
 falsepositives:
 - Unknown
-filename: image_load_side_load_classicexplorer32.yml
 level: medium
-modified: ''
 references:
 - https://blogs.blackberry.com/en/2022/12/mustang-panda-uses-the-russian-ukrainian-war-to-attack-europe-and-asia-pacific-targets
 - https://app.any.run/tasks/6d8cabb0-dcda-44b6-8050-28d6ce281687/
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -18,3 +15,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential DLL Sideloading Via ClassicExplorer32.dll

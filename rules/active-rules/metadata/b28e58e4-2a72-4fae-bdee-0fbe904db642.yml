@@ -8,7 +8,6 @@ description: 'Detects disabling of Windows Defender Real-time Protection. As thi
 falsepositives:
 - Administrator actions (should be investigated)
 - Seen being triggered occasionally during Windows 8 Defender Updates
-filename: win_defender_real_time_protection_disabled.yml
 level: high
 modified: 2023/11/22
 references:
@@ -22,3 +21,4 @@ status: stable
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Windows Defender Real-time Protection Disabled

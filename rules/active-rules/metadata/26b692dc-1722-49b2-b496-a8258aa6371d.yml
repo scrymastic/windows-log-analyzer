@@ -3,7 +3,6 @@ date: 2022/01/25
 description: Detects keywords that could indicate clearing PowerShell history
 falsepositives:
 - Legitimate PowerShell scripts
-filename: posh_ps_clear_powershell_history.yml
 level: medium
 modified: 2022/12/02
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1070.003
+title: Clear PowerShell History - PowerShell

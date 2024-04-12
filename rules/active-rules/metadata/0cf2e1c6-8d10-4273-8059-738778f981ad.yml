@@ -4,9 +4,7 @@ description: Detects potential WerFault "ReflectDebugger" registry value abuse f
   persistence.
 falsepositives:
 - Unknown
-filename: registry_set_persistence_reflectdebugger.yml
 level: high
-modified: ''
 references:
 - https://cocomelonc.github.io/malware/2022/11/02/malware-pers-18.html
 - https://www.hexacorn.com/blog/2018/08/31/beyond-good-ol-run-key-part-85/
@@ -17,3 +15,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1036.003
+title: Potential WerFault ReflectDebugger Registry Value Abuse

@@ -4,17 +4,16 @@ description: Detects adding and using Exchange PowerShell snap-ins to export mai
   data. As seen used by HAFNIUM and APT27
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_snapins_hafnium.yml
 level: high
 modified: 2023/03/24
 references:
 - https://www.volexity.com/blog/2021/03/02/active-exploitation-of-microsoft-exchange-zero-day-vulnerabilities/
 - https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/
 - https://www.intrinsec.com/apt27-analysis/
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
 - attack.collection
 - attack.t1114
+title: Exchange PowerShell Snap-Ins Usage

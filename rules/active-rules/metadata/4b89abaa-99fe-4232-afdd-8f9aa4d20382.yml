@@ -6,7 +6,6 @@ description: 'Detects programs that connect to known malware callback ports base
   '
 falsepositives:
 - Unknown
-filename: net_connection_win_susp_malware_callback_port.yml
 level: high
 modified: 2024/03/12
 references:
@@ -19,3 +18,4 @@ tags:
 - attack.persistence
 - attack.command_and_control
 - attack.t1571
+title: Potentially Suspicious Malware Callback Communication

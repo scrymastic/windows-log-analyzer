@@ -9,13 +9,12 @@ description: 'Adversaries may search for common password storage locations to ob
   '
 falsepositives:
 - Unknown
-filename: posh_ps_dump_password_windows_credential_manager.yml
 level: medium
 modified: 2022/12/25
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1555/T1555.md
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1555
+title: Dump Credentials from Windows Credential Manager With PowerShell

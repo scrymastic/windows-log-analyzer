@@ -5,9 +5,7 @@ description: Detects execution of "odbcconf" with the "INSTALLDRIVER" action whe
   method.
 falsepositives:
 - Unlikely
-filename: proc_creation_win_odbcconf_driver_install_susp.yml
 level: high
-modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Odbcconf/
 - https://web.archive.org/web/20191023232753/https://twitter.com/Hexacorn/status/1187143326673330176
@@ -19,3 +17,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.008
+title: Suspicious Driver/DLL Installation Via Odbcconf.EXE

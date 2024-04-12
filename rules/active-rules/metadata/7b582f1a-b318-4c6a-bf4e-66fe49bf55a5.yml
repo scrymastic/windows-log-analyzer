@@ -8,7 +8,6 @@ description: 'Detects potentially suspicious child processes launched via the Sc
 falsepositives:
 - If the script being executed make use of any of the utilities mentioned in the detection
   then they should filtered out or allowed.
-filename: proc_creation_win_remote_access_tools_screenconnect_remote_execution_susp.yml
 level: medium
 modified: 2024/02/28
 references:
@@ -23,3 +22,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1219
+title: Remote Access Tool - ScreenConnect Potential Suspicious Remote Command Execution

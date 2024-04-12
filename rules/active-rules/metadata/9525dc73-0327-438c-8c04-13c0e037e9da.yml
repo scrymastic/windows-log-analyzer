@@ -5,9 +5,7 @@ description: Detects execution of regsvr32 where the DLL is located in a potenti
 falsepositives:
 - Some installers might execute "regsvr32" with DLLs located in %TEMP% or in %PROGRAMDATA%.
   Apply additional filters if necessary.
-filename: proc_creation_win_regsvr32_susp_exec_path_1.yml
 level: medium
-modified: ''
 references:
 - https://web.archive.org/web/20171001085340/https://subt0x10.blogspot.com/2017/04/bypass-application-whitelisting-script.html
 - https://app.any.run/tasks/34221348-072d-4b70-93f3-aa71f6ebecad/
@@ -18,3 +16,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.010
+title: Regsvr32 Execution From Potential Suspicious Location

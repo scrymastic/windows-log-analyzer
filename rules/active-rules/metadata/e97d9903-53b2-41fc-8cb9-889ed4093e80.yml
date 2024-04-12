@@ -4,13 +4,12 @@ description: Detects service creation from KrbRelayUp tool used for privilege es
   in Windows domain environments where LDAP signing is not enforced (the default settings)
 falsepositives:
 - Unknown
-filename: win_system_krbrelayup_service_installation.yml
 level: high
 modified: 2022/10/05
 references:
 - https://github.com/Dec0ne/KrbRelayUp
-related: []
 status: test
 tags:
 - attack.privilege_escalation
 - attack.t1543
+title: KrbRelayUp Service Installation

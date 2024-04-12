@@ -12,9 +12,7 @@ description: 'Detects the creation of Self Extraction Directive files (.sed) in 
   '
 falsepositives:
 - Unknown
-filename: file_event_win_sed_file_creation.yml
 level: medium
-modified: ''
 references:
 - https://strontic.github.io/xcyclopedia/library/iexpress.exe-D594B2A33EFAFD0EABF09E3FDC05FCEA.html
 - https://en.wikipedia.org/wiki/IExpress
@@ -26,3 +24,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Self Extraction Directive File Created In Potentially Suspicious Location

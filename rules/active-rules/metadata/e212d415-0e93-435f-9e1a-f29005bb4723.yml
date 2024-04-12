@@ -4,7 +4,6 @@ description: Detects a suspicious child process spawning from Outlook where the 
   is located in a remote location (SMB/WebDav shares).
 falsepositives:
 - Unknown
-filename: proc_creation_win_office_outlook_susp_child_processes_remote.yml
 level: high
 modified: 2023/02/09
 references:
@@ -19,3 +18,4 @@ tags:
 - attack.execution
 - attack.t1059
 - attack.t1202
+title: Suspicious Remote Child Process From Outlook

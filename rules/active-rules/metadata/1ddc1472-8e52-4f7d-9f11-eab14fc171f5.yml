@@ -4,7 +4,6 @@ description: A General detection for specific decompress commands in PowerShell 
   This could be an adversary decompressing files.
 falsepositives:
 - Unknown
-filename: posh_pm_decompress_commands.yml
 level: informational
 modified: 2022/12/25
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1140
+title: PowerShell Decompress Commands

@@ -4,14 +4,12 @@ description: Detects the execution of CustomShellHost binary where the child isn
   located in 'C:\Windows\explorer.exe'
 falsepositives:
 - Unknown
-filename: proc_creation_win_lolbin_customshellhost.yml
 level: medium
-modified: ''
 references:
 - https://github.com/LOLBAS-Project/LOLBAS/pull/180
 - https://lolbas-project.github.io/lolbas/Binaries/CustomShellHost/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1216
+title: Suspicious CustomShellHost Execution

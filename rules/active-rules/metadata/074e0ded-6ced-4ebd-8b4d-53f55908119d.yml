@@ -4,13 +4,12 @@ description: Detects execution of attacker-controlled WsmPty.xsl or WsmTxt.xsl v
   winrm.vbs and copied cscript.exe (can be renamed)
 falsepositives:
 - Unlikely
-filename: proc_creation_win_winrm_awl_bypass.yml
 level: medium
 modified: 2022/10/09
 references:
 - https://posts.specterops.io/application-whitelisting-bypass-and-arbitrary-unsigned-code-execution-technique-in-winrm-vbs-c8c24fb40404
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1216
+title: AWL Bypass with Winrm.vbs and Malicious WsmPty.xsl/WsmTxt.xsl

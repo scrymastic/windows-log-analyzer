@@ -5,7 +5,6 @@ description: Detects the usage of "reg.exe" in order to dump sensitive registry 
   This includes SAM, SYSTEM and SECURITY hives.
 falsepositives:
 - Dumping hives for legitimate purpouse i.e. backup or forensic investigation
-filename: proc_creation_win_reg_dumping_sensitive_hives.yml
 level: high
 modified: 2023/12/13
 references:
@@ -26,3 +25,4 @@ tags:
 - attack.t1003.004
 - attack.t1003.005
 - car.2013-07-001
+title: Dumping of Sensitive Hives Via Reg.EXE

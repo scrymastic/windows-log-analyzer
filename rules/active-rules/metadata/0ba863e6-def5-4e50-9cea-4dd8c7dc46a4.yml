@@ -3,12 +3,10 @@ date: 2020/06/22
 description: Detects the malicious use of a control panel item
 falsepositives:
 - Unknown
-filename: proc_creation_win_control_panel_item.yml
 level: high
 modified: 2023/10/11
 references:
 - https://ired.team/offensive-security/code-execution/code-execution-through-control-panel-add-ins
-related: []
 status: test
 tags:
 - attack.execution
@@ -16,3 +14,4 @@ tags:
 - attack.t1218.002
 - attack.persistence
 - attack.t1546
+title: Control Panel Items

@@ -4,7 +4,6 @@ description: Detects the execution of AdvancedRun utility in the context of the 
   SYSTEM, Local Service or Network Service accounts
 falsepositives:
 - Unknown
-filename: proc_creation_win_pua_advancedrun_priv_user.yml
 level: high
 modified: 2023/02/21
 references:
@@ -20,3 +19,4 @@ tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1134.002
+title: PUA - AdvancedRun Suspicious Execution

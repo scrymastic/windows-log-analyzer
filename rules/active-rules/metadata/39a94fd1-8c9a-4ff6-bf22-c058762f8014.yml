@@ -5,13 +5,16 @@ description: Detects anyone attempting a backup for the DPAPI Master Key. This e
 falsepositives:
 - If a computer is a member of a domain, DPAPI has a backup mechanism to allow unprotection
   of the data. Which will trigger this event.
-filename: win_security_dpapi_domain_masterkey_backup_attempt.yml
+fields:
+- ComputerName
+- SubjectDomainName
+- SubjectUserName
 level: medium
 modified: 2023/03/15
 references:
 - https://threathunterplaybook.com/hunts/windows/190620-DomainDPAPIBackupKeyExtraction/notebook.html
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1003.004
+title: DPAPI Domain Master Key Backup Attempt

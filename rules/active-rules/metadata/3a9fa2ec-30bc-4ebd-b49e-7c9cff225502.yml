@@ -5,7 +5,6 @@ description: Detects the creation or modification of a vscode related powershell
   persistence
 falsepositives:
 - Legitimate use of the profile by developers or administrators
-filename: file_event_win_susp_vscode_powershell_profile.yml
 level: medium
 modified: 2023/01/06
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.t1546.013
+title: VsCode Powershell Profile Modification

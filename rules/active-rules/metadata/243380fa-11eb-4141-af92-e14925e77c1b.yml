@@ -4,7 +4,6 @@ description: Detects changes to the PSFactory COM InProcServer32 registry. This 
   was used by RomCom to create persistence storing a malicious DLL.
 falsepositives:
 - Unknown
-filename: registry_set_persistence_comhijack_psfactorybuffer.yml
 level: high
 modified: 2023/08/17
 references:
@@ -12,8 +11,8 @@ references:
 - https://strontic.github.io/xcyclopedia/library/clsid_C90250F3-4D7D-4991-9B69-A5C5BC1C2AE6.html
 - https://www.virustotal.com/gui/file/6d3ab9e729bb03ae8ae3fcd824474c5052a165de6cb4c27334969a542c7b261d/detection
 - https://www.trendmicro.com/en_us/research/23/e/void-rabisu-s-use-of-romcom-backdoor-shows-a-growing-shift-in-th.html
-related: []
 status: experimental
 tags:
 - attack.persistence
 - attack.t1546.015
+title: Potential PSFactoryBuffer COM Hijacking

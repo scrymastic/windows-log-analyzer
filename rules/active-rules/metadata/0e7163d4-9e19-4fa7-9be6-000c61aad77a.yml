@@ -4,7 +4,6 @@ description: Detects the creation of a named pipe matching a pattern used by Cob
   Malleable C2 profiles
 falsepositives:
 - Unknown
-filename: pipe_created_hktl_cobaltstrike_re.yml
 level: critical
 modified: 2022/12/31
 references:
@@ -20,3 +19,4 @@ tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1055
+title: CobaltStrike Named Pipe Pattern Regex

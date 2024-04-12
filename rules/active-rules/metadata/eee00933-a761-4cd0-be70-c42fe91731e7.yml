@@ -4,13 +4,12 @@ description: Detects execution of GfxDownloadWrapper.exe with a URL as an argume
   to download file.
 falsepositives:
 - Unknown
-filename: proc_creation_win_gfxdownloadwrapper_arbitrary_file_download.yml
 level: medium
 modified: 2023/10/18
 references:
 - https://lolbas-project.github.io/lolbas/HonorableMentions/GfxDownloadWrapper/
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Arbitrary File Download Via GfxDownloadWrapper.EXE

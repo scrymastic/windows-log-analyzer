@@ -4,7 +4,6 @@ description: Detects the execution of a renamed version of the "Mavinject" proce
   Which can be abused to perform process injection using the "/INJECTRUNNING" flag
 falsepositives:
 - Unlikely
-filename: proc_creation_win_renamed_mavinject.yml
 level: high
 modified: 2023/02/03
 references:
@@ -16,10 +15,10 @@ references:
 - https://twitter.com/Hexacorn/status/776122138063409152
 - https://github.com/SigmaHQ/sigma/issues/3742
 - https://github.com/keyboardcrunch/SentinelOne-ATTACK-Queries/blob/6a228d23eefe963ca81f2d52f94b815f61ef5ee0/Tactics/DefenseEvasion.md#t1055-process-injection
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1055.001
 - attack.t1218.013
+title: Renamed Mavinject.EXE Execution

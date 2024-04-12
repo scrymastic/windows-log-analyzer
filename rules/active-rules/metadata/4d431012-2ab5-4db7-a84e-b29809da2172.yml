@@ -4,13 +4,11 @@ description: Detects enabling of the "AllowAnonymousCallback" registry value, wh
   allows a remote connection between computers that do not have a trust relationship.
 falsepositives:
 - Administrative activity
-filename: registry_set_enable_anonymous_connection.yml
 level: medium
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Enable Remote Connection Between Anonymous Computer - AllowAnonymousCallback

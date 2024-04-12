@@ -4,13 +4,12 @@ description: Detects command line parameters or strings often used by crypto min
 falsepositives:
 - Legitimate use of crypto miners
 - Some build frameworks
-filename: proc_creation_win_susp_crypto_mining_monero.yml
 level: high
 modified: 2023/02/13
 references:
 - https://www.poolwatch.io/coin/monero
-related: []
 status: stable
 tags:
 - attack.impact
 - attack.t1496
+title: Potential Crypto Mining Activity

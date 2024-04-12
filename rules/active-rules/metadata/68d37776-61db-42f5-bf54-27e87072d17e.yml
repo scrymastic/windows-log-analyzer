@@ -4,13 +4,12 @@ description: Detects the use of NPS, a port forwarding and intranet penetration 
   server
 falsepositives:
 - Legitimate use
-filename: proc_creation_win_pua_nps.yml
 level: high
 modified: 2023/02/04
 references:
 - https://github.com/ehang-io/nps
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1090
+title: PUA - NPS Tunneling Tool Execution

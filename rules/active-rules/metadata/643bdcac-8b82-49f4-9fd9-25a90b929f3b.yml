@@ -5,13 +5,12 @@ description: Detects the execution of a renamed MegaSync.exe as seen used by ran
 falsepositives:
 - Software that illegally integrates MegaSync in a renamed form
 - Administrators that have renamed MegaSync
-filename: proc_creation_win_renamed_megasync.yml
 level: high
 modified: 2023/02/03
 references:
 - https://redcanary.com/blog/rclone-mega-extortion/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Renamed MegaSync Execution

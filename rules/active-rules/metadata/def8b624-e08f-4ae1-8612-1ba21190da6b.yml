@@ -3,14 +3,12 @@ date: 2022/04/06
 description: Detects logon events that specify new credentials
 falsepositives:
 - Legitimate remote administration activity
-filename: win_security_susp_logon_newcredentials.yml
 level: low
-modified: ''
 references:
 - https://go.recordedfuture.com/hubfs/reports/mtp-2021-0914.pdf
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.lateral_movement
 - attack.t1550
+title: Outgoing Logon with New Credentials

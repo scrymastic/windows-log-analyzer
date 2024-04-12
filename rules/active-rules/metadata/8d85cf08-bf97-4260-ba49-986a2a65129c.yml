@@ -3,14 +3,13 @@ date: 2022/03/17
 description: Detects potential PowerShell commands or code within registry run keys
 falsepositives:
 - Legitimate admin or third party scripts. Baseline according to your environment
-filename: registry_set_powershell_in_run_keys.yml
 level: medium
 modified: 2023/08/17
 references:
 - https://github.com/frack113/atomic-red-team/blob/a9051c38de8a5320b31c7039efcbd3b56cf2d65a/atomics/T1547.001/T1547.001.md#atomic-test-9---systembc-malware-as-a-service-registry
 - https://www.trendmicro.com/en_us/research/22/j/lv-ransomware-exploits-proxyshell-in-attack.html
-related: []
 status: experimental
 tags:
 - attack.persistence
 - attack.t1547.001
+title: Suspicious Powershell In Registry Run Keys

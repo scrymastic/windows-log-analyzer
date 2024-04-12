@@ -5,13 +5,12 @@ description: Detects command line parameters used by ADCSPwn, a tool to escalate
   relaying to the certificate service
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_adcspwn.yml
 level: high
 modified: 2023/02/04
 references:
 - https://github.com/bats3c/ADCSPwn
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1557.001
+title: HackTool - ADCSPwn Execution

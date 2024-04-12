@@ -6,7 +6,6 @@ description: Detects suspicious powershell execution via a schedule task where t
   "Get-Variable" technique as seen being used in Colibri Loader
 falsepositives:
 - Unknown
-filename: proc_creation_win_schtasks_powershell_persistence.yml
 level: high
 modified: 2023/02/03
 references:
@@ -20,3 +19,4 @@ tags:
 - attack.persistence
 - attack.t1053.005
 - attack.t1059.001
+title: Potential Persistence Via Powershell Search Order Hijacking - Task

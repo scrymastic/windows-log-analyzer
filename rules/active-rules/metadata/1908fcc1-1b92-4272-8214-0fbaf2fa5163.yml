@@ -5,15 +5,13 @@ description: "Detects creation of a malicious DLL file in the location where the
   \ dropped malicious DLL file (\u201Ciphlpapi.dll\u201D) is sideloaded\n"
 falsepositives:
 - Unknown
-filename: file_event_win_iphlpapi_dll_sideloading.yml
 level: high
-modified: ''
 references:
 - https://blog.cyble.com/2022/07/27/targeted-attacks-being-carried-out-via-dll-sideloading/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.defense_evasion
 - attack.t1574.002
+title: Malicious DLL File Dropped in the Teams or OneDrive Folder

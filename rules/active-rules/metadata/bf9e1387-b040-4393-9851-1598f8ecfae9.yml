@@ -3,13 +3,12 @@ date: 2021/08/04
 description: Detects disabling Windows Defender Exploit Guard Network Protection
 falsepositives:
 - Unknown
-filename: registry_set_disabled_exploit_guard_net_protection_on_ms_defender.yml
 level: medium
 modified: 2023/08/17
 references:
 - https://www.tenforums.com/tutorials/105533-enable-disable-windows-defender-exploit-protection-settings.html
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Disable Exploit Guard Network Protection on Windows Defender

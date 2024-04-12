@@ -13,14 +13,13 @@ description: 'Detects potential network sniffing via use of network tools such a
   '
 falsepositives:
 - Legitimate administration activity to troubleshoot network issues
-filename: proc_creation_win_susp_network_sniffing.yml
 level: medium
 modified: 2023/02/20
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1040/T1040.md
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.discovery
 - attack.t1040
+title: Potential Network Sniffing Activity Using Network Tools

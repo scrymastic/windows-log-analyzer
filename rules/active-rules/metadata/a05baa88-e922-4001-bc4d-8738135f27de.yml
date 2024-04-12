@@ -4,14 +4,12 @@ description: Detects creation of the Process Monitor driver by processes other t
   Process Monitor (procmon) itself.
 falsepositives:
 - Some false positives may occur with legitimate renamed process monitor binaries
-filename: file_event_win_sysinternals_procmon_driver_susp_creation.yml
 level: medium
-modified: ''
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.t1068
+title: Process Monitor Driver Creation By Non-Sysinternals Binary

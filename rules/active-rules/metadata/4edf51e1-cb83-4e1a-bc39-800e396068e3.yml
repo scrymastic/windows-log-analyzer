@@ -3,7 +3,6 @@ date: 2020/10/13
 description: Detects Obfuscated use of Clip.exe to execute PowerShell
 falsepositives:
 - Unknown
-filename: win_security_invoke_obfuscation_clip_services_security.yml
 level: high
 modified: 2022/11/27
 references:
@@ -17,3 +16,4 @@ tags:
 - attack.t1027
 - attack.execution
 - attack.t1059.001
+title: Invoke-Obfuscation CLIP+ Launcher - Security

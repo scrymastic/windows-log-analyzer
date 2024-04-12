@@ -14,14 +14,12 @@ description: 'Detects the execution of an AnyDesk binary with a version prior to
   '
 falsepositives:
 - Unlikely
-filename: proc_creation_win_remote_access_tools_anydesk_revoked_cert.yml
 level: medium
-modified: ''
 references:
 - https://www.bleepingcomputer.com/news/security/anydesk-says-hackers-breached-its-production-servers-reset-passwords/
 - https://anydesk.com/en/changelog/windows
-related: []
 status: experimental
 tags:
 - attack.execution
 - attack.initial_access
+title: Remote Access Tool - AnyDesk Execution With Known Revoked Signing Certificate

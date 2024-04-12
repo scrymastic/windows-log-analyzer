@@ -6,12 +6,11 @@ description: Detects modification to the "Default" value of the "MyComputer" key
 falsepositives:
 - Unlikely but if you experience FPs add specific processes and locations you would
   like to monitor for
-filename: registry_set_persistence_mycomputer.yml
 level: high
 modified: 2024/01/11
 references:
 - https://www.hexacorn.com/blog/2017/01/18/beyond-good-ol-run-key-part-55/
-related: []
 status: experimental
 tags:
 - attack.persistence
+title: Potential Persistence Via MyComputer Registry Keys

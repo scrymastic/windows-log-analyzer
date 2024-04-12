@@ -3,14 +3,13 @@ date: 2022/03/21
 description: Detects installation or execution of services
 falsepositives:
 - Unknown
-filename: win_system_service_install_hacktools.yml
 level: high
 modified: 2023/08/07
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1569.002
 - attack.s0029
+title: HackTool Service Registration or Execution

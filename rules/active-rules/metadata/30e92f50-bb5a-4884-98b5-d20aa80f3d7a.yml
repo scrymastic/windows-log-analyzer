@@ -4,13 +4,11 @@ description: Detects events that appear when a user click on a link file with a 
   command in it
 falsepositives:
 - Legitimate commands in .lnk files
-filename: proc_creation_win_susp_embed_exe_lnk.yml
 level: medium
-modified: ''
 references:
 - https://www.x86matthew.com/view_post?id=embed_exe_lnk
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Hidden Powershell in Link File Pattern

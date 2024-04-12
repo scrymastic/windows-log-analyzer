@@ -4,9 +4,7 @@ description: Detects attempts to remove Windows Defender configurations using th
   'MpPreference' cmdlet
 falsepositives:
 - Legitimate PowerShell scripts
-filename: proc_creation_win_powershell_remove_mppreference.yml
 level: high
-modified: ''
 references:
 - https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/windows-10-controlled-folder-access-event-search/ba-p/2326088
 related:
@@ -16,3 +14,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Tamper Windows Defender Remove-MpPreference

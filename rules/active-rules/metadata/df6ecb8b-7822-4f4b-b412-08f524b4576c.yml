@@ -8,7 +8,6 @@ description: 'Detects the creation of system DLLs that are usually not present o
   '
 falsepositives:
 - Unknown
-filename: file_event_win_create_non_existent_dlls.yml
 level: medium
 modified: 2024/01/10
 references:
@@ -28,3 +27,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Creation Of Non-Existent System DLL

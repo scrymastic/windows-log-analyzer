@@ -3,7 +3,6 @@ date: 2021/05/18
 description: Detects Cmdlet names from PowerView of the PowerSploit exploitation framework.
 falsepositives:
 - Unknown
-filename: posh_ps_powerview_malicious_commandlets.yml
 level: high
 modified: 2023/11/22
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: PowerView PowerShell Cmdlets - ScriptBlock

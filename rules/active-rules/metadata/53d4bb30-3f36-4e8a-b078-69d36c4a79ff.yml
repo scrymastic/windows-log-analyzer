@@ -4,13 +4,12 @@ description: Detects the execution of Xwizard tool with specific arguments which
   to run custom class properties.
 falsepositives:
 - Unknown
-filename: proc_creation_win_lolbin_class_exec_xwizard.yml
 level: medium
 modified: 2021/11/27
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Xwizard/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Custom Class Execution via Xwizard

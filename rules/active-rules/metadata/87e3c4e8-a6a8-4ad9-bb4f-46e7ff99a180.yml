@@ -4,7 +4,6 @@ description: Detects changing the PowerShell script execution policy to a potent
   insecure level using the "-ExecutionPolicy" flag.
 falsepositives:
 - Administrator scripts
-filename: proc_creation_win_powershell_set_policies_to_unsecure_level.yml
 level: medium
 modified: 2023/12/13
 references:
@@ -23,3 +22,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Change PowerShell Policies to an Insecure Level

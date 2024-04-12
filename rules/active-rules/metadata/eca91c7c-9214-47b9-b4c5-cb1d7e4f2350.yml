@@ -7,7 +7,6 @@ description: 'Detects uncommon outbound network activity via Kerberos default po
 falsepositives:
 - Web Browsers and third party application might generate similar activity. An initial
   baseline is required.
-filename: win_security_susp_outbound_kerberos_connection.yml
 level: medium
 modified: 2024/03/15
 references:
@@ -19,3 +18,4 @@ status: test
 tags:
 - attack.lateral_movement
 - attack.t1558.003
+title: Uncommon Outbound Kerberos Connection - Security

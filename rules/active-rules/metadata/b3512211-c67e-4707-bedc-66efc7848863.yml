@@ -4,7 +4,6 @@ description: Detects PowerShell downgrade attack by comparing the host versions 
   the actually used engine version 2.0
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_downgrade_attack.yml
 level: medium
 modified: 2023/01/04
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1059.001
+title: Potential PowerShell Downgrade Attack

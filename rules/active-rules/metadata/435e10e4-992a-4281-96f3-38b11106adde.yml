@@ -5,7 +5,6 @@ description: Detects usage of the Get-ADComputer cmdlet to collect computer info
 falsepositives:
 - Legitimate admin scripts may use the same technique, it's better to exclude specific
   computers or users who execute these commands or scripts often
-filename: proc_creation_win_powershell_computer_discovery_get_adcomputer.yml
 level: medium
 modified: 2022/11/17
 references:
@@ -19,3 +18,4 @@ status: test
 tags:
 - attack.discovery
 - attack.t1033
+title: Computer Discovery And Export Via Get-ADComputer Cmdlet

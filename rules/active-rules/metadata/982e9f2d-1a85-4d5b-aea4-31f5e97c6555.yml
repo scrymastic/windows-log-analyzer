@@ -8,7 +8,6 @@ description: 'Detects "svchost.exe" spawning "rundll32.exe" with command argumen
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_rundll32_webdav_client_susp_execution.yml
 level: high
 modified: 2023/09/18
 references:
@@ -17,9 +16,9 @@ references:
 - https://www.pwndefend.com/2023/03/15/the-long-game-persistent-hash-theft/
 - https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2023/03/Figure-7-sample-webdav-process-create-event.png
 - https://www.microsoft.com/en-us/security/blog/2023/03/24/guidance-for-investigating-attacks-using-cve-2023-23397/
-related: []
 status: experimental
 tags:
 - attack.exfiltration
 - attack.t1048.003
 - cve.2023.23397
+title: Suspicious WebDav Client Execution Via Rundll32.EXE

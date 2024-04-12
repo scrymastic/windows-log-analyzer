@@ -12,13 +12,12 @@ description: 'Adversaries may search local file systems and remote file shares f
   '
 falsepositives:
 - Unknown
-filename: posh_ps_susp_extracting.yml
 level: medium
 modified: 2022/12/25
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1552.001/T1552.001.md
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1552.001
+title: Extracting Information with PowerShell

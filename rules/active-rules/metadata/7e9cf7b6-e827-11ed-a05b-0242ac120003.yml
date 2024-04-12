@@ -8,7 +8,6 @@ falsepositives:
 - Legitimate applications communicating with the "googleapis.com" endpoints that are
   not already in the exclusion list. This is environmental dependent and requires
   further testing and tuning.
-filename: net_connection_win_susp_google_api_non_browser_access.yml
 level: medium
 modified: 2023/11/03
 references:
@@ -17,8 +16,8 @@ references:
 - https://services.google.com/fh/files/blogs/gcat_threathorizons_full_apr2023.pdf
 - https://www.tanium.com/blog/apt41-deploys-google-gc2-for-attacks-cyber-threat-intelligence-roundup/
 - https://www.bleepingcomputer.com/news/security/hackers-abuse-google-command-and-control-red-team-tool-in-attacks/
-related: []
 status: experimental
 tags:
 - attack.command_and_control
 - attack.t1102
+title: Suspicious Non-Browser Network Communication With Google API

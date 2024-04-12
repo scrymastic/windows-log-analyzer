@@ -3,7 +3,6 @@ date: 2022/12/06
 description: Detects suspicious changes to the Windows Defender configuration
 falsepositives:
 - Administrator activity (must be investigated)
-filename: win_defender_suspicious_features_tampering.yml
 level: high
 modified: 2023/11/24
 references:
@@ -20,3 +19,4 @@ status: stable
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Windows Defender Configuration Changes

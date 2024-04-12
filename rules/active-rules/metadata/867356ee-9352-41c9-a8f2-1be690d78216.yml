@@ -4,7 +4,6 @@ description: Detects regsvr32 execution to download/install/register new DLLs th
   are hosted on Web or FTP servers.
 falsepositives:
 - Unknown
-filename: proc_creation_win_regsvr32_network_pattern.yml
 level: medium
 modified: 2023/05/26
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.010
+title: Potentially Suspicious Regsvr32 HTTP/FTP Pattern

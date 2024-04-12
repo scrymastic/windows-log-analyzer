@@ -4,14 +4,12 @@ description: Detects default CSExec service filename which indicates CSExec serv
   installation and execution
 falsepositives:
 - Unknown
-filename: file_event_win_csexec_service.yml
 level: medium
-modified: ''
 references:
 - https://github.com/malcomvetter/CSExec
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1569.002
 - attack.s0029
+title: CSExec Service File Creation

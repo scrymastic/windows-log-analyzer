@@ -3,7 +3,6 @@ date: 2022/03/18
 description: Detects suspicious service installation commands
 falsepositives:
 - Unknown
-filename: win_system_service_install_susp.yml
 level: high
 modified: 2023/12/04
 references:
@@ -19,3 +18,4 @@ tags:
 - attack.privilege_escalation
 - car.2013-09-005
 - attack.t1543.003
+title: Suspicious Service Installation

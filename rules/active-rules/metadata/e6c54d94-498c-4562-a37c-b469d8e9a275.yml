@@ -5,7 +5,6 @@ description: Detects suspicious PowerShell download patterns that are often used
   strings case-insensitive)
 falsepositives:
 - Software installers that pull packages from remote systems and execute them
-filename: proc_creation_win_powershell_susp_download_patterns.yml
 level: high
 modified: 2022/03/01
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Suspicious PowerShell Download and Execute Pattern

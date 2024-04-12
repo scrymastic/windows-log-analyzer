@@ -3,13 +3,12 @@ date: 2021/08/23
 description: Detects suspicious Splwow64.exe process without any command line parameters
 falsepositives:
 - Unknown
-filename: proc_creation_win_splwow64_cli_anomaly.yml
 level: high
 modified: 2022/12/25
 references:
 - https://twitter.com/sbousseaden/status/1429401053229891590?s=12
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1202
+title: Suspicious Splwow64 Without Params

@@ -5,16 +5,15 @@ description: Detects the installation of a Callout DLL via CalloutDlls and Callo
   server (restart required)
 falsepositives:
 - Unknown
-filename: registry_set_dhcp_calloutdll.yml
 level: high
 modified: 2023/08/17
 references:
 - https://blog.3or.de/mimilib-dhcp-server-callout-dll-injection.html
 - https://technet.microsoft.com/en-us/library/cc726884(v=ws.10).aspx
 - https://msdn.microsoft.com/de-de/library/windows/desktop/aa363389(v=vs.85).aspx
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1574.002
 - attack.t1112
+title: DHCP Callout DLL Installation

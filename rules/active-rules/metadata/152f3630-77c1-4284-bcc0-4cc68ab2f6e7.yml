@@ -5,7 +5,6 @@ description: Detects the shell open key manipulation (exefile and ms-settings) u
   slui.exe via registry keys (e.g. UACMe 33 or 62)
 falsepositives:
 - Unknown
-filename: registry_event_shell_open_keys_manipulation.yml
 level: high
 modified: 2022/01/13
 references:
@@ -13,10 +12,10 @@ references:
 - https://winscripting.blog/2017/05/12/first-entry-welcome-and-uac-bypass/
 - https://github.com/RhinoSecurityLabs/Aggressor-Scripts/tree/master/UACBypass
 - https://tria.ge/211119-gs7rtshcfr/behavioral2 [Lokibot sample from Nov 2021]
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1548.002
 - attack.t1546.001
+title: Shell Open Registry Keys Manipulation

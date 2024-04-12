@@ -6,13 +6,12 @@ description: 'Detects the creation of a user with the "$" character. This can be
   '
 falsepositives:
 - Unknown
-filename: win_security_new_or_renamed_user_account_with_dollar_sign.yml
 level: medium
 modified: 2024/01/16
 references:
 - https://twitter.com/SBousseaden/status/1387743867663958021
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1036
+title: New or Renamed User Account with '$' Character

@@ -9,14 +9,13 @@ description: 'Detects file access requests to the Windows Credential History Fil
   '
 falsepositives:
 - Unknown
-filename: file_access_win_susp_cred_hist_access.yml
 level: medium
 modified: 2023/12/18
 references:
 - https://tools.thehacker.recipes/mimikatz/modules/dpapi/credhist
 - https://www.passcape.com/windows_password_recovery_dpapi_credhist
-related: []
 status: experimental
 tags:
 - attack.credential_access
 - attack.t1555.004
+title: Access To Windows Credential History File By Uncommon Application

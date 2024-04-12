@@ -6,7 +6,6 @@ description: Detects PowerShell scripts attempting to disable scheduled scanning
 falsepositives:
 - Legitimate PowerShell scripts that disable Windows Defender for troubleshooting
   purposes. Must be investigated.
-filename: posh_ps_tamper_windows_defender_set_mp.yml
 level: high
 modified: 2024/01/02
 references:
@@ -20,3 +19,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Tamper Windows Defender - ScriptBlockLogging

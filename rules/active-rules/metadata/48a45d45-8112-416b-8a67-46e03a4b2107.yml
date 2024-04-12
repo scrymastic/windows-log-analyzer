@@ -9,13 +9,11 @@ description: 'Adversaries may interrupt availability of system and network resou
   '
 falsepositives:
 - Unknown
-filename: posh_ps_susp_remove_adgroupmember.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1531/T1531.md#atomic-test-3---remove-account-from-domain-admin-group
-related: []
 status: test
 tags:
 - attack.impact
 - attack.t1531
+title: Remove Account From Domain Admin Group

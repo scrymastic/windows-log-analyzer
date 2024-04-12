@@ -5,7 +5,6 @@ description: Detects suspicious processes spawned from a Java host process which
 falsepositives:
 - Legitimate calls to system binaries
 - Company specific internal usage
-filename: proc_creation_win_java_susp_child_process.yml
 level: high
 modified: 2024/01/18
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.initial_access
 - attack.persistence
 - attack.privilege_escalation
+title: Suspicious Processes Spawned by Java.EXE

@@ -3,7 +3,6 @@ date: 2022/01/20
 description: Detects the execution of AdvancedRun utility
 falsepositives:
 - Unknown
-filename: proc_creation_win_pua_advancedrun.yml
 level: medium
 modified: 2023/02/21
 references:
@@ -22,3 +21,4 @@ tags:
 - attack.t1564.003
 - attack.t1134.002
 - attack.t1059.003
+title: PUA - AdvancedRun Execution

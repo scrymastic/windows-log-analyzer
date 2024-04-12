@@ -6,9 +6,7 @@ falsepositives:
 - Legitimate ".bat", ".hta", ".ps1" or ".vbs" scripts leverage legitimately often.
   Apply additional filter and exclusions as necessary
 - Some legitimate Windows services
-filename: proc_creation_win_regsvr32_susp_parent.yml
 level: medium
-modified: ''
 references:
 - https://web.archive.org/web/20171001085340/https://subt0x10.blogspot.com/2017/04/bypass-application-whitelisting-script.html
 - https://app.any.run/tasks/34221348-072d-4b70-93f3-aa71f6ebecad/
@@ -19,3 +17,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.010
+title: Scripting/CommandLine Process Spawned Regsvr32

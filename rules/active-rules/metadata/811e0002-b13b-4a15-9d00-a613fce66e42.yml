@@ -12,7 +12,6 @@ description: 'Detects the execution of Process Hacker based on binary metadata i
 falsepositives:
 - While sometimes 'Process Hacker is used by legitimate administrators, the execution
   of Process Hacker must be investigated and allowed on a case by case basis
-filename: proc_creation_win_pua_process_hacker.yml
 level: medium
 modified: 2023/12/11
 references:
@@ -30,3 +29,4 @@ tags:
 - attack.t1622
 - attack.t1564
 - attack.t1543
+title: PUA - Process Hacker Execution

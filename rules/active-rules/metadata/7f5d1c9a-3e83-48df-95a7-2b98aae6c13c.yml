@@ -4,9 +4,7 @@ description: Detects child processes of "provlaunch.exe" which might indicate po
   abuse to proxy execution.
 falsepositives:
 - Unknown
-filename: proc_creation_win_provlaunch_potential_abuse.yml
 level: medium
-modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Provlaunch/
 - https://twitter.com/0gtweet/status/1674399582162153472
@@ -21,3 +19,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Potential Provlaunch.EXE Binary Proxy Execution Abuse

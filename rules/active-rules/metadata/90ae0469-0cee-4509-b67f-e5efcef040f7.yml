@@ -4,15 +4,14 @@ description: Detects potential DLL sideloading activity via the Aruba Networks V
   Intranet Access "arubanetsvc.exe" process using DLL Search Order Hijacking
 falsepositives:
 - Unknown
-filename: image_load_side_load_aruba_networks_virtual_intranet_access.yml
 level: high
 modified: 2023/03/15
 references:
 - https://twitter.com/wdormann/status/1616581559892545537?t=XLCBO9BziGzD7Bmbt8oMEQ&s=09
-related: []
 status: test
 tags:
 - attack.privilege_escalation
 - attack.persistence
 - attack.t1574.001
 - attack.t1574.002
+title: Aruba Network Service Potential DLL Sideloading

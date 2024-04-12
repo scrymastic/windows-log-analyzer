@@ -8,7 +8,6 @@ description: 'Detects installation of a new shim using sdbinst.exe.
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_sdbinst_shim_persistence.yml
 level: medium
 modified: 2023/12/06
 references:
@@ -21,3 +20,4 @@ tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.t1546.011
+title: Potential Shim Database Persistence via Sdbinst.EXE

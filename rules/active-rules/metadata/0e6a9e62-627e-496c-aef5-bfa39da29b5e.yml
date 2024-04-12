@@ -12,16 +12,14 @@ description: 'Detects changes to the "MaxMpxCt" registry value.
   '
 falsepositives:
 - Unknown
-filename: registry_set_optimize_file_sharing_network.yml
 level: low
-modified: ''
 references:
 - https://www.huntress.com/blog/blackcat-ransomware-affiliate-ttps
 - https://securityscorecard.com/research/deep-dive-into-alphv-blackcat-ransomware
 - https://www.intrinsec.com/alphv-ransomware-gang-analysis/?cn-reloaded=1
 - https://www.sentinelone.com/labs/blackcat-ransomware-highly-configurable-rust-driven-raas-on-the-prowl-for-victims/
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1070.005
+title: MaxMpxCt Registry Value Changed

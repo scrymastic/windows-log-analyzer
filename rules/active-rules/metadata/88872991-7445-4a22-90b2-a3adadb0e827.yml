@@ -4,9 +4,7 @@ description: Detects the stopping of a Windows service via the "net" utility.
 falsepositives:
 - There are many legitimate reasons to stop a service. This rule isn't looking for
   any suspicious behaviour in particular. Filter legitimate activity accordingly
-filename: proc_creation_win_net_stop_service.yml
 level: low
-modified: ''
 references:
 - https://ss64.com/nt/net-service.html
 related:
@@ -16,3 +14,4 @@ status: test
 tags:
 - attack.impact
 - attack.t1489
+title: Stop Windows Service Via Net.EXE

@@ -4,12 +4,10 @@ description: Detects execution of renamed Remote Utilities (RURAT) via Product P
   header field
 falsepositives:
 - Unknown
-filename: proc_creation_win_renamed_rurat.yml
 level: medium
 modified: 2023/02/03
 references:
 - https://redcanary.com/blog/misbehaving-rats/
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -17,3 +15,4 @@ tags:
 - attack.command_and_control
 - attack.discovery
 - attack.s0592
+title: Renamed Remote Utilities RAT (RURAT) Execution

@@ -3,15 +3,14 @@ date: 2021/08/23
 description: Detects the pattern of a pipe name as used by the hack tool EfsPotato
 falsepositives:
 - \pipe\LOCAL\Monitorian
-filename: pipe_created_hktl_efspotato.yml
 level: high
 modified: 2023/12/21
 references:
 - https://twitter.com/SBousseaden/status/1429530155291193354?s=20
 - https://github.com/zcgonvh/EfsPotato
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1055
+title: HackTool - EfsPotato Named Pipe Creation

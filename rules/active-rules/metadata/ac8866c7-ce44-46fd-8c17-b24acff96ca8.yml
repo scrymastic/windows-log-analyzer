@@ -4,13 +4,12 @@ description: Detects the installation of the Azure Hybrid Connection Manager ser
   to allow remote code execution from Azure function.
 falsepositives:
 - Unknown
-filename: registry_event_hybridconnectionmgr_svc_installation.yml
 level: high
 modified: 2022/11/27
 references:
 - https://twitter.com/Cyb3rWard0g/status/1381642789369286662
-related: []
 status: test
 tags:
 - attack.resource_development
 - attack.t1608
+title: HybridConnectionManager Service Installation - Registry

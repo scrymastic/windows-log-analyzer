@@ -4,15 +4,14 @@ description: Detects potential privilege escalation attempt via the creation of 
   "*.Exe.Local" folder inside the "System32" directory in order to sideload "comctl32.dll"
 falsepositives:
 - Unknown
-filename: file_event_win_system32_local_folder_privilege_escalation.yml
 level: high
 modified: 2022/12/19
 references:
 - https://github.com/binderlabs/DirCreate2System
 - https://github.com/sailay1996/awesome_windows_logical_bugs/blob/60cbb23a801f4c3195deac1cc46df27c225c3d07/dir_create2system.txt
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.persistence
 - attack.privilege_escalation
+title: Potential Privilege Escalation Attempt Via .Exe.Local Technique

@@ -5,14 +5,12 @@ description: Detects suspicious invocation of the Get-ADDBAccount script that re
   any credential dumpers
 falsepositives:
 - Unknown
-filename: posh_pm_get_addbaccount.yml
 level: high
-modified: ''
 references:
 - https://www.n00py.io/2022/03/manipulating-user-passwords-without-mimikatz/
 - https://github.com/MichaelGrafnetter/DSInternals/blob/7ba59c12ee9a1cb430d7dc186a3366842dd612c8/Documentation/PowerShell/Get-ADDBAccount.md
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1003.003
+title: Suspicious Get-ADDBAccount Usage

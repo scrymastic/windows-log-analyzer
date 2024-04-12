@@ -4,9 +4,7 @@ description: Detects Set-Alias or New-Alias cmdlet usage. Which can be use as a 
   to obfuscate PowerShell scripts
 falsepositives:
 - Unknown
-filename: posh_ps_susp_set_alias.yml
 level: low
-modified: ''
 references:
 - https://github.com/1337Rin/Swag-PSO
 related:
@@ -18,3 +16,4 @@ tags:
 - attack.execution
 - attack.t1027
 - attack.t1059.001
+title: Potential PowerShell Obfuscation Using Alias Cmdlets

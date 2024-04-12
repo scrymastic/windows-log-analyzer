@@ -17,7 +17,6 @@ description: 'Detects scenarios where system auditing (i.e.: Windows event log a
   '
 falsepositives:
 - Unknown
-filename: win_security_disable_event_auditing.yml
 level: low
 modified: 2023/11/15
 references:
@@ -29,3 +28,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.002
+title: Windows Event Auditing Disabled

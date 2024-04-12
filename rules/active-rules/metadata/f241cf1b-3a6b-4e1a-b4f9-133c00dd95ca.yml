@@ -3,7 +3,6 @@ date: 2020/10/18
 description: Detects Obfuscated Powershell via RUNDLL LAUNCHER
 falsepositives:
 - Unknown
-filename: win_security_invoke_obfuscation_via_rundll_services_security.yml
 level: medium
 modified: 2022/11/29
 references:
@@ -17,3 +16,4 @@ tags:
 - attack.t1027
 - attack.execution
 - attack.t1059.001
+title: Invoke-Obfuscation RUNDLL LAUNCHER - Security

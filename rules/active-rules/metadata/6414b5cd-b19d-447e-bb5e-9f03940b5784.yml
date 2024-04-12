@@ -4,12 +4,10 @@ description: Detects DLL sideloading of "dbghelp.dll"
 falsepositives:
 - Legitimate applications loading their own versions of the DLL mentioned in this
   rule
-filename: image_load_side_load_dbghelp_dll.yml
 level: medium
 modified: 2023/05/05
 references:
 - https://hijacklibs.net/
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -17,3 +15,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential DLL Sideloading Of DBGHELP.DLL

@@ -5,7 +5,6 @@ description: Detects the execution node.exe which is shipped with multiple softw
   establish reverse shell as seen in Log4j attacks...etc
 falsepositives:
 - Unlikely
-filename: proc_creation_win_node_abuse.yml
 level: high
 modified: 2023/02/03
 references:
@@ -13,8 +12,8 @@ references:
 - https://www.sprocketsecurity.com/resources/crossing-the-log4j-horizon-a-vulnerability-with-no-return
 - https://www.rapid7.com/blog/post/2022/01/18/active-exploitation-of-vmware-horizon-servers/
 - https://nodejs.org/api/cli.html
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1127
+title: Potential Arbitrary Code Execution Via Node.EXE

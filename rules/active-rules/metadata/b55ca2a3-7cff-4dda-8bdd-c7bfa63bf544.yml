@@ -3,7 +3,6 @@ date: 2022/02/20
 description: Detects DNS queries to an ".onion" address related to Tor routing networks
 falsepositives:
 - Unknown
-filename: dns_query_win_tor_onion_domain_query.yml
 level: high
 modified: 2023/09/18
 references:
@@ -15,3 +14,4 @@ status: experimental
 tags:
 - attack.command_and_control
 - attack.t1090.003
+title: DNS Query Tor .Onion Address - Sysmon

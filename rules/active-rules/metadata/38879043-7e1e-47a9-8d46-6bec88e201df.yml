@@ -5,14 +5,13 @@ description: Detects the modification of an existing service in order to execute
   persistence.
 falsepositives:
 - Unknown
-filename: proc_creation_win_sc_service_tamper_for_persistence.yml
 level: medium
 modified: 2023/02/04
 references:
 - https://pentestlab.blog/2020/01/22/persistence-modify-existing-service/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1543.003
 - attack.t1574.011
+title: Potential Persistence Attempt Via Existing Service Tampering

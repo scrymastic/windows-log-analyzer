@@ -7,7 +7,6 @@ description: 'Detects modifications to the Windows Defender exclusion registry k
   '
 falsepositives:
 - Intended exclusions by administrators
-filename: win_security_windows_defender_exclusions_registry_modified.yml
 level: medium
 modified: 2023/11/11
 references:
@@ -21,3 +20,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Windows Defender Exclusion List Modified

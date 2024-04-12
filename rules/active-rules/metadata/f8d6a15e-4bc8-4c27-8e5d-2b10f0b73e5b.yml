@@ -4,13 +4,11 @@ description: Detects suspicious execution of 'Powercfg.exe' to change lock scree
   timeout
 falsepositives:
 - Unknown
-filename: proc_creation_win_powercfg_execution.yml
 level: medium
-modified: ''
 references:
 - https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html
 - https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Suspicious Powercfg Execution To Change Lock Screen Timeout

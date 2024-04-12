@@ -4,14 +4,13 @@ description: Detects potential shellcode injection used by tools such as Metaspl
   migrate and Empire's psinject
 falsepositives:
 - Unknown
-filename: proc_access_win_susp_shellcode_injection.yml
 level: high
 modified: 2023/11/29
 references:
 - https://github.com/EmpireProject/PSInject
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1055
+title: Potential Shellcode Injection

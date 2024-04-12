@@ -5,7 +5,6 @@ description: Detects execution of "reg.exe" commands with the "delete" flag on s
   products
 falsepositives:
 - Unlikely
-filename: proc_creation_win_reg_delete_safeboot.yml
 level: high
 modified: 2023/02/04
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: SafeBoot Registry Key Deleted Via Reg.EXE

@@ -3,13 +3,12 @@ date: 2019/08/12
 description: Detects non-system users failing to get a handle of the SCM database.
 falsepositives:
 - Unknown
-filename: win_security_scm_database_handle_failure.yml
 level: medium
 modified: 2022/07/11
 references:
 - https://threathunterplaybook.com/hunts/windows/190826-RemoteSCMHandle/notebook.html
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1010
+title: SCM Database Handle Failure

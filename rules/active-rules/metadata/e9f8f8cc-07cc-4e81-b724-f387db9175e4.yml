@@ -4,9 +4,7 @@ description: Detects potentially suspicious execution of the Regasm/Regsvcs util
   with an uncommon extension.
 falsepositives:
 - Unknown
-filename: proc_creation_win_regasm_regsvcs_uncommon_extension_execution.yml
 level: medium
-modified: ''
 references:
 - https://www.fortiguard.com/threat-signal-report/4718?s=09
 - https://lolbas-project.github.io/lolbas/Binaries/Regasm/
@@ -18,3 +16,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.009
+title: Potentially Suspicious Execution Of Regasm/Regsvcs With Uncommon Extension

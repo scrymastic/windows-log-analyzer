@@ -3,9 +3,7 @@ date: 2022/09/16
 description: Detect adversaries enumerate sensitive files
 falsepositives:
 - Unknown
-filename: posh_ps_sensitive_file_discovery.yml
 level: medium
-modified: ''
 references:
 - https://twitter.com/malmoeb/status/1570814999370801158
 related:
@@ -15,3 +13,4 @@ status: test
 tags:
 - attack.discovery
 - attack.t1083
+title: Powershell Sensitive File Discovery

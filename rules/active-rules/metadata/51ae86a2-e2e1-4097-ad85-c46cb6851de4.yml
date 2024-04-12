@@ -4,13 +4,11 @@ description: Detects suspicious launch of a renamed version of the PSEXESVC serv
   with, which is not often used by legitimate administrators
 falsepositives:
 - Legitimate administrative tasks
-filename: proc_creation_win_renamed_sysinternals_psexec_service.yml
 level: high
-modified: ''
 references:
 - https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
 - https://www.youtube.com/watch?v=ro2QuZTIMBM
-related: []
 status: test
 tags:
 - attack.execution
+title: Renamed PsExec Service Execution

@@ -5,9 +5,7 @@ description: Detects DLL sideloading of unsigned "mfdetours.dll". Executing "mft
   from the current directory of execution.
 falsepositives:
 - Unlikely
-filename: image_load_side_load_mfdetours_unsigned.yml
 level: high
-modified: ''
 references:
 - Internal Research
 related:
@@ -19,3 +17,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Unsigned Mfdetours.DLL Sideloading

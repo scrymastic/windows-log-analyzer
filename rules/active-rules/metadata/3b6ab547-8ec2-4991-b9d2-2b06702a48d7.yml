@@ -4,7 +4,6 @@ description: Detects a Powershell process that contains download commands in its
   line string
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_download_patterns.yml
 level: medium
 modified: 2023/01/26
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: PowerShell Download Pattern

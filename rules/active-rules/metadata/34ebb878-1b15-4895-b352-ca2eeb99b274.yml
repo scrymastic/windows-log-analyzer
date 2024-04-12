@@ -3,14 +3,12 @@ date: 2022/01/01
 description: Use of the commandline to shutdown or reboot windows
 falsepositives:
 - Unknown
-filename: proc_creation_win_shutdown_execution.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1529/T1529.md
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/shutdown
-related: []
 status: test
 tags:
 - attack.impact
 - attack.t1529
+title: Suspicious Execution of Shutdown

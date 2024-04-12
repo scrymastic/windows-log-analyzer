@@ -8,7 +8,6 @@ description: 'Detects DLL sideloading of system DLLs that are not present on the
   '
 falsepositives:
 - Unknown
-filename: image_load_side_load_non_existent_dlls.yml
 level: high
 modified: 2024/01/10
 references:
@@ -30,3 +29,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential DLL Sideloading Of Non-Existent DLLs From System Folders

@@ -5,7 +5,6 @@ description: Detects a copy command or a copy utility execution to or from an Ad
   share or remote
 falsepositives:
 - Administrative scripts
-filename: proc_creation_win_susp_copy_lateral_movement.yml
 level: medium
 modified: 2023/11/15
 references:
@@ -13,7 +12,6 @@ references:
 - https://drive.google.com/file/d/1lKya3_mLnR3UQuCoiYruO3qgu052_iS_/view
 - https://www.elastic.co/guide/en/security/current/remote-file-copy-to-a-hidden-share.html
 - https://www.microsoft.com/en-us/security/blog/2022/10/18/defenders-beware-a-case-for-post-ransomware-investigations/
-related: []
 status: test
 tags:
 - attack.lateral_movement
@@ -22,3 +20,4 @@ tags:
 - attack.t1039
 - attack.t1048
 - attack.t1021.002
+title: Copy From Or To Admin Share Or Sysvol Folder

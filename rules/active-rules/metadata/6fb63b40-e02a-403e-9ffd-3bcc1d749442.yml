@@ -5,7 +5,12 @@ description: Detects usage of Metasploit SMB PsExec (exploit/windows/smb/psexec)
 falsepositives:
 - Possible, different agents with a 8 character binary and a 4, 8 or 16 character
   service name
-filename: win_security_metasploit_or_impacket_smb_psexec_service_install.yml
+fields:
+- ComputerName
+- SubjectDomainName
+- SubjectUserName
+- ServiceName
+- ServiceFileName
 level: high
 modified: 2022/10/05
 references:
@@ -20,3 +25,4 @@ tags:
 - attack.t1570
 - attack.execution
 - attack.t1569.002
+title: Metasploit Or Impacket Service Installation Via SMB PsExec

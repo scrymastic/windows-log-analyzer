@@ -4,12 +4,11 @@ description: Detects command that type the content of ntdll.dll to a different f
   or a pipe in order to evade AV / EDR detection. As seen being used in the POC NtdllPipe
 falsepositives:
 - Unknown
-filename: proc_creation_win_cmd_ntdllpipe_redirect.yml
 level: high
 modified: 2023/03/07
 references:
 - https://web.archive.org/web/20220306121156/https://www.x86matthew.com/view_post?id=ntdll_pipe
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: NtdllPipe Like Activity Execution

@@ -4,7 +4,6 @@ description: Detect use of the Windows 8.3 short name. Which could be used as a 
   to avoid Image based detection
 falsepositives:
 - Software Installers
-filename: proc_creation_win_susp_ntfs_short_name_use_image.yml
 level: medium
 modified: 2023/07/20
 references:
@@ -18,3 +17,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1564.004
+title: Use NTFS Short Name in Image

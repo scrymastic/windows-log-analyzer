@@ -3,13 +3,12 @@ date: 2020/10/05
 description: Attackers can use explorer.exe for evading defense mechanisms
 falsepositives:
 - Legitimate explorer.exe run from cmd.exe
-filename: proc_creation_win_explorer_lolbin_execution.yml
 level: low
 modified: 2021/11/27
 references:
 - https://twitter.com/CyberRaiju/status/1273597319322058752
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Proxy Execution Via Explorer.exe

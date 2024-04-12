@@ -5,13 +5,12 @@ description: Detects the creation of screensaver files (.scr) outside of system 
   for example.
 falsepositives:
 - The installation of new screen savers by third party software
-filename: file_event_win_new_scr_file.yml
 level: medium
 modified: 2023/08/23
 references:
 - https://lolbas-project.github.io/lolbas/Libraries/Desk/
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1218.011
+title: SCR File Write Event

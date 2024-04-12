@@ -11,7 +11,8 @@ description: 'The attacker creates a computer object using those permissions wit
   '
 falsepositives:
 - Unknown
-filename: win_system_exploit_cve_2021_42287.yml
+fields:
+- samAccountName
 level: medium
 modified: 2023/04/14
 references:
@@ -23,3 +24,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1558.003
+title: Potential CVE-2021-42287 Exploitation Attempt

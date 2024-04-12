@@ -6,13 +6,12 @@ description: Detects use of aspnet_regiis to decrypt Microsoft IIS connection st
   using aspnet_regiis command.
 falsepositives:
 - Unknown
-filename: proc_creation_win_iis_connection_strings_decryption.yml
 level: high
 modified: 2022/12/30
 references:
 - https://www.elastic.co/guide/en/security/current/microsoft-iis-connection-strings-decryption.html
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1003
+title: Microsoft IIS Connection Strings Decryption

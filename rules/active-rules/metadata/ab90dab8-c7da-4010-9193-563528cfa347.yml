@@ -14,9 +14,7 @@ description: 'Detects the creation of a binary file with the ".sed" extension. T
   '
 falsepositives:
 - Unknown
-filename: file_executable_detected_win_susp_embeded_sed_file.yml
 level: medium
-modified: ''
 references:
 - https://strontic.github.io/xcyclopedia/library/iexpress.exe-D594B2A33EFAFD0EABF09E3FDC05FCEA.html
 - https://en.wikipedia.org/wiki/IExpress
@@ -28,3 +26,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Potentially Suspicious Self Extraction Directive File Created

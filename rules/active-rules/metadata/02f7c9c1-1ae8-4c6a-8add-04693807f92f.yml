@@ -5,16 +5,15 @@ description: Detects potential token impersonation and theft. Example, when usin
   flag".
 falsepositives:
 - Anti-Virus
-filename: win_security_access_token_abuse.yml
 level: medium
 modified: 2023/04/26
 references:
 - https://www.elastic.co/fr/blog/how-attackers-abuse-access-token-manipulation
 - https://www.manageengine.com/log-management/cyber-security/access-token-manipulation.html
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1134.001
 - stp.4u
+title: Potential Access Token Abuse

@@ -9,7 +9,6 @@ description: 'Detects execution of "findstr" to search for common names of secur
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_findstr_security_keyword_lookup.yml
 level: medium
 modified: 2023/11/14
 references:
@@ -23,3 +22,4 @@ status: experimental
 tags:
 - attack.discovery
 - attack.t1518.001
+title: Security Tools Keyword Lookup Via Findstr.EXE

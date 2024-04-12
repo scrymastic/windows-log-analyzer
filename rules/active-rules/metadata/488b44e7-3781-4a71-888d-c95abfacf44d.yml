@@ -4,7 +4,6 @@ description: Detects when a user disables the Windows Firewall via a Profile to 
   evade defense.
 falsepositives:
 - Unknown
-filename: posh_ps_windows_firewall_profile_disabled.yml
 level: medium
 modified: 2022/12/30
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.004
+title: Windows Firewall Profile Disabled

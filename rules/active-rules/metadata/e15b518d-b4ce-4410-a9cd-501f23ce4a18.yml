@@ -3,13 +3,12 @@ date: 2022/01/21
 description: Once executed, colorcpl.exe will copy the arbitrary file to c:\windows\system32\spool\drivers\color\
 falsepositives:
 - Unknown
-filename: file_event_win_susp_colorcpl.yml
 level: high
 modified: 2023/01/05
 references:
 - https://twitter.com/eral4m/status/1480468728324231172?s=20
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1564
+title: Suspicious Creation with Colorcpl

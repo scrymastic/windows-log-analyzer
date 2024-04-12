@@ -4,7 +4,6 @@ description: Detects the use of WinAPI Functions via the commandline. As seen us
   by threat actors via the tool winapiexec
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_inline_win_api_access.yml
 level: high
 modified: 2023/01/09
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1106
+title: Potential WinAPI Calls Via CommandLine

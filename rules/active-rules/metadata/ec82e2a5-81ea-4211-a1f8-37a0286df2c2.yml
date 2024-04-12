@@ -4,15 +4,14 @@ description: Detects DNS queries for IP lookup services such as "api.ipify.org" 
   from a non browser process.
 falsepositives:
 - Legitimate usage of IP lookup services such as ipify API
-filename: dns_query_win_susp_external_ip_lookup.yml
 level: medium
 modified: 2024/03/22
 references:
 - https://www.binarydefense.com/analysis-of-hancitor-when-boring-begets-beacon
 - https://twitter.com/neonprimetime/status/1436376497980428318
 - https://www.trendmicro.com/en_us/research/23/e/managed-xdr-investigation-of-ducktail-in-trend-micro-vision-one.html
-related: []
 status: test
 tags:
 - attack.reconnaissance
 - attack.t1590
+title: Suspicious DNS Query for IP Lookup Service APIs

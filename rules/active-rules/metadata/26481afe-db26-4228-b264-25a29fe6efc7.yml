@@ -7,7 +7,6 @@ description: 'Detects uncommon service installation commands by looking at suspi
   '
 falsepositives:
 - Unknown
-filename: win_system_service_install_uncommon.yml
 level: medium
 modified: 2024/02/09
 references:
@@ -23,3 +22,4 @@ tags:
 - attack.privilege_escalation
 - car.2013-09-005
 - attack.t1543.003
+title: Uncommon Service Installation Image Path

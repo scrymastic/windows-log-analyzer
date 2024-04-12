@@ -3,13 +3,11 @@ date: 2023/06/08
 description: Detects unsigned module load by ClickOnce application.
 falsepositives:
 - Unlikely
-filename: image_load_susp_clickonce_unsigned_module_loaded.yml
 level: medium
-modified: ''
 references:
 - https://posts.specterops.io/less-smartscreen-more-caffeine-ab-using-clickonce-for-trusted-code-execution-1446ea8051c5
-related: []
 status: experimental
 tags:
 - attack.persistence
 - attack.t1574.002
+title: Unsigned Module Loaded by ClickOnce Application

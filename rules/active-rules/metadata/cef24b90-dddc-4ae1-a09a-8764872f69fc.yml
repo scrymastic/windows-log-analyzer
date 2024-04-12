@@ -11,13 +11,12 @@ description: 'Adversaries may attempt to find local system groups and permission
   '
 falsepositives:
 - Administrator script
-filename: posh_pm_susp_local_group_reco.yml
 level: low
 modified: 2022/12/25
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1069.001/T1069.001.md
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1069.001
+title: Suspicious Get Local Groups Information

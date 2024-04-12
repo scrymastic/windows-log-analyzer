@@ -4,9 +4,7 @@ description: Detects usage of Sysinternals PsSuspend which can be abused to susp
   critical processes
 falsepositives:
 - Unknown
-filename: proc_creation_win_sysinternals_pssuspend_execution.yml
 level: medium
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/sysinternals/downloads/pssuspend
 - https://twitter.com/0gtweet/status/1638069413717975046
@@ -18,3 +16,4 @@ tags:
 - attack.discovery
 - attack.persistence
 - attack.t1543.003
+title: Sysinternals PsSuspend Execution

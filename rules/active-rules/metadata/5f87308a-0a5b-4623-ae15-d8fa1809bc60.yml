@@ -4,13 +4,11 @@ description: Detects the creation of copy of suspicious files (EXE/DLL) to the d
   GPO storage folder
 falsepositives:
 - Unknown
-filename: file_event_win_susp_default_gpo_dir_write.yml
 level: medium
-modified: ''
 references:
 - https://redcanary.com/blog/intelligence-insights-november-2021/
-related: []
 status: test
 tags:
 - attack.t1036.005
 - attack.defense_evasion
+title: Suspicious Files in Default GPO Folder

@@ -9,16 +9,14 @@ description: 'Detects when an attacker create a similar folder structure to wind
   '
 falsepositives:
 - Unknown
-filename: file_event_win_dll_sideloading_space_path.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/cyb3rops/status/1552932770464292864
 - https://www.wietzebeukema.nl/blog/hijacking-dlls-in-windows
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.defense_evasion
 - attack.t1574.002
+title: DLL Search Order Hijackig Via Additional Space in Path

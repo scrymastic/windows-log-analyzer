@@ -4,14 +4,16 @@ description: Detects the execution of other scripts using the Node executable pa
   with Adobe Creative Cloud
 falsepositives:
 - Unknown
-filename: proc_creation_win_node_adobe_creative_cloud_abuse.yml
+fields:
+- Image
+- CommandLine
+- ParentCommandLine
 level: medium
-modified: ''
 references:
 - https://twitter.com/mttaggart/status/1511804863293784064
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1127
 - attack.t1059.007
+title: Node Process Executions

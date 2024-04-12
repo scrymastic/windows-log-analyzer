@@ -14,13 +14,12 @@ description: 'An adversary may use legitimate desktop support and remote access 
   '
 falsepositives:
 - Legitimate use
-filename: proc_creation_win_remote_access_tools_netsupport.yml
 level: medium
 modified: 2023/03/06
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1219/T1219.md
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1219
+title: Remote Access Tool - NetSupport Execution

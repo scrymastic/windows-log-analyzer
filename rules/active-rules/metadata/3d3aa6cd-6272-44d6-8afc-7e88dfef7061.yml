@@ -12,7 +12,14 @@ description: 'Detects file association changes using the builtin "assoc" command
   '
 falsepositives:
 - Admin activity
-filename: proc_creation_win_cmd_assoc_execution.yml
+fields:
+- Image
+- CommandLine
+- User
+- LogonGuid
+- Hashes
+- ParentProcessGuid
+- ParentCommandLine
 level: low
 modified: 2023/03/06
 references:
@@ -24,3 +31,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1546.001
+title: Change Default File Association Via Assoc

@@ -4,7 +4,9 @@ description: Detects usage of bitsadmin downloading a file using an URL that con
   an IP
 falsepositives:
 - Unknown
-filename: proc_creation_win_bitsadmin_download_direct_ip.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: high
 modified: 2023/02/15
 references:
@@ -22,3 +24,4 @@ tags:
 - attack.t1197
 - attack.s0190
 - attack.t1036.003
+title: Suspicious Download From Direct IP Via Bitsadmin

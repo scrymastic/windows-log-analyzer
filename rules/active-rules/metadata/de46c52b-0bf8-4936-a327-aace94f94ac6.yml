@@ -10,17 +10,15 @@ description: 'Detects creation of the Process Explorer drivers by processes othe
   '
 falsepositives:
 - Some false positives may occur with legitimate renamed process explorer binaries
-filename: file_event_win_sysinternals_procexp_driver_susp_creation.yml
 level: high
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer
 - https://github.com/Yaxser/Backstab
 - https://www.elastic.co/security-labs/stopping-vulnerable-driver-attacks
 - https://news.sophos.com/en-us/2023/04/19/aukill-edr-killer-malware-abuses-process-explorer-driver/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.t1068
+title: Process Explorer Driver Creation By Non-Sysinternals Binary

@@ -4,14 +4,13 @@ description: Detects PowerShell called from an executable by the version mismatc
   method
 falsepositives:
 - Unknown
-filename: posh_pc_exe_calling_ps.yml
 level: high
 modified: 2023/10/27
 references:
 - https://adsecurity.org/?p=2921
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1059.001
+title: PowerShell Called from an Executable Version Mismatch

@@ -5,7 +5,6 @@ description: Detects modifications to the registry key "HKLM\Software\Microsoft\
   in order to hide user account from being listed on the logon screen.
 falsepositives:
 - Unknown
-filename: registry_set_special_accounts.yml
 level: high
 modified: 2023/01/26
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1564.002
+title: Hiding User Account Via SpecialAccounts Registry Key

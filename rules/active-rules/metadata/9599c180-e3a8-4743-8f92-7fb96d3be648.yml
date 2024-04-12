@@ -4,15 +4,14 @@ description: Detect potential adversaries leveraging WMI ActiveScriptEventConsum
   remotely to move laterally in a network
 falsepositives:
 - SCCM
-filename: win_security_scrcons_remote_wmi_scripteventconsumer.yml
 level: high
 modified: 2021/11/27
 references:
 - https://threathunterplaybook.com/hunts/windows/200902-RemoteWMIActiveScriptEventConsumers/notebook.html
-related: []
 status: test
 tags:
 - attack.lateral_movement
 - attack.privilege_escalation
 - attack.persistence
 - attack.t1546.003
+title: Remote WMI ActiveScriptEventConsumers

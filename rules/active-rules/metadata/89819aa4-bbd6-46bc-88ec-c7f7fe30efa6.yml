@@ -5,7 +5,6 @@ date: 2017/03/05
 description: Detects Commandlet names from well-known PowerShell exploitation frameworks
 falsepositives:
 - Unknown
-filename: posh_ps_malicious_commandlets.yml
 level: high
 modified: 2024/01/25
 references:
@@ -48,3 +47,4 @@ tags:
 - attack.t1069.002
 - attack.t1069
 - attack.t1059.001
+title: Malicious PowerShell Commandlets - ScriptBlock

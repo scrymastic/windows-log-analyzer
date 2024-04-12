@@ -3,15 +3,14 @@ date: 2020/10/18
 description: Detects Obfuscated Powershell via COMPRESS OBFUSCATION
 falsepositives:
 - Unknown
-filename: posh_ps_invoke_obfuscation_via_compress.yml
 level: medium
 modified: 2022/11/29
 references:
 - https://github.com/SigmaHQ/sigma/issues/1009
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1027
 - attack.execution
 - attack.t1059.001
+title: Invoke-Obfuscation COMPRESS OBFUSCATION - PowerShell

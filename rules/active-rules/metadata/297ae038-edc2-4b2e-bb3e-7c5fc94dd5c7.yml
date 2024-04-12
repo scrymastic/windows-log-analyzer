@@ -12,7 +12,6 @@ falsepositives:
 - One might need to exclude other internet browsers found in it's network or other
   applications like ones mentioned above from Microsoft Defender.
 - Ninite contacting githubusercontent.com
-filename: net_connection_win_susp_dead_drop_resolvers.yml
 level: high
 modified: 2024/02/06
 references:
@@ -30,3 +29,4 @@ tags:
 - attack.command_and_control
 - attack.t1102
 - attack.t1102.001
+title: Potential Dead Drop Resolvers

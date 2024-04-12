@@ -53,7 +53,6 @@ class RuleConverter:
             return False
         
         print(f"{CYAN}[INFO] Converting rule '{rule_file.name}'...{RESET}")
-
         with open(rule_file, 'r', encoding='utf-8') as f:
             try:
                 rule = yaml.safe_load(f)
@@ -102,7 +101,7 @@ class RuleConverter:
                 pass
             else:
                 converted_block = [{'and': converted_block}]
-
+                
             converted_detection.extend([{key: converted_block}])
 
         return converted_detection

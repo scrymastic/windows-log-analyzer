@@ -5,15 +5,14 @@ description: Detects usage of the "TcpClient" class. Which can be abused to esta
   reverse shell and other.
 falsepositives:
 - In rare administrative cases, this function might be used to check network connectivity
-filename: proc_creation_win_powershell_reverse_shell_connection.yml
 level: high
 modified: 2023/04/05
 references:
 - https://www.volexity.com/blog/2021/03/02/active-exploitation-of-microsoft-exchange-zero-day-vulnerabilities/
 - https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/
 - https://github.com/samratashok/nishang/blob/414ee1104526d7057f9adaeee196d91ae447283e/Shells/Invoke-PowerShellTcpOneLine.ps1
-related: []
 status: stable
 tags:
 - attack.execution
 - attack.t1059.001
+title: Potential Powershell ReverseShell Connection

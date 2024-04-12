@@ -17,13 +17,11 @@ description: 'Adversaries may leverage the COR_PROFILER environment variable to 
   '
 falsepositives:
 - Legitimate administrative script
-filename: posh_ps_cor_profiler.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1574.012/T1574.012.md#atomic-test-3---registry-free-process-scope-cor_profiler
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1574.012
+title: Registry-Free Process Scope COR_PROFILER

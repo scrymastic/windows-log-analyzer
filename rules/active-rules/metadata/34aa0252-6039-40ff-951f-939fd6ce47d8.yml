@@ -6,14 +6,13 @@ description: Detects the keyboard preload installation with a suspicious keyboar
 falsepositives:
 - Administrators or users that actually use the selected keyboard layouts (heavily
   depends on the organisation's user base)
-filename: registry_set_susp_keyboard_layout_load.yml
 level: medium
 modified: 2023/08/17
 references:
 - https://renenyffenegger.ch/notes/Windows/registry/tree/HKEY_CURRENT_USER/Keyboard-Layout/Preload/index
 - https://github.com/SwiftOnSecurity/sysmon-config/pull/92/files
-related: []
 status: test
 tags:
 - attack.resource_development
 - attack.t1588.002
+title: Suspicious Keyboard Layout Load

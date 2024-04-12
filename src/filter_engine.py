@@ -13,7 +13,7 @@ class FilterEngine:
         self.rules = rules
 
 
-    def matches_rule(self, rule, event) -> bool:
+    def matches_rule(self, rule, event: dict) -> bool:
         logsource = rule.get('logsource', None)
         if not logsource:
             print(f"Logsource not found in rule {rule}")
@@ -38,14 +38,10 @@ class FilterEngine:
             print(f"Condition not found in rule {rule}")
             return False
         
-        
-        block_keys = [word for word in regex.split(r'\s+|\(|\)', condition) \
-                      if word not in ['1', 'not', 'and', 'all', 'or', '(' , ')', 'of', '']]       
-        # Dictionary to store the matched keys
-        matched_keys = {}
-        # Initialize the matched_keys dictionary
-        for block_key in block_keys:
-            matched_keys[block_key] = []
+
+        exclude_words = {'1', 'not', 'and', 'all', 'or', '(', ')', 'of', ''}
+        block_keys = [word for word in regex.split(r'\s+|\(|\)', condition) if word not in exclude_words]
+        matched_keys = {block_key: [] for block_key in block_keys}
 
         for key, value in detection.items():
             matched_key = self.check_block_key(block_keys, key)
@@ -164,14 +160,20 @@ class FilterEngine:
             return not regex.match(value, field_value)
         elif operator == 'cidr':    # for ip address, Classless Inter-Domain Routing
             from ipaddress import IPv4Address, IPv6Address, IPv4Network, IPv6Network
-            return IPv4Address(field_value) in IPv4Network(value) \
-                if '.' in field_value else \
-                IPv6Address(field_value) in IPv6Network(value)
+            if '.' in field_value and '.' in value:
+                return IPv4Address(field_value) in IPv4Network(value)
+            elif ':' in field_value and ':' in value:
+                return IPv6Address(field_value) in IPv6Network(value)
+            else:
+                return False
         elif operator == 'not cidr':
             from ipaddress import IPv4Address, IPv6Address, IPv4Network, IPv6Network
-            return IPv4Address(field_value) not in IPv4Network(value) \
-                if '.' in field_value else \
-                IPv6Address(field_value) not in IPv6Network(value)
+            if '.' in field_value and '.' in value:
+                return IPv4Address(field_value) not in IPv4Network(value)
+            elif ':' in field_value and ':' in value:
+                return IPv6Address(field_value) not in IPv6Network(value)
+            else:
+                return False
         else:
             print(f"Invalid operator '{operator}, key: {key}, value: {value}'")
             return False
@@ -227,8 +229,6 @@ class FilterEngine:
             "file_executable_detected": 29,
             "sysmon_error": 255
         }
-
-
         # Check if the event ID matches logsource category
         category = logsource.get('category', None)
         if category:
@@ -238,21 +238,24 @@ class FilterEngine:
                 return True
 
 
-    def filter_events(self, events: list) -> dict:
+    def filter_events(self, events: dict) -> dict:
         # Filter the events based on the rules
         # Return the {event record id: [rule id]} dictionary
+        if not events:
+            print("No events to filter")
+            return {}
+        num_events = len(events)
+        processed_events = 0
         filtered_events = {}
-        for event in events:
+        for event_id, event in events.items():
             rule_id_list = []
-            for rule in self.rules:
+            for rule_id, rule in self.rules.items():
                 if self.matches_rule(rule, event):
-                    rule_id = rule.get('id', None)
-                    if rule_id:
-                        rule_id_list.append(rule_id)
-                    else:
-                        print(f"Rule ID not found for rule {rule}")
+                    rule_id_list.append(rule_id)
             if rule_id_list:
-                filtered_events[event['System']['EventRecordID']] = rule_id_list
+                filtered_events[event_id] = rule_id_list
+            processed_events += 1
+            print(f"\rProcessed {processed_events}/{num_events} events", end='')
                 
         return filtered_events
 

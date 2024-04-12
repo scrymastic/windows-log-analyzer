@@ -5,7 +5,6 @@ description: Detects changes to environment variables related to ETW logging. Th
   assemblies.
 falsepositives:
 - Unlikely
-filename: proc_creation_win_susp_etw_modification_cmdline.yml
 level: high
 modified: 2022/12/09
 references:
@@ -19,8 +18,8 @@ references:
 - http://managed670.rssing.com/chan-5590147/all_p1.html
 - https://github.com/dotnet/runtime/blob/4f9ae42d861fcb4be2fcd5d3d55d5f227d30e723/docs/coding-guidelines/clr-jit-coding-conventions.md#1412-disabling-code
 - https://i.blackhat.com/EU-21/Wednesday/EU-21-Teodorescu-Veni-No-Vidi-No-Vici-Attacks-On-ETW-Blind-EDRs.pdf
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562
+title: ETW Logging Tamper In .NET Processes

@@ -4,14 +4,13 @@ description: Detects default filenames output from the execution of CrackMapExec
   Impacket-secretsdump against an endpoint.
 falsepositives:
 - Unknown
-filename: file_event_win_hktl_remote_cred_dump.yml
 level: high
 modified: 2023/01/05
 references:
 - https://github.com/Porchetta-Industries/CrackMapExec
 - https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1003
+title: Potential Remote Credential Dumping Activity

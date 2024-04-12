@@ -5,12 +5,10 @@ description: Detects default file names outputted by the BloodHound collection t
 falsepositives:
 - Some false positives may arise in some environment and this may require some tuning.
   Add additional filters or reduce level depending on the level of noise
-filename: file_event_win_bloodhound_collection.yml
 level: high
 modified: 2023/03/29
 references:
 - https://academy.hackthebox.com/course/preview/active-directory-bloodhound/bloodhound--data-collection
-related: []
 status: test
 tags:
 - attack.discovery
@@ -21,3 +19,4 @@ tags:
 - attack.t1069.002
 - attack.execution
 - attack.t1059.001
+title: BloodHound Collection Files

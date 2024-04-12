@@ -6,12 +6,10 @@ description: 'Detects known malicious service installs that appear in cases in w
   '
 falsepositives:
 - Unlikely
-filename: registry_set_cobaltstrike_service_installs.yml
 level: high
 modified: 2024/03/25
 references:
 - https://www.sans.org/webcasts/tech-tuesday-workshop-cobalt-strike-detection-log-analysis-119395
-related: []
 status: test
 tags:
 - attack.execution
@@ -20,3 +18,4 @@ tags:
 - attack.t1021.002
 - attack.t1543.003
 - attack.t1569.002
+title: Potential CobaltStrike Service Installations - Registry

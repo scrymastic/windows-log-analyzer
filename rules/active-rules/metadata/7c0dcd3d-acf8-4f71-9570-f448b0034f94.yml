@@ -7,7 +7,6 @@ description: Detects suspicious launch of the PSEXESVC service on this system an
 falsepositives:
 - Users that debug Microsoft Intune issues using the commands mentioned in the official
   documentation; see https://learn.microsoft.com/en-us/mem/intune/apps/intune-management-extension
-filename: proc_creation_win_sysinternals_psexesvc_as_system.yml
 level: high
 modified: 2023/02/28
 references:
@@ -18,3 +17,4 @@ related:
 status: test
 tags:
 - attack.execution
+title: PsExec Service Child Process Execution as LOCAL SYSTEM

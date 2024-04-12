@@ -5,7 +5,6 @@ description: Detects shell spawned from Java host process, which could be a sign
 falsepositives:
 - Legitimate calls to system binaries
 - Company specific internal usage
-filename: proc_creation_win_java_susp_child_process_2.yml
 level: medium
 modified: 2024/01/18
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.initial_access
 - attack.persistence
 - attack.privilege_escalation
+title: Shell Process Spawned by Java.EXE

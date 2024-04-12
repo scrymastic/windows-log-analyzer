@@ -4,7 +4,6 @@ description: Detect usage of the "driverquery" utility. Which can be used to per
   reconnaissance on installed drivers
 falsepositives:
 - Legitimate use by third party tools in order to investigate installed drivers
-filename: proc_creation_win_driverquery_usage.yml
 level: medium
 modified: 2023/09/29
 references:
@@ -17,3 +16,4 @@ related:
 status: experimental
 tags:
 - attack.discovery
+title: DriverQuery.EXE Execution

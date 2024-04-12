@@ -4,7 +4,6 @@ description: Detects scenarios where system auditing for important events such a
   "Process Creation" or "Logon" events is disabled.
 falsepositives:
 - Unlikely
-filename: win_security_disable_event_auditing_critical.yml
 level: high
 modified: 2023/11/17
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.002
+title: Important Windows Event Auditing Disabled

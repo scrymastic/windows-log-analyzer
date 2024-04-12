@@ -4,7 +4,6 @@ description: Detects execution of chromium based browser in headless mode using 
   "dump-dom" command line to download files
 falsepositives:
 - Unknown
-filename: proc_creation_win_browsers_chromium_headless_file_download.yml
 level: high
 modified: 2023/05/12
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: File Download with Headless Browser

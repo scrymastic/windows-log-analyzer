@@ -5,14 +5,13 @@ description: Detects a whoami.exe executed with the /priv command line flag inst
   escalation attempt.
 falsepositives:
 - Unknown
-filename: proc_creation_win_whoami_priv_discovery.yml
 level: high
 modified: 2023/02/28
 references:
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/whoami
-related: []
 status: test
 tags:
 - attack.privilege_escalation
 - attack.discovery
 - attack.t1033
+title: Security Privileges Enumeration Via Whoami.EXE

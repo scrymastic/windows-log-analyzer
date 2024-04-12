@@ -12,16 +12,15 @@ description: 'Detects usage of winget to install applications via manifest file.
 falsepositives:
 - Some false positives are expected in some environment that may use this functionality
   to install and test their custom applications
-filename: proc_creation_win_winget_local_install_via_manifest.yml
 level: medium
 modified: 2023/04/17
 references:
 - https://docs.microsoft.com/en-us/windows/package-manager/winget/install#local-install
 - https://lolbas-project.github.io/lolbas/Binaries/Winget/
 - https://github.com/nasbench/Misc-Research/tree/b9596e8109dcdb16ec353f316678927e507a5b8d/LOLBINs/Winget
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1059
+title: Install New Package Via Winget Local Manifest

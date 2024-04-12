@@ -3,13 +3,11 @@ date: 2021/06/29
 description: Detect DLL Load from Spooler Service backup folder
 falsepositives:
 - Loading of legitimate driver
-filename: image_load_spoolsv_dll_load.yml
 level: informational
 modified: 2022/06/02
 references:
 - https://github.com/hhlxf/PrintNightmare
 - https://github.com/ly4k/SpoolFool
-related: []
 status: test
 tags:
 - attack.persistence
@@ -18,3 +16,4 @@ tags:
 - attack.t1574
 - cve.2021.1675
 - cve.2021.34527
+title: Windows Spooler Service Suspicious Binary Load

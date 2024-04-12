@@ -6,17 +6,16 @@ description: Detects the execution of netsh commands that configure a new port f
 falsepositives:
 - Legitimate administration activity
 - WSL2 network bridge PowerShell script used for WSL/Kubernetes/Docker (e.g. https://github.com/microsoft/WSL/issues/4150#issuecomment-504209723)
-filename: proc_creation_win_netsh_port_forwarding.yml
 level: medium
 modified: 2023/09/01
 references:
 - https://www.fireeye.com/blog/threat-research/2019/01/bypassing-network-restrictions-through-rdp-tunneling.html
 - https://adepts.of0x.cc/netsh-portproxy-code/
 - https://www.dfirnotes.net/portproxy_detection/
-related: []
 status: test
 tags:
 - attack.lateral_movement
 - attack.defense_evasion
 - attack.command_and_control
 - attack.t1090
+title: New Port Forwarding Rule Added Via Netsh.EXE

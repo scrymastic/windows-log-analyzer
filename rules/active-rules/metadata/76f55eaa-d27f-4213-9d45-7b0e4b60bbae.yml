@@ -15,9 +15,7 @@ description: 'An adversary might use WMI to check if a certain remote service is
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_wmic_recon_service.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1047/T1047.md
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wmic
@@ -28,3 +26,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1047
+title: Service Reconnaissance Via Wmic.EXE

@@ -5,12 +5,9 @@ falsepositives:
 - Legitimate third party application located in "AppData" may leverage this DLL to
   offer 7z compression functionality and may generate false positives. Apply additional
   filters as needed.
-filename: image_load_side_load_7za.yml
 level: low
-modified: ''
 references:
 - https://www.gov.pl/attachment/ee91f24d-3e67-436d-aa50-7fa56acf789d
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
@@ -18,3 +15,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential 7za.DLL Sideloading

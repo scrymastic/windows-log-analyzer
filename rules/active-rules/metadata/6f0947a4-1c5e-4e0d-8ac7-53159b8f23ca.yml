@@ -3,7 +3,6 @@ date: 2022/05/05
 description: Detects potentially suspicious child processes of "regsvr32.exe".
 falsepositives:
 - Unlikely, but can rarely occur. Apply additional filters accordingly.
-filename: proc_creation_win_regsvr32_susp_child_process.yml
 level: high
 modified: 2023/05/26
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.010
+title: Potentially Suspicious Child Process Of Regsvr32

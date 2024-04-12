@@ -4,7 +4,6 @@ description: Detects known WMI recon method to look for unquoted service paths, 
   used by pentest inside of powershell scripts attackers enum scripts
 falsepositives:
 - Unknown
-filename: posh_ps_wmi_unquoted_service_search.yml
 level: medium
 modified: 2022/11/25
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1047
+title: WMIC Unquoted Services Path Lookup - PowerShell

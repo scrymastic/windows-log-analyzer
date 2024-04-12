@@ -4,13 +4,14 @@ description: Detects a failed installation of a Exchange Transport Agent
 falsepositives:
 - Legitimate installations of exchange TransportAgents. AssemblyPath is a good indicator
   for this.
-filename: win_exchange_transportagent_failed.yml
+fields:
+- AssemblyPath
 level: high
 modified: 2022/07/12
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-persistence-via-microsoft-exchange-server-or-outlook?slide=8
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1505.002
+title: Failed MSExchange Transport Agent Installation

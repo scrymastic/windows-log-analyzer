@@ -5,7 +5,6 @@ description: Attempting to disable scheduled scanning and other parts of Windows
 falsepositives:
 - Legitimate PowerShell scripts that disable Windows Defender for troubleshooting
   purposes. Must be investigated.
-filename: posh_pc_tamper_windows_defender_set_mp.yml
 level: high
 modified: 2024/01/02
 references:
@@ -17,3 +16,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Tamper Windows Defender - PSClassic

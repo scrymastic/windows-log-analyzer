@@ -3,15 +3,13 @@ date: 2023/10/25
 description: Detects the installation of VsCode tunnel (code-tunnel) as a service.
 falsepositives:
 - Legitimate installation of code-tunnel as a service
-filename: proc_creation_win_vscode_tunnel_service_install.yml
 level: medium
-modified: ''
 references:
 - https://ipfyx.fr/post/visual-studio-code-tunnel/
 - https://badoption.eu/blog/2023/01/31/code_c2.html
 - https://code.visualstudio.com/docs/remote/tunnels
-related: []
 status: experimental
 tags:
 - attack.command_and_control
 - attack.t1071.001
+title: Visual Studio Code Tunnel Service Installation

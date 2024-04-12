@@ -4,13 +4,11 @@ description: Detects modification addition to the 'TypedPaths' key in the user o
   admin registry via the commandline. Which might indicate persistence attempt
 falsepositives:
 - Unknown
-filename: proc_creation_win_registry_typed_paths_persistence.yml
 level: medium
-modified: ''
 references:
 - https://twitter.com/dez_/status/1560101453150257154
 - https://forensafe.com/blogs/typedpaths.html
-related: []
 status: test
 tags:
 - attack.persistence
+title: Persistence Via TypedPaths - CommandLine

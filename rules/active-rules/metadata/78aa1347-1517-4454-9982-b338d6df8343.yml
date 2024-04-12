@@ -11,15 +11,14 @@ description: 'Adversaries may abuse PowerShell commands and scripts for executio
   '
 falsepositives:
 - Legitimate administrative script
-filename: posh_ps_msxml_com.yml
 level: medium
 modified: 2022/05/19
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1059.001/T1059.001.md#atomic-test-7---powershell-msxml-com-object---with-prompt
 - https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms766431(v=vs.85)
 - https://www.trendmicro.com/en_id/research/22/e/uncovering-a-kingminer-botnet-attack-using-trend-micro-managed-x.html
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Powershell MsXml COM Object

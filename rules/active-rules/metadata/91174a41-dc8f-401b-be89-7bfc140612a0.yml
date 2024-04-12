@@ -3,9 +3,7 @@ date: 2022/01/23
 description: Detects the creation of a new office macro files on the systems
 falsepositives:
 - Very common in environments that rely heavily on macro documents
-filename: file_event_win_office_macro_files_created.yml
 level: low
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1566.001/T1566.001.md
 - https://docs.microsoft.com/en-us/deployoffice/compat/office-file-format-reference
@@ -16,3 +14,4 @@ status: test
 tags:
 - attack.initial_access
 - attack.t1566.001
+title: Office Macro File Creation

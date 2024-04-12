@@ -5,13 +5,12 @@ description: Detects the deletion of IIS WebServer access logs which may indicat
 falsepositives:
 - During uninstallation of the IIS service
 - During log rotation
-filename: file_delete_win_delete_iis_access_logs.yml
 level: medium
 modified: 2023/02/15
 references:
 - https://www.elastic.co/guide/en/security/current/webserver-access-logs-deleted.html
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1070
+title: IIS WebServer Access Logs Deleted

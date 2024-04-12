@@ -7,14 +7,12 @@ description: Detects cases in which an ISO files is opend within an archiver lik
 falsepositives:
 - Legitimate cases in which archives contain ISO or IMG files and the user opens the
   archive and the image via clicking and not extraction
-filename: proc_creation_win_susp_archiver_iso_phishing.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/1ZRR4H/status/1534259727059787783
 - https://app.any.run/tasks/e1fe6a62-bce8-4323-a49a-63795d9afd5d/
-related: []
 status: test
 tags:
 - attack.initial_access
 - attack.t1566
+title: Phishing Pattern ISO in Archive

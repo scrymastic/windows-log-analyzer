@@ -9,13 +9,11 @@ description: 'Detects the enumeration and query of interesting and in some cases
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_sc_query_interesting_services.yml
 level: low
-modified: ''
 references:
 - https://www.n00py.io/2021/05/dumping-plaintext-rdp-credentials-from-svchost-exe/
 - https://pentestlab.blog/tag/svchost/
-related: []
 status: experimental
 tags:
 - attack.t1003
+title: Interesting Service Enumeration Via Sc.EXE

@@ -7,13 +7,12 @@ falsepositives:
 - False positives may occur with some of the selected binaries if you have tasks using
   them (which could be very common in your environment). Exclude all the specific
   trusted tasks before using this rule
-filename: win_taskscheduler_lolbin_execution_via_task_scheduler.yml
 level: medium
 modified: 2023/02/07
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1053.005
+title: Scheduled Task Executed Uncommon LOLBIN

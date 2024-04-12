@@ -4,13 +4,11 @@ description: Detects a registry key used by IceID in a campaign that distributes
   OneNote files
 falsepositives:
 - Unknown
-filename: registry_event_malware_qakbot_registry.yml
 level: high
-modified: ''
 references:
 - https://www.zscaler.com/blogs/security-research/onenote-growing-threat-malware-distribution
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: Potential Qakbot Registry Activity

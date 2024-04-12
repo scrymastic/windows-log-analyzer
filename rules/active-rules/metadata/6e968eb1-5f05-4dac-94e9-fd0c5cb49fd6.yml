@@ -5,13 +5,11 @@ description: Detects the execution utitilies often found in Visual Studio tools 
   with the same name
 falsepositives:
 - Unknown
-filename: proc_creation_win_lolbin_sideload_link_binary.yml
 level: medium
-modified: ''
 references:
 - https://twitter.com/0gtweet/status/1560732860935729152
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Sideloading Link.EXE

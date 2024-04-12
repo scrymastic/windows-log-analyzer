@@ -6,7 +6,6 @@ description: Detects PsExec default pipe creation where the image executed is lo
 falsepositives:
 - Rare legitimate use of psexec from the locations mentioned above. This will require
   initial tuning based on your environment.
-filename: pipe_created_sysinternals_psexec_default_pipe_susp_location.yml
 level: medium
 modified: 2023/09/20
 references:
@@ -20,3 +19,4 @@ tags:
 - attack.execution
 - attack.t1569.002
 - attack.s0029
+title: PsExec Tool Execution From Suspicious Locations - PipeName

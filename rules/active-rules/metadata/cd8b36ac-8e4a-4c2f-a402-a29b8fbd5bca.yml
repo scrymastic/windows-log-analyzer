@@ -4,7 +4,6 @@ description: Detects file write event from/to a fake recycle bin folder that is 
   used as a staging directory for malware
 falsepositives:
 - Unknown
-filename: file_event_win_susp_recycle_bin_fake_exec.yml
 level: high
 modified: 2023/12/11
 references:
@@ -17,3 +16,4 @@ status: experimental
 tags:
 - attack.persistence
 - attack.defense_evasion
+title: Suspicious File Creation Activity From Fake Recycle.Bin Folder

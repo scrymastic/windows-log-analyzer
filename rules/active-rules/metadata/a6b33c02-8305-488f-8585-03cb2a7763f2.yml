@@ -3,14 +3,13 @@ date: 2019/12/31
 description: Detects the use of Windows Credential Editor (WCE)
 falsepositives:
 - Unknown
-filename: registry_event_hack_wce_reg.yml
 level: critical
 modified: 2021/11/27
 references:
 - https://www.ampliasecurity.com/research/windows-credentials-editor/
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1003.001
 - attack.s0005
+title: Windows Credential Editor Registry

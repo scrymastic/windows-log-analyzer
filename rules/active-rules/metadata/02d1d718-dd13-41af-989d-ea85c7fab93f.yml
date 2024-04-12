@@ -4,7 +4,6 @@ description: Detects uncommon processes creating remote threads.
 falsepositives:
 - This rule is best put in testing first in order to create a baseline that reflects
   the data in your environment.
-filename: create_remote_thread_win_susp_relevant_source_image.yml
 level: high
 modified: 2024/01/17
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.privilege_escalation
 - attack.defense_evasion
 - attack.t1055
+title: Rare Remote Thread Creation By Uncommon Source Image

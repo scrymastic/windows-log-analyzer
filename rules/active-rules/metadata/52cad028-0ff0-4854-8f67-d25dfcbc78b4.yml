@@ -3,7 +3,6 @@ date: 2020/04/01
 description: Detects a suspicious child process of a Microsoft HTML Help (HH.exe)
 falsepositives:
 - Unknown
-filename: proc_creation_win_hh_html_help_susp_child_process.yml
 level: high
 modified: 2023/04/12
 references:
@@ -11,7 +10,6 @@ references:
 - https://github.com/elastic/protections-artifacts/commit/746086721fd385d9f5c6647cada1788db4aea95f#diff-27939090904026cc396b0b629c8e4314acd6f5dac40a676edbc87f4567b47eb7
 - https://www.ptsecurity.com/ww-en/analytics/pt-esc-threat-intelligence/higaisa-or-winnti-apt-41-backdoors-old-and-new/
 - https://www.zscaler.com/blogs/security-research/unintentional-leak-glimpse-attack-vectors-apt37
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -28,3 +26,4 @@ tags:
 - attack.t1218.011
 - attack.t1566
 - attack.t1566.001
+title: HTML Help HH.EXE Suspicious Child Process

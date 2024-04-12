@@ -9,14 +9,13 @@ description: 'Detects password dumper activity by monitoring remote thread creat
   '
 falsepositives:
 - Antivirus products
-filename: create_remote_thread_win_susp_password_dumper_lsass.yml
 level: high
 modified: 2021/06/21
 references:
 - https://jpcertcc.github.io/ToolAnalysisResultSheet/details/WCE.htm
-related: []
 status: stable
 tags:
 - attack.credential_access
 - attack.s0005
 - attack.t1003.001
+title: Password Dumper Remote Thread in LSASS

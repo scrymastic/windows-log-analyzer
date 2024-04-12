@@ -6,9 +6,7 @@ description: Detects execution of the AgentExecutor.exe binary. Which can be abu
 falsepositives:
 - Legitimate use via Intune management. You exclude script paths and names to reduce
   FP rate
-filename: proc_creation_win_agentexecutor_potential_abuse.yml
 level: medium
-modified: ''
 references:
 - https://twitter.com/lefterispan/status/1286259016436514816
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Agentexecutor/
@@ -21,3 +19,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: AgentExecutor PowerShell Execution

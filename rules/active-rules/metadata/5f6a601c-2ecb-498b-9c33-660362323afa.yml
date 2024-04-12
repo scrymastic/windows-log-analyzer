@@ -4,14 +4,13 @@ description: Adversaries may install a root certificate on a compromised system 
   avoid warnings when connecting to adversary controlled web servers.
 falsepositives:
 - Unlikely
-filename: proc_creation_win_powershell_import_cert_susp_locations.yml
 level: high
 modified: 2023/01/16
 references:
 - https://www.microsoft.com/security/blog/2022/09/07/profiling-dev-0270-phosphorus-ransomware-operations/
 - https://docs.microsoft.com/en-us/powershell/module/pki/import-certificate?view=windowsserver2022-ps
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1553.004
+title: Root Certificate Installed From Susp Locations

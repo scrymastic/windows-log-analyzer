@@ -9,12 +9,10 @@ falsepositives:
   is known to contain the 'log.dll' file.
 - The Canon MyPrinter folder 'C:\Program Files\Canon\MyPrinter\' is known to contain
   the 'log.dll' file
-filename: image_load_side_load_antivirus.yml
 level: medium
 modified: 2023/03/13
 references:
 - https://hijacklibs.net/
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -22,3 +20,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential Antivirus Software DLL Sideloading

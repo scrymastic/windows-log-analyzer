@@ -3,14 +3,13 @@ date: 2022/05/07
 description: Detect use of Ilasm.exe to compile c# code into dll or exe.
 falsepositives:
 - Unknown
-filename: proc_creation_win_lolbin_ilasm.yml
 level: medium
 modified: 2022/05/16
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Ilasm/
 - https://www.echotrail.io/insights/search/ilasm.exe
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1127
+title: Ilasm Lolbin Use Compile C-Sharp

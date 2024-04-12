@@ -7,7 +7,6 @@ description: 'Detects a network connection initiated by IMEWDBLD.EXE. This might
   '
 falsepositives:
 - Unknown
-filename: net_connection_win_imewdbld.yml
 level: high
 modified: 2023/11/09
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Network Connection Initiated By IMEWDBLD.EXE

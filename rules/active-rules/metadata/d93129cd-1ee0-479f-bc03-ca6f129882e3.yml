@@ -9,14 +9,13 @@ description: 'Adversaries may employ various system checks to detect and avoid v
   '
 falsepositives:
 - Unknown
-filename: posh_ps_detect_vm_env.yml
 level: medium
 modified: 2022/03/03
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1497.001/T1497.001.md
 - https://techgenix.com/malicious-powershell-scripts-evade-detection/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1497.001
+title: Powershell Detect Virtualization Environment

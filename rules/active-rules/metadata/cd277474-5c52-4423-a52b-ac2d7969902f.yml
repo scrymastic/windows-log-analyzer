@@ -4,9 +4,7 @@ description: Detects setting of a new registry value related to BgInfo configura
   which can be abused to execute custom WMI query via "BgInfo.exe"
 falsepositives:
 - Legitimate WMI query
-filename: registry_set_bginfo_custom_wmi_query.yml
 level: medium
-modified: ''
 references:
 - Internal Research
 related:
@@ -16,3 +14,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: New BgInfo.EXE Custom WMI Query Registry Configuration

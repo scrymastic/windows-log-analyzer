@@ -6,14 +6,13 @@ description: Detects potential abuse of the "register_app.vbs" script that is pa
   and execution.
 falsepositives:
 - Other VB scripts that leverage the same starting command line flags
-filename: proc_creation_win_lolscript_register_app.yml
 level: medium
 modified: 2022/07/07
 references:
 - https://twitter.com/sblmsrsn/status/1456613494783160325?s=20
 - https://github.com/microsoft/Windows-classic-samples/blob/7cbd99ac1d2b4a0beffbaba29ea63d024ceff700/Samples/Win7Samples/winbase/vss/vsssampleprovider/register_app.vbs
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Potential Register_App.Vbs LOLScript Abuse

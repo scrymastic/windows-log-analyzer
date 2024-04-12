@@ -16,12 +16,10 @@ falsepositives:
   the Subject do not reference the same user
 - If prevalent in the environment, filter on CNs that end in a dollar sign indicating
   it is a machine name
-filename: win_system_kdcsvc_cert_use_no_strong_mapping.yml
 level: medium
-modified: ''
 references:
 - https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16
-related: []
 status: experimental
 tags:
 - attack.privilege_escalation
+title: Certificate Use With No Strong Mapping

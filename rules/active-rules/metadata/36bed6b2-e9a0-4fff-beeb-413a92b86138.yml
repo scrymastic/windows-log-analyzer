@@ -4,16 +4,15 @@ description: Detects usage of the "Get-AdComputer" to enumerate Computers or pro
   within Active Directory.
 falsepositives:
 - Unknown
-filename: posh_ps_get_adcomputer.yml
 level: low
 modified: 2023/07/08
 references:
 - https://learn.microsoft.com/en-us/powershell/module/activedirectory/get-adcomputer
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1018/T1018.md
 - https://github.com/redcanaryco/atomic-red-team/blob/02cb591f75064ffe1e0df9ac3ed5972a2e491c97/atomics/T1087.002/T1087.002.md
-related: []
 status: experimental
 tags:
 - attack.discovery
 - attack.t1018
 - attack.t1087.002
+title: Active Directory Computers Enumeration With Get-AdComputer

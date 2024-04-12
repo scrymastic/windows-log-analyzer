@@ -3,13 +3,12 @@ date: 2021/05/26
 description: Detects Rclone config files being created
 falsepositives:
 - Legitimate Rclone usage
-filename: file_event_win_rclone_config_files.yml
 level: medium
 modified: 2023/05/09
 references:
 - https://research.nccgroup.com/2021/05/27/detecting-rclone-an-effective-tool-for-exfiltration/
-related: []
 status: test
 tags:
 - attack.exfiltration
 - attack.t1567.002
+title: Rclone Config File Creation

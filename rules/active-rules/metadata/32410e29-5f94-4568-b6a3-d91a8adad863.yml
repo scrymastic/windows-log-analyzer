@@ -4,14 +4,13 @@ description: Detects the use of Fast Reverse Proxy. frp is a fast reverse proxy 
   help you expose a local server behind a NAT or firewall to the Internet.
 falsepositives:
 - Legitimate use
-filename: proc_creation_win_pua_frp.yml
 level: high
 modified: 2023/02/04
 references:
 - https://asec.ahnlab.com/en/38156/
 - https://github.com/fatedier/frp
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1090
+title: PUA - Fast Reverse Proxy (FRP) Execution

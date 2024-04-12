@@ -4,15 +4,14 @@ description: Detects potential tampering with Windows Defender settings such as 
   exclusion using wmic
 falsepositives:
 - Unknown
-filename: proc_creation_win_wmic_namespace_defender.yml
 level: high
 modified: 2023/02/14
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/5c1e6f1b4fafd01c8d1ece85f510160fc1275fbf/atomics/T1562.001/T1562.001.md
 - https://www.bleepingcomputer.com/news/security/gootkit-malware-bypasses-windows-defender-by-setting-path-exclusions/
 - https://www.bleepingcomputer.com/news/security/iobit-forums-hacked-to-spread-ransomware-to-its-members/
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1546.008
+title: Potential Windows Defender Tampering Via Wmic.EXE

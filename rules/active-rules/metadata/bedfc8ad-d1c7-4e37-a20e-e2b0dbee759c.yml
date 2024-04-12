@@ -4,7 +4,6 @@ description: Detects the use of SharpEvtHook, a tool that tampers with the Windo
   event logs
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_sharpevtmute.yml
 level: high
 modified: 2023/02/14
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.002
+title: HackTool - SharpEvtMute Execution

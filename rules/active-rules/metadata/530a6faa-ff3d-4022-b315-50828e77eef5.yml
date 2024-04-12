@@ -4,12 +4,10 @@ description: Detects the installation of the anydesk software service. Which cou
   be an indication of anydesk abuse if you the software isn't already used.
 falsepositives:
 - Legitimate usage of the anydesk tool
-filename: win_system_service_install_anydesk.yml
 level: medium
-modified: ''
 references:
 - https://thedfirreport.com/2022/08/08/bumblebee-roasts-its-way-to-domain-admin/
-related: []
 status: test
 tags:
 - attack.persistence
+title: Anydesk Remote Access Software Service Installation

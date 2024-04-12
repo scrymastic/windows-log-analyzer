@@ -3,7 +3,6 @@ date: 2020/10/06
 description: Detects remote thread creation by PowerShell processes into "lsass.exe"
 falsepositives:
 - Unknown
-filename: create_remote_thread_win_powershell_lsass.yml
 level: high
 modified: 2022/12/18
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1003.001
+title: Potential Credential Dumping Attempt Via PowerShell Remote Thread

@@ -4,7 +4,6 @@ description: Detects SyncAppvPublishingServer process execution which usually ut
   by adversaries to bypass PowerShell execution restrictions.
 falsepositives:
 - App-V clients
-filename: posh_pm_syncappvpublishingserver_exe.yml
 level: medium
 modified: 2022/12/02
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: SyncAppvPublishingServer Bypass Powershell Restriction - PS Module

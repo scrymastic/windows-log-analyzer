@@ -6,14 +6,13 @@ description: 'Detects code integrity failures such as missing page hashes or cor
   '
 falsepositives:
 - Disk device errors
-filename: win_security_codeintegrity_check_failure.yml
 level: informational
 modified: 2023/12/13
 references:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5038
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-6281
-related: []
 status: stable
 tags:
 - attack.defense_evasion
 - attack.t1027.001
+title: Failed Code Integrity Checks

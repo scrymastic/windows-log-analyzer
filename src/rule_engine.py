@@ -13,7 +13,6 @@ CYAN = Fore.CYAN
 RESET = Style.RESET_ALL
 
 
-
 class RuleEngine:
     def __init__(self):
         # Specify the path to the legit-rules folder
@@ -64,7 +63,7 @@ class RuleEngine:
             print(f"{GREEN}[INFO] Rule '{rule_file.name}' added successfully.{RESET}")
             return True
         else:
-            print(f"{RED}[ERROR] Rule '{rule_file.name}' not added.{RESET}")
+            print(f"{RED}[ERROR] Rule '{rule_file.name}' added failed.{RESET}")
             return False
 
 
@@ -83,14 +82,11 @@ class RuleEngine:
 
     def deploy_rule(self, rule_file_name: str) -> bool:
         # Assuming `rule` is the name of the rule file from legit-foder
-
         # Deploy the rule to the rule engine
         # By moving the rule from the legit-rules folder to the active-rules folder
         # As follows:
-        # /active-rules/detections/{rule_id}.yml: detection, logsource
-        # /active-rules/headers/{rule_id}.yml: title
-        # /active-rules/metadata/{rule_id}.yml: add filename field, other metadata
-
+        # /active-rules/detections/{rule_id}.yml: detection, logsource, and id fields
+        # /active-rules/metadata/{rule_id}.yml: other metadata
         # Get the rule file from the legit-rules folder
         rule_file = self.legit_rules_folder / f"{rule_file_name}"
         if rule_file.exists():
@@ -106,27 +102,11 @@ class RuleEngine:
             with open(self.active_rules_folder / "detections" / f"{rule_content['id']}.yml", "w") as f:
                 yaml.dump(detection, f)
 
-            # Create headers file
-            headers = {
-                "title": rule_content["title"]
-            }
-            with open(self.active_rules_folder / "headers" / f"{rule_content['id']}.yml", "w") as f:
-                yaml.dump(headers, f)
-
-            # Create metadata file
-            metadata = {
-                "filename": rule_file_name,
-                "related": rule_content.get("related", []),
-                "status": rule_content["status"],
-                "description": rule_content["description"],
-                "references": rule_content["references"],
-                "author": rule_content["author"],
-                "date": rule_content["date"],
-                "modified": rule_content.get("modified", ""),
-                "tags": rule_content["tags"],
-                "falsepositives": rule_content.get("falsepositives", []),
-                "level": rule_content["level"]
-            }
+            # Other metadata
+            metadata = rule_content.copy()
+            metadata.pop('detection')
+            metadata.pop('logsource')
+            metadata.pop('id')
             with open(self.active_rules_folder / "metadata" / f"{rule_content['id']}.yml", "w") as f:
                 yaml.dump(metadata, f)
 
@@ -145,11 +125,9 @@ class RuleEngine:
 
         arf = self.active_rules_folder
         if (arf / "detections" / f"{rule_id}.yml").exists() or \
-            (arf / "headers" / f"{rule_id}.yml").exists() or \
             (arf / "metadata" / f"{rule_id}.yml").exists():
             # Remove the rule files from the active-rules folder
             (arf / "detections" / f"{rule_id}.yml").unlink()
-            (arf / "headers" / f"{rule_id}.yml").unlink()
             (arf / "metadata" / f"{rule_id}.yml").unlink()
             
             print(f"{GREEN}[INFO] Rule '{rule_id}' undeployed successfully.{RESET}")
@@ -164,11 +142,24 @@ class RuleEngine:
         # Load the rules from the /active-rules/detections folder
         yaml_files = glob.glob(os.path.join(self.active_rules_folder / "detections", "*.yml"))
         return yaml_files
+    
+
+    def get_rule(self, rule_id: str) -> dict:
+        # Return the rule with the specified rule ID
+        # Load the rule from the /active-rules/detections folder
+        rule_detection = self.active_rules_folder / "detections" / f"{rule_id}.yml"
+        rule_metadata = self.active_rules_folder / "metadata" / f"{rule_id}.yml"
+        if rule_detection.exists() and rule_metadata.exists():
+            with open(rule_detection, 'r') as f:
+                detection = yaml.safe_load(f)
+            with open(rule_metadata, 'r') as f:
+                metadata = yaml.safe_load(f)
+            rule = {**metadata, **detection}
+            return rule
 
 
-    def search_rules(self, keyword: str) -> list:
+    def search_rules(self, keywords=list) -> list:
         # Return the list of rules that contain the keyword
-
         matching_rules = []
 
         # Use glob to find all YAML files in the legit-rules folder
@@ -179,22 +170,24 @@ class RuleEngine:
             with open(yaml_file, 'r') as file:
                 rule = yaml.safe_load(file)
                 # Check if the keyword is present in any field of the rule
-                if (keyword in str(value) for value in rule.values()):
+                if all(keyword in str(rule) for keyword in keywords):
                     matching_rules.append(rule["id"])
 
         return matching_rules
     
 
-    def load_rules(self) -> list:
+    def load_rules(self) -> dict:
         # Load the rules from the active-rules folder
         # Return the rules as a list of dictionaries
-        rules = []
+        rules = {}
         arf = self.active_rules_folder
         yaml_files = glob.glob(os.path.join(arf / "detections", "*.yml"))
         for yaml_file in yaml_files:
             with open(yaml_file, 'r') as file:
                 rule = yaml.safe_load(file)
-                rules.append(rule)
+                rule_id = rule["id"]
+                rules[rule_id] = rule
+        print(f"{CYAN}[INFO] {len(rules)} rules loaded.{RESET}")
         return rules
     
     

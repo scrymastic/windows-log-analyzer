@@ -14,13 +14,11 @@ description: 'An adversary may use legitimate desktop support and remote access 
   '
 falsepositives:
 - Legitimate use
-filename: file_event_win_anydesk_artefact.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1219/T1219.md#atomic-test-2---anydesk-files-detected-test-on-windows
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1219
+title: Anydesk Temporary Artefact

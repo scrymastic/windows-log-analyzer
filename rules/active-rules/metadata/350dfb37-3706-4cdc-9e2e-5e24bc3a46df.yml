@@ -5,14 +5,12 @@ description: Detects when an attacker calls the "ALTER SERVER AUDIT" or "DROP SE
 falsepositives:
 - This event should only fire when an administrator is modifying the audit policy.
   Which should be a rare occurrence once it's set up
-filename: win_mssql_disable_audit_settings.yml
 level: high
-modified: ''
 references:
 - https://www.netspi.com/blog/technical/network-penetration-testing/sql-server-persistence-part-1-startup-stored-procedures/
 - https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-server-audit-transact-sql?view=sql-server-ver16
 - https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-server-audit-transact-sql?view=sql-server-ver16
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: MSSQL Disable Audit Settings

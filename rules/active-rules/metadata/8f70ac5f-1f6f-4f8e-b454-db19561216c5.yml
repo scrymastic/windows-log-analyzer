@@ -4,12 +4,10 @@ description: Detects the execution of powershell, a WebClient object creation an
   the invocation of DownloadFile in a single command line
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_susp_ps_downloadfile.yml
 level: high
 modified: 2021/11/27
 references:
 - https://www.fireeye.com/blog/threat-research/2020/03/apt41-initiates-global-intrusion-campaign-using-multiple-exploits.html
-related: []
 status: test
 tags:
 - attack.execution
@@ -17,3 +15,4 @@ tags:
 - attack.command_and_control
 - attack.t1104
 - attack.t1105
+title: PowerShell DownloadFile

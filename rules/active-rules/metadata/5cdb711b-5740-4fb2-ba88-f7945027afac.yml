@@ -4,15 +4,13 @@ description: Detects rundll32 execution where the DLL is located on a remote loc
   (share)
 falsepositives:
 - Unlikely
-filename: proc_creation_win_rundll32_unc_path.yml
 level: high
-modified: ''
 references:
 - https://www.cybereason.com/blog/rundll32-the-infamous-proxy-for-executing-malicious-code
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1021.002
 - attack.t1218.011
+title: Rundll32 UNC Path Execution

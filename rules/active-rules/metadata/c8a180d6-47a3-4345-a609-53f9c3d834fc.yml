@@ -4,9 +4,10 @@ description: Detects suspicious reconnaissance command line activity on Windows 
   using the PowerShell Get-LocalGroupMember Cmdlet
 falsepositives:
 - Administrative activity
-filename: proc_creation_win_powershell_get_localgroup_member_recon.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: medium
-modified: ''
 references:
 - https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/
 related:
@@ -16,3 +17,4 @@ status: test
 tags:
 - attack.discovery
 - attack.t1087.001
+title: Suspicious Reconnaissance Activity Using Get-LocalGroupMember Cmdlet

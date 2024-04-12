@@ -3,13 +3,12 @@ date: 2020/10/18
 description: Detects potential DLL injection and execution using "Tracker.exe"
 falsepositives:
 - Unknown
-filename: proc_creation_win_lolbin_tracker.yml
 level: medium
 modified: 2023/01/09
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Tracker/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1055.001
+title: Potential DLL Injection Or Execution Using Tracker.exe

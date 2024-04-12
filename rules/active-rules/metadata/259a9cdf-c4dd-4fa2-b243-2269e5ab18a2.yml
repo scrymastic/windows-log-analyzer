@@ -5,7 +5,6 @@ description: Detects successful logon from public IP address via RDP. This can i
 falsepositives:
 - Legitimate or intentional inbound connections from public IP addresses on the RDP
   port.
-filename: win_security_successful_external_remote_rdp_login.yml
 level: medium
 modified: 2024/03/11
 references:
@@ -21,3 +20,4 @@ tags:
 - attack.t1133
 - attack.t1078
 - attack.t1110
+title: External Remote RDP Logon from Public IP

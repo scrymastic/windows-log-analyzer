@@ -13,7 +13,6 @@ falsepositives:
   example an admin scripts like https://www.itexperience.net/sccm-batch-files-and-32-bits-processes-on-64-bits-os/)
 - When cmd.exe and xcopy.exe are called directly
 - When the command contains the keywords but not in the correct order
-filename: proc_creation_win_susp_copy_system_dir.yml
 level: medium
 modified: 2023/08/29
 references:
@@ -27,3 +26,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1036.003
+title: Suspicious Copy From or To System Directory

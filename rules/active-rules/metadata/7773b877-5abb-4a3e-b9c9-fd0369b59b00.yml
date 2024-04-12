@@ -3,9 +3,7 @@ date: 2023/02/14
 description: Detects the execution of WMIC to query information on a remote system
 falsepositives:
 - Unknown
-filename: proc_creation_win_wmic_remote_execution.yml
 level: medium
-modified: ''
 references:
 - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
 - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wmic
@@ -18,3 +16,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1047
+title: WMIC Remote Command Execution

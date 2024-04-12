@@ -4,14 +4,13 @@ description: Detects the use of Moriya rootkit as described in the securelist's 
   TunnelSnake report
 falsepositives:
 - Unknown
-filename: win_system_moriya_rootkit.yml
 level: critical
 modified: 2022/11/29
 references:
 - https://securelist.com/operation-tunnelsnake-and-moriya-rootkit/101831
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.t1543.003
+title: Moriya Rootkit - System

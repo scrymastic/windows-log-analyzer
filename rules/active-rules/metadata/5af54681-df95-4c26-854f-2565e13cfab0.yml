@@ -4,13 +4,12 @@ description: Detects successful logon attempts performed with WMI
 falsepositives:
 - Monitoring tools
 - Legitimate system administration
-filename: win_security_susp_wmi_login.yml
 level: low
 modified: 2024/01/17
 references:
 - Internal Research
-related: []
 status: stable
 tags:
 - attack.execution
 - attack.t1047
+title: Successful Account Login Via WMI

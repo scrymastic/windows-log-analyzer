@@ -4,13 +4,11 @@ description: Detects potential suspicious winget package installation from a sus
   source.
 falsepositives:
 - Unknown
-filename: create_stream_hash_winget_susp_package_source.yml
 level: high
-modified: ''
 references:
 - https://github.com/nasbench/Misc-Research/tree/b9596e8109dcdb16ec353f316678927e507a5b8d/LOLBINs/Winget
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.persistence
+title: Potential Suspicious Winget Package Installation

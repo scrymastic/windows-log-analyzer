@@ -9,13 +9,12 @@ description: 'Detects when an attacker modifies the "REG_MULTI_SZ" value named "
   '
 falsepositives:
 - Unlikely
-filename: registry_set_persistence_lsa_extension.yml
 level: high
 modified: 2023/08/17
 references:
 - https://persistence-info.github.io/Data/lsaaextension.html
 - https://twitter.com/0gtweet/status/1476286368385019906
-related: []
 status: experimental
 tags:
 - attack.persistence
+title: Potential Persistence Via LSA Extensions

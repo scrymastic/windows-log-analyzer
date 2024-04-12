@@ -7,9 +7,7 @@ description: Detects execution of "odbcconf" with "REGSVR" in order to register 
 falsepositives:
 - Legitimate DLLs being registered via "odbcconf" will generate false positives. Investigate
   the path of the DLL and its content to determine if the action is authorized.
-filename: proc_creation_win_odbcconf_register_dll_regsvr.yml
 level: medium
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/sql/odbc/odbcconf-exe?view=sql-server-ver16
 - https://lolbas-project.github.io/lolbas/Binaries/Odbcconf/
@@ -24,3 +22,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.008
+title: New DLL Registered Via Odbcconf.EXE

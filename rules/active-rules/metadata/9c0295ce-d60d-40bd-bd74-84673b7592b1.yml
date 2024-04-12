@@ -4,7 +4,8 @@ description: Detects suspicious base64 encoded and obfuscated "LOAD" keyword use
   in .NET "reflection.assembly"
 falsepositives:
 - Unlikely
-filename: proc_creation_win_powershell_base64_reflection_assembly_load_obfusc.yml
+fields:
+- CommandLine
 level: high
 modified: 2023/04/06
 references:
@@ -20,3 +21,4 @@ tags:
 - attack.defense_evasion
 - attack.t1059.001
 - attack.t1027
+title: Suspicious Encoded And Obfuscated Reflection Assembly Load Function Call

@@ -4,12 +4,16 @@ description: Detects rundll32 execution without parameters as observed when runn
   Metasploit windows/smb/psexec exploit module
 falsepositives:
 - False positives may occur if a user called rundll32 from CLI with no options
-filename: proc_creation_win_rundll32_without_parameters.yml
+fields:
+- ComputerName
+- SubjectUserName
+- CommandLine
+- Image
+- ParentImage
 level: high
 modified: 2023/02/28
 references:
 - https://bczyz1.github.io/2021/01/30/psexec.html
-related: []
 status: test
 tags:
 - attack.lateral_movement
@@ -17,3 +21,4 @@ tags:
 - attack.t1570
 - attack.execution
 - attack.t1569.002
+title: Rundll32 Execution Without Parameters

@@ -4,14 +4,12 @@ description: Detects technique used by MAZE ransomware to enumerate directories 
   Powershell
 falsepositives:
 - Legitimate PowerShell scripts
-filename: posh_ps_susp_directory_enum.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1083/T1083.md
 - https://www.mandiant.com/resources/tactics-techniques-procedures-associated-with-maze-ransomware-incidents
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1083
+title: Powershell Directory Enumeration

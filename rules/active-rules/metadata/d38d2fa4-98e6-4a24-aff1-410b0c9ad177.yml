@@ -4,14 +4,13 @@ description: Detects the execution of UACMe, a tool used for UAC bypasses, via d
   PE metadata
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_uacme.yml
 level: high
 modified: 2022/11/19
 references:
 - https://github.com/hfiref0x/UACME
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1548.002
+title: HackTool - UACMe Akagi Execution

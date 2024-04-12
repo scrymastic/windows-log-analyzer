@@ -4,13 +4,12 @@ description: Detects the creation of user-specific or system-wide environment va
   via the registry. Which contains suspicious commands and strings
 falsepositives:
 - Unknown
-filename: registry_set_suspicious_env_variables.yml
 level: high
 modified: 2023/08/17
 references:
 - https://infosec.exchange/@sbousseaden/109542254124022664
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.persistence
+title: Suspicious Environment Variable Has Been Registered

@@ -4,13 +4,12 @@ description: Detects suspicious process related to rundll32 based on command lin
   that includes a *.sys file as seen being used by UNC2452
 falsepositives:
 - Unknown
-filename: proc_creation_win_rundll32_sys.yml
 level: high
 modified: 2022/10/09
 references:
 - https://www.microsoft.com/security/blog/2021/03/04/goldmax-goldfinder-sibot-analyzing-nobelium-malware/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.011
+title: Suspicious Rundll32 Activity Invoking Sys File

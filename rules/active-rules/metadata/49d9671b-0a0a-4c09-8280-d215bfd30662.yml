@@ -4,9 +4,7 @@ description: Detects calls to the "terminate" function via wmic in order to kill
   application
 falsepositives:
 - Unknown
-filename: proc_creation_win_wmic_terminate_application.yml
 level: medium
-modified: ''
 references:
 - https://cyble.com/blog/lockfile-ransomware-using-proxyshell-attack-to-deploy-ransomware/
 - https://www.bitdefender.com/files/News/CaseStudies/study/377/Bitdefender-Whitepaper-WMI-creat4871-en-EN-GenericUse.pdf
@@ -17,3 +15,4 @@ status: experimental
 tags:
 - attack.execution
 - attack.t1047
+title: Application Terminated Via Wmic.EXE

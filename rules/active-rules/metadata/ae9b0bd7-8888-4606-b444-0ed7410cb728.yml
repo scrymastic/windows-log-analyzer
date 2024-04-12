@@ -5,15 +5,14 @@ description: Monitors for the hiding possible malicious files in the C:\Windows\
   from.
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_hiding_malware_in_fonts_folder.yml
 level: medium
 modified: 2022/03/08
 references:
 - https://thedfirreport.com/2020/04/20/sqlserver-or-the-miner-in-the-basement/
-related: []
 status: test
 tags:
 - attack.t1211
 - attack.t1059
 - attack.defense_evasion
 - attack.persistence
+title: Writing Of Malicious Files To The Fonts Folder

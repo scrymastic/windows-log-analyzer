@@ -11,9 +11,7 @@ description: 'Detects creation of an ad-hoc Cloudflare Quick Tunnel, which can b
   '
 falsepositives:
 - Legitimate usage of Cloudflare Quick Tunnel
-filename: proc_creation_win_cloudflared_quicktunnel_execution.yml
 level: medium
-modified: ''
 references:
 - https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/
 - https://github.com/cloudflare/cloudflared
@@ -28,3 +26,4 @@ status: experimental
 tags:
 - attack.command_and_control
 - attack.t1090.001
+title: Cloudflared Quick Tunnel Execution

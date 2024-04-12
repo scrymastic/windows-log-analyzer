@@ -4,13 +4,12 @@ description: Detects a possible persistence mechanism using RUN key for Windows 
   and pointing to a suspicious folder
 falsepositives:
 - Unknown
-filename: registry_set_susp_reg_persist_explorer_run.yml
 level: high
 modified: 2023/12/11
 references:
 - https://researchcenter.paloaltonetworks.com/2018/07/unit42-upatre-continues-evolve-new-anti-analysis-techniques/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547.001
+title: Registry Persistence via Explorer Run Key

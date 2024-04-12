@@ -3,13 +3,12 @@ date: 2021/08/09
 description: Detects Commandlet names from ShellIntel exploitation scripts.
 falsepositives:
 - Unknown
-filename: posh_ps_shellintel_malicious_commandlets.yml
 level: high
 modified: 2023/01/02
 references:
 - https://github.com/Shellntel/scripts/
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Malicious ShellIntel PowerShell Commandlets

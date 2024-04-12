@@ -4,13 +4,11 @@ description: Detects the execution of DeviceCredentialDeployment to hide a proce
   from view
 falsepositives:
 - Unlikely
-filename: proc_creation_win_lolbin_device_credential_deployment.yml
 level: medium
-modified: ''
 references:
 - https://github.com/LOLBAS-Project/LOLBAS/pull/147
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: DeviceCredentialDeployment Execution

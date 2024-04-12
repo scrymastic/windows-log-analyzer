@@ -6,15 +6,19 @@ description: Adversaries can carry out malicious operations using a virtual inst
 falsepositives:
 - This may have false positives on hosts where Virtualbox is legitimately being used
   for operations
-filename: proc_creation_win_virtualbox_execution.yml
+fields:
+- ComputerName
+- User
+- CommandLine
+- ParentCommandLine
 level: low
 modified: 2022/07/14
 references:
 - https://news.sophos.com/en-us/2020/05/21/ragnar-locker-ransomware-deploys-virtual-machine-to-dodge-security/
 - https://threatpost.com/maze-ransomware-ragnar-locker-virtual-machine/159350/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1564.006
 - attack.t1564
+title: Detect Virtualbox Driver Installation OR Starting Of VMs

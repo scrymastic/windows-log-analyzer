@@ -5,7 +5,6 @@ description: Detects requests to exclude files, folders or processes from Antivi
 falsepositives:
 - Possible Admin Activity
 - Other Cmdlets that may use the same parameters
-filename: proc_creation_win_powershell_defender_exclusion.yml
 level: medium
 modified: 2022/05/12
 references:
@@ -19,3 +18,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Powershell Defender Exclusion

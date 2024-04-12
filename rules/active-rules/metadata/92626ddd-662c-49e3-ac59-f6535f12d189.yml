@@ -5,12 +5,10 @@ description: Detects the creation of scheduled tasks by user accounts via the "s
 falsepositives:
 - Administrative activity
 - Software installation
-filename: proc_creation_win_schtasks_creation.yml
 level: low
 modified: 2024/01/18
 references:
 - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/schtasks-create
-related: []
 status: test
 tags:
 - attack.execution
@@ -20,3 +18,4 @@ tags:
 - attack.s0111
 - car.2013-08-001
 - stp.1u
+title: Scheduled Task Creation Via Schtasks.EXE

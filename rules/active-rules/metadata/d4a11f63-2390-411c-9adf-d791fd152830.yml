@@ -9,13 +9,12 @@ description: 'Adversaries may attempt to take screen captures of the desktop to 
   '
 falsepositives:
 - Unknown
-filename: posh_ps_capture_screenshots.yml
 level: medium
 modified: 2022/07/07
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1113/T1113.md#atomic-test-6---windows-screen-capture-copyfromscreen
-related: []
 status: test
 tags:
 - attack.collection
 - attack.t1113
+title: Windows Screen Capture with CopyFromScreen

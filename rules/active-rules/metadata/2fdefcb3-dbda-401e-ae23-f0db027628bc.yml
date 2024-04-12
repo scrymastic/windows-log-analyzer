@@ -5,7 +5,6 @@ description: Detects the usage and installation of a backdoor that uses an optio
   screen
 falsepositives:
 - Unlikely
-filename: proc_creation_win_cmd_sticky_key_like_backdoor_execution.yml
 level: critical
 modified: 2023/03/07
 references:
@@ -20,3 +19,4 @@ tags:
 - attack.t1546.008
 - car.2014-11-003
 - car.2014-11-008
+title: Sticky Key Like Backdoor Execution

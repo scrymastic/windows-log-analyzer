@@ -16,13 +16,12 @@ falsepositives:
   "sharepoint.ourcompany.com" may have to be tuned.
 - It is highly recommended to baseline your activity and tune out common business
   use cases.
-filename: net_connection_win_office_outbound_non_local_ip.yml
 level: medium
 modified: 2024/03/13
 references:
 - https://corelight.com/blog/detecting-cve-2021-42292
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1203
+title: Office Application Initiated Network Connection To Non-Local IP

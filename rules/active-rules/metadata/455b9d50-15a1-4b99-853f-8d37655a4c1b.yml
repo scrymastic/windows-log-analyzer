@@ -4,7 +4,6 @@ description: Detects active directory enumeration activity using known AdFind CL
   flags
 falsepositives:
 - Authorized administrative activity
-filename: proc_creation_win_pua_adfind_enumeration.yml
 level: high
 modified: 2023/03/05
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.discovery
 - attack.t1087.002
+title: PUA - Suspicious ActiveDirectory Enumeration Via AdFind.EXE

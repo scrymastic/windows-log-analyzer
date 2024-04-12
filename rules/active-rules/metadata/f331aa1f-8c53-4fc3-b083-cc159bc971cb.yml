@@ -4,7 +4,6 @@ date: 2018/04/07
 description: Detects the creation of known offensive powershell scripts used for exploitation
 falsepositives:
 - Unknown
-filename: file_event_win_powershell_exploit_scripts.yml
 level: high
 modified: 2024/01/25
 references:
@@ -35,3 +34,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Malicious PowerShell Scripts - FileCreation

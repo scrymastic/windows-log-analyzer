@@ -6,13 +6,12 @@ falsepositives:
 - Administrator activity
 - Proxy SSL certificate with subject modification
 - Smart card enrollement
-filename: win_security_adcs_certificate_template_configuration_vulnerability_eku.yml
 level: high
 modified: 2022/12/25
 references:
 - https://www.specterops.io/assets/resources/Certified_Pre-Owned.pdf
-related: []
 status: test
 tags:
 - attack.privilege_escalation
 - attack.credential_access
+title: ADCS Certificate Template Configuration Vulnerability with Risky EKU

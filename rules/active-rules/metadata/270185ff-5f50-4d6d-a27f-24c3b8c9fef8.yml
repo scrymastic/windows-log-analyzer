@@ -5,14 +5,12 @@ description: Detects the deletion of tomcat WebServer logs which may indicate an
 falsepositives:
 - During uninstallation of the tomcat server
 - During log rotation
-filename: file_delete_win_delete_tomcat_logs.yml
 level: medium
-modified: ''
 references:
 - Internal Research
 - https://linuxhint.com/view-tomcat-logs-windows/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1070
+title: Tomcat WebServer Logs Deleted

@@ -3,15 +3,14 @@ date: 2022/01/02
 description: Commandline to launch powershell with a base64 payload
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_encode.yml
 level: medium
 modified: 2023/01/05
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1059.001/T1059.001.md#atomic-test-20---powershell-invoke-known-malicious-cmdlets
 - https://unit42.paloaltonetworks.com/unit42-pulling-back-the-curtains-on-encodedcommand-powershell-attacks/
 - https://mikefrobbins.com/2017/06/15/simple-obfuscation-with-powershell-using-base64-encoding/
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Suspicious Execution of Powershell with Base64

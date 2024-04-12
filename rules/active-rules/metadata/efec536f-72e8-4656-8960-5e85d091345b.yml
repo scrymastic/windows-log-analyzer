@@ -8,7 +8,6 @@ description: 'Detects the usage of attrib with the "+s" option to set scripts or
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_attrib_system_susp_paths.yml
 level: high
 modified: 2023/03/14
 references:
@@ -22,3 +21,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1564.001
+title: Set Suspicious Files as System Files Using Attrib.EXE

@@ -6,12 +6,11 @@ falsepositives:
 - Other legitimate browsers not currently included in the filter (please add them)
 - Legitimate downloads via scripting or command-line tools (Investigate to determine
   if it's legitimate)
-filename: create_stream_hash_creation_internet_file.yml
 level: medium
 modified: 2023/06/12
 references:
 - https://www.bleepingcomputer.com/news/security/exploited-windows-zero-day-lets-javascript-files-bypass-security-warnings/
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
+title: Creation Of a Suspicious ADS File Outside a Browser Download

@@ -4,13 +4,11 @@ description: Detects usage of OpenConsole binary as a LOLBIN to launch other bin
   to bypass application Whitelisting
 falsepositives:
 - Legitimate use by an administrator
-filename: proc_creation_win_lolbin_openconsole.yml
 level: medium
-modified: ''
 references:
 - https://twitter.com/nas_bench/status/1537563834478645252
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059
+title: Use of OpenConsole

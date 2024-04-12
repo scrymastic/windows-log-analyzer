@@ -4,12 +4,11 @@ description: Detects usage of a PowerShell command to dump the live memory of a 
   machine
 falsepositives:
 - Diagnostics
-filename: posh_ps_memorydump_getstoragediagnosticinfo.yml
 level: high
 modified: 2022/12/25
 references:
 - https://docs.microsoft.com/en-us/powershell/module/storage/get-storagediagnosticinfo
-related: []
 status: test
 tags:
 - attack.t1003
+title: Live Memory Dump Using Powershell

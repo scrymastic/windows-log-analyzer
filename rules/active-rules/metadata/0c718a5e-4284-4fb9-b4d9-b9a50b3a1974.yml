@@ -3,7 +3,6 @@ date: 2020/10/15
 description: Detects Obfuscated use of stdin to execute PowerShell
 falsepositives:
 - Unknown
-filename: win_security_invoke_obfuscation_stdin_services_security.yml
 level: high
 modified: 2022/11/29
 references:
@@ -17,3 +16,4 @@ tags:
 - attack.t1027
 - attack.execution
 - attack.t1059.001
+title: Invoke-Obfuscation STDIN+ Launcher - Security

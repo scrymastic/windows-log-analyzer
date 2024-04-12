@@ -4,7 +4,6 @@ description: Detects the download of suspicious file type from a well-known file
   paste sharing domain
 falsepositives:
 - Some false positives might occur with binaries download via Github
-filename: create_stream_hash_file_sharing_domains_download_susp_extension.yml
 level: high
 modified: 2024/02/09
 references:
@@ -20,3 +19,4 @@ tags:
 - attack.defense_evasion
 - attack.s0139
 - attack.t1564.004
+title: Suspicious File Download From File Sharing Websites

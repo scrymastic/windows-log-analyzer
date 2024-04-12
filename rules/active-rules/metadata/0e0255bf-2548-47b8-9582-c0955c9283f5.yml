@@ -4,13 +4,12 @@ description: Detects suspicious addition to BitLocker related registry keys via 
   reg.exe utility
 falsepositives:
 - Unlikely
-filename: proc_creation_win_reg_bitlocker.yml
 level: high
 modified: 2022/09/09
 references:
 - https://thedfirreport.com/2021/11/15/exchange-exploit-leads-to-domain-wide-ransomware/
-related: []
 status: test
 tags:
 - attack.impact
 - attack.t1486
+title: Suspicious Reg Add BitLocker

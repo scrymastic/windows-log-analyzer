@@ -7,9 +7,7 @@ description: 'Detects the creation of hidden file/folder with the "::$index_allo
   '
 falsepositives:
 - Unlikely
-filename: file_event_win_susp_hidden_dir_index_allocation.yml
 level: medium
-modified: ''
 references:
 - https://twitter.com/pfiatde/status/1681977680688738305
 - https://soroush.me/blog/2010/12/a-dotty-salty-directory-a-secret-place-in-ntfs-for-secret-files/
@@ -23,3 +21,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1564.004
+title: Potential Hidden Directory Creation Via NTFS INDEX_ALLOCATION Stream

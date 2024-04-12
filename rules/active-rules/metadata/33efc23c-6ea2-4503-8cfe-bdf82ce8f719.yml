@@ -5,15 +5,14 @@ description: Detects the setting of the "DumpType" registry value to "2" which s
   "2" in order to dump LSASS.
 falsepositives:
 - Legitimate application that needs to do a full dump of their process
-filename: registry_set_lsass_usermode_dumping.yml
 level: high
 modified: 2023/08/17
 references:
 - https://github.com/deepinstinct/Lsass-Shtinkering
 - https://learn.microsoft.com/en-us/windows/win32/wer/collecting-user-mode-dumps
 - https://media.defcon.org/DEF%20CON%2030/DEF%20CON%2030%20presentations/Asaf%20Gilboa%20-%20LSASS%20Shtinkering%20Abusing%20Windows%20Error%20Reporting%20to%20Dump%20LSASS.pdf
-related: []
 status: experimental
 tags:
 - attack.credential_access
 - attack.t1003.001
+title: Lsass Full Dump Request Via DumpType Registry Settings

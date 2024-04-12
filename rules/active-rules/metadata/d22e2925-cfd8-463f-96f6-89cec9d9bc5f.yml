@@ -7,14 +7,13 @@ description: 'Detects the execution of ".xbap" (Browser Applications) files via 
   '
 falsepositives:
 - Legitimate ".xbap" being executed via "PresentationHost"
-filename: proc_creation_win_presentationhost_uncommon_location_exec.yml
 level: medium
 modified: 2023/11/09
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Presentationhost/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1218
+title: XBAP Execution From Uncommon Locations Via PresentationHost.EXE

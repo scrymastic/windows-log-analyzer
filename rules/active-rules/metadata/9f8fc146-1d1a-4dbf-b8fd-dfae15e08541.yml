@@ -4,12 +4,11 @@ description: Detects execution of the SharpLDAPmonitor. Which can monitor the cr
   deletion and changes to LDAP objects.
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_sharp_ldap_monitor.yml
 level: medium
 modified: 2023/02/14
 references:
 - https://github.com/p0dalirius/LDAPmonitor
-related: []
 status: test
 tags:
 - attack.discovery
+title: HackTool - SharpLDAPmonitor Execution

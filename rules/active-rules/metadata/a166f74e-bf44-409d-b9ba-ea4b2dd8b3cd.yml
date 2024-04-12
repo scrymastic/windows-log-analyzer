@@ -4,7 +4,6 @@ description: Detects registry changes to Office trust records where the path is 
   in a potentially suspicious location
 falsepositives:
 - Unlikely
-filename: registry_set_office_trust_record_susp_location.yml
 level: high
 modified: 2023/08/17
 references:
@@ -17,3 +16,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: Macro Enabled In A Potentially Suspicious Document

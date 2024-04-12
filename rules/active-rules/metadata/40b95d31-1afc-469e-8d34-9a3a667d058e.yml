@@ -6,7 +6,11 @@ description: "Csi.exe is a signed binary from Microsoft that comes with Visual S
   \ with Microsoft \u201CRoslyn\u201D Community Technology Preview was named 'rcsi.exe'"
 falsepositives:
 - Legitimate usage by software developers
-filename: proc_creation_win_csi_execution.yml
+fields:
+- ComputerName
+- User
+- CommandLine
+- ParentCommandLine
 level: medium
 modified: 2022/07/11
 references:
@@ -14,10 +18,10 @@ references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Rcsi/
 - https://enigma0x3.net/2016/11/21/bypassing-application-whitelisting-by-using-rcsi-exe/
 - https://twitter.com/Z3Jpa29z/status/1317545798981324801
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1072
 - attack.defense_evasion
 - attack.t1218
+title: Suspicious Csi.exe Usage

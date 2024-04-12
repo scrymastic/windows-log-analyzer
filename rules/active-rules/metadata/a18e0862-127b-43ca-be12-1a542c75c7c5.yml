@@ -5,15 +5,13 @@ description: Detects Windows error reporting event where the process that crashe
   Lsass-Shtinkering to dump credential
 falsepositives:
 - Rare legitimate crashing of the lsass process
-filename: win_werfault_susp_lsass_credential_dump.yml
 level: high
-modified: ''
 references:
 - https://github.com/deepinstinct/Lsass-Shtinkering
 - https://media.defcon.org/DEF%20CON%2030/DEF%20CON%2030%20presentations/Asaf%20Gilboa%20-%20LSASS%20Shtinkering%20Abusing%20Windows%20Error%20Reporting%20to%20Dump%20LSASS.pdf
 - https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1003.001
+title: Potential Credential Dumping Via WER - Application

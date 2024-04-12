@@ -6,13 +6,12 @@ description: 'Detects suspicious use of ''calc.exe'' with command line parameter
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_calc_uncommon_exec.yml
 level: high
 modified: 2023/11/09
 references:
 - https://twitter.com/ItsReallyNick/status/1094080242686312448
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1036
+title: Suspicious Calculator Usage

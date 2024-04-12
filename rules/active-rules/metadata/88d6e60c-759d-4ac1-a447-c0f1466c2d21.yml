@@ -5,7 +5,6 @@ description: Detects a Chromium based browser process with the 'load-extension' 
 falsepositives:
 - Usage of Chrome Extensions in testing tools such as BurpSuite will trigger this
   alert
-filename: proc_creation_win_browsers_chromium_load_extension.yml
 level: medium
 modified: 2023/11/28
 references:
@@ -19,3 +18,4 @@ status: experimental
 tags:
 - attack.persistence
 - attack.t1176
+title: Chromium Browser Instance Executed With Custom Extension

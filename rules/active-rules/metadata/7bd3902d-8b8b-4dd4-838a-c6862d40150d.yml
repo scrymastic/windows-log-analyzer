@@ -4,13 +4,12 @@ description: Detects Azure Hybrid Connection Manager services querying the Azure
   bus service
 falsepositives:
 - Legitimate use of Azure Hybrid Connection Manager and the Azure Service Bus service
-filename: dns_query_win_hybridconnectionmgr_servicebus.yml
 level: high
 modified: 2023/01/16
 references:
 - https://twitter.com/Cyb3rWard0g/status/1381642789369286662
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1554
+title: DNS HybridConnectionManager Service Bus

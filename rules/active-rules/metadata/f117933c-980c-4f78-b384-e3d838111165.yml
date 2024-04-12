@@ -3,7 +3,6 @@ date: 2023/02/02
 description: Detects when a share is mounted using the "net.exe" utility
 falsepositives:
 - Legitimate activity by administrators and scripts
-filename: proc_creation_win_net_use_mount_share.yml
 level: low
 modified: 2023/02/21
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.lateral_movement
 - attack.t1021.002
+title: Windows Share Mount Via Net.EXE

@@ -4,7 +4,6 @@ description: Detects the "Windows Defender Threat Protection" service has been d
 falsepositives:
 - Administrator actions
 - Auto updates of Windows Defender causes restarts
-filename: win_system_defender_disabled.yml
 level: medium
 modified: 2023/08/08
 references:
@@ -17,3 +16,4 @@ status: stable
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Windows Defender Threat Detection Disabled - Service

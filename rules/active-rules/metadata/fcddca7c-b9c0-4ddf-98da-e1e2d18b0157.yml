@@ -5,13 +5,12 @@ description: Detects the disabling of the Windows Defender eventlog as seen in r
 falsepositives:
 - Other Antivirus software installations could cause Windows to disable that eventlog
   (unknown)
-filename: registry_set_disabled_microsoft_defender_eventlog.yml
 level: high
 modified: 2023/08/17
 references:
 - https://twitter.com/WhichbufferArda/status/1543900539280293889/photo/2
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Disabled Windows Defender Eventlog

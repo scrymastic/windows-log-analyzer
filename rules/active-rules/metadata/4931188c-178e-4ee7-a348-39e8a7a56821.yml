@@ -3,7 +3,6 @@ date: 2023/02/13
 description: Detect filter driver unloading activity via fltmc.exe
 falsepositives:
 - Unknown
-filename: proc_creation_win_fltmc_unload_driver.yml
 level: high
 modified: 2023/03/14
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.t1070
 - attack.t1562
 - attack.t1562.002
+title: Filter Driver Unloaded Via Fltmc.EXE

@@ -3,15 +3,14 @@ date: 2019/08/10
 description: Detects remote PowerShell sessions
 falsepositives:
 - Legitimate use remote PowerShell sessions
-filename: posh_pm_remote_powershell_session.yml
 level: high
 modified: 2023/01/20
 references:
 - https://threathunterplaybook.com/hunts/windows/190511-RemotePwshExecution/notebook.html
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
 - attack.lateral_movement
 - attack.t1021.006
+title: Remote PowerShell Session (PS Module)

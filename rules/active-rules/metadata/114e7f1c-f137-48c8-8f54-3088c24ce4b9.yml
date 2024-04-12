@@ -4,14 +4,17 @@ description: Detects AnyDesk Remote Desktop silent installation. Which can be us
   by attackers to gain remote access.
 falsepositives:
 - Legitimate deployment of AnyDesk
-filename: proc_creation_win_remote_access_tools_anydesk_silent_install.yml
+fields:
+- CommandLine
+- ParentCommandLine
+- CurrentDirectory
 level: high
 modified: 2023/03/05
 references:
 - https://twitter.com/TheDFIRReport/status/1423361119926816776?s=20
 - https://support.anydesk.com/Automatic_Deployment
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1219
+title: Remote Access Tool - AnyDesk Silent Installation

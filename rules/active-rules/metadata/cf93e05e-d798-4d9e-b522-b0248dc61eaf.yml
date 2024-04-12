@@ -3,7 +3,6 @@ date: 2022/09/05
 description: Detects usage of the Sharp Chisel via the commandline arguments
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_sharp_chisel.yml
 level: high
 modified: 2023/02/13
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1090.001
+title: HackTool - SharpChisel Execution

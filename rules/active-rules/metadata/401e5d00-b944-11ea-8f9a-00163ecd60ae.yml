@@ -5,14 +5,21 @@ description: Detect run not allowed files. Applocker is a very useful tool, espe
   need configure applocker and log collect to receive these events.
 falsepositives:
 - Need tuning applocker or add exceptions in SIEM
-filename: win_applocker_file_was_not_allowed_to_run.yml
+fields:
+- PolicyName
+- RuleId
+- RuleName
+- TargetUser
+- TargetProcessId
+- FilePath
+- FileHash
+- Fqbn
 level: medium
 modified: 2021/11/27
 references:
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/what-is-applocker
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/using-event-viewer-with-applocker
 - https://nxlog.co/documentation/nxlog-user-guide/applocker.html
-related: []
 status: test
 tags:
 - attack.execution
@@ -22,3 +29,4 @@ tags:
 - attack.t1059.005
 - attack.t1059.006
 - attack.t1059.007
+title: File Was Not Allowed To Run

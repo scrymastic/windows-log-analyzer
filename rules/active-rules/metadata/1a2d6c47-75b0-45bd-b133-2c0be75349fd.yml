@@ -11,13 +11,12 @@ description: 'Detects potential malicious modification of the property value of 
   '
 falsepositives:
 - Unknown
-filename: registry_event_disable_wdigest_credential_guard.yml
 level: high
 modified: 2021/11/27
 references:
 - https://teamhydra.blog/2020/08/25/bypassing-credential-guard/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: Wdigest CredGuard Registry Modification

@@ -5,7 +5,6 @@ description: Detects the deletion of the "Zone.Identifier" ADS by an uncommon pr
   of the ADS such as Microsoft Office apps.
 falsepositives:
 - Other third party applications not listed.
-filename: file_delete_win_zone_identifier_ads_uncommon.yml
 level: medium
 modified: 2023/10/18
 references:
@@ -18,3 +17,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1070.004
+title: ADS Zone.Identifier Deleted By Uncommon Application

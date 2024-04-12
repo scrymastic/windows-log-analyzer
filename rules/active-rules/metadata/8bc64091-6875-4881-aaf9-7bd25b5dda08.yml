@@ -3,7 +3,6 @@ date: 2022/03/11
 description: Detects suspicious process patterns used in NTDS.DIT exfiltration
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_ntds.yml
 level: high
 modified: 2022/11/10
 references:
@@ -14,8 +13,8 @@ references:
 - https://github.com/zcgonvh/NTDSDumpEx
 - https://github.com/rapid7/metasploit-framework/blob/d297adcebb5c1df6fe30b12ca79b161deb71571c/data/post/powershell/NTDSgrab.ps1
 - https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html?m=1
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1003.003
+title: Suspicious Process Patterns NTDS.DIT Exfil

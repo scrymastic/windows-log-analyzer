@@ -3,14 +3,13 @@ date: 2022/07/14
 description: Detects creation of a new service (kernel driver) with the type "kernel"
 falsepositives:
 - Rare legitimate installation of kernel drivers via sc.exe
-filename: proc_creation_win_sc_new_kernel_driver.yml
 level: medium
 modified: 2022/08/08
 references:
 - https://www.aon.com/cyber-solutions/aon_cyber_labs/yours-truly-signed-av-driver-weaponizing-an-antivirus-driver/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.t1543.003
+title: New Kernel Driver Via SC.EXE

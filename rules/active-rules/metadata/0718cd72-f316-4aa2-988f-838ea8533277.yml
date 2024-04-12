@@ -3,14 +3,12 @@ date: 2022/01/15
 description: Powershell use PassThru option to start in background
 falsepositives:
 - Legitimate PowerShell scripts
-filename: posh_ps_susp_start_process.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1036.003/T1036.003.md
 - https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/Start-Process?view=powershell-5.1&viewFallbackFrom=powershell-7
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1036.003
+title: Suspicious Start-Process PassThru

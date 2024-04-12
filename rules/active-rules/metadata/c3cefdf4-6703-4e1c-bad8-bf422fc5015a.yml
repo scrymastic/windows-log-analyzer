@@ -3,7 +3,6 @@ date: 2021/12/28
 description: Detects changes to the registry values related to outlook security settings
 falsepositives:
 - Administrative activity
-filename: registry_set_office_outlook_security_settings.yml
 level: medium
 modified: 2023/08/17
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1137
+title: Outlook Security Settings Updated - Registry

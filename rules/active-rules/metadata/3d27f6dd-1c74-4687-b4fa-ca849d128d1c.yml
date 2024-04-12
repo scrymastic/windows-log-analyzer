@@ -4,13 +4,12 @@ description: Detects the addition of office test registry that allows a user to 
   an arbitrary DLL that will be executed every time an Office application is started
 falsepositives:
 - Unlikely
-filename: registry_event_office_test_regadd.yml
 level: medium
 modified: 2023/11/08
 references:
 - https://unit42.paloaltonetworks.com/unit42-technical-walkthrough-office-test-persistence-method-used-in-recent-sofacy-attacks/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1137.002
+title: Office Application Startup - Office Test

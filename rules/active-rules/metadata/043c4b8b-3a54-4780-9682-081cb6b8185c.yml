@@ -4,13 +4,12 @@ description: Detects a suspicious IIS module registration as described in Micros
   threat report on IIS backdoors
 falsepositives:
 - Administrative activity
-filename: proc_creation_win_iis_susp_module_registration.yml
 level: high
 modified: 2023/01/23
 references:
 - https://www.microsoft.com/security/blog/2022/07/26/malicious-iis-extensions-quietly-open-persistent-backdoors-into-servers/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1505.004
+title: Suspicious IIS Module Registration

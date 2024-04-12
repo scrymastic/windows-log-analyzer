@@ -5,7 +5,6 @@ description: Detects all variations of obfuscated powershell IEX invocation code
   below
 falsepositives:
 - Unknown
-filename: posh_pm_invoke_obfuscation_obfuscated_iex.yml
 level: high
 modified: 2022/12/31
 references:
@@ -19,3 +18,4 @@ tags:
 - attack.t1027
 - attack.execution
 - attack.t1059.001
+title: Invoke-Obfuscation Obfuscated IEX Invocation - PowerShell Module

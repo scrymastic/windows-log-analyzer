@@ -3,7 +3,11 @@ date: 2021/07/12
 description: Executes arbitrary PowerShell code using SyncAppvPublishingServer.exe.
 falsepositives:
 - App-V clients
-filename: proc_creation_win_lolbin_syncappvpublishingserver_execute_psh.yml
+fields:
+- ComputerName
+- User
+- CommandLine
+- ParentCommandLine
 level: medium
 modified: 2022/10/04
 references:
@@ -16,3 +20,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: SyncAppvPublishingServer Execute Arbitrary PowerShell Code

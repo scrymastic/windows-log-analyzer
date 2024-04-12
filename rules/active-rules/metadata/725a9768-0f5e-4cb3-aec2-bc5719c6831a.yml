@@ -11,13 +11,12 @@ description: 'Adversaries may enumerate browser bookmarks to learn more about co
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_where_browser_data_recon.yml
 level: low
 modified: 2022/06/29
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1217/T1217.md
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1217
+title: Suspicious Where Execution

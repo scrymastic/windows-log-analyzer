@@ -3,7 +3,6 @@ date: 2022/08/12
 description: Detects Windows executables that write files with suspicious extensions
 falsepositives:
 - Unknown
-filename: file_event_win_shell_write_susp_files_extensions.yml
 level: high
 modified: 2024/04/04
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1036
+title: Windows Binaries Write Suspicious Extensions

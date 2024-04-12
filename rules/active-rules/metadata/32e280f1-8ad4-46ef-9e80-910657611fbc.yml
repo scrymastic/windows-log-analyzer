@@ -13,15 +13,13 @@ description: 'Detects the presence of unicode characters which are homoglyphs, o
 falsepositives:
 - Commandlines with legitimate Cyrillic text; will likely require tuning (or not be
   usable) in countries where these alphabets are in use.
-filename: proc_creation_win_susp_homoglyph_cyrillic_lookalikes.yml
 level: medium
-modified: ''
 references:
 - https://redcanary.com/threat-detection-report/threats/socgholish/#threat-socgholish
 - http://www.irongeek.com/homoglyph-attack-generator.php
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1036
 - attack.t1036.003
+title: Potential Homoglyph Attack Using Lookalike Characters

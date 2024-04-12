@@ -5,15 +5,13 @@ description: Detects suspicious activity in which the MSExchangeMailboxReplicati
   exploitation
 falsepositives:
 - Unknown
-filename: file_event_win_susp_exchange_aspx_write.yml
 level: high
-modified: ''
 references:
 - https://redcanary.com/blog/blackbyte-ransomware/
-related: []
 status: test
 tags:
 - attack.initial_access
 - attack.t1190
 - attack.persistence
 - attack.t1505.003
+title: Suspicious MSExchangeMailboxReplication ASPX Write

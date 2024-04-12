@@ -9,13 +9,12 @@ description: 'Detects creation of a file named "ErrorHandler.cmd" in the "C:\WIN
   '
 falsepositives:
 - Unknown
-filename: file_event_win_errorhandler_persistence.yml
 level: medium
 modified: 2022/12/19
 references:
 - https://www.hexacorn.com/blog/2022/01/16/beyond-good-ol-run-key-part-135/
 - https://github.com/last-byte/PersistenceSniper
-related: []
 status: test
 tags:
 - attack.persistence
+title: Potential Persistence Attempt Via ErrorHandler.Cmd

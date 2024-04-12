@@ -8,9 +8,7 @@ description: 'Detects changes to Internet Explorer''s (IE / Windows Internet pro
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/M_haggis/status/1699056847154725107
 - https://twitter.com/JAMESWT_MHT/status/1699042827261391247
@@ -23,3 +21,4 @@ status: experimental
 tags:
 - attack.execution
 - attack.defense_evasion
+title: IE ZoneMap Setting Downgraded To MyComputer Zone For HTTP Protocols Via CLI

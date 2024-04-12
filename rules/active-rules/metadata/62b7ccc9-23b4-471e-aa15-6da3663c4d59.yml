@@ -3,7 +3,8 @@ date: 2022/03/01
 description: Detects base64 encoded .NET reflective loading of Assembly
 falsepositives:
 - Unlikely
-filename: proc_creation_win_powershell_base64_reflection_assembly_load.yml
+fields:
+- CommandLine
 level: high
 modified: 2023/01/30
 references:
@@ -19,3 +20,4 @@ tags:
 - attack.defense_evasion
 - attack.t1027
 - attack.t1620
+title: PowerShell Base64 Encoded Reflective Assembly Load

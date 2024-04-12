@@ -3,7 +3,6 @@ date: 2018/03/20
 description: Detects NetNTLM downgrade attack
 falsepositives:
 - Unknown
-filename: win_security_net_ntlm_downgrade.yml
 level: high
 modified: 2022/10/09
 references:
@@ -16,3 +15,4 @@ tags:
 - attack.defense_evasion
 - attack.t1562.001
 - attack.t1112
+title: NetNTLM Downgrade Attack

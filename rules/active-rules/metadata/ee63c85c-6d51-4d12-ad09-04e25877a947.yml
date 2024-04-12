@@ -10,7 +10,6 @@ description: 'Adversaries may establish persistence and/or elevate privileges by
   '
 falsepositives:
 - Legitimate custom SHIM installations will also trigger this rule
-filename: file_event_win_creation_new_shim_database.yml
 level: medium
 modified: 2023/12/06
 references:
@@ -18,8 +17,8 @@ references:
 - https://www.mandiant.com/resources/blog/fin7-shim-databases-persistence
 - https://liberty-shell.com/sec/2020/02/25/shim-persistence/
 - https://andreafortuna.org/2018/11/12/process-injection-and-persistence-using-application-shimming/
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547.009
+title: New Custom Shim Database Created

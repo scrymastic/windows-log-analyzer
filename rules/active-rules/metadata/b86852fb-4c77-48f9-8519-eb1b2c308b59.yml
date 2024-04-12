@@ -11,13 +11,11 @@ description: 'Detects the setting of the REGISTERAPPRESTART compatibility layer 
   '
 falsepositives:
 - Legitimate applications making use of this feature for compatibility reasons
-filename: registry_set_persistence_app_cpmpat_layer_registerapprestart.yml
 level: medium
-modified: ''
 references:
 - https://github.com/nasbench/Misc-Research/blob/d114d6a5e0a437d3818e492ef9864367152543e7/Other/Persistence-Via-RegisterAppRestart-Shim.md
-related: []
 status: experimental
 tags:
 - attack.persistence
 - attack.t1546.011
+title: Potential Persistence Via AppCompat RegisterAppRestart Layer

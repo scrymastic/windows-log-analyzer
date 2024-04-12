@@ -4,9 +4,7 @@ description: Detects specific techniques often seen used inside of PowerShell sc
   to obfscuate Alias creation
 falsepositives:
 - Unknown
-filename: posh_ps_susp_alias_obfscuation.yml
 level: low
-modified: ''
 references:
 - Internal Research
 related:
@@ -18,3 +16,4 @@ tags:
 - attack.execution
 - attack.t1027
 - attack.t1059.001
+title: Potential PowerShell Obfuscation Using Character Join

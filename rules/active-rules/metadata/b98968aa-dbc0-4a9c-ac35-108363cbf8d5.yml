@@ -4,13 +4,17 @@ description: Detects potential malicious modification of run keys by winekey or 
   backdoor
 falsepositives:
 - Unknown
-filename: registry_event_runkey_winekey.yml
+fields:
+- ComputerName
+- Image
+- EventType
+- TargetObject
 level: high
 modified: 2021/11/27
 references:
 - https://www.fireeye.com/blog/threat-research/2020/10/kegtap-and-singlemalt-with-a-ransomware-chaser.html
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547
+title: WINEKEY Registry Modification

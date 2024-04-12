@@ -3,15 +3,13 @@ date: 2022/07/03
 description: Detects the "IDiagnosticProfileUAC" UAC bypass technique
 falsepositives:
 - Unknown
-filename: proc_creation_win_uac_bypass_idiagnostic_profile.yml
 level: high
-modified: ''
 references:
 - https://github.com/Wh04m1001/IDiagnosticProfileUAC
-related: []
 status: test
 tags:
 - attack.execution
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1548.002
+title: UAC Bypass Using IDiagnostic Profile

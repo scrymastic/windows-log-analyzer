@@ -5,7 +5,6 @@ description: Detects process access requests to LSASS process with potentially s
   access flags
 falsepositives:
 - Legitimate software such as AV and EDR
-filename: proc_access_win_lsass_susp_access_flag.yml
 level: medium
 modified: 2023/11/29
 references:
@@ -22,3 +21,4 @@ tags:
 - attack.credential_access
 - attack.t1003.001
 - attack.s0002
+title: Potentially Suspicious GrantedAccess Flags On LSASS

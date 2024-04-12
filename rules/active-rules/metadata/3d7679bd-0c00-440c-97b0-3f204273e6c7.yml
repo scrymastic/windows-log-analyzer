@@ -4,13 +4,12 @@ description: Detects the creation of a process via the Windows task manager. Thi
   might be an attempt to bypass UAC
 falsepositives:
 - Administrative activity
-filename: proc_creation_win_taskmgr_susp_child_process.yml
 level: low
 modified: 2024/01/18
 references:
 - https://twitter.com/ReneFreingruber/status/1172244989335810049
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1036
+title: New Process Created Via Taskmgr.EXE

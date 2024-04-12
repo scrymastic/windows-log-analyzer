@@ -3,12 +3,10 @@ date: 2022/10/31
 description: Detects NetSupport Manager service installation on the target system.
 falsepositives:
 - Legitimate use of the tool
-filename: win_system_service_install_netsupport_manager.yml
 level: medium
-modified: ''
 references:
 - http://resources.netsupportsoftware.com/resources/manualpdfs/nsm_manual_uk.pdf
-related: []
 status: test
 tags:
 - attack.persistence
+title: NetSupport Manager Service Install

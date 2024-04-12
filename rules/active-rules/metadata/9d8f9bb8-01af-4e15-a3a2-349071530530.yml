@@ -14,9 +14,7 @@ description: 'Detects usage of Windows Input Method Editor (IME) keyboard layout
   '
 falsepositives:
 - Unknown
-filename: registry_set_ime_suspicious_paths.yml
 level: high
-modified: ''
 references:
 - https://www.linkedin.com/pulse/guntior-story-advanced-bootkit-doesnt-rely-windows-disk-baranov-wue8e/
 related:
@@ -26,3 +24,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Suspicious Path In Keyboard Layout IME File Registry Value

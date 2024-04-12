@@ -4,15 +4,14 @@ description: Detects the execution of "reg.exe" for enabling/disabling the RDP s
   on the host by tampering with the 'CurrentControlSet\Control\Terminal Server' values
 falsepositives:
 - Unknown
-filename: proc_creation_win_reg_rdp_keys_tamper.yml
 level: high
 modified: 2023/02/05
 references:
 - https://thedfirreport.com/2022/02/21/qbot-and-zerologon-lead-to-full-domain-compromise/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.lateral_movement
 - attack.t1021.001
 - attack.t1112
+title: Potential Tampering With RDP Related Registry Keys Via Reg.EXE

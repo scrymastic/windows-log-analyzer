@@ -4,7 +4,6 @@ description: Detects suspicious WMI event filter and command line event consumer
   on WMI and Security Logs.
 falsepositives:
 - Unknown (data set is too small; further testing needed)
-filename: win_security_wmi_persistence.yml
 level: medium
 modified: 2022/11/29
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.t1546.003
+title: WMI Persistence - Security

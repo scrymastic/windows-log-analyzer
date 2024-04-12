@@ -3,7 +3,6 @@ date: 2019/10/25
 description: Detects DNS queries initiated by "Regsvr32.exe"
 falsepositives:
 - Unknown
-filename: dns_query_win_regsvr32_dns_query.yml
 level: medium
 modified: 2023/09/18
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.t1559.001
 - attack.defense_evasion
 - attack.t1218.010
+title: DNS Query Request By Regsvr32.EXE

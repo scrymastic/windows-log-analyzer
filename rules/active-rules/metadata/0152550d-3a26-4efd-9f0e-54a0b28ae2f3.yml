@@ -11,17 +11,16 @@ description: 'This rule detects execution of a PowerShell code through the sqlps
 falsepositives:
 - Direct PS command execution through SQLPS.exe is uncommon, childprocess sqlps.exe
   spawned by sqlagent.exe is a legitimate action.
-filename: proc_creation_win_mssql_sqlps_susp_execution.yml
 level: medium
 modified: 2022/12/09
 references:
 - https://docs.microsoft.com/en-us/sql/tools/sqlps-utility?view=sql-server-ver15
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Sqlps/
 - https://twitter.com/bryon_/status/975835709587075072
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
 - attack.defense_evasion
 - attack.t1127
+title: Detection of PowerShell Execution via Sqlps.exe

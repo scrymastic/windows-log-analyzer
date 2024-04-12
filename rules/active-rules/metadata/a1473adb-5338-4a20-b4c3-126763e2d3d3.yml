@@ -4,13 +4,11 @@ description: Detects execution of "rundll32" calling "advpack.dll" with potentia
   obfuscated ordinal calls in order to leverage the "RegisterOCX" function
 falsepositives:
 - Unlikely
-filename: proc_creation_win_rundll32_advpack_obfuscated_ordinal_call.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/Hexacorn/status/1224848930795552769
 - http://www.hexacorn.com/blog/2020/02/05/stay-positive-lolbins-not/
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Suspicious Advpack Call Via Rundll32.EXE

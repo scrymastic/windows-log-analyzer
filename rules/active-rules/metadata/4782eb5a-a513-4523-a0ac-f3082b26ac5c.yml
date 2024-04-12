@@ -8,7 +8,6 @@ description: 'Detects execution of commands that leverage the "mshtml.dll" RunHT
   '
 falsepositives:
 - Unlikely
-filename: proc_creation_win_rundll32_mshtml_runhtmlapplication.yml
 level: high
 modified: 2024/02/23
 references:
@@ -24,3 +23,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.execution
+title: Mshtml.DLL RunHTMLApplication Suspicious Usage

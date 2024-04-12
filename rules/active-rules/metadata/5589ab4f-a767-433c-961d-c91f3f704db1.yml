@@ -4,7 +4,6 @@ description: Detects different hacktools used for relay attacks on Windows for p
   escalation
 falsepositives:
 - Legitimate files with these rare hacktool names
-filename: proc_creation_win_hktl_relay_attacks_tools.yml
 level: critical
 modified: 2023/02/14
 references:
@@ -14,8 +13,8 @@ references:
 - https://hunter2.gitbook.io/darthsidious/other/war-stories/domain-admin-in-30-minutes
 - https://hunter2.gitbook.io/darthsidious/execution/responder-with-ntlm-relay-and-empire
 - https://www.localpotato.com/
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1557.001
+title: Potential SMB Relay Attack Tool Execution

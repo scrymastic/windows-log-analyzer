@@ -4,7 +4,6 @@ description: Detects suspicious DACL modifications to deny access to a service t
   affects critical trustees. This can be used to hide services or make them unstoppable.
 falsepositives:
 - Unknown
-filename: proc_creation_win_sc_sdset_deny_service_access.yml
 level: high
 modified: 2023/02/28
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1543.003
+title: Deny Service Access Using Security Descriptor Tampering Via Sc.EXE

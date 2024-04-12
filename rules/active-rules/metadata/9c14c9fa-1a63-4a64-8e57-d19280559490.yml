@@ -3,15 +3,14 @@ date: 2020/10/12
 description: Detects Obfuscated Powershell via Stdin in Scripts
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_invoke_obfuscation_via_stdin.yml
 level: high
 modified: 2022/11/16
 references:
 - https://github.com/SigmaHQ/sigma/issues/1009
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1027
 - attack.execution
 - attack.t1059.001
+title: Invoke-Obfuscation Via Stdin

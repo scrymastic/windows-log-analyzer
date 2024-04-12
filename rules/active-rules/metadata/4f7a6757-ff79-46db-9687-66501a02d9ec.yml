@@ -4,14 +4,12 @@ description: Detects the execution of "ldifde.exe" in order to export organizati
   Active Directory structure.
 falsepositives:
 - Unknown
-filename: proc_creation_win_ldifde_export.yml
 level: medium
-modified: ''
 references:
 - https://businessinsights.bitdefender.com/deep-dive-into-a-backdoordiplomacy-attack-a-study-of-an-attackers-toolkit
 - https://www.documentcloud.org/documents/5743766-Global-Threat-Report-2019.html
 - https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731033(v=ws.11)
-related: []
 status: test
 tags:
 - attack.exfiltration
+title: Active Directory Structure Export Via Ldifde.EXE

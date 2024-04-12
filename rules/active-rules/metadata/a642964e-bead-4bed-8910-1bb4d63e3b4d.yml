@@ -4,13 +4,11 @@ date: 2019/10/22
 description: Detection well-known mimikatz command line arguments
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_mimikatz_command_line.yml
 level: high
 modified: 2023/02/21
 references:
 - https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment
 - https://tools.thehacker.recipes/mimikatz/modules
-related: []
 status: test
 tags:
 - attack.credential_access
@@ -19,3 +17,4 @@ tags:
 - attack.t1003.004
 - attack.t1003.005
 - attack.t1003.006
+title: HackTool - Mimikatz Execution

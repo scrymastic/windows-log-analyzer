@@ -4,14 +4,13 @@ description: Detects command line parameters used by Hydra password guessing hac
   tool
 falsepositives:
 - Software that uses the caret encased keywords PASS and USER in its command line
-filename: proc_creation_win_hktl_hydra.yml
 level: high
 modified: 2023/02/04
 references:
 - https://github.com/vanhauser-thc/thc-hydra
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1110
 - attack.t1110.001
+title: HackTool - Hydra Password Bruteforce Execution

@@ -3,12 +3,10 @@ date: 2017/10/29
 description: Detect remote login by Administrator user (depending on internal pattern).
 falsepositives:
 - Legitimate administrative activity.
-filename: win_security_admin_rdp_login.yml
 level: low
 modified: 2022/10/09
 references:
 - https://car.mitre.org/wiki/CAR-2016-04-005
-related: []
 status: test
 tags:
 - attack.lateral_movement
@@ -16,3 +14,4 @@ tags:
 - attack.t1078.002
 - attack.t1078.003
 - car.2016-04-005
+title: Admin User Remote Logon

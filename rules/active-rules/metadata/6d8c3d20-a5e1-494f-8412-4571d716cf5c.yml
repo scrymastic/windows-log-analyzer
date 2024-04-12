@@ -3,7 +3,6 @@ date: 2017/03/19
 description: Detects programs that connect to uncommon destination ports
 falsepositives:
 - Unknown
-filename: net_connection_win_susp_malware_callback_ports_uncommon.yml
 level: medium
 modified: 2024/03/12
 references:
@@ -16,3 +15,4 @@ tags:
 - attack.persistence
 - attack.command_and_control
 - attack.t1571
+title: Communication To Uncommon Destination Ports

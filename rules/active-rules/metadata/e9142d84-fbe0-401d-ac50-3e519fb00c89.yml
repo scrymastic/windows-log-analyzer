@@ -4,14 +4,13 @@ description: Detects a suspicious process command line that uses whoami as first
   (as e.g. used by EfsPotato)
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_whoami_as_param.yml
 level: high
 modified: 2022/12/25
 references:
 - https://twitter.com/blackarrowsec/status/1463805700602224645?s=12
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1033
 - car.2016-03-001
+title: WhoAmI as Parameter

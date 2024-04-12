@@ -5,14 +5,12 @@ description: Detects a potentially suspicious parent of "csc.exe", which could b
   a sign of payload delivery.
 falsepositives:
 - Unknown
-filename: proc_creation_win_csc_susp_parent.yml
 level: high
 modified: 2023/10/27
 references:
 - https://www.uptycs.com/blog/warzonerat-can-now-evade-with-process-hollowing
 - https://reaqta.com/2017/11/short-journey-darkvnc/
 - https://www.pwc.com/gx/en/issues/cybersecurity/cyber-threat-intelligence/yellow-liderc-ships-its-scripts-delivers-imaploader-malware.html
-related: []
 status: test
 tags:
 - attack.execution
@@ -21,3 +19,4 @@ tags:
 - attack.defense_evasion
 - attack.t1218.005
 - attack.t1027.004
+title: Csc.EXE Execution Form Potentially Suspicious Parent

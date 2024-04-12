@@ -3,7 +3,6 @@ date: 2021/05/26
 description: Detects DNS queries for subdomains related to MEGA sharing website
 falsepositives:
 - Legitimate DNS queries and usage of Mega
-filename: dns_query_win_mega_nz.yml
 level: medium
 modified: 2023/09/18
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.exfiltration
 - attack.t1567.002
+title: DNS Query To MEGA Hosting Website

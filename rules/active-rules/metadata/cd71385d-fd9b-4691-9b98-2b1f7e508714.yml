@@ -4,14 +4,12 @@ description: Detect usage of the "runexehelper.exe" binary as a proxy to launch 
   programs
 falsepositives:
 - Unknown
-filename: proc_creation_win_lolbin_runexehelper.yml
 level: medium
-modified: ''
 references:
 - https://twitter.com/0gtweet/status/1206692239839289344
 - https://lolbas-project.github.io/lolbas/Binaries/Runexehelper/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Lolbin Runexehelper Use As Proxy

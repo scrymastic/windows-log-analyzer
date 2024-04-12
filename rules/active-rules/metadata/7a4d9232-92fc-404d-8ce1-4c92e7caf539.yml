@@ -5,15 +5,13 @@ description: Detects Stracciatella which executes a Powershell runspace from wit
   on PE metadata characteristics.
 falsepositives:
 - Unlikely
-filename: proc_creation_win_hktl_stracciatella_execution.yml
 level: high
-modified: ''
 references:
 - https://github.com/mgeeky/Stracciatella
-related: []
 status: test
 tags:
 - attack.execution
 - attack.defense_evasion
 - attack.t1059
 - attack.t1562.001
+title: HackTool - Stracciatella Execution

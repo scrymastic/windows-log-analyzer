@@ -4,9 +4,7 @@ description: Detects when adversaries stop services or processes by deleting the
   respective scheduled tasks in order to conduct data destructive activities
 falsepositives:
 - Unlikely
-filename: proc_creation_win_schtasks_delete.yml
 level: high
-modified: ''
 references:
 - Internal Research
 related:
@@ -18,3 +16,4 @@ status: test
 tags:
 - attack.impact
 - attack.t1489
+title: Delete Important Scheduled Task

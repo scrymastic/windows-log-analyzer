@@ -4,15 +4,14 @@ description: Detects the execution of the builtin "copy" command that targets a 
   copy (sometimes used to copy registry hives that are in use)
 falsepositives:
 - Backup scenarios using the commandline
-filename: proc_creation_win_cmd_shadowcopy_access.yml
 level: high
 modified: 2023/03/07
 references:
 - https://twitter.com/vxunderground/status/1423336151860002816?s=20
 - https://www.virustotal.com/gui/file/03e9b8c2e86d6db450e5eceec057d7e369ee2389b9daecaf06331a95410aa5f8/detection
 - https://pentestlab.blog/2018/07/04/dumping-domain-password-hashes/
-related: []
 status: test
 tags:
 - attack.impact
 - attack.t1490
+title: Copy From VolumeShadowCopy Via Cmd.EXE

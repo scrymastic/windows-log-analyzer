@@ -3,7 +3,6 @@ date: 2022/03/16
 description: Detects uncommon target processes for remote thread creation
 falsepositives:
 - Unknown
-filename: create_remote_thread_win_susp_uncommon_target_image.yml
 level: medium
 modified: 2024/03/06
 references:
@@ -16,3 +15,4 @@ tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1055.003
+title: Remote Thread Creation In Uncommon Target Image

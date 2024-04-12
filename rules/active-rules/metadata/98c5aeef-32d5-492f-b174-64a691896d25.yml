@@ -4,9 +4,7 @@ description: Detection of sc.exe utility adding a new service with special permi
   which hides that service.
 falsepositives:
 - Unknown
-filename: proc_creation_win_sc_sdset_modification.yml
 level: medium
-modified: ''
 references:
 - https://blog.talosintelligence.com/2021/10/threat-hunting-in-large-datasets-by.html
 - https://www.sans.org/blog/red-team-tactics-hiding-windows-services/
@@ -24,3 +22,4 @@ tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1574.011
+title: Service Security Descriptor Tampering Via Sc.EXE

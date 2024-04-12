@@ -4,13 +4,11 @@ description: detects the usage of path traversal in conhost.exe indicating possi
   command/argument confusion/hijacking
 falsepositives:
 - Unlikely
-filename: proc_creation_win_conhost_path_traversal.yml
 level: high
-modified: ''
 references:
 - https://pentestlab.blog/2020/07/06/indirect-command-execution/
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.003
+title: Conhost.exe CommandLine Path Traversal

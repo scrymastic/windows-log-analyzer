@@ -5,12 +5,10 @@ description: Detects a suspicious process spawning from an "mshta.exe" process, 
 falsepositives:
 - Printer software / driver installations
 - HP software
-filename: proc_creation_win_mshta_susp_child_processes.yml
 level: high
 modified: 2023/02/06
 references:
 - https://www.trustedsec.com/july-2015/malicious-htas/
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -18,3 +16,4 @@ tags:
 - car.2013-02-003
 - car.2013-03-001
 - car.2014-04-003
+title: Suspicious MSHTA Child Process

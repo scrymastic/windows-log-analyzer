@@ -3,14 +3,13 @@ date: 2020/10/30
 description: Detects user accept agreement execution in psexec commandline
 falsepositives:
 - Administrative scripts.
-filename: proc_creation_win_sysinternals_psexec_execution.yml
 level: medium
 modified: 2023/02/28
 references:
 - https://www.fireeye.com/blog/threat-research/2020/10/kegtap-and-singlemalt-with-a-ransomware-chaser.html
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1569
 - attack.t1021
+title: Psexec Execution

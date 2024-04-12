@@ -4,14 +4,12 @@ description: Detects cases in which ngrok, a reverse proxy tool, forwards events
   the local RDP port, which could be a sign of malicious behaviour
 falsepositives:
 - Unknown
-filename: win_terminalservices_rdp_ngrok.yml
 level: high
-modified: ''
 references:
 - https://twitter.com/tekdefense/status/1519711183162556416?s=12&t=OTsHCBkQOTNs1k3USz65Zg
 - https://ngrok.com/
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1090
+title: Ngrok Usage with Remote Desktop Service

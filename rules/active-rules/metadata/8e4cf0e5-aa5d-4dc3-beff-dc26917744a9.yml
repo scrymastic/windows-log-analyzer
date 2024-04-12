@@ -4,13 +4,12 @@ description: Well-known TAP software installation. Possible preparation for data
   using tunnelling techniques
 falsepositives:
 - Legitimate OpenVPN TAP installation
-filename: win_system_service_install_tap_driver.yml
 level: medium
 modified: 2022/12/25
 references:
 - https://community.openvpn.net/openvpn/wiki/ManagingWindowsTAPDrivers
-related: []
 status: test
 tags:
 - attack.exfiltration
 - attack.t1048
+title: Tap Driver Installation

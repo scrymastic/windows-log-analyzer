@@ -12,7 +12,6 @@ falsepositives:
 - The old auditpol utility isn't available by default on recent versions of Windows
   as it was replaced by a newer version. The FP rate should be very low except for
   tools that use a similar flag structure
-filename: proc_creation_win_auditpol_nt_resource_kit_usage.yml
 level: high
 modified: 2023/02/21
 references:
@@ -24,3 +23,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.002
+title: Audit Policy Tampering Via NT Resource Kit Auditpol

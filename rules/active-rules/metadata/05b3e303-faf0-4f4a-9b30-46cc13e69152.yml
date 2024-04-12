@@ -5,14 +5,13 @@ description: Detects calls to "Add-Content" cmdlet in order to modify the conten
 falsepositives:
 - Legitimate administration and tuning scripts that aim to add functionality to a
   user PowerShell session
-filename: posh_ps_user_profile_tampering.yml
 level: medium
 modified: 2023/05/04
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1546.013/T1546.013.md
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.t1546.013
+title: Potential Persistence Via PowerShell User Profile Using Add-Content

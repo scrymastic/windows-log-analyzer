@@ -4,9 +4,7 @@ description: Detects driver load of the System Informer tool
 falsepositives:
 - System Informer is regularly used legitimately by system administrators or developers.
   Apply additional filters accordingly
-filename: driver_load_win_pua_system_informer.yml
 level: medium
-modified: ''
 references:
 - https://systeminformer.sourceforge.io/
 - https://github.com/winsiderss/systeminformer
@@ -17,3 +15,4 @@ status: test
 tags:
 - attack.privilege_escalation
 - attack.t1543
+title: PUA - System Informer Driver Load

@@ -4,13 +4,12 @@ description: An adversary may compress or encrypt data that is collected prior t
   exfiltration using 3rd party utilities
 falsepositives:
 - Legitimate activity is expected since compressing files with a password is common.
-filename: proc_creation_win_7zip_password_compression.yml
 level: medium
 modified: 2023/03/13
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1560.001/T1560.001.md
-related: []
 status: test
 tags:
 - attack.collection
 - attack.t1560.001
+title: Compress Data and Lock With Password for Exfiltration With 7-ZIP

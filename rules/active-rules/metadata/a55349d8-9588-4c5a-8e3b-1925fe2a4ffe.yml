@@ -4,13 +4,12 @@ description: Detects the deletion of the Exchange PowerShell cmdlet History logs
   may indicate an attempt to destroy forensic evidence
 falsepositives:
 - Possible FP during log rotation
-filename: file_delete_win_delete_exchange_powershell_logs.yml
 level: high
 modified: 2022/12/30
 references:
 - https://m365internals.com/2022/10/07/hunting-in-on-premises-exchange-server-logs/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1070
+title: Exchange PowerShell Cmdlet History Deleted

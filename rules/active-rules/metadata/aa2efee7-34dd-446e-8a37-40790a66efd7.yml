@@ -4,7 +4,6 @@ description: Once established within a system or network, an adversary may use a
   techniques for collecting internal data.
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_recon.yml
 level: medium
 modified: 2022/09/13
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.collection
 - attack.t1119
+title: Recon Information for Export with Command Prompt

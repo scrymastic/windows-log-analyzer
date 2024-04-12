@@ -8,14 +8,13 @@ description: 'Detects changes in Sysmon driver altitude value.
   '
 falsepositives:
 - Legitimate driver altitude change to hide sysmon
-filename: registry_set_change_sysmon_driver_altitude.yml
 level: high
 modified: 2024/03/25
 references:
 - https://posts.specterops.io/shhmon-silencing-sysmon-via-driver-unload-682b5be57650
 - https://youtu.be/zSihR3lTf7g
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Sysmon Driver Altitude Change

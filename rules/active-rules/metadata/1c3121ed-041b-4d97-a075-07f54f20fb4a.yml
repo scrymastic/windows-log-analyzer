@@ -4,13 +4,12 @@ description: Detects registry modifications that disable internal tools or funct
   in explorer (malware like Agent Tesla uses this technique)
 falsepositives:
 - Legitimate admin script
-filename: registry_set_set_nopolicies_user.yml
 level: medium
 modified: 2023/08/17
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1112/T1112.md
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: Registry Explorer Policy Modification

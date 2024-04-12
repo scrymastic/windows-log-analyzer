@@ -5,7 +5,6 @@ description: Detects when the "index" value of a scheduled task is removed or de
   /query"
 falsepositives:
 - Unknown
-filename: registry_delete_schtasks_hide_task_via_index_value_removal.yml
 level: medium
 modified: 2023/02/08
 references:
@@ -19,3 +18,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562
+title: Removal Of Index Value to Hide Schedule Task - Registry

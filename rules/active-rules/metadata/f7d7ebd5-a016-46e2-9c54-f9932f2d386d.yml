@@ -4,7 +4,6 @@ description: Execution of ssh.exe to perform data exfiltration and tunneling thr
   RDP
 falsepositives:
 - Unknown
-filename: proc_creation_win_ssh_rdp_tunneling.yml
 level: high
 modified: 2023/01/25
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1572
+title: Potential RDP Tunneling Via SSH

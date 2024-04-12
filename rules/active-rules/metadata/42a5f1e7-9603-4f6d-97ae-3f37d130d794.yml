@@ -4,7 +4,6 @@ description: Detects the execution of certutil with certain flags that allow the
   to download files from file-sharing websites.
 falsepositives:
 - Unknown
-filename: proc_creation_win_certutil_download_file_sharing_domains.yml
 level: high
 modified: 2024/02/09
 references:
@@ -23,3 +22,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1027
+title: Suspicious File Downloaded From File-Sharing Website Via Certutil.EXE

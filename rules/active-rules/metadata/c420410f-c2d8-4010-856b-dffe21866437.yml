@@ -9,9 +9,7 @@ description: 'Detects changes to the "NoLMHash" registry value in order to allow
   '
 falsepositives:
 - Unknown
-filename: registry_set_system_lsa_nolmhash.yml
 level: high
-modified: ''
 references:
 - https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a
 - https://learn.microsoft.com/en-us/troubleshoot/windows-server/windows-security/prevent-windows-store-lm-hash-password
@@ -23,3 +21,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: Enable LM Hash Storage

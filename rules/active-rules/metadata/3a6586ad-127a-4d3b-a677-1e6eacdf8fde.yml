@@ -5,12 +5,16 @@ description: Detects suspicious child processes of a Windows shell and scripting
 falsepositives:
 - Administrative scripts
 - Microsoft SCCM
-filename: proc_creation_win_susp_shell_spawn_susp_program.yml
+fields:
+- CommandLine
+- ParentCommandLine
+- CurrentDirectory
+- Image
+- ParentImage
 level: high
 modified: 2023/05/23
 references:
 - https://mgreen27.github.io/posts/2018/04/02/DownloadCradle.html
-related: []
 status: test
 tags:
 - attack.execution
@@ -18,3 +22,4 @@ tags:
 - attack.t1059.005
 - attack.t1059.001
 - attack.t1218
+title: Windows Shell/Scripting Processes Spawning Suspicious Programs

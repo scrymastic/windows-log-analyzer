@@ -4,9 +4,7 @@ description: Detects usage of COM objects that can be abused to download files i
   PowerShell by CLSID
 falsepositives:
 - Legitimate use of the library
-filename: proc_creation_win_powershell_download_com_cradles.yml
 level: medium
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/dotnet/api/system.type.gettypefromclsid?view=net-7.0
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=57
@@ -17,3 +15,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Potential COM Objects Download Cradles Usage - Process Creation

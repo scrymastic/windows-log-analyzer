@@ -3,7 +3,6 @@ date: 2020/10/06
 description: Detects use of WinAPI functions in PowerShell scripts
 falsepositives:
 - Unknown
-filename: posh_ps_win_api_susp_access.yml
 level: high
 modified: 2023/06/20
 references:
@@ -16,3 +15,4 @@ tags:
 - attack.execution
 - attack.t1059.001
 - attack.t1106
+title: Potential WinAPI Calls Via PowerShell Scripts

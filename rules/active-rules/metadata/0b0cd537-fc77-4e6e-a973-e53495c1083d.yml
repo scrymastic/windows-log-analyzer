@@ -3,12 +3,11 @@ date: 2022/12/20
 description: Detects the execution of a renamed office binary
 falsepositives:
 - Unknown
-filename: proc_creation_win_renamed_office_processes.yml
 level: high
 modified: 2023/11/13
 references:
 - https://infosec.exchange/@sbousseaden/109542254124022664
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Renamed Office Binary Execution

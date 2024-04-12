@@ -4,7 +4,6 @@ description: Detects suspicious powershell download cradle using nslookup. This 
   uses nslookup to extract payloads from DNS records
 falsepositives:
 - Unknown
-filename: proc_creation_win_nslookup_poweshell_download.yml
 level: medium
 modified: 2022/12/19
 references:
@@ -17,3 +16,4 @@ related:
 status: test
 tags:
 - attack.defense_evasion
+title: Nslookup PowerShell Download Cradle - ProcessCreation

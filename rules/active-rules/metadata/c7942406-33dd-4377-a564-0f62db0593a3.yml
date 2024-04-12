@@ -4,14 +4,15 @@ description: Detects a code page switch in command line or batch scripts to a ra
   language
 falsepositives:
 - Administrative activity (adjust code pages according to your organization's region)
-filename: proc_creation_win_chcp_codepage_switch.yml
+fields:
+- ParentCommandLine
 level: medium
 modified: 2023/03/07
 references:
 - https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers
 - https://twitter.com/cglyer/status/1183756892952248325
-related: []
 status: test
 tags:
 - attack.t1036
 - attack.defense_evasion
+title: Suspicious CodePage Switch Via CHCP

@@ -5,7 +5,6 @@ description: Detects the execution of some potentially unwanted tools such as Ps
   registry key.
 falsepositives:
 - Legitimate use of SysInternals tools. Filter the legitimate paths used in your environment
-filename: registry_add_pua_sysinternals_susp_execution_via_eula.yml
 level: medium
 modified: 2023/02/07
 references:
@@ -19,3 +18,4 @@ status: test
 tags:
 - attack.resource_development
 - attack.t1588.002
+title: PUA - Sysinternals Tools Execution - Registry

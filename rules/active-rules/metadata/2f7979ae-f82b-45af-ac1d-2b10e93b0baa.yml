@@ -4,7 +4,6 @@ description: Detects potential DLL hijack of "iertutil.dll" found in the DCOM In
   Class over the network
 falsepositives:
 - Unknown
-filename: file_event_win_dcom_iertutil_dll_hijack.yml
 level: critical
 modified: 2022/12/18
 references:
@@ -19,3 +18,4 @@ tags:
 - attack.lateral_movement
 - attack.t1021.002
 - attack.t1021.003
+title: Potential DCOM InternetExplorer.Application DLL Hijack

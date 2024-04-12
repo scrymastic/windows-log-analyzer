@@ -4,13 +4,11 @@ description: Detects execution of VMware Xfer utility (VMwareXferlogs.exe) from 
   non-default directory which may be an attempt to sideload arbitrary DLL
 falsepositives:
 - Unlikely
-filename: proc_creation_win_dll_sideload_vmware_xfer.yml
 level: high
-modified: ''
 references:
 - https://www.sentinelone.com/labs/lockbit-ransomware-side-loads-cobalt-strike-beacon-with-legitimate-vmware-utility/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1574.002
+title: DLL Sideloading by VMware Xfer Utility

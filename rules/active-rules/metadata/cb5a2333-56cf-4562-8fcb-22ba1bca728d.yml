@@ -4,14 +4,13 @@ description: Detects use of an encoded/obfuscated version of an IP address (hex,
   in an URL combined with a download command
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_obfuscated_ip_download.yml
 level: medium
 modified: 2023/11/06
 references:
 - https://h.43z.one/ipconverter/
 - https://twitter.com/Yasser_Elsnbary/status/1553804135354564608
 - https://twitter.com/fr0s7_/status/1712780207105404948
-related: []
 status: test
 tags:
 - attack.discovery
+title: Obfuscated IP Download Activity

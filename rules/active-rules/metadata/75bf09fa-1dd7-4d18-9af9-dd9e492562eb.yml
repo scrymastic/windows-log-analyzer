@@ -5,15 +5,14 @@ description: Detects the creation of an "Active Directory Schema Cache File" (.s
 falsepositives:
 - Other legimate tools, which do ADSI (LDAP) operations, e.g. any remoting activity
   by MMC, Powershell, Windows etc.
-filename: file_event_win_adsi_cache_creation_by_uncommon_tool.yml
 level: medium
 modified: 2023/10/18
 references:
 - https://medium.com/@ivecodoe/detecting-ldapfragger-a-newly-released-cobalt-strike-beacon-using-ldap-for-c2-communication-c274a7f00961
 - https://blog.fox-it.com/2020/03/19/ldapfragger-command-and-control-over-ldap-attributes/
 - https://github.com/fox-it/LDAPFragger
-related: []
 status: test
 tags:
 - attack.t1001.003
 - attack.command_and_control
+title: ADSI-Cache File Creation By Uncommon Tool

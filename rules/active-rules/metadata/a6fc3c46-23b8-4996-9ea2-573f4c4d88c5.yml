@@ -5,7 +5,6 @@ description: Detects calls to the AtomicTestHarnesses "Invoke-ATHRemoteFXvGPUDis
   PowerShell code via module load-order hijacking.
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_remotefxvgpudisablement_abuse.yml
 level: high
 modified: 2023/05/09
 references:
@@ -22,3 +21,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: RemoteFXvGPUDisablement Abuse Via AtomicTestHarnesses

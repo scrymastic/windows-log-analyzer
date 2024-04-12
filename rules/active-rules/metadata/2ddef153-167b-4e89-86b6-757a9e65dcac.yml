@@ -4,7 +4,6 @@ description: Detects usage of bitsadmin downloading a file to a suspicious targe
   folder
 falsepositives:
 - Unknown
-filename: proc_creation_win_bitsadmin_download_susp_targetfolder.yml
 level: high
 modified: 2023/05/30
 references:
@@ -12,7 +11,6 @@ references:
 - https://isc.sans.edu/diary/22264
 - https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/
 - https://blog.talosintelligence.com/breaking-the-silence-recent-truebot-activity/
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -20,3 +18,4 @@ tags:
 - attack.t1197
 - attack.s0190
 - attack.t1036.003
+title: File Download Via Bitsadmin To A Suspicious Target Folder

@@ -11,7 +11,6 @@ description: 'Detects when an attacker registers a new IFilter for an extension.
   '
 falsepositives:
 - Legitimate registration of IFilters by the OS or software
-filename: registry_set_persistence_ifilter.yml
 level: medium
 modified: 2024/03/26
 references:
@@ -19,7 +18,7 @@ references:
 - https://twitter.com/0gtweet/status/1468548924600459267
 - https://github.com/gtworek/PSBits/tree/master/IFilter
 - https://github.com/gtworek/PSBits/blob/8d767892f3b17eefa4d0668f5d2df78e844f01d8/IFilter/Dll.cpp#L281-L308
-related: []
 status: experimental
 tags:
 - attack.persistence
+title: Register New IFiltre For Persistence

@@ -5,9 +5,7 @@ description: Detects ADDInternals Cmdlet execution. A tool for administering Azu
   365.
 falsepositives:
 - Legitimate use of the library for administrative activity
-filename: proc_creation_win_powershell_aadinternals_cmdlets_execution.yml
 level: high
-modified: ''
 references:
 - https://o365blog.com/aadinternals/
 - https://github.com/Gerenios/AADInternals
@@ -21,3 +19,4 @@ tags:
 - attack.discovery
 - attack.credential_access
 - attack.impact
+title: AADInternals PowerShell Cmdlets Execution - ProccessCreation

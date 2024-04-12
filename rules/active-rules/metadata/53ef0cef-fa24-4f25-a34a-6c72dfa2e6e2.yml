@@ -4,12 +4,11 @@ description: Detects usage of "query.exe" a system binary to exfil information s
   as "sessions" and "processes" for later use
 falsepositives:
 - Unknown
-filename: proc_creation_win_query_session_exfil.yml
 level: medium
 modified: 2023/01/19
 references:
 - https://twitter.com/MichalKoczwara/status/1553634816016498688
-related: []
 status: test
 tags:
 - attack.execution
+title: Query Usage To Exfil Data

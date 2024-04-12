@@ -4,13 +4,12 @@ description: Detects successful code compilation via Visual Basic Command Line C
   that utilizes Windows Resource to Object Converter.
 falsepositives:
 - Utilization of this tool should not be seen in enterprise environment
-filename: proc_creation_win_lolbin_visual_basic_compiler.yml
 level: high
 modified: 2021/11/27
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Vbc/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1027.004
+title: Visual Basic Command Line Compiler Usage

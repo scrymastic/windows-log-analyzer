@@ -4,14 +4,13 @@ description: A general detection for processes creating PFX files. This could be
   indicator of an adversary exporting a local certificate to a PFX file.
 falsepositives:
 - System administrators managing certificates.
-filename: file_event_win_susp_pfx_file_creation.yml
 level: medium
 modified: 2022/07/07
 references:
 - https://github.com/OTRF/detection-hackathon-apt29/issues/14
 - https://github.com/OTRF/ThreatHunter-Playbook/blob/2d4257f630f4c9770f78d0c1df059f891ffc3fec/docs/evals/apt29/detections/6.B.1_6392C9F1-D975-4F75-8A70-433DEDD7F622.md
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1552.004
+title: Suspicious PFX File Creation

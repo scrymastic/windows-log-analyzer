@@ -6,7 +6,9 @@ falsepositives:
 - Legitimate Administrator deletes Shadow Copies using operating systems utilities
   for legitimate reason
 - LANDesk LDClient Ivanti-PSModule (PS EncodedCommand)
-filename: proc_creation_win_susp_shadow_copies_deletion.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: high
 modified: 2022/11/03
 references:
@@ -19,10 +21,10 @@ references:
 - https://github.com/Neo23x0/Raccine/blob/20a569fa21625086433dcce8bb2765d0ea08dcb6/yara/gen_ransomware_command_lines.yar
 - https://redcanary.com/blog/intelligence-insights-october-2021/
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/blackbyte-exbyte-ransomware
-related: []
 status: stable
 tags:
 - attack.defense_evasion
 - attack.impact
 - attack.t1070
 - attack.t1490
+title: Shadow Copies Deletion Using Operating Systems Utilities

@@ -11,13 +11,11 @@ description: 'Detects AnyDesk writing binary files to disk other than "gcapi.dll
   '
 falsepositives:
 - Unknown
-filename: file_event_win_anydesk_writing_susp_binaries.yml
 level: high
-modified: ''
 references:
 - https://redcanary.com/blog/misbehaving-rats/
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1219
+title: Suspicious Binary Writes Via AnyDesk

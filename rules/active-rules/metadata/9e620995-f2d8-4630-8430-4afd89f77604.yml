@@ -4,9 +4,7 @@ description: Detects usage of the "Import-Module" cmdlet to load the "Microsoft.
   DLL. Which is often used by attackers to perform AD enumeration.
 falsepositives:
 - Legitimate use of the library for administrative activity
-filename: posh_ps_active_directory_module_dll_import.yml
 level: medium
-modified: ''
 references:
 - https://github.com/samratashok/ADModule
 - https://twitter.com/cyb3rops/status/1617108657166061568?s=20
@@ -21,3 +19,4 @@ tags:
 - attack.reconnaissance
 - attack.discovery
 - attack.impact
+title: Potential Active Directory Enumeration Using AD Module - PsScript

@@ -5,7 +5,6 @@ description: Detects an unexpected file being deleted by dns.exe which my indica
   in CVE-2020-1350 (SigRed)
 falsepositives:
 - Unknown
-filename: file_delete_win_unusual_deletion_by_dns_exe.yml
 level: high
 modified: 2023/02/15
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.initial_access
 - attack.t1133
+title: Unusual File Deletion by Dns.exe

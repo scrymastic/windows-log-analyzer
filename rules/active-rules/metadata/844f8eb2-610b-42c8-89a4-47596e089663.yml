@@ -3,15 +3,13 @@ date: 2023/06/20
 description: Detects potential DLL sideloading of "ShellDispatch.dll"
 falsepositives:
 - Some installers may trigger some false positives
-filename: image_load_side_load_shelldispatch.yml
 level: medium
-modified: ''
 references:
 - https://www.hexacorn.com/blog/2023/06/07/this-lolbin-doesnt-exist/
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential ShellDispatch.DLL Sideloading

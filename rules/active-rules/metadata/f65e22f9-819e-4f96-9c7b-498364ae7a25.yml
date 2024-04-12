@@ -6,7 +6,6 @@ description: Detects PowerShell module creation where the module Contents are se
   to module load-order hijacking.
 falsepositives:
 - Unknown
-filename: posh_pc_remotefxvgpudisablement_abuse.yml
 level: high
 modified: 2023/05/09
 references:
@@ -23,3 +22,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Potential RemoteFXvGPUDisablement.EXE Abuse

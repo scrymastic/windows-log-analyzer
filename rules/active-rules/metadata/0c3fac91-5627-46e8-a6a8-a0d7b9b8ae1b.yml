@@ -11,16 +11,14 @@ description: 'Get-Variable is a valid PowerShell cmdlet
   '
 falsepositives:
 - Unknown
-filename: file_event_win_susp_get_variable.yml
 level: high
-modified: ''
 references:
 - https://blog.malwarebytes.com/threat-intelligence/2022/04/colibri-loader-combines-task-scheduler-and-powershell-in-clever-persistence-technique/
 - https://www.joesandbox.com/analysis/465533/0/html
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1546
 - attack.defense_evasion
 - attack.t1027
+title: Suspicious Get-Variable.exe Creation

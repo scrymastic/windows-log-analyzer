@@ -3,7 +3,6 @@ date: 2022/05/20
 description: Detects UTF-8 and UTF-16 Base64 encoded powershell 'Invoke-' calls
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_base64_invoke.yml
 level: high
 modified: 2023/04/06
 references:
@@ -17,3 +16,4 @@ tags:
 - attack.t1059.001
 - attack.defense_evasion
 - attack.t1027
+title: PowerShell Base64 Encoded Invoke Keyword

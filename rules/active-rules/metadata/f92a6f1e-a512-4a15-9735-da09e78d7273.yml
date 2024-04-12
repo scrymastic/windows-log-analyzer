@@ -4,9 +4,7 @@ description: Detects creation of files which are the results of executing the bu
   reconnaissance script "C:\Windows\System32\gatherNetworkInfo.vbs".
 falsepositives:
 - Unknown
-filename: file_event_win_lolbin_gather_network_info_script_output.yml
 level: medium
-modified: ''
 references:
 - https://posts.slayerlabs.com/living-off-the-land/#gathernetworkinfovbs
 - https://www.mandiant.com/resources/blog/trojanized-windows-installers-ukrainian-government
@@ -18,3 +16,4 @@ related:
 status: test
 tags:
 - attack.discovery
+title: GatherNetworkInfo.VBS Reconnaissance Script Output

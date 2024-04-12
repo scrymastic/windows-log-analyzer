@@ -3,9 +3,7 @@ date: 2024/02/23
 description: Detects addition of users to highly privileged groups via "Net" or "Add-LocalGroupMember".
 falsepositives:
 - Administrative activity that must be investigated
-filename: proc_creation_win_susp_add_user_privileged_group.yml
 level: high
-modified: ''
 references:
 - https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708
 related:
@@ -17,3 +15,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1098
+title: User Added To Highly Privileged Group

@@ -4,7 +4,6 @@ date: 2021/02/02
 description: Detects AdFind execution with common flags seen used during attacks
 falsepositives:
 - Legitimate admin activity
-filename: proc_creation_win_pua_adfind_susp_usage.yml
 level: high
 modified: 2023/03/05
 references:
@@ -28,3 +27,4 @@ tags:
 - attack.t1482
 - attack.t1069.002
 - stp.1u
+title: PUA - AdFind Suspicious Execution

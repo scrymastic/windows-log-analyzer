@@ -4,14 +4,12 @@ description: Detects suspicious file based on their extension being created in "
   Note that this directory mostly contains ".etl" files
 falsepositives:
 - Unlikely
-filename: file_event_win_perflogs_susp_files.yml
 level: medium
-modified: ''
 references:
 - Internal Research
 - https://labs.withsecure.com/publications/fin7-target-veeam-servers
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059
+title: Suspicious File Created In PerfLogs

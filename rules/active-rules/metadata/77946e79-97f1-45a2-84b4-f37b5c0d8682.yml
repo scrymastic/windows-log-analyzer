@@ -4,7 +4,9 @@ description: Detects the import of an alternate data stream with regini.exe, reg
   can be used to modify registry keys.
 falsepositives:
 - Unknown
-filename: proc_creation_win_regini_ads.yml
+fields:
+- ParentImage
+- CommandLine
 level: high
 modified: 2023/02/08
 references:
@@ -18,3 +20,4 @@ status: test
 tags:
 - attack.t1112
 - attack.defense_evasion
+title: Suspicious Registry Modification From ADS Via Regini.EXE

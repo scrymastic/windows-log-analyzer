@@ -4,15 +4,14 @@ description: Detects suspicious shell spawn from Java utility keytool process (e
   adselfservice plus exploitation)
 falsepositives:
 - Unknown
-filename: proc_creation_win_java_keytool_susp_child_process.yml
 level: high
 modified: 2023/01/21
 references:
 - https://redcanary.com/blog/intelligence-insights-december-2021
 - https://www.synacktiv.com/en/publications/how-to-exploit-cve-2021-40539-on-manageengine-adselfservice-plus.html
-related: []
 status: test
 tags:
 - attack.initial_access
 - attack.persistence
 - attack.privilege_escalation
+title: Suspicious Shells Spawn by Java Utility Keytool

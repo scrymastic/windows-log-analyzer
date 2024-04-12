@@ -11,9 +11,7 @@ description: 'Detects the load of RstrtMgr DLL (Restart Manager) by a suspicious
   '
 falsepositives:
 - Processes related to software installation
-filename: image_load_dll_rstrtmgr_suspicious_load.yml
 level: high
-modified: ''
 references:
 - https://www.crowdstrike.com/blog/windows-restart-manager-part-1/
 - https://www.crowdstrike.com/blog/windows-restart-manager-part-2/
@@ -28,3 +26,4 @@ tags:
 - attack.defense_evasion
 - attack.t1486
 - attack.t1562.001
+title: Load Of RstrtMgr.DLL By A Suspicious Process

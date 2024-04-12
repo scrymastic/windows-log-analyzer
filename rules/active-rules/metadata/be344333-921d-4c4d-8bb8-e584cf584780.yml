@@ -4,7 +4,6 @@ description: Detects uncommon or suspicious child processes of "eventvwr.exe" wh
   might indicate a UAC bypass attempt
 falsepositives:
 - Unknown
-filename: proc_creation_win_eventvwr_susp_child_process.yml
 level: high
 modified: 2023/09/28
 references:
@@ -19,3 +18,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1548.002
 - car.2019-04-001
+title: Potentially Suspicious Event Viewer Child Process

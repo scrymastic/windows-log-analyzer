@@ -12,7 +12,6 @@ description: 'Detects an executable initiating a network connection to "ngrok" t
   '
 falsepositives:
 - Legitimate use of the ngrok service.
-filename: net_connection_win_domain_ngrok_tunnel.yml
 level: high
 modified: 2024/02/02
 references:
@@ -31,3 +30,4 @@ tags:
 - attack.t1090
 - attack.t1102
 - attack.s0508
+title: Communication To Ngrok Tunneling Service Initiated

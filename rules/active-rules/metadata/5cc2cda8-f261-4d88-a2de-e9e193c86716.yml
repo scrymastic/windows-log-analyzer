@@ -4,15 +4,14 @@ description: Detects suspicious processes including shells spawnd from WinRM hos
   process
 falsepositives:
 - Legitimate WinRM usage
-filename: proc_creation_win_winrm_susp_child_process.yml
 level: high
 modified: 2022/07/14
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.t1190
 - attack.initial_access
 - attack.persistence
 - attack.privilege_escalation
+title: Suspicious Processes Spawned by WinRM

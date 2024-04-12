@@ -4,12 +4,10 @@ description: Detects creation of files with the ".pub" extension in suspicious o
   uncommon locations. This could be a sign of attackers abusing Publisher documents
 falsepositives:
 - Legitimate usage of ".pub" files from those locations
-filename: file_event_win_office_publisher_files_in_susp_locations.yml
 level: medium
-modified: ''
 references:
 - https://twitter.com/EmericNasi/status/1623224526220804098
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Publisher Attachment File Dropped In Suspicious Location

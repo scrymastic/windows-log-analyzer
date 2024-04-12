@@ -3,12 +3,10 @@ date: 2020/05/22
 description: Detects various execution patterns of the CrackMapExec pentesting framework
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_crackmapexec_execution_patterns.yml
 level: high
 modified: 2023/11/06
 references:
 - https://github.com/byt3bl33d3r/CrackMapExec
-related: []
 status: stable
 tags:
 - attack.execution
@@ -17,3 +15,4 @@ tags:
 - attack.t1059.003
 - attack.t1059.001
 - attack.s0106
+title: HackTool - CrackMapExec Execution Patterns

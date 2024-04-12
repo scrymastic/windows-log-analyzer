@@ -5,13 +5,11 @@ description: Detects the creation of an "lsass.dmp" file by the taskmgr process.
 falsepositives:
 - Rare case of troubleshooting by an administrator or support that has to be investigated
   regardless
-filename: file_event_win_taskmgr_lsass_dump.yml
 level: high
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/987e3ca988ae3cff4b9f6e388c139c05bf44bbb8/atomics/T1003.001/T1003.001.md#L1
-related: []
 status: experimental
 tags:
 - attack.credential_access
 - attack.t1003.001
+title: LSASS Process Memory Dump Creation Via Taskmgr.EXE

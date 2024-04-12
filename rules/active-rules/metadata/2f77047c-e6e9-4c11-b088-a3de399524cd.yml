@@ -5,14 +5,12 @@ description: Detects usage of certain functions and keywords that are used to ma
   DAMP project.
 falsepositives:
 - Unknown
-filename: posh_ps_susp_ace_tampering.yml
 level: high
-modified: ''
 references:
 - https://github.com/HarmJ0y/DAMP
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.defense_evasion
 - attack.privilege_escalation
+title: Potential Persistence Via Security Descriptors - ScriptBlock

@@ -6,13 +6,12 @@ description: 'Detects when someone is adding or removing applications or folders
   '
 falsepositives:
 - Unlikely
-filename: win_defender_config_change_exploit_guard_tamper.yml
 level: high
 modified: 2022/12/06
 references:
 - https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/windows-10-controlled-folder-access-event-search/ba-p/2326088
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Windows Defender Exploit Guard Tamper

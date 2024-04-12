@@ -3,9 +3,7 @@ date: 2023/04/17
 description: Detects usage of winget to add new additional download sources
 falsepositives:
 - False positive are expected with legitimate sources
-filename: proc_creation_win_winget_add_custom_source.yml
 level: medium
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/package-manager/winget/source
 - https://github.com/nasbench/Misc-Research/tree/b9596e8109dcdb16ec353f316678927e507a5b8d/LOLBINs/Winget
@@ -19,3 +17,4 @@ tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1059
+title: Add New Download Source To Winget

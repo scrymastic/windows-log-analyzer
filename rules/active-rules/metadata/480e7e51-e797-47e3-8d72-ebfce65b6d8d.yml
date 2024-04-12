@@ -3,9 +3,7 @@ date: 2022/06/03
 description: Detects python spawning a pretty tty
 falsepositives:
 - Unknown
-filename: proc_creation_win_python_pty_spawn.yml
 level: high
-modified: ''
 references:
 - https://www.volexity.com/blog/2022/06/02/zero-day-exploitation-of-atlassian-confluence/
 related:
@@ -15,3 +13,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059
+title: Python Spawning Pretty TTY on Windows

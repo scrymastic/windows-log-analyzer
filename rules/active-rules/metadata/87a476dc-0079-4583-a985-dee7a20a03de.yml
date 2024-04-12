@@ -4,9 +4,7 @@ description: Detects processes that query known 3rd party registry keys that hol
   credentials via commandline
 falsepositives:
 - Unknown
-filename: proc_creation_win_registry_enumeration_for_credentials_cli.yml
 level: medium
-modified: ''
 references:
 - https://isc.sans.edu/diary/More+Data+Exfiltration/25698
 - https://github.com/synacktiv/Radmin3-Password-Cracker/blob/acfc87393e4b7c06353973a14a6c7126a51f36ac/regkey.txt
@@ -19,3 +17,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1552.002
+title: Enumeration for 3rd Party Creds From CLI

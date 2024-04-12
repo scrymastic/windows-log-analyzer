@@ -4,13 +4,12 @@ description: Detects suspicious powershell process which includes bxor command, 
   obfuscation method to b64 encoded commands.
 falsepositives:
 - Unknown
-filename: posh_pc_xor_commandline.yml
 level: medium
 modified: 2023/10/27
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=46
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Suspicious XOR Encoded PowerShell Command Line - PowerShell

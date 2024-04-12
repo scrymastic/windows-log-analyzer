@@ -4,7 +4,6 @@ description: Detects registry changes to Microsoft Office "VBAWarning" to a valu
   of "1" which enables the execution of all macros, whether signed or unsigned.
 falsepositives:
 - Unlikely
-filename: registry_set_office_vba_warnings_tamper.yml
 level: high
 modified: 2024/03/19
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: Office Macros Warning Disabled

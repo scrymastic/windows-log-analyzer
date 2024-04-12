@@ -4,12 +4,11 @@ description: Triggers on any Sysmon "FileBlockExecutable" event, which indicates
   violation of the configured block policy
 falsepositives:
 - Unlikely
-filename: sysmon_file_block_executable.yml
 level: high
 modified: 2023/09/16
 references:
 - https://medium.com/@olafhartong/sysmon-14-0-fileblockexecutable-13d7ba3dff3e
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
+title: Sysmon Blocked Executable

@@ -4,7 +4,6 @@ description: Detects when an attacker tries to add a new network provider in ord
   to dump clear text credentials, similar to how the NPPSpy tool does it
 falsepositives:
 - Other legitimate network providers used and not filtred in this rule
-filename: proc_creation_win_registry_new_network_provider.yml
 level: high
 modified: 2023/02/02
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1003
+title: Potential Credential Dumping Attempt Using New NetworkProvider - CLI

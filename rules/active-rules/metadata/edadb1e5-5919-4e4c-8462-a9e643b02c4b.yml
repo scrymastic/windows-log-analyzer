@@ -5,7 +5,6 @@ description: Detects the use of the Microsoft Windows Resource Leak Diagnostic t
   "rdrleakdiag.exe" to dump process memory
 falsepositives:
 - Unknown
-filename: proc_creation_win_rdrleakdiag_process_dumping.yml
 level: high
 modified: 2023/04/24
 references:
@@ -20,3 +19,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1003.001
+title: Process Memory Dump via RdrLeakDiag.EXE

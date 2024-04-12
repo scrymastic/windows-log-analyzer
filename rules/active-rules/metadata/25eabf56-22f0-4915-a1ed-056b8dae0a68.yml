@@ -4,14 +4,12 @@ description: Detects an executable that isn't dropbox but communicates with the 
   API
 falsepositives:
 - Legitimate use of the API with a tool that the author wasn't aware of
-filename: net_connection_win_susp_dropbox_api.yml
 level: high
-modified: ''
 references:
 - https://app.any.run/tasks/7e906adc-9d11-447f-8641-5f40375ecebb
 - https://www.zscaler.com/blogs/security-research/new-espionage-attack-molerats-apt-targeting-users-middle-east
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Suspicious Dropbox API Usage

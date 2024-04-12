@@ -3,7 +3,6 @@ date: 2022/10/01
 description: Detect use of PDQ Deploy remote admin tool
 falsepositives:
 - Legitimate use
-filename: proc_creation_win_pdqdeploy_execution.yml
 level: medium
 modified: 2023/01/30
 references:
@@ -17,3 +16,4 @@ tags:
 - attack.execution
 - attack.lateral_movement
 - attack.t1072
+title: PDQ Deploy Remote Adminstartion Tool Execution

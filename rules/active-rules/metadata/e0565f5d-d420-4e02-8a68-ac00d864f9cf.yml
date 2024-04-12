@@ -11,13 +11,12 @@ description: 'Adversaries may enumerate browser bookmarks to learn more about co
   '
 falsepositives:
 - Unknown
-filename: posh_ps_get_childitem_bookmarks.yml
 level: low
 modified: 2022/12/25
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1217/T1217.md
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1217
+title: Automated Collection Bookmarks Using Get-ChildItem PowerShell

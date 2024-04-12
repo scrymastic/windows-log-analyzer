@@ -4,7 +4,6 @@ description: Detects the execution of "attrib" with the "+s" flag to mark files 
   system files
 falsepositives:
 - Unknown
-filename: proc_creation_win_attrib_system.yml
 level: low
 modified: 2023/03/14
 references:
@@ -18,3 +17,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1564.001
+title: Set Files as System Files Using Attrib.EXE

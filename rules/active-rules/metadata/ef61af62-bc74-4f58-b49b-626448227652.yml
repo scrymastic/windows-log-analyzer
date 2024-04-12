@@ -5,9 +5,7 @@ description: Detects the execution of Sysinternals ADExplorer with the "-snapsho
   directory.
 falsepositives:
 - Unknown
-filename: proc_creation_win_sysinternals_adexplorer_susp_execution.yml
 level: high
-modified: ''
 references:
 - https://www.documentcloud.org/documents/5743766-Global-Threat-Report-2019.html
 related:
@@ -18,3 +16,4 @@ tags:
 - attack.credential_access
 - attack.t1552.001
 - attack.t1003.003
+title: Suspicious Active Directory Database Snapshot Via ADExplorer

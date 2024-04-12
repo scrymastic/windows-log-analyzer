@@ -5,7 +5,6 @@ description: Detects calls to cmdlets inside of PowerShell scripts that are used
   this to steal private keys from compromised machines.
 falsepositives:
 - Legitimate certificate exports by administrators. Additional filters might be required.
-filename: posh_ps_export_certificate.yml
 level: medium
 modified: 2023/05/18
 references:
@@ -19,3 +18,4 @@ status: test
 tags:
 - attack.credential_access
 - attack.t1552.004
+title: Certificate Exported Via PowerShell - ScriptBlock

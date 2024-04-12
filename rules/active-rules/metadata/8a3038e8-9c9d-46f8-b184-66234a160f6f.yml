@@ -5,13 +5,11 @@ description: Detects potential use of an SSH utility to establish RDP over a rev
   would otherwise not reach their intended destination.
 falsepositives:
 - Unknown
-filename: proc_creation_win_susp_remote_desktop_tunneling.yml
 level: medium
-modified: ''
 references:
 - https://www.elastic.co/guide/en/security/current/potential-remote-desktop-tunneling-detected.html
-related: []
 status: test
 tags:
 - attack.lateral_movement
 - attack.t1021
+title: Potential Remote Desktop Tunneling

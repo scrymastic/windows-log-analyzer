@@ -3,7 +3,6 @@ date: 2022/07/07
 description: Detects powershell scripts that import modules from suspicious directories
 falsepositives:
 - Unknown
-filename: posh_ps_import_module_susp_dirs.yml
 level: medium
 modified: 2023/01/10
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Import PowerShell Modules From Suspicious Directories

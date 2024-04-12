@@ -3,13 +3,11 @@ date: 2022/11/17
 description: Detects suspicious execution of 'Msbuild.exe' by a uncommon parent process
 falsepositives:
 - Unknown
-filename: proc_creation_win_msbuild_susp_parent_process.yml
 level: medium
-modified: ''
 references:
 - https://app.any.run/tasks/abdf586e-df0c-4d39-89a7-06bf24913401/
 - https://www.echotrail.io/insights/search/msbuild.exe
-related: []
 status: test
 tags:
 - attack.defense_evasion
+title: Suspicious Msbuild Execution By Uncommon Parent Process

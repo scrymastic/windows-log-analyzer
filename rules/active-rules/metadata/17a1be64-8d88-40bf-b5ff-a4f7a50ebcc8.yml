@@ -4,7 +4,6 @@ description: Detects creation of a new service via "sc" command or the powershel
   "new-service" cmdlet with suspicious binary paths
 falsepositives:
 - Unlikely
-filename: proc_creation_win_susp_service_creation.yml
 level: high
 modified: 2022/11/18
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.persistence
 - attack.privilege_escalation
 - attack.t1543.003
+title: Suspicious New Service Creation

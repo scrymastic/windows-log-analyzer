@@ -3,13 +3,12 @@ date: 2017/03/05
 description: Detects the use of PSAttack PowerShell hack tool
 falsepositives:
 - Unknown
-filename: posh_ps_psattack.yml
 level: high
 modified: 2022/12/25
 references:
 - https://adsecurity.org/?p=2921
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: PowerShell PSAttack

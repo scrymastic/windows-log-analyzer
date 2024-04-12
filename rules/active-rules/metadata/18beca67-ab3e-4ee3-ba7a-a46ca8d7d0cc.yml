@@ -4,7 +4,6 @@ description: Potential threat actor tampering with Sysmon manifest and eventuall
   disabling it
 falsepositives:
 - Unknown
-filename: win_security_sysmon_channel_reference_deletion.yml
 level: high
 modified: 2022/10/05
 references:
@@ -12,8 +11,8 @@ references:
 - https://twitter.com/SecurityJosh/status/1283027365770276866
 - https://securityjosh.github.io/2020/04/23/Mute-Sysmon.html
 - https://gist.github.com/Cyb3rWard0g/cf08c38c61f7e46e8404b38201ca01c8
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: Sysmon Channel Reference Deletion

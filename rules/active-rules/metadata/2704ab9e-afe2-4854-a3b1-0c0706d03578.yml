@@ -4,14 +4,13 @@ description: Detects the use of Dumpert process dumper, which dumps the lsass.ex
   process memory
 falsepositives:
 - Very unlikely
-filename: proc_creation_win_hktl_dumpert.yml
 level: critical
 modified: 2023/02/04
 references:
 - https://github.com/outflanknl/Dumpert
 - https://unit42.paloaltonetworks.com/actors-still-exploiting-sharepoint-vulnerability/
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1003.001
+title: HackTool - Dumpert Process Dumper Execution

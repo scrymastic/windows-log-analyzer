@@ -7,14 +7,12 @@ description: 'Detects the execution of SharpMove, a .NET utility performing mult
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_sharpmove.yml
 level: high
-modified: ''
 references:
 - https://github.com/0xthirteen/SharpMove/
 - https://pentestlab.blog/tag/sharpmove/
-related: []
 status: experimental
 tags:
 - attack.lateral_movement
 - attack.t1021.002
+title: HackTool - SharpMove Tool Execution

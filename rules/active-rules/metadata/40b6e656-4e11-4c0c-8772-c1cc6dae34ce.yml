@@ -4,15 +4,14 @@ description: Detects registry key established after masqueraded .scr file execut
   using Rundll32 through desk.cpl
 falsepositives:
 - Legitimate use of screen saver
-filename: registry_set_scr_file_executed_by_rundll32.yml
 level: medium
 modified: 2023/08/17
 references:
 - https://twitter.com/VakninHai/status/1517027824984547329
 - https://twitter.com/pabraeken/status/998627081360695297
 - https://jstnk9.github.io/jstnk9/research/InstallScreenSaver-SCR-files
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1218.011
+title: ScreenSaver Registry Key Set

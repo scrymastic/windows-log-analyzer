@@ -4,12 +4,10 @@ description: Detects the creation of diagcab file, which could be caused by some
   installer or is a sign of exploitation (review the filename and its location)
 falsepositives:
 - Legitimate microsoft diagcab
-filename: file_event_win_susp_diagcab.yml
 level: medium
-modified: ''
 references:
 - https://threadreaderapp.com/thread/1533879688141086720.html
-related: []
 status: test
 tags:
 - attack.resource_development
+title: Creation of a Diagcab

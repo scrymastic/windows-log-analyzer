@@ -10,9 +10,7 @@ description: 'Detects processes loading the non-existent DLL "ShellChromeAPI". O
   '
 falsepositives:
 - Unknown
-filename: image_load_side_load_shell_chrome_api.yml
 level: high
-modified: ''
 references:
 - https://mobile.twitter.com/0gtweet/status/1564131230941122561
 - https://strontic.github.io/xcyclopedia/library/DeviceEnroller.exe-24BEF0D6B0ECED36BB41831759FDE18D.html
@@ -26,3 +24,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: DLL Sideloading Of ShellChromeAPI.DLL

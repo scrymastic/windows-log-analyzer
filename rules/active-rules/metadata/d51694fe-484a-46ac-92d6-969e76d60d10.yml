@@ -4,9 +4,7 @@ description: Detects file access requests to potentially sensitive files hosted 
   the Windows Sysvol share.
 falsepositives:
 - Unknown
-filename: file_access_win_susp_gpo_access_file.yml
 level: medium
-modified: ''
 references:
 - https://github.com/vletoux/pingcastle
 related:
@@ -16,3 +14,4 @@ status: experimental
 tags:
 - attack.credential_access
 - attack.t1552.006
+title: Access To Potentially Sensitive Sysvol Files By Uncommon Application

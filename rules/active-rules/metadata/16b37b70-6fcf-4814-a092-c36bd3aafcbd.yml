@@ -3,12 +3,10 @@ date: 2018/11/17
 description: Detects Base64 encoded Shellcode
 falsepositives:
 - Unknown
-filename: posh_ps_shellcode_b64.yml
 level: high
 modified: 2024/01/25
 references:
 - https://twitter.com/cyb3rops/status/1063072865992523776
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -16,3 +14,4 @@ tags:
 - attack.t1055
 - attack.execution
 - attack.t1059.001
+title: PowerShell ShellCode

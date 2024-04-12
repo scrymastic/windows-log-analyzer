@@ -13,7 +13,6 @@ description: 'Detects the use of the WMI command-line (WMIC) utility to identify
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_wmic_recon_system_info_uncommon.yml
 level: medium
 modified: 2023/12/19
 references:
@@ -30,3 +29,4 @@ status: experimental
 tags:
 - attack.discovery
 - attack.t1082
+title: Uncommon System Information Discovery Via Wmic.EXE

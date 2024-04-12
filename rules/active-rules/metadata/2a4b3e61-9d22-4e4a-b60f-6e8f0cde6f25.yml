@@ -4,9 +4,7 @@ description: Detects potential abuse of the provisioning registry key for indire
   command execution through "Provlaunch.exe".
 falsepositives:
 - Unknown
-filename: proc_creation_win_registry_provlaunch_provisioning_command.yml
 level: high
-modified: ''
 references:
 - https://lolbas-project.github.io/lolbas/Binaries/Provlaunch/
 - https://twitter.com/0gtweet/status/1674399582162153472
@@ -21,3 +19,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1218
+title: Potential Provisioning Registry Key Abuse For Binary Proxy Execution

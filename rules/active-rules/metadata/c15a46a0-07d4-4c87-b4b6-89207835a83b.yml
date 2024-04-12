@@ -3,7 +3,6 @@ date: 2023/04/17
 description: Detects usage of winget to add new potentially suspicious download sources
 falsepositives:
 - Unknown
-filename: proc_creation_win_winget_add_susp_custom_source.yml
 level: medium
 modified: 2023/12/04
 references:
@@ -19,3 +18,4 @@ tags:
 - attack.defense_evasion
 - attack.execution
 - attack.t1059
+title: Add Potential Suspicious New Download Source To Winget

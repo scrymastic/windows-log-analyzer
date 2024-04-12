@@ -5,7 +5,6 @@ description: Detects external IP address lookups by non-browser processes via se
   test activity.
 falsepositives:
 - Legitimate use of the external websites for troubleshooting or network monitoring
-filename: net_connection_win_susp_external_ip_lookup.yml
 level: medium
 modified: 2024/03/22
 references:
@@ -20,3 +19,4 @@ status: experimental
 tags:
 - attack.discovery
 - attack.t1016
+title: Suspicious Network Connection to IP Lookup Service APIs

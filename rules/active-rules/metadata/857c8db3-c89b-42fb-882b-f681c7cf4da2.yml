@@ -3,13 +3,12 @@ date: 2019/10/22
 description: Loading unsigned image (DLL, EXE) into LSASS process
 falsepositives:
 - Valid user connecting using RDP
-filename: image_load_lsass_unsigned_image_load.yml
 level: medium
 modified: 2021/11/27
 references:
 - https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1003.001
+title: Unsigned Image Loaded Into LSASS Process

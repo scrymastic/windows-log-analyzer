@@ -12,7 +12,6 @@ description: 'focuses on trivial artifacts observed in variants of prevalent off
 falsepositives:
 - Moderate-to-low; Despite the shorter length/lower entropy for some of these, because
   of high specificity, fp appears to be fairly limited in many environments.
-filename: posh_pm_bad_opsec_artifacts.yml
 level: critical
 modified: 2022/12/25
 references:
@@ -26,3 +25,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Bad Opsec Powershell Code Artifacts

@@ -4,7 +4,6 @@ description: Detects registry persistence technique using the GlobalFlags and Si
   keys
 falsepositives:
 - Unknown
-filename: registry_set_persistence_globalflags.yml
 level: high
 modified: 2023/06/05
 references:
@@ -20,3 +19,4 @@ tags:
 - attack.defense_evasion
 - attack.t1546.012
 - car.2013-01-002
+title: Potential Persistence Via GlobalFlags

@@ -4,9 +4,7 @@ description: Detects the execution of PingCastle, a tool designed to quickly ass
   the Active Directory security level.
 falsepositives:
 - Unknown
-filename: proc_creation_win_pua_pingcastle.yml
 level: medium
-modified: ''
 references:
 - https://github.com/vletoux/pingcastle
 - https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
@@ -22,3 +20,4 @@ status: experimental
 tags:
 - attack.reconnaissance
 - attack.t1595
+title: PUA - PingCastle Execution

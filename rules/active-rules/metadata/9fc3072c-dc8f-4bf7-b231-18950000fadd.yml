@@ -4,7 +4,6 @@ description: Detect usage of the "driverquery" utility to perform reconnaissance
   installed drivers
 falsepositives:
 - Legitimate usage by some scripts might trigger this as well
-filename: proc_creation_win_driverquery_recon.yml
 level: high
 modified: 2023/09/29
 references:
@@ -17,3 +16,4 @@ related:
 status: experimental
 tags:
 - attack.discovery
+title: Potential Recon Activity Using DriverQuery.EXE

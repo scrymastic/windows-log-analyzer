@@ -13,7 +13,6 @@ description: 'Detects attackers using tooling with bad opsec defaults.
   '
 falsepositives:
 - Unlikely
-filename: proc_creation_win_susp_bad_opsec_sacrificial_processes.yml
 level: high
 modified: 2023/12/02
 references:
@@ -31,3 +30,4 @@ status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1218.011
+title: Bad Opsec Defaults Sacrificial Processes With Improper Arguments

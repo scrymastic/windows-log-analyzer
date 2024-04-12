@@ -3,7 +3,6 @@ date: 2021/05/25
 description: Detects the creation of a named pipe as used by CobaltStrike
 falsepositives:
 - Unknown
-filename: pipe_created_hktl_cobaltstrike.yml
 level: critical
 modified: 2022/10/31
 references:
@@ -22,3 +21,4 @@ tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1055
+title: CobaltStrike Named Pipe

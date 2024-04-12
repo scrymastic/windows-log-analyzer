@@ -5,13 +5,11 @@ description: Detects setting of a new registry database value related to BgInfo 
   by BgInfo in order to exfiltrate information.
 falsepositives:
 - Legitimate use of external DB to save the results
-filename: registry_set_bginfo_custom_db.yml
 level: medium
-modified: ''
 references:
 - Internal Research
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1112
+title: New BgInfo.EXE Custom DB Path Registry Configuration

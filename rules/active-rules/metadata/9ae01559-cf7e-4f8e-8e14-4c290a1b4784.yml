@@ -5,7 +5,6 @@ description: Detects loading of "credui.dll" and related DLLs by an uncommon pro
   or "CredUnPackAuthenticationBufferW".
 falsepositives:
 - Other legitimate processes loading those DLLs in your environment.
-filename: image_load_dll_credui_uncommon_process_load.yml
 level: medium
 modified: 2023/07/28
 references:
@@ -13,9 +12,9 @@ references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1056.002/T1056.002.md#atomic-test-2---powershell---prompt-user-for-password
 - https://docs.microsoft.com/en-us/windows/win32/api/wincred/nf-wincred-creduipromptforcredentialsa
 - https://github.com/S12cybersecurity/RDPCredentialStealer
-related: []
 status: experimental
 tags:
 - attack.credential_access
 - attack.collection
 - attack.t1056.002
+title: CredUI.DLL Loaded By Uncommon Process

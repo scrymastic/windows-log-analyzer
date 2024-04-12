@@ -4,7 +4,6 @@ description: Office application called wmic to proxye execution through a LOLBIN
   This is often used to break suspicious parent-child chain (Office app spawns LOLBin).
 falsepositives:
 - Unknown
-filename: proc_creation_win_wmic_susp_execution_via_office_process.yml
 level: high
 modified: 2023/02/14
 references:
@@ -28,3 +27,4 @@ tags:
 - attack.t1218.010
 - attack.execution
 - attack.defense_evasion
+title: Suspicious WMIC Execution Via Office Process

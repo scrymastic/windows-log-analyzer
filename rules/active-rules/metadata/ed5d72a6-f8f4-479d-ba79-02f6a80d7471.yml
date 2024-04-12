@@ -4,13 +4,12 @@ description: Detects potential LethalHTA technique where the "mshta.exe" is spaw
   by an "svchost.exe" process
 falsepositives:
 - Unknown
-filename: proc_creation_win_mshta_lethalhta_technique.yml
 level: high
 modified: 2023/02/07
 references:
 - https://codewhitesec.blogspot.com/2018/07/lethalhta.html
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.005
+title: Potential LethalHTA Technique Execution

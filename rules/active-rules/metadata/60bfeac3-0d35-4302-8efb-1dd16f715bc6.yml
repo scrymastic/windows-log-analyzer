@@ -4,13 +4,11 @@ description: Detects suspicious child processes of SysAidServer (as seen in MERC
   threat actor intrusions)
 falsepositives:
 - Unknown
-filename: proc_creation_win_java_sysaidserver_susp_child_process.yml
 level: medium
-modified: ''
 references:
 - https://www.microsoft.com/security/blog/2022/08/25/mercury-leveraging-log4j-2-vulnerabilities-in-unpatched-systems-to-target-israeli-organizations/
-related: []
 status: test
 tags:
 - attack.lateral_movement
 - attack.t1210
+title: Suspicious SysAidServer Child

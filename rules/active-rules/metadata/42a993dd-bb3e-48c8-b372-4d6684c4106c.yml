@@ -4,7 +4,10 @@ description: This rule detect common flag combinations used by CrackMapExec in o
   to detect its use even if the binary has been replaced.
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_crackmapexec_execution.yml
+fields:
+- ComputerName
+- User
+- CommandLine
 level: high
 modified: 2023/03/08
 references:
@@ -12,7 +15,6 @@ references:
 - https://www.mandiant.com/resources/telegram-malware-iranian-espionage
 - https://www.infosecmatter.com/crackmapexec-module-library/?cmem=mssql-mimikatz
 - https://www.infosecmatter.com/crackmapexec-module-library/?cmem=smb-pe_inject
-related: []
 status: test
 tags:
 - attack.execution
@@ -26,3 +28,4 @@ tags:
 - attack.t1059.001
 - attack.t1110
 - attack.t1201
+title: HackTool - CrackMapExec Execution

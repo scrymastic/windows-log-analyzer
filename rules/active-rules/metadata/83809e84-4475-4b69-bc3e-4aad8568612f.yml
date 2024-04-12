@@ -4,7 +4,8 @@ description: Detects the Installation of a Exchange Transport Agent
 falsepositives:
 - Legitimate installations of exchange TransportAgents. AssemblyPath is a good indicator
   for this.
-filename: proc_creation_win_powershell_msexchange_transport_agent.yml
+fields:
+- AssemblyPath
 level: medium
 modified: 2022/10/09
 references:
@@ -16,3 +17,4 @@ status: test
 tags:
 - attack.persistence
 - attack.t1505.002
+title: MSExchange Transport Agent Installation

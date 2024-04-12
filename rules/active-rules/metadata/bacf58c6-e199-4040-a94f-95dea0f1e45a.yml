@@ -9,15 +9,13 @@ description: 'Detects a Windows Filtering Platform (WFP) blocked connection even
   '
 falsepositives:
 - Unlikely
-filename: win_security_wfp_endpoint_agent_blocked.yml
 level: high
-modified: ''
 references:
 - https://github.com/netero1010/EDRSilencer
 - https://github.com/amjcyber/EDRNoiseMaker
 - https://ghoulsec.medium.com/misc-series-4-forensics-on-edrsilencer-events-428b20b3f983
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1562
+title: Windows Filtering Platform Blocked Connection From EDR Agent Binary

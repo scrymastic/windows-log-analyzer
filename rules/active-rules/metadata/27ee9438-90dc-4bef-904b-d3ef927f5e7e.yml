@@ -4,13 +4,11 @@ description: Detects execution of the Windows Kernel Debugger "kd.exe".
 falsepositives:
 - Rare occasions of legitimate cases where kernel debugging is necessary in production.
   Investigation is required
-filename: proc_creation_win_kd_execution.yml
 level: high
-modified: ''
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
+title: Windows Kernel Debugger Execution

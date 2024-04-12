@@ -12,16 +12,14 @@ description: 'Detects "read access" requests on the services registry key.
   '
 falsepositives:
 - Likely from legitimate applications reading their key. Requires heavy tuning
-filename: win_security_registry_permissions_weakness_check.yml
 level: low
-modified: ''
 references:
 - https://center-for-threat-informed-defense.github.io/summiting-the-pyramid/analytics/service_registry_permissions_weakness_check/
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1574.011/T1574.011.md#atomic-test-1---service-registry-permissions-weakness
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.persistence
 - attack.privilege_escalation
 - attack.t1574.011
+title: Service Registry Key Read Access Request

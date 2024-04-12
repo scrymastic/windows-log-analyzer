@@ -11,13 +11,12 @@ description: 'When C# is compiled dynamically, a .cmdline file will be created a
   '
 falsepositives:
 - Unknown
-filename: file_event_win_csharp_compile_artefact.yml
 level: low
 modified: 2023/02/17
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1027.004/T1027.004.md#atomic-test-2---dynamic-c-compile
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1027.004
+title: Dynamic CSharp Compile Artefact

@@ -6,14 +6,13 @@ falsepositives:
 - This rule isn't looking for any particular binary characteristics. As legitimate
   installers and programs were seen embedding hidden binaries in their ADS. Some false
   positives are expected from browser processes and similar.
-filename: create_stream_hash_ads_executable.yml
 level: medium
 modified: 2023/02/10
 references:
 - https://twitter.com/0xrawsec/status/1002478725605273600?s=21
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.s0139
 - attack.t1564.004
+title: Hidden Executable In NTFS Alternate Data Stream

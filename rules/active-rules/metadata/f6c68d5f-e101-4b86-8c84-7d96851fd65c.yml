@@ -4,15 +4,14 @@ description: Detects a threat actor creating a file named `wbemcomn.dll` in the 
   directory over the network for a WMI DLL Hijack scenario.
 falsepositives:
 - Unknown
-filename: win_security_wmiprvse_wbemcomn_dll_hijack.yml
 level: high
 modified: 2022/02/24
 references:
 - https://threathunterplaybook.com/hunts/windows/201009-RemoteWMIWbemcomnDLLHijack/notebook.html
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1047
 - attack.lateral_movement
 - attack.t1021.002
+title: T1047 Wmiprvse Wbemcomn DLL Hijack

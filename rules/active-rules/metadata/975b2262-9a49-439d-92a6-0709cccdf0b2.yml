@@ -4,9 +4,7 @@ description: Detects usage of the "Add-AppxPackage" or it's alias "Add-AppPackag
   to install unsigned AppX packages
 falsepositives:
 - Installation of unsigned packages for testing purposes
-filename: posh_ps_install_unsigned_appx_packages.yml
 level: medium
-modified: ''
 references:
 - https://learn.microsoft.com/en-us/windows/msix/package/unsigned-package
 - https://twitter.com/WindowsDocs/status/1620078135080325122
@@ -17,3 +15,4 @@ status: test
 tags:
 - attack.persistence
 - attack.defense_evasion
+title: Unsigned AppX Installation Attempt Using Add-AppxPackage - PsScript

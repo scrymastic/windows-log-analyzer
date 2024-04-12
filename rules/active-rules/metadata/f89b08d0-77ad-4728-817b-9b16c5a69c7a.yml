@@ -4,7 +4,6 @@ description: Detects execution of the SharpImpersonation tool. Which can be used
   manipulate tokens on a Windows computers remotely (PsExec/WmiExec) or interactively
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_sharp_impersonation.yml
 level: high
 modified: 2023/02/13
 references:
@@ -19,3 +18,4 @@ tags:
 - attack.defense_evasion
 - attack.t1134.001
 - attack.t1134.003
+title: HackTool - SharpImpersonation Execution

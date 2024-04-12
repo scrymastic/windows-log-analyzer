@@ -9,13 +9,12 @@ description: 'Detects modifications to the "Hidden" and "ShowSuperHidden" explor
   '
 falsepositives:
 - Unknown
-filename: registry_set_hide_file.yml
 level: medium
 modified: 2024/03/26
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1564.001/T1564.001.md#atomic-test-8---hide-files-through-registry
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
 - attack.t1564.001
+title: Displaying Hidden Files Feature Disabled

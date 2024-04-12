@@ -4,14 +4,18 @@ description: Adversaries may disable security tools to avoid possible detection 
   their tools and activities by removing Windows Defender Definition Files
 falsepositives:
 - Unknown
-filename: proc_creation_win_mpcmdrun_remove_windows_defender_definition.yml
+fields:
+- ComputerName
+- User
+- CommandLine
+- ParentCommandLine
 level: high
 modified: 2023/07/18
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1562.001/T1562.001.md
 - https://unit42.paloaltonetworks.com/unit42-gorgon-group-slithering-nation-state-cybercrime/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Windows Defender Definition Files Removed

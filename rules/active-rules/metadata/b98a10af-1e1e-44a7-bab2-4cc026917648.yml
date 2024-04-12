@@ -9,13 +9,11 @@ description: 'Detects PDQDeploy service installation on the target system.
   '
 falsepositives:
 - Legitimate use of the tool
-filename: win_system_service_install_pdqdeploy_runner.yml
 level: medium
-modified: ''
 references:
 - https://documentation.pdq.com/PDQDeploy/13.0.3.0/index.html?windows-services.htm
-related: []
 status: test
 tags:
 - attack.privilege_escalation
 - attack.t1543.003
+title: New PDQDeploy Service - Client Side

@@ -5,13 +5,12 @@ description: Detects the execution of Scheduled Tasks where the Program being ru
   Scheduled Task
 falsepositives:
 - Unknown
-filename: win_taskscheduler_execution_from_susp_locations.yml
 level: medium
 modified: 2023/02/07
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1053.005
+title: Scheduled Task Executed From A Suspicious Location

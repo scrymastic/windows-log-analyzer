@@ -6,7 +6,6 @@ falsepositives:
 - Rollout of log collection agents (the setup routine often includes a reset of the
   local Eventlog)
 - System provisioning (system reset before the golden image creation)
-filename: win_security_audit_log_cleared.yml
 level: high
 modified: 2022/02/24
 references:
@@ -23,3 +22,4 @@ tags:
 - attack.defense_evasion
 - attack.t1070.001
 - car.2016-04-002
+title: Security Eventlog Cleared

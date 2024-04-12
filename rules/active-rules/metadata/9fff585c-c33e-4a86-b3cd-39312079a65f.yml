@@ -3,13 +3,12 @@ date: 2018/03/18
 description: Detects the creation of taskmgr.exe process in context of LOCAL_SYSTEM
 falsepositives:
 - Unknown
-filename: proc_creation_win_taskmgr_localsystem.yml
 level: high
 modified: 2022/05/27
 references:
 - Internal Research
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1036
+title: Taskmgr as LOCAL_SYSTEM

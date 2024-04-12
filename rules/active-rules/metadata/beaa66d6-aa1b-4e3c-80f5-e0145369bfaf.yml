@@ -9,7 +9,6 @@ description: 'Detects execution of different log query utilities and commands to
   '
 falsepositives:
 - Legitimate usage of the utility by administrators to query the event log
-filename: proc_creation_win_susp_eventlog_content_recon.yml
 level: medium
 modified: 2024/01/02
 references:
@@ -30,3 +29,4 @@ tags:
 - attack.credential_access
 - attack.discovery
 - attack.t1552
+title: Potentially Suspicious EventLog Recon Activity Using Log Query Utilities

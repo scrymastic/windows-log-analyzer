@@ -4,14 +4,12 @@ description: Detects an access to authentication tokens and accounts of Microsof
   Teams desktop application.
 falsepositives:
 - Unknown
-filename: win_security_teams_suspicious_objectaccess.yml
 level: high
-modified: ''
 references:
 - https://www.bleepingcomputer.com/news/security/microsoft-teams-stores-auth-tokens-as-cleartext-in-windows-linux-macs/
 - https://www.vectra.ai/blogpost/undermining-microsoft-teams-security-by-mining-tokens
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1528
+title: Suspicious Teams Application Related ObjectAcess Event

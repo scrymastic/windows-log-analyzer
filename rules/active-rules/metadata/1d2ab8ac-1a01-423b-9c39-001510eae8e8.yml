@@ -15,14 +15,13 @@ description: 'This detection uses Windows security events to detect suspicious a
   '
 falsepositives:
 - Unknown
-filename: win_security_aadhealth_svc_agent_regkey_access.yml
 level: medium
 modified: 2022/10/09
 references:
 - https://o365blog.com/post/hybridhealthagent/
 - https://github.com/OTRF/Set-AuditRule/blob/c3dec5443414231714d850565d364ca73475ade5/rules/registry/aad_connect_health_service_agent.yml
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1012
+title: Azure AD Health Service Agents Registry Keys Access

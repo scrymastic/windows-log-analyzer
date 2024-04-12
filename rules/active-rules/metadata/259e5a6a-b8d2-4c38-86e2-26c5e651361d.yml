@@ -4,7 +4,6 @@ description: Detects default PsExec service filename which indicates PsExec serv
   installation and execution
 falsepositives:
 - Unknown
-filename: file_event_win_sysinternals_psexec_service.yml
 level: low
 modified: 2022/10/26
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.execution
 - attack.t1569.002
 - attack.s0029
+title: PsExec Service File Creation

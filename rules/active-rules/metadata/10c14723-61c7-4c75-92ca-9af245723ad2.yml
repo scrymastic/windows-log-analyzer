@@ -3,7 +3,9 @@ date: 2019/09/03
 description: Detects wmiexec/dcomexec/atexec/smbexec from Impacket framework
 falsepositives:
 - Unknown
-filename: proc_creation_win_hktl_impacket_lateral_movement.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: high
 modified: 2023/02/21
 references:
@@ -21,3 +23,4 @@ tags:
 - attack.t1047
 - attack.lateral_movement
 - attack.t1021.003
+title: HackTool - Potential Impacket Lateral Movement Activity

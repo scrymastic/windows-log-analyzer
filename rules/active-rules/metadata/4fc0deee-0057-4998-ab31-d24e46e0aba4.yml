@@ -5,7 +5,6 @@ description: Detects DLL sideloading of DLLs usually located in system locations
 falsepositives:
 - Legitimate applications loading their own versions of the DLLs mentioned in this
   rule
-filename: image_load_side_load_from_non_system_location.yml
 level: high
 modified: 2024/03/11
 references:
@@ -14,7 +13,6 @@ references:
 - https://blog.cyble.com/2022/07/27/targeted-attacks-being-carried-out-via-dll-sideloading/
 - https://github.com/XForceIR/SideLoadHunter/blob/cc7ef2e5d8908279b0c4cee4e8b6f85f7b8eed52/SideLoads/README.md
 - https://www.hexacorn.com/blog/2023/12/26/1-little-known-secret-of-runonce-exe-32-bit/
-related: []
 status: experimental
 tags:
 - attack.defense_evasion
@@ -22,3 +20,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Potential System DLL Sideloading From Non System Locations

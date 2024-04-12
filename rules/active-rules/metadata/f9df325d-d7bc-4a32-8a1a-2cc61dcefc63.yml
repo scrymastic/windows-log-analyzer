@@ -4,12 +4,9 @@ description: Detects DLL sideloading of DLLs that are part of third party softwa
   (zoom, discord....etc)
 falsepositives:
 - Unknown
-filename: image_load_side_load_third_party.yml
 level: medium
-modified: ''
 references:
 - https://hijacklibs.net/
-related: []
 status: test
 tags:
 - attack.defense_evasion
@@ -17,3 +14,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574.001
 - attack.t1574.002
+title: Third Party Software DLL Sideloading

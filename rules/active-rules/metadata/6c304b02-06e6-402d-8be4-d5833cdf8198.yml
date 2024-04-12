@@ -4,12 +4,10 @@ description: Detects potentially suspicious changes to the SentinelOne context m
   scan command by a process other than SentinelOne.
 falsepositives:
 - Unknown
-filename: registry_set_sentinelone_shell_context_tampering.yml
 level: medium
-modified: ''
 references:
 - https://mrd0x.com/sentinelone-persistence-via-menu-context/
-related: []
 status: experimental
 tags:
 - attack.persistence
+title: Potential SentinelOne Shell Context Menu Scan Command Tampering

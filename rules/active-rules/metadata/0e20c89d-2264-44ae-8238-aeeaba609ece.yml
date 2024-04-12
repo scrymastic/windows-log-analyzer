@@ -5,14 +5,13 @@ description: Detects creation of Microsoft Office files inside of one of the def
 falsepositives:
 - Loading a user environment from a backup or a domain controller
 - Synchronization of templates
-filename: file_event_win_office_startup_persistence.yml
 level: high
 modified: 2023/06/22
 references:
 - https://insight-jp.nttsecurity.com/post/102hojk/operation-restylink-apt-campaign-targeting-japanese-companies
 - https://learn.microsoft.com/en-us/office/troubleshoot/excel/use-startup-folders
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1137
+title: Potential Persistence Via Microsoft Office Startup Folder

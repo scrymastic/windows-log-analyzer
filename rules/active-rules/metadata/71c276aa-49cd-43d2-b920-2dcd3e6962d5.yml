@@ -4,7 +4,6 @@ description: Detects a service installed by a client which has PID 0 or whose pa
   has PID 0
 falsepositives:
 - Unknown
-filename: win_system_service_install_sups_unusal_client.yml
 level: high
 modified: 2023/01/04
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.privilege_escalation
 - attack.t1543
+title: Service Installed By Unusual Client - System

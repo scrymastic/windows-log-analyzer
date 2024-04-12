@@ -3,7 +3,6 @@ date: 2022/09/13
 description: Detects usage of the Chisel tunneling tool via the commandline arguments
 falsepositives:
 - Some false positives may occur with other tools with similar commandlines
-filename: proc_creation_win_pua_chisel.yml
 level: high
 modified: 2023/02/13
 references:
@@ -17,3 +16,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1090.001
+title: PUA - Chisel Tunneling Tool Execution

@@ -4,7 +4,6 @@ description: Detects the import of '.reg' files from suspicious paths using the 
   utility
 falsepositives:
 - Legitimate import of keys
-filename: proc_creation_win_reg_import_from_suspicious_paths.yml
 level: medium
 modified: 2023/02/05
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.t1112
 - attack.defense_evasion
+title: Potential Suspicious Registry File Imported Via Reg.EXE

@@ -4,7 +4,6 @@ description: Detects the execution of known offensive powershell scripts used fo
   exploitation or reconnaissance
 falsepositives:
 - Unknown
-filename: posh_pm_exploit_scripts.yml
 level: high
 modified: 2024/01/25
 references:
@@ -34,3 +33,4 @@ status: test
 tags:
 - attack.execution
 - attack.t1059.001
+title: Malicious PowerShell Scripts - PoshModule

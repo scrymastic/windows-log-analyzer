@@ -6,7 +6,6 @@ falsepositives:
 - Some installers located in the temp directory might communicate with the Github
   domains in order to download additional software. Baseline these cases or move the
   github domain to a lower level hunting rule.
-filename: net_connection_win_susp_file_sharing_domains_susp_folders.yml
 level: high
 modified: 2024/02/09
 references:
@@ -22,3 +21,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: Microsoft Binary Suspicious Communication Endpoint

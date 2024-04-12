@@ -13,14 +13,13 @@ description: 'Detects uncommon child processes of Appvlp.EXE
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_appvlp_uncommon_child_process.yml
 level: medium
 modified: 2023/11/09
 references:
 - https://lolbas-project.github.io/lolbas/OtherMSBinaries/Appvlp/
-related: []
 status: test
 tags:
 - attack.t1218
 - attack.defense_evasion
 - attack.execution
+title: Uncommon Child Process Of Appvlp.EXE

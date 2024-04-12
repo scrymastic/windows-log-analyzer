@@ -7,13 +7,12 @@ description: 'Detects processes spawned from web servers (PHP, Tomcat, IIS, etc.
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_webshell_tool_recon.yml
 level: high
 modified: 2023/11/09
 references:
 - https://ragged-lab.blogspot.com/2020/07/webshells-automating-reconnaissance.html
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1505.003
+title: Webshell Tool Reconnaissance Activity

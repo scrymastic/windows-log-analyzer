@@ -15,7 +15,6 @@ description: 'An adversary may use legitimate desktop support and remote access 
 falsepositives:
 - Likely with other browser software. Apply additional filters for any other browsers
   you might use.
-filename: dns_query_win_remote_access_software_domains_non_browsers.yml
 level: medium
 modified: 2023/09/12
 references:
@@ -35,3 +34,4 @@ status: experimental
 tags:
 - attack.command_and_control
 - attack.t1219
+title: DNS Query To Remote Access Software Domain From Non-Browser App

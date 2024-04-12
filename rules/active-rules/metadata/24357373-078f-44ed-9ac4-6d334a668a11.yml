@@ -7,13 +7,15 @@ falsepositives:
   keys for legitimate reasons.
 - Legitimate administrator sets up autorun keys for legitimate reasons.
 - Discord
-filename: proc_creation_win_reg_direct_asep_registry_keys_modification.yml
+fields:
+- CommandLine
+- ParentCommandLine
 level: medium
 modified: 2022/08/04
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1547.001/T1547.001.md
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1547.001
+title: Direct Autorun Keys Modification

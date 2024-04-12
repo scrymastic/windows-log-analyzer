@@ -4,14 +4,13 @@ description: Detects the pattern of UAC Bypass using .NET Code Profiler and mmc.
   DLL hijacking (UACMe 39)
 falsepositives:
 - Unknown
-filename: file_event_win_uac_bypass_dotnet_profiler.yml
 level: high
 modified: 2022/10/09
 references:
 - https://github.com/hfiref0x/UACME
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.privilege_escalation
 - attack.t1548.002
+title: UAC Bypass Using .NET Code Profiler on MMC

@@ -4,13 +4,12 @@ description: Detects command lines that indicate unwanted modifications to regis
   keys that disable important Internet Explorer security features
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_disable_ie_features.yml
 level: high
 modified: 2021/11/27
 references:
 - https://unit42.paloaltonetworks.com/operation-ke3chang-resurfaces-with-new-tidepool-malware/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Disabled IE Security Features

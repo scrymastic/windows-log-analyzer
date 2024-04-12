@@ -8,14 +8,12 @@ description: 'Adversaries may manipulate accounts to maintain access to victim s
   '
 falsepositives:
 - Legitimate administrative script
-filename: posh_ps_localuser.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1098/T1098.md#atomic-test-1---admin-account-manipulate
 - https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/?view=powershell-5.1
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1098
+title: Powershell LocalAccount Manipulation

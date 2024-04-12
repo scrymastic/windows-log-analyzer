@@ -9,14 +9,13 @@ description: 'Detects a network connection initiated by a binary to "api.mega.co
 falsepositives:
 - Legitimate MEGA installers and utilities are expected to communicate with this domain.
   Exclude hosts that are known to be allowed to use this tool.
-filename: net_connection_win_domain_mega_nz.yml
 level: medium
 modified: 2024/02/01
 references:
 - https://megatools.megous.com/
 - https://www.mandiant.com/resources/russian-targeting-gov-business
-related: []
 status: test
 tags:
 - attack.exfiltration
 - attack.t1567.001
+title: Network Connection Initiated To Mega.nz

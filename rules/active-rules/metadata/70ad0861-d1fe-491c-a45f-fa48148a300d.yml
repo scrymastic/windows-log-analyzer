@@ -3,7 +3,6 @@ date: 2022/05/16
 description: Detects when a user downloads a file by using CertOC.exe
 falsepositives:
 - Unknown
-filename: proc_creation_win_certoc_download.yml
 level: medium
 modified: 2023/10/18
 references:
@@ -15,3 +14,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1105
+title: File Download via CertOC.EXE

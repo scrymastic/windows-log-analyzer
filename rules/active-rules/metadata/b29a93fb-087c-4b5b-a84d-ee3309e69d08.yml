@@ -10,14 +10,12 @@ description: 'Adversaries may create a domain account to maintain access to vict
   '
 falsepositives:
 - Legitimate administrative script
-filename: posh_ps_directoryservices_accountmanagement.yml
 level: medium
-modified: ''
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1136.002/T1136.002.md#atomic-test-3---create-a-new-domain-account-using-powershell
 - https://docs.microsoft.com/en-us/dotnet/api/system.directoryservices.accountmanagement?view=dotnet-plat-ext-6.0
-related: []
 status: test
 tags:
 - attack.persistence
 - attack.t1136.002
+title: Manipulation of User Computer or Group Security Principals Across AD

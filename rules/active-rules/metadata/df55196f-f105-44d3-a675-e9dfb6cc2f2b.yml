@@ -5,7 +5,6 @@ description: Detects the use of a renamed Adfind.exe. AdFind continues to be see
   steps in the attack chain.
 falsepositives:
 - Unknown
-filename: proc_creation_win_renamed_adfind.yml
 level: high
 modified: 2023/02/14
 references:
@@ -15,7 +14,6 @@ references:
 - https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/
 - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
 - https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/bf62ece1c679b07b5fb49c4bae947fe24c81811f/fin6/Emulation_Plan/Phase1.md
-related: []
 status: test
 tags:
 - attack.discovery
@@ -23,3 +21,4 @@ tags:
 - attack.t1087.002
 - attack.t1482
 - attack.t1069.002
+title: Renamed AdFind Execution

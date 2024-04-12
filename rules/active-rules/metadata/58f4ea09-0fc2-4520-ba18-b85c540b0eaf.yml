@@ -5,14 +5,13 @@ description: Detects a suspicious process pattern which could be a sign of an ex
 falsepositives:
 - Legitimate uses in which users or programs use the SSH service of Serv-U for remote
   command execution
-filename: proc_creation_win_servu_susp_child_process.yml
 level: high
 modified: 2022/07/14
 references:
 - https://www.microsoft.com/security/blog/2021/07/13/microsoft-discovers-threat-actor-targeting-solarwinds-serv-u-software-with-0-day-exploit/
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1555
 - cve.2021.35211
+title: Suspicious Serv-U Process Pattern

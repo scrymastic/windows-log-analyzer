@@ -13,16 +13,15 @@ description: 'Detects the setting of the environement variable "windir" to a non
   '
 falsepositives:
 - Unknown
-filename: registry_set_bypass_uac_using_silentcleanup_task.yml
 level: high
 modified: 2024/01/30
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1548.002/T1548.002.md#atomic-test-9---bypass-uac-using-silentcleanup-task
 - https://www.reddit.com/r/hacking/comments/ajtrws/bypassing_highest_uac_level_windows_810/
 - https://www.fortinet.com/blog/threat-research/enter-the-darkgate-new-cryptocurrency-mining-and-ransomware-campaign
-related: []
 status: test
 tags:
 - attack.privilege_escalation
 - attack.defense_evasion
 - attack.t1548.002
+title: Bypass UAC Using SilentCleanup Task

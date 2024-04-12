@@ -12,9 +12,7 @@ description: 'Detects the load of RstrtMgr DLL (Restart Manager) by an uncommon 
 falsepositives:
 - Other legitimate Windows processes not currently listed
 - Processes related to software installation
-filename: image_load_dll_rstrtmgr_uncommon_load.yml
 level: low
-modified: ''
 references:
 - https://www.crowdstrike.com/blog/windows-restart-manager-part-1/
 - https://www.crowdstrike.com/blog/windows-restart-manager-part-2/
@@ -29,3 +27,4 @@ tags:
 - attack.defense_evasion
 - attack.t1486
 - attack.t1562.001
+title: Load Of RstrtMgr.DLL By An Uncommon Process

@@ -11,13 +11,12 @@ description: 'Adversaries may attempt to find domain-level groups and permission
   '
 falsepositives:
 - Unknown
-filename: posh_ps_susp_ad_group_reco.yml
 level: low
 modified: 2022/12/25
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1069.002/T1069.002.md
-related: []
 status: test
 tags:
 - attack.discovery
 - attack.t1069.001
+title: AD Groups Or Users Enumeration Using PowerShell - ScriptBlock

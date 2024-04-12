@@ -5,12 +5,10 @@ description: Detects well-known credential dumping tools execution via service e
   events
 falsepositives:
 - Legitimate Administrator using credential dumping tool for password recovery
-filename: win_system_mal_creddumper.yml
 level: high
 modified: 2022/11/29
 references:
 - https://www.slideshare.net/heirhabarov/hunting-for-credentials-dumping-in-windows-environment
-related: []
 status: test
 tags:
 - attack.credential_access
@@ -22,3 +20,4 @@ tags:
 - attack.t1003.006
 - attack.t1569.002
 - attack.s0005
+title: Credential Dumping Tools Service Execution - System

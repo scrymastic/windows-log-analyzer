@@ -11,7 +11,6 @@ description: 'Detects an executable initiating a network connection to "ngrok" d
   '
 falsepositives:
 - Legitimate use of the ngrok service.
-filename: net_connection_win_domain_ngrok.yml
 level: high
 modified: 2023/11/17
 references:
@@ -26,3 +25,4 @@ status: test
 tags:
 - attack.exfiltration
 - attack.t1567.001
+title: Process Initiated Network  Connection To Ngrok Domain

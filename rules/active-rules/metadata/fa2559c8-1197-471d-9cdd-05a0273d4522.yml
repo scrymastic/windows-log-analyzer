@@ -4,7 +4,6 @@ description: Detects usage of special strings/null bits in order to potentially 
   AMSI functionalities
 falsepositives:
 - Unknown
-filename: posh_ps_amsi_null_bits_bypass.yml
 level: medium
 modified: 2023/05/09
 references:
@@ -16,3 +15,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Potential AMSI Bypass Script Using NULL Bits

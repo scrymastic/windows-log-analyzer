@@ -4,7 +4,6 @@ description: Detects suspicious Windows Error Reporting manager (wermgr.exe) exe
   location.
 falsepositives:
 - Unknown
-filename: proc_creation_win_wermgr_susp_exec_location.yml
 level: high
 modified: 2023/08/23
 references:
@@ -17,3 +16,4 @@ related:
 status: experimental
 tags:
 - attack.execution
+title: Suspicious Execution Location Of Wermgr.EXE

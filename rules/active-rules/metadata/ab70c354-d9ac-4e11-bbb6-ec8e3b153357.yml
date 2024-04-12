@@ -9,9 +9,7 @@ description: 'Detects the command line executed when TeamViewer starts a session
   '
 falsepositives:
 - Legitimate usage of TeamViewer
-filename: proc_creation_win_remote_access_tools_teamviewer_incoming_connection.yml
 level: low
-modified: ''
 references:
 - Internal Research
 related:
@@ -23,3 +21,4 @@ status: experimental
 tags:
 - attack.initial_access
 - attack.t1133
+title: Remote Access Tool - Team Viewer Session Started On Windows Host

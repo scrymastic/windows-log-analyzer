@@ -3,9 +3,7 @@ date: 2022/12/23
 description: Detect use of X509Enrollment
 falsepositives:
 - Legitimate administrative script
-filename: posh_ps_x509enrollment.yml
 level: medium
-modified: ''
 references:
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=42
 - https://speakerdeck.com/heirhabarov/hunting-for-powershell-abuse?slide=41
@@ -17,3 +15,4 @@ status: test
 tags:
 - attack.defense_evasion
 - attack.t1553.004
+title: Suspicious X509Enrollment - Ps Script

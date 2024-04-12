@@ -4,7 +4,9 @@ description: Detects a program that invoked suspicious DNS queries known from Co
   Strike beacons
 falsepositives:
 - Unknown
-filename: dns_query_win_mal_cobaltstrike.yml
+fields:
+- Image
+- CommandLine
 level: critical
 modified: 2023/01/16
 references:
@@ -17,3 +19,4 @@ status: test
 tags:
 - attack.command_and_control
 - attack.t1071.004
+title: Suspicious Cobalt Strike DNS Beaconing - Sysmon

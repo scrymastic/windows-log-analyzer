@@ -4,13 +4,12 @@ description: Detects unusual parent or children of the ImagingDevices.exe (Windo
   Contacts) process as seen being used with Bumblebee activity
 falsepositives:
 - Unknown
-filename: proc_creation_win_imagingdevices_unusual_parents.yml
 level: high
 modified: 2022/12/29
 references:
 - https://thedfirreport.com/2022/09/26/bumblebee-round-two/
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.execution
+title: ImagingDevices Unusual Parent/Child Processes

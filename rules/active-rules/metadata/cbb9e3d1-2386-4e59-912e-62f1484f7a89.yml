@@ -5,13 +5,12 @@ description: Detects when the Console Window Host (conhost.exe) process is spawn
   activity.
 falsepositives:
 - Unknown
-filename: proc_creation_win_conhost_uncommon_parent.yml
 level: medium
 modified: 2023/03/29
 references:
 - https://www.elastic.co/guide/en/security/current/conhost-spawned-by-suspicious-parent-process.html
-related: []
 status: test
 tags:
 - attack.execution
 - attack.t1059
+title: Conhost Spawned By Uncommon Parent Process

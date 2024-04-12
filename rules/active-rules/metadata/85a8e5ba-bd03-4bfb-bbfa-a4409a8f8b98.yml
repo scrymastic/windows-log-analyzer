@@ -11,7 +11,6 @@ description: 'Detects PowerShell scripts that make use of the "Compress-Archive"
   '
 falsepositives:
 - Unknown
-filename: proc_creation_win_powershell_zip_compress.yml
 level: medium
 modified: 2022/10/09
 references:
@@ -28,3 +27,4 @@ status: test
 tags:
 - attack.collection
 - attack.t1074.001
+title: Folder Compress To Potentially Suspicious Output Via Compress-Archive Cmdlet

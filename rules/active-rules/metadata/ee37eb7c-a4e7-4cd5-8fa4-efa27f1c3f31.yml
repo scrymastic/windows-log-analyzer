@@ -9,7 +9,6 @@ description: 'Detects the use of Ngrok, a utility used for port forwarding and t
 falsepositives:
 - Another tool that uses the command line switches of Ngrok
 - Ngrok http 3978 (https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-channel-ngrok?view=azure-bot-service-4.0)
-filename: proc_creation_win_pua_ngrok.yml
 level: high
 modified: 2023/02/21
 references:
@@ -20,8 +19,8 @@ references:
 - https://cybleinc.com/2021/02/15/ngrok-platform-abused-by-hackers-to-deliver-a-new-wave-of-phishing-attacks/
 - https://twitter.com/xorJosh/status/1598646907802451969
 - https://www.softwaretestinghelp.com/how-to-use-ngrok/
-related: []
 status: test
 tags:
 - attack.command_and_control
 - attack.t1572
+title: PUA - Ngrok Execution

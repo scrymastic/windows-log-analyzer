@@ -21,14 +21,13 @@ falsepositives:
   CPU-Z, AVs etc. A baseline needs to be created according to the used products and
   allowed tools. A good thing to do is to try and exclude users who are allowed to
   load drivers.
-filename: win_security_user_driver_loaded.yml
 level: medium
 modified: 2023/01/20
 references:
 - https://blog.dylan.codes/evading-sysmon-and-windows-event-logging/
 - https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4673
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1562.001
+title: Potential Privileged System Service Operation - SeLoadDriverPrivilege

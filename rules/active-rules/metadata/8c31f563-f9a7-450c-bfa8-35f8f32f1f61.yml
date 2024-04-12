@@ -3,7 +3,6 @@ date: 2021/04/05
 description: Detects the creation of a macro file for Outlook.
 falsepositives:
 - User genuinely creates a VB Macro for their email
-filename: file_event_win_office_outlook_macro_creation.yml
 level: medium
 modified: 2023/02/08
 references:
@@ -18,3 +17,4 @@ tags:
 - attack.t1137
 - attack.t1008
 - attack.t1546
+title: New Outlook Macro Created

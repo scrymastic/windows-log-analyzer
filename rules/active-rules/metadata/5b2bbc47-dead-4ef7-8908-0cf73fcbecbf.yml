@@ -4,13 +4,11 @@ description: Detect DLL deletions from Spooler Service driver folder. This might
   a potential exploitation attempt of CVE-2021-1675
 falsepositives:
 - Unknown
-filename: file_delete_win_cve_2021_1675_print_nightmare.yml
 level: high
 modified: 2023/02/17
 references:
 - https://github.com/hhlxf/PrintNightmare
 - https://github.com/cube0x0/CVE-2021-1675
-related: []
 status: test
 tags:
 - attack.persistence
@@ -18,3 +16,4 @@ tags:
 - attack.privilege_escalation
 - attack.t1574
 - cve.2021.1675
+title: Potential PrintNightmare Exploitation Attempt

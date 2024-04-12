@@ -9,13 +9,12 @@ description: 'Attempts to access unattend.xml, where credentials are commonly st
   '
 falsepositives:
 - Unknown
-filename: file_event_win_access_susp_unattend_xml.yml
 level: medium
 modified: 2022/12/25
 references:
 - https://github.com/redcanaryco/atomic-red-team/blob/f339e7da7d05f6057fdfcdd3742bfcf365fee2a9/atomics/T1552.001/T1552.001.md
-related: []
 status: test
 tags:
 - attack.credential_access
 - attack.t1552.001
+title: Suspicious Unattend.xml File Access

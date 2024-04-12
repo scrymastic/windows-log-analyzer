@@ -6,7 +6,6 @@ description: Detects suspicious execution of rundll32, with specific calls to so
 falsepositives:
 - False positives depend on scripts and administrative tools used in the monitored
   environment
-filename: proc_creation_win_rundll32_susp_activity.yml
 level: medium
 modified: 2023/05/17
 references:
@@ -16,8 +15,8 @@ references:
 - https://twitter.com/nas_bench/status/1433344116071583746
 - https://twitter.com/eral4m/status/1479106975967240209
 - https://twitter.com/eral4m/status/1479080793003671557
-related: []
 status: test
 tags:
 - attack.defense_evasion
 - attack.t1218.011
+title: Potentially Suspicious Rundll32 Activity
