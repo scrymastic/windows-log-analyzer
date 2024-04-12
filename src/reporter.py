@@ -37,13 +37,7 @@ class Reporter:
 
     
     def show_rule_details(self, rule) -> None:
-        for key, value in rule.items():
-            print(f"{CYAN}{key}{RESET}: ", end="")
-            if isinstance(value, int) or isinstance(value, str):
-                print(f"{value}")
-            else:
-                print()
-                print(yaml.dump(value, default_flow_style=False), end="")
+        self.pretty_print_dict(rule)
 
     
     def show_rule_summary(self, rule_metadata) -> None:
@@ -64,7 +58,7 @@ class Reporter:
 
     
     def show_event_details(self, event) -> None:
-        self.pretty_print_json(event)
+        self.pretty_print_dict(event)
 
     
     def show_event_summary(self, event) -> None:
@@ -86,21 +80,20 @@ class Reporter:
             print(f"{CYAN}{key:<5}{RESET}: {YELLOW}{'#' * int(percentage)}{RESET} {round(percentage, 2)}%")
 
 
-    def pretty_print_json(self, data: dict, indent: int = 0) -> None:
+    def pretty_print_dict(self, data: dict, indent: int = 0) -> None:
         for key, value in data.items():
             print(f"{' ' * indent}{CYAN}{key}{RESET}: ", end="")
             if isinstance(value, (int, str)):
                 print(f"{value}")
             elif isinstance(value, dict):
                 print()
-                self.pretty_print_json(value, indent + 2)
+                self.pretty_print_dict(value, indent + 2)
             elif isinstance(value, list):
                 print()
-                for i, item in enumerate(value):
-                    print(f"{' ' * (indent + 2)}{i}: ", end="")
+                for item in value:
                     if isinstance(item, (int, str)):
                         print(f"{item}")
                     else:
-                        self.pretty_print_json(item, indent + 4)
+                        self.pretty_print_dict(item, indent + 4)
             else:
                 print(f"{value}")

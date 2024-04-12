@@ -153,7 +153,10 @@ class Main:
             elif choice == "2":
                 rule_id = input(f"{RED}wla>rules>view>{RESET} Enter the rule ID: ")
                 rule = self.rule_engine.get_rule(rule_id)
-                self.reporter.show_rule_details(rule)
+                if rule:
+                    self.reporter.show_rule_details(rule)
+                else:
+                    print(f"{RED}[ERROR] Rule not found.{RESET}")
 
             elif choice == "99":
                 break
