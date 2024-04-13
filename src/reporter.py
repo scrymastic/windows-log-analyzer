@@ -53,6 +53,7 @@ class Reporter:
         else:
             print(f"{CYAN}Level{RESET}: {level}")
         print(f"{CYAN}Description{RESET}: {rule_metadata['description']}")
+        print(f"{CYAN}Tags{RESET}: {', '.join(rule_metadata['tags'])}")
         print()
 
 

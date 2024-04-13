@@ -57,6 +57,7 @@ class Main:
         print(f"[----]{RED}{'Github: https://github.com/scrymastic'.center(60)}{RESET}[----]")
         print()
 
+
     def load_log_file(self):
         print()
         print(f"  {CYAN}Load log file{RESET}")
