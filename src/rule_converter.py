@@ -2,14 +2,8 @@
 import yaml
 import regex
 from pathlib import Path
-from config import ROOT
-from colorama import Fore, Style
+from config import *
 
-RED = Fore.RED
-GREEN = Fore.GREEN
-YELLOW = Fore.YELLOW
-CYAN = Fore.CYAN
-RESET = Style.RESET_ALL
 
 
 class RuleConverter:

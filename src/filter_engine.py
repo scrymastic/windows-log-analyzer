@@ -238,26 +238,23 @@ class FilterEngine:
                 return True
 
 
-    def filter_events(self, events: dict) -> dict:
+    def filter_events(self, events: dict):
         # Filter the events based on the rules
         # Return the {event record id: [rule id]} dictionary
         if not events:
             print("No events to filter")
-            return {}
+            return
         num_events = len(events)
         processed_events = 0
-        filtered_events = {}
         for event_id, event in events.items():
             rule_id_list = []
             for rule_id, rule in self.rules.items():
                 if self.matches_rule(rule, event):
                     rule_id_list.append(rule_id)
             if rule_id_list:
-                filtered_events[event_id] = rule_id_list
+                yield {event_id: rule_id_list}
             processed_events += 1
             print(f"\rProcessed {processed_events}/{num_events} events", end='')
-                
-        return filtered_events
 
 
 

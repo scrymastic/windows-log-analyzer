@@ -1,16 +1,8 @@
 
-from colorama import Fore, Style
-from config import ROOT
+from config import *
 import yaml
 import json
 from pathlib import Path
-
-RED = Fore.RED
-LIGHTRED = Fore.LIGHTRED_EX
-GREEN = Fore.GREEN
-YELLOW = Fore.YELLOW
-CYAN = Fore.CYAN
-RESET = Style.RESET_ALL
 
 
 
@@ -24,7 +16,7 @@ class Reporter:
         # Get the rule metadata from /active-rules/metadata/{rule_id}.yml
         # Print the alert
         print()
-        print(f"{LIGHTRED}ALERT! ALERT! ALERT!{RESET}")
+        print(f"{RED}ALERT! ALERT! ALERT!{RESET}")
         print(f"{CYAN}EVENT [{RED}{event['System']['EventRecordID']}{CYAN}]{RESET}")
         self.show_event_summary(event)
 
@@ -77,8 +69,9 @@ class Reporter:
         total = sum(data.values())
         length = 60
         for key, value in data.items():
-            percentage = value / total * length
-            print(f"{CYAN}{key:<5}{RESET}: {YELLOW}{'#' * int(percentage)}{RESET} {round(percentage, 2)}%")
+            percentage = value / total * 100
+            length_of_bar = int(percentage / 100 * length)
+            print(f"{CYAN}{key:<5}{RESET}: {YELLOW}{'#' * length_of_bar:<{length}}{RESET} {percentage:.2f}%")
 
 
     def pretty_print_dict(self, data: dict, indent: int = 0) -> None:
