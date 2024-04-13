@@ -19,6 +19,7 @@ except ImportError:
     MAGENTA = ""
     RESET = ""
 
-ROOT = "D:\\AtSchool\\windows-log-analyzer"
+ROOT = "path\\to\\windows-log-analyzer"
 
+# Default path to event viewer logs
 EVENT_VIEWER_LOGS = os.getenv("SystemRoot") + "\\System32\\winevt\\Logs"
