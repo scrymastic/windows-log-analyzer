@@ -1,2 +1,4 @@
-evtx~=0.8.2
-PyYAML~=6.0.1
+colorama==0.4.6
+evtx==0.8.4
+PyYAML==6.0.1
+regex==2023.12.25

@@ -1,16 +1,12 @@
 
 
-
-# Sample code for event filtering
 from data_access import DataAccess
 from log_parser import LogParser
 from log_analysis import LogAnalysis
 from filter_engine import FilterEngine
 from rule_engine import RuleEngine
 from reporter import Reporter
-from pathlib import Path
 from config import *
-import yaml
 import os
 
 

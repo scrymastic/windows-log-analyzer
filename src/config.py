@@ -1,8 +1,10 @@
 
 import os
 
+
 try:
-    from colorama import Fore, Style
+    from colorama import Fore, Style, init
+    init(autoreset=True)
     RED = Fore.RED
     GREEN = Fore.GREEN
     YELLOW = Fore.YELLOW

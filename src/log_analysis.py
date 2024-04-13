@@ -1,5 +1,4 @@
 
-import json
 
 class LogAnalysis:
     def __init__(self, events: dict):

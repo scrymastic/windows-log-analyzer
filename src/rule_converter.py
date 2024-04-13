@@ -1,6 +1,5 @@
 
 import yaml
-import regex
 from pathlib import Path
 from config import *
 
