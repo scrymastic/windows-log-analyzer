@@ -21,7 +21,7 @@ To install the tool, follow these steps:
 ## Usage
 
 To use the tool, run the following command:
-    
+
     ```shell
     python main.py
     ```
