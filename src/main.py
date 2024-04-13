@@ -243,6 +243,15 @@ class Main:
             elif choice == "3":
                 print()
                 print(f"{GREEN}Total events: {len(self.events)}{RESET}")
+
+                start_time, end_time = self.log_analysis.get_time_range()
+                print(f"{CYAN}Time range{RESET}: {start_time} - {end_time}")
+                print()
+                print(f"{GREEN}Event distribution by Provider{RESET}")
+                event_counts_by_provider = self.log_analysis.count_events_by_provider()
+                self.reporter.show_distribution(event_counts_by_provider)
+                print()
+                print(f"{GREEN}Event distribution by Event ID{RESET}")
                 event_counts_by_id = self.log_analysis.count_events_by_id()
                 self.reporter.show_distribution(event_counts_by_id)
 

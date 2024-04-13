@@ -18,6 +18,31 @@ class LogAnalysis:
             else:
                 event_counts_by_id[event_id] = 1
         return event_counts_by_id
+    
+
+    def count_events_by_provider(self):
+        # Count events based on the Provider Name
+        # Return a dictionary with the Provider Name as the key
+        # and the count of events as the value
+        event_counts_by_provider = {}
+        for event_record_id, event_data in self.events.items():
+            provider_name = event_data["System"]["Provider"]["#attributes"]["Name"]
+            if provider_name in event_counts_by_provider:
+                event_counts_by_provider[provider_name] += 1
+            else:
+                event_counts_by_provider[provider_name] = 1
+        return event_counts_by_provider
+    
+
+    def get_time_range(self):
+        # Get the earliest and latest event time
+        # Return a tuple with the earliest and latest event time
+        event_times = []
+        for event_record_id, event_data in self.events.items():
+            event_time = event_data["System"]["TimeCreated"]["#attributes"]["SystemTime"]
+            event_times.append(event_time)
+        event_times.sort()
+        return event_times[0], event_times[-1]
 
     
     def search_events(self, keywords: list):

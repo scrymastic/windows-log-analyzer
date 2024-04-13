@@ -8,8 +8,7 @@ from config import *
 # load data from local log file
 class DataAccess():
     def __init__(self):
-        self.system_root = os.getenv('SystemRoot')
-        self.event_viewer_logs = Path(self.system_root, "System32", "winevt", "Logs")
+        self.event_viewer_logs = Path(EVENT_VIEWER_LOGS)
         self.sample_logs = Path(ROOT, "sample-logs")
 
 

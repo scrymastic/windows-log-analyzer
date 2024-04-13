@@ -1,5 +1,4 @@
 
-from dotenv import load_dotenv
 import os
 
 try:
@@ -18,6 +17,6 @@ except ImportError:
     MAGENTA = ""
     RESET = ""
 
-load_dotenv()
+ROOT = "D:\\AtSchool\\windows-log-analyzer"
 
-ROOT = os.getenv('ROOT')
+EVENT_VIEWER_LOGS = os.getenv("SystemRoot") + "\\System32\\winevt\\Logs"

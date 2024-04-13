@@ -67,11 +67,13 @@ class Reporter:
     def show_distribution(self, data: dict) -> None:
         print()
         total = sum(data.values())
-        length = 60
+        # Get the length of the longest key
+        length_key = max(len(str(key)) for key in data.keys())
+        length_key = max(length_key, 5)
         for key, value in data.items():
             percentage = value / total * 100
-            length_of_bar = int(percentage / 100 * length)
-            print(f"{CYAN}{key:<5}{RESET}: {YELLOW}{'#' * length_of_bar:<{length}}{RESET} {percentage:.2f}%")
+            length_of_bar = int(percentage / 100 * 60)
+            print(f"{CYAN}{key:<{length_key}}{RESET}: {YELLOW}{'#' * length_of_bar}{RESET} {value} ({percentage:.2f}%)")
 
 
     def pretty_print_dict(self, data: dict, indent: int = 0) -> None:
