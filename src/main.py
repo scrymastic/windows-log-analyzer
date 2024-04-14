@@ -105,7 +105,7 @@ class Main:
             print(f"  {CYAN}Parse log file{RESET}")
             print()
             print(f"    1) Parse all records")
-            print(f"    2) Parse first n records")
+            print(f"    2) Parse records by range")
             print(f"    3) Parse records by event IDs")
             print(f"    4) Parse records by time range")
             print(f"    5) Parse records by keywords")
@@ -124,22 +124,28 @@ class Main:
                 return
         
             elif choice == "2":
-                max_records = input(f"{RED}wla>load>parse>{RESET} Enter the number of records to parse, or press Enter to parse all: ").strip()
-                if not max_records:
-                    max_records = len(records)
-                else:
-                    if not max_records.isdigit():
-                        print(f"{RED}[ERROR] Invalid number of records.{RESET}")
-                        continue
-                    max_records = int(max_records)
-                self.events = self.log_parser.parse_first_n_records(records, max_records)
+                records_range = input(f"{RED}wla>load>parse>{RESET} Enter the range of records to parse (start, end), or press Enter to parse all records: ").strip()
+                if not records_range:
+                    self.events = self.log_parser.parse_all_records(records)
+                    if not self.events:
+                        print(f"{RED}[ERROR] Failed to parse log file.{RESET}")
+                    else:
+                        print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
+                        self.log_analysis = LogAnalysis(self.events)
+                    return
+                try:
+                    start, end = [int(x.strip()) for x in records_range.split(',')]
+                except:
+                    print(f"{RED}[ERROR] Invalid range.{RESET}")
+                    continue
+                self.events = self.log_parser.parse_records_by_range(records, start, end)
                 if not self.events:
                     print(f"{RED}[ERROR] Failed to parse log file.{RESET}")
                 else:
                     print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
                     self.log_analysis = LogAnalysis(self.events)
                 return
-
+            
             elif choice == "3":
                 event_ids = input(f"{RED}wla>load>parse>{RESET} Enter the event IDs, separated by commas: ")
                 try:
@@ -156,8 +162,10 @@ class Main:
                 return
 
             elif choice == "4":
-                start_time = input(f"{RED}wla>load>parse>{RESET} Enter the start time (YYYY-MM-DD HH:MM:SS), or press Enter to get the first record's time: ").strip()
-                end_time = input(f"                Enter the end time (YYYY-MM-DD HH:MM:SS), or press Enter to get the last record's time: ").strip()
+                print()
+                print(f"{YELLOW}Parse records by local time. The time format must be 'YYYY-MM-DD HH:MM:SS.MS'{RESET}")
+                start_time = input(f"{RED}wla>load>parse>{RESET} Enter the start time, or press Enter to get the first record's time: ").strip()
+                end_time = input(f"                Enter the end time, or press Enter to get the last record's time: ").strip()
                 if not start_time:
                     start_time = next(iter(first_event.values()))['System']['TimeCreated']['#attributes']['SystemTime']
                 if not end_time:

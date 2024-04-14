@@ -1,6 +1,6 @@
 
 import json
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from evtx import PyEvtxParser
 from config import *
@@ -33,17 +33,13 @@ class LogParser:
         return events
 
 
-    def parse_first_n_records(self, records: list, max_records: int = None) -> dict:
-        if not max_records:
-            max_records = len(records)
-        if max_records not in range(0, len(records) + 1):
-            print(f"{RED}[ERROR] Invalid number of records to parse.{RESET}")
-            return {}
+    def parse_records_by_range(self, records: list, start: int, end: int) -> dict:
         events = {}
-        for record in records[:max_records]:
+        if not start: start = 0
+        if not end: end = len(records)
+        for record in records[start:end]:
             event = self.parse_record(record)
             events.update(event)
-
         return events
     
 
@@ -73,8 +69,8 @@ class LogParser:
         start_time = start_time.replace("T", " ").replace("Z", "")
         end_time = end_time.replace("T", " ").replace("Z", "")
         try:
-            start_time = datetime.strptime(start_time, '%Y-%m-%d %H:%M:%S.%f')
-            end_time = datetime.strptime(end_time, '%Y-%m-%d %H:%M:%S.%f')
+            start_time = datetime.strptime(start_time, '%Y-%m-%d %H:%M:%S.%f') - timedelta(hours=TIMEZONE)
+            end_time = datetime.strptime(end_time, '%Y-%m-%d %H:%M:%S.%f') - timedelta(hours=TIMEZONE)
         except ValueError:
             print(f"{RED}[ERROR] Invalid time format.{RESET}")
             return {}

@@ -10,7 +10,6 @@ class RuleConverter:
         self.legit_rules_folder = Path(ROOT, "rules", "legit-rules")
         pass
 
-    
     def convert_folder(self, folder_path: str) -> bool:
         folder = Path(folder_path)
         # check if the folder exists and is a directory

@@ -23,3 +23,6 @@ ROOT = "D:\\AtSchool\\windows-log-analyzer\\"
 
 # Default path to event viewer logs
 EVENT_VIEWER_LOGS = os.getenv("SystemRoot") + "\\System32\\winevt\\Logs"
+
+# Vietnam local timezone
+TIMEZONE = 7
