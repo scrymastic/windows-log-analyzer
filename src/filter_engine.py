@@ -257,6 +257,25 @@ class FilterEngine:
             print(f"\rProcessed {processed_events}/{num_events} events", end='')
 
 
+    def add_rule(self, rule):
+        rule_id = rule.get('id', None)
+        try:
+            self.rules[rule_id] = rule
+            return True
+        except Exception as e:
+            print(f"Error adding rule {rule_id}: {e}")
+            return False
+
+    def remove_rule(self, rule_id):
+        try:
+            self.rules.pop(rule_id)
+            return True
+        except Exception as e:
+            print(f"Error removing rule {rule_id}: {e}")
+            return False
+        
+    def get_num_rules(self):
+        return len(self.rules)
 
 
 if __name__ == '__main__':

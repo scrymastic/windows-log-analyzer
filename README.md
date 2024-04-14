@@ -25,3 +25,6 @@ To use the tool, run the following command:
 ```shell
 python main.py
 ```
+
+Configure the tool by editing the `config.py` file.
+

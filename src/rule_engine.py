@@ -74,7 +74,7 @@ class RuleEngine:
             return False
 
 
-    def deploy_rule(self, rule_file_name: str) -> bool:
+    def deploy_rule(self, rule_path: str) -> str:
         # Assuming `rule` is the name of the rule file from legit-foder
         # Deploy the rule to the rule engine
         # By moving the rule from the legit-rules folder to the active-rules folder
@@ -82,38 +82,44 @@ class RuleEngine:
         # /active-rules/detections/{rule_id}.yml: detection, logsource, and id fields
         # /active-rules/metadata/{rule_id}.yml: other metadata
         # Get the rule file from the legit-rules folder
-        rule_file = self.legit_rules_folder / f"{rule_file_name}"
-        if rule_file.exists():
-            print(f"{CYAN}[INFO] Deploying rule '{rule_file_name}'...{RESET}")
-            # Move the rule file to the active-rules folder
-            rule_content = yaml.safe_load(open(rule_file, "r"))
-            # Create log source and detection file
-            detection = {
-                'id': rule_content['id'],
-                'detection': rule_content['detection'],
-                'logsource': rule_content['logsource']
-            }
-            with open(self.active_rules_folder / "detections" / f"{rule_content['id']}.yml", "w") as f:
-                yaml.dump(detection, f)
 
-            # Other metadata
-            metadata = rule_content.copy()
-            metadata.pop('detection')
-            metadata.pop('logsource')
-            metadata.pop('id')
-            with open(self.active_rules_folder / "metadata" / f"{rule_content['id']}.yml", "w") as f:
-                yaml.dump(metadata, f)
+        rule_file = Path(rule_path)
+        if not rule_file.exists():
+            print(f"{RED}[ERROR] Rule '{rule_file.name}' not found.{RESET}")
+            return None
+        
+        # Load the rule content
+        with open(rule_file, 'r') as f:
+            rule_content = yaml.safe_load(f)
 
-            print(f"{GREEN}[INFO] Rule '{rule_file_name}' deployed successfully.{RESET}")
-            print(f"{CYAN}[INFO] Rule ID: {rule_content['id']}{RESET}")
-            return True
+        # Check if the rule is already deployed
+        rule_id = rule_content["id"]
+        if (self.active_rules_folder / "detections" / f"{rule_id}.yml").exists() or \
+            (self.active_rules_folder / "metadata" / f"{rule_id}.yml").exists():
+            print(f"{RED}[ERROR] Rule '{rule_id}' already deployed.{RESET}")
+            return None
+        
+        print(f"{CYAN}[INFO] Deploying rule '{rule_file.name}'...{RESET}")
+        # Create log source and detection file
+        detection = {
+            'id': rule_content['id'],
+            'detection': rule_content['detection'],
+            'logsource': rule_content['logsource']
+        }
+        with open(self.active_rules_folder / "detections" / f"{rule_content['id']}.yml", "w") as f:
+            yaml.dump(detection, f)
 
-        else:
-            print(f"{RED}[ERROR] Rule '{rule_file_name}' not found.{RESET}")
-            return False
+        # Other metadata
+        metadata = rule_content.copy()
+        metadata.pop('detection')
+        metadata.pop('logsource')
+        metadata.pop('id')
+        with open(self.active_rules_folder / "metadata" / f"{rule_content['id']}.yml", "w") as f:
+            yaml.dump(metadata, f)
+        return rule_id
 
 
-    def undeploy_rule(self, rule_id: str) -> bool:
+    def undeploy_rule(self, rule_id: str) -> str:
         # Undeploy the rule from the rule engine
         # By deleting the rule from the active-rules folder to the legit-rules folder
 
@@ -124,11 +130,11 @@ class RuleEngine:
             (arf / "detections" / f"{rule_id}.yml").unlink()
             (arf / "metadata" / f"{rule_id}.yml").unlink()
             
-            print(f"{GREEN}[INFO] Rule '{rule_id}' undeployed successfully.{RESET}")
-            return True
+            print(f"{GREEN}[INFO] Rule [{RED}{rule_id}{GREEN}] undeployed successfully.{RESET}")
+            return rule_id
         else:
-            print(f"{RED}[ERROR] Rule '{rule_id}' not found.{RESET}")
-            return False
+            print(f"{RED}[ERROR] Rule [{rule_id}] not found.{RESET}")
+            return None
 
 
     def get_active_rules(self) -> list:
@@ -170,19 +176,28 @@ class RuleEngine:
         return matching_rules
     
 
-    def load_rules(self) -> dict:
+    def load_default_rules(self) -> dict:
         # Load the rules from the active-rules folder
         # Return the rules as a list of dictionaries
         rules = {}
         arf = self.active_rules_folder
         yaml_files = glob.glob(os.path.join(arf / "detections", "*.yml"))
         for yaml_file in yaml_files:
-            with open(yaml_file, 'r') as file:
-                rule = yaml.safe_load(file)
-                rule_id = rule["id"]
-                rules[rule_id] = rule
+            rules.update(self.load_rule(yaml_file))
         print(f"{CYAN}[INFO] {len(rules)} rules loaded.{RESET}")
         return rules
+    
+
+    def load_rule(self, rule_path: str) -> dict:
+        # Load the rule from the specified path
+        rule_file = Path(rule_path)
+        if rule_file.exists():
+            with open(rule_file, 'r') as file:
+                rule = yaml.safe_load(file)
+                return {rule["id"]: rule}
+        else:
+            print(f"{RED}[ERROR] Rule '{rule_file.name}' not found.{RESET}")
+            return None
     
     
 
@@ -191,5 +206,5 @@ if __name__ == "__main__":
     
     # deploy all rules from legit-rules folder
     rule_folder = rule_engine.legit_rules_folder
-    for rule_file in os.listdir(rule_folder):
-        rule_engine.deploy_rule(rule_file)
+    for rule_path in rule_folder.glob("*.yml"):
+        rule_engine.deploy_rule(rule_path)

@@ -1,5 +1,7 @@
 
 
+from pathlib import Path
+import yaml
 from data_access import DataAccess
 from log_parser import LogParser
 from log_analysis import LogAnalysis
@@ -264,6 +266,8 @@ class Main:
             print()
             print(f"    1) Search for rules")
             print(f"    2) View rule")
+            print(f"    3) Deploy rule")
+            print(f"    4) Undeploy rule")
             print()
             print(f"  99) Back to main menu")
             print()
@@ -285,6 +289,43 @@ class Main:
                 else:
                     print(f"{RED}[ERROR] Rule not found.{RESET}")
 
+            elif choice == "3":
+                rule_file = input(f"{RED}wla>rules>deploy>{RESET} Enter the rule file path: ")
+                print()
+                rule_id = self.rule_engine.deploy_rule(rule_file)
+                if not rule_id:
+                    print(f"{RED}[ERROR] Failed to deploy rule.{RESET}")
+                    continue
+                print(f"{GREEN}[INFO] Rule deployed successfully.{RESET}")
+                print(f"{CYAN}[INFO] Rule ID: {rule_id}{RESET}")
+
+                # Add the rule to the filter engine
+                rule = self.rule_engine.load_rule(Path(self.rule_engine.active_rules_folder, "detections", f"{rule_id}.yml"))
+                result = self.filter_engine.add_rule(rule)
+                if result:
+                    print(f"{GREEN}[INFO] Rule added to the filter engine.{RESET}")
+                else:
+                    print(f"{RED}[ERROR] Failed to add rule to the filter engine.{RESET}")
+
+                print(f"{CYAN}[INFO] {len(self.filter_engine.rules)} rules in the filter engine.{RESET}")
+
+            elif choice == "4":
+                rule_id = input(f"{RED}wla>rules>undeploy>{RESET} Enter the rule ID: ")
+                print()
+                if self.rule_engine.undeploy_rule(rule_id):
+                    print(f"{GREEN}[INFO] Rule undeployed successfully.{RESET}")
+                else:
+                    print(f"{RED}[ERROR] Failed to undeploy rule.{RESET}")
+
+                # Remove the rule from the filter engine
+                result = self.filter_engine.remove_rule(rule_id)
+                if result:
+                    print(f"{GREEN}[INFO] Rule removed from the filter engine.{RESET}")
+                else:
+                    print(f"{RED}[ERROR] Failed to remove rule from the filter engine.{RESET}")
+
+                print(f"{CYAN}[INFO] {len(self.filter_engine.rules)} rules in the filter engine.{RESET}")
+
             elif choice == "99":
                 break
             else:
@@ -299,7 +340,7 @@ class Main:
         print(f"{CYAN}[INFO] Initializing...{RESET}")
         self.log_parser = LogParser()
         self.rule_engine = RuleEngine()
-        self.filter_engine = FilterEngine(rules=self.rule_engine.load_rules())
+        self.filter_engine = FilterEngine(rules=self.rule_engine.load_default_rules())
         self.reporter = Reporter()
         print(f"{GREEN}[INFO] Initialization completed.{RESET}")
 
