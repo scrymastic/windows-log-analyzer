@@ -26,25 +26,18 @@ class RuleEngine:
 
         # Check if the rule has the same format as the example rule
         required_fields = [
-            "title", "id", "related", "status", "description", "references", "author", "date",
-            "tags", "logsource", "detection", "falsepositives", "level"
+            "title", "id", "description", "references",
+            "logsource", "detection", "level"
         ]
 
         if all(field in rule for field in required_fields):
             if isinstance(rule["title"], str) and \
                 isinstance(rule["id"], str) and \
-                isinstance(rule["related"], list) and \
-                isinstance(rule["status"], str) and \
                 isinstance(rule["description"], str) and \
                 isinstance(rule["references"], list) and \
-                isinstance(rule["author"], str) and \
-                isinstance(rule["date"], str) and \
-                isinstance(rule["tags"], list) and \
                 isinstance(rule["logsource"], dict) and \
-                isinstance(rule["detection"], dict) and \
-                isinstance(rule["falsepositives"], list) and \
-                isinstance(rule["level"], str) and \
-                isinstance(rule["related"], list):
+                isinstance(rule["detection"], list) and \
+                isinstance(rule["level"], str):
                     return True
         return False
 
@@ -88,6 +81,10 @@ class RuleEngine:
             print(f"{RED}[ERROR] Rule '{rule_file.name}' not found.{RESET}")
             return None
         
+        if not self.check_rule(rule_path):
+            print(f"{RED}[ERROR] Rule '{rule_file.name}' is not a valid rule.{RESET}")
+            return None
+        
         # Load the rule content
         with open(rule_file, 'r') as f:
             rule_content = yaml.safe_load(f)
@@ -116,6 +113,8 @@ class RuleEngine:
         metadata.pop('id')
         with open(self.active_rules_folder / "metadata" / f"{rule_content['id']}.yml", "w") as f:
             yaml.dump(metadata, f)
+        
+        print(f"{GREEN}[INFO] Rule [{CYAN}{rule_id}{GREEN}] deployed successfully.{RESET}")
         return rule_id
 
 

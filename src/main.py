@@ -58,7 +58,7 @@ class Main:
         print(f"    2) Search in event-viewer-logs")
         print(f"  99) Back to main menu")
         print()
-        log_folder = input(f"{RED}wla>search>{RESET} Enter log folder path: ")
+        log_folder = input(f"{RED}wla>search>{RESET} Enter log folder path: ").strip()
         if log_folder == "1":
             log_folder = self.data_access.sample_logs
         elif log_folder == "2":
@@ -69,8 +69,8 @@ class Main:
             if not os.path.exists(log_folder) or not os.path.isdir(log_folder):
                 print(f"{RED}[ERROR] Folder not found.{RESET}")
                 return
-        keyword = input(f"            Enter keyword to search: ")
-        matching_log_files = self.data_access.search_log_files(log_folder, keyword)
+        keywords = input(f"            Enter keyword to search: ")
+        matching_log_files = self.data_access.search_log_files(log_folder, keywords.split(','))
         print()
         print(f"{GREEN}[INFO] Found {len(matching_log_files)} matching log files.{RESET}")
         for log_file in matching_log_files:
@@ -84,7 +84,7 @@ class Main:
         print(f"  99) Back to main menu")
         print()
         print(f"{YELLOW}The log file must be in EVTX format{RESET}")
-        log_file_path = input(f"{RED}wla>load>{RESET} Enter the path to the log file: ")
+        log_file_path = input(f"{RED}wla>load>{RESET} Enter the path to the log file: ").strip()
         if log_file_path == "99":
             return
         if not os.path.exists(log_file_path):
@@ -112,7 +112,7 @@ class Main:
             print()
             print(f"  99) Back to main menu")
             print()
-            choice = input(f"{RED}wla>load>{RESET} ")
+            choice = input(f"{RED}wla>load>{RESET} ").strip()
 
             if choice == "1":
                 self.events = self.log_parser.parse_all_records(records)
@@ -124,7 +124,7 @@ class Main:
                 return
         
             elif choice == "2":
-                max_records = input(f"{RED}wla>load>parse>{RESET} Enter the number of records to parse, or press Enter to parse all: ")
+                max_records = input(f"{RED}wla>load>parse>{RESET} Enter the number of records to parse, or press Enter to parse all: ").strip()
                 if not max_records:
                     max_records = len(records)
                 else:
@@ -156,8 +156,8 @@ class Main:
                 return
 
             elif choice == "4":
-                start_time = input(f"{RED}wla>load>parse>{RESET} Enter the start time (YYYY-MM-DD HH:MM:SS), or press Enter to get the first record's time: ")
-                end_time = input(f"                Enter the end time (YYYY-MM-DD HH:MM:SS), or press Enter to get the last record's time: ")
+                start_time = input(f"{RED}wla>load>parse>{RESET} Enter the start time (YYYY-MM-DD HH:MM:SS), or press Enter to get the first record's time: ").strip()
+                end_time = input(f"                Enter the end time (YYYY-MM-DD HH:MM:SS), or press Enter to get the last record's time: ").strip()
                 if not start_time:
                     start_time = next(iter(first_event.values()))['System']['TimeCreated']['#attributes']['SystemTime']
                 if not end_time:
@@ -224,7 +224,7 @@ class Main:
             print()
             print(f"  99) Back to main menu")
             print()
-            choice = input(f"{RED}wla>events>{RESET} ")
+            choice = input(f"{RED}wla>events>{RESET} ").strip()
             if choice == "1":
                 keywords = input(f"{RED}wla>events>search>{RESET} Enter keywords, separated by commas: ")
                 keywords = keywords.split(',')
@@ -232,7 +232,7 @@ class Main:
                 for event_record_id in matching_events:
                     self.reporter.show_event_summary(self.events[event_record_id])
             elif choice == "2":
-                event_record_id = input(f"{RED}wla>events>show>{RESET} Enter the event record ID: ")
+                event_record_id = input(f"{RED}wla>events>show>{RESET} Enter the event record ID: ").strip()
                 event = self.log_analysis.get_event(int(event_record_id))
                 if event:
                     self.reporter.show_event_details(event)
@@ -271,7 +271,7 @@ class Main:
             print()
             print(f"  99) Back to main menu")
             print()
-            choice = input(f"{RED}wla>rules>{RESET} ")
+            choice = input(f"{RED}wla>rules>{RESET} ").strip()
             if choice == "1":
                 keywords = input(f"{RED}wla>rules>search>{RESET} Enter keywords, separated by commas: ")
                 keywords = keywords.split(',')
@@ -282,7 +282,7 @@ class Main:
                     rule = self.rule_engine.get_rule(rule_id)
                     self.reporter.show_rule_summary(rule)
             elif choice == "2":
-                rule_id = input(f"{RED}wla>rules>view>{RESET} Enter the rule ID: ")
+                rule_id = input(f"{RED}wla>rules>view>{RESET} Enter the rule ID: ").strip()
                 rule = self.rule_engine.get_rule(rule_id)
                 if rule:
                     self.reporter.show_rule_details(rule)
@@ -290,14 +290,12 @@ class Main:
                     print(f"{RED}[ERROR] Rule not found.{RESET}")
 
             elif choice == "3":
-                rule_file = input(f"{RED}wla>rules>deploy>{RESET} Enter the rule file path: ")
+                rule_file = input(f"{RED}wla>rules>deploy>{RESET} Enter the rule file path: ").strip()
                 print()
                 rule_id = self.rule_engine.deploy_rule(rule_file)
                 if not rule_id:
                     print(f"{RED}[ERROR] Failed to deploy rule.{RESET}")
                     continue
-                print(f"{GREEN}[INFO] Rule deployed successfully.{RESET}")
-                print(f"{CYAN}[INFO] Rule ID: {rule_id}{RESET}")
 
                 # Add the rule to the filter engine
                 rule = self.rule_engine.load_rule(Path(self.rule_engine.active_rules_folder, "detections", f"{rule_id}.yml"))
@@ -310,7 +308,7 @@ class Main:
                 print(f"{CYAN}[INFO] {len(self.filter_engine.rules)} rules in the filter engine.{RESET}")
 
             elif choice == "4":
-                rule_id = input(f"{RED}wla>rules>undeploy>{RESET} Enter the rule ID: ")
+                rule_id = input(f"{RED}wla>rules>undeploy>{RESET} Enter the rule ID: ").strip()
                 print()
                 if self.rule_engine.undeploy_rule(rule_id):
                     print(f"{GREEN}[INFO] Rule undeployed successfully.{RESET}")
@@ -356,7 +354,7 @@ class Main:
             print()
             print(f"  99) Exit the windows log analyzer")
             print()
-            choice = input(f"{RED}wla>{RESET} ")
+            choice = input(f"{RED}wla>{RESET} ").strip()
             if choice == "1":
                 self.search_log_files()
             elif choice == "2":

@@ -11,6 +11,34 @@ def ALL(*args):
 class FilterEngine:
     def __init__(self, rules):
         self.rules = rules
+        self.event_ids_sysmon = {
+            "process_creation": 1,
+            "file_change": 2,
+            "network_connection": 3,
+            "sysmon_status": 4,
+            "process_termination": 5,
+            "driver_load": 6,
+            "image_load": 7,
+            "create_remote_thread": 8,
+            "raw_access_thread": 9,
+            "process_access": 10,
+            "file_event": 11,
+            "registry_add": 12,
+            "registry_delete": 13,
+            "registry_set": 14,
+            "create_stream_hash": 15,
+            "pipe_created": 17,
+            "wmi_event": 19,
+            "dns_query": 22,
+            "file_delete": 23,
+            "clipboard_change": 24,
+            "process_tampering": 25,
+            "file_delete_detected": 26,
+            "file_block_executable": 27,
+            "file_block_shredding": 28,
+            "file_executable_detected": 29,
+            "sysmon_error": 255
+        }
 
 
     def matches_rule(self, rule, event: dict) -> bool:
@@ -29,7 +57,14 @@ class FilterEngine:
             return False
         
         # Convert to the new format, list of dictionaries -> dictionary
-        detection = {key: value for block in detection for key, value in block.items()}
+        try:
+            detection = {key: value for block in detection for key, value in block.items()}
+        except Exception as e:
+            print(f"Error converting detection block: {e}")
+            print(detection)
+            print("rule id:", rule['id'])
+            print(event)
+            exit()
 
         
         # Extract the condition block and conditions
@@ -200,40 +235,12 @@ class FilterEngine:
             return True
         if provider != 'Microsoft-Windows-Sysmon':
             return True
-        
-        event_ids_sysmon = {
-            "process_creation": 1,
-            "file_change": 2,
-            "network_connection": 3,
-            "sysmon_status": 4,
-            "process_termination": 5,
-            "driver_load": 6,
-            "image_load": 7,
-            "create_remote_thread": 8,
-            "raw_access_thread": 9,
-            "process_access": 10,
-            "file_event": 11,
-            "registry_add": 12,
-            "registry_delete": 13,
-            "registry_set": 14,
-            "create_stream_hash": 15,
-            "pipe_created": 17,
-            "wmi_event": 19,
-            "dns_query": 22,
-            "file_delete": 23,
-            "clipboard_change": 24,
-            "process_tampering": 25,
-            "file_delete_detected": 26,
-            "file_block_executable": 27,
-            "file_block_shredding": 28,
-            "file_executable_detected": 29,
-            "sysmon_error": 255
-        }
+    
         # Check if the event ID matches logsource category
         category = logsource.get('category', None)
         if category:
             try:
-                return event_ids_sysmon[category] == event['System']['EventID']
+                return self.event_ids_sysmon[category] == event['System']['EventID']
             except KeyError:
                 return True
 

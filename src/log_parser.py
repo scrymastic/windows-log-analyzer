@@ -101,6 +101,6 @@ class LogParser:
 if __name__ == "__main__":
     log_folder = Path(ROOT, "sample-logs")
     log_parser = LogParser()
-    log_file_path = "D:\AtSchool\windows-log-analyzer\sample-logs\\UACME_59_Sysmon.evtx"
+    log_file_path = "D:\AtSchool\windows-log-analyzer\sample-logs\Privilege Escalation\\4765_sidhistory_add_t1178.evtx"
     events = log_parser.load_log_file(log_file_path)
-    print(events)
+    print(log_parser.parse_all_records(events))
