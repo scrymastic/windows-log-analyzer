@@ -140,7 +140,7 @@ class Main:
                     continue
                 self.events = self.log_parser.parse_records_by_range(records, start, end)
                 if not self.events:
-                    print(f"{RED}[ERROR] Failed to parse log file.{RESET}")
+                    print(f"{RED}[ERROR] No records found.{RESET}")
                 else:
                     print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
                     self.log_analysis = LogAnalysis(self.events)
@@ -155,7 +155,7 @@ class Main:
                     continue
                 self.events = self.log_parser.parse_records_by_event_ids(records, event_ids)
                 if not self.events:
-                    print(f"{RED}[ERROR] Failed to parse log file.{RESET}")
+                    print(f"{RED}[ERROR] No records found.{RESET}")
                 else:
                     print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
                     self.log_analysis = LogAnalysis(self.events)
@@ -173,7 +173,7 @@ class Main:
 
                 self.events = self.log_parser.parse_records_by_time_range(records, start_time, end_time)
                 if not self.events:
-                    print(f"{RED}[ERROR] Failed to parse log file.{RESET}")
+                    print(f"{RED}[ERROR] No records found.{RESET}")
                 else:
                     print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
                     self.log_analysis = LogAnalysis(self.events)
@@ -184,7 +184,7 @@ class Main:
                 keywords = keywords.split(',')
                 self.events = self.log_parser.parse_records_by_keyword(records, keywords)
                 if not self.events:
-                    print(f"{RED}[ERROR] Failed to parse log file.{RESET}")
+                    print(f"{RED}[ERROR] No records found.{RESET}")
                 else:
                     print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
                     self.log_analysis = LogAnalysis(self.events)
