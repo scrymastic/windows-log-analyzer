@@ -36,12 +36,17 @@ class LogAnalysis:
     def get_time_range(self):
         # Get the earliest and latest event time
         # Return a tuple with the earliest and latest event time
-        event_times = []
+        start_time = None
+        end_time = None
         for event_record_id, event_data in self.events.items():
             event_time = event_data["System"]["TimeCreated"]["#attributes"]["SystemTime"]
-            event_times.append(event_time)
-        event_times.sort()
-        return event_times[0], event_times[-1]
+            if start_time is None or event_time < start_time:
+                start_time = event_time
+            if end_time is None or event_time > end_time:
+                end_time = event_time
+
+        return start_time, end_time
+
 
     
     def search_events(self, keywords: list):

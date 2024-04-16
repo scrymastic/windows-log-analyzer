@@ -95,10 +95,6 @@ class Main:
             print(f"{RED}[ERROR] Failed to load log file.{RESET}")
             return
         print(f"{GREEN}[INFO] Log file loaded successfully. Found {len(records)} records.{RESET}")
-        first_event = self.log_parser.parse_record(records[0])
-        last_event = self.log_parser.parse_record(records[-1])
-
-        print(f"{CYAN}Time range{RESET}: {next(iter(first_event.values()))['System']['TimeCreated']['#attributes']['SystemTime']} - {next(iter(last_event.values()))['System']['TimeCreated']['#attributes']['SystemTime']}")
 
         while True:
             print()
