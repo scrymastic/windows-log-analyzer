@@ -66,6 +66,10 @@ class LogParser:
         if not records:
             print(f"{RED}[ERROR] No records found.{RESET}")
             return {}
+        if not start_time:
+            start_time = "1970-01-01T00:00:00.000Z"
+        if not end_time:
+            end_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
         start_time = start_time.replace("T", " ").replace("Z", "")
         end_time = end_time.replace("T", " ").replace("Z", "")
         try:

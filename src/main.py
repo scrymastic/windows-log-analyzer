@@ -162,10 +162,6 @@ class Main:
                 print(f"{YELLOW}Parse records by local time. The time format must be 'YYYY-MM-DD HH:MM:SS.MS'{RESET}")
                 start_time = input(f"{RED}wla>load>parse>{RESET} Enter the start time, or press Enter to get the first record's time: ").strip()
                 end_time = input(f"                Enter the end time, or press Enter to get the last record's time: ").strip()
-                if not start_time:
-                    start_time = next(iter(first_event.values()))['System']['TimeCreated']['#attributes']['SystemTime']
-                if not end_time:
-                    end_time = next(iter(last_event.values()))['System']['TimeCreated']['#attributes']['SystemTime']
 
                 self.events = self.log_parser.parse_records_by_time_range(records, start_time, end_time)
                 if not self.events:
