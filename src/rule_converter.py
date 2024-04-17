@@ -10,6 +10,7 @@ class RuleConverter:
         self.legit_rules_folder = Path(ROOT, "rules", "legit-rules")
         pass
 
+
     def convert_folder(self, folder_path: str) -> bool:
         folder = Path(folder_path)
         # check if the folder exists and is a directory
@@ -97,7 +98,7 @@ class RuleConverter:
             converted_detection.extend([{key: converted_block}])
 
         return converted_detection
-    
+
 
     def convert_expression(self, expression):
         if '|' in expression:
@@ -173,6 +174,6 @@ class RuleConverter:
 
 
 if __name__ == '__main__':
-    sigma_rule = Path(ROOT, "rules", "sigma-rules")#, "registry", "registry_add") #, "registry_add_persistence_disk_cleanup_handler_entry.yml")
+    sigma_rule = Path(ROOT, "rules", "sigma-rules")
     rule_converter = RuleConverter()
     rule_converter.convert_folder(sigma_rule)

@@ -19,10 +19,10 @@ except ImportError:
     MAGENTA = ""
     RESET = ""
 
-ROOT = "D:\\AtSchool\\windows-log-analyzer\\"
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 
 # Default path to event viewer logs
-EVENT_VIEWER_LOGS = os.getenv("SystemRoot") + "\\System32\\winevt\\Logs"
+EVENT_VIEWER_LOGS = os.path.join(os.getenv("SystemRoot"), "System32", "winevt", "Logs")
 
 # Vietnam local timezone
 TIMEZONE = 7
