@@ -25,6 +25,24 @@ To use the tool, run the following command:
 ```shell
 python main.py
 ```
+![alt text](imgs/image.png)
 
 Configure the tool by editing the `config.py` file.
+
+
+## Contributing
+
+Contributions are welcome. Feel free to open an issue or submit a pull request.
+
+## Acknowledgements
+
+Parts of this project use resources from other open source repositories.
+
+The following is a list of these projects:
+
+- [sigma](https://github.com/SigmaHQ/sigma): a repository of Sigma rules for detecting suspicious events.
+
+- [EVTX-ATTACK-SAMPLES](https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES): a repository of evtx files collected from various attack scenarios.
+
+
 
