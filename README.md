@@ -23,7 +23,7 @@ To install the tool, follow these steps:
 To use the tool, run the following command:
 
 ```shell
-python main.py
+python -m src.main
 ```
 
 ![alt text](imgs/image.png)
