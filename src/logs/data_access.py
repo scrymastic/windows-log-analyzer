@@ -1,6 +1,6 @@
 
 
-from src.config import ROOT, EVENT_VIEWER_LOGS
+from config import ROOT, EVENT_VIEWER_LOGS
 from pathlib import Path
 from typing import List
 

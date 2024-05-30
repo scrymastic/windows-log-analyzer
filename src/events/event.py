@@ -22,9 +22,22 @@ class EventMethod:
 
     @staticmethod
     def get_field(event: EventType, *keys) -> Any:
+        # Useful for getting nested fields from an event
         try:
             for key in keys:
                 event = event[key]
+            return event
+        except (KeyError, TypeError):
+            return None
+    
+
+    @staticmethod
+    def set_field(event: EventType, value: Any, *keys) -> EventType:
+        # Useful for setting nested fields in an event
+        try:
+            for key in keys[:-1]:
+                event = event[key]
+            event[keys[-1]] = value
             return event
         except (KeyError, TypeError):
             return None

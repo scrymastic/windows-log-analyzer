@@ -1,6 +1,6 @@
 
-from src.events.event import EventType, EventMethod
-from src.config import LOCAL_TIMEZONE
+from events.event import EventType, EventMethod
+from config import LOCAL_TIMEZONE
 from typing import Dict, List, Tuple
 from datetime import datetime, timedelta
 import re
@@ -87,7 +87,7 @@ class EventAnalysis:
     def get_event_by_universal_id(self, universal_id: str) -> EventType:
         # Search for events that contain the keyword in any field
         for event in self._events:
-            if EventMethod.get_field(event, "UniversalID") == universal_id:
+            if event['UniversalID'] == universal_id:
                 return event
         return None
     

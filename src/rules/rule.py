@@ -1,6 +1,6 @@
 
 
-from src.utils.logger import logger
+from utils.logger import logger
 from typing import TypedDict, Dict, Any
 from pathlib import Path
 import yaml
@@ -158,6 +158,7 @@ class RuleMethod:
 
     @staticmethod
     def get_field(rule: RuleType, *keys) -> Any:
+        # Usefull for getting nested fields from a dictionary
         try:
             for key in keys:
                 rule = rule[key]
@@ -165,6 +166,17 @@ class RuleMethod:
         except KeyError:
             return None
         
+
+    @staticmethod
+    def set_field(rule: RuleType, value: Any, *keys) -> RuleType:
+        # Usefull for setting nested fields in a dictionary
+        try:
+            for key in keys[:-1]:
+                rule = rule[key]
+            rule[keys[-1]] = value
+            return rule
+        except KeyError:
+            return None
 
     @staticmethod
     def get_expected_category(event_id: int) -> str:

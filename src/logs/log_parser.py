@@ -1,6 +1,6 @@
 
-from src.events.event import EventType, EventMethod
-from src.utils.logger import logger
+from events.event import EventType, EventMethod
+from utils.logger import logger
 from pathlib import Path
 from evtx import PyEvtxParser
 from typing import Dict, List

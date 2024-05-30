@@ -1,12 +1,12 @@
 
 
-from src.config import RESET, RED, GREEN, YELLOW, CYAN, MAGENTA
-from src.logs.log_parser import LogParser
-from src.logs.data_access import DataAccess
-from src.events.event_analysis import EventAnalysis
-from src.rules.rule_engine import RuleEngine
-from src.filter_engine import FilterEngine
-from src.reporter import Reporter
+from config import RESET, RED, GREEN, YELLOW, CYAN, MAGENTA
+from logs.log_parser import LogParser
+from logs.data_access import DataAccess
+from events.event_analysis import EventAnalysis
+from rules.rule_engine import RuleEngine
+from filter_engine import FilterEngine
+from reporter import Reporter
 from pathlib import Path
 
 

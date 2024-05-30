@@ -1,9 +1,9 @@
 
 
-from src.rules.rule_engine import RuleEngine
-from src.rules.rule import RuleType, RuleMethod
-from src.events.event import EventType, EventMethod
-from src.config import RESET, RED, CYAN, YELLOW, GREEN
+from rules.rule_engine import RuleEngine
+from rules.rule import RuleType, RuleMethod
+from events.event import EventType, EventMethod
+from config import RESET, RED, CYAN, YELLOW, GREEN
 from typing import Dict, List
 
 
@@ -15,7 +15,7 @@ class Reporter:
         # Report the event to the user
         print()
         print(f"{RED}ALERT! ALERT! ALERT!{RESET}")
-        print(f"{CYAN}EVENT [{RED}{EventMethod.get_field(event, 'UniversalID')}{CYAN}]{RESET}")
+        print(f"{CYAN}EVENT [{RED}{event['UniversalID']}{CYAN}]{RESET}")
         self.show_event_summary(event)
 
         print(f"{YELLOW}Has been detected by {len(rule_id_list)} rules:{RESET}")
@@ -31,8 +31,8 @@ class Reporter:
     
     def show_rule_summary(self, rule: RuleType) -> None:
         print()
-        print(f"{CYAN}Title{RESET}: {RuleMethod.get_field(rule, 'title')}")
-        level = RuleMethod.get_field(rule, 'level')
+        print(f"{CYAN}Title{RESET}: {rule['title']}")
+        level = rule['level']
         if level == "high":
             print(f"{CYAN}Level{RESET}: {RED}{level}{RESET}")
         elif level == "medium":
@@ -41,8 +41,8 @@ class Reporter:
             print(f"{CYAN}Level{RESET}: {GREEN}{level}{RESET}")
         else:
             print(f"{CYAN}Level{RESET}: {level}")
-        print(f"{CYAN}Description{RESET}: {RuleMethod.get_field(rule, 'description')}")
-        print(f"{CYAN}Tags{RESET}: {', '.join(RuleMethod.get_field(rule, 'tags'))}")
+        print(f"{CYAN}Description{RESET}: {rule['description']}")
+        print(f"{CYAN}Tags{RESET}: {', '.join(rule['tags'])}")
         print()
 
 

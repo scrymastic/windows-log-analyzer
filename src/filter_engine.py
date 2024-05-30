@@ -1,8 +1,8 @@
 
 
-from src.utils.logger import logger
-from src.rules.rule import RuleType, RuleMethod
-from src.events.event import EventType, EventMethod
+from utils.logger import logger
+from rules.rule import RuleType, RuleMethod
+from events.event import EventType, EventMethod
 from typing import Generator, Union, Dict, List, Any
 from base64 import b64decode
 from ipaddress import ip_network
@@ -138,7 +138,7 @@ class FilterEngine:
                 continue
             matched_rules = self.match_rules(event)
             if matched_rules:
-                filtered_events.update({EventMethod.get_field(event, 'UniversalID'): matched_rules})
+                filtered_events.update({event['UniversalID']: matched_rules})
         return filtered_events
     
 
@@ -150,7 +150,7 @@ class FilterEngine:
                 continue
             matched_rules = self.match_rules(event)
             if matched_rules:
-                yield {EventMethod.get_field(event, 'UniversalID'): matched_rules}
+                yield {event['UniversalID']: matched_rules}
 
 
     @property

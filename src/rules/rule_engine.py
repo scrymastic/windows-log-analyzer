@@ -1,8 +1,8 @@
 
 
-from src.config import ROOT
-from src.utils.logger import logger
-from src.rules.rule import RuleType, RuleMethod
+from config import ROOT
+from utils.logger import logger
+from rules.rule import RuleType, RuleMethod
 from typing import Dict, List
 from pathlib import Path
 import shutil
