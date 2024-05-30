@@ -45,7 +45,7 @@ class Main:
         print(f"{MAGENTA}{text}{RESET}")
         print(f"      {GREEN}{'Welcome to'.center(60)}{RESET}      ")
         print(f"[----]{CYAN}{'Windows Log Analyzer (wla)'.center(60)}{RESET}[----]")
-        print(f"[----]{CYAN}{'Version 1.0.0'.center(60)}{RESET}[----]")
+        print(f"[----]{CYAN}{'Version 2.0.0'.center(60)}{RESET}[----]")
         print(f"[----]{RED}{'Github: https://github.com/scrymastic'.center(60)}{RESET}[----]")
         print()
 
