@@ -1,5 +1,5 @@
 
-from ..config import ROOT
+from src.config import ROOT
 import logging
 import colorlog
 
