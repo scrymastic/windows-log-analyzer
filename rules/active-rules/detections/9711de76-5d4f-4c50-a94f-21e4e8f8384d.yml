@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - TargetFilename|endswith: \TeamViewer_Desktop.exe
-- condition: selection
-id: 9711de76-5d4f-4c50-a94f-21e4e8f8384d
-logsource:
-  category: file_event
-  product: windows

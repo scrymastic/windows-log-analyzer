@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - TargetObject|contains: \AppCompatFlags\Compatibility Assistant\Store\
-- condition: selection
-id: 60936b49-fca0-4f32-993d-7415edcf9a5d
-logsource:
-  category: registry_set
-  product: windows

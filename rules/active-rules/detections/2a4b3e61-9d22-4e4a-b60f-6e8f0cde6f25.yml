@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - CommandLine|contains: SOFTWARE\Microsoft\Provisioning\Commands\
-- condition: selection
-id: 2a4b3e61-9d22-4e4a-b60f-6e8f0cde6f25
-logsource:
-  category: process_creation
-  product: windows

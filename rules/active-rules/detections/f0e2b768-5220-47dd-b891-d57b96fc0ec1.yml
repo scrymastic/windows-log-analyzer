@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - TargetFilename|endswith: \csexecsvc.exe
-- condition: selection
-id: f0e2b768-5220-47dd-b891-d57b96fc0ec1
-logsource:
-  category: file_event
-  product: windows

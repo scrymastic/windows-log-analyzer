@@ -1,6 +1,6 @@
 
+from pathlib import Path
 import os
-
 
 try:
     from colorama import Fore, Style, init
@@ -12,17 +12,14 @@ try:
     MAGENTA = Fore.MAGENTA
     RESET = Style.RESET_ALL
 except ImportError:
-    RED = ""
-    GREEN = ""
-    YELLOW = ""
-    CYAN = ""
-    MAGENTA = ""
-    RESET = ""
+    RED, GREEN, YELLOW, CYAN, MAGENTA, RESET = "", "", "", "", "", ""
+    print("Colorama not found, colored output will not be available.")
 
-ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+
+ROOT = Path(__file__).resolve().parent.parent
 
 # Default path to event viewer logs
-EVENT_VIEWER_LOGS = os.path.join(os.getenv("SystemRoot"), "System32", "winevt", "Logs")
+EVENT_VIEWER_LOGS = Path(os.getenv("SystemRoot")) / "System32" / "winevt" / "Logs"
 
 # Vietnam local timezone
-TIMEZONE = 7
+LOCAL_TIMEZONE = 7

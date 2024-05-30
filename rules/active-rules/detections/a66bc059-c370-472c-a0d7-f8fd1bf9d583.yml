@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - Image|endswith: \eqnedt32.exe
-- condition: selection
-id: a66bc059-c370-472c-a0d7-f8fd1bf9d583
-logsource:
-  category: network_connection
-  product: windows

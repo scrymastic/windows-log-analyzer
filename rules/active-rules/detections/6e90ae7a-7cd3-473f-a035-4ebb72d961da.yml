@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - TargetFilename|contains: \AppData\Local\Temp\ba9ea7344a4a5f591d6e5dc32a13494b\
-- condition: selection
-id: 6e90ae7a-7cd3-473f-a035-4ebb72d961da
-logsource:
-  category: file_event
-  product: windows

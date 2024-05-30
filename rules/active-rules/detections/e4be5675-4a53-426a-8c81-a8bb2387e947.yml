@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - EventID|==: 3077
-- condition: selection
-id: e4be5675-4a53-426a-8c81-a8bb2387e947
-logsource:
-  product: windows
-  service: codeintegrity-operational

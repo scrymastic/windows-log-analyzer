@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - TargetFilename|==: C:\program.exe
-- condition: selection
-id: 8c3c76ca-8f8b-4b1d-aaf3-81aebcd367c9
-logsource:
-  category: file_event
-  product: windows

@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - CallTrace|contains: editionupgrademanagerobj.dll
-- condition: selection
-id: fb3722e4-1a06-46b6-b772-253e2e7db933
-logsource:
-  category: process_access
-  product: windows

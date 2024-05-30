@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - TargetObject|contains: \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\mpnotify
-- condition: selection
-id: 92772523-d9c1-4c93-9547-b0ca500baba3
-logsource:
-  category: registry_set
-  product: windows

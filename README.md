@@ -25,6 +25,7 @@ To use the tool, run the following command:
 ```shell
 python main.py
 ```
+
 ![alt text](imgs/image.png)
 
 Configure the tool by editing the `config.py` file.

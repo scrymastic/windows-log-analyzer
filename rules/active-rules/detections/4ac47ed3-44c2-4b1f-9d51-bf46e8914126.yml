@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - Image|contains: C:\Windows \System32\
-- condition: selection
-id: 4ac47ed3-44c2-4b1f-9d51-bf46e8914126
-logsource:
-  category: process_creation
-  product: windows

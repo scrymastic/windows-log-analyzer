@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - ParentImage|endswith: \defaultpack.exe
-- condition: selection
-id: b2309017-4235-44fe-b5af-b15363011957
-logsource:
-  category: process_creation
-  product: windows

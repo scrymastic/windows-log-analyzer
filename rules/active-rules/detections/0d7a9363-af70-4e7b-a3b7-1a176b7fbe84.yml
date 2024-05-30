@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - Image|endswith: \regedit.exe
-- condition: selection
-id: 0d7a9363-af70-4e7b-a3b7-1a176b7fbe84
-logsource:
-  category: create_stream_hash
-  product: windows

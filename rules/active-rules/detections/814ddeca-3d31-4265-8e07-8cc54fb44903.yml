@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - TargetFilename|==: C:\Windows\livekd.dmp
-- condition: selection
-id: 814ddeca-3d31-4265-8e07-8cc54fb44903
-logsource:
-  category: file_event
-  product: windows

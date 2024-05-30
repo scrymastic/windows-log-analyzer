@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - ParentImage|endswith: \sdclt.exe
-- condition: selection
-id: da2738f2-fadb-4394-afa7-0a0674885afa
-logsource:
-  category: process_creation
-  product: windows

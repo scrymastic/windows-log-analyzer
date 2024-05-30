@@ -1,27 +1,27 @@
 
 
+from src.config import RESET, RED, GREEN, YELLOW, CYAN, MAGENTA
+from src.logs.log_parser import LogParser
+from src.logs.data_access import DataAccess
+from src.events.event_analysis import EventAnalysis
+from src.rules.rule_engine import RuleEngine
+from src.filter_engine import FilterEngine
+from src.reporter import Reporter
 from pathlib import Path
-import yaml
-from data_access import DataAccess
-from log_parser import LogParser
-from log_analysis import LogAnalysis
-from filter_engine import FilterEngine
-from rule_engine import RuleEngine
-from reporter import Reporter
-from config import *
-import os
+
 
 
 
 class Main:
     def __init__(self):
-        self.data_access = DataAccess()
-        self.log_parser = None
-        self.log_analysis = None
-        self.rule_engine = None
-        self.filter_engine = None
-        self.reporter = None
-        self.events = None
+        self.data_access: DataAccess = DataAccess()
+        self.log_parser: LogParser = None
+        self.event_analysis: EventAnalysis = None
+        self.rule_engine: RuleEngine = None
+        self.filter_engine: FilterEngine = None
+        self.reporter: Reporter = None
+        self.events: list = []
+        self.rules: dict = {}
 
 
     def banner(self):
@@ -60,16 +60,17 @@ class Main:
         print()
         log_folder = input(f"{RED}wla>search>{RESET} Enter log folder path: ").strip()
         if log_folder == "1":
-            log_folder = self.data_access.sample_logs
+            log_folder = self.data_access._sample_logs
         elif log_folder == "2":
-            log_folder = self.data_access.event_viewer_logs
+            log_folder = self.data_access._event_viewer_logs
         elif log_folder == "99":
             return
         else:
-            if not os.path.exists(log_folder) or not os.path.isdir(log_folder):
+            log_file = Path(log_folder)
+            if not log_file.exists() or not log_file.is_dir():
                 print(f"{RED}[ERROR] Folder not found.{RESET}")
                 return
-        keywords = input(f"            Enter keyword to search: ")
+        keywords = input(f"            Enter keywords to search: ")
         matching_log_files = self.data_access.search_log_files(log_folder, keywords.split(','))
         print()
         print(f"{GREEN}[INFO] Found {len(matching_log_files)} matching log files.{RESET}")
@@ -87,106 +88,73 @@ class Main:
         log_file_path = input(f"{RED}wla>load>{RESET} Enter the path to the log file: ").strip()
         if log_file_path == "99":
             return
-        if not os.path.exists(log_file_path):
+        log_file_path = Path(log_file_path)
+        if not log_file_path.exists() or not log_file_path.is_file():
             print(f"{RED}[ERROR] Log file not found.{RESET}")
             return
-        records = self.log_parser.load_log_file(log_file_path)
-        if not records:
+        self.events = self.log_parser.parse_log_file(log_file_path)
+        if not self.events:
             print(f"{RED}[ERROR] Failed to load log file.{RESET}")
             return
-        print(f"{GREEN}[INFO] Log file loaded successfully. Found {len(records)} records.{RESET}")
+        print(f"{GREEN}[INFO] Log file loaded successfully. Found {len(self.events)} events.{RESET}")
+        self.event_analysis = EventAnalysis(self.events)
 
         while True:
             print()
-            print(f"  {CYAN}Parse log file{RESET}")
+            print(f"  {CYAN}Get events{RESET}")
             print()
-            print(f"    1) Parse all records")
-            print(f"    2) Parse records by range")
-            print(f"    3) Parse records by event IDs")
-            print(f"    4) Parse records by time range")
-            print(f"    5) Parse records by keywords")
+            print(f"    1) Get all events")
+            print(f"    2) Get events by order range")
+            print(f"    3) Get events by event IDs")
+            print(f"    4) Get events by time range")
+            print(f"    5) Get events by keywords")
             print()
             print(f"  99) Back to main menu")
             print()
             choice = input(f"{RED}wla>load>{RESET} ").strip()
 
             if choice == "1":
-                self.events = self.log_parser.parse_all_records(records)
-                if not self.events:
-                    print(f"{RED}[ERROR] Failed to parse log file.{RESET}")
-                else:
-                    print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
-                    self.log_analysis = LogAnalysis(self.events)
-                return
-        
+                pass
             elif choice == "2":
-                records_range = input(f"{RED}wla>load>parse>{RESET} Enter the range of records to parse (start, end), or press Enter to parse all records: ").strip()
-                if not records_range:
-                    self.events = self.log_parser.parse_all_records(records)
-                    if not self.events:
-                        print(f"{RED}[ERROR] Failed to parse log file.{RESET}")
-                    else:
-                        print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
-                        self.log_analysis = LogAnalysis(self.events)
+                events_range = input(f"{RED}wla>load>parse>{RESET} Enter the range of events to parse (start, end), or press Enter to get all events: ")
+                if not events_range:
+                    print(f"{GREEN}[INFO] Loaded {len(self.events)} events.{RESET}")
                     return
                 try:
-                    start, end = [int(x.strip()) for x in records_range.split(',')]
+                    start, end = [int(x.strip()) for x in events_range.split(',')]
                 except:
                     print(f"{RED}[ERROR] Invalid range.{RESET}")
                     continue
-                self.events = self.log_parser.parse_records_by_range(records, start, end)
-                if not self.events:
-                    print(f"{RED}[ERROR] No records found.{RESET}")
-                else:
-                    print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
-                    self.log_analysis = LogAnalysis(self.events)
-                return
-            
+                self.events = self.event_analysis.get_events_by_order_range(start, end)
             elif choice == "3":
-                event_ids = input(f"{RED}wla>load>parse>{RESET} Enter the event IDs, separated by commas: ")
+                event_ids = input(f"{RED}wla>load>parse>{RESET} Enter the event IDs, separated by commas: ").strip()
                 try:
                     event_ids = [int(event_id.strip()) for event_id in event_ids.split(',')]
                 except:
                     print(f"{RED}[ERROR] Invalid event IDs.{RESET}")
                     continue
-                self.events = self.log_parser.parse_records_by_event_ids(records, event_ids)
-                if not self.events:
-                    print(f"{RED}[ERROR] No records found.{RESET}")
-                else:
-                    print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
-                    self.log_analysis = LogAnalysis(self.events)
-                return
-
+                self.events = self.event_analysis.get_events_by_event_id(event_ids)
             elif choice == "4":
                 print()
                 print(f"{YELLOW}Parse records by local time. The time format must be 'YYYY-MM-DD HH:MM:SS.MS'{RESET}")
                 start_time = input(f"{RED}wla>load>parse>{RESET} Enter the start time, or press Enter to get the first record's time: ").strip()
                 end_time = input(f"                Enter the end time, or press Enter to get the last record's time: ").strip()
-
-                self.events = self.log_parser.parse_records_by_time_range(records, start_time, end_time)
-                if not self.events:
-                    print(f"{RED}[ERROR] No records found.{RESET}")
-                else:
-                    print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
-                    self.log_analysis = LogAnalysis(self.events)
-                return
-
+                self.events = self.event_analysis.get_events_by_time_range(start_time, end_time)
             elif choice == "5":
                 keywords = input(f"{RED}wla>load>parse>{RESET} Enter keywords, separated by commas: ")
                 keywords = keywords.split(',')
-                self.events = self.log_parser.parse_records_by_keyword(records, keywords)
-                if not self.events:
-                    print(f"{RED}[ERROR] No records found.{RESET}")
-                else:
-                    print(f"{GREEN}[INFO] Parsed {len(self.events)} events.{RESET}")
-                    self.log_analysis = LogAnalysis(self.events)
-                return
-            
+                self.events = self.event_analysis.get_events_by_keywords(keywords)
             elif choice == "99":
                 return
             else:
                 print(f"{RED}[ERROR] Invalid choice.{RESET}")
 
+            if not self.events:
+                print(f"{RED}[ERROR] No events found.{RESET}")
+                return
+            print(f"{GREEN}[INFO] Loaded {len(self.events)} events.{RESET}")
+            self.event_analysis.events = self.events
+            return
 
 
     def filter_events(self):
@@ -196,11 +164,11 @@ class Main:
         print()
         print(f"  {CYAN}Filtering events...{RESET}")
         print()
-        filtered_events = self.filter_engine.filter_events(self.events)
+        filtered_events = self.filter_engine.filter_events_yield(self.events)
         event_count = 0
         for filtered_event in filtered_events:
-            event_id, rule_id_list = list(filtered_event.items())[0]
-            self.reporter.alert(self.events[event_id], rule_id_list)
+            event_universal_id, rule_id_list = list(filtered_event.items())[0]
+            self.reporter.alert(self.event_analysis.get_event_by_universal_id(event_universal_id), rule_id_list)
             event_count += 1
         if event_count == 0:
             print()
@@ -211,7 +179,7 @@ class Main:
     
 
     def analyze_events(self):
-        if not self.events or not self.log_analysis:
+        if not self.events or not self.event_analysis:
             print(f"{YELLOW}Please load a log file first.{RESET}")
             return
         while True:
@@ -228,12 +196,12 @@ class Main:
             if choice == "1":
                 keywords = input(f"{RED}wla>events>search>{RESET} Enter keywords, separated by commas: ")
                 keywords = keywords.split(',')
-                matching_events = self.log_analysis.search_events(keywords)
-                for event_record_id in matching_events:
-                    self.reporter.show_event_summary(self.events[event_record_id])
+                matching_events = self.event_analysis.get_events_by_keywords(keywords)
+                for event in matching_events:
+                    self.reporter.show_event_summary(event)
             elif choice == "2":
-                event_record_id = input(f"{RED}wla>events>show>{RESET} Enter the event record ID: ").strip()
-                event = self.log_analysis.get_event(int(event_record_id))
+                event_record_id = input(f"{RED}wla>events>show>{RESET} Enter the event universal ID: ").strip()
+                event = self.event_analysis.get_event_by_universal_id(event_record_id)
                 if event:
                     self.reporter.show_event_details(event)
                 else:
@@ -242,15 +210,15 @@ class Main:
                 print()
                 print(f"{GREEN}Total events: {len(self.events)}{RESET}")
 
-                start_time, end_time = self.log_analysis.get_time_range()
+                start_time, end_time = self.event_analysis.get_time_range()
                 print(f"{CYAN}Time range{RESET}: {start_time} - {end_time}")
                 print()
                 print(f"{GREEN}Event distribution by Provider{RESET}")
-                event_counts_by_provider = self.log_analysis.count_events_by_provider()
+                event_counts_by_provider = self.event_analysis.count_events_by_provider()
                 self.reporter.show_distribution(event_counts_by_provider)
                 print()
                 print(f"{GREEN}Event distribution by Event ID{RESET}")
-                event_counts_by_id = self.log_analysis.count_events_by_id()
+                event_counts_by_id = self.event_analysis.count_events_by_id()
                 self.reporter.show_distribution(event_counts_by_id)
 
             elif choice == "99":
@@ -279,34 +247,28 @@ class Main:
                 print(f"{CYAN}[INFO] Found {len(matching_rule_ids)} matching rules.{RESET}")
                 for rule_id in matching_rule_ids:
                     print(f"{CYAN}Rule ID{RESET}: {rule_id}")
-                    rule = self.rule_engine.get_rule(rule_id)
+                    rule = self.rule_engine.get_rule_content_by_id(rule_id)
                     self.reporter.show_rule_summary(rule)
             elif choice == "2":
                 rule_id = input(f"{RED}wla>rules>view>{RESET} Enter the rule ID: ").strip()
-                rule = self.rule_engine.get_rule(rule_id)
+                rule = self.rule_engine.get_rule_content_by_id(rule_id)
                 if rule:
                     self.reporter.show_rule_details(rule)
                 else:
                     print(f"{RED}[ERROR] Rule not found.{RESET}")
-
             elif choice == "3":
                 rule_file = input(f"{RED}wla>rules>deploy>{RESET} Enter the rule file path: ").strip()
                 print()
+                rule_file = Path(rule_file)
+                if not rule_file.exists() or not rule_file.is_file():
+                    print(f"{RED}[ERROR] Rule file not found.{RESET}")
+                    continue
                 rule_id = self.rule_engine.deploy_rule(rule_file)
                 if not rule_id:
                     print(f"{RED}[ERROR] Failed to deploy rule.{RESET}")
                     continue
-
-                # Add the rule to the filter engine
-                rule = self.rule_engine.load_rule(Path(self.rule_engine.active_rules_folder, "detections", f"{rule_id}.yml"))
-                result = self.filter_engine.add_rule(rule)
-                if result:
-                    print(f"{GREEN}[INFO] Rule added to the filter engine.{RESET}")
-                else:
-                    print(f"{RED}[ERROR] Failed to add rule to the filter engine.{RESET}")
-
-                print(f"{CYAN}[INFO] {len(self.filter_engine.rules)} rules in the filter engine.{RESET}")
-
+                print(f"{GREEN}[INFO] Rule deployed successfully. Rule ID: {rule_id}{RESET}")
+                print(f"{CYAN}[INFO] {len(self.filter_engine.rule_set)} active rules.{RESET}")
             elif choice == "4":
                 rule_id = input(f"{RED}wla>rules>undeploy>{RESET} Enter the rule ID: ").strip()
                 print()
@@ -314,15 +276,6 @@ class Main:
                     print(f"{GREEN}[INFO] Rule undeployed successfully.{RESET}")
                 else:
                     print(f"{RED}[ERROR] Failed to undeploy rule.{RESET}")
-
-                # Remove the rule from the filter engine
-                result = self.filter_engine.remove_rule(rule_id)
-                if result:
-                    print(f"{GREEN}[INFO] Rule removed from the filter engine.{RESET}")
-                else:
-                    print(f"{RED}[ERROR] Failed to remove rule from the filter engine.{RESET}")
-
-                print(f"{CYAN}[INFO] {len(self.filter_engine.rules)} rules in the filter engine.{RESET}")
 
             elif choice == "99":
                 break
@@ -332,15 +285,18 @@ class Main:
 
 
 
-
     def main(self): 
         self.banner()
         print(f"{CYAN}[INFO] Initializing...{RESET}")
         self.log_parser = LogParser()
-        self.rule_engine = RuleEngine()
-        self.filter_engine = FilterEngine(rules=self.rule_engine.load_default_rules())
+        self.rules = {}
+        self.rule_engine = RuleEngine(rule_set=self.rules)
+        self.rule_engine.load_all_rules()
+        self.rule_engine.build_rule_index()
+        self.filter_engine = FilterEngine(rule_set=self.rules)
         self.reporter = Reporter()
         print(f"{GREEN}[INFO] Initialization completed.{RESET}")
+        print(f"{CYAN}[INFO] {len(self.rules)} rules loaded.{RESET}")
 
         while True:
             print()

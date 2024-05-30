@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - Description|contains: st2stager
-- condition: selection
-id: 03552375-cc2c-4883-bbe4-7958d5a980be
-logsource:
-  category: process_creation
-  product: windows

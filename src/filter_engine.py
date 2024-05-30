@@ -1,288 +1,165 @@
 
-import regex
+
+from src.utils.logger import logger
+from src.rules.rule import RuleType, RuleMethod
+from src.events.event import EventType, EventMethod
+from typing import Generator, Union, Dict, List, Any
+from base64 import b64decode
+from ipaddress import ip_network
+import re
 
 
-def ANY(*args):
+
+def all_of(*args):
+    return all(args) 
+def any_of(*args):
     return any(args)
 
-def ALL(*args):
-    return all(args)
 
 class FilterEngine:
-    def __init__(self, rules):
-        self.rules = rules
-        self.event_ids_sysmon = {
-            "process_creation": 1,
-            "file_change": 2,
-            "network_connection": 3,
-            "sysmon_status": 4,
-            "process_termination": 5,
-            "driver_load": 6,
-            "image_load": 7,
-            "create_remote_thread": 8,
-            "raw_access_thread": 9,
-            "process_access": 10,
-            "file_event": 11,
-            "registry_add": 12,
-            "registry_delete": 13,
-            "registry_set": 14,
-            "create_stream_hash": 15,
-            "pipe_created": 17,
-            "wmi_event": 19,
-            "dns_query": 22,
-            "file_delete": 23,
-            "clipboard_change": 24,
-            "process_tampering": 25,
-            "file_delete_detected": 26,
-            "file_block_executable": 27,
-            "file_block_shredding": 28,
-            "file_executable_detected": 29,
-            "sysmon_error": 255
-        }
+    """
+    A class that implements a filter engine for filtering events based on rules defined in Sigma format.
+    """
+    def __init__(self, rule_set: Dict[str, RuleType]):
+        self._rule_set: dict = rule_set
 
 
-    def matches_rule(self, rule, event: dict) -> bool:
-        logsource = rule.get('logsource', None)
-        if not logsource:
-            print(f"Logsource not found in rule {rule}")
-            return False
-        if not self.match_event_id(logsource, event):
+    def match_block(self, block: Union[Dict, List], event: EventType) -> bool:
+        """
+        Match a block of expressions against an event.
+        E.g.: selection, filter, etc.
+        """
+        if isinstance(block, dict):
+            return all(self.match_expression(expression, value, event)
+                       for expression, value in block.items())
+        elif isinstance(block, list):
+            return any(self.match_expression(expression, value, event)
+                       for condition in block for expression, value in condition.items())
+            # condition might be a string in some cases, not handled here
+        else:
+            raise ValueError('Unexpected value type:', block)
+    
+
+    def match_expression(self, expression: str, value: Any, event: EventType) -> bool:
+        if '|' in expression:
+            field, operator = expression.split('|', 1)
+        else:
+            field = expression
+            operator = None
+
+        if field == 'EventID':
+            event_field = EventMethod.get_field(event, 'System', 'EventID')
+        else:
+            event_field = EventMethod.get_field(event, 'EventData', field)
+
+        if event_field is None:
             return False
         
-        # detection
-        detection = rule.get('detection', None)
-        # condition block and at least one condition
-        if len(detection) < 2:
-            print(f"Invalid rule '{rule}'")
-            return False
+        if not isinstance(value, list):
+            value = [value]
         
-        # Convert to the new format, list of dictionaries -> dictionary
-        try:
-            detection = {key: value for block in detection for key, value in block.items()}
-        except Exception as e:
-            print(f"Error converting detection block: {e}")
-            print(detection)
-            print("rule id:", rule['id'])
-            print(event)
-            exit()
-
-        
-        # Extract the condition block and conditions
-        condition = detection.get('condition', None)
-        if not condition:
-            print(f"Condition not found in rule {rule}")
-            return False
-        
-
-        exclude_words = {'1', 'not', 'and', 'all', 'or', '(', ')', 'of', ''}
-        block_keys = [word for word in regex.split(r'\s+|\(|\)', condition) if word not in exclude_words]
-        matched_keys = {block_key: [] for block_key in block_keys}
-
-        for key, value in detection.items():
-            matched_key = self.check_block_key(block_keys, key)
-            if matched_key:
-                matched_keys[matched_key].append(key)
-            else:
-                if key != 'condition':
-                    print(f"Invalid key '{key}' in rule {rule}")
-                    print(f"Block keys: {block_keys}")
-                    print(f"Matched keys: {matched_keys}")
+        match operator:
+            case None:
+                return all(event_field == val for val in value) # value has only one element
+            case 'startswith':
+                return any(event_field.startswith(val) for val in value)
+            case 'endswith':
+                return any(event_field.endswith(val) for val in value)
+            case 'contains':
+                return any(val in event_field for val in value)
+            case 'contains|windash':
+                return any(val in event_field for val in value)
+            case 'contains|all':
+                return all(val in event_field for val in value)
+            case 'contains|all|windash':
+                return all(val in event_field for val in value)
+            case 'base64offset|contains':
+                try:
+                    event_field = b64decode(event_field).decode('utf-8')
+                except ValueError as e:
                     return False
-        
-        # Construct the condition query
-        matched_keys = dict(sorted(matched_keys.items(), key=lambda item: -len(item[0])))
-        for key, values in matched_keys.items():
-            # process escaped characters
-            values = [value.replace('\\', '') for value in values]
-            query = ', '.join([f"self.matches_and_block(detection['{value}'][0]['and'], event)" for value in values])
-            if condition.startswith(f"{key} "):
-                condition = condition.replace(f"{key} ", f"({query}) ")
-            elif condition.endswith(f" {key}"):
-                condition = condition.replace(f" {key}", f" ({query})")
-            elif condition.find(f" {key} ") != -1:
-                condition = condition.replace(f" {key} ", f" ({query}) ")
-            elif condition.find(f" {key})") != -1:
-                condition = condition.replace(f" {key}", f" ({query})")
-            elif condition.find(f"({key} ") != -1:
-                condition = condition.replace(f"{key} ", f"({query}) ")
-            elif condition == key:
-                condition = f"({query})"
-            else:
-                print(f"Unexpected condition: {condition}")
-                return False
-
-        condition = condition.replace('all of ', 'ALL').replace('1 of ', 'ANY')
-
-        try:
-            return eval(condition)
-        except Exception as e:
-            print(f"Error evaluating condition: {e}")
+                return any(val in event_field for val in value)
+            case 're':
+                return any(re.match(val, event_field) for val in value)
+            case 'cidr':
+                return any(ip_network(val).overlaps(ip_network(event_field)) for val in value)
+            
+            case 'not startswith':
+                return all(not event_field.startswith(val) for val in value)
+            case 'not endswith':
+                return all(not event_field.endswith(val) for val in value)
+            case 'not contains':
+                return all(val not in event_field for val in value)
+            case 'not contains|all':
+                return not all(val in event_field for val in value)
+            case 'not re':
+                return all(not re.match(val, event_field) for val in value)
+            case 'not cidr':
+                return all(not ip_network(val).overlaps(ip_network(event_field)) for val in value)
+            
+            case _:
+                raise ValueError(f'Unsupported operator in expression: {expression}')
+            
+    
+    def match_logsource(self, logsource: Dict, event: EventType) -> bool:
+        event_id = EventMethod.get_field(event, 'System', 'EventID')
+        if not isinstance(event_id, int):
+            # logging.error(f"EventID is not an integer: {event_id}")
             return False
-
-
-    def check_block_key(self, block_keys: list, key: str) -> str:
-        # Check if the key is covered by the fields
-        # For example, if the fields are ['selection', 'selection_*', 'filter', 'filter_*']
-        for block_key in block_keys:
-            target = block_key.split('*')
-            if len(target) == 2:
-                if key.startswith(target[0]):
-                    return block_key
-            elif key == block_key:
-                return block_key
-        return None
-
-
-    def matches_and_block(self, block, event) -> bool:
-        # Check if all conditions in the 'and' list are satisfied
-        for condition in block:
-            if not self.matches_condition(condition, event):
-                return False
+        if expected_category := RuleMethod.get_expected_category(event_id):
+            return expected_category == logsource.get('category', None)
         return True
 
 
-    def matches_or_block(self, block, event):
-        # Check if any condition in the 'or' list is satisfied
-        for condition in block:
-            if self.matches_condition(condition, event):
-                return True
-        return False
-
-
-    def matches_condition(self, condition, event):
-        if not isinstance(condition, dict):
-            print(f"Invalid condition '{condition}'")
-            return False
-
-        # If the condition is a block
-        if len(condition) == 1:
-            key = next(iter(condition))
-            if key == 'and':
-                return self.matches_and_block(condition[key], event)
-            elif key == 'or':
-                return self.matches_or_block(condition[key], event)
-        
-        # If the condition is a simple comparison
-        # Extract the key and value from the condition
-        key, value = next(iter(condition.items()))
-        field, operator = key.split('|')
-
-        # Extract the field value from the event data
-        field_value = self.get_field_value(event, field)
-        if field_value is None:
-            # print(f"Field '{field}' not found in event {event}")
-            return False
-        # Perform the comparison based on the operator
-        if operator == '==':
-            return field_value == value 
-        elif operator == '!==':
-            return field_value != value
-        elif operator == 'contains':
-            return value in field_value
-        elif operator == 'not contains':
-            return value not in field_value
-        elif operator == 'startswith':
-            return field_value.startswith(value)
-        elif operator == 'not startswith':
-            return not field_value.startswith(value)
-        elif operator == 'endswith':
-            return field_value.endswith(value)
-        elif operator == 'not endswith':
-            return not field_value.endswith(value)
-        elif operator == 'matches':
-            return regex.match(value, field_value)
-        elif operator == 'not matches':
-            return not regex.match(value, field_value)
-        elif operator == 'cidr':    # for ip address, Classless Inter-Domain Routing
-            from ipaddress import IPv4Address, IPv6Address, IPv4Network, IPv6Network
-            if '.' in field_value and '.' in value:
-                return IPv4Address(field_value) in IPv4Network(value)
-            elif ':' in field_value and ':' in value:
-                return IPv6Address(field_value) in IPv6Network(value)
-            else:
-                return False
-        elif operator == 'not cidr':
-            from ipaddress import IPv4Address, IPv6Address, IPv4Network, IPv6Network
-            if '.' in field_value and '.' in value:
-                return IPv4Address(field_value) not in IPv4Network(value)
-            elif ':' in field_value and ':' in value:
-                return IPv6Address(field_value) not in IPv6Network(value)
-            else:
-                return False
-        else:
-            print(f"Invalid operator '{operator}, key: {key}, value: {value}'")
-            return False
-
-
-    def get_field_value(self, event, field):
-        # Extract the field value from the event data
-        if field == 'EventID':
-            if not event['System']:
-                return None
-            return event['System']['EventID']
-        else:
-            if not event['EventData']:
-                return None
-            return event['EventData'].get(field, None)
-        
-    
-    def match_event_id(self, logsource, event) -> bool:
-        # Check if "Microsoft-Windows-Sysmon"
-        # Only Sysmon events are considered, other events are ignored
+    def match_rule(self, rule_id: str, rule: RuleType, event: EventType) -> bool:
+        # The para 'event' is for debug purpose
         try:
-            provider = event['System']['Provider']['#attributes']['Name']
-        except KeyError:
-            return True
-        if provider != 'Microsoft-Windows-Sysmon':
-            return True
+            eval_expr = RuleMethod.get_field(rule, 'detection', 'evaluation')
+            return eval(eval_expr)
+        except Exception as e:
+            logger.error(f"Error evaluating rule: {e}, id: {rule_id}, event: {event}")
+            return False
+
+
+    def match_rules(self, event: EventType) -> List[str]:
+        matched_rules = []
+        for rule_id, rule in self._rule_set.items():
+            if self.match_rule(rule_id, rule, event):
+                matched_rules.append(rule_id)
+        return matched_rules
     
-        # Check if the event ID matches logsource category
-        category = logsource.get('category', None)
-        if category:
-            try:
-                return self.event_ids_sysmon[category] == event['System']['EventID']
-            except KeyError:
-                return True
 
-
-    def filter_events(self, events: dict):
-        # Filter the events based on the rules
-        # Return the {event record id: [rule id]} dictionary
+    def filter_events(self, events: EventType) -> Dict[str, List[str]]:
         if not events:
-            print("No events to filter")
-            return
-        num_events = len(events)
-        processed_events = 0
-        for event_id, event in events.items():
-            rule_id_list = []
-            for rule_id, rule in self.rules.items():
-                if self.matches_rule(rule, event):
-                    rule_id_list.append(rule_id)
-            if rule_id_list:
-                yield {event_id: rule_id_list}
-            processed_events += 1
-            print(f"\rProcessed {processed_events}/{num_events} events", end='')
+            return []
+        filtered_events = {}
+        for event in events:
+            if not EventMethod.is_valid_event(event):
+                continue
+            matched_rules = self.match_rules(event)
+            if matched_rules:
+                filtered_events.update({EventMethod.get_field(event, 'UniversalID'): matched_rules})
+        return filtered_events
+    
+
+    def filter_events_yield(self, events: EventType) -> Generator[Dict[str, List[str]], None, None]:
+        if not events:
+            return {}
+        for event in events:
+            if not EventMethod.is_valid_event(event):
+                continue
+            matched_rules = self.match_rules(event)
+            if matched_rules:
+                yield {EventMethod.get_field(event, 'UniversalID'): matched_rules}
 
 
-    def add_rule(self, rule):
-        rule_id = rule.get('id', None)
-        try:
-            self.rules[rule_id] = rule
-            return True
-        except Exception as e:
-            print(f"Error adding rule {rule_id}: {e}")
-            return False
-
-    def remove_rule(self, rule_id):
-        try:
-            self.rules.pop(rule_id)
-            return True
-        except Exception as e:
-            print(f"Error removing rule {rule_id}: {e}")
-            return False
-        
-    def get_num_rules(self):
-        return len(self.rules)
+    @property
+    def rule_set(self) -> Dict[str, RuleType]:
+        return self._rule_set
+    
+    @rule_set.setter
+    def rule_set(self, rule_set: Dict[str, RuleType]) -> None:
+        self._rule_set = rule_set
 
 
 if __name__ == '__main__':

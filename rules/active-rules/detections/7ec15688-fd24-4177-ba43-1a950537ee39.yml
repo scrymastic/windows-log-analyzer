@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - EventID|==: 2009
-- condition: selection
-id: 7ec15688-fd24-4177-ba43-1a950537ee39
-logsource:
-  product: windows
-  service: firewall-as

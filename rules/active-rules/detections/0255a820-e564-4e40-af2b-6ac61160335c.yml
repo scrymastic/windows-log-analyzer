@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - EventID|==: 4706
-- condition: selection
-id: 0255a820-e564-4e40-af2b-6ac61160335c
-logsource:
-  product: windows
-  service: security

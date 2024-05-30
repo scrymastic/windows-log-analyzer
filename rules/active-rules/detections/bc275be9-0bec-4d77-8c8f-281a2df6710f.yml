@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - EventID|==: 5010
-- condition: selection
-id: bc275be9-0bec-4d77-8c8f-281a2df6710f
-logsource:
-  product: windows
-  service: windefend

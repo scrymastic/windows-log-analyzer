@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - ImageLoaded|endswith: \ShellChromeAPI.dll
-- condition: selection
-id: ee4c5d06-3abc-48cc-8885-77f1c20f4451
-logsource:
-  category: image_load
-  product: windows

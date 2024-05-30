@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - CommandLine|contains: \Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
-- condition: selection
-id: ec88289a-7e1a-4cc3-8d18-bd1f60e4b9ba
-logsource:
-  category: process_creation
-  product: windows

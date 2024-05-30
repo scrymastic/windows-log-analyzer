@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - ParentImage|endswith: \tttracer.exe
-- condition: selection
-id: 0b4ae027-2a2d-4b93-8c7e-962caaba5b2a
-logsource:
-  category: process_creation
-  product: windows

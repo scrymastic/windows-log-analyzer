@@ -1,9 +1,0 @@
-detection:
-- selection:
-  - and:
-    - Image|endswith: \DeviceCredentialDeployment.exe
-- condition: selection
-id: b8b1b304-a60f-4999-9a6e-c547bde03ffd
-logsource:
-  category: process_creation
-  product: windows
